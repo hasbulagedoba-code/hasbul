@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Dunia Akiomida — Petualangan Matematika Terbuka | Perpustakaan Matematika</title>
-<meta name="description" content="Masuki Dunia Akiomida: dunia terbuka penuh warna dengan enam wilayah matematika. Berjalan, temui Pilo si pemandu, dan masuki gerbang Kamp Angka untuk menjelajahi peta materi matematika.">
+<meta name="description" content="Masuki Dunia Akiomida: dunia terbuka penuh warna dengan enam wilayah matematika. Berjalan, temui Akio si pemandu keemasan, dan masuki gerbang Kamp Angka untuk menjelajahi peta materi matematika.">
 <meta property="og:title" content="Dunia Akiomida — Petualangan Matematika Terbuka">
 <meta property="og:description" content="Enam wilayah, satu petualangan matematika. Gerbang pertama telah terbuka.">
 <meta property="og:type" content="website">
@@ -19,8 +19,7 @@
     background:#8ec8ee; color:#1e3a5f;
     -webkit-tap-highlight-color:transparent;
   }
-  #panggung { position:fixed; inset:0; display:block; touch-action:none; cursor:grab; }
-  #panggung.drag { cursor:grabbing; }
+  #panggung { position:fixed; inset:0; display:block; touch-action:none; }
 
   /* ---------- kartu wilayah (kiri-atas) ---------- */
   .chip-wilayah {
@@ -74,7 +73,7 @@
   @media (hover:none) and (pointer:coarse) { .btn-jalan { display:flex; } }
   @media (max-width:700px) {
     .btn-jalan { bottom:calc(288px + env(safe-area-inset-bottom)); width:56px; height:56px; }
-    .hint { bottom:calc(356px + env(safe-area-inset-bottom)); max-width:80vw; }
+    .hint { top:calc(72px + env(safe-area-inset-top)); bottom:auto; max-width:80vw; }
   }
 
   /* ---------- layar muat gerbang ----------
@@ -206,7 +205,7 @@
     animation:naik .9s .75s cubic-bezier(.22,1.2,.36,1) both;
   }
   .intro button:hover { transform:translateY(-3px) scale(1.03); box-shadow:0 16px 36px rgba(43,84,120,.42), inset 0 -3px 0 rgba(43,84,120,.12); }
-  .intro .pilo-css {
+  .intro .akio-css {
     position:absolute; bottom:12vh; left:50%; transform:translateX(-50%);
     width:52px; height:52px; border-radius:50%;
     background:radial-gradient(circle at 34% 30%, #ffe9ad, #f6c453 62%, #d98f2b);
@@ -216,7 +215,7 @@
   }
   @keyframes melayang { 0%,100% { transform:translate(-50%,0) scale(1,1); } 50% { transform:translate(-50%,-16px) scale(.96,1.05); } }
   @media (prefers-reduced-motion:reduce) {
-    .intro .matahari, .intro h1, .intro .bawah, .intro .catatan, .intro button, .intro .pilo-css { animation:none; }
+    .intro .matahari, .intro h1, .intro .bawah, .intro .catatan, .intro button, .intro .akio-css { animation:none; }
   }
 
 
@@ -232,7 +231,7 @@
   <span class="slogan" id="chipSlogan">Wilayah permulaan perjalanan</span>
 </div>
 
-<div class="hint tampil" id="hint">Klik tanah untuk berjalan &nbsp;·&nbsp; seret untuk melihat sekitar</div>
+<div class="hint tampil" id="hint">Klik tanah untuk berjalan &nbsp;·&nbsp; kamera mengikuti dengan sendirinya</div>
 
 <div class="btn-jalan" id="btnKiri" aria-hidden="true">‹</div>
 <div class="btn-jalan" id="btnKanan" aria-hidden="true">›</div>
@@ -259,9 +258,9 @@
   <div class="matahari"></div>
   <h1>DUNIA AKIOMIDA</h1>
   <div class="bawah">Enam wilayah. Satu petualangan matematika.</div>
-  <div class="catatan">Gerbang pertama telah terbuka. Pilo sudah menunggu di depannya.</div>
+  <div class="catatan">Gerbang pertama telah terbuka. Akio sudah menunggu di depannya.</div>
   <button id="btnMasuk" type="button">Masuk Dunia</button>
-  <div class="pilo-css"></div>
+  <div class="akio-css"></div>
 </div>
 
 <script src="js/world-env.js"></script>

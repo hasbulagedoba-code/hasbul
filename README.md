@@ -6,7 +6,7 @@ Situs belajar matematika dari dasar hingga PhD, dibungkus dunia terbuka bernama 
 
 - `index.html` — pintu depan: tombol Mulai + banner iklan responsive
 - `assets/js/ads.js` — mesin iklan (responsive, aktif di semua halaman via class `.ad-slot`)
-- `akiomidaspace/index.html` — dunia terbuka Akiomida: kamera berjalan, bola menggelinding, pemandu Pilo, 6 gerbang wilayah
+- `akiomidaspace/index.html` — dunia terbuka Akiomida: kamera berjalan, bola menggelinding, pemandu Akio (bola jelly emas bermahkota), NPC di tiap wilayah, api unggun/asap cerobong/daun/salju/kunang-kunang, 6 gerbang wilayah
 - `akiomidaspace/material/sejarah-matematika.html` — materi pertama yang terbuka: Sejarah Matematika
 - `akiomidaspace/material/sejarah.html` — pengalih ke alamat baru
 

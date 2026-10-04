@@ -1,6 +1,6 @@
 /* =========================================================
    DUNIA AKIOMIDA — Utama (world-main.js)
-   Kamera, input, gerbang dinamis, Pilo, HUD, loop render
+   Kamera hidup, input, gerbang dinamis, Akio, penduduk NPC, HUD, loop render
    ========================================================= */
 (function () {
   'use strict';
@@ -21,7 +21,6 @@
 
   let VW = 0, VH = 0, dpr = 1;
   let camX = 0, started = false, last = 0;
-  let manualUntil = -1, peek = 0;
   const keys = { left: false, right: false };
 
   /* ---------- pemain & penduduk jelly ---------- */
@@ -29,21 +28,46 @@
   player.cy = AK.groundYAt(player.cx) - player.r * 0.92;
 
   const residents = [];
-  const residentSpots = [
-    { x: 380, col: 0 }, { x: 660, col: 1 }, { x: 940, col: 6 },
-    { x: 1700, col: 2 }, { x: 2100, col: 5 }, { x: 3000, col: 4 },
-    { x: 4100, col: 0 }, { x: 5100, col: 2 }, { x: 6000, col: 5 },
+  /* dua penduduk di tiap wilayah — dunia terasa berpenghuni */
+  const NPC_SPOTS = [
+    { z: 0, dx: -185, col: 4 }, { z: 0, dx: 210, col: 1 },
+    { z: 1, dx: -240, col: 1 }, { z: 1, dx: 175, col: 6 },
+    { z: 2, dx: -160, col: 7 }, { z: 2, dx: 235, col: 2 },
+    { z: 3, dx: -180, col: 0 }, { z: 3, dx: 205, col: 5 },
+    { z: 4, dx: -195, col: 5 }, { z: 4, dx: 150, col: 3 },
+    { z: 5, dx: -170, col: 2 }, { z: 5, dx: 215, col: 0 },
   ];
-  for (const s of residentSpots) {
-    const j = new AK.Jelly({ x: s.x, y: 0, r: rand(17, 24), col: AK.PALETTE[s.col] });
+  let npi = 0;
+  for (const s of NPC_SPOTS) {
+    const x = AK.ZONES[s.z].x + s.dx;
+    const j = new AK.Jelly({ x, y: 0, r: rand(16, 22), col: AK.PALETTE[s.col] });
     j.cy = AK.groundYAt(j.cx) - j.r * 0.92;
+    // dua penduduk satu wilayah bicara kalimat berbeda, bergiliran tidak bersamaan
+    j.say = { idx: npi % 2, until: -1, nextIn: 2.5 + npi * 2.1 };
     residents.push(j);
+    npi++;
   }
   const everyone = [player, ...residents];
 
-  /* ---------- Pilo ---------- */
-  const piloX = AK.ZONES[0].x - 85;
-  const pilo = new AK.Pilo(piloX, AK.groundYAt(piloX) - 96);
+  /* sapaan penduduk per wilayah — runtut, hangat, tanpa metafora aneh */
+  const NPC_LINES = [
+    ['Selamat datang di Kamp Angka! Api unggun kami selalu disiapkan.',
+     'Dari sini perjalananmu dimulai. Pelan-pelan saja.'],
+    ['Daun di hutan ini berjatuhan pelan. Coba hitung yang lewatmu.',
+     'Setiap tanda di batu punya arti. Kami menjaganya setiap hari.'],
+    ['Udara gunung ini segar sekali. Awan di atasnya berulang dengan rapi.',
+     'Kami menyusun batu dari yang kecil ke besar. Itu pekerjaan favorit kami.'],
+    ['Rumah-rumah di kota ini dibangun dengan alasan yang runtut.',
+     'Lentera menyala setiap sore. Sudah menjadi kebiasaan kami.'],
+    ['Kristal di lembah ini berpendar saat ada yang datang berkunjung.',
+     'Sunyi di lembah ini membantu berpikir dengan jernih.'],
+    ['Salju di puncak turun satu per satu, tak pernah bertumpuk mendadak.',
+     'Gerbang di sini masih disegel. Kami menunggu kabar baik.'],
+  ];
+
+  /* ---------- Akio & penduduk ---------- */
+  const akioX = AK.ZONES[0].x - 150;
+  const akio = new AK.Akio(akioX, AK.groundYAt(akioX) - 96);
   const glowGold = (() => {
     const c = document.createElement('canvas'); c.width = 64; c.height = 64;
     const g = c.getContext('2d');
@@ -53,10 +77,10 @@
     return c;
   })();
 
-  const PILO_MSG = [
-    'Selamat datang di Dunia Akiomida. Aku Pilo, pemandu perjalananmu di sini.',
+  const AKIO_MSG = [
+    'Selamat datang di Dunia Akiomida. Aku Akio, pemandu perjalananmu di sini.',
     'Dunia ini punya enam wilayah. Setiap wilayah menyimpan satu peta materi matematika.',
-    'Klik tanah untuk berjalan. Bola-bola di sini ramah — mereka suka ikut bermain.',
+    'Klik tanah untuk berjalan. Penduduk di tiap wilayah senang menyapamu.',
     'Gerbang Kamp Angka sudah terbuka. Di dalamnya ada sepuluh pos tur yang rapi.',
     'Wilayah lain masih disegel sementara. Kembali lagi nanti, dunia ini terus bertumbuh.',
   ];
@@ -166,7 +190,7 @@
 
     // gelembung toast gerbang tertutup
     if (toast.zone === i && t < toast.until) {
-      drawBubbleAt(sx, gy - h - 150, 'Gerbang ini masih disegel. Pilo akan memberi kabar saat terbuka.');
+      drawBubbleAt(sx, gy - h - 150, 'Gerbang ini masih disegel. Akio akan memberi kabar saat terbuka.');
     }
   }
 
@@ -187,83 +211,75 @@
     bw += 28;
     const lh = 19, bh = lines.length * lh + 18;
     let bx = cx0 - bw / 2;
-    // jangan sampai terpotong tepi layar
+    // jangan sampai terpotong tepi layar — horizontal & vertikal selaras dengan tokohnya
     bx = Math.max(8, Math.min(bx, AK.VW - bw - 8));
+    const by = Math.max(8, Math.min(byTop - bh, AK.H - bh - 8));
+    const ekor = (by === byTop - bh);   // ekor hanya saat gelembung benar-benar di atas tokoh
     const tailX = Math.max(bx + 18, Math.min(cx0, bx + bw - 18));
 
     ctx.fillStyle = 'rgba(255,255,255,.95)';
-    AK.rrect(ctx, bx, byTop - bh, bw, bh, 14); ctx.fill();
+    AK.rrect(ctx, bx, by, bw, bh, 14); ctx.fill();
     ctx.strokeStyle = 'rgba(30,58,95,.18)'; ctx.lineWidth = 1.5;
-    AK.rrect(ctx, bx, byTop - bh, bw, bh, 14); ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(tailX - 7, byTop - 1); ctx.lineTo(tailX + 7, byTop - 1);
-    ctx.lineTo(tailX, byTop + 8); ctx.closePath();
-    ctx.fillStyle = 'rgba(255,255,255,.95)'; ctx.fill();
+    AK.rrect(ctx, bx, by, bw, bh, 14); ctx.stroke();
+    if (ekor) {
+      ctx.beginPath();
+      ctx.moveTo(tailX - 7, by + bh - 1); ctx.lineTo(tailX + 7, by + bh - 1);
+      ctx.lineTo(tailX, by + bh + 8); ctx.closePath();
+      ctx.fillStyle = 'rgba(255,255,255,.95)'; ctx.fill();
+    }
 
     ctx.fillStyle = '#33475e';
     ctx.textAlign = 'left'; ctx.textBaseline = 'top';
-    lines.forEach((l, li) => ctx.fillText(l, bx + 14, byTop - bh + 9 + li * lh));
+    lines.forEach((l, li) => ctx.fillText(l, bx + 14, by + 9 + li * lh));
   }
 
-  /* ---------- kamera ---------- */
-  function updateCamera(dt) {
-    const follow = clamp(player.cx - VW * 0.45 + player.vx * 0.30, 0, Math.max(0, AK.WORLD_W - VW));
-    let target = follow + peek * VW * 0.14;
+  /* ---------- kamera hidup ----------
+     Layar tidak digeser manual: kamera selalu mengikuti pemain
+     dengan halus, dan bernapas pelan saat berdiri diam. */
+  function updateCamera(dt, t) {
+    const follow = clamp(player.cx - VW * 0.45 + player.vx * 0.36, 0, Math.max(0, AK.WORLD_W - VW));
+    let target = follow + Math.sin(t * 0.5) * 3;
     target = clamp(target, 0, Math.max(0, AK.WORLD_W - VW));
-    const k = (AK.reducedMotion ? 4.5 : 3.2);
-    if (performance.now() / 1000 < manualUntil) return;
+    const k = (AK.reducedMotion ? 6 : 5);
     camX = lerp(camX, target, Math.min(1, dt * k));
     AK.camX = camX;
   }
 
-  /* ---------- input ---------- */
-  let pDown = false, pStartX = 0, pStartY = 0, pMoved = false, pStartCam = 0;
+  /* ---------- input ----------
+     Layar tidak bisa digeser manual — kamera hidup mengalir sendiri.
+     Sentuhan pendek = berjalan/menyapa; sapuan panjang diabaikan. */
+  let pDown = false, pStartX = 0, pStartY = 0, pMoved = false;
 
   canvas.addEventListener('pointerdown', (e) => {
     pDown = true; pMoved = false;
-    pStartX = e.clientX; pStartY = e.clientY; pStartCam = camX;
+    pStartX = e.clientX; pStartY = e.clientY;
     canvas.setPointerCapture(e.pointerId);
   });
   canvas.addEventListener('pointermove', (e) => {
     if (pDown) {
       const dx = e.clientX - pStartX, dy = e.clientY - pStartY;
-      if (!pMoved && Math.hypot(dx, dy) > 9) { pMoved = true; canvas.classList.add('drag'); }
-      if (pMoved) {
-        camX = clamp(pStartCam - dx, 0, Math.max(0, AK.WORLD_W - VW));
-        AK.camX = camX;
-        manualUntil = performance.now() / 1000 + 2.2;
-      }
+      if (!pMoved && Math.hypot(dx, dy) > 9) pMoved = true;
     } else {
-      // kursor pointer di atas gerbang / Pilo
+      // kursor pointer di atas gerbang / Akio / penduduk
       const wx = camX + e.clientX;
       let over = false;
       for (const z of AK.ZONES) {
         const gy = AK.groundYAt(z.x);
         if (Math.abs(wx - z.x) < 100 && e.clientY > gy - z.gateH - 140 && e.clientY < gy + 24) { over = true; break; }
       }
-      if (Math.abs(wx - pilo.cx) < 46 && Math.abs(e.clientY - pilo.cy) < 46) over = true;
-      canvas.style.cursor = over ? 'pointer' : 'grab';
-    }
-    // intip tepi (desktop)
-    if (e.pointerType === 'mouse' && !pMoved) {
-      peek = e.clientX < VW * 0.12 ? -1 : (e.clientX > VW * 0.88 ? 1 : 0);
+      if (Math.abs(wx - akio.cx) < 46 && Math.abs(e.clientY - akio.cy) < 46) over = true;
+      for (const r of residents) {
+        if (Math.abs(wx - r.cx) < r.r + 14 && Math.abs(e.clientY - r.cy) < r.r + 14) { over = true; break; }
+      }
+      canvas.style.cursor = over ? 'pointer' : 'default';
     }
   });
   canvas.addEventListener('pointerup', (e) => {
-    pDown = false; canvas.classList.remove('drag');
+    pDown = false;
     if (pMoved) return;
     handleClick(e.clientX, e.clientY);
   });
-  canvas.addEventListener('pointercancel', () => { pDown = false; canvas.classList.remove('drag'); });
-  canvas.addEventListener('pointerleave', () => { peek = 0; });
-
-  window.addEventListener('wheel', (e) => {
-    if (!started) return;
-    camX = clamp(camX + (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * 0.9,
-      0, Math.max(0, AK.WORLD_W - VW));
-    AK.camX = camX;
-    manualUntil = performance.now() / 1000 + 2.2;
-  }, { passive: true });
+  canvas.addEventListener('pointercancel', () => { pDown = false; });
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = true;
@@ -288,12 +304,23 @@
     if (!started) return;
     const wx = camX + px;
 
-    // Pilo
-    if (Math.abs(wx - pilo.cx) < 46 && Math.abs(py - pilo.cy) < 46) {
-      pilo.poke();
-      msgIdx = (msgIdx + 1) % PILO_MSG.length;
+    // Akio
+    if (Math.abs(wx - akio.cx) < 46 && Math.abs(py - akio.cy) < 46) {
+      akio.poke();
+      msgIdx = (msgIdx + 1) % AKIO_MSG.length;
       msgTimer = 0;
       return;
+    }
+    // penduduk: menyapa saat diklik
+    for (const r of residents) {
+      if (Math.abs(wx - r.cx) < r.r + 16 && Math.abs(py - r.cy) < r.r + 16) {
+        r.poke();
+        const zi = AK.zoneAt(r.cx);
+        r.say.idx = (r.say.idx + 1) % NPC_LINES[zi].length;
+        r.say.until = performance.now() / 1000 + 4.5;
+        r.say.nextIn = rand(7, 12);
+        return;
+      }
     }
     // gerbang
     for (let i = 0; i < AK.ZONES.length; i++) {
@@ -393,15 +420,30 @@
       player.steerLock = false;
     }
     for (const j of everyone) j.update(dt);
-    pilo.update(dt);
+    akio.update(dt);
     AK.updateAmbient(dt);
-    updateCamera(dt);
+    updateCamera(dt, t);
     updateHUD();
 
-    // pesan Pilo bergilir
+    // pesan Akio bergilir
     if (!AK.reducedMotion) {
       msgTimer += dt;
-      if (msgTimer > 6.8) { msgTimer = 0; msgIdx = (msgIdx + 1) % PILO_MSG.length; }
+      if (msgTimer > 6.8) { msgTimer = 0; msgIdx = (msgIdx + 1) % AKIO_MSG.length; }
+    }
+    // penduduk menyapa sendiri saat pemain lewat di dekatnya
+    if (!AK.reducedMotion) {
+      for (const r of residents) {
+        r.say.nextIn -= dt;
+        const near = Math.abs(player.cx - r.cx) < 170;
+        if (near && r.say.nextIn <= 0) {
+          r.say.until = t + 4.5;
+          r.say.nextIn = rand(6, 11);
+        }
+        if (!near) {
+          if (r.say.until > t + 1.2) r.say.until = t + 1.2;   // berhenti bicara saat pemain menjauh
+          else if (t > r.say.until) r.say.until = -1;
+        }
+      }
     }
   }
 
@@ -410,6 +452,7 @@
     AK.drawAmbientBack(ctx);
     AK.drawHills(ctx);
     AK.drawGround(ctx);
+    AK.drawActivity(ctx, t);
 
     for (let i = 0; i < AK.ZONES.length; i++) drawGateDynamic(AK.ZONES[i], i, t);
 
@@ -418,14 +461,22 @@
       if (j.cx < viewL || j.cx > viewR) continue;
       j.draw(ctx);
     }
-    if (pilo.cx > viewL && pilo.cx < viewR) pilo.draw(ctx, glowGold);
+    if (akio.cx > viewL && akio.cx < viewR) akio.draw(ctx, glowGold);
 
     AK.drawAmbientFront(ctx, t);
     AK.drawVignette(ctx);
 
-    // gelembung Pilo di lapisan paling atas
-    if (started && pilo.cx > viewL && pilo.cx < viewR) {
-      drawBubbleAt(pilo.cx - camX + 10, pilo.cy - pilo.r - 26, PILO_MSG[msgIdx]);
+    // gelembung Akio & penduduk di lapisan paling atas
+    if (started && akio.cx > viewL && akio.cx < viewR) {
+      drawBubbleAt(akio.cx - camX + 10, akio.cy - akio.r - 26, AKIO_MSG[msgIdx]);
+    }
+    for (const r of residents) {
+      if (r.say.until <= 0 || t > r.say.until) continue;
+      const rsx = r.cx - camX;
+      if (rsx < 90 || rsx > AK.VW - 90) continue;   // tanpa bubble tempelan di tepi layar
+      if (r.cx < viewL || r.cx > viewR) continue;
+      const zi = AK.zoneAt(r.cx);
+      drawBubbleAt(rsx, r.cy - r.r - 14, NPC_LINES[zi][r.say.idx]);
     }
   }
 
@@ -453,7 +504,7 @@
     introEl.classList.add('pergi');
     started = true;
     chipEl.classList.add('tampil');
-    pilo.poke();
+    akio.poke();
   });
 
   /* ---------- deteksi perangkat sentuh ---------- */
@@ -469,7 +520,7 @@
       sizeCanvas(true);
       camX = ratio * Math.max(0, AK.WORLD_W - VW);
       AK.camX = camX;
-      pilo.baseY = AK.groundYAt(piloX) - 96;
+      akio.baseY = AK.groundYAt(akioX) - 96;
       player.cy = Math.min(player.cy, AK.groundYAt(player.cx) - player.r * 0.92);
     }, 220);
   });

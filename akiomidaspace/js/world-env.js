@@ -172,9 +172,18 @@ window.AK = (function () {
   }
 
   function house(ctx, x, y, s, wall, roof) {
-    ctx.fillStyle = wall; rrect(ctx, x - 44 * s, y - 52 * s, 88 * s, 52 * s, 5 * s); ctx.fill();
+    // dinding bergradasi — tidak lagi datar sekotak
+    const wg = ctx.createLinearGradient(x, y - 52 * s, x, y);
+    wg.addColorStop(0, '#ffffff'); wg.addColorStop(0.18, wall); wg.addColorStop(1, wall);
+    ctx.fillStyle = wg;
+    rrect(ctx, x - 44 * s, y - 52 * s, 88 * s, 52 * s, 8 * s); ctx.fill();
+    // cerobong — rumah di kota punya aktivitas (asap hangat)
+    ctx.fillStyle = '#c9a685';
+    rrect(ctx, x + 24 * s, y - 86 * s, 11 * s, 24 * s, 3 * s); ctx.fill();
     ctx.fillStyle = roof;
     ctx.beginPath(); ctx.moveTo(x - 56 * s, y - 50 * s); ctx.lineTo(x, y - 92 * s); ctx.lineTo(x + 56 * s, y - 50 * s); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = 'rgba(0,0,0,.08)';
+    ctx.beginPath(); ctx.moveTo(x - 56 * s, y - 50 * s); ctx.lineTo(x, y - 92 * s); ctx.lineTo(x + 8 * s, y - 50 * s); ctx.closePath(); ctx.fill();
     ctx.fillStyle = '#8a6a48';
     ctx.beginPath(); ctx.arc(x, y - 18 * s, 13 * s, Math.PI, 0);
     ctx.rect(x - 13 * s, y - 18 * s, 26 * s, 18 * s); ctx.fill();
@@ -252,7 +261,7 @@ window.AK = (function () {
     grad.addColorStop(0, colTop); grad.addColorStop(1, colBot);
     g.fillStyle = grad;
     g.beginPath(); g.moveTo(0, AK.H);
-    for (let x = 0; x <= Wf; x += 14) g.lineTo(x, ridge(x));
+    for (let x = 0; x <= Wf; x += 6) g.lineTo(x, ridge(x));   // langkah rapat — garis bukit mulus, tidak bersegi
     g.lineTo(Wf, AK.H); g.closePath(); g.fill();
     if (bumps) {
       g.fillStyle = 'rgba(255,255,255,.09)';
@@ -268,9 +277,9 @@ window.AK = (function () {
     const x = z.x;
     switch (z.biome) {
       case 'kamp':
-        tent(g, x - 210, groundYAt(x - 210) + 2, 0.9, '#f3c98b', '#e0a765');
-        tent(g, x - 300, groundYAt(x - 300) + 4, 0.7, '#a8d8ea', '#7fb9d4');
-        campfire(g, x - 120, groundYAt(x - 120) + 2);
+        tent(g, x - 230, groundYAt(x - 230) + 2, 0.9, '#f3c98b', '#e0a765');
+        tent(g, x - 320, groundYAt(x - 320) + 4, 0.7, '#a8d8ea', '#7fb9d4');
+        campfire(g, x - 165, groundYAt(x - 165) + 2);
         treeRound(g, x + 250, groundYAt(x + 250), 1.05, '#7cc47f', '#63ad68', '#a5e08a');
         treeRound(g, x + 340, groundYAt(x + 340), 0.8, '#8fce7e', '#74b56c', '#b2e89a');
         break;
@@ -383,21 +392,27 @@ window.AK = (function () {
     grad.addColorStop(0, '#93d183'); grad.addColorStop(0.5, '#7fc26f'); grad.addColorStop(1, '#67ad5c');
     g.fillStyle = grad; g.fillRect(0, gyMin - 6, W, H - gyMin + 6);
 
-    g.fillStyle = 'rgba(255,255,255,.045)';
-    for (let i = 0; i < 6; i++) g.fillRect(0, gyMin + 14 + i * 36, W, 15);
+    // bercak cahaya lembut menggantikan pita kotak — rumput terasa menyatu
+    for (let i = 0; i < 26; i++) {
+      const x = rand(0, W), y = rand(gyMin + 20, H - 30);
+      const rg = g.createRadialGradient(x, y, 4, x, y, rand(90, 190));
+      rg.addColorStop(0, 'rgba(255,255,235,.05)'); rg.addColorStop(1, 'rgba(255,255,235,0)');
+      g.fillStyle = rg;
+      g.beginPath(); g.ellipse(x, y, 170, 46, 0, 0, TAU); g.fill();
+    }
 
     const pathY = (x) => groundYAt(x) + 52 + Math.sin(x * 0.004) * 9;
     g.fillStyle = '#ecdcae';
     g.beginPath(); g.moveTo(0, pathY(0));
-    for (let x = 0; x <= W; x += 26) g.lineTo(x, pathY(x));
-    for (let x = W; x >= 0; x -= 26) g.lineTo(x, pathY(x) + 46);
+    for (let x = 0; x <= W; x += 12) g.lineTo(x, pathY(x));
+    for (let x = W; x >= 0; x -= 12) g.lineTo(x, pathY(x) + 46);
     g.closePath(); g.fill();
-    g.strokeStyle = 'rgba(160,132,84,.35)'; g.lineWidth = 2;
+    g.strokeStyle = 'rgba(160,132,84,.28)'; g.lineWidth = 2;
     g.beginPath(); g.moveTo(0, pathY(0));
-    for (let x = 0; x <= W; x += 26) g.lineTo(x, pathY(x));
+    for (let x = 0; x <= W; x += 12) g.lineTo(x, pathY(x));
     g.stroke();
     g.beginPath(); g.moveTo(0, pathY(0) + 46);
-    for (let x = 0; x <= W; x += 26) g.lineTo(x, pathY(x) + 46);
+    for (let x = 0; x <= W; x += 12) g.lineTo(x, pathY(x) + 46);
     g.stroke();
     g.fillStyle = 'rgba(160,132,84,.30)';
     for (let i = 0; i < 90; i++) {
@@ -452,6 +467,7 @@ window.AK = (function () {
      LANGIT (digambar tiap frame — murah)
      ========================================================= */
   let skyGrad = null, skyKey = '';
+  let fogGrad = null, fogKey = '';
   function drawSky(ctx, t, camX) {
     const vw = AK.VW, vh = AK.H;
     const key = vw + 'x' + vh;
@@ -501,6 +517,16 @@ window.AK = (function () {
   AK.drawHills = function (ctx) {
     drawLayer(ctx, bake.hillsFar, 0.10);
     drawLayer(ctx, bake.hillsMid, 0.26);
+    // kabut horizon — menjahit bukit dan tanah agar menyatu
+    const key = 'h' + AK.VW + 'x' + AK.H;
+    if (fogKey !== key) {
+      fogGrad = ctx.createLinearGradient(0, AK.H * 0.62, 0, AK.H * 0.84);
+      fogGrad.addColorStop(0, 'rgba(233,238,246,0)');
+      fogGrad.addColorStop(0.55, 'rgba(233,238,246,.16)');
+      fogGrad.addColorStop(1, 'rgba(233,238,246,0)');
+      fogKey = key;
+    }
+    ctx.fillStyle = fogGrad; ctx.fillRect(0, AK.H * 0.62, AK.VW, AK.H * 0.22);
   };
   AK.drawGround = function (ctx) { drawLayer(ctx, bake.ground, 1); };
   AK.drawVignette = function (ctx) {
@@ -511,14 +537,39 @@ window.AK = (function () {
      AWAN / SERBUK / KUNANG / KUPU / BURUNG / ASAP
      ========================================================= */
   const clouds = [], pollen = [], fireflies = [], birds = [], butterflies = [], smoke = [];
-  let cloudSprite = null, glowWhite = null, glowViolet = null;
-  let smokeTimer = 0;
+  const leaves = [], snow = [], mist = [], sparks = [];
+  let cloudSprite = null, glowWhite = null, glowViolet = null, glowWarm = null;
+  let smokeTimer = 0, chimTimerA = 0, chimTimerB = 0, sparkTimer = 0;
+
+  /* jangkar aktivitas industri — posisi mengikuti properti yang dibake */
+  const FIRE = { x: ZONES[0].x - 165 };
+  const CHIMNEY = [
+    { x: ZONES[3].x - 235 + 29, s: 1.0 },
+    { x: ZONES[3].x + 245 + 24, s: 0.85 },
+  ];
+  const WINDOW = [
+    { x: ZONES[3].x - 235 - 26, s: 1.0 },
+    { x: ZONES[3].x + 245 - 22, s: 0.85 },
+  ];
+  const LANTERN = { x: ZONES[3].x + 40 };
+  const CRYSTAL = [
+    { x: ZONES[4].x - 240, s: 1.1 },
+    { x: ZONES[4].x + 265, s: 0.9 },
+    { x: ZONES[4].x + 350, s: 0.7 },
+  ];
+  const fireY    = () => groundYAt(FIRE.x) - 6;
+  const chimTopY = (c) => groundYAt(c.x) - 90 * c.s;
+  const winY     = (w) => groundYAt(w.x) - 34 * w.s;
+  const lanY     = () => groundYAt(LANTERN.x) - 62;
+  const cryY     = (c) => groundYAt(c.x) - 30 * c.s;
 
   AK.initAmbient = function () {
     cloudSprite = makeCloud();
     glowWhite = makeGlow('rgba(255,255,255,.9)');
     glowViolet = makeGlow('rgba(200,160,255,.95)');
-    clouds.length = 0; pollen.length = 0; fireflies.length = 0; birds.length = 0; butterflies.length = 0;
+    glowWarm = makeGlow('rgba(255,190,110,.95)');
+    clouds.length = 0; pollen.length = 0; fireflies.length = 0; birds.length = 0;
+    butterflies.length = 0; leaves.length = 0; snow.length = 0; mist.length = 0;
     for (let i = 0; i < 11; i++) clouds.push({
       x: rand(-200, WORLD_W * 0.42), y: rand(30, AK.H * 0.36),
       s: rand(0.75, 1.7), v: rand(4, 10), a: rand(0.5, 0.92)
@@ -531,10 +582,37 @@ window.AK = (function () {
       const x = ZONES[4].x + rand(-420, 420);
       fireflies.push({ x, y: rand(groundYAt(x) - 190, groundYAt(x) - 16), ph: rand(0, TAU), sp: rand(0.6, 1.4) });
     }
-    for (let i = 0; i < 5; i++) birds.push({ x: rand(0, WORLD_W), y: rand(50, AK.H * 0.26), v: rand(11, 22), ph: rand(0, TAU) });
+    for (let i = 0; i < 7; i++) birds.push({ x: rand(0, WORLD_W), y: rand(50, AK.H * 0.26), v: rand(11, 22), ph: rand(0, TAU) });
     butterflies.push({ ax: ZONES[0].x + 180, ay: 0, t: rand(0, 9), col: '#ffffff' });
     butterflies.push({ ax: ZONES[1].x - 120, ay: 0, t: rand(0, 9), col: '#ffd166' });
+    butterflies.push({ ax: ZONES[2].x - 60,  ay: 0, t: rand(0, 9), col: '#a5d8ff' });
     butterflies.push({ ax: ZONES[3].x - 200, ay: 0, t: rand(0, 9), col: '#f687b3' });
+    butterflies.push({ ax: ZONES[4].x + 150, ay: 0, t: rand(0, 9), col: '#e2d0fc' });
+    // Hutan Simbol: dedaunan berjatuhan pelan
+    for (let i = 0; i < 34; i++) {
+      const x = ZONES[1].x + rand(-380, 420);
+      leaves.push({
+        x, y: rand(groundYAt(x) - 240, groundYAt(x) - 10),
+        v: rand(20, 38), ph: rand(0, TAU), sp: rand(0.8, 1.8),
+        r: rand(2.4, 4.2), col: ['#7cc47f', '#a5e08a', '#e0a765', '#8fd49a'][randi(0, 3)]
+      });
+    }
+    // Puncak Riset: salju turun satu per satu
+    for (let i = 0; i < 52; i++) {
+      const x = ZONES[5].x + rand(-460, 460);
+      snow.push({
+        x, y: rand(groundYAt(x) - 300, groundYAt(x) - 6),
+        v: rand(13, 26), ph: rand(0, TAU), sp: rand(0.5, 1.3), r: rand(1.2, 2.6)
+      });
+    }
+    // Pegunungan Pola: kabut tanah berarak
+    for (let i = 0; i < 6; i++) {
+      const x = ZONES[2].x + rand(-420, 420);
+      mist.push({
+        x, y: groundYAt(x) - rand(6, 42), w: rand(150, 260), h: rand(16, 26),
+        v: rand(4, 9) * (Math.random() < 0.5 ? -1 : 1), a: rand(0.05, 0.10)
+      });
+    }
   };
 
   AK.updateAmbient = function (dt) {
@@ -545,16 +623,100 @@ window.AK = (function () {
       for (const f of fireflies) f.ph += dt * f.sp;
       for (const b of birds) { b.x += b.v * dt; b.ph += dt * 7; if (b.x > WORLD_W + 60) b.x = -60; }
       for (const bf of butterflies) bf.t += dt;
+      for (const l of leaves) {
+        l.ph += dt * l.sp;
+        l.y += l.v * dt;
+        l.x += Math.sin(l.ph) * 16 * dt;
+        if (l.y > groundYAt(l.x) - 3) { l.y = groundYAt(l.x) - 250; l.x = ZONES[1].x + rand(-380, 420); }
+      }
+      for (const s of snow) {
+        s.ph += dt * s.sp;
+        s.y += s.v * dt;
+        s.x += Math.sin(s.ph) * 10 * dt;
+        if (s.y > groundYAt(s.x) - 2) { s.y = groundYAt(s.x) - 300; s.x = ZONES[5].x + rand(-460, 460); }
+      }
+      for (const m of mist) {
+        m.x += m.v * dt;
+        if (m.x < ZONES[2].x - 520) m.x = ZONES[2].x + 520;
+        if (m.x > ZONES[2].x + 520) m.x = ZONES[2].x - 520;
+      }
+      // asap hangat unggun kamp
       smokeTimer -= dt;
       if (smokeTimer <= 0) {
         smokeTimer = 0.75;
-        const fx = ZONES[0].x - 120;
-        smoke.push({ x: fx + rand(-4, 4), y: groundYAt(fx) - 36, age: 0, drift: rand(-6, 6) });
-        if (smoke.length > 9) smoke.shift();
+        smoke.push({ x: FIRE.x + rand(-4, 4), y: fireY() - 28, age: 0, drift: rand(-6, 6), warm: true });
       }
+      // asap cerobong rumah kota — tanda ada yang memasak
+      chimTimerA -= dt; chimTimerB -= dt;
+      if (chimTimerA <= 0) { chimTimerA = 1.15; smoke.push({ x: CHIMNEY[0].x + rand(-3, 3), y: chimTopY(CHIMNEY[0]), age: 0, drift: rand(-5, 5), warm: false }); }
+      if (chimTimerB <= 0) { chimTimerB = 1.35; smoke.push({ x: CHIMNEY[1].x + rand(-3, 3), y: chimTopY(CHIMNEY[1]), age: 0, drift: rand(-5, 5), warm: false }); }
+      if (smoke.length > 14) smoke.shift();
       for (const s of smoke) { s.age += dt; s.y -= (20 + s.age * 6) * dt; s.x += s.drift * dt; }
       for (let i = smoke.length - 1; i >= 0; i--) if (smoke[i].age > 3.4) smoke.splice(i, 1);
+      // percikan api unggun
+      sparkTimer -= dt;
+      if (sparkTimer <= 0) {
+        sparkTimer = rand(0.18, 0.4);
+        sparks.push({ x: FIRE.x + rand(-8, 8), y: fireY() - 8, vy: rand(-90, -55), vx: rand(-12, 12), age: 0, life: rand(0.5, 0.9) });
+      }
+      for (const s of sparks) { s.age += dt; s.x += s.vx * dt; s.y += s.vy * dt; s.vy += 60 * dt; }
+      for (let i = sparks.length - 1; i >= 0; i--) if (sparks[i].age > sparks[i].life) sparks.splice(i, 1);
     }
+  };
+
+  /* aktivitas industri: digambar DI ATAS tanah, DI BAWAH karakter */
+  AK.drawActivity = function (ctx, t) {
+    // api unggun menyala-nyala
+    const fx = FIRE.x - AK.camX;
+    if (fx > -70 && fx < AK.VW + 70) {
+      const fy = fireY();
+      const pulse = 0.82 + Math.sin(t * 9) * 0.12 + Math.sin(t * 23) * 0.06;
+      ctx.globalAlpha = 0.5 * pulse;
+      ctx.drawImage(glowWarm, fx - 44, fy - 44, 88, 88);
+      const fl = (w, h, col) => {
+        ctx.fillStyle = col; ctx.beginPath();
+        ctx.moveTo(fx, fy - h * pulse);
+        ctx.quadraticCurveTo(fx + w * pulse, fy - h * 0.4, fx, fy);
+        ctx.quadraticCurveTo(fx - w * pulse, fy - h * 0.4, fx, fy); ctx.fill();
+      };
+      fl(13, 34, '#ff9d4d'); fl(8, 22, '#ffd166'); fl(4, 11, '#fff3cf');
+      for (const s of sparks) {
+        const sx = s.x - AK.camX;
+        ctx.globalAlpha = Math.max(0, 1 - s.age / s.life) * 0.85;
+        ctx.fillStyle = '#ffcf7a';
+        ctx.beginPath(); ctx.arc(sx, s.y, 1.6, 0, TAU); ctx.fill();
+      }
+    }
+    // jendela rumah hangat — ada yang tinggal di dalamnya
+    for (let i = 0; i < WINDOW.length; i++) {
+      const w = WINDOW[i], sx = w.x - AK.camX;
+      if (sx < -40 || sx > AK.VW + 40) continue;
+      ctx.globalAlpha = 0.26 + Math.sin(t * 2.6 + i * 2.1) * 0.08;
+      ctx.drawImage(glowWarm, sx - 22, winY(w) - 22, 44, 44);
+    }
+    // lentera kota bernapas
+    const lx = LANTERN.x - AK.camX;
+    if (lx > -40 && lx < AK.VW + 40) {
+      ctx.globalAlpha = 0.30 + Math.sin(t * 3.1) * 0.07;
+      ctx.drawImage(glowWarm, lx + 12 - 24, lanY() - 24, 48, 48);
+    }
+    // kristal lembah berdenyut
+    for (let i = 0; i < CRYSTAL.length; i++) {
+      const c = CRYSTAL[i], sx = c.x - AK.camX;
+      if (sx < -60 || sx > AK.VW + 60) continue;
+      const r = 54 * c.s;
+      ctx.globalAlpha = 0.16 + Math.sin(t * 1.5 + i * 1.9) * 0.10;
+      ctx.drawImage(glowViolet, sx - r, cryY(c) - r, r * 2, r * 2);
+    }
+    // kabut tanah pegunungan berarak
+    for (const m of mist) {
+      const sx = m.x - AK.camX;
+      if (sx < -m.w - 40 || sx > AK.VW + m.w + 40) continue;
+      ctx.globalAlpha = m.a;
+      ctx.fillStyle = '#eef4fa';
+      ctx.beginPath(); ctx.ellipse(sx, m.y, m.w / 2, m.h / 2, 0, 0, TAU); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
   };
 
   AK.drawAmbientBack = function (ctx) {
@@ -600,8 +762,26 @@ window.AK = (function () {
       const sx = s.x - AK.camX;
       if (sx < -30 || sx > AK.VW + 30) continue;
       ctx.globalAlpha = Math.max(0, 0.30 * (1 - s.age / 3.4));
-      ctx.fillStyle = '#eef2f5';
+      ctx.fillStyle = s.warm ? '#f5efe4' : '#eef2f5';
       ctx.beginPath(); ctx.arc(sx, s.y, 5 + s.age * 4.5, 0, TAU); ctx.fill();
+    }
+    // dedaunan berjatuhan
+    for (const l of leaves) {
+      const sx = l.x - AK.camX;
+      if (sx < -20 || sx > AK.VW + 20) continue;
+      ctx.globalAlpha = 0.85;
+      ctx.fillStyle = l.col;
+      ctx.save(); ctx.translate(sx, l.y + Math.sin(l.ph) * 4); ctx.rotate(Math.sin(l.ph * 0.9) * 0.8);
+      ctx.beginPath(); ctx.ellipse(0, 0, l.r, l.r * 0.55, 0, 0, TAU); ctx.fill();
+      ctx.restore();
+    }
+    // salju turun perlahan
+    for (const s of snow) {
+      const sx = s.x - AK.camX;
+      if (sx < -12 || sx > AK.VW + 12) continue;
+      ctx.globalAlpha = 0.8;
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath(); ctx.arc(sx, s.y + Math.sin(s.ph) * 3, s.r, 0, TAU); ctx.fill();
     }
     if (!AK.reducedMotion) {
       for (const bf of butterflies) {

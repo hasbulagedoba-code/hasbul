@@ -18,7 +18,7 @@ AK.PALETTE = [
 
 AK.Jelly = (function () {
   const TAU = AK.TAU, rand = AK.rand, clamp = AK.clamp;
-  const GRAV = 1900;
+  const GRAV = 1560;
   const K_SPRING = 170;   // pegas ke posisi istirahat
   const K_SMOOTH  = 300;  // penghalang antar titik tepi
   const G_POINT   = 360;  // tekan titik ke tanah saat di darat (efek pipih)
@@ -38,6 +38,7 @@ AK.Jelly = (function () {
       this.hopIn = rand(3, 10);
       this.N = 16;
       this.pts = [];
+      this.homeX = this.cx;   // NPC berkeliaran hanya di sekitar rumahnya
       for (let i = 0; i < this.N; i++) {
         const a = i / this.N * TAU;
         this.pts.push({
@@ -73,18 +74,19 @@ AK.Jelly = (function () {
       if (this.isPlayer) {
         if (this.targetX != null) {
           const d = this.targetX - this.cx;
-          const want = clamp(d * 3.0, -270, 270);
-          this.vx += (want - this.vx) * Math.min(1, dt * 5);
+          const want = clamp(d * 3.2, -300, 300);
+          this.vx += (want - this.vx) * Math.min(1, dt * 6.5);
           if (Math.abs(d) < 10 && Math.abs(this.vx) < 26) this.targetX = null;
         } else if (this.grounded && !this.steerLock) {
-          // gesekan gulung: berhenti dengan wajar, tidak melorot selamanya
-          this.vx *= Math.pow(0.12, dt);
-          if (Math.abs(this.vx) < 3) this.vx = 0;
+          // gesekan gulung lembut: melambat mulus, tanpa tersentak
+          this.vx *= Math.pow(0.18, dt);
+          if (Math.abs(this.vx) < 4) this.vx = 0;
         }
       } else if (!AK.reducedMotion) {
         this.wanderIn -= dt;
         if (this.wanderIn <= 0 && this.targetX == null) {
-          this.targetX = this.cx + rand(-170, 170);
+          // berkeliaran kecil di sekitar rumah — tidak sampai menabrak gerbang
+          this.targetX = clamp(this.cx + rand(-150, 150), this.homeX - 140, this.homeX + 140);
           this.wanderIn = rand(3.5, 9);
         }
         if (this.targetX != null) {
@@ -204,6 +206,10 @@ AK.Jelly = (function () {
       grad.addColorStop(1, c.dark);
       ctx.fillStyle = grad;
       ctx.fill();
+      // garis tepi samar — tokoh tetap menonjol di atas properti senada
+      ctx.strokeStyle = 'rgba(40,32,22,.18)';
+      ctx.lineWidth = 1.6;
+      ctx.stroke();
 
       // kilau tepi & kilau kaca (klip di dalam badan)
       ctx.save();
@@ -226,11 +232,11 @@ AK.Jelly = (function () {
   return Jelly;
 })();
 
-/* ---------- Pilo: pemandu emas yang melayang ---------- */
-AK.Pilo = (function () {
+/* ---------- Akio: pemandu emas yang melayang ---------- */
+AK.Akio = (function () {
   const TAU = AK.TAU, rand = AK.rand;
 
-  class Pilo {
+  class Akio {
     constructor(x, y) {
       this.baseX = x; this.baseY = y;
       this.cx = x; this.cy = y;
@@ -333,7 +339,7 @@ AK.Pilo = (function () {
       ctx.fill();
       ctx.restore();
 
-      // mahkota kecil melayang di atas Pilo (bukan wajah — tanda pemandu)
+      // mahkota kecil melayang di atas Akio (bukan wajah — tanda pemandu)
       const ky = this.cy - this.r - 12 + Math.sin(this.t * 2.2) * 3;
       ctx.fillStyle = '#ffe08a';
       ctx.save();
@@ -351,5 +357,5 @@ AK.Pilo = (function () {
 
   function gradColorDark(grad, col) { grad.addColorStop(1, col); }
 
-  return Pilo;
+  return Akio;
 })();
