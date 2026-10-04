@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sejarah Matematika — Lantai 1, Ruang Pertama | Perpustakaan Matematika</title>
+<meta name="description" content="Sejarah matematika diceritakan berurutan dan mudah diikuti: dari penghitungan domba zaman batu, Babilonia, Yunani, lahirnya nol, Al-Khawarizmi, sampai komputer dan kecerdasan buatan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Nunito', 'Segoe UI', Tahoma, sans-serif;
+    background: #fdfaf2;
+    color: #2b3a55;
+    line-height: 1.85;
+  }
+  .topnav {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(253,250,242,.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(30,58,95,.08);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 18px;
+  }
+  .topnav .merek { font-weight: 900; font-size: 15px; color: #1e3a5f; text-decoration: none; }
+  .topnav .merek span { color: #f59e0b; }
+  .topnav a.kembali {
+    font-size: 13px; font-weight: 800; text-decoration: none;
+    color: #fff; background: #1e3a5f;
+    padding: 8px 16px; border-radius: 999px;
+  }
+  .topnav a.kembali:hover { background: #2b4a73; }
+
+  header.hero { padding: 44px 18px 10px; text-align: center; }
+  .remah {
+    font-size: 12px; font-weight: 800; letter-spacing: 1.5px;
+    color: #8a94a6; text-transform: uppercase; margin-bottom: 12px;
+  }
+  .remah a { color: #2dd4bf; text-decoration: none; }
+  h1 { font-size: clamp(30px, 6vw, 44px); font-weight: 900; color: #1e3a5f; line-height: 1.25; }
+  header.hero p.sub {
+    max-width: 560px; margin: 14px auto 0;
+    font-size: 16.5px; color: #51617c;
+  }
+
+  .linimasa {
+    display: flex; gap: 8px; overflow-x: auto;
+    padding: 22px 18px 6px;
+    max-width: 780px; margin: 0 auto;
+    scrollbar-width: thin;
+  }
+  .linimasa span {
+    flex: 0 0 auto;
+    font-size: 12px; font-weight: 800;
+    color: #1e3a5f; background: #fff;
+    border: 1px solid rgba(30,58,95,.14);
+    padding: 7px 14px; border-radius: 999px;
+    white-space: nowrap;
+  }
+  .linimasa span b { color: #f59e0b; }
+
+  main { max-width: 700px; margin: 0 auto; padding: 26px 20px 10px; }
+  section.bab { margin: 34px 0; }
+  h2 {
+    font-size: 23px; font-weight: 900; color: #1e3a5f;
+    margin-bottom: 12px; line-height: 1.4;
+  }
+  h2 em { font-style: normal; color: #f59e0b; }
+  p { margin-bottom: 16px; font-size: 16px; }
+
+  .kartu-tahu {
+    background: #eafaf7;
+    border: 1px solid rgba(45,212,191,.35);
+    border-left: 5px solid #2dd4bf;
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 15px;
+  }
+  .kartu-tahu b.pangkal {
+    display: block; font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: #0d9488; margin-bottom: 6px;
+  }
+
+  .pisah {
+    text-align: center; color: #d3c9ae;
+    letter-spacing: 10px; font-weight: 900; margin: 34px 0;
+  }
+
+  .kartu-lanjut {
+    background: linear-gradient(135deg, #e8f4ff, #fdf3e3);
+    border: 1px solid rgba(30,58,95,.10);
+    border-radius: 20px;
+    padding: 26px 24px;
+    margin: 40px 0 10px;
+    text-align: center;
+  }
+  .kartu-lanjut h3 { font-size: 20px; font-weight: 900; color: #1e3a5f; margin-bottom: 8px; }
+  .kartu-lanjut p { font-size: 14.5px; color: #51617c; margin-bottom: 16px; }
+  .kartu-lanjut a.tombol {
+    display: inline-block; text-decoration: none;
+    background: linear-gradient(135deg, #ffb84d, #f59e0b);
+    color: #fff; font-weight: 900; font-size: 15.5px;
+    padding: 12px 34px; border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(245,158,11,.35);
+    margin: 0 6px 8px;
+  }
+  .kartu-lanjut a.tombol:hover { transform: translateY(-2px); }
+  .kartu-lanjut a.tombol.tiruan {
+    background: #fff; color: #1e3a5f; border: 1.5px solid rgba(30,58,95,.2);
+    box-shadow: none;
+  }
+
+  .papan-iklan { max-width: 660px; margin: 10px auto; padding: 0 12px; text-align: center; }
+  .label-iklan {
+    display: inline-block; font-size: 10.5px; font-weight: 800;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #9aa6b8; margin-bottom: 2px;
+  }
+  footer {
+    text-align: center; font-size: 13px; color: #8a94a6;
+    padding: 16px 16px 30px;
+  }
+</style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a class="merek" href="../index.html">Perpustakaan <span>Matematika</span></a>
+    <a class="kembali" href="../lantai-1-dasar-matematika.html">Peta Lantai 1</a>
+  </nav>
+
+  <header class="hero">
+    <div class="remah">Dunia Akiomida / Lantai 1 &mdash; Kamp Angka / Pos 1: Cerita &amp; Sejarah</div>
+    <h1>Sejarah Matematika</h1>
+    <p class="sub">
+      Bab ini menceritakan urutan kejadian dari dua puluh ribu tahun yang lalu sampai hari ini:
+      bagaimana kebutuhan manusia menghitung tumbuh menjadi matematika.
+      Bacanya berurutan saja, karena tiap bagian menjadi latar bagi bagian setelahnya.
+    </p>
+  </header>
+
+  <div class="linimasa">
+    <span><b>20000 SM</b> Tanda hitung</span>
+    <span><b>1800 SM</b> Babilonia</span>
+    <span><b>300 SM</b> Yunani</span>
+    <span><b>628 M</b> Angka nol</span>
+    <span><b>820 M</b> Al-Khawarizmi</span>
+    <span><b>1202</b> Fibonacci</span>
+    <span><b>1687</b> Kalkulus</span>
+    <span><b>1936</b> Mesin hitung</span>
+    <span><b>Kini</b> Kecerdasan buatan</span>
+  </div>
+
+  <div class="papan-iklan">
+    <span class="label-iklan">Iklan</span>
+    <div class="ad-slot"></div>
+  </div>
+
+  <main>
+    <section class="bab">
+      <p>
+        Mulailah dari sebuah kebutuhan sehari-hari. Seorang gembala melepas puluhan domba pada pagi hari,
+        lalu mengembalikannya menjelang malam. Ia perlu tahu jumlah dombanya tetap lengkap, tetapi pada zaman
+        itu belum ada angka dan belum ada tulisan. Solusinya sederhana: satu batu kecil untuk satu domba.
+        Saat domba keluar, satu batu dipindahkan dari kantong penuh ke kantong kosong. Saat domba pulang,
+        batu dipindahkan kembali. Kalau masih ada batu di kantong penuh, berarti masih ada domba di padang.
+        Sistem satu-batu-satu-benda inilah bentuk paling awal dari menghitung.
+      </p>
+      <p>
+        Perhatikan satu hal penting dari contoh itu. Gembala tidak perlu tahu angka "dua puluh tujuh".
+        Ia hanya memanfaatkan padanan satu ke satu. Dari sini kita belajar bahwa sebelum matematika
+        menjadi rumus, matematika pertama-tama adalah alat untuk memastikan sesuatu tidak hilang
+        dan tidak salah. Tujuan itu tidak pernah berubah sampai sekarang.
+      </p>
+    </section>
+
+    <section class="bab">
+      <h2>Sungai Besar Menemukan <em>Hitungan</em></h2>
+      <p>
+        Ribuan tahun kemudian, banyak kelompok manusia berpindah dari hidup berpindah-pindah menjadi
+        bercocok tanam di tepi sungai. Kehidupan menetap menghasilkan kebutuhan baru: menyimpan catatan
+        panen, membagi pekerjaan, dan menandai kepemilikan. Di Mesopotamia, di antara sungai Tigris dan
+        Euphrat, orang Babilonia menulis catatan hitung mereka di lempeng tanah liat. Sistem bilangan
+        mereka berbasis enam puluh, dan bukti pilihannya masih terlihat di dinding setiap rumah:
+        satu jam terdiri atas enam puluh menit, satu menit terdiri atas enam puluh detik.
+      </p>
+      <p>
+        Kasus berikutnya datang dari Mesir, tepi Sungai Nil. Setiap tahun sungai meluap dan menghapus
+        batas-batas sawah. Setelah air surut, pemerintah mengukur ulang setiap bidang tanah untuk menentukan
+        besaran pajak yang sesuai. Kebutuhan mengukur tanah berulang setiap tahun itulah yang melahirkan
+        aturan-aturan geometri awal. Kata geometri sendiri berasal dari bahasa Yunani: <i>geo</i> berarti
+        bumi dan <i>metron</i> berarti ukuran. Jadi urutan kejadiannya jelas: banjir datang, tanah perlu
+        diukur ulang, lalu aturan mengukur berkembang menjadi ilmu.
+      </p>
+    </section>
+
+    <section class="bab">
+      <h2>Yunani: Ketika Angka Belajar <em>Berpikir</em></h2>
+      <p>
+        Orang Yunani melangkah lebih jauh dengan mengajukan pertanyaan baru. Selama ini aturan hitung
+        terbukti bekerja, tetapi tidak ada jaminan ia akan bekerja untuk semua kasus. Bagaimana caranya
+        memastikan sebuah kesimpulan selalu benar, bukan hanya kebetulan benar? Pythagoras dan murid-muridnya
+        menyelidiki pola bilangan satu per satu. Lalu Euclid menyusun hasil-hasil geometri menjadi sebuah
+        buku bernama <i>Elemen</i>.
+      </p>
+      <p>
+        Cara kerja buku itu menentukan standar hingga sekarang. Euclid memulai dari sedikit pernyataan dasar
+        yang sederhana dan mudah diterima, lalu menyusun ratusan kesimpulan satu demi satu, di mana setiap
+        kesimpulan baru dibuktikan dari yang sebelumnya. Tidak ada langkah yang diterima hanya karena
+        "kelihatannya benar". Cara berpikir seperti ini disebut pembuktian, dan ia menjadi fondasi semua
+        matematika setelahnya.
+      </p>
+      <div class="kartu-tahu">
+        <b class="pangkal">Tahukah Anda?</b>
+        Buku <i>Elemen</i> karya Euclid dipakai sebagai buku pelajaran geometri selama hampir dua ribu tahun.
+        Sebagai perbandingan, aplikasi ponsel biasanya usang dalam hitungan bulan. Buku itu masih terbaca
+        dan logikanya masih sah sampai hari ini.
+      </div>
+    </section>
+
+    <section class="bab">
+      <h2>Tahun Ketika <em>Nol</em> Lahir</h2>
+      <p>
+        Bagian berikutnya membahas angka yang muncul paling terlambat: nol. Alasannya masuk akal.
+        Untuk menuliskan jumlah domba, manusia butuh tanda untuk "satu", "dua", dan seterusnya.
+        Tapi untuk menuliskan "tidak ada domba", mereka perlu menganggap kekosongan sebagai sesuatu
+        yang bisa dihitung. Itu langkah pemikiran yang tidak mudah, karena kekosongan terasa bukan
+        sebuah jumlah.
+      </p>
+      <p>
+        Tahun 628 M menjadi titik baliknya. Brahmagupta, seorang ahli matematika dan astronomi dari India,
+        menuliskan aturan kerja nol secara lengkap: bilangan apa pun ditambah nol hasilnya bilangan itu
+        sendiri, bilangan apa pun dikurangi nol hasilnya tetap bilangan itu, dan nol dikurangi bilangan itu
+        menghasilkan bilangan negatif. Dengan aturan yang jelas, nol akhirnya berdiri setara dengan angka lain.
+        Konsekuensinya besar: sistem nilai tempat yang kita pakai sekarang menjadi mungkin. Angka 3 pada
+        posisi ratusan bernilai berbeda dengan 3 pada posisi ribuan, dan celah antarposisi diisi oleh nol.
+        Tanpa nol, bilangan seperti 3.000.004 tidak bisa ditulis dengan ringkas.
+      </p>
+    </section>
+
+    <section class="bab">
+      <h2>Zaman Keemasan <em>Islam</em>: Algoritma Punya Nama</h2>
+      <p>
+        Pada abad kesembilan, Baghdad menjadi pusat ilmu pengetahuan dunia. Di sana berdiri Baitul Hikmah,
+        sebuah lembaga yang mengumpulkan, menerjemahkan, lalu mengembangkan tulisan-tulisan dari Yunani,
+        Persia, dan India. Para ilmuwan yang bekerja di sana melanjutkan pekerjaan yang sudah dimulai
+        dengan cara yang lebih sistematis, dan sebagian besar tulisan mereka ditulis dalam bahasa Arab.
+      </p>
+      <p>
+        Salah satu ilmuwannya bernama Al-Khawarizmi. Ia menulis kitab tentang cara menyelesaikan persamaan
+        secara berurutan: langkah pertama apa, langkah kedua apa, sampai jawabannya diperoleh. Karena judul
+        dan nama ia terus dikutip dunia luar, dua kata internasional lahir dari dirinya. Kata <i>algoritma</i>
+        berasal dari nama Al-Khawarizmi. Kata <i>aljabar</i> berasal dari istilah <i>al-jabr</i> pada judul
+        kitabnya, yang berarti penyusunan kembali bagian yang hilang dalam persamaan. Setiap kali sebuah
+        komputer menjalankan langkah-langkah teratur, ia memakai metode yang namanya berasal dari ilmuwan
+        itu. Warisannya masih bekerja sampai detik ini.
+      </p>
+      <div class="kartu-tahu">
+        <b class="pangkal">Tahukah Anda?</b>
+        Angka 0 sampai 9 yang kita pakai disebut angka Arab karena masuk ke Eropa melalui dunia Islam.
+        Bentuk asalnya berasal dari India, lalu disempurnakan dan disebarluaskan oleh para matematikawan
+        di dunia Islam sebelum diterima luas di barat.
+      </div>
+
+      <div class="pisah">***</div>
+    </section>
+
+    <div class="papan-iklan">
+      <span class="label-iklan">Iklan</span>
+      <div class="ad-slot"></div>
+    </div>
+
+    <section class="bab">
+      <h2>Angka Berjalan ke <em>Pasar</em></h2>
+      <p>
+        Tahun 1202, seorang pedagang dari Pisa bernama Leonardo, yang lebih dikenal sebagai Fibonacci,
+        menulis buku <i>Liber Abaci</i>. Latar belakangnya sebagai pedagang menjelaskan isi bukunya:
+        cara menghitung untung jual beli, cara menukar mata uang, dan cara membagi untung kemitraan
+        secara adil. Untuk semua hitungan itu, ia memperkenalkan angka Arab kepada pembaca Eropa.
+      </p>
+      <p>
+        Angka itu diterima cepat, dan alaminya bisa kita pahami. Sistem angka lama Eropa membuat pembagian
+        terasa sulit, sedangkan sistem baru membuatnya jauh lebih mudah. Pedagang yang bekerja dengan
+        hitungan yang benar dapat menentukan harga yang jujur dan membagi untung sesuai kesepakatan.
+        Dari sini ada pelajaran yang tegas: matematika yang baik mendukung muamalah yang jujur.
+        Keduanya berkembang bersama sejak dulu.
+      </p>
+    </section>
+
+    <section class="bab">
+      <h2>Ketika <em>Gerak</em> Ditanyakan</h2>
+      <p>
+        Bagian berikutnya memindahkan latar ke abad tujuh belas. Isaac Newton dan Gottfried Leibniz,
+        yang bekerja terpisah di dua negara, mengerjakan pertanyaan yang sama: bagaimana mengukur
+        kecepatan pada satu saat tertentu. Pertanyaan ini tidak sederhana, karena kecepatan didefinisikan
+        sebagai jarak dibagi waktu, sedangkan pada satu saat persisnya, jarak yang ditempuh adalah nol.
+      </p>
+      <p>
+        Keduanya sampai pada solusi dengan jalan yang berbeda, dan solusi itu kemudian disebut kalkulus.
+        Idenya: kecepatan pada satu saat dihitung sebagai batas dari kecepatan rata-rata pada jeda waktu
+        yang dibuat semakin pendek. Dengan alat ini, hal-hal yang terus berubah bisa dihitung dan diramal:
+        pergerakan planet, aliran air, pertumbuhan penduduk. Menariknya, kedua penemunya pernah berselisih
+        soal siapa yang lebih dulu. Penetapan yang berlaku sampai sekarang mengakui keduanya. Bahkan soal
+        kepemilikan karya, sejarah berakhir dengan pembagian.
+      </p>
+    </section>
+
+    <section class="bab">
+      <h2>Mesin Mulai <em>Menghitung</em></h2>
+      <p>
+        Tahun 1936, Alan Turing menuliskan sebuah model sederhana: sebuah mesin yang menjalankan
+        langkah-langkah tertentu sesuai aturan yang diberikan. Model itu membuktikan satu hal penting,
+        yaitu langkah hitung apa pun yang bisa diatur, bisa dilakukan oleh mesin. Tulisan itu menjadi
+        dasar teori komputer modern.
+      </p>
+      <p>
+        Setelah itu perkembangannya cepat diikuti. Komputer pertama seukuran ruangan, lalu ponsel di saku,
+        lalu program kecerdasan buatan yang bisa menerjemahkan bahasa, mengenali gambar, dan mengobrol.
+        Semuanya tetap menjalankan prinsip yang sama: langkah teratur yang ditulis dengan matematika.
+        Kalau kita tarik benang merahnya, seluruh perjalanan cerita ini menghubungkan dua titik:
+        kantong batu gembala yang menjaga jumlah domba, dan mesin yang menghitung miliaran langkah per detik.
+        Keduanya bekerja untuk tujuan yang sama, yaitu memastikan sesuatu tidak salah.
+      </p>
+    </section>
+
+    <section class="bab">
+      <h2>Penutup <em>Kecil</em></h2>
+      <p>
+        Bab ini tidak perlu dihafal. Yang perlu dibawa cukup urutannya: kebutuhan menghitung muncul dari
+        kehidupan sehari-hari, aturannya berkembang menjadi ilmu, ilmunya diuji dengan pembuktian, lalu
+        akhirnya dikerjakan oleh mesin. Setiap topik yang terasa rumit hari ini berawal dari pertanyaan
+        sederhana yang dijawab dengan sabar. Di Lantai 1, Anda akan mengikuti urutan yang sama dari awal,
+        dimulai dari angka-angkanya.
+      </p>
+    </section>
+
+    <div class="kartu-lanjut">
+      <h3>Lanjutkan penjelajahan</h3>
+      <p>
+        Pos berikutnya di Kamp Angka adalah "Mengenal Angka" &mdash; perkenalan langsung dengan
+        angka 0 sampai 9 dan cara kerja nilai tempat. Atau, lihat dulu peta lengkap Lantai 1
+        untuk memilih sendiri urutan kunjungan Anda.
+      </p>
+      <a class="tombol" href="../lantai-1-dasar-matematika.html">Peta Lantai 1</a>
+      <a class="tombol tiruan" href="../index.html">Kembali ke Dunia</a>
+    </div>
+  </main>
+
+  <div class="papan-iklan">
+    <span class="label-iklan">Iklan</span>
+    <div class="ad-slot"></div>
+  </div>
+
+  <footer>Dibangun perlahan, ditempuh dengan senyum &mdash; <b>Perpustakaan Matematika</b></footer>
+
+  <script src="../../assets/js/ads.js" defer></script>
+</body>
+</html>

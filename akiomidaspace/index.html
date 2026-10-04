@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dunia Akiomida — Dunia Hidup Perpustakaan Matematika</title>
-<meta name="description" content="Dunia hidup para bola penggelinding. Temui Pilo si pemandu, lalu masuklah ke pintu Lantai 1 untuk mulai belajar matematika dari dasar.">
+<title>Dunia Akiomida — Jelajahi Dunia Perpustakaan Matematika</title>
+<meta name="description" content="Dunia terbuka Akiomida: jelajahi enam wilayah, temui Pilo si pemandu, dan masuki gerbang lantai untuk melihat daftar materi matematika dari dasar sampai PhD.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -15,9 +15,7 @@
     background: linear-gradient(180deg, #e8f4ff 0%, #f6f1e3 100%);
     color: #1e3a5f;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; flex-direction: column; align-items: center;
   }
   .sr-only {
     position: absolute; width: 1px; height: 1px; overflow: hidden;
@@ -26,35 +24,55 @@
   .panggung-wrap {
     position: relative;
     width: calc(100% - 16px);
-    max-width: 1180px;
-    height: min(74vh, 700px);
-    min-height: 430px;
+    max-width: 1240px;
+    height: min(72vh, 680px);
+    min-height: 420px;
     margin-top: 12px;
     border-radius: 26px;
     overflow: hidden;
     border: 1px solid rgba(30,58,95,.10);
     box-shadow: 0 18px 44px rgba(30,58,95,.14);
   }
-  #panggung { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #panggung { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: pan-y; }
+
   .topbar {
     position: absolute; top: 12px; left: 12px; right: 12px;
     display: flex; justify-content: space-between; align-items: center;
     pointer-events: none; z-index: 3;
   }
   .chip {
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.92);
     border: 1px solid rgba(30,58,95,.10);
     color: #1e3a5f;
     font-weight: 800; font-size: 13px;
     padding: 8px 16px; border-radius: 999px;
     box-shadow: 0 4px 12px rgba(30,58,95,.10);
   }
-  .chip-title b { color: #f59e0b; }
-  a.chip-kembali {
-    pointer-events: auto; text-decoration: none;
-    background: rgba(30,58,95,.88); color: #fff;
-  }
+  .chip b { color: #f59e0b; }
+  a.chip-kembali { pointer-events: auto; text-decoration: none; background: rgba(30,58,95,.88); color: #fff; }
   a.chip-kembali:hover { background: #1e3a5f; }
+  #hud-wilayah {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+    z-index: 3; pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .tombol-arah {
+    position: absolute; bottom: 16px; z-index: 4;
+    width: 56px; height: 56px; border-radius: 50%;
+    border: none; background: rgba(30,58,95,.85); color: #fff;
+    font-size: 24px; font-weight: 900; line-height: 1;
+    box-shadow: 0 6px 16px rgba(30,58,95,.30);
+    user-select: none; -webkit-user-select: none; touch-action: none;
+  }
+  .tombol-arah:active { background: rgba(30,58,95,1); }
+  #btn-kiri { left: 16px; }
+  #btn-kanan { right: 16px; }
+  @media (min-width: 1024px) { .tombol-arah { display: none; } }
+  @media (max-width: 640px) {
+    .topbar .chip { font-size: 11.5px; padding: 6px 12px; }
+    #hud-wilayah { top: 54px; font-size: 11.5px; padding: 6px 12px; }
+  }
 
   .papan-iklan {
     width: calc(100% - 24px);
@@ -77,17 +95,24 @@
 <body>
 
   <div class="panggung-wrap" id="panggung-wrap">
-    <canvas id="panggung" aria-label="Dunia Akiomida: bola-bola menggelinding dan pemandu bernama Pilo"></canvas>
+    <canvas id="panggung" aria-label="Dunia terbuka Akiomida: jelajahi enam wilayah dan temui pemandu Pilo"></canvas>
     <div class="topbar">
-      <div class="chip chip-title">Dunia <b>Akiomida</b></div>
+      <div class="chip">Dunia <b>Akiomida</b></div>
       <a class="chip chip-kembali" href="../index.html">Pintu Depan</a>
     </div>
+    <div id="hud-wilayah" class="chip">&nbsp;</div>
+    <button class="tombol-arah" id="btn-kiri" aria-label="Bergerak ke kiri">&larr;</button>
+    <button class="tombol-arah" id="btn-kanan" aria-label="Bergerak ke kanan">&rarr;</button>
   </div>
 
-  <nav class="sr-only" aria-label="Daftar lantai">
+  <nav class="sr-only" aria-label="Daftar wilayah">
     <ul>
-      <li><a href="material/sejarah.html">Lantai 1 Dasar — ruang pertama: Sejarah Matematika</a></li>
-      <li>Lantai 2 sampai 6 sedang dibangun</li>
+      <li><a href="lantai-1-dasar-matematika.html">Kamp Angka — Lantai 1, Dasar</a></li>
+      <li><a href="lantai-2-matematika-smp.html">Hutan Simbol — Lantai 2, SMP</a></li>
+      <li><a href="lantai-3-matematika-sma.html">Pegunungan Pola — Lantai 3, SMA</a></li>
+      <li><a href="lantai-4-matematika-sarjana.html">Kota Bukti — Lantai 4, Sarjana</a></li>
+      <li><a href="lantai-5-matematika-magister.html">Lembah Kedalaman — Lantai 5, Magister</a></li>
+      <li><a href="lantai-6-matematika-doktoral.html">Puncak Riset — Lantai 6, Doktoral</a></li>
     </ul>
   </nav>
 
@@ -106,305 +131,453 @@
     var wrap = document.getElementById('panggung-wrap');
     var cvs  = document.getElementById('panggung');
     var ctx  = cvs.getContext('2d');
+    var hud  = document.getElementById('hud-wilayah');
 
     var RM    = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var SPEED = RM ? 0.22 : 1;
+    var SPEED = RM ? 0.3 : 1;
 
-    var W = 0, H = 0, groundY = 0;
+    var viewW = 0, viewH = 0, groundY = 0;
+    var WORLD_W = 4600;
+    var camX = 0;
+    var follow = true;
 
-    /* ---------- warna & data dunia ---------- */
-    var INK = '#1e3a5f';
-    var BALL_COLORS = ['#f4a261','#7fb8f0','#a5d6a7','#f2b5c8','#ffd6a5','#9fd8cf','#c5b3f2','#f6d365'];
-
-    var DOORS = [
-      { label:'Dasar', sub:'Lantai 1', color:'#5aa9e6', open:true,  href:'material/sejarah.html' },
-      { label:'SMP',   sub:'Lantai 2', color:'#3ec6b5', open:false },
-      { label:'SMA',   sub:'Lantai 3', color:'#f4b942', open:false },
-      { label:'S1',    sub:'Lantai 4', color:'#f28f8f', open:false },
-      { label:'S2',    sub:'Lantai 5', color:'#a68ff2', open:false },
-      { label:'PhD',   sub:'Lantai 6', color:'#8f9bb3', open:false }
+    /* ---------- data dunia ---------- */
+    var ZONES = [
+      { name:'Kamp Angka',       sub:'Lantai 1 \u00b7 Dasar',    href:'lantai-1-dasar-matematika.html',      open:true,  color:'#5aa9e6', tint:'220,235,195', h:175, x:340,  biome:'kamp' },
+      { name:'Hutan Simbol',     sub:'Lantai 2 \u00b7 SMP',      href:'lantai-2-matematika-smp.html',        open:false, color:'#3ec6b5', tint:'205,231,221', h:185, x:1120, biome:'hutan' },
+      { name:'Pegunungan Pola',  sub:'Lantai 3 \u00b7 SMA',      href:'lantai-3-matematika-sma.html',        open:false, color:'#f4b942', tint:'242,227,184', h:195, x:1900, biome:'gunung' },
+      { name:'Kota Bukti',       sub:'Lantai 4 \u00b7 Sarjana',  href:'lantai-4-matematika-sarjana.html',    open:false, color:'#f28f8f', tint:'243,217,212', h:205, x:2680, biome:'kota' },
+      { name:'Lembah Kedalaman', sub:'Lantai 5 \u00b7 Magister', href:'lantai-5-matematika-magister.html',   open:false, color:'#a68ff2', tint:'228,220,243', h:215, x:3460, biome:'lembah' },
+      { name:'Puncak Riset',     sub:'Lantai 6 \u00b7 PhD',      href:'lantai-6-matematika-doktoral.html',   open:false, color:'#8f9bb3', tint:'227,232,239', h:230, x:4240, biome:'salju' }
     ];
 
     var PESAN_PILO = [
-      'Halo, aku Pilo. Pemandu dunia ini. Aku menggelinding keliling sambil menunggu tamu.',
-      'Mau belajar dari awal? Pintu Dasar warna biru, di ujung sana.',
-      'Di dalam pintu Dasar, ruangan pertamanya: Sejarah Matematika.',
-      'Pelankan saja langkahmu. Matematika bukan lomba lari, ini jalan sore.',
-      'Kalau tersesat, kembali ke sini ya. Aku tidak ke mana-mana.'
+      'Selamat datang di Akiomida. Aku Pilo, pemandu perjalananmu di dunia ini.',
+      'Dunia ini punya enam wilayah. Seret layar, tekan tombol panah, atau klik tanah untuk berkelana.',
+      'Gerbang pertama ada di kanan: Kamp Angka. Klik gerbangnya untuk melihat daftar materinya.',
+      'Di dalam gerbang, materi disusun sebagai peta tur. Pilih pos mana pun yang bertanda BUKA.',
+      'Wilayah lain sedang disiapkan. Sambil menunggu, jelajahi dunianya dulu saja.'
     ];
 
-    var balls = [], clouds = [];
-    var guide = { x: 0, y: 0, r: 16, color: '#ffd166' };
-    var bubble = { show: null, until: 0, alpha: 0, nextAt: 1600, idx: 0 };
+    var props = [];      /* hiasan dunia: pohon, batu, rumah, dll */
+    var clouds = [];
+    var balls  = [];     /* bola ambient per wilayah */
+    var sparks = [];     /* partikel di gerbang terbuka */
+
+    var player = { x: 210, v: 0, rot: 0, r: 15, target: null };
+    var guide  = { x: 262, r: 15, color: '#ffd166', y: 0 };
+    var keys = { kiri: false, kanan: false };
+    var bubble = { show: null, until: 0, alpha: 0, nextAt: 1400, idx: 0 };
 
     /* ---------- util ---------- */
     function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
     function rand(a, b) { return a + Math.random() * (b - a); }
-
-    function hexRgb(h) {
-      return [ parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16) ];
-    }
+    function hexRgb(h) { return [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)]; }
     function shade(h, amt) {
       var c = hexRgb(h);
       for (var i = 0; i < 3; i++) c[i] = clamp(Math.round(c[i] + amt), 0, 255);
       return 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')';
     }
     function rr(x, y, w, h, r) {
-      if (typeof r === 'number') r = [r,r,r,r];
+      if (typeof r === 'number') r = [r, r, r, r];
       ctx.beginPath();
       if (ctx.roundRect) { ctx.roundRect(x, y, w, h, r); return; }
-      var a = Math.min(r[0], w/2), b2 = Math.min(r[1], w/2);
-      ctx.moveTo(x + a, y);
-      ctx.arcTo(x + w, y, x + w, y + h, b2);
+      ctx.moveTo(x + r[0], y);
+      ctx.arcTo(x + w, y, x + w, y + h, r[1]);
       ctx.arcTo(x + w, y + h, x, y + h, r[2]);
       ctx.arcTo(x, y + h, x, y, r[3]);
-      ctx.arcTo(x, y, x + w, y, a);
+      ctx.arcTo(x, y, x + w, y, r[0]);
       ctx.closePath();
     }
 
-    /* ---------- tata letak ---------- */
-    function layout() {
-      W = wrap.clientWidth;
-      H = wrap.clientHeight;
-      var DPR = Math.min(window.devicePixelRatio || 1, 2);
-      cvs.width = Math.round(W * DPR);
-      cvs.height = Math.round(H * DPR);
-      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-
-      groundY = H * 0.80;
-
-      var n = DOORS.length;
-      var pad = clamp(W * 0.05, 10, 60);
-      var cell = (W - pad * 2) / n;
-      var bw = clamp(cell * 0.66, 40, 120);
-      var bh = clamp(bw * 1.25, 58, 158);
-      for (var i = 0; i < n; i++) {
-        DOORS[i].cx = pad + cell * (i + 0.5);
-        DOORS[i].bw = bw;
-        DOORS[i].bh = bh;
-        DOORS[i].pulse = DOORS[i].pulse || 0;
+    /* ---------- hiasan dunia ---------- */
+    function buatProps() {
+      var GATE_CLEAR = 240;
+      ZONES.forEach(function (z) {
+        var set = [];
+        var n = 10;
+        for (var i = 0; i < n; i++) {
+          var px = z.x + rand(-330, 330);
+          if (Math.abs(px - z.x) < GATE_CLEAR) continue;
+          var t;
+          if (z.biome === 'kamp')   t = Math.random() < .45 ? 'tent' : (Math.random() < .5 ? 'tree' : 'flag');
+          if (z.biome === 'hutan')  t = Math.random() < .8 ? 'tree' : 'bush';
+          if (z.biome === 'gunung') t = Math.random() < .55 ? 'pine' : 'rock';
+          if (z.biome === 'kota')   t = Math.random() < .6 ? 'house' : 'lamp';
+          if (z.biome === 'lembah') t = Math.random() < .5 ? 'crystal' : 'tree';
+          if (z.biome === 'salju')  t = Math.random() < .7 ? 'snowpine' : 'rock';
+          set.push({ type: t, x: px, s: rand(.8, 1.35) });
+        }
+        z.props = set;
+      });
+      /* semak & rumput liar di antara wilayah */
+      for (var x = 60; x < WORLD_W; x += 150) {
+        var nearGate = ZONES.some(function (z) { return Math.abs(z.x - x) < GATE_CLEAR; });
+        if (nearGate) continue;
+        var r = Math.random();
+        if (r < .34) props.push({ type: 'bush', x: x + rand(-40, 40), s: rand(.7, 1.2) });
+        else if (r < .6) props.push({ type: 'grass', x: x + rand(-40, 40), s: rand(.8, 1.3) });
+        else if (r < .72) props.push({ type: 'rock', x: x + rand(-40, 40), s: rand(.5, .9) });
       }
-
-      guide.x = clamp(W * 0.5, 70, W - 70);
-
-      var target = W < 520 ? 5 : 8;
-      while (balls.length < target) spawnBall();
-      balls.length = Math.min(balls.length, target);
-
-      var tc = W < 520 ? 2 : 3;
-      while (clouds.length < tc) spawnCloud();
-      clouds.length = Math.min(clouds.length, tc);
+      for (var c = 0; c < 7; c++) clouds.push({ x: rand(0, WORLD_W), y: rand(50, 210), s: rand(.7, 1.4), v: rand(7, 15) * SPEED });
     }
 
-    function spawnBall() {
-      var r = rand(11, 21);
-      balls.push({
-        x: rand(0, Math.max(W, 320)),
-        r: r,
-        v: rand(26, 72) * (Math.random() < 0.5 ? -1 : 1) * SPEED,
-        c: BALL_COLORS[balls.length % BALL_COLORS.length],
-        rot: rand(0, 6.28)
+    function buatBola() {
+      ZONES.forEach(function (z, zi) {
+        var n = 2 + (zi % 2);
+        for (var i = 0; i < n; i++) {
+          var COLORS = ['#f4a261', '#7fb8f0', '#a5d6a7', '#f2b5c8', '#ffd6a5', '#9fd8cf', '#c5b3f2', '#f6d365'];
+          balls.push({
+            z: zi,
+            x: z.x + rand(-300, 300),
+            r: rand(10, 18),
+            v: rand(30, 60) * (Math.random() < .5 ? -1 : 1) * SPEED,
+            c: COLORS[(zi * 3 + i) % COLORS.length],
+            rot: rand(0, 6.28)
+          });
+        }
       });
-    }
-    function spawnCloud() {
-      clouds.push({
-        x: rand(0, Math.max(W, 320)),
-        y: rand(H * 0.08, H * 0.30),
-        s: rand(0.7, 1.25),
-        v: rand(6, 14) * SPEED
-      });
+      for (var s = 0; s < 7; s++) sparks.push({ a: rand(0, 6.28), sp: rand(1.2, 2.4), rr: rand(46, 74), s: rand(2.2, 3.6) });
     }
 
-    /* ---------- gambar ---------- */
-    function drawSky(t) {
-      var g = ctx.createLinearGradient(0, 0, 0, H);
+    /* ---------- gambar: langit & latar ---------- */
+    function drawSky() {
+      var g = ctx.createLinearGradient(0, 0, 0, viewH);
       g.addColorStop(0, '#d9efff');
-      g.addColorStop(0.7, '#fdf4e0');
+      g.addColorStop(.62, '#fdf4e0');
       g.addColorStop(1, '#f9e9c8');
       ctx.fillStyle = g;
-      ctx.fillRect(0, 0, W, H);
+      ctx.fillRect(0, 0, viewW, viewH);
 
-      var sx = W - 74, sy = 66;
-      var halo = ctx.createRadialGradient(sx, sy, 10, sx, sy, 90);
-      halo.addColorStop(0, 'rgba(255,214,102,.55)');
+      var sx = viewW - 84, sy = 72;
+      var halo = ctx.createRadialGradient(sx, sy, 12, sx, sy, 110);
+      halo.addColorStop(0, 'rgba(255,214,102,.5)');
       halo.addColorStop(1, 'rgba(255,214,102,0)');
       ctx.fillStyle = halo;
-      ctx.fillRect(sx - 95, sy - 95, 190, 190);
+      ctx.fillRect(sx - 115, sy - 115, 230, 230);
       ctx.fillStyle = '#ffd166';
-      ctx.beginPath(); ctx.arc(sx, sy, 30, 0, 6.283); ctx.fill();
+      ctx.beginPath(); ctx.arc(sx, sy, 34, 0, 6.283); ctx.fill();
       ctx.fillStyle = '#ffe9ad';
-      ctx.beginPath(); ctx.arc(sx - 8, sy - 8, 18, 0, 6.283); ctx.fill();
+      ctx.beginPath(); ctx.arc(sx - 9, sy - 9, 20, 0, 6.283); ctx.fill();
     }
 
-    function drawClouds(dt) {
-      ctx.fillStyle = 'rgba(255,255,255,.85)';
-      for (var i = 0; i < clouds.length; i++) {
-        var c = clouds[i];
-        c.x += c.v * dt;
-        if (c.x > W + 120) c.x = -120;
-        var y = c.y, s = c.s;
-        ctx.beginPath();
-        ctx.ellipse(c.x, y, 42 * s, 16 * s, 0, 0, 6.283);
-        ctx.ellipse(c.x - 26 * s, y + 6 * s, 24 * s, 12 * s, 0, 0, 6.283);
-        ctx.ellipse(c.x + 28 * s, y + 5 * s, 26 * s, 13 * s, 0, 0, 6.283);
-        ctx.fill();
+    function ridge(x, a, b, c) {
+      return Math.sin(x * .0042 + a) + .55 * Math.sin(x * .0021 + b) + .3 * Math.sin(x * .0085 + c);
+    }
+    function drawRidge(factor, base, amp, color, a, b, c) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(0, groundY);
+      for (var sx = 0; sx <= viewW + 24; sx += 24) {
+        var wx = camX * factor + sx;
+        ctx.lineTo(sx, groundY - base - ridge(wx, a, b, c) * amp);
       }
-    }
-
-    function drawGround() {
-      ctx.fillStyle = '#d5ecc8';
-      ctx.beginPath(); ctx.ellipse(W * 0.20, groundY + 46, W * 0.30, 74, 0, 3.141, 0); ctx.fill();
-      ctx.fillStyle = '#c8e4bd';
-      ctx.beginPath(); ctx.ellipse(W * 0.78, groundY + 66, W * 0.34, 96, 0, 3.141, 0); ctx.fill();
-
-      ctx.fillStyle = '#f0e6c0';
-      ctx.fillRect(0, groundY, W, H - groundY);
-      ctx.fillStyle = '#f7efd4';
-      ctx.fillRect(0, groundY, W, 8);
-
-      var p0 = DOORS[0], p5 = DOORS[DOORS.length - 1];
-      ctx.fillStyle = '#e6d3a3';
-      rr(p0.cx - p0.bw * 0.9, groundY + 4, (p5.cx - p0.cx) + p0.bw * 1.8, 12, 6);
+      ctx.lineTo(viewW, groundY);
+      ctx.closePath();
       ctx.fill();
     }
 
-    function drawDoors(t) {
-      var small = W < 480;
-      for (var i = 0; i < DOORS.length; i++) {
-        var d = DOORS[i];
-        var glow = d.open ? (0.5 + 0.5 * Math.sin(t * 2 + i)) : 0;
-
-        ctx.save();
-        ctx.translate(d.cx, groundY);
-        if (d.open) { ctx.shadowColor = d.color; ctx.shadowBlur = 12 + 10 * glow; }
-        ctx.globalAlpha = d.open ? 1 : 0.52;
-
-        rr(-d.bw / 2, -d.bh, d.bw, d.bh, [d.bw / 2, d.bw / 2, 7, 7]);
-        ctx.fillStyle = d.color;
-        ctx.fill();
-        ctx.shadowBlur = 0;
-
-        rr(-d.bw / 2 + 5, -d.bh + 5, d.bw - 10, d.bh - 5, [d.bw / 2 - 5, d.bw / 2 - 5, 5, 5]);
-        ctx.fillStyle = 'rgba(0,0,0,.16)';
-        ctx.fill();
-
-        ctx.fillStyle = 'rgba(255,255,255,.85)';
+    function drawClouds(dt) {
+      ctx.fillStyle = 'rgba(255,255,255,.88)';
+      for (var i = 0; i < clouds.length; i++) {
+        var c = clouds[i];
+        c.x += c.v * dt;
+        if (c.x > WORLD_W + 140) c.x = -140;
+        var sx = c.x - camX;
+        if (sx < -160 || sx > viewW + 160) continue;
+        var y = c.y, s = c.s;
         ctx.beginPath();
-        ctx.arc(d.bw / 2 - 9, -d.bh * 0.45, 3.2, 0, 6.283);
+        ctx.ellipse(sx, y, 44 * s, 16 * s, 0, 0, 6.283);
+        ctx.ellipse(sx - 28 * s, y + 6 * s, 25 * s, 12 * s, 0, 0, 6.283);
+        ctx.ellipse(sx + 30 * s, y + 5 * s, 27 * s, 13 * s, 0, 0, 6.283);
         ctx.fill();
-        ctx.restore();
+      }
+    }
 
-        /* papan nama */
-        var fs1 = small ? 8.5 : 9.5, fs2 = small ? 10.5 : 12.5;
-        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-        ctx.font = '700 ' + fs1 + 'px Nunito, sans-serif';
-        var w1 = ctx.measureText(d.sub).width;
-        ctx.font = '800 ' + fs2 + 'px Nunito, sans-serif';
-        var w2 = ctx.measureText(d.label).width;
-        var sw = Math.max(w1, w2) + 22;
-        var sy = groundY - d.bh - 44;
+    /* ---------- gambar: tanah & hiasan ---------- */
+    function drawGround() {
+      ctx.fillStyle = '#efe4bd';
+      ctx.fillRect(0, groundY, viewW, viewH - groundY);
+      ctx.fillStyle = '#f6efd6';
+      ctx.fillRect(0, groundY, viewW, 8);
 
-        ctx.fillStyle = 'rgba(255,255,255,.94)';
-        rr(d.cx - sw / 2, sy, sw, 32, 9);
+      /* cor per wilayah */
+      ZONES.forEach(function (z) {
+        var x0 = z.x - 380, x1 = z.x + 380;
+        if (x1 < camX || x0 > camX + viewW) return;
+        ctx.fillStyle = 'rgba(' + z.tint + ',.5)';
+        ctx.fillRect(clamp(x0 - camX, -1, viewW), groundY + 8,
+                     clamp(x1, 0, WORLD_W) - clamp(x0, 0, WORLD_W), viewH - groundY);
+      });
+
+      /* jalan setapak memanjang */
+      ctx.fillStyle = '#e4d1a0';
+      ctx.fillRect(0, groundY + 4, viewW, 11);
+      ctx.fillStyle = 'rgba(255,255,255,.35)';
+      for (var x = Math.floor(camX / 46) * 46; x < camX + viewW; x += 46) {
+        ctx.fillRect(x - camX, groundY + 8.5, 20, 2.4);
+      }
+    }
+
+    function drawProp(p, t) {
+      var sx = p.x - camX, s = p.s;
+      if (sx < -80 || sx > viewW + 80) return;
+      var gy = groundY + 6;
+      ctx.save();
+      ctx.translate(sx, gy);
+      ctx.scale(s, s);
+      ctx.fillStyle = 'rgba(30,58,95,.10)';
+      ctx.beginPath(); ctx.ellipse(0, 2, 16, 4, 0, 0, 6.283); ctx.fill();
+
+      if (p.type === 'tree') {
+        ctx.fillStyle = '#a5764f'; ctx.fillRect(-3, -26, 6, 26);
+        ctx.fillStyle = '#7fb069';
+        ctx.beginPath(); ctx.arc(0, -38, 17, 0, 6.283); ctx.arc(-11, -30, 11, 0, 6.283); ctx.arc(11, -30, 11, 0, 6.283); ctx.fill();
+        ctx.fillStyle = 'rgba(255,255,255,.25)';
+        ctx.beginPath(); ctx.arc(-6, -44, 7, 0, 6.283); ctx.fill();
+      } else if (p.type === 'pine' || p.type === 'snowpine') {
+        ctx.fillStyle = '#8d6a4c'; ctx.fillRect(-2.6, -18, 5.2, 18);
+        ctx.fillStyle = p.type === 'pine' ? '#5f8d63' : '#4f7a58';
+        for (var k = 0; k < 3; k++) {
+          var w = 20 - k * 5, yy = -22 - k * 15;
+          ctx.beginPath(); ctx.moveTo(-w, yy); ctx.lineTo(w, yy); ctx.lineTo(0, yy - 20); ctx.closePath(); ctx.fill();
+        }
+        if (p.type === 'snowpine') {
+          ctx.fillStyle = 'rgba(255,255,255,.85)';
+          ctx.beginPath(); ctx.moveTo(-6, -64); ctx.lineTo(6, -64); ctx.lineTo(0, -76); ctx.closePath(); ctx.fill();
+        }
+      } else if (p.type === 'rock') {
+        ctx.fillStyle = '#b9b2a2';
+        ctx.beginPath(); ctx.ellipse(0, -9, 15, 10, 0, 0, 6.283); ctx.fill();
+        ctx.fillStyle = 'rgba(255,255,255,.3)';
+        ctx.beginPath(); ctx.ellipse(-5, -13, 6, 3.4, 0, 0, 6.283); ctx.fill();
+      } else if (p.type === 'bush') {
+        ctx.fillStyle = '#88b874';
+        ctx.beginPath(); ctx.ellipse(0, -8, 14, 9, 0, 0, 6.283); ctx.ellipse(9, -6, 9, 6, 0, 0, 6.283); ctx.fill();
+      } else if (p.type === 'grass') {
+        ctx.strokeStyle = '#9dbd72'; ctx.lineWidth = 2; ctx.lineCap = 'round';
+        for (var g = -1; g <= 1; g++) {
+          ctx.beginPath(); ctx.moveTo(g * 4, 0);
+          ctx.quadraticCurveTo(g * 6 + Math.sin(t * 2 + p.x) * 2, -8, g * 7, -14); ctx.stroke();
+        }
+        ctx.lineCap = 'butt';
+      } else if (p.type === 'tent') {
+        ctx.fillStyle = '#e8985e';
+        ctx.beginPath(); ctx.moveTo(-18, 0); ctx.lineTo(18, 0); ctx.lineTo(0, -24); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = 'rgba(0,0,0,.18)';
+        ctx.beginPath(); ctx.moveTo(-6, 0); ctx.lineTo(6, 0); ctx.lineTo(0, -13); ctx.closePath(); ctx.fill();
+      } else if (p.type === 'flag') {
+        ctx.strokeStyle = '#b08968'; ctx.lineWidth = 3; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -40); ctx.stroke(); ctx.lineCap = 'butt';
+        ctx.fillStyle = '#5aa9e6';
+        ctx.beginPath(); ctx.moveTo(0, -40);
+        ctx.quadraticCurveTo(11 + Math.sin(t * 3 + p.x) * 2.4, -36, 22, -33);
+        ctx.quadraticCurveTo(11 + Math.sin(t * 3 + p.x) * 2.4, -31, 0, -27);
+        ctx.closePath(); ctx.fill();
+      } else if (p.type === 'house') {
+        ctx.fillStyle = '#e8d8c3'; ctx.fillRect(-20, -26, 40, 26);
+        ctx.fillStyle = '#c96f5c';
+        ctx.beginPath(); ctx.moveTo(-24, -26); ctx.lineTo(24, -26); ctx.lineTo(0, -46); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = '#8d6a4c'; ctx.fillRect(-5, -16, 10, 16);
+        ctx.fillStyle = 'rgba(255,255,255,.5)'; ctx.fillRect(-16, -22, 8, 8); ctx.fillRect(8, -22, 8, 8);
+      } else if (p.type === 'lamp') {
+        ctx.strokeStyle = '#6b7280'; ctx.lineWidth = 3.4; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -38); ctx.stroke(); ctx.lineCap = 'butt';
+        var glow = ctx.createRadialGradient(0, -44, 2, 0, -44, 16);
+        glow.addColorStop(0, 'rgba(255,214,102,.75)');
+        glow.addColorStop(1, 'rgba(255,214,102,0)');
+        ctx.fillStyle = glow; ctx.fillRect(-16, -60, 32, 32);
+        ctx.fillStyle = '#ffd166'; ctx.beginPath(); ctx.arc(0, -44, 5, 0, 6.283); ctx.fill();
+      } else if (p.type === 'crystal') {
+        ctx.fillStyle = 'rgba(166,143,242,.8)';
+        ctx.beginPath(); ctx.moveTo(-9, 0); ctx.lineTo(9, 0); ctx.lineTo(5, -24); ctx.lineTo(0, -34); ctx.lineTo(-5, -24); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = 'rgba(255,255,255,.4)';
+        ctx.beginPath(); ctx.moveTo(-4, 0); ctx.lineTo(0, 0); ctx.lineTo(0, -26); ctx.lineTo(-4, -22); ctx.closePath(); ctx.fill();
+      }
+      ctx.restore();
+    }
+
+    /* ---------- gambar: gerbang wilayah ---------- */
+    function drawGate(z, t) {
+      var sx = z.x - camX;
+      if (sx < -220 || sx > viewW + 220) return;
+      var gw = 96, gh = z.h;
+      var glow = z.open ? (.5 + .5 * Math.sin(t * 2)) : 0;
+
+      /* alun-alun */
+      ctx.fillStyle = 'rgba(255,255,255,.32)';
+      ctx.beginPath(); ctx.ellipse(sx, groundY + 10, 128, 15, 0, 0, 6.283); ctx.fill();
+
+      ctx.save();
+      ctx.translate(sx, groundY);
+      ctx.globalAlpha = z.open ? 1 : .55;
+      if (z.open) { ctx.shadowColor = z.color; ctx.shadowBlur = 16 + 10 * glow; }
+
+      /* pilar */
+      ctx.fillStyle = z.color;
+      rr(-gw / 2 - 9, -gh, 18, gh, 8); ctx.fill();
+      rr(gw / 2 - 9, -gh, 18, gh, 8); ctx.fill();
+      ctx.shadowBlur = 0;
+
+      /* lengkung atas */
+      ctx.strokeStyle = z.color; ctx.lineWidth = 17; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.arc(0, -gh, gw / 2, Math.PI, 0); ctx.stroke();
+      ctx.lineCap = 'butt';
+
+      /* cahaya di dalam gerbang terbuka */
+      if (z.open) {
+        var lg = ctx.createLinearGradient(0, -gh + 20, 0, 0);
+        lg.addColorStop(0, 'rgba(255,255,255,.55)');
+        lg.addColorStop(1, 'rgba(255,255,255,.08)');
+        ctx.fillStyle = lg;
+        rr(-gw / 2 + 10, -gh + 12, gw - 20, gh - 12, [30, 30, 6, 6]);
         ctx.fill();
-        ctx.strokeStyle = 'rgba(30,58,95,.12)';
-        ctx.stroke();
-        ctx.fillStyle = '#8a94a6';
-        ctx.font = '700 ' + fs1 + 'px Nunito, sans-serif';
-        ctx.fillText(d.sub, d.cx, sy + 10);
-        ctx.fillStyle = INK;
-        ctx.font = '800 ' + fs2 + 'px Nunito, sans-serif';
-        ctx.fillText(d.label, d.cx, sy + 22.5);
+      } else {
+        ctx.fillStyle = 'rgba(0,0,0,.14)';
+        rr(-gw / 2 + 10, -gh + 12, gw - 20, gh - 12, [30, 30, 6, 6]);
+        ctx.fill();
+      }
+      ctx.restore();
 
-        if (d.open) {
-          ctx.fillStyle = 'rgba(255,255,255,.95)';
-          var pw = 54, py = sy + 38;
-          rr(d.cx - pw / 2, py, pw, 18, 9);
-          ctx.fill();
-          ctx.fillStyle = '#2dd4bf';
-          ctx.font = '800 10px Nunito, sans-serif';
-          ctx.fillText('BUKA', d.cx, py + 9.5);
-        } else {
-          ctx.fillStyle = 'rgba(255,255,255,.9)';
-          var qw = 52, qy = -d.bh * 0.42;
-          rr(d.cx - qw / 2, qy, qw, 17, 8.5);
-          ctx.fill();
-          ctx.fillStyle = '#7d8aa0';
-          ctx.font = '700 9.5px Nunito, sans-serif';
-          ctx.fillText('Segera', d.cx, qy + 9);
+      /* bendera di puncak */
+      ctx.strokeStyle = '#8d6a4c'; ctx.lineWidth = 3; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(sx, groundY - gh - gw / 2 - 4); ctx.lineTo(sx, groundY - gh - gw / 2 - 30); ctx.stroke();
+      ctx.lineCap = 'butt';
+      ctx.fillStyle = z.color;
+      ctx.beginPath(); ctx.moveTo(sx, groundY - gh - gw / 2 - 30);
+      ctx.quadraticCurveTo(sx + 13 + Math.sin(t * 3) * 2.6, groundY - gh - gw / 2 - 26, sx + 26, groundY - gh - gw / 2 - 22);
+      ctx.quadraticCurveTo(sx + 13 + Math.sin(t * 3) * 2.6, groundY - gh - gw / 2 - 19, sx, groundY - gh - gw / 2 - 15);
+      ctx.closePath(); ctx.fill();
+
+      /* papan nama */
+      var nw = 190;
+      ctx.fillStyle = 'rgba(255,255,255,.96)';
+      rr(sx - nw / 2, groundY - gh - gw / 2 - 76, nw, 44, 12);
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(30,58,95,.14)'; ctx.lineWidth = 1.5; ctx.stroke();
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillStyle = '#8a94a6';
+      ctx.font = '800 9.5px Nunito, sans-serif';
+      ctx.fillText(z.sub.toUpperCase(), sx, groundY - gh - gw / 2 - 61);
+      ctx.fillStyle = '#1e3a5f';
+      ctx.font = '900 15.5px Nunito, sans-serif';
+      ctx.fillText(z.name, sx, groundY - gh - gw / 2 - 44);
+
+      /* status */
+      if (z.open) {
+        ctx.fillStyle = '#15803d';
+        rr(sx - 27, groundY - gh - gw / 2 - 96, 54, 19, 9.5); ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.font = '900 10px Nunito, sans-serif';
+        ctx.fillText('BUKA', sx, groundY - gh - gw / 2 - 86);
+      } else {
+        ctx.fillStyle = 'rgba(255,255,255,.92)';
+        rr(sx - 30, groundY - gh - gw / 2 - 96, 60, 19, 9.5); ctx.fill();
+        ctx.strokeStyle = 'rgba(30,58,95,.18)'; ctx.stroke();
+        ctx.fillStyle = '#7d8aa0';
+        ctx.font = '800 10px Nunito, sans-serif';
+        ctx.fillText('Segera', sx, groundY - gh - gw / 2 - 86);
+      }
+
+      /* partikel di gerbang terbuka */
+      if (z.open) {
+        ctx.fillStyle = 'rgba(255,209,102,.85)';
+        for (var i = 0; i < sparks.length; i++) {
+          var sp = sparks[i];
+          var ang = sp.a + t * sp.sp;
+          var px = sx + Math.cos(ang) * sp.rr;
+          var py = groundY - gh * .55 + Math.sin(ang) * sp.rr * .45;
+          ctx.beginPath(); ctx.arc(px, py, sp.s, 0, 6.283); ctx.fill();
         }
       }
     }
 
+    /* ---------- gambar: bola ---------- */
     function drawBall(b) {
+      var sx = b.x - camX;
+      if (sx < -40 || sx > viewW + 40) return;
       var cy = groundY - b.r;
       ctx.fillStyle = 'rgba(30,58,95,.12)';
-      ctx.beginPath();
-      ctx.ellipse(b.x, groundY + 3, b.r * 0.8, b.r * 0.22, 0, 0, 6.283);
-      ctx.fill();
-
-      var g = ctx.createRadialGradient(b.x - b.r * 0.35, cy - b.r * 0.4, b.r * 0.15, b.x, cy, b.r);
+      ctx.beginPath(); ctx.ellipse(sx, groundY + 3, b.r * .8, b.r * .22, 0, 0, 6.283); ctx.fill();
+      var g = ctx.createRadialGradient(sx - b.r * .35, cy - b.r * .4, b.r * .15, sx, cy, b.r);
       g.addColorStop(0, shade(b.c, 45));
-      g.addColorStop(0.55, b.c);
+      g.addColorStop(.55, b.c);
       g.addColorStop(1, shade(b.c, -30));
       ctx.fillStyle = g;
-      ctx.beginPath(); ctx.arc(b.x, cy, b.r, 0, 6.283); ctx.fill();
-
+      ctx.beginPath(); ctx.arc(sx, cy, b.r, 0, 6.283); ctx.fill();
       ctx.fillStyle = 'rgba(0,0,0,.16)';
       for (var k = 0; k < 3; k++) {
         var a = b.rot + k * 2.094;
         ctx.beginPath();
-        ctx.arc(b.x + Math.cos(a) * b.r * 0.55, cy + Math.sin(a) * b.r * 0.55, b.r * 0.17, 0, 6.283);
+        ctx.arc(sx + Math.cos(a) * b.r * .55, cy + Math.sin(a) * b.r * .55, b.r * .17, 0, 6.283);
+        ctx.fill();
+      }
+    }
+
+    function drawPlayer(t) {
+      var sx = player.x - camX;
+      var cy = groundY - player.r;
+      ctx.fillStyle = 'rgba(30,58,95,.16)';
+      ctx.beginPath(); ctx.ellipse(sx, groundY + 3, player.r * .85, player.r * .24, 0, 0, 6.283); ctx.fill();
+      var ring = ctx.createRadialGradient(sx, cy, player.r * .6, sx, cy, player.r * 1.9);
+      ring.addColorStop(0, 'rgba(245,158,11,.22)');
+      ring.addColorStop(1, 'rgba(245,158,11,0)');
+      ctx.fillStyle = ring; ctx.fillRect(sx - 34, cy - 34, 68, 68);
+      var g = ctx.createRadialGradient(sx - 5, cy - 6, 3, sx, cy, player.r);
+      g.addColorStop(0, '#fff7e0');
+      g.addColorStop(.55, '#ffd88a');
+      g.addColorStop(1, '#e9a13b');
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(sx, cy, player.r, 0, 6.283); ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,.9)'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(sx, cy, player.r - 1.2, 0, 6.283); ctx.stroke();
+      ctx.fillStyle = 'rgba(0,0,0,.13)';
+      for (var k = 0; k < 3; k++) {
+        var a = player.rot + k * 2.094;
+        ctx.beginPath();
+        ctx.arc(sx + Math.cos(a) * player.r * .55, cy + Math.sin(a) * player.r * .55, player.r * .16, 0, 6.283);
         ctx.fill();
       }
     }
 
     function drawGuide(t) {
+      var sx = guide.x - camX;
+      if (sx < -80 || sx > viewW + 80) return;
       var bob = RM ? 0 : Math.abs(Math.sin(t * 2.2)) * 5;
       var cy = groundY - guide.r - bob;
-
       guide.y = cy;
-      var glow = ctx.createRadialGradient(guide.x, cy, 4, guide.x, cy, guide.r * 2.4);
-      glow.addColorStop(0, 'rgba(255,209,102,.4)');
+
+      var glow = ctx.createRadialGradient(sx, cy, 4, sx, cy, guide.r * 2.5);
+      glow.addColorStop(0, 'rgba(255,209,102,.42)');
       glow.addColorStop(1, 'rgba(255,209,102,0)');
-      ctx.fillStyle = glow;
-      ctx.fillRect(guide.x - 44, cy - 44, 88, 88);
-
+      ctx.fillStyle = glow; ctx.fillRect(sx - 46, cy - 46, 92, 92);
       ctx.fillStyle = 'rgba(30,58,95,.14)';
-      ctx.beginPath();
-      ctx.ellipse(guide.x, groundY + 3, guide.r * 0.85, guide.r * 0.22, 0, 0, 6.283);
-      ctx.fill();
-
-      var g = ctx.createRadialGradient(guide.x - 6, cy - 6, 3, guide.x, cy, guide.r);
-      g.addColorStop(0, '#ffe9ad');
-      g.addColorStop(0.6, '#ffd166');
-      g.addColorStop(1, '#e9a13b');
+      ctx.beginPath(); ctx.ellipse(sx, groundY + 3, guide.r * .85, guide.r * .22, 0, 0, 6.283); ctx.fill();
+      var g = ctx.createRadialGradient(sx - 6, cy - 6, 3, sx, cy, guide.r);
+      g.addColorStop(0, '#ffe9ad'); g.addColorStop(.6, '#ffd166'); g.addColorStop(1, '#e9a13b');
       ctx.fillStyle = g;
-      ctx.beginPath(); ctx.arc(guide.x, cy, guide.r, 0, 6.283); ctx.fill();
-
+      ctx.beginPath(); ctx.arc(sx, cy, guide.r, 0, 6.283); ctx.fill();
       ctx.fillStyle = 'rgba(0,0,0,.15)';
       for (var k = 0; k < 3; k++) {
         var a = t * 1.4 + k * 2.094;
         ctx.beginPath();
-        ctx.arc(guide.x + Math.cos(a) * guide.r * 0.55, cy + Math.sin(a) * guide.r * 0.55, guide.r * 0.16, 0, 6.283);
+        ctx.arc(sx + Math.cos(a) * guide.r * .55, cy + Math.sin(a) * guide.r * .55, guide.r * .16, 0, 6.283);
         ctx.fill();
       }
 
-      /* papan penunjuk di samping Pilo */
-      var px = guide.x - guide.r - 30;
+      /* papan penunjuk */
+      var px = sx + guide.r + 22;
       ctx.strokeStyle = '#b08968'; ctx.lineWidth = 4; ctx.lineCap = 'round';
-      ctx.beginPath(); ctx.moveTo(px, groundY); ctx.lineTo(px, groundY - 44); ctx.stroke();
-      var dir = DOORS[0].cx < guide.x ? '\u2190' : '\u2192';
-      var label = 'Lantai 1 ' + dir;
+      ctx.beginPath(); ctx.moveTo(px, groundY); ctx.lineTo(px, groundY - 46); ctx.stroke();
+      ctx.lineCap = 'butt';
+      var label = 'Kamp Angka \u2192';
       ctx.font = '800 10.5px Nunito, sans-serif';
       var tw = ctx.measureText(label).width;
       ctx.fillStyle = '#fff';
-      rr(px - tw / 2 - 8, groundY - 58, tw + 16, 19, 8);
-      ctx.fill();
+      rr(px - tw / 2 - 8, groundY - 60, tw + 16, 19, 8); ctx.fill();
       ctx.strokeStyle = 'rgba(30,58,95,.15)'; ctx.lineWidth = 1; ctx.stroke();
-      ctx.fillStyle = INK; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText(label, px, groundY - 48.5);
-      ctx.lineCap = 'butt';
+      ctx.fillStyle = '#1e3a5f'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(label, px, groundY - 50.5);
     }
 
     function wrapText(text, maxW) {
@@ -423,114 +596,230 @@
       if (!bubble.show && t * 1000 >= bubble.nextAt) {
         bubble.show = PESAN_PILO[bubble.idx % PESAN_PILO.length];
         bubble.idx++;
-        bubble.until = t * 1000 + 5200;
+        bubble.until = t * 1000 + 5400;
       }
-      var target = bubble.show && t * 1000 < bubble.until ? 1 : 0;
+      var target = (bubble.show && t * 1000 < bubble.until) ? 1 : 0;
       bubble.alpha += (target - bubble.alpha) * Math.min(1, dt * 6);
-      if (bubble.alpha < 0.02) {
+      if (bubble.alpha < .02) {
         if (bubble.show && t * 1000 >= bubble.until) { bubble.show = null; bubble.nextAt = t * 1000 + 5200; }
         return;
       }
+      var sx = guide.x - camX;
+      if (sx < -260 || sx > viewW + 260) return;
 
-      var lines = wrapText(bubble.show, 200);
+      var lines = wrapText(bubble.show, 210);
       var lw = 0;
-      for (var i = 0; i < lines.length; i++)
-        lw = Math.max(lw, ctx.measureText(lines[i]).width);
-      var bw2 = lw + 26, bh2 = lines.length * 17 + 18;
-      var bx = clamp(guide.x - bw2 / 2, 10, W - bw2 - 10);
-      var by = guide.y - guide.r - bh2 - 18;
+      for (var i = 0; i < lines.length; i++) lw = Math.max(lw, ctx.measureText(lines[i]).width);
+      var bw = lw + 26, bh = lines.length * 17 + 18;
+      var bx = clamp(sx - bw / 2, 10, viewW - bw - 10);
+      var by = guide.y - guide.r - bh - 16;
 
       ctx.save();
       ctx.globalAlpha = bubble.alpha;
       ctx.fillStyle = 'rgba(255,255,255,.96)';
-      rr(bx, by, bw2, bh2, 12); ctx.fill();
+      rr(bx, by, bw, bh, 12); ctx.fill();
       ctx.strokeStyle = 'rgba(30,58,95,.14)'; ctx.stroke();
       ctx.beginPath();
-      ctx.moveTo(guide.x - 7, by + bh2 - 1);
-      ctx.lineTo(guide.x + 7, by + bh2 - 1);
-      ctx.lineTo(guide.x, by + bh2 + 9);
+      ctx.moveTo(sx - 7, by + bh - 1);
+      ctx.lineTo(sx + 7, by + bh - 1);
+      ctx.lineTo(sx, by + bh + 9);
       ctx.closePath(); ctx.fill();
-      ctx.fillStyle = INK; ctx.textAlign = 'left'; ctx.textBaseline = 'top';
+      ctx.fillStyle = '#1e3a5f'; ctx.textAlign = 'left'; ctx.textBaseline = 'top';
       ctx.font = '600 12.5px Nunito, sans-serif';
       for (var j = 0; j < lines.length; j++) ctx.fillText(lines[j], bx + 13, by + 10 + j * 17);
       ctx.restore();
     }
 
-    /* ---------- update & loop ---------- */
-    function update(dt) {
-      for (var i = 0; i < balls.length; i++) {
-        var b = balls[i];
+    function drawMinimap() {
+      var w = Math.min(230, viewW - 24), h = 34;
+      var x0 = 14, y0 = viewH - h - 14;
+      ctx.fillStyle = 'rgba(255,255,255,.9)';
+      rr(x0, y0, w, h, 12); ctx.fill();
+      ctx.strokeStyle = 'rgba(30,58,95,.14)'; ctx.stroke();
+      ZONES.forEach(function (z) {
+        var dx = x0 + 14 + (z.x / WORLD_W) * (w - 28);
+        ctx.fillStyle = z.color;
+        ctx.beginPath(); ctx.arc(dx, y0 + h / 2, z.open ? 5.5 : 4, 0, 6.283); ctx.fill();
+        if (z.open) { ctx.strokeStyle = 'rgba(21,128,61,.6)'; ctx.lineWidth = 2;
+          ctx.beginPath(); ctx.arc(dx, y0 + h / 2, 8, 0, 6.283); ctx.stroke(); }
+      });
+      var cx0 = x0 + 14 + (camX / WORLD_W) * (w - 28);
+      var cw = Math.max(14, (viewW / WORLD_W) * (w - 28));
+      ctx.strokeStyle = 'rgba(30,58,95,.45)'; ctx.lineWidth = 1.5;
+      rr(cx0 - cw / 2, y0 + 4, cw, h - 8, 6); ctx.stroke();
+    }
+
+    /* ---------- pembaruan ---------- */
+    function update(dt, t) {
+      var accel = 980, vmax = 350;
+      var input = 0;
+      if (keys.kiri) input -= 1;
+      if (keys.kanan) input += 1;
+
+      if (input !== 0) {
+        player.v += input * accel * dt;
+        player.v = clamp(player.v, -vmax, vmax);
+        player.target = null;
+        follow = true;
+      } else if (player.target !== null) {
+        var d = player.target - player.x;
+        if (Math.abs(d) < 10) { player.v = 0; player.target = null; }
+        else player.v = clamp(d * 3, -vmax, vmax);
+      } else {
+        player.v *= Math.max(0, 1 - dt * 3.4);
+        if (Math.abs(player.v) < 4) player.v = 0;
+      }
+
+      player.x = clamp(player.x + player.v * dt, 40, WORLD_W - 40);
+      player.rot += (player.v * dt) / player.r;
+
+      if (follow) {
+        var desired = clamp(player.x - viewW * .42, 0, WORLD_W - viewW);
+        camX += (desired - camX) * Math.min(1, dt * 3.2);
+      }
+
+      balls.forEach(function (b) {
         b.x += b.v * dt;
         b.rot += (b.v * dt) / b.r;
-        if (b.v > 0 && b.x > W + b.r + 14) b.x = -b.r - 14;
-        if (b.v < 0 && b.x < -b.r - 14) b.x = W + b.r + 14;
-      }
-      for (var j = 0; j < DOORS.length; j++)
-        if (DOORS[j].pulse > 0) DOORS[j].pulse = Math.max(0, DOORS[j].pulse - dt);
+        var z = ZONES[b.z];
+        if (b.x < z.x - 320) { b.x = z.x - 320; b.v *= -1; }
+        if (b.x > z.x + 320) { b.x = z.x + 320; b.v *= -1; }
+      });
+
+      /* HUD wilayah terdekat */
+      var near = ZONES[0], best = 1e9;
+      ZONES.forEach(function (z) {
+        var d = Math.abs(z.x - player.x);
+        if (d < best) { best = d; near = z; }
+      });
+      var txt = near.name + ' \u2014 ' + near.sub;
+      if (hud.textContent !== txt) hud.textContent = txt;
     }
 
     var last = performance.now();
     function loop(now) {
-      var dt = Math.min(0.05, (now - last) / 1000);
+      var dt = Math.min(.05, (now - last) / 1000);
       last = now;
       var t = now / 1000;
 
-      update(dt);
-      drawSky(t);
+      update(dt, t);
+
+      drawSky();
       drawClouds(dt);
+      drawRidge(.22, 66, 46, '#c7d8ea', 1.7, 4.2, 2.9);
+      drawRidge(.48, 30, 30, '#b7d3a6', 3.1, 1.2, 5.4);
       drawGround();
-      drawDoors(t);
+
+      var i;
+      for (i = 0; i < props.length; i++) drawProp(props[i], t);
+      ZONES.forEach(function (z) { drawGate(z, t); });
+      for (i = 0; i < balls.length; i++) drawBall(balls[i]);
       drawGuide(t);
-      for (var i = 0; i < balls.length; i++) drawBall(balls[i]);
+      drawPlayer(t);
       drawBubble(dt, t);
+      drawMinimap();
 
       requestAnimationFrame(loop);
     }
 
     /* ---------- interaksi ---------- */
-    function hitDoor(mx, my) {
-      for (var i = 0; i < DOORS.length; i++) {
-        var d = DOORS[i];
-        var x = d.cx - d.bw / 2 - 4, y = groundY - d.bh - 48;
-        var w = d.bw + 8, h = d.bh + 48;
-        if (mx >= x && mx <= x + w && my >= y && my <= y + h) return d;
+    function hitGate(wx, wy) {
+      for (var i = 0; i < ZONES.length; i++) {
+        var z = ZONES[i];
+        var x = z.x - 60, w = 120;
+        var yTop = groundY - z.h - 44 - 116;
+        var h = (groundY) - yTop;
+        if (wx >= x && wx <= x + w && wy >= yTop && wy <= groundY) return z;
       }
       return null;
     }
-    function hitGuide(mx, my) {
-      var dx = mx - guide.x, dy = my - guide.y;
-      return dx * dx + dy * dy <= (guide.r + 10) * (guide.r + 10);
-    }
+
+    var dragging = false, moved = 0, lastPX = 0;
+
+    cvs.addEventListener('pointerdown', function (e) {
+      dragging = true; moved = 0; lastPX = e.clientX;
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var dx = e.clientX - lastPX;
+      lastPX = e.clientX;
+      moved += Math.abs(dx);
+      if (moved > 8) {
+        follow = false;
+        camX = clamp(camX - dx, 0, WORLD_W - viewW);
+      }
+    });
+    window.addEventListener('pointerup', function () { dragging = false; });
 
     cvs.addEventListener('click', function (e) {
+      if (moved > 8) { moved = 0; return; }
       var r = cvs.getBoundingClientRect();
-      var mx = e.clientX - r.left, my = e.clientY - r.top;
-      var d = hitDoor(mx, my);
-      if (d && d.open) { window.location.href = d.href; return; }
-      if (hitGuide(mx, my) || (d && !d.open)) {
-        bubble.show = (d && !d.open)
-          ? 'Lantai itu masih dibangun. Pelan-pelan, kita sampai juga kok.'
-          : PESAN_PILO[bubble.idx % PESAN_PILO.length];
+      var sx = e.clientX - r.left, sy = e.clientY - r.top;
+      var wx = camX + sx, wy = sy;
+      var z = hitGate(wx, wy);
+      if (z) { window.location.href = z.href; return; }
+      var gx = guide.x, gy = guide.y;
+      if ((wx - gx) * (wx - gx) + (wy - gy) * (wy - gy) <= 26 * 26) {
+        bubble.show = PESAN_PILO[bubble.idx % PESAN_PILO.length];
         bubble.idx++;
-        bubble.until = performance.now() + 5200;
-        bubble.alpha = 0.05;
+        bubble.until = performance.now() + 5400;
+        bubble.alpha = .05;
+        return;
+      }
+      if (sy > groundY - 26 && sy < viewH) {
+        player.target = clamp(wx, 40, WORLD_W - 40);
+        follow = true;
       }
     });
 
     cvs.addEventListener('pointermove', function (e) {
       var r = cvs.getBoundingClientRect();
-      var mx = e.clientX - r.left, my = e.clientY - r.top;
-      var over = hitGuide(mx, my) || (hitDoor(mx, my) || {}).open;
+      var sx = e.clientX - r.left, sy = e.clientY - r.top;
+      var over = hitGate(camX + sx, sy) || ((camX + sx - guide.x) ** 2 + (sy - guide.y) ** 2 <= 26 * 26);
       cvs.style.cursor = over ? 'pointer' : 'default';
     });
 
-    /* ---------- mulai ---------- */
+    function hold(btn, key) {
+      var el = document.getElementById(btn);
+      ['pointerdown'].forEach(function (ev) {
+        el.addEventListener(ev, function (e) { e.preventDefault(); keys[key] = true; });
+      });
+      ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (ev) {
+        el.addEventListener(ev, function () { keys[key] = false; });
+      });
+    }
+    hold('btn-kiri', 'kiri');
+    hold('btn-kanan', 'kanan');
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft' || e.key === 'a') { keys.kiri = true; follow = true; }
+      if (e.key === 'ArrowRight' || e.key === 'd') { keys.kanan = true; follow = true; }
+    });
+    document.addEventListener('keyup', function (e) {
+      if (e.key === 'ArrowLeft' || e.key === 'a') keys.kiri = false;
+      if (e.key === 'ArrowRight' || e.key === 'd') keys.kanan = false;
+    });
+
     var rz;
     window.addEventListener('resize', function () {
       clearTimeout(rz);
       rz = setTimeout(layout, 120);
     });
 
+    /* ---------- mulai ---------- */
+    function layout() {
+      viewW = wrap.clientWidth;
+      viewH = wrap.clientHeight;
+      var DPR = Math.min(window.devicePixelRatio || 1, 2);
+      cvs.width = Math.round(viewW * DPR);
+      cvs.height = Math.round(viewH * DPR);
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      groundY = viewH * .78;
+      camX = clamp(camX, 0, WORLD_W - viewW);
+    }
+
+    buatProps();
+    buatBola();
     layout();
     requestAnimationFrame(loop);
   })();

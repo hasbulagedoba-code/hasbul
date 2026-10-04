@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pegunungan Pola — Lantai 3 | Daftar Materi Matematika SMA | Perpustakaan Matematika</title>
+<meta name="description" content="Pegunungan Pola, Lantai 3 Dunia Akiomida: daftar materi matematika SMA, dari fungsi, matriks, trigonometri, logaritma, limit, turunan, integral, sampai vektor dan kombinatorika.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Nunito', 'Segoe UI', Tahoma, sans-serif;
+    background: #fdfaf2;
+    color: #2b3a55;
+    line-height: 1.8;
+  }
+  .topnav {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(253,250,242,.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(30,58,95,.08);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 18px;
+  }
+  .topnav .merek { font-weight: 900; font-size: 15px; color: #1e3a5f; text-decoration: none; }
+  .topnav .merek span { color: #f4b942; }
+  .topnav a.kembali {
+    font-size: 13px; font-weight: 800; text-decoration: none;
+    color: #fff; background: #1e3a5f;
+    padding: 8px 16px; border-radius: 999px;
+  }
+  .topnav a.kembali:hover { background: #2b4a73; }
+
+  header.hero { padding: 42px 18px 6px; text-align: center; }
+  .remah {
+    font-size: 12px; font-weight: 800; letter-spacing: 1.5px;
+    color: #8a94a6; text-transform: uppercase; margin-bottom: 12px;
+  }
+  .remah a { color: #f4b942; text-decoration: none; }
+  .tingkat {
+    display: inline-block;
+    font-size: 12.5px; font-weight: 800; letter-spacing: .5px;
+    color: #1e3a5f; background: #fff;
+    border: 1.5px solid #f4b942;
+    padding: 6px 18px; border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: clamp(30px, 6vw, 46px); font-weight: 900; color: #1e3a5f; line-height: 1.25; }
+  header.hero p.sub {
+    max-width: 600px; margin: 14px auto 0;
+    font-size: 16px; color: #51617c;
+  }
+  .statis {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+    margin: 22px auto 0; padding: 0 16px; max-width: 700px;
+  }
+  .statis span {
+    font-size: 12.5px; font-weight: 800; color: #1e3a5f;
+    background: #fff; border: 1px solid rgba(30,58,95,.14);
+    padding: 7px 16px; border-radius: 999px;
+  }
+  .statis span b { color: #f4b942; }
+
+  .papan-iklan { max-width: 660px; margin: 8px auto; padding: 0 12px; text-align: center; }
+  .label-iklan {
+    display: inline-block; font-size: 10.5px; font-weight: 800;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #9aa6b8; margin-bottom: 2px;
+  }
+
+  main { max-width: 860px; margin: 0 auto; padding: 26px 20px 10px; }
+  .judul-tur { text-align: center; margin-bottom: 8px; }
+  .judul-tur h2 { font-size: 24px; font-weight: 900; color: #1e3a5f; }
+  .judul-tur p { font-size: 14.5px; color: #7d8aa0; margin-top: 4px; }
+
+  .tur { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 10px; }
+  @media (max-width: 720px) { .tur { grid-template-columns: 1fr; } }
+
+  .pos {
+    position: relative;
+    background: #fff;
+    border: 1.5px solid rgba(30,58,95,.10);
+    border-radius: 20px;
+    padding: 20px 20px 18px 66px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .pos:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(30,58,95,.10); }
+  a.pos:hover { border-color: #f4b942; }
+  .pos .nomor {
+    position: absolute; left: 16px; top: 20px;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: #f4b942; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .pos h3 { font-size: 16.5px; font-weight: 900; color: #1e3a5f; line-height: 1.35; }
+  .pos p { font-size: 13.5px; color: #51617c; margin: 6px 0 10px; line-height: 1.65; }
+  .pos .meta { display: flex; align-items: center; gap: 8px; }
+  .pos .ruang { font-size: 11.5px; font-weight: 800; color: #8a94a6; letter-spacing: .5px; }
+  .chip {
+    font-size: 10.5px; font-weight: 900; letter-spacing: 1.5px;
+    padding: 4px 12px; border-radius: 999px;
+  }
+  .chip.buka { background: #dcfce7; color: #15803d; border: 1px solid rgba(21,128,61,.3); }
+  .chip.segera { background: #f1f3f6; color: #7d8aa0; border: 1px solid rgba(30,58,95,.12); }
+
+  .segera-catatan {
+    background: #fffbea;
+    border: 1px solid rgba(245,158,11,.35);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin: 26px 0 6px;
+    font-size: 14px;
+    color: #7a5b16;
+  }
+  .segera-catatan b { color: #b45309; }
+
+  .nav-lantai {
+    display: flex; justify-content: space-between; gap: 12px;
+    margin: 34px 0 6px;
+  }
+  .nav-lantai a {
+    text-decoration: none; font-weight: 800; font-size: 13.5px;
+    color: #1e3a5f; background: #fff;
+    border: 1.5px solid rgba(30,58,95,.15);
+    padding: 10px 18px; border-radius: 999px;
+  }
+  .nav-lantai a:hover { border-color: #f4b942; color: #f4b942; }
+  .nav-lantai a.kosong { visibility: hidden; }
+
+  footer {
+    text-align: center; font-size: 13px; color: #8a94a6;
+    padding: 14px 16px 30px;
+  }
+</style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a class="merek" href="../index.html">Perpustakaan <span>Matematika</span></a>
+    <a class="kembali" href="index.html">Kembali ke Dunia</a>
+  </nav>
+
+  <header class="hero">
+    <div class="remah">Dunia Akiomida / <a href="index.html">Peta Dunia</a> / Lantai 3</div>
+    <span class="tingkat">Lantai 3 &middot; Menengah Atas (SMA)</span>
+    <h1>Pegunungan Pola</h1>
+    <p class="sub">Pegunungan Pola adalah wilayah ketiga. Jalurnya menanjak: setiap pos membangun bekal untuk pos setelahnya, sampai pemandangan kalkulus terbuka di ketinggian. Daftar lengkapnya ada di bawah.</p>
+  </header>
+
+  <div class="statis">
+    <span><b>11 pos tur</b> di wilayah ini</span>
+    <span>Total &plusmn;<b>150 ruang</b> materi</span>
+    <span><b>0 ruang</b> sudah terbuka</span>
+  </div>
+
+  <div class="papan-iklan">
+    <span class="label-iklan">Iklan</span>
+    <div class="ad-slot"></div>
+  </div>
+
+  <main>
+    <div class="judul-tur">
+      <h2>Peta Tur Pegunungan Pola</h2>
+      <p>Sebelas pos tersusun dari kaki gunung sampai puncak kalkulus. Semua masih dalam persiapan; urutan peta ini bisa menjadi rencana belajar Anda.</p>
+    </div>
+
+    <div class="tur">
+      <div class="pos">
+        <span class="nomor">1</span>
+        <h3>Fungsi & Grafik</h3>
+        <p>Hubungan masuk-keluar antara dua bilangan, notasi f(x), dan bentuk grafik fungsi kuadrat sampai rasional.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;15 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">2</span>
+        <h3>Matriks & Sistem Persamaan</h3>
+        <p>Menyusun data dalam tabel bilangan, operasi matriks, dan menyelesaikan banyak persamaan sekaligus.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;12 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">3</span>
+        <h3>Trigonometri</h3>
+        <p>Sinus, cosinus, tangen: dari segitiga siku-siku, perbandingan trigonometri, sampai gelombang berulang.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;15 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">4</span>
+        <h3>Eksponen & Logaritma</h3>
+        <p>Pertumbuhan berpangkat dan logaritma sebagai jalan baliknya, dengan contoh pada bakteri dan bunga majemuk.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;12 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">5</span>
+        <h3>Barisan & Deret</h3>
+        <p>Pola bilangan berurutan: aritmetika, geometri, dan hitungan angsuran atau pertumbuhan berkala.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;10 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">6</span>
+        <h3>Limit</h3>
+        <p>Ke mana sebuah nilai bergerak saat didekati. Konsep gerbang sebelum memasuki kalkulus.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;12 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">7</span>
+        <h3>Turunan (Derivatif)</h3>
+        <p>Laju perubahan sesaat: kemiringan garis singgung, kecepatan, dan penerapannya pada soal maksimum-minimum.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;15 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">8</span>
+        <h3>Integral</h3>
+        <p>Menjumlahkan potongan-potongan kecil: luas di bawah kurva dan antiturunan.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;15 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">9</span>
+        <h3>Vektor & Geometri Ruang</h3>
+        <p>Bilangan yang punya arah, operasinya, plus posisi dan jarak dalam ruang tiga dimensi.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;12 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">10</span>
+        <h3>Kombinatorika & Peluang Lanjut</h3>
+        <p>Menghitung kemungkinan: aturan perkalian, permutasi, kombinasi, dan peluang kejadian majemuk.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;12 ruang</span></span>
+      </div>
+      <div class="pos">
+        <span class="nomor">11</span>
+        <h3>Statistika Data Nyata</h3>
+        <p>Ukuran penyebaran data, diagram kotak-garis, dan membaca data dengan kritis.</p>
+        <span class="meta"><span class="chip segera">SEGERA</span><span class="ruang">&plusmn;10 ruang</span></span>
+      </div>
+    </div>
+
+
+    <div class="nav-lantai">
+      <a href="lantai-2-matematika-smp.html">← Lantai 2: Hutan Simbol</a>
+      <a href="lantai-4-matematika-sarjana.html">Lantai 4: Kota Bukti →</a>
+    </div>
+  </main>
+
+  <div class="papan-iklan">
+    <span class="label-iklan">Iklan</span>
+    <div class="ad-slot"></div>
+  </div>
+
+  <footer>Dibangun perlahan, ditempuh dengan senyum &mdash; <b>Perpustakaan Matematika</b></footer>
+
+  <script src="../assets/js/ads.js" defer></script>
+</body>
+</html>
