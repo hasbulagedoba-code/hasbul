@@ -24,7 +24,9 @@
   const keys = { left: false, right: false };
 
   /* ---------- pemain & penduduk jelly ---------- */
-  const player = new AK.Jelly({ x: 240, y: 0, r: 26, player: true, col: AK.PALETTE[3] });
+  /* pemain warna khas (karang lembut) — Akio tetap satu-satunya bola EMAS ber-mahkota
+     supaya tidak ada lagi kebingungan "karakterku yang mana?" */
+  const player = new AK.Jelly({ x: 240, y: 0, r: 26, player: true, col: AK.PALETTE[0] });
   player.cy = AK.groundYAt(player.cx) - player.r * 0.92;
 
   const residents = [];
@@ -99,6 +101,17 @@
 
   let toast = { zone: -1, until: -1 };
 
+  /* ---------- sekuen masuk gerbang ----------
+     Karakter TIDAK tiba-tiba hilang: ia berjalan ke gerbang,
+     tersedot lembut ke pusatnya (masih terlihat), BARU layar
+     'menyiapkan bahan ajar' muncul menggantikan dunia. */
+  const masuk = { fase: 'idle', z: null, t: 0 };   // idle | jalan | telan | selesai
+  const T_TELAN = 1.05;
+
+  /* ---------- efek kaki: riak langkah & debu mendarat ---------- */
+  const ripples = [];   // { x, y, t }  — lingkaran halus saat tanah diklik
+  const dust = [];      // { x, y, vx, vy, age, life, r } — debu pendaratan
+
   /* ---------- ukuran & bake ---------- */
   function sizeCanvas(rebake) {
     VW = window.innerWidth; VH = window.innerHeight;
@@ -115,7 +128,6 @@
     const sx = z.x - camX;
     if (sx < -260 || sx > VW + 260) return;
     const gy = AK.groundYAt(z.x), w = z.gateW, h = z.gateH;
-
     ctx.save();
     ctx.beginPath();
     AK.gatePath(ctx, sx, gy, w, h);
@@ -154,6 +166,15 @@
     }
     ctx.restore();
 
+    // saat pemain tersedot: aura gerbang menguat perlahan — karakter tetap terlihat
+    if (masuk.z === z && masuk.fase !== 'idle') {
+      const u = masuk.fase === 'telan' ? clamp(masuk.t / T_TELAN, 0, 1) : 0;
+      const gsz = w * (2.2 + u * 1.8);
+      ctx.globalAlpha = 0.30 + u * 0.5 + Math.sin(t * 7) * 0.05;
+      ctx.drawImage(gateGlows[i], sx - gsz / 2, gy - h * 0.45 - gsz / 2, gsz, gsz);
+      ctx.globalAlpha = 1;
+    }
+
     // kilau mengorbit di gerbang terbuka
     if (z.open && !AK.reducedMotion) {
       const seeds = sparkleSeeds[i];
@@ -166,35 +187,56 @@
       }
       ctx.globalAlpha = 1;
     }
+  }
 
-    // papan ajakan saat pemain dekat (gerbang terbuka)
-    if (z.open && Math.abs(player.cx - z.x) < 170) {
+  /* papan ajakan & toast gerbang — digambar di gelombang UI paling atas
+     supaya tak pernah tertimpa atau menimpa gelembung bicara */
+  function drawGateUI(z, i, t) {
+    const sx = z.x - camX;
+    if (sx < -260 || sx > VW + 260) return;
+    const gy = AK.groundYAt(z.x), h = z.gateH;
+
+    // toast gerbang tertutup (jawaban langsung atas klik) — prioritas tertinggi
+    if (toast.zone === i && t < toast.until) {
+      drawBubbleAt(sx, gy - h - 150, 'Gerbang ini masih disegel. Akio akan memberi kabar saat terbuka.');
+      return;
+    }
+
+    // papan ajakan saat pemain dekat (gerbang terbuka, tidak sedang masuk)
+    if (z.open && masuk.fase === 'idle' && Math.abs(player.cx - z.x) < 170) {
       const label = 'Klik gerbang untuk masuk';
       ctx.font = '800 13px Nunito, sans-serif';
       const tw = ctx.measureText(label).width;
       const bw = tw + 34, bh = 30;
       const bx = sx - bw / 2, by = gy - h - 138 + Math.sin(t * 2.4) * 3;
-      ctx.fillStyle = 'rgba(255,255,255,.94)';
-      AK.rrect(ctx, bx, by, bw, bh, 15); ctx.fill();
-      ctx.strokeStyle = z.gate.glow; ctx.lineWidth = 2;
-      AK.rrect(ctx, bx, by, bw, bh, 15); ctx.stroke();
-      ctx.fillStyle = '#2c4c6b';
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText(label, sx, by + bh / 2 + 1);
-      // ekor kecil
-      ctx.fillStyle = 'rgba(255,255,255,.94)';
-      ctx.beginPath();
-      ctx.moveTo(sx - 6, by + bh); ctx.lineTo(sx + 6, by + bh); ctx.lineTo(sx, by + bh + 8);
-      ctx.closePath(); ctx.fill();
-    }
-
-    // gelembung toast gerbang tertutup
-    if (toast.zone === i && t < toast.until) {
-      drawBubbleAt(sx, gy - h - 150, 'Gerbang ini masih disegel. Akio akan memberi kabar saat terbuka.');
+      const rc = { x: bx, y: by, w: bw, h: bh + 8 };
+      if (!rectsOverlap(rc)) {
+        bubbleRects.push(rc);
+        ctx.fillStyle = 'rgba(255,255,255,.94)';
+        AK.rrect(ctx, bx, by, bw, bh, 15); ctx.fill();
+        ctx.strokeStyle = z.gate.glow; ctx.lineWidth = 2;
+        AK.rrect(ctx, bx, by, bw, bh, 15); ctx.stroke();
+        ctx.fillStyle = '#2c4c6b';
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText(label, sx, by + bh / 2 + 1);
+        ctx.fillStyle = 'rgba(255,255,255,.94)';
+        ctx.beginPath();
+        ctx.moveTo(sx - 6, by + bh); ctx.lineTo(sx + 6, by + bh); ctx.lineTo(sx, by + bh + 8);
+        ctx.closePath(); ctx.fill();
+      }
     }
   }
 
-  /* ---------- gelembung bicara ---------- */
+  /* ---------- gelembung bicara ----------
+     Semua gelembung mendaftar kotaknya dulu: yang bertabrakan
+     dilewati — tidak ada lagi teks bertumpuk di layar. */
+  let bubbleRects = [];
+  function rectsOverlap(rc) {
+    for (const q of bubbleRects) {
+      if (rc.x < q.x + q.w && rc.x + rc.w > q.x && rc.y < q.y + q.h && rc.y + rc.h > q.y) return true;
+    }
+    return false;
+  }
   function drawBubbleAt(cx0, byTop, text) {
     ctx.font = '600 13.5px Nunito, sans-serif';
     const words = text.split(' ');
@@ -217,6 +259,11 @@
     const ekor = (by === byTop - bh);   // ekor hanya saat gelembung benar-benar di atas tokoh
     const tailX = Math.max(bx + 18, Math.min(cx0, bx + bw - 18));
 
+    // anti-tumpang tindih: kotak ini boleh tampil hanya jika bebas
+    const rc = { x: bx, y: by, w: bw, h: bh + (ekor ? 8 : 0) };
+    if (rectsOverlap(rc)) return false;
+    bubbleRects.push(rc);
+
     ctx.fillStyle = 'rgba(255,255,255,.95)';
     AK.rrect(ctx, bx, by, bw, bh, 14); ctx.fill();
     ctx.strokeStyle = 'rgba(30,58,95,.18)'; ctx.lineWidth = 1.5;
@@ -231,16 +278,19 @@
     ctx.fillStyle = '#33475e';
     ctx.textAlign = 'left'; ctx.textBaseline = 'top';
     lines.forEach((l, li) => ctx.fillText(l, bx + 14, by + 9 + li * lh));
+    return true;
   }
 
   /* ---------- kamera hidup ----------
-     Layar tidak digeser manual: kamera selalu mengikuti pemain
-     dengan halus, dan bernapas pelan saat berdiri diam. */
+     Kamera selalu mengikuti pemain dengan halus, bernapas pelan
+     saat berdiri diam, dan posisi pemain di layar stabil —
+     tombol jalan, keyboard, dan klik tanah terasa selaras. */
   function updateCamera(dt, t) {
-    const follow = clamp(player.cx - VW * 0.45 + player.vx * 0.36, 0, Math.max(0, AK.WORLD_W - VW));
-    let target = follow + Math.sin(t * 0.5) * 3;
+    const follow = clamp(player.cx - VW * 0.45 + player.vx * 0.20, 0, Math.max(0, AK.WORLD_W - VW));
+    let target = follow;
+    if (masuk.fase === 'idle' && Math.abs(player.vx) < 20) target += Math.sin(t * 0.5) * 3;
     target = clamp(target, 0, Math.max(0, AK.WORLD_W - VW));
-    const k = (AK.reducedMotion ? 6 : 5);
+    const k = (AK.reducedMotion ? 6 : 6.5);
     camX = lerp(camX, target, Math.min(1, dt * k));
     AK.camX = camX;
   }
@@ -280,6 +330,7 @@
     handleClick(e.clientX, e.clientY);
   });
   canvas.addEventListener('pointercancel', () => { pDown = false; });
+  canvas.addEventListener('contextmenu', (e) => e.preventDefault());
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = true;
@@ -289,20 +340,40 @@
     if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = false;
     if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = false;
   });
+  // kunci jangan nyangkut saat tab kehilangan fokus
+  window.addEventListener('blur', () => { keys.left = false; keys.right = false; });
 
   function holdBtn(el, dir) {
-    const on = (ev) => { ev.preventDefault(); keys[dir] = true; };
+    const on = (ev) => {
+      ev.preventDefault();
+      try { el.setPointerCapture(ev.pointerId); } catch (_) {}
+      keys[dir] = true;
+      hideHint();
+    };
     const off = () => { keys[dir] = false; };
     el.addEventListener('pointerdown', on);
     el.addEventListener('pointerup', off);
     el.addEventListener('pointercancel', off);
     el.addEventListener('pointerleave', off);
+    el.addEventListener('contextmenu', (e) => e.preventDefault());
   }
   holdBtn(btnKiri, 'left'); holdBtn(btnKanan, 'right');
 
   function handleClick(px, py) {
     if (!started) return;
+    // saat pemain sedang tersedot gerbang, dunia dikunci penuh
+    if (masuk.fase === 'telan' || masuk.fase === 'selesai') return;
     const wx = camX + px;
+
+    // sedang berjalan menuju gerbang — klik tanah membatalkan dengan halus
+    if (masuk.fase === 'jalan') {
+      if (py > AK.groundYAt(wx) - 120) {
+        masuk.fase = 'idle'; masuk.z = null;
+        player.targetX = clamp(wx, 40, AK.WORLD_W - 40);
+        ripples.push({ x: wx, y: AK.groundYAt(wx), t: 0 });
+      }
+      return;
+    }
 
     // Akio
     if (Math.abs(wx - akio.cx) < 46 && Math.abs(py - akio.cy) < 46) {
@@ -328,17 +399,20 @@
       const gy = AK.groundYAt(z.x);
       if (Math.abs(wx - z.x) < 100 && py > gy - z.gateH - 140 && py < gy + 24) {
         if (z.open) {
-          bukaMuatan(z);
+          // karakter berjalan sendiri ke gerbang — tetap terlihat sepanjang jalan
+          masuk.fase = 'jalan'; masuk.z = z; masuk.t = 0;
+          player.targetX = z.x;
+          hideHint();
         } else {
           toast = { zone: i, until: performance.now() / 1000 + 2.8 };
         }
         return;
       }
     }
-    // tanah → berjalan
+    // tanah → berjalan (riak halus sebagai umpan balik)
     if (py > AK.groundYAt(wx) - 120) {
       player.targetX = clamp(wx, 40, AK.WORLD_W - 40);
-      if (Math.abs(wx - player.cx) > 60 && player.grounded) player.jump(200);
+      ripples.push({ x: wx, y: AK.groundYAt(wx), t: 0 });
       hideHint();
     }
   }
@@ -382,6 +456,18 @@
     muatTimer = null;
     muatEl.classList.remove('aktif');
     muatEl.setAttribute('aria-hidden', 'true');
+    // salah klik: pemain muncul lagi di depan gerbang dengan pop halus
+    if (masuk.fase === 'selesai') {
+      const z = masuk.z;
+      player.cx = clamp(z.x - z.gateW * 0.9, 40, AK.WORLD_W - 40);
+      player.cy = AK.groundYAt(player.cx) - player.r * 0.92;
+      player.vx = 0; player.vy = 0;
+      player.grounded = true;
+      player.masukScale = 0.25;
+      player.popUp = true;
+      masuk.fase = 'idle';
+      masuk.z = null;
+    }
   }
   muatBatal.addEventListener('click', tutupMuatan);
 
@@ -409,24 +495,106 @@
 
   /* ---------- loop ---------- */
   function update(dt, t) {
-    // kemudi tombol / keyboard
-    if (keys.left || keys.right) {
+    // pop kembali dari salah klik: pemain membesar mulus lalu mendarat
+    if (player.popUp && player.masukScale != null) {
+      player.masukScale += dt * 2.6;
+      if (player.masukScale >= 1) {
+        player.masukScale = null; player.popUp = false;
+        player.impact(430);
+      }
+    }
+
+    // sekuen masuk gerbang: jalan → tersedot → layar muat
+    if (masuk.fase === 'jalan') {
+      player.targetX = masuk.z.x;
+      if (Math.abs(masuk.z.x - player.cx) < 34) {
+        player.targetX = null; player.vx = 0;
+        player.grounded = false;
+        masuk.fase = 'telan'; masuk.t = 0;
+      }
+    } else if (masuk.fase === 'telan') {
+      masuk.t += dt;
+      const u = clamp(masuk.t / T_TELAN, 0, 1);
+      const e = u * u * (3 - 2 * u);   // smoothstep — makin akhir makin cepat, alami
+      player.masukScale = 1 - 0.9 * e;
+      const gy = AK.groundYAt(masuk.z.x);
+      player.cx = lerp(player.cx, masuk.z.x, Math.min(1, dt * 9));
+      player.cy = lerp(player.cy, gy - masuk.z.gateH * 0.40, Math.min(1, dt * 5.2));
+      player.vx = 0; player.vy = 0;
+      player.rot += dt * 1.2;
+      if (u >= 1) { masuk.fase = 'selesai'; bukaMuatan(masuk.z); }
+    }
+
+    // kemudi tombol / keyboard (terkunci saat sedang masuk gerbang)
+    if (masuk.fase === 'idle' && (keys.left || keys.right)) {
       player.targetX = null;
       player.steerLock = true;
       const want = keys.left ? -250 : 250;
-      player.vx += (want - player.vx) * Math.min(1, dt * 5);
+      player.vx += (want - player.vx) * Math.min(1, dt * 3.8);   // tanjak masuk mulus
       if (Math.abs(player.vx) > 30) hideHint();
-    } else {
+    } else if (masuk.fase === 'idle') {
       player.steerLock = false;
     }
     for (const j of everyone) j.update(dt);
+    AK.avoidX = player.cx;   // NPC menjauh dari sini saat memilih arah wander
+
+    // saling menjelak — tapi PEMAIN TIDAK PERNAH digeser tanpa input:
+    // dulu NPC yang berjalan menabrak pemain ikut mendorongnya berkali-kali,
+    // sehingga karakter "melaju sendiri" saat dibiarkan. Kini hanya NPC yang mengalah.
+    for (let a = 0; a < everyone.length; a++) {
+      for (let b = a + 1; b < everyone.length; b++) {
+        const A = everyone[a], B = everyone[b];
+        if (A.masukScale != null || B.masukScale != null) continue;
+        const dx = B.cx - A.cx, min = (A.r + B.r) * 0.8;
+        const adx = Math.abs(dx);
+        if (adx > 0.01 && adx < min && Math.abs(A.cy - B.cy) < (A.r + B.r) * 0.85) {
+          const push = (min - adx) * Math.min(1, dt * 3);
+          const sgn = dx < 0 ? -1 : 1;
+          if (A.isPlayer) {
+            B.cx = clamp(B.cx + push * sgn, 30, AK.WORLD_W - 30);
+          } else if (B.isPlayer) {
+            A.cx = clamp(A.cx - push * sgn, 30, AK.WORLD_W - 30);
+          } else {
+            A.cx = clamp(A.cx - push * 0.5 * sgn, 30, AK.WORLD_W - 30);
+            B.cx = clamp(B.cx + push * 0.5 * sgn, 30, AK.WORLD_W - 30);
+          }
+        }
+      }
+    }
+
+    // debu pendaratan — dunia terasa berbobot & hidup
+    for (const j of everyone) {
+      if (j.lastImpact > 0.3) {
+        const gyj = AK.groundYAt(j.cx);
+        const n = Math.round(3 + j.lastImpact * 6);
+        for (let i2 = 0; i2 < n; i2++) {
+          dust.push({
+            x: j.cx + rand(-10, 10), y: gyj - rand(0, 6),
+            vx: rand(-46, 46), vy: rand(-64, -16) * (0.6 + j.lastImpact * 0.5),
+            age: 0, life: rand(0.35, 0.7), r: rand(2, 4.6)
+          });
+        }
+        j.lastImpact = 0;
+      }
+    }
+    for (let i = dust.length - 1; i >= 0; i--) {
+      const s = dust[i];
+      s.age += dt; s.x += s.vx * dt; s.y += s.vy * dt; s.vy += 54 * dt; s.vx *= Math.pow(0.4, dt);
+      if (s.age > s.life) dust.splice(i, 1);
+    }
+    for (let i = ripples.length - 1; i >= 0; i--) {
+      ripples[i].t += dt;
+      if (ripples[i].t > 0.6) ripples.splice(i, 1);
+    }
+
     akio.update(dt);
     AK.updateAmbient(dt);
     updateCamera(dt, t);
     updateHUD();
 
-    // pesan Akio bergilir
-    if (!AK.reducedMotion) {
+    // pesan Akio bergilir — hanya setelah masuk dunia & pemain di dekatnya
+    const akioNear = Math.abs(player.cx - akio.cx) < 480;
+    if (started && !AK.reducedMotion && akioNear) {
       msgTimer += dt;
       if (msgTimer > 6.8) { msgTimer = 0; msgIdx = (msgIdx + 1) % AKIO_MSG.length; }
     }
@@ -447,12 +615,35 @@
     }
   }
 
+  function drawRipples(ctx) {
+    for (const r of ripples) {
+      const u = r.t / 0.6;
+      ctx.globalAlpha = (1 - u) * 0.5;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.ellipse(r.x - camX, r.y, 8 + u * 40, (8 + u * 40) * 0.3, 0, 0, TAU);
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function drawDust(ctx) {
+    for (const s of dust) {
+      ctx.globalAlpha = Math.max(0, 1 - s.age / s.life) * 0.5;
+      ctx.fillStyle = '#e8e0cb';
+      ctx.beginPath(); ctx.arc(s.x - camX, s.y, s.r, 0, TAU); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+
   function render(t) {
     AK.drawSky(ctx, t, camX);
     AK.drawAmbientBack(ctx);
     AK.drawHills(ctx);
     AK.drawGround(ctx);
     AK.drawActivity(ctx, t);
+    drawRipples(ctx);
 
     for (let i = 0; i < AK.ZONES.length; i++) drawGateDynamic(AK.ZONES[i], i, t);
 
@@ -461,22 +652,38 @@
       if (j.cx < viewL || j.cx > viewR) continue;
       j.draw(ctx);
     }
+    drawDust(ctx);
     if (akio.cx > viewL && akio.cx < viewR) akio.draw(ctx, glowGold);
 
     AK.drawAmbientFront(ctx, t);
     AK.drawVignette(ctx);
 
-    // gelembung Akio & penduduk di lapisan paling atas
-    if (started && akio.cx > viewL && akio.cx < viewR) {
+    /* ---------- gelombang UI: gelembung anti-tumpuk ---------- */
+    bubbleRects = [];
+    // toast gerbang tertutup — jawaban langsung, prioritas tertinggi
+    for (let i = 0; i < AK.ZONES.length; i++) {
+      const z = AK.ZONES[i];
+      if (toast.zone === i && t < toast.until) drawGateUI(z, i, t);
+    }
+    // Akio — hanya bicara saat pemain di dekatnya
+    const akioNear = started && Math.abs(player.cx - akio.cx) < 480;
+    if (akioNear && akio.cx > viewL && akio.cx < viewR) {
       drawBubbleAt(akio.cx - camX + 10, akio.cy - akio.r - 26, AKIO_MSG[msgIdx]);
     }
-    for (const r of residents) {
-      if (r.say.until <= 0 || t > r.say.until) continue;
+    // penduduk — yang paling dekat pemain tampil lebih dulu
+    const talkers = residents
+      .filter(r => r.say.until > 0 && t < r.say.until && r.cx > viewL && r.cx < viewR)
+      .sort((a, b) => Math.abs(a.cx - player.cx) - Math.abs(b.cx - player.cx));
+    for (const r of talkers) {
       const rsx = r.cx - camX;
       if (rsx < 90 || rsx > AK.VW - 90) continue;   // tanpa bubble tempelan di tepi layar
-      if (r.cx < viewL || r.cx > viewR) continue;
       const zi = AK.zoneAt(r.cx);
       drawBubbleAt(rsx, r.cy - r.r - 14, NPC_LINES[zi][r.say.idx]);
+    }
+    // papan ajakan gerbang — paling akhir, mundur bila tempatnya dipakai
+    for (let i = 0; i < AK.ZONES.length; i++) {
+      const z = AK.ZONES[i];
+      if (!(toast.zone === i && t < toast.until)) drawGateUI(z, i, t);
     }
   }
 
@@ -490,15 +697,23 @@
     requestAnimationFrame(frame);
   }
 
-  /* ---------- mulai ---------- */
+  /* ---------- mulai ----------
+     Dunia langsung hidup tanpa menunggu font — layar tidak pernah
+     kosong. Papan nama gerbang dibake ulang begitu Nunito siap. */
   function start() {
     sizeCanvas(true);
     camX = clamp(player.cx - VW * 0.42, 0, Math.max(0, AK.WORLD_W - VW));
     AK.camX = camX;
     requestAnimationFrame(frame);
   }
+  start();
+  const fontReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  Promise.race([fontReady, new Promise(r => setTimeout(r, 1600))]).then(() => {
+    AK.bakeAll(VW, VH, dpr);   // papan nama kini terbaking dengan font Nunito
+  });
+
   // kait debug (dipakai QA; tidak berpengaruh ke tampilan)
-  window.AKDBG = { get: () => ({ camX: Math.round(camX), px: Math.round(player.cx), tx: player.targetX, vx: Math.round(player.vx), keys: { ...keys } }) };
+  window.AKDBG = { get: () => ({ camX: Math.round(camX), px: Math.round(player.cx), tx: player.targetX, vx: Math.round(player.vx), keys: { ...keys }, masuk: masuk.fase, npc: residents.map(r => ({ x: Math.round(r.cx), y: Math.round(r.cy), r: r.r })) }) };
 
   document.getElementById('btnMasuk').addEventListener('click', () => {
     introEl.classList.add('pergi');
@@ -524,8 +739,4 @@
       player.cy = Math.min(player.cy, AK.groundYAt(player.cx) - player.r * 0.92);
     }, 220);
   });
-
-  // tunggu font agar teks papan nama terbaking rapi
-  const fontReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
-  Promise.race([fontReady, new Promise(r => setTimeout(r, 1600))]).then(start);
 })();

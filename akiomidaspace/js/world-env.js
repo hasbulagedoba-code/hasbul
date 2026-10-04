@@ -252,9 +252,11 @@ window.AK = (function () {
 
   function bakeHills(vw, p, colTop, colBot, bumps) {
     const Wf = Math.ceil(vw + WORLD_W * p);
+    const hd = Math.min(AK.dpr || 1, 1.6);   // bukit lembut — cukup 1.6x, kanvas tetap ringan
     const c = document.createElement('canvas');
-    c.width = Wf * AK.dpr; c.height = AK.H * AK.dpr;
-    const g = c.getContext('2d'); g.scale(AK.dpr, AK.dpr);
+    c.width = Wf * hd; c.height = AK.H * hd;
+    c._dpr = hd;
+    const g = c.getContext('2d'); g.scale(hd, hd);
     const gyMin = AK.H * 0.80 - 60;
     const ridge = (x) => gyMin - 92 - (Math.sin(x * 0.0021) * 90 + Math.sin(x * 0.0057 + 2.1) * 34 + Math.sin(x * 0.011 + 4.2) * 12);
     const grad = g.createLinearGradient(0, gyMin - 200, 0, gyMin + 40);
@@ -381,21 +383,35 @@ window.AK = (function () {
     g.fillText(z.open ? 'TERBUKA' : 'SEGERA', x, cy + chipH / 2 + 0.5);
   }
 
-  function bakeGround() {
-    const W = WORLD_W, H = AK.H;
-    const c = document.createElement('canvas');
-    c.width = W * AK.dpr; c.height = H * AK.dpr;
-    const g = c.getContext('2d'); g.scale(AK.dpr, AK.dpr);
+  /* =========================================================
+     TANAH — dibake per UBIN (tile 760px) dengan cache LRU.
+     Dulu satu kanvas 6400px: 20+ juta piksel — melebihi batas
+     kanvas iOS dan memakan ~80MB. Kini hanya ubin terlihat
+     yang hidup di memori: ringan di semua perangkat.
+     ========================================================= */
+  function mulberry32(a) {
+    return function () {
+      a |= 0; a = a + 0x6D2B79F5 | 0;
+      let t = Math.imul(a ^ a >>> 15, 1 | a);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  function paintGroundRange(g, x0, x1, seed) {
+    const H = AK.H;
     const gyMin = H * 0.80 - 26;
+    const rnd = mulberry32(seed);
+    const rndi = (a, b) => a + Math.floor(rnd() * (b - a + 1));
 
     const grad = g.createLinearGradient(0, gyMin - 10, 0, H);
     grad.addColorStop(0, '#93d183'); grad.addColorStop(0.5, '#7fc26f'); grad.addColorStop(1, '#67ad5c');
-    g.fillStyle = grad; g.fillRect(0, gyMin - 6, W, H - gyMin + 6);
+    g.fillStyle = grad; g.fillRect(x0, gyMin - 6, x1 - x0, H - gyMin + 6);
 
     // bercak cahaya lembut menggantikan pita kotak — rumput terasa menyatu
-    for (let i = 0; i < 26; i++) {
-      const x = rand(0, W), y = rand(gyMin + 20, H - 30);
-      const rg = g.createRadialGradient(x, y, 4, x, y, rand(90, 190));
+    for (let i = 0; i < 5; i++) {
+      const x = x0 + rnd() * (x1 - x0), y = gyMin + 20 + rnd() * (H - gyMin - 50);
+      const rg = g.createRadialGradient(x, y, 4, x, y, 90 + rnd() * 100);
       rg.addColorStop(0, 'rgba(255,255,235,.05)'); rg.addColorStop(1, 'rgba(255,255,235,0)');
       g.fillStyle = rg;
       g.beginPath(); g.ellipse(x, y, 170, 46, 0, 0, TAU); g.fill();
@@ -403,42 +419,82 @@ window.AK = (function () {
 
     const pathY = (x) => groundYAt(x) + 52 + Math.sin(x * 0.004) * 9;
     g.fillStyle = '#ecdcae';
-    g.beginPath(); g.moveTo(0, pathY(0));
-    for (let x = 0; x <= W; x += 12) g.lineTo(x, pathY(x));
-    for (let x = W; x >= 0; x -= 12) g.lineTo(x, pathY(x) + 46);
+    g.beginPath(); g.moveTo(x0, pathY(x0));
+    for (let x = x0; x <= x1; x += 12) g.lineTo(x, pathY(x));
+    for (let x = x1; x >= x0; x -= 12) g.lineTo(x, pathY(x) + 46);
     g.closePath(); g.fill();
     g.strokeStyle = 'rgba(160,132,84,.28)'; g.lineWidth = 2;
-    g.beginPath(); g.moveTo(0, pathY(0));
-    for (let x = 0; x <= W; x += 12) g.lineTo(x, pathY(x));
+    g.beginPath(); g.moveTo(x0, pathY(x0));
+    for (let x = x0; x <= x1; x += 12) g.lineTo(x, pathY(x));
     g.stroke();
-    g.beginPath(); g.moveTo(0, pathY(0) + 46);
-    for (let x = 0; x <= W; x += 12) g.lineTo(x, pathY(x) + 46);
+    g.beginPath(); g.moveTo(x0, pathY(x0) + 46);
+    for (let x = x0; x <= x1; x += 12) g.lineTo(x, pathY(x) + 46);
     g.stroke();
     g.fillStyle = 'rgba(160,132,84,.30)';
-    for (let i = 0; i < 90; i++) {
-      const x = rand(0, W);
-      g.beginPath(); g.ellipse(x, pathY(x) + rand(6, 40), rand(2, 4.5), rand(1.4, 2.6), 0, 0, TAU); g.fill();
+    for (let i = 0; i < 12; i++) {
+      const x = x0 + rnd() * (x1 - x0);
+      g.beginPath(); g.ellipse(x, pathY(x) + 6 + rnd() * 34, 2 + rnd() * 2.5, 1.4 + rnd() * 1.2, 0, 0, TAU); g.fill();
     }
 
     const petalCols = ['#ffffff', '#ffc9d6', '#ffe3ae', '#d9c7ff', '#ffd166'];
-    for (let i = 0; i < 300; i++) {
-      const x = rand(0, W), y = rand(groundYAt(x) + 4, H - 8);
+    for (let i = 0; i < 38; i++) {
+      const x = x0 + rnd() * (x1 - x0), y = groundYAt(x) + 4 + rnd() * (H - groundYAt(x) - 12);
       if (Math.abs(y - pathY(x)) < 30) continue;
-      if (Math.random() < 0.42) flower(g, x, y, petalCols[randi(0, petalCols.length - 1)]);
-      else grassTuft(g, x, y, Math.random() < 0.5 ? '#5d9950' : '#4f8a44');
+      if (rnd() < 0.42) flower(g, x, y, petalCols[rndi(0, petalCols.length - 1)]);
+      else grassTuft(g, x, y, rnd() < 0.5 ? '#5d9950' : '#4f8a44');
     }
     g.fillStyle = 'rgba(140,150,140,.5)';
-    for (let i = 0; i < 46; i++) {
-      const x = rand(0, W), y = rand(groundYAt(x) + 6, H - 10);
+    for (let i = 0; i < 6; i++) {
+      const x = x0 + rnd() * (x1 - x0), y = groundYAt(x) + 6 + rnd() * (H - groundYAt(x) - 16);
       if (Math.abs(y - pathY(x)) < 26) continue;
-      g.beginPath(); g.ellipse(x, y, rand(4, 9), rand(3, 5.5), 0, 0, TAU); g.fill();
+      g.beginPath(); g.ellipse(x, y, 4 + rnd() * 5, 3 + rnd() * 2.5, 0, 0, TAU); g.fill();
     }
 
-    for (const z of ZONES) drawPropCluster(g, z);
-    for (const z of ZONES) drawPortalStatic(g, z);
-
-    bake.ground = c;
+    for (const z of ZONES) {
+      if (z.x > x0 - 520 && z.x < x1 + 520) drawPropCluster(g, z);
+    }
+    for (const z of ZONES) {
+      if (z.x > x0 - 260 && z.x < x1 + 260) drawPortalStatic(g, z);
+    }
   }
+
+  const TILE_W = 760;
+  const tileCache = new Map();   // idx → {c, x0, w, last}
+  let tileTick = 0;
+  const TILE_KEEP = 5;
+
+  function bakeTile(idx) {
+    const x0 = idx * TILE_W;
+    const w = Math.min(TILE_W, WORLD_W - x0);
+    const c = document.createElement('canvas');
+    c.width = Math.ceil(w * AK.dpr); c.height = AK.H * AK.dpr;
+    const g = c.getContext('2d');
+    g.scale(AK.dpr, AK.dpr);
+    g.translate(-x0, 0);
+    paintGroundRange(g, x0 - 12, x0 + w + 12, idx * 2654435761 + 1234);
+    return { c, x0, w };
+  }
+
+  AK.drawGround = function (ctx) {
+    if (!AK.H || AK.VW <= 0) return;
+    const total = Math.ceil(WORLD_W / TILE_W);
+    const first = Math.max(0, Math.floor((AK.camX - 60) / TILE_W));
+    const lastI = Math.min(total - 1, Math.floor((AK.camX + AK.VW + 60) / TILE_W));
+    tileTick++;
+    for (let i = first; i <= lastI; i++) {
+      let t = tileCache.get(i);
+      if (!t) { t = bakeTile(i); tileCache.set(i, t); }
+      t.last = tileTick;
+      ctx.drawImage(t.c, t.x0 - AK.camX, 0, t.w, AK.H);
+    }
+    // buang ubin yang tak terlihat agar memori tetap ramping
+    if (tileCache.size > TILE_KEEP) {
+      for (const [k, v] of tileCache) {
+        if (v.last < tileTick - 1) tileCache.delete(k);
+        if (tileCache.size <= TILE_KEEP) break;
+      }
+    }
+  };
 
   function bakeVignette(vw, vh) {
     const c = document.createElement('canvas');
@@ -456,9 +512,9 @@ window.AK = (function () {
 
   function bakeAll(vw, vh, dpr) {
     AK.VW = vw; AK.H = vh; AK.dpr = dpr;
+    tileCache.clear();   // ubin lama tak berlaku — ukuran berubah
     bake.hillsFar = bakeHills(vw, 0.10, '#c3d5ec', '#e2ecf8', false);
     bake.hillsMid = bakeHills(vw, 0.26, '#a5d49b', '#8cc687', true);
-    bakeGround();
     bakeVignette(vw, vh);
   }
   AK.bakeAll = bakeAll;
@@ -510,9 +566,10 @@ window.AK = (function () {
 
   function drawLayer(ctx, img, p) {
     if (!img) return;
-    const maxOff = img.width / AK.dpr - AK.VW;
+    const d = img._dpr || AK.dpr || 1;
+    const maxOff = img.width / d - AK.VW;
     const off = Math.min(AK.camX * p, Math.max(0, maxOff));
-    ctx.drawImage(img, off * AK.dpr, 0, AK.VW * AK.dpr, AK.H * AK.dpr, 0, 0, AK.VW, AK.H);
+    ctx.drawImage(img, off * d, 0, AK.VW * d, AK.H * d, 0, 0, AK.VW, AK.H);
   }
   AK.drawHills = function (ctx) {
     drawLayer(ctx, bake.hillsFar, 0.10);
@@ -528,7 +585,6 @@ window.AK = (function () {
     }
     ctx.fillStyle = fogGrad; ctx.fillRect(0, AK.H * 0.62, AK.VW, AK.H * 0.22);
   };
-  AK.drawGround = function (ctx) { drawLayer(ctx, bake.ground, 1); };
   AK.drawVignette = function (ctx) {
     if (bake.vignette) ctx.drawImage(bake.vignette, 0, 0, AK.VW, AK.H);
   };
@@ -571,7 +627,7 @@ window.AK = (function () {
     clouds.length = 0; pollen.length = 0; fireflies.length = 0; birds.length = 0;
     butterflies.length = 0; leaves.length = 0; snow.length = 0; mist.length = 0;
     for (let i = 0; i < 11; i++) clouds.push({
-      x: rand(-200, WORLD_W * 0.42), y: rand(30, AK.H * 0.36),
+      x: rand(-200, WORLD_W), y: rand(30, AK.H * 0.36),
       s: rand(0.75, 1.7), v: rand(4, 10), a: rand(0.5, 0.92)
     });
     for (let i = 0; i < 52; i++) {
@@ -618,7 +674,7 @@ window.AK = (function () {
   AK.updateAmbient = function (dt) {
     const rm = AK.reducedMotion;
     if (!rm) {
-      for (const c of clouds) { c.x += c.v * dt; if (c.x > WORLD_W * 0.42 + 300) c.x = -300; }
+      for (const c of clouds) { c.x += c.v * dt; if (c.x > WORLD_W + 300) c.x = -300; }
       for (const p of pollen) p.ph += dt * p.sp;
       for (const f of fireflies) f.ph += dt * f.sp;
       for (const b of birds) { b.x += b.v * dt; b.ph += dt * 7; if (b.x > WORLD_W + 60) b.x = -60; }

@@ -18,7 +18,7 @@ AK.PALETTE = [
 
 AK.Jelly = (function () {
   const TAU = AK.TAU, rand = AK.rand, clamp = AK.clamp;
-  const GRAV = 1560;
+  const GRAV = 1340;   // gravitasi ringan — lompatan terasa mengapung lembut
   const K_SPRING = 170;   // pegas ke posisi istirahat
   const K_SMOOTH  = 300;  // penghalang antar titik tepi
   const G_POINT   = 360;  // tekan titik ke tanah saat di darat (efek pipih)
@@ -58,6 +58,7 @@ AK.Jelly = (function () {
         p.vx += rand(-1, 1) * v * 0.08;
       }
       this.landPuff = Math.min(1, f);
+      this.lastImpact = f;   // dipakai world-main untuk menaburkan debu
     }
 
     jump(pow) {
@@ -67,7 +68,20 @@ AK.Jelly = (function () {
       for (const p of this.pts) p.vy -= 130;   // regang sebelum melompat
     }
 
+    /* sapaan riang saat disentuh — melompat kecil sekali */
+    poke() {
+      if (this.grounded) { this.vy = -300; this.grounded = false; }
+      for (const p of this.pts) { p.vy -= 150; p.vx += rand(-70, 70); }
+    }
+
     update(dt) {
+      /* saat tersedot gerbang / pop kembali: pusat dikendalikan luar,
+         titik tepi tetap ikut lunak mengikuti skala badan */
+      if (this.masukScale != null) {
+        this.softPoints(dt, this.r * Math.max(0.1, this.masukScale));
+        if (this.landPuff > 0) this.landPuff = Math.max(0, this.landPuff - dt * 2.4);
+        return;
+      }
       const r = this.r;
 
       /* --- kemudi pusat --- */
@@ -79,14 +93,22 @@ AK.Jelly = (function () {
           if (Math.abs(d) < 10 && Math.abs(this.vx) < 26) this.targetX = null;
         } else if (this.grounded && !this.steerLock) {
           // gesekan gulung lembut: melambat mulus, tanpa tersentak
-          this.vx *= Math.pow(0.18, dt);
+          this.vx *= Math.pow(0.14, dt);
           if (Math.abs(this.vx) < 4) this.vx = 0;
         }
       } else if (!AK.reducedMotion) {
         this.wanderIn -= dt;
         if (this.wanderIn <= 0 && this.targetX == null) {
-          // berkeliaran kecil di sekitar rumah — tidak sampai menabrak gerbang
-          this.targetX = clamp(this.cx + rand(-150, 150), this.homeX - 140, this.homeX + 140);
+          // berkeliaran kecil di sekitar rumah — tidak sampai menabrak gerbang,
+          // dan tidak mendekati posisi pemain (pemain tak boleh terusik)
+          let tX = clamp(this.cx + rand(-150, 150), this.homeX - 140, this.homeX + 140);
+          if (AK.avoidX != null) {
+            if (tX > AK.avoidX - 95 && tX < AK.avoidX + 95) {
+              tX = (tX >= AK.avoidX) ? AK.avoidX + 95 : AK.avoidX - 95;
+              tX = clamp(tX, this.homeX - 140, this.homeX + 140);
+            }
+          }
+          this.targetX = tX;
           this.wanderIn = rand(3.5, 9);
         }
         if (this.targetX != null) {
@@ -172,18 +194,69 @@ AK.Jelly = (function () {
       if (this.landPuff > 0) this.landPuff = Math.max(0, this.landPuff - dt * 2.4);
     }
 
+    /* fisika titik tepi — dipisah agar bisa dipakai saat badan dibekukan */
+    softPoints(dt, r) {
+      const damp = Math.pow(0.90, dt * 60);
+      const sp = Math.hypot(this.vx, this.vy);
+      const st = clamp(sp / 1700, 0, 0.22);       // regangan kecepatan
+      let vax = 0, vay = -1;
+      if (sp > 40) { vax = this.vx / sp; vay = this.vy / sp; }
+
+      for (let i = 0; i < this.N; i++) {
+        const p = this.pts[i];
+        const a = p.a + this.rot;
+        let tx = this.cx + Math.cos(a) * r;
+        let ty = this.cy + Math.sin(a) * r;
+
+        if (st > 0.01) {
+          const rx = tx - this.cx, ry = ty - this.cy;
+          const du = rx * vax + ry * vay;
+          const dv = -rx * vay + ry * vax;
+          const u = du * (1 + st), v = dv * (1 - st * 0.6);
+          tx = this.cx + u * vax - v * vay;
+          ty = this.cy + u * vay + v * vax;
+        }
+
+        p.vx += (tx - p.x) * K_SPRING * dt;
+        p.vy += (ty - p.y) * K_SPRING * dt;
+
+        const pr = this.pts[(i - 1 + this.N) % this.N];
+        const nx = this.pts[(i + 1) % this.N];
+        p.vx += ((pr.x + nx.x) / 2 - p.x) * K_SMOOTH * dt;
+        p.vy += ((pr.y + nx.y) / 2 - p.y) * K_SMOOTH * dt;
+
+        if (this.grounded) p.vy += G_POINT * dt;
+
+        p.vx *= damp; p.vy *= damp;
+        p.x += p.vx * dt;
+        p.y += p.vy * dt;
+
+        // pengaman bentuk: tetap kenyal tapi tak pernah meleleh
+        const dxp = p.x - this.cx, dyp = p.y - this.cy;
+        const dp = Math.hypot(dxp, dyp) || 1;
+        const dc = clamp(dp, r * 0.66, r * 1.45);
+        p.x = this.cx + dxp / dp * dc;
+        p.y = this.cy + dyp / dp * dc;
+
+        const pgy = AK.groundYAt(p.x) - 1;
+        if (p.y > pgy) { p.y = pgy; p.vy *= -0.18; }
+      }
+    }
+
     /* --- gambar badan lunak --- */
     draw(ctx) {
       const pts = this.pts, N = this.N, c = this.col;
+      const s = (this.masukScale != null) ? Math.max(0.1, this.masukScale) : 1;
+      const R = this.r * s;
 
-      // bayangan lembut
+      // bayangan lembut (mengecil saat badan mengecil)
       const gy = AK.groundYAt(this.cx);
-      const air = clamp((gy - this.cy - this.r) / 240, 0, 1);
+      const air = clamp((gy - this.cy - R) / 240, 0, 1);
       ctx.save();
-      ctx.globalAlpha = 0.20 * (1 - air * 0.65);
+      ctx.globalAlpha = 0.20 * s * (1 - air * 0.65);
       ctx.fillStyle = '#2f5d3a';
       ctx.beginPath();
-      ctx.ellipse(this.cx, gy - 3, this.r * (1.22 + air * 0.35), this.r * 0.28, 0, 0, TAU);
+      ctx.ellipse(this.cx, gy - 3, R * (1.22 + air * 0.35), R * 0.28, 0, 0, TAU);
       ctx.fill();
       ctx.restore();
 
@@ -198,8 +271,8 @@ AK.Jelly = (function () {
       ctx.closePath();
 
       const grad = ctx.createRadialGradient(
-        this.cx - this.r * 0.35, this.cy - this.r * 0.42, this.r * 0.12,
-        this.cx, this.cy, this.r * 1.38
+        this.cx - R * 0.35, this.cy - R * 0.42, R * 0.12,
+        this.cx, this.cy, R * 1.38
       );
       grad.addColorStop(0, c.light);
       grad.addColorStop(0.55, c.base);
@@ -208,7 +281,7 @@ AK.Jelly = (function () {
       ctx.fill();
       // garis tepi samar — tokoh tetap menonjol di atas properti senada
       ctx.strokeStyle = 'rgba(40,32,22,.18)';
-      ctx.lineWidth = 1.6;
+      ctx.lineWidth = 1.6 * s;
       ctx.stroke();
 
       // kilau tepi & kilau kaca (klip di dalam badan)
@@ -216,14 +289,14 @@ AK.Jelly = (function () {
       ctx.clip();
       ctx.globalAlpha = 0.55;
       ctx.strokeStyle = c.rim;
-      ctx.lineWidth = this.r * 0.16;
+      ctx.lineWidth = R * 0.16;
       ctx.beginPath();
-      ctx.arc(this.cx - this.r * 0.08, this.cy - this.r * 0.10, this.r * 0.86, Math.PI * 1.02, Math.PI * 1.72);
+      ctx.arc(this.cx - R * 0.08, this.cy - R * 0.10, R * 0.86, Math.PI * 1.02, Math.PI * 1.72);
       ctx.stroke();
       ctx.globalAlpha = 0.42;
       ctx.fillStyle = '#ffffff';
       ctx.beginPath();
-      ctx.ellipse(this.cx - this.r * 0.32, this.cy - this.r * 0.44, this.r * 0.30, this.r * 0.12, -0.55, 0, TAU);
+      ctx.ellipse(this.cx - R * 0.32, this.cy - R * 0.44, R * 0.30, R * 0.12, -0.55, 0, TAU);
       ctx.fill();
       ctx.restore();
     }
@@ -286,7 +359,7 @@ AK.Akio = (function () {
         this.trail.push({ x: this.cx + rand(-4, 4), y: this.cy + rand(-2, 8), a: 0.85, r: rand(1.4, 3) });
         if (this.trail.length > 16) this.trail.shift();
       }
-      for (const s of this.trail) s.a -= dt * 0.55;
+      for (const s of this.trail) s.a -= dt * 2.2;   // jejak padam serentak — tak ada titik nyangkut
     }
 
     draw(ctx, glow) {

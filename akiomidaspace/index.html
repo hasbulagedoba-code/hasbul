@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#8ec8ee">
 <title>Dunia Akiomida — Petualangan Matematika Terbuka | Perpustakaan Matematika</title>
 <meta name="description" content="Masuki Dunia Akiomida: dunia terbuka penuh warna dengan enam wilayah matematika. Berjalan, temui Akio si pemandu keemasan, dan masuki gerbang Kamp Angka untuk menjelajahi peta materi matematika.">
 <meta property="og:title" content="Dunia Akiomida — Petualangan Matematika Terbuka">
@@ -18,6 +19,8 @@
     font-family:'Nunito','Segoe UI',Tahoma,sans-serif;
     background:#8ec8ee; color:#1e3a5f;
     -webkit-tap-highlight-color:transparent;
+    user-select:none; -webkit-user-select:none;
+    touch-action:manipulation;
   }
   #panggung { position:fixed; inset:0; display:block; touch-action:none; }
 
@@ -58,7 +61,7 @@
 
   /* ---------- tombol jalan (mobile) ---------- */
   .btn-jalan {
-    position:fixed; bottom:calc(150px + env(safe-area-inset-bottom)); z-index:25;
+    position:fixed; bottom:calc(26px + env(safe-area-inset-bottom)); z-index:25;
     width:62px; height:62px; border-radius:50%;
     border:1px solid rgba(255,255,255,.65);
     background:rgba(255,255,255,.30); backdrop-filter:blur(4px);
@@ -67,13 +70,17 @@
     user-select:none; -webkit-user-select:none; touch-action:none;
     box-shadow:0 6px 16px rgba(30,58,95,.18);
   }
-  .btn-jalan:active { background:rgba(255,255,255,.5); }
+  .btn-jalan:active { background:rgba(255,255,255,.5); transform:scale(.94); }
   body.perangkat-sentuh .btn-jalan { display:flex; }
   #btnKiri { left:16px; } #btnKanan { right:16px; }
   @media (hover:none) and (pointer:coarse) { .btn-jalan { display:flex; } }
   @media (max-width:700px) {
-    .btn-jalan { bottom:calc(288px + env(safe-area-inset-bottom)); width:56px; height:56px; }
-    .hint { top:calc(72px + env(safe-area-inset-top)); bottom:auto; max-width:80vw; }
+    .btn-jalan { width:56px; height:56px; font-size:24px; }
+    /* di perangkat sentuh, petunjuk naik sedikit agar tak bertabrakan tombol jalan */
+    body.perangkat-sentuh .hint {
+      top:auto; bottom:calc(98px + env(safe-area-inset-bottom));
+      left:50%; transform:translateX(-50%); max-width:86vw; text-align:center;
+    }
   }
 
   /* ---------- layar muat gerbang ----------
@@ -231,7 +238,7 @@
   <span class="slogan" id="chipSlogan">Wilayah permulaan perjalanan</span>
 </div>
 
-<div class="hint tampil" id="hint">Klik tanah untuk berjalan &nbsp;·&nbsp; kamera mengikuti dengan sendirinya</div>
+<div class="hint tampil" id="hint">Klik tanah untuk berjalan &nbsp;·&nbsp; kamera mengikuti dengan selaras</div>
 
 <div class="btn-jalan" id="btnKiri" aria-hidden="true">‹</div>
 <div class="btn-jalan" id="btnKanan" aria-hidden="true">›</div>
