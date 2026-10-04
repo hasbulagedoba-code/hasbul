@@ -243,7 +243,10 @@ AK.Jelly = (function () {
       }
     }
 
-    /* --- gambar badan lunak --- */
+    /* --- gambar badan lunak ---
+        Semua digambar dalam ruang lokal (origin = pusat bola) dan
+        gradasi di-cache per ukuran — nol alokasi gradien tiap frame,
+        render tetap mulus bahkan dengan belasan tokoh sekaligus. */
     draw(ctx) {
       const pts = this.pts, N = this.N, c = this.col;
       const s = (this.masukScale != null) ? Math.max(0.1, this.masukScale) : 1;
@@ -260,24 +263,29 @@ AK.Jelly = (function () {
       ctx.fill();
       ctx.restore();
 
+      // gradasi badan — dibuat sekali per ukuran, dipakai ulang
+      if (!this._grad || this._gradR !== R) {
+        const g = ctx.createRadialGradient(-R * 0.35, -R * 0.42, R * 0.12, 0, 0, R * 1.38);
+        g.addColorStop(0, c.light);
+        g.addColorStop(0.55, c.base);
+        g.addColorStop(1, c.dark);
+        this._grad = g; this._gradR = R;
+      }
+
+      ctx.save();
+      ctx.translate(this.cx, this.cy);
+
       // jalur mulus lewat titik tengah antar titik
       ctx.beginPath();
       let p0 = pts[N - 1], p1 = pts[0];
-      ctx.moveTo((p0.x + p1.x) / 2, (p0.y + p1.y) / 2);
+      ctx.moveTo((p0.x + p1.x) / 2 - this.cx, (p0.y + p1.y) / 2 - this.cy);
       for (let i = 0; i < N; i++) {
         const p = pts[i], q = pts[(i + 1) % N];
-        ctx.quadraticCurveTo(p.x, p.y, (p.x + q.x) / 2, (p.y + q.y) / 2);
+        ctx.quadraticCurveTo(p.x - this.cx, p.y - this.cy,
+                             (p.x + q.x) / 2 - this.cx, (p.y + q.y) / 2 - this.cy);
       }
       ctx.closePath();
-
-      const grad = ctx.createRadialGradient(
-        this.cx - R * 0.35, this.cy - R * 0.42, R * 0.12,
-        this.cx, this.cy, R * 1.38
-      );
-      grad.addColorStop(0, c.light);
-      grad.addColorStop(0.55, c.base);
-      grad.addColorStop(1, c.dark);
-      ctx.fillStyle = grad;
+      ctx.fillStyle = this._grad;
       ctx.fill();
       // garis tepi samar — tokoh tetap menonjol di atas properti senada
       ctx.strokeStyle = 'rgba(40,32,22,.18)';
@@ -291,13 +299,14 @@ AK.Jelly = (function () {
       ctx.strokeStyle = c.rim;
       ctx.lineWidth = R * 0.16;
       ctx.beginPath();
-      ctx.arc(this.cx - R * 0.08, this.cy - R * 0.10, R * 0.86, Math.PI * 1.02, Math.PI * 1.72);
+      ctx.arc(-R * 0.08, -R * 0.10, R * 0.86, Math.PI * 1.02, Math.PI * 1.72);
       ctx.stroke();
       ctx.globalAlpha = 0.42;
       ctx.fillStyle = '#ffffff';
       ctx.beginPath();
-      ctx.ellipse(this.cx - R * 0.32, this.cy - R * 0.44, R * 0.30, R * 0.12, -0.55, 0, TAU);
+      ctx.ellipse(-R * 0.32, -R * 0.44, R * 0.30, R * 0.12, -0.55, 0, TAU);
       ctx.fill();
+      ctx.restore();
       ctx.restore();
     }
   }
@@ -379,37 +388,44 @@ AK.Akio = (function () {
       }
       ctx.globalAlpha = 1;
 
-      // badan
+      // badan — ruang lokal + gradasi cache (nol alokasi per frame)
+      if (!this._grad) {
+        const g = ctx.createRadialGradient(
+          -this.r * 0.3, -this.r * 0.4, this.r * 0.1,
+          0, 0, this.r * 1.35
+        );
+        g.addColorStop(0, this.col.light);
+        g.addColorStop(0.55, this.col.base);
+        g.addColorStop(1, this.col.dark);
+        this._grad = g;
+      }
       const pts = this.pts, N = this.N, c = this.col;
+      ctx.save();
+      ctx.translate(this.cx, this.cy);
       ctx.beginPath();
       let p0 = pts[N - 1], p1 = pts[0];
-      ctx.moveTo((p0.x + p1.x) / 2, (p0.y + p1.y) / 2);
+      ctx.moveTo((p0.x + p1.x) / 2 - this.cx, (p0.y + p1.y) / 2 - this.cy);
       for (let i = 0; i < N; i++) {
         const p = pts[i], q = pts[(i + 1) % N];
-        ctx.quadraticCurveTo(p.x, p.y, (p.x + q.x) / 2, (p.y + q.y) / 2);
+        ctx.quadraticCurveTo(p.x - this.cx, p.y - this.cy,
+                             (p.x + q.x) / 2 - this.cx, (p.y + q.y) / 2 - this.cy);
       }
       ctx.closePath();
-      const grad = ctx.createRadialGradient(
-        this.cx - this.r * 0.3, this.cy - this.r * 0.4, this.r * 0.1,
-        this.cx, this.cy, this.r * 1.35
-      );
-      grad.addColorStop(0, c.light);
-      grad.addColorStop(0.55, c.base);
-      gradColorDark(grad, c.dark);
-      ctx.fillStyle = grad;
+      ctx.fillStyle = this._grad;
       ctx.fill();
 
       ctx.save(); ctx.clip();
       ctx.globalAlpha = 0.6;
       ctx.strokeStyle = c.rim; ctx.lineWidth = 5;
       ctx.beginPath();
-      ctx.arc(this.cx - this.r * 0.08, this.cy - this.r * 0.1, this.r * 0.84, Math.PI * 1.02, Math.PI * 1.72);
+      ctx.arc(-this.r * 0.08, -this.r * 0.1, this.r * 0.84, Math.PI * 1.02, Math.PI * 1.72);
       ctx.stroke();
       ctx.globalAlpha = 0.5;
       ctx.fillStyle = '#ffffff';
       ctx.beginPath();
-      ctx.ellipse(this.cx - this.r * 0.3, this.cy - this.r * 0.42, this.r * 0.26, this.r * 0.11, -0.55, 0, TAU);
+      ctx.ellipse(-this.r * 0.3, -this.r * 0.42, this.r * 0.26, this.r * 0.11, -0.55, 0, TAU);
       ctx.fill();
+      ctx.restore();
       ctx.restore();
 
       // mahkota kecil melayang di atas Akio (bukan wajah — tanda pemandu)
@@ -427,8 +443,6 @@ AK.Akio = (function () {
       ctx.restore();
     }
   }
-
-  function gradColorDark(grad, col) { grad.addColorStop(1, col); }
 
   return Akio;
 })();

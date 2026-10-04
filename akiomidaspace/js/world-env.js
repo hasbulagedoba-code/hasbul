@@ -252,7 +252,7 @@ window.AK = (function () {
 
   function bakeHills(vw, p, colTop, colBot, bumps) {
     const Wf = Math.ceil(vw + WORLD_W * p);
-    const hd = Math.min(AK.dpr || 1, 1.6);   // bukit lembut — cukup 1.6x, kanvas tetap ringan
+    const hd = Math.min(AK.dpr || 1, 1.35);   // bukit lembut — 1.35x sudah halus, tekstur GPU jauh lebih ringan
     const c = document.createElement('canvas');
     c.width = Wf * hd; c.height = AK.H * hd;
     c._dpr = hd;
@@ -485,7 +485,7 @@ window.AK = (function () {
       let t = tileCache.get(i);
       if (!t) { t = bakeTile(i); tileCache.set(i, t); }
       t.last = tileTick;
-      ctx.drawImage(t.c, t.x0 - AK.camX, 0, t.w, AK.H);
+      ctx.drawImage(t.c, Math.round(t.x0 - AK.camX), 0, t.w, AK.H);
     }
     // buang ubin yang tak terlihat agar memori tetap ramping
     if (tileCache.size > TILE_KEEP) {
@@ -519,12 +519,31 @@ window.AK = (function () {
   }
   AK.bakeAll = bakeAll;
 
-  /* =========================================================
-     LANGIT (digambar tiap frame — murah)
-     ========================================================= */
+  /* ---------- LANGIT (digambar tiap frame — murah, nol gradien baru) ----------
+     Cahaya matahari & berkas sinar dibake sekali sebagai sprite;
+     tiap frame cukup tempel & putar — hemat di semua perangkat. */
   let skyGrad = null, skyKey = '';
   let fogGrad = null, fogKey = '';
+  let sunGlow = null, raySpr = null;
+  function ensureSunSprites() {
+    if (sunGlow) return;
+    sunGlow = document.createElement('canvas'); sunGlow.width = 360; sunGlow.height = 360;
+    const g = sunGlow.getContext('2d');
+    const rg = g.createRadialGradient(180, 180, 4, 180, 180, 180);
+    rg.addColorStop(0, 'rgba(255,246,214,.95)');
+    rg.addColorStop(0.25, 'rgba(255,224,150,.55)');
+    rg.addColorStop(1, 'rgba(255,224,150,0)');
+    g.fillStyle = rg; g.fillRect(0, 0, 360, 360);
+    raySpr = document.createElement('canvas'); raySpr.width = 640; raySpr.height = 64;
+    const r2 = raySpr.getContext('2d');
+    const lg = r2.createLinearGradient(0, 0, 640, 0);
+    lg.addColorStop(0, 'rgba(255,240,200,.085)');
+    lg.addColorStop(1, 'rgba(255,240,200,0)');
+    r2.fillStyle = lg;
+    r2.beginPath(); r2.moveTo(0, 32); r2.lineTo(640, 0); r2.lineTo(640, 64); r2.closePath(); r2.fill();
+  }
   function drawSky(ctx, t, camX) {
+    ensureSunSprites();
     const vw = AK.VW, vh = AK.H;
     const key = vw + 'x' + vh;
     if (skyKey !== key) {
@@ -539,11 +558,7 @@ window.AK = (function () {
     ctx.fillStyle = skyGrad; ctx.fillRect(0, 0, vw, vh);
 
     const sx = vw * 0.70 - camX * 0.05, sy = vh * 0.20;
-    const rg = ctx.createRadialGradient(sx, sy, 4, sx, sy, 170);
-    rg.addColorStop(0, 'rgba(255,246,214,.95)');
-    rg.addColorStop(0.25, 'rgba(255,224,150,.55)');
-    rg.addColorStop(1, 'rgba(255,224,150,0)');
-    ctx.fillStyle = rg; ctx.fillRect(sx - 180, sy - 180, 360, 360);
+    ctx.drawImage(sunGlow, sx - 180, sy - 180);
     ctx.fillStyle = '#fff8e0';
     ctx.beginPath(); ctx.arc(sx, sy, 42, 0, TAU); ctx.fill();
 
@@ -552,11 +567,7 @@ window.AK = (function () {
       for (let i = 0; i < 5; i++) {
         const a = t * 0.03 + i * TAU / 5 + 0.4;
         ctx.save(); ctx.rotate(a);
-        const lg = ctx.createLinearGradient(0, 0, 620, 0);
-        lg.addColorStop(0, 'rgba(255,240,200,.085)');
-        lg.addColorStop(1, 'rgba(255,240,200,0)');
-        ctx.fillStyle = lg;
-        ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(620, -30); ctx.lineTo(620, 30); ctx.closePath(); ctx.fill();
+        ctx.drawImage(raySpr, 0, -32, 620, 64);
         ctx.restore();
       }
       ctx.restore();
@@ -626,26 +637,34 @@ window.AK = (function () {
     glowWarm = makeGlow('rgba(255,190,110,.95)');
     clouds.length = 0; pollen.length = 0; fireflies.length = 0; birds.length = 0;
     butterflies.length = 0; leaves.length = 0; snow.length = 0; mist.length = 0;
-    for (let i = 0; i < 11; i++) clouds.push({
+    // layar kecil = anggaran partikel lebih ramping — tetap hidup, tetap ringan
+    const kecil = (AK.VW || 1280) < 720;
+    const nCloud  = kecil ? 7 : 11;
+    const nPollen = kecil ? 30 : 52;
+    const nFire   = kecil ? 9 : 14;
+    const nBird   = kecil ? 5 : 7;
+    const nLeaf   = kecil ? 22 : 34;
+    const nSnow   = kecil ? 34 : 52;
+    for (let i = 0; i < nCloud; i++) clouds.push({
       x: rand(-200, WORLD_W), y: rand(30, AK.H * 0.36),
       s: rand(0.75, 1.7), v: rand(4, 10), a: rand(0.5, 0.92)
     });
-    for (let i = 0; i < 52; i++) {
+    for (let i = 0; i < nPollen; i++) {
       const x = rand(0, WORLD_W);
       pollen.push({ x, y: rand(groundYAt(x) - 250, groundYAt(x) - 10), r: rand(1.2, 2.6), ph: rand(0, TAU), sp: rand(0.5, 1.2) });
     }
-    for (let i = 0; i < 14; i++) {
+    for (let i = 0; i < nFire; i++) {
       const x = ZONES[4].x + rand(-420, 420);
       fireflies.push({ x, y: rand(groundYAt(x) - 190, groundYAt(x) - 16), ph: rand(0, TAU), sp: rand(0.6, 1.4) });
     }
-    for (let i = 0; i < 7; i++) birds.push({ x: rand(0, WORLD_W), y: rand(50, AK.H * 0.26), v: rand(11, 22), ph: rand(0, TAU) });
+    for (let i = 0; i < nBird; i++) birds.push({ x: rand(0, WORLD_W), y: rand(50, AK.H * 0.26), v: rand(11, 22), ph: rand(0, TAU) });
     butterflies.push({ ax: ZONES[0].x + 180, ay: 0, t: rand(0, 9), col: '#ffffff' });
     butterflies.push({ ax: ZONES[1].x - 120, ay: 0, t: rand(0, 9), col: '#ffd166' });
     butterflies.push({ ax: ZONES[2].x - 60,  ay: 0, t: rand(0, 9), col: '#a5d8ff' });
     butterflies.push({ ax: ZONES[3].x - 200, ay: 0, t: rand(0, 9), col: '#f687b3' });
     butterflies.push({ ax: ZONES[4].x + 150, ay: 0, t: rand(0, 9), col: '#e2d0fc' });
     // Hutan Simbol: dedaunan berjatuhan pelan
-    for (let i = 0; i < 34; i++) {
+    for (let i = 0; i < nLeaf; i++) {
       const x = ZONES[1].x + rand(-380, 420);
       leaves.push({
         x, y: rand(groundYAt(x) - 240, groundYAt(x) - 10),
@@ -654,7 +673,7 @@ window.AK = (function () {
       });
     }
     // Puncak Riset: salju turun satu per satu
-    for (let i = 0; i < 52; i++) {
+    for (let i = 0; i < nSnow; i++) {
       const x = ZONES[5].x + rand(-460, 460);
       snow.push({
         x, y: rand(groundYAt(x) - 300, groundYAt(x) - 6),

@@ -28,7 +28,7 @@
   .chip-wilayah {
     position:fixed; top:calc(14px + env(safe-area-inset-top)); left:16px; z-index:20;
     pointer-events:none; user-select:none;
-    background:rgba(255,255,255,.82); backdrop-filter:blur(6px);
+    background:rgba(255,255,255,.88);
     border:1px solid rgba(30,58,95,.10); border-radius:16px;
     padding:8px 16px 9px; box-shadow:0 6px 18px rgba(30,58,95,.12);
     opacity:0; transform:translateY(-8px); transition:opacity .5s ease, transform .5s ease;
@@ -51,36 +51,16 @@
     position:fixed; left:16px; bottom:calc(16px + env(safe-area-inset-bottom)); z-index:20;
     pointer-events:none; user-select:none;
     font-size:12.5px; font-weight:700; color:#3d5875;
-    background:rgba(255,255,255,.75); backdrop-filter:blur(6px);
+    background:rgba(255,255,255,.85);
     border:1px solid rgba(30,58,95,.08); border-radius:999px;
     padding:7px 14px; box-shadow:0 4px 14px rgba(30,58,95,.10);
     opacity:0; transition:opacity .6s ease;
+    max-width:calc(100vw - 32px);
   }
   .hint.tampil { opacity:1; }
   .hint.pudar { opacity:0 !important; }
-
-  /* ---------- tombol jalan (mobile) ---------- */
-  .btn-jalan {
-    position:fixed; bottom:calc(26px + env(safe-area-inset-bottom)); z-index:25;
-    width:62px; height:62px; border-radius:50%;
-    border:1px solid rgba(255,255,255,.65);
-    background:rgba(255,255,255,.30); backdrop-filter:blur(4px);
-    color:#fff; font-size:26px; font-weight:900;
-    display:none; align-items:center; justify-content:center;
-    user-select:none; -webkit-user-select:none; touch-action:none;
-    box-shadow:0 6px 16px rgba(30,58,95,.18);
-  }
-  .btn-jalan:active { background:rgba(255,255,255,.5); transform:scale(.94); }
-  body.perangkat-sentuh .btn-jalan { display:flex; }
-  #btnKiri { left:16px; } #btnKanan { right:16px; }
-  @media (hover:none) and (pointer:coarse) { .btn-jalan { display:flex; } }
   @media (max-width:700px) {
-    .btn-jalan { width:56px; height:56px; font-size:24px; }
-    /* di perangkat sentuh, petunjuk naik sedikit agar tak bertabrakan tombol jalan */
-    body.perangkat-sentuh .hint {
-      top:auto; bottom:calc(98px + env(safe-area-inset-bottom));
-      left:50%; transform:translateX(-50%); max-width:86vw; text-align:center;
-    }
+    .hint { font-size:11.5px; padding:6px 12px; }
   }
 
   /* ---------- layar muat gerbang ----------
@@ -238,10 +218,7 @@
   <span class="slogan" id="chipSlogan">Wilayah permulaan perjalanan</span>
 </div>
 
-<div class="hint tampil" id="hint">Klik tanah untuk berjalan &nbsp;·&nbsp; kamera mengikuti dengan selaras</div>
-
-<div class="btn-jalan" id="btnKiri" aria-hidden="true">‹</div>
-<div class="btn-jalan" id="btnKanan" aria-hidden="true">›</div>
+<div class="hint tampil" id="hint">Ketuk tanah untuk berjalan &nbsp;·&nbsp; tahan &amp; geser untuk menuntun</div>
 
 <div class="muat" id="muat" role="dialog" aria-hidden="true" aria-label="Menyiapkan bahan ajar">
   <div class="muat-aura" id="muatAura"></div>

@@ -34,4 +34,4 @@ Tambahkan blok berikut di halaman mana pun:
 
 ## Alur pengguna
 
-Pintu depan → tombol **Mulai** → Dunia Akiomida (jelajah bebas: drag, panah, atau klik tanah) → gerbang wilayah → peta tur lantai → pos yang bertanda BUKA → halaman materi.
+Pintu depan → tombol **Mulai** → Dunia Akiomida (jelajah bebas: ketuk tanah untuk berjalan, tahan & geser untuk menuntun, panah/A–D di keyboard; kamera selalu mengikuti) → gerbang wilayah → peta tur lantai → pos yang bertanda BUKA → halaman materi.

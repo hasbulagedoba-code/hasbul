@@ -8,19 +8,20 @@
   const TAU = AK.TAU, clamp = AK.clamp, lerp = AK.lerp, rand = AK.rand;
 
   const canvas = document.getElementById('panggung');
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d', { alpha: false });
   const introEl = document.getElementById('intro');
   const hintEl = document.getElementById('hint');
   const chipEl = document.getElementById('chipWilayah');
   const chipNama = document.getElementById('chipNama');
   const chipSlogan = document.getElementById('chipSlogan');
-  const btnKiri = document.getElementById('btnKiri');
-  const btnKanan = document.getElementById('btnKanan');
 
   AK.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  let VW = 0, VH = 0, dpr = 1;
-  let camX = 0, started = false, last = 0;
+  let VW = 0, VH = 0, started = false, last = 0;
+  /* Resolusi awal dibatasi 1.75x — cukup tajam, jauh lebih ringan dari 2x.
+     Bila perangkat berat, kualitas adaptif menurunkannya bertahap sampai 1x. */
+  let dpr = Math.min(1.75, window.devicePixelRatio || 1);
+  let camX = 0;
   const keys = { left: false, right: false };
 
   /* ---------- pemain & penduduk jelly ---------- */
@@ -115,8 +116,8 @@
   /* ---------- ukuran & bake ---------- */
   function sizeCanvas(rebake) {
     VW = window.innerWidth; VH = window.innerHeight;
-    dpr = Math.min(2, window.devicePixelRatio || 1);
-    canvas.width = VW * dpr; canvas.height = VH * dpr;
+    canvas.width = Math.max(1, Math.round(VW * dpr));
+    canvas.height = Math.max(1, Math.round(VH * dpr));
     canvas.style.width = VW + 'px'; canvas.style.height = VH + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     if (rebake) AK.bakeAll(VW, VH, dpr);
@@ -136,16 +137,14 @@
     if (z.open) {
       ctx.fillStyle = z.gate.deep;
       ctx.fillRect(sx - w, gy - h * 1.3, w * 2, h * 1.5);
+      // tiga pendaran mengambang — sprite yang sama, nol gradien baru per frame
+      const rr = w * 0.62;
       for (let k = 0; k < 3; k++) {
         const ph = t * 0.55 + k * 2.1 + i;
         const bx = sx + Math.sin(ph) * w * 0.30;
         const by = gy - h * 0.52 + Math.cos(ph * 0.8) * h * 0.30;
-        const rg = ctx.createRadialGradient(bx, by, 2, bx, by, w * 0.62);
-        rg.addColorStop(0, z.gate.glow);
-        rg.addColorStop(1, 'rgba(255,255,255,0)');
         ctx.globalAlpha = 0.55 + Math.sin(t * 1.3 + k) * 0.15;
-        ctx.fillStyle = rg;
-        ctx.fillRect(bx - w, by - w, w * 2, w * 2);
+        ctx.drawImage(gateGlows[i], bx - rr, by - rr, rr * 2, rr * 2);
       }
       ctx.globalAlpha = 0.25;
       const lg = ctx.createLinearGradient(0, gy - h, 0, gy);
@@ -228,11 +227,16 @@
   }
 
   /* ---------- gelembung bicara ----------
-     Semua gelembung mendaftar kotaknya dulu: yang bertabrakan
-     dilewati — tidak ada lagi teks bertumpuk di layar. */
+     Semua gelembung mendaftar kotaknya dulu: yang bertabrakan dengan
+     gelembung lain ATAU dengan badan tokoh mana pun dilewati —
+     tidak ada lagi teks menutupi wajah karakter. */
   let bubbleRects = [];
+  let charRects = [];
   function rectsOverlap(rc) {
     for (const q of bubbleRects) {
+      if (rc.x < q.x + q.w && rc.x + rc.w > q.x && rc.y < q.y + q.h && rc.y + rc.h > q.y) return true;
+    }
+    for (const q of charRects) {
       if (rc.x < q.x + q.w && rc.x + rc.w > q.x && rc.y < q.y + q.h && rc.y + rc.h > q.y) return true;
     }
     return false;
@@ -241,7 +245,7 @@
     ctx.font = '600 13.5px Nunito, sans-serif';
     const words = text.split(' ');
     const lines = []; let line = '';
-    const maxW = 220;
+    const maxW = Math.min(220, AK.VW - 40);
     for (const w of words) {
       const test = line ? line + ' ' + w : w;
       if (ctx.measureText(test).width > maxW && line) { lines.push(line); line = w; }
@@ -281,34 +285,64 @@
     return true;
   }
 
-  /* ---------- kamera hidup ----------
-     Kamera selalu mengikuti pemain dengan halus, bernapas pelan
-     saat berdiri diam, dan posisi pemain di layar stabil —
-     tombol jalan, keyboard, dan klik tanah terasa selaras. */
+  /* ---------- kamera hidup — dengan JAMINAN KERAS ----------
+     Kamera selalu mengikuti pemain, dan pemain TIDAK PERNAH boleh
+     keluar dari pita aman layar (22%–72% lebar layar) — apa pun
+     yang terjadi (lompatan dt, lag, sapuan cepat), posisinya
+     dikoreksi seketika. Inilah yang dulu membuat "karakter hilang
+     dan kamera kemana-mana"; sekarang mustahil terulang. */
   function updateCamera(dt, t) {
-    const follow = clamp(player.cx - VW * 0.45 + player.vx * 0.20, 0, Math.max(0, AK.WORLD_W - VW));
-    let target = follow;
+    const maxCam = Math.max(0, AK.WORLD_W - VW);
+    const follow = player.cx - VW * 0.45 + clamp(player.vx, -320, 320) * 0.18;
+    let target = clamp(follow, 0, maxCam);
     if (masuk.fase === 'idle' && Math.abs(player.vx) < 20) target += Math.sin(t * 0.5) * 3;
-    target = clamp(target, 0, Math.max(0, AK.WORLD_W - VW));
-    const k = (AK.reducedMotion ? 6 : 6.5);
-    camX = lerp(camX, target, Math.min(1, dt * k));
+    target = clamp(target, 0, maxCam);
+    camX = lerp(camX, target, Math.min(1, dt * 6.5));
+    // pita aman: layar pemain antara 22% dan 72% lebar jendela
+    const bandMin = Math.max(0, player.cx - VW * 0.72);
+    const bandMax = Math.min(maxCam, player.cx - VW * 0.22);
+    if (bandMin <= bandMax) camX = clamp(camX, bandMin, bandMax);
     AK.camX = camX;
   }
 
-  /* ---------- input ----------
-     Layar tidak bisa digeser manual — kamera hidup mengalir sendiri.
-     Sentuhan pendek = berjalan/menyapa; sapuan panjang diabaikan. */
+  /* ---------- input — satu bahasa untuk semua perangkat ----------
+     TIDAK ADA tombol lagi. Ketuk tanah = berjalan ke titik itu
+     (responsif sejak tekanan pertama, bukan menunggu lepas).
+     Tahan & geser = menuntun: jari berada di mana, karakter
+     berjalan ke sana. Keyboard tetap didukung. Kamera mengalir
+     sendiri dan dijamin tidak pernah kehilangan karakter. */
   let pDown = false, pStartX = 0, pStartY = 0, pMoved = false;
 
+  function tunjukJalan(px, py, denganRiak) {
+    const wx = camX + px;
+    player.targetX = clamp(wx, 40, AK.WORLD_W - 40);
+    if (denganRiak) ripples.push({ x: wx, y: AK.groundYAt(wx), t: 0 });
+    hideHint();
+  }
+
   canvas.addEventListener('pointerdown', (e) => {
+    if (!started) return;
+    if (masuk.fase === 'telan' || masuk.fase === 'selesai') return;
     pDown = true; pMoved = false;
     pStartX = e.clientX; pStartY = e.clientY;
-    canvas.setPointerCapture(e.pointerId);
+    try { canvas.setPointerCapture(e.pointerId); } catch (_) {}
+    const diTanah = e.clientY > AK.groundYAt(camX + e.clientX) - 120;
+    if (masuk.fase === 'jalan') {
+      // klik tanah saat menuju gerbang = batal halus, jalan ke titik baru
+      if (diTanah) { masuk.fase = 'idle'; masuk.z = null; tunjukJalan(e.clientX, e.clientY, true); }
+    } else if (diTanah) {
+      tunjukJalan(e.clientX, e.clientY, true);
+    }
   });
   canvas.addEventListener('pointermove', (e) => {
     if (pDown) {
       const dx = e.clientX - pStartX, dy = e.clientY - pStartY;
       if (!pMoved && Math.hypot(dx, dy) > 9) pMoved = true;
+      // tahan & geser: karakter terus mengejar ujung jari/kursor
+      if (pMoved && masuk.fase === 'idle' &&
+          e.clientY > AK.groundYAt(camX + e.clientX) - 120) {
+        tunjukJalan(e.clientX, e.clientY, false);
+      }
     } else {
       // kursor pointer di atas gerbang / Akio / penduduk
       const wx = camX + e.clientX;
@@ -325,8 +359,9 @@
     }
   });
   canvas.addEventListener('pointerup', (e) => {
+    const wasDrag = pMoved;
     pDown = false;
-    if (pMoved) return;
+    if (wasDrag) return;   // sapuan = menuntun, bukan klik
     handleClick(e.clientX, e.clientY);
   });
   canvas.addEventListener('pointercancel', () => { pDown = false; });
@@ -340,24 +375,7 @@
     if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = false;
     if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = false;
   });
-  // kunci jangan nyangkut saat tab kehilangan fokus
   window.addEventListener('blur', () => { keys.left = false; keys.right = false; });
-
-  function holdBtn(el, dir) {
-    const on = (ev) => {
-      ev.preventDefault();
-      try { el.setPointerCapture(ev.pointerId); } catch (_) {}
-      keys[dir] = true;
-      hideHint();
-    };
-    const off = () => { keys[dir] = false; };
-    el.addEventListener('pointerdown', on);
-    el.addEventListener('pointerup', off);
-    el.addEventListener('pointercancel', off);
-    el.addEventListener('pointerleave', off);
-    el.addEventListener('contextmenu', (e) => e.preventDefault());
-  }
-  holdBtn(btnKiri, 'left'); holdBtn(btnKanan, 'right');
 
   function handleClick(px, py) {
     if (!started) return;
@@ -516,7 +534,8 @@
       masuk.t += dt;
       const u = clamp(masuk.t / T_TELAN, 0, 1);
       const e = u * u * (3 - 2 * u);   // smoothstep — makin akhir makin cepat, alami
-      player.masukScale = 1 - 0.9 * e;
+      // lantai 0.28: karakter mengecil TETAPI tetap terlihat sampai overlay naik
+      player.masukScale = 1 - 0.72 * e;
       const gy = AK.groundYAt(masuk.z.x);
       player.cx = lerp(player.cx, masuk.z.x, Math.min(1, dt * 9));
       player.cy = lerp(player.cy, gy - masuk.z.gateH * 0.40, Math.min(1, dt * 5.2));
@@ -660,6 +679,15 @@
 
     /* ---------- gelombang UI: gelembung anti-tumpuk ---------- */
     bubbleRects = [];
+    charRects = [];
+    // badan tokoh jadi zona terlarang bagi gelembung — wajah tak pernah tertutup teks
+    const addCharRect = (j, ekstraAtas) => {
+      const R = j.r * ((j.masukScale != null) ? Math.max(0.25, j.masukScale) : 1);
+      charRects.push({ x: j.cx - camX - R - 5, y: j.cy - R - (ekstraAtas || 5), w: R * 2 + 10, h: R * 2 + (ekstraAtas || 5) + 5 });
+    };
+    addCharRect(player);
+    if (akio.cx > viewL && akio.cx < viewR) addCharRect(akio, 24);   // +mahkota
+    for (const r of residents) if (r.cx > viewL && r.cx < viewR) addCharRect(r);
     // toast gerbang tertutup — jawaban langsung, prioritas tertinggi
     for (let i = 0; i < AK.ZONES.length; i++) {
       const z = AK.ZONES[i];
@@ -668,7 +696,7 @@
     // Akio — hanya bicara saat pemain di dekatnya
     const akioNear = started && Math.abs(player.cx - akio.cx) < 480;
     if (akioNear && akio.cx > viewL && akio.cx < viewR) {
-      drawBubbleAt(akio.cx - camX + 10, akio.cy - akio.r - 26, AKIO_MSG[msgIdx]);
+      drawBubbleAt(akio.cx - camX + 10, akio.cy - akio.r - 38, AKIO_MSG[msgIdx]);
     }
     // penduduk — yang paling dekat pemain tampil lebih dulu
     const talkers = residents
@@ -678,7 +706,7 @@
       const rsx = r.cx - camX;
       if (rsx < 90 || rsx > AK.VW - 90) continue;   // tanpa bubble tempelan di tepi layar
       const zi = AK.zoneAt(r.cx);
-      drawBubbleAt(rsx, r.cy - r.r - 14, NPC_LINES[zi][r.say.idx]);
+      drawBubbleAt(rsx, r.cy - r.r - 16, NPC_LINES[zi][r.say.idx]);
     }
     // papan ajakan gerbang — paling akhir, mundur bila tempatnya dipakai
     for (let i = 0; i < AK.ZONES.length; i++) {
@@ -687,13 +715,35 @@
     }
   }
 
+  /* ---------- kualitas adaptif ----------
+     Bila rata-rata fps di bawah 42 dua kali berturut-turut (dan dunia
+     sedang tenang), resolusi kanvas diturunkan bertahap sampai 1x —
+     dunia tetap mulus di perangkat mana pun, tanpa pengaturan manual. */
+  let fpsAcc = 0, fpsN = 0, fpsStreak = 0;
+  function monitorFps(raw) {
+    if (raw > 0.0005 && raw < 1) { fpsAcc += raw; fpsN++; }
+    if (fpsN < 45) return;
+    const avg = fpsAcc / fpsN; fpsAcc = 0; fpsN = 0;
+    if (avg > 1 / 42 && masuk.fase === 'idle') {
+      if (++fpsStreak >= 2 && dpr > 1.01) {
+        fpsStreak = 0;
+        dpr = Math.max(1, dpr - 0.25);
+        sizeCanvas(true);
+      }
+    } else {
+      fpsStreak = 0;
+    }
+  }
+
   function frame(ts) {
     const t = ts / 1000;
     if (!last) last = t;
-    const dt = Math.min(0.033, t - last);
+    const raw = t - last;
     last = t;
+    const dt = clamp(raw, 0, 0.033);
     update(dt, t);
-    render(t);
+    if (started) render(t);   // intro masih menutupi kanvas — render hemat
+    monitorFps(raw);
     requestAnimationFrame(frame);
   }
 
@@ -704,6 +754,7 @@
     sizeCanvas(true);
     camX = clamp(player.cx - VW * 0.42, 0, Math.max(0, AK.WORLD_W - VW));
     AK.camX = camX;
+    render(0);   // satu frame pemanasan — dunia sudah siap di balik intro
     requestAnimationFrame(frame);
   }
   start();
@@ -713,7 +764,7 @@
   });
 
   // kait debug (dipakai QA; tidak berpengaruh ke tampilan)
-  window.AKDBG = { get: () => ({ camX: Math.round(camX), px: Math.round(player.cx), tx: player.targetX, vx: Math.round(player.vx), keys: { ...keys }, masuk: masuk.fase, npc: residents.map(r => ({ x: Math.round(r.cx), y: Math.round(r.cy), r: r.r })) }) };
+  window.AKDBG = { get: () => ({ camX: Math.round(camX), px: Math.round(player.cx), tx: player.targetX, vx: Math.round(player.vx), dpr, masuk: masuk.fase, npc: residents.map(r => ({ x: Math.round(r.cx), y: Math.round(r.cy), r: r.r })) }) };
 
   document.getElementById('btnMasuk').addEventListener('click', () => {
     introEl.classList.add('pergi');
@@ -722,18 +773,13 @@
     akio.poke();
   });
 
-  /* ---------- deteksi perangkat sentuh ---------- */
-  if ('ontouchstart' in window || (navigator.maxTouchPoints || 0) > 0) {
-    document.body.classList.add('perangkat-sentuh');
-  }
-
   let rsTimer = null;
   window.addEventListener('resize', () => {
     clearTimeout(rsTimer);
     rsTimer = setTimeout(() => {
-      const ratio = AK.WORLD_W > VW ? camX / (AK.WORLD_W - VW) : 0;
       sizeCanvas(true);
-      camX = ratio * Math.max(0, AK.WORLD_W - VW);
+      // kamera langsung menampung pemain — tidak ada lompatan, tidak ada hilang
+      camX = clamp(player.cx - VW * 0.45, 0, Math.max(0, AK.WORLD_W - VW));
       AK.camX = camX;
       akio.baseY = AK.groundYAt(akioX) - 96;
       player.cy = Math.min(player.cy, AK.groundYAt(player.cx) - player.r * 0.92);
