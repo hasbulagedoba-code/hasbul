@@ -7,12 +7,6 @@ Situs belajar matematika dari dasar hingga PhD, dibungkus dunia terbuka bernama 
 - `index.html` — pintu depan: tombol Mulai + banner iklan responsive
 - `assets/js/ads.js` — mesin iklan (responsive, aktif di semua halaman via class `.ad-slot`)
 - `akiomidaspace/index.html` — dunia terbuka Akiomida: kamera berjalan, bola menggelinding, pemandu Pilo, 6 gerbang wilayah
-- `akiomidaspace/lantai-1-dasar-matematika.html` — peta tur Lantai 1: Kamp Angka (Dasar/SD)
-- `akiomidaspace/lantai-2-matematika-smp.html` — peta tur Lantai 2: Hutan Simbol (SMP)
-- `akiomidaspace/lantai-3-matematika-sma.html` — peta tur Lantai 3: Pegunungan Pola (SMA)
-- `akiomidaspace/lantai-4-matematika-sarjana.html` — peta tur Lantai 4: Kota Bukti (S1)
-- `akiomidaspace/lantai-5-matematika-magister.html` — peta tur Lantai 5: Lembah Kedalaman (S2)
-- `akiomidaspace/lantai-6-matematika-doktoral.html` — peta tur Lantai 6: Puncak Riset (S3/PhD)
 - `akiomidaspace/material/sejarah-matematika.html` — materi pertama yang terbuka: Sejarah Matematika
 - `akiomidaspace/material/sejarah.html` — pengalih ke alamat baru
 
