@@ -14,7 +14,6 @@
   const chipEl = document.getElementById('chipWilayah');
   const chipNama = document.getElementById('chipNama');
   const chipSlogan = document.getElementById('chipSlogan');
-  const pudarEl = document.getElementById('pudarPutih');
   const btnKiri = document.getElementById('btnKiri');
   const btnKanan = document.getElementById('btnKanan');
 
@@ -302,8 +301,7 @@
       const gy = AK.groundYAt(z.x);
       if (Math.abs(wx - z.x) < 100 && py > gy - z.gateH - 140 && py < gy + 24) {
         if (z.open) {
-          pudarEl.classList.add('aktif');
-          setTimeout(() => { window.location.href = z.href; }, 460);
+          bukaMuatan(z);
         } else {
           toast = { zone: i, until: performance.now() / 1000 + 2.8 };
         }
@@ -317,6 +315,48 @@
       hideHint();
     }
   }
+
+  /* ---------- layar muat gerbang ----------
+     Iklan tidak lagi menumpang di dunia. Ia hanya tampil saat portal diklik:
+     layar "menyiapkan bahan ajar" muncul 8 detik, lalu perjalanan
+     dilanjutkan otomatis — tanpa hitungan detik. */
+  const muatEl = document.getElementById('muat');
+  const muatJudul = document.getElementById('muatJudul');
+  const muatAura = document.getElementById('muatAura');
+  const muatSlot = document.getElementById('muatSlot');
+  const muatBatal = document.getElementById('muatBatal');
+  const DURASI_MUAT = 8000;
+
+  let muatTimer = null, muatSlotTerpasang = false;
+
+  function warnaAura(hex, alpha) {
+    const n = parseInt(hex.slice(1), 16);
+    return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + alpha + ')';
+  }
+
+  function bukaMuatan(z) {
+    if (muatEl.classList.contains('aktif')) return;
+    muatJudul.textContent = 'Membuka ' + z.name;
+    muatAura.style.setProperty('--aura', warnaAura(z.gate.glow, 0.22));
+    // slot iklan baru dipasang saat klik pertama (bukan saat halaman dibuka)
+    if (!muatSlotTerpasang) {
+      const slot = document.createElement('div');
+      slot.className = 'ad-slot';
+      muatSlot.appendChild(slot);   // ads.js otomatis menyuntik iklan ke sini
+      muatSlotTerpasang = true;
+    }
+    muatEl.classList.add('aktif');
+    muatEl.setAttribute('aria-hidden', 'false');
+    muatTimer = setTimeout(() => { window.location.href = z.href; }, DURASI_MUAT);
+  }
+
+  function tutupMuatan() {
+    clearTimeout(muatTimer);
+    muatTimer = null;
+    muatEl.classList.remove('aktif');
+    muatEl.setAttribute('aria-hidden', 'true');
+  }
+  muatBatal.addEventListener('click', tutupMuatan);
 
   let hintHidden = false;
   function hideHint() {
@@ -415,34 +455,6 @@
     chipEl.classList.add('tampil');
     pilo.poke();
   });
-
-  /* ---------- iklan: kecilkan / tampilkan ---------- */
-  const tglIklan = document.getElementById('tglIklan');
-  function terapkanIklan(kecil) {
-    document.body.classList.toggle('iklan-kecil', kecil);
-    tglIklan.textContent = kecil ? '+' : '\u2212';
-    // ads.js memasang display:block!important inline — matikan lewat inline juga
-    document.querySelectorAll('.ad-slot').forEach(s => {
-      s.style.setProperty('display', kecil ? 'none' : 'block', 'important');
-    });
-    try { sessionStorage.setItem('ak-iklan', kecil ? 'kecil' : 'besar'); } catch (e) {}
-    if (window.AKMDAds && !kecil && window.AKMDAds.fitAll) setTimeout(() => window.AKMDAds.fitAll(), 60);
-  }
-  let iklanKecil = false;
-  try { iklanKecil = sessionStorage.getItem('ak-iklan') === 'kecil'; } catch (e) {}
-  terapkanIklan(iklanKecil);
-  tglIklan.addEventListener('click', () => {
-    terapkanIklan(!document.body.classList.contains('iklan-kecil'));
-  });
-  // bila ads.js menyuntikkan iframe setelahnya, pastikan pilihan "kecil" tetap berlaku
-  const moIklan = new MutationObserver(() => {
-    if (document.body.classList.contains('iklan-kecil')) {
-      document.querySelectorAll('.ad-slot').forEach(s => {
-        s.style.setProperty('display', 'none', 'important');
-      });
-    }
-  });
-  try { moIklan.observe(document.body, { childList: true, subtree: true }); } catch (e) {}
 
   /* ---------- deteksi perangkat sentuh ---------- */
   if ('ontouchstart' in window || (navigator.maxTouchPoints || 0) > 0) {
