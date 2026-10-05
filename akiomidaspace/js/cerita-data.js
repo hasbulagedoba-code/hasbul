@@ -297,6 +297,286 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p1-011 · Kenalan 0 Sampai 9 — pagi lembut di Kampung Angka ----- */
+    'p1-011': {
+      tema: 'kampung',
+      npc: { glif: '9', ucap: ['Sepuluh sahabat,', 'cukup semuanya!'] },
+      stasiun: [
+        {
+          objek: 'gerbang9', judul: 'Gerbang Kampung Angka',
+          teks: 'Di ujung jalan berdiri sebuah kampung kecil bernama Kampung Angka. Penduduknya cuma sepuluh: 0, 1, 2, sampai 9. Kelihatan sedikit? Padahal siapa pun di alam semesta — dari harga permen sampai jumlah bintang — bisa ditulis memakai sepuluh sahabat ini.',
+        },
+        {
+          objek: 'rumahAngka', judul: 'Sepuluh Rumah Mungil',
+          teks: 'Setiap angka punya rumah sendiri: rumah 0 di ujung jalan, rumah 9 di ujung satunya. Melangkah dari pintu ke pintu, kamu berkenalan satu-satu: nol, satu, dua, tiga... Sepuluh teman, semuanya ramah, tak ada yang sombong.',
+        },
+        {
+          objek: 'lampuJalan', judul: 'Tidak Boleh Ada yang Hilang',
+          teks: 'Dulu ada yang bermurah hati berkata, "Buang saja angka 7, jarang terpakai." Begitu 7 pergi, menulis 7 apel, 17 kelereng, sampai 70 hari langsung ketahan! Maka penduduk kampung sepakat: sepuluh sahabat itu harus lengkap, tak boleh satu pun hilang.',
+        },
+        {
+          objek: 'papanSahabat', judul: 'Bersatu Jadi Nama Baru',
+          teks: 'Sahabat-sahabat kecil itu bisa berjejer membentuk nama baru: 3 dan 1 menjadi 31, 9 dan 9 menjadi 99. Coba kira-kira, berapa banyak nama angka yang bisa lahir dari sepuluh sahabat? Jawabannya: tak pernah habis!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Cukup Sepuluh!',
+          teks: 'Sepuluh angka saja, semua bilangan di dunia bisa ditulis — dari nol sampai milyaran. Tidak perlu seribu lambang, cukup sepuluh sahabat yang setia. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-012 · Berhitung Maju 1-10 — fajar di Gunung Tangga ----- */
+    'p1-012': {
+      tema: 'tangga',
+      npc: { glif: '2', ucap: ['Satu langkah,', 'naik satu!'] },
+      stasiun: [
+        {
+          objek: 'kakiTangga', judul: 'Kaki Tangga Batu',
+          teks: 'Di kaki gunung terbentang tangga batu raksasa. Anak tangga pertama bertuliskan 1. Dulu gembala menghitung dombanya, sekarang kamu menghitung langkahmu — semua petualangan berhitung dimulai dari anak tangga pertama ini.',
+        },
+        {
+          objek: 'batuAngka', judul: 'Tiap Langkah Naik Satu',
+          teks: 'Naik ke anak tangga berikutnya: 2. Satu langkah lagi: 3. Berhitung maju artinya selalu menambah satu di setiap anak tangga — seperti naik tangga sungguhan, tak bisa loncat-loncat sebelum kuat. Perlahan, tapi pasti sampai.',
+        },
+        {
+          objek: 'jedaBunga', judul: 'Istirahat di Anak Tangga Lima',
+          teks: 'Di anak tangga kelima tumbuh bunga kecil. Berhenti sejenak boleh, asal ingat posisi: tadi 4, sekarang 5, berikutnya 6. Yang penting bukan cepatnya — yang penting tak ada anak tangga yang terlewat.',
+        },
+        {
+          objek: 'puncakBendera', judul: 'Puncak Sepuluh',
+          teks: 'Sepuluh anak tangga, dan di puncak sebuah bendera berkibar: 10! Menoleh ke bawah, semua angka yang kamu lewati berbaris rapi: 1, 2, 3, 4, 5, 6, 7, 8, 9. Jarak satu ke angka sesudahnya selalu satu kaki — tak lebih, tak kurang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Naiknya Mudah!',
+          teks: 'Berhitung maju ternyata cuma soal tangga: tiap langkah naik satu. Kalau nanti ada soal "hitung 1 sampai 10", bayangkan kakimu menapak anak tangga satu-satu. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-013 · Berhitung Mundur 10-0 — fajar bukit peluncuran ----- */
+    'p1-013': {
+      tema: 'fajar',
+      npc: { glif: '!', ucap: ['Sepuluh...', 'nol, terbang!'] },
+      stasiun: [
+        {
+          objek: 'papanMundur', judul: 'Papan Hitung Mundur',
+          teks: 'Di puncak bukit berdiri papan kayu besar: 10, 9, 8, sampai 0. Para penjaga peluncuran membaca papan seperti ini sebelum roket lepas landas. Hitung mundur bukan berhitung terbalik asal-asalan — dia tetap rapi, hanya melangkah turun satu-satu.',
+        },
+        {
+          objek: 'roketKecil', judul: 'Roket Kecil Menunggu',
+          teks: 'Roket kecil di padang ini sudah siap. Ia tak boleh terbang sebelum hitungan tuntas: 10... 9... 8... Tiap angka lebih kecil satu dari sebelumnya, menuju momen yang ditunggu-tunggu. Kesabaran selalu punya hadiah besar.',
+        },
+        {
+          objek: 'benderaTurun', judul: 'Meluncur Turun Lewat Bendera',
+          teks: 'Saking serunya, ada yang berlatih lewat bukit: kereta luncur melewati bendera 10, 9, 8, 7... Makin turun makin seru, tapi angkanya tetap tertib: dari 10 ke 9, dari 9 ke 8 — selalu kurang satu.',
+        },
+        {
+          objek: 'nolNyala', judul: 'Nol: Detik Paling Seru',
+          teks: '...3, 2, 1, 0 — TERBANG! Lihat, nol yang tadinya dianggap kosong justru jadi bagian paling penting di hitung mundur: ia menandai mulainya aksi. Tanpa menyentuh nol, roket tak boleh naik.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Terbanglah!',
+          teks: 'Berhitung mundur ternyata tangga yang sama dengan berhitung maju — cuma kamu turun, bukan naik: kurang satu tiap langkah. Kalau ingin berhitung siap-siap bersama, kamu sudah punya jurusnya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-014 · Nilai Tempat: Puluhan — siang pelabuhan kapal ----- */
+    'p1-014': {
+      tema: 'kapal',
+      npc: { glif: 'K', ucap: ['Pindah kursi,', 'kuasa naik!'] },
+      stasiun: [
+        {
+          objek: 'dermaga', judul: 'Dermaga Kapal Angka',
+          teks: 'Di dermaga bersandar sebuah kapal sakti bernama Puluhan. Aturan lautnya satu saja: angka yang duduk di kursi depan menjadi kapten. Kursi di kapal ini bukan tempat duduk biasa — kursi menentukan kekuatan.',
+        },
+        {
+          objek: 'kursiKapten', judul: 'Angka 1 Naik ke Kursi Kapten',
+          teks: 'Angka 1 semula duduk di kursi belakang: nilainya masih 1, kecil dan sederhana. Begitu pindah ke kursi kapten di haluan — ta-da! — kekuatannya langsung sepuluh kali lipat: 10. Angkanya sama, kursinya yang mengubah nasib.',
+        },
+        {
+          objek: 'muatan', judul: 'Muatan Sepuluh Peti',
+          teks: 'Kenapa bisa sepuluh kali? Kursi kapten mengurus muatan sepuluh peti sekaligus, sedangkan kursi belakang hanya mengurus satu peti. Nilai tempat itu sebenarnya soal tanggung jawab: makin depan kursinya, makin banyak yang diurus.',
+        },
+        {
+          objek: 'duaKursi', judul: 'Dua Kursi Berdampingan',
+          teks: 'Sekarang dudukkan 1 dan 2 berdampingan menjadi 12. Angka 1 di kursi puluhan mengurus sepuluh, angka 2 di kursi satuan mengurus dua. Badan mereka sama kecilnya, tapi posisi membuat kekuatannya beda jauh.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kursi Itu Sakti!',
+          teks: 'Jadi setiap kali kamu menulis 10, ingat: itu angka 1 yang baru saja naik ke kursi kapten. Posisi bisa mengubah kekuatan sepuluh kali lipat — seperti kapten di atas kapal. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-015 · Ratusan & Ribuan — malam panggung tirai merah ----- */
+    'p1-015': {
+      tema: 'panggung',
+      npc: { glif: '*', ucap: ['Naik baris,', 'besar 10 kali!'] },
+      stasiun: [
+        {
+          objek: 'tiket', judul: 'Tiket Pertunjukan Angka',
+          teks: 'Malam ini panggung besar menyala dengan spanduk: Pertunjukan Kekuatan Angka. Tugasmu satu: menyaksikan kursi demi kursi naik, dari yang paling kecil sampai yang paling agung. Pegang tiketmu — lampu mulai meredup.',
+        },
+        {
+          objek: 'kursi1', judul: 'Kursi Paling Bawah: Satuan',
+          teks: 'Panggung paling bawah dihuni kursi satuan. Angka di sini mengurus satu-satu — kecil, tapi jujur dan tak pernah sombong. Tanpa kursi satuan, tidak akan pernah ada 1, 2, sampai 9. Semua pertunjukan dimulai dari dia.',
+        },
+        {
+          objek: 'kursi10', judul: 'Naik Satu Baris: Puluhan',
+          teks: 'Geser satu baris ke kiri, kekuatan melonjak sepuluh kali! Angka 1 yang sama, begitu duduk di kursi puluhan nilainya jadi 10. Dari kursi inilah 20, 30, sampai 90 lahir. Sorot lampu menyala untuknya.',
+        },
+        {
+          objek: 'kursi1000', judul: 'Baris Teratas: Ratusan & Ribuan',
+          teks: 'Naik lagi: kursi ratusan — 1 kini bernilai 100. Naik sekali lagi: kursi ribuan — 1 kini bernilai 1.000! Setiap naik satu baris, kekuatan besar sepuluh kali. Barisnya tinggi, tapi aturannya tetap sederhana.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Posisi Itu Sakti!',
+          teks: 'Ratusan, ribuan, bahkan jutaan — semuanya cuma angka 1 yang pindah kursi baris demi baris. Tidak ada sihir yang rumit, hanya nilai tempat yang tertib. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-016 · Angka Genap Berpasangan — siang halaman jemuran ----- */
+    'p1-016': {
+      tema: 'jemur',
+      npc: { glif: '4', ucap: ['Berpasangan', 'rapi!'] },
+      stasiun: [
+        {
+          objek: 'jemuran', judul: 'Jemuran Kaos Kaki',
+          teks: 'Halaman ini dipenuhi tali jemuran yang bergoyang. Kaos kaki dijemur berpasangan dua-dua, tak ada yang sendirian. Hitung pasangannya sambil menunjuk: 2, 4, 6, 8 — selamat datang di keluarga genap.',
+        },
+        {
+          objek: 'rakSepatu', judul: 'Rak Sepatu yang Rapi',
+          teks: 'Sepatu pun punya aturan sama: tiap sepatu pasti punya teman kaki. Jumlah yang bisa berpasangan rapi tanpa sisa itulah angka genap — 2, 4, 6, 8. Kalau ada yang menganggur tanpa pasangan, dia bukan anggota keluarga genap.',
+        },
+        {
+          objek: 'becakRoda', judul: 'Roda Becak yang Agak Lain',
+          teks: 'Nah, becak punya tiga roda: dua di samping, satu di depan. Coba pasangkan dua-dua — tersisa satu roda tanpa teman! Tiga itu bukan genap. Angka genap adalah yang habis berpasangan sampai tak tersisa satu pun.',
+        },
+        {
+          objek: 'tumpukKue', judul: 'Kue Dibagi Dua Sama Rata',
+          teks: 'Enam kue mau dibagi untuk dua anak. Karena 6 itu genap, pembagiannya mulus: tiap anak dapat tiga, tak ada yang menangis iri. Angka genap memang pandai berbagi dua sama rata tanpa sisa.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Genap Itu Pas!',
+          teks: 'Angka genap ternyata cuma satu hal: bisa berpasangan dua-dua sampai habis — seperti sepatu dan kaos kaki. Lihat jemuran di rumahmu nanti, kamu sudah tahu namanya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-017 · Angka Ganjil Nyisa Satu — sore taman lampion ----- */
+    'p1-017': {
+      tema: 'taman',
+      npc: { glif: '5', ucap: ['Nyisa satu,', 'tetap seru!'] },
+      stasiun: [
+        {
+          objek: 'bangkuTaman', judul: 'Bangku di Taman Sore',
+          teks: 'Sore ini lima penduduk kecil duduk berpasangan dua-dua di bangku taman. Empat mendapat teman, satu duduk sendiri sambil menikmati angin. Itulah tanda khas angka ganjil: selalu nyisa satu saat berpasangan.',
+        },
+        {
+          objek: 'kausSendiri', judul: 'Satu Kaus yang Menganggur',
+          teks: 'Tiga kaus kaki dijemur: dua berjodoh rapi, satu menyangkut sendiri menganggur. Jumlah yang selalu nyisa satu itu bernama ganjil: 1, 3, 5, 7, 9. Si kaus menganggur sebenarnya beruntung — dia jadi tanda matematika!',
+        },
+        {
+          objek: 'manikGanjil', judul: 'Manik Tujuh Butir',
+          teks: 'Tujuh manik disusun berpasangan: satu pasang, dua pasang, tiga pasang — dan satu manik keemasan tersisa di ujung. Tiga pasang tambah satu sama dengan tujuh. Begitulah ganjil: selalu pasangan penuh ditambah satu.',
+        },
+        {
+          objek: 'lampionPohon', judul: 'Lampion Dua Pohon',
+          teks: 'Lima lampion hendak digantung di dua pohon. Pohon ini dapat dua, pohon itu dapat tiga — tak pernah sama rata, selalu ada yang lebih. Makanya orang suka menggantung lampion ganjil: 5, 7, 9 — biar ada satu tepat di tengah sebagai penyeimbang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Nyisa Satu Itu Ganjil!',
+          teks: 'Genap dan ganjil ternyata cuma soal pasangan: habis dibagi dua itu genap, nyisa satu itu ganjil. Sepatu di rak dan kaus di jemuran sudah mengajarkannya duluan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-018 · Membandingkan Angka — siang toko permen ----- */
+    'p1-018': {
+      tema: 'permen',
+      npc: { glif: '>', ucap: ['Mulut buka,', 'arah banyak!'] },
+      stasiun: [
+        {
+          objek: 'toplesDua', judul: 'Dua Toples Permen',
+          teks: 'Di toko permen ada dua toples: toples merah berisi 7, toples biru berisi 9. Mana yang lebih banyak? Hitung satu-satu, atau pasangkan dua-dua — toples biru ternyata punya dua ekstra. Sembilan lebih banyak dari tujuh.',
+        },
+        {
+          objek: 'tandaBuka', judul: 'Tanda Mulut yang Lapar',
+          teks: 'Untuk menuliskannya dipakai tanda > dan < — seperti mulut yang lapar: selalu terbuka lebar ke arah yang lebih banyak. 9 > 7 berarti sembilan lebih besar; 7 < 9 berarti tujuh lebih kecil. Mulutnya tak pernah salah arah!',
+        },
+        {
+          objek: 'tandaSama', judul: 'Kalau Sama Banyak?',
+          teks: 'Kadang kedua toples berisi sama: 8 dan 8. Maka tanda = maju ke panggung: dua garis kembar sejajar, artinya sama banyak. Tidak ada pihak yang menang, tidak ada yang kalah — cocok untuk berbagi adil.',
+        },
+        {
+          objek: 'papanHarga', judul: 'Membandingkan itu Berguna',
+          teks: 'Tanda-tanda ini bukan main-main saja: penjual memakainya menulis harga mana yang lebih murah, Ibu memakainya menimbang takaran beras mana yang lebih berat. Rumusnya satu: hitung dulu dengan jujur, baru bandingkan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Mulutnya Tahu Arah!',
+          teks: 'Membandingkan angka ternyata sesederhana itu: yang banyak ditelan mulut terbuka, yang sama banyak dijodohkan garis kembar. Besok saat memilih dua tumpukan permen, kamu sudah tahu tandanya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-019 · Urutan: Pertama & Kedua — siang lapangan lomba ----- */
+    'p1-019': {
+      tema: 'lomba',
+      npc: { glif: '1', ucap: ['Juara itu', 'posisi!'] },
+      stasiun: [
+        {
+          objek: 'garisFinish', judul: 'Garis Finis Merah Putih',
+          teks: 'Di lapangan ini garis finis membelah angin. Lima pelari berlari kencang, dan yang pertama menyentuh pita itulah juara. Perhatikan: urutan tidak menanyakan besar atau kecilnya pelari — hanya siapa tiba lebih dulu.',
+        },
+        {
+          objek: 'podium', judul: 'Podium Juara 1, 2, 3',
+          teks: 'Di podium, paling tinggi untuk juara pertama, berikutnya juara kedua, lalu juara ketiga. Di sini angka tidak menghitung jumlah — dia menyebut posisi. Namanya bilangan bertingkat: pertama, kedua, ketiga.',
+        },
+        {
+          objek: 'nomorDada', judul: 'Nomor di Dada Pelari',
+          teks: 'Pelari memakai nomor dada: 4, 5, 6. Nomor itu bukan nilai dan bukan jumlah — dia cuma nama panggilan. Pelari bernomor dada 7 boleh saja finis pertama! Jumlah dan posisi memang dua pekerjaan yang berbeda.',
+        },
+        {
+          objek: 'bukuHalaman', judul: 'Urutan Ada di Mana-mana',
+          teks: 'Pulang nanti kamu akan bertemu urutan terus: halaman pertama buku, lantai pertama rumah, tanggal pertama bulan. Semuanya menunjuk posisi — bukan menghitung banyaknya. Itulah keajaiban bilangan bertingkat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pertama Itu Posisi!',
+          teks: 'Angka ternyata punya dua topeng: satu untuk jumlah (ada berapa), satu untuk posisi (yang ke berapa). Jadi kalau kamu diumumkan juara pertama, itu posisimu — dan posisi itu juga matematika. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-020 · Pola Angka Naik — malam taman batu & denting air ----- */
+    'p1-020': {
+      tema: 'pola',
+      npc: { glif: '2', ucap: ['Temukan', 'aturannya!'] },
+      stasiun: [
+        {
+          objek: 'lampuTepi', judul: 'Lampu Taman yang Berulang',
+          teks: 'Jalan taman malam ini diterangi lampu yang berulang: biru, kuning, biru, kuning. Bukan ngasal — ada aturannya. Angka juga suka berbaris dengan aturan seperti itu, dan aturannya bernama pola.',
+        },
+        {
+          objek: 'manikBenang', judul: 'Manik +2 Berbaris',
+          teks: 'Manik disusun di benang: 2, 4, 6, 8, lalu 10. Dari manik ke manik selalu ditambah dua butir. Pola +2 itulah detak lagunya. Kalau kamu tahu aturannya, kamu bisa menebak manik berikutnya tanpa menghitung dari awal.',
+        },
+        {
+          objek: 'tetesan', judul: 'Denting Air yang Tertib',
+          teks: 'Dari talang jatuh tetes air ke baskom: duk... duk... duk. Alam juga gemar pola — detak jantung, langkah kaki, kibaran bunga. Siapa hafal polanya, bisa mendahului kejadian: denting berikutnya pasti datang tepat waktu.',
+        },
+        {
+          objek: 'tekaAngka', judul: 'Teka-teki Angka Rahasia',
+          teks: 'Sekarang giliranmu: 3, 5, 7, ... angka rahasia berikutnya apa? Cium dulu polanya: selalu tambah dua. Maka jawabannya 9! Menemukan aturan itu seperti menemukan kunci pintu — begitu terbuka, deret seribu angka tinggal kamu ajak berbaris.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Polanya Ketahuan!',
+          teks: 'Pola +1, +2, +5 — semua deret angka punya aturan barisnya masing-masing. Tugasmu bukan menghafal, tapi mengendus aturannya seperti detektif. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */
