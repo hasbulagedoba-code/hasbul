@@ -97,7 +97,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Warisan yang Masih Hidup',
-          teks: 'Setiap kali sebuah mesin mengerjakan langkah dengan tertib, di sanalah jejak Al-Khawarizmi masih hidup. Ilmuwan yang tekun dan jujur itu membuktikan: ilmu yang bermanfaat bisa melampaui zamannya berabad-abad.',
+          teks: 'Setiap kali sebuah mesin mengerjakan langkah dengan tertib, di sanalah jejak Al-Khawarizmi masih hidup. Ilmuwan tekun dan jujur itu membuktikan: ilmu yang bermanfaat bisa melampaui zamannya berabad-abad. Owalah, ternyata begini toh — cukup merapikan langkah, namanya diabadikan dunia. Mudah, bukan?',
         },
       ],
     },
@@ -125,7 +125,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Pahlawan Kecil Dunia Angka',
-          teks: 'Jadi kalau kamu menulis 100 di buku, ingatlah lingkaran kecil itu: pahlawan yang diam-dia menopang semua angka besar. Owalah, ternyata kosong pun bisa seberarti itu!',
+          teks: 'Jadi kalau kamu menulis 100 di buku, ingatlah lingkaran kecil itu: pahlawan yang diam-dia menopang semua angka besar. Owalah, ternyata kosong pun bisa seberarti itu — mudah, bukan?',
         },
       ],
     },
@@ -141,7 +141,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'sudut', judul: 'Jurus Simpul 3-4-5',
-          teks: 'Bentuklah tali menjadi tiga sisi: 3 simpul, 4 simpul, dan 5 simpul. Ajaibnya, sudut di antara sisi itu selalu tegak lurus — rapi seperti buku siku. Tukang gurun memakainya tiap hari tanpa mesin apa pun.',
+          teks: 'Bentuklah tali menjadi tiga sisi: 3 ruas, 4 ruas, dan 5 ruas — tiap ruas sama panjang. Ajaibnya, sudut di antara sisi 3 dan sisi 4 selalu tegak lurus — rapi seperti buku siku. Tukang gurun memakainya dalam pekerjaannya tanpa mesin apa pun.',
         },
         {
           objek: 'bata', judul: 'Baris Rapi, Dinding Tegak',
@@ -153,7 +153,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Rumus Kecil, Karya Besar',
-          teks: 'Trik 3-4-5 yang mereka pakai kini kita kenal sebagai keajaiban segitiga siku-siku. Owalah — alat paling agung di balik piramida ternyata cuma tali! Hitungan kecil bisa menopang karya besar.',
+          teks: 'Trik 3-4-5 yang konon mereka pakai kini kita kenal sebagai keajaiban segitiga siku-siku. Owalah — alat paling agung di balik piramida ternyata cuma tali! Hitungan kecil bisa menopang karya besar. Mudah, bukan?',
         },
       ],
     },
@@ -181,7 +181,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Terima Kasih, Angka Kita',
-          teks: 'Karena itulah dunia perlahan beralih ke angka 0-9 yang ringan dihitung. Coba hitung 23 + 45 pakai gaya Romawi, lalu pakai angka kita — rasakan bedanya! Owalah, angka yang ringan itu hadiah.',
+          teks: 'Karena itulah dunia perlahan beralih ke angka 0-9 yang ringan dihitung. Coba hitung 23 + 45 pakai gaya Romawi, lalu pakai angka kita — rasakan bedanya! Owalah, angka yang ringan itu hadiah. Mudah, bukan?',
         },
       ],
     },
@@ -209,7 +209,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Kalkulator Pertama di Dunia',
-          teks: 'Owalah — kalkulator pertama ternyata sekadar kayu dan butir! Kadang alat paling sederhana justru paling tahan lama. Di beberapa toko tua, bunyi klik abakus masih terdengar sampai hari ini.',
+          teks: 'Owalah — kalkulator pertama ternyata sekadar kayu dan butir! Kadang alat paling sederhana justru paling tahan lama. Di beberapa toko tua, bunyi klik abakus masih terdengar sampai hari ini. Mudah, bukan?',
         },
       ],
     },
@@ -237,7 +237,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Angka Paling Setia Sedunia',
-          teks: 'Pi seperti sahabat yang tak pernah putus di tengah jalan: 3,14159... terus dan terus menemani semua lingkaran. Owalah — ternyata rahasia seluruh lingkaran di dunia dipegang satu angka setia ini!',
+          teks: 'Pi seperti sahabat yang tak pernah putus di tengah jalan: 3,14159... terus dan terus menemani semua lingkaran. Owalah — ternyata rahasia seluruh lingkaran di dunia dipegang satu angka setia ini — mudah, bukan?',
         },
       ],
     },
@@ -265,7 +265,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Matematika Penjaga Kejujuran',
-          teks: 'Menimbang, menakar, menghitung — semua itu matematika. Dan matematika yang jujur menjaga muamalah tetap bersih. Owalah — ternyata angka juga punya akhlak!',
+          teks: 'Menimbang, menakar, menghitung — semua itu matematika. Dan matematika yang jujur menjaga muamalah tetap bersih. Owalah — ternyata angka juga punya akhlak! Mudah, bukan?',
         },
       ],
     },
@@ -293,7 +293,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Masa Depan Dimulai Hari Ini',
-          teks: 'Roket, satelit, robot, dan bintang-bintang itu sedang menunggu generasi yang gemar berhitung. Owalah — masa depan ternyata dimulai dari angka yang kamu pelajari hari ini!',
+          teks: 'Roket, satelit, robot, dan bintang-bintang itu sedang menunggu generasi yang gemar berhitung. Owalah — masa depan ternyata dimulai dari angka yang kamu pelajari hari ini. Mudah, bukan?',
         },
       ],
     },
@@ -313,7 +313,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'lampuJalan', judul: 'Tidak Boleh Ada yang Hilang',
-          teks: 'Dulu ada yang menyarankan, "Buang saja angka 7, jarang terpakai." Begitu 7 pergi, menulis 7 apel, 17 kelereng, sampai 70 hari langsung ketahan! Maka penduduk kampung sepakat: sepuluh sahabat itu harus lengkap, tak boleh satu pun hilang.',
+          teks: 'Dulu ada yang menyarankan, "Buang saja angka 7, jarang terpakai." Begitu 7 pergi, menulis 7 apel, 17 kelereng, sampai 70 hari langsung kacau! Maka penduduk kampung sepakat: sepuluh sahabat itu harus lengkap, tak boleh satu pun hilang.',
         },
         {
           objek: 'papanSahabat', judul: 'Bersatu Jadi Nama Baru',
@@ -377,7 +377,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Terbanglah!',
-          teks: 'Berhitung mundur ternyata tangga yang sama dengan berhitung maju — cuma kamu turun, bukan naik: kurang satu tiap langkah. Kalau ingin berhitung siap-siap bersama, kamu sudah punya jurusnya. Mudah, bukan?',
+          teks: 'Berhitung mundur ternyata tangga yang sama dengan berhitung maju — cuma kamu turun, bukan naik: kurang satu tiap langkah. Kalau ingin menghitung mundur saat lomba dimulai, kamu sudah punya jurusnya. Mudah, bukan?',
         },
       ],
     },
@@ -466,18 +466,18 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-017 · Angka Ganjil Nyisa Satu — sore taman lampion ----- */
+    /* ----- p1-017 · Angka Ganjil Sisa Satu — sore taman lampion ----- */
     'p1-017': {
       tema: 'taman',
-      npc: { glif: '5', ucap: ['Nyisa satu,', 'tetap seru!'] },
+      npc: { glif: '5', ucap: ['Sisa satu,', 'tetap seru!'] },
       stasiun: [
         {
           objek: 'bangkuTaman', judul: 'Bangku di Taman Sore',
-          teks: 'Sore ini lima penduduk kecil duduk berpasangan dua-dua di bangku taman. Empat mendapat teman, satu duduk sendiri sambil menikmati angin. Itulah tanda khas angka ganjil: selalu nyisa satu saat berpasangan.',
+          teks: 'Sore ini lima penduduk kecil duduk berpasangan dua-dua di bangku taman. Empat mendapat teman, satu duduk sendiri sambil menikmati angin. Itulah tanda khas angka ganjil: selalu sisa satu saat berpasangan.',
         },
         {
           objek: 'kausSendiri', judul: 'Satu Kaus yang Menganggur',
-          teks: 'Tiga kaus kaki dijemur: dua berjodoh rapi, satu menyangkut sendiri menganggur. Jumlah yang selalu nyisa satu itu bernama ganjil: 1, 3, 5, 7, 9. Si kaus menganggur sebenarnya beruntung — dia jadi tanda matematika!',
+          teks: 'Tiga kaus kaki dijemur: dua berjodoh rapi, satu menyangkut sendiri menganggur. Jumlah yang selalu sisa satu itu bernama ganjil: 1, 3, 5, 7, 9. Si kaus menganggur sebenarnya beruntung — dia jadi tanda matematika!',
         },
         {
           objek: 'manikGanjil', judul: 'Manik Tujuh Butir',
@@ -488,8 +488,8 @@ window.CERITA = (function () {
           teks: 'Lima lampion hendak digantung di dua pohon. Pohon ini dapat dua, pohon itu dapat tiga — tak pernah sama rata, selalu ada yang lebih. Makanya orang suka menggantung lampion ganjil: 5, 7, 9 — biar ada satu tepat di tengah sebagai penyeimbang.',
         },
         {
-          objek: 'tugu', akhir: true, judul: 'Owalah, Nyisa Satu Itu Ganjil!',
-          teks: 'Genap dan ganjil ternyata cuma soal pasangan: habis dibagi dua itu genap, nyisa satu itu ganjil. Sepatu di rak dan kaus di jemuran sudah mengajarkannya duluan. Mudah, bukan?',
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sisa Satu Itu Ganjil!',
+          teks: 'Genap dan ganjil ternyata cuma soal pasangan: habis dibagi dua itu genap, sisa satu itu ganjil. Sepatu di rak dan kaus di jemuran sudah mengajarkannya duluan. Mudah, bukan?',
         },
       ],
     },
@@ -569,11 +569,11 @@ window.CERITA = (function () {
         },
         {
           objek: 'tekaAngka', judul: 'Teka-teki Angka Rahasia',
-          teks: 'Sekarang giliranmu: 3, 5, 7, ... angka rahasia berikutnya apa? Cium dulu polanya: selalu tambah dua. Maka jawabannya 9! Menemukan aturan itu seperti menemukan kunci pintu — begitu terbuka, deret seribu angka tinggal kamu ajak berbaris.',
+          teks: 'Sekarang giliranmu: 3, 5, 7, ... angka rahasia berikutnya apa? Endus dulu polanya: selalu tambah dua. Maka jawabannya 9! Menemukan aturan itu seperti menemukan kunci pintu — begitu terbuka, deret seribu angka tinggal kamu ajak berbaris.',
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Polanya Ketahuan!',
-          teks: 'Pola +1, +2, +5 — semua deret angka punya aturan barisnya masing-masing. Tugasmu bukan menghafal, tapi mengendus aturannya seperti detektif. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Pola +2 pada manik dan teka-teki tadi — semua deret angka punya aturannya masing-masing. Tugasmu bukan menghafal, tapi mengendus aturannya seperti detektif. Owalah, ternyata begini toh — mudah, bukan?',
         },
       ],
     },
