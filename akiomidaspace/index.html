@@ -279,11 +279,6 @@
     background:rgba(255,255,255,.05);
     border:2px solid #2a3757; border-radius:10px; padding:10px;
   }
-  .muat-label {
-    display:block; font-family:'Press Start 2P',monospace;
-    font-size:calc(8px * var(--skala));
-    letter-spacing:2px; color:#6d80aa; margin:0 0 4px; text-align:center;
-  }
   .muat-slot { min-height:250px; }
   .muat-slot:not(:empty) { min-height:0; }
   .muat-slot .ad-slot { margin:0 auto !important; }   /* rapikan margin injeksi iklan agar benar-benar di tengah */
@@ -427,7 +422,6 @@
     <div class="muat-judul" id="muatJudul">Membuka wilayah</div>
     <div class="muat-sub">Menyiapkan bahan ajar<span class="muat-titik" aria-hidden="true"><span>&middot;</span><span>&middot;</span><span>&middot;</span></span></div>
     <div class="muat-iklan">
-      <span class="muat-label">IKLAN</span>
       <div class="muat-slot" id="muatSlot"></div>
     </div>
     <div class="muat-garis" aria-hidden="true"><span></span></div>
@@ -450,6 +444,6 @@
 <script src="js/world-env.js"></script>
 <script src="js/world-jelly.js"></script>
 <script src="js/world-main.js"></script>
-<script src="../assets/js/ads.js" defer></script>
+<script src="../assets/js/ads.js?v=2" defer></script>
 </body>
 </html>

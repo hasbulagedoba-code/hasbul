@@ -4,13 +4,23 @@
   var AD_H = 250;
   var fitted = [];
 
-  /* Responsif: skala iklan mengikuti lebar layar, tanpa memotong isi. */
+  /* Responsif: skala iklan mengikuti lebar kotak, tanpa memotong isi.
+     Kunci anti-geser: lebar wrap = lebar VISUAL hasil skala + origin kiri-atas,
+     sehingga visual == kotak layout dan margin auto menengahkan dengan benar
+     (dulu origin 'center' pada wrap 300px yang meluber membuat gambar
+     bergeser ke kanan & keluar batas kotak). */
   function fit(slot, wrap) {
-    var avail = slot.clientWidth || 300;
+    var r = slot.getBoundingClientRect();
+    var avail = (r && r.width > 0) ? r.width : (slot.clientWidth || 300);
     var limit = Math.max(160, Math.min(avail, (window.innerWidth || 320) - 24));
     var scale = Math.min(1, limit / AD_W);
-    wrap.style.transform = 'scale(' + scale + ')';
-    wrap.style.height = (AD_H * scale) + 'px';
+    /* Lebar wrap = lebar visual pas (fraksional): visual == kotak layout,
+       margin auto simetris sempurna, mustahil meluber ke kanan. */
+    wrap.style.width = Math.min(AD_W, limit) + 'px';
+    wrap.style.margin = '0 auto';
+    wrap.style.transformOrigin = 'top left';
+    wrap.style.transform = scale < 1 ? 'scale(' + scale + ')' : 'none';
+    wrap.style.height = Math.round(AD_H * scale) + 'px';
   }
 
   function fitAll() {
@@ -23,7 +33,7 @@
     if (!slot || slot.querySelector('iframe')) return;
     slot.style.cssText = 'display:block!important;text-align:center;margin:16px auto;background:transparent!important';
     var wrap = document.createElement('div');
-    wrap.style.cssText = 'width:' + AD_W + 'px;margin:0 auto;transform-origin:top center;background:transparent';
+    wrap.style.cssText = 'width:' + AD_W + 'px;margin:0 auto;transform-origin:top left;background:transparent';
     var frame = document.createElement('iframe');
     frame.srcdoc =
       '<!DOCTYPE html><html><head><style>body{margin:0;background:transparent}</style></head><body>' +
