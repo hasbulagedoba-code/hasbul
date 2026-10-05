@@ -1193,6 +1193,342 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p1-043 · Kali Itu Tambah Cepat — fajar padang latihan berbaris ----- */
+    'p1-043': {
+      tema: 'barisan',
+      npc: { glif: 'C', ucap: ['Kali itu', 'jurus cepat!'] },
+      stasiun: [
+        {
+          objek: 'barisLima', judul: 'Barisan Bola-Lentera',
+          teks: 'Bola-lentera berbaris rapi di padang latihan: tiga baris, tiap baris tepat lima. Hitung panjang sambil lompat lima-lima: lima, sepuluh, lima belas. Kelompok yang sama rata beginilah kesukaan para juru hitung.',
+        },
+        {
+          objek: 'papanCepat', judul: 'Dua Tulisan, Satu Jawaban',
+          teks: 'Papan latihan menulis dua kalimat sekaligus: 5 + 5 + 5 = 15 dan 3 x 5 = 15. Jawabannya sama persis! Tanda x itu ajakan: ambil 3 kali kelompok lima — penjumlahan yang sama, tulisan lebih pendek.',
+        },
+        {
+          objek: 'loncatLima', judul: 'Jalan Pijakan Lima-Lima',
+          teks: 'Ada dua jalan menuju bendera: jalan biasa yang harus dilangkah satu-satu, dan jalan pijakan besar berlabel 5, 10, 15. Tiga lompatan saja, sampai! Perkalian seperti lompatan lima-lima: lebih cepat, tujuannya sama.',
+        },
+        {
+          objek: 'kantongKelereng', judul: 'Tiga Kantong Sama Isi',
+          teks: 'Tiga kantong tergantung di gantungan, tiap kantong berisi 5 kelereng. Semuanya ada 15 kelereng, tulisnya 3 x 5 = 15. Benda apa pun boleh dihitung begini — asal kelompoknya sama rata, tanda x sah dipakai.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jurus Singkat!',
+          teks: 'Jadi perkalian itu penjumlahan berkelompok sama rata: 3 x 5 artinya lima, ditambah lima, ditambah lima lagi. Kelompoknya rapi, jurusnya jadi singkat. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-044 · Tabel Perkalian 2 — malam jalan lentera sepasang ----- */
+    'p1-044': {
+      tema: 'pasangan',
+      npc: { glif: 'D', ucap: ['Lompat dua-dua,', 'selalu genap!'] },
+      stasiun: [
+        {
+          objek: 'pasangSandal', judul: 'Sandal Selalu Berpasangan',
+          teks: 'Rak sandal di pinggir jalan berisi 5 pasang. Satu pasang berisi 2 sandal, dua pasang berisi 4, tiga pasang berisi 6 — karena setiap pasang selalu dua, hitungannya melompat dua-dua.',
+        },
+        {
+          objek: 'tiangLampu2', judul: 'Lentera Sepasang Tiang',
+          teks: 'Lampu jalan di dunia ini selalu berpasangan: tiap tiang menggantung 2 lentera. Lima tiang berturut-turut: 2, 4, 6, 8, 10. Hitungan tabel 2 memang selalu berakhir genap.',
+        },
+        {
+          objek: 'tanggaLompat2', judul: 'Tangga Lompat Dua',
+          teks: 'Tangga taman berpijak bernomor: 2, 4, 6, 8, 10. Naik satu pijakan berarti tambah dua. Inilah tabel 2: tidak ada langkah ganjil di sana, semuanya melompat rapi.',
+        },
+        {
+          objek: 'papanTabel2', judul: 'Papan Panjang Tabel 2',
+          teks: 'Papan panjang di ujung jalan menuliskan lima baris: 2 x 1 = 2, 2 x 2 = 4, 2 x 3 = 6, 2 x 4 = 8, 2 x 5 = 10. Barisannya persis hitungan pasangan di jalan tadi — dua, empat, enam, delapan, sepuluh. Hafal lima baris ini, kamu sudah menguasai awal tabel 2.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Selalu Genap!',
+          teks: 'Jadi tabel 2 itu ilmu berpasangan: tiap kelompok selalu berisi dua, hitungannya lompat dua-dua: 2, 4, 6, 8, 10. Sepasang demi sepasang sampai sepuluh. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-045 · Tabel Perkalian 5 — sore taman bunga kelopak lima ----- */
+    'p1-045': {
+      tema: 'lima',
+      npc: { glif: 'V', ucap: ['Lima demi lima!', 'Berakhir 5 atau 0!'] },
+      stasiun: [
+        {
+          objek: 'jariSatu', judul: 'Satu Tangan Lima Jari',
+          teks: 'Angkat satu tangan: 5 jari mengucup. Satu kelompok berisi lima, tulisnya 1 x 5 = 5. Bahan pertama tabel 5 memang sudah terbawa sejak lahir — ada di tanganmu sendiri.',
+        },
+        {
+          objek: 'jariDua', judul: 'Dua Tangan Sepuluh Jari',
+          teks: 'Angkat kedua tangan: 5 + 5 = 10 jari. Dua kelompok berisi lima, tulisnya 2 x 5 = 10. Hanya dengan dua tangan, dua baris tabel sudah selesai.',
+        },
+        {
+          objek: 'bungaKelopak', judul: 'Empat Bunga Lima Kelopak',
+          teks: 'Empat bunga taman berkelopak lima-lima: satu bunga 5 kelopak, dua bunga 10, tiga bunga 15, empat bunga 20 — tulisnya 4 x 5 = 20. Hitung kelopaknya sambil lompat lima-lima: 5, 10, 15, 20.',
+        },
+        {
+          objek: 'papanJam', judul: 'Jarum Menit Lima-Lima',
+          teks: 'Papan jam besar menolong kamu: dari angka 12 ke 1 itu 5 menit, ke 2 itu 10 menit, ke 3 itu 15 menit, ke 4 itu 20 menit. Jarum menit pun ternyata berjalan lima-lima!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lima Itu Ramah!',
+          teks: 'Jadi tabel 5 itu sahabat jari: 5, 10, 15, 20 — dan satu rahasia lagi, hasilnya selalu berakhir angka 5 atau 0. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-046 · Tabel Perkalian 10 — malam stasiun kereta barang ----- */
+    'p1-046': {
+      tema: 'stasiun',
+      npc: { glif: 'O', ucap: ['Nol di belakang,', 'puluhan meluncur!'] },
+      stasiun: [
+        {
+          objek: 'gerbongSatu', judul: 'Gerbong Penuh Sepuluh',
+          teks: 'Satu gerbong kecil dimuati 10 peti: dua baris, tiap baris lima. Penuh rapi tanpa sisa! Satu kelompok berisi sepuluh, tulisnya 1 x 10 = 10.',
+        },
+        {
+          objek: 'gerbongEmpat', judul: 'Empat Gerbong Berangkat',
+          teks: 'Kereta malam tersusun dari 4 gerbong, tiap gerbong berisi 10 peti. Hitung muatannya lompat puluhan: 10, 20, 30, 40. Empat kelompok berisi sepuluh, maka 4 x 10 = 40 — dan nol selalu duduk manis di belakang.',
+        },
+        {
+          objek: 'nolEmas', judul: 'Nol Emas Melompat',
+          teks: 'Papan stasiun menuliskan: 2 x 10 = 20. Lihat nolnya berkilat! Setiap kali tabel 10 dihitung, nol emas melompat ke belakang angka: 1 jadi 10, 2 jadi 20, 3 jadi 30.',
+        },
+        {
+          objek: 'pijakanPuluhan', judul: 'Pijakan Lompat Puluhan',
+          teks: 'Di ujung peron ada pijakan besar berlabel 10, 20, 30. Dari nol, tiga lompatan saja sudah sampai 30! Tabel 10 memang jurus paling gampang: sebut angkanya, taruh nol.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Cukup Tambah Nol!',
+          teks: 'Jadi tabel 10 itu paling pemurah: hitung satu, dua, tiga... lalu taruh nol di belakangnya. Sepuluh, dua puluh, tiga puluh — kereta pun berangkat. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-047 · Tabel Perkalian 3 & 4 — pagi bengkel kayu berjendela ----- */
+    'p1-047': {
+      tema: 'bengkel',
+      npc: { glif: 'G', ucap: ['Tangga tiga &', 'tangga empat!'] },
+      stasiun: [
+        {
+          objek: 'segitigaTiga', judul: 'Segitiga Punya Tiga Sisi',
+          teks: 'Bengkel menyimpan 4 papan segitiga, tiap segitiga punya 3 sisi. Satu segitiga 3, dua segitiga 6, tiga segitiga 9, empat segitiga 12. Tangga tabel 3 naik bertiga-tiga.',
+        },
+        {
+          objek: 'kursiEmpat', judul: 'Kursi Punya Empat Kaki',
+          teks: 'Di sudut bengkel berdiri 4 kursi buatan tangan, tiap kursi bertumpu pada 4 kaki. Satu kursi 4 kaki, dua kursi 8, tiga kursi 12, empat kursi 16. Tangga tabel 4 naik berempat-empat.',
+        },
+        {
+          objek: 'tanggaDua', judul: 'Dua Tangga Bertemu di 12',
+          teks: 'Dua tangga kelipatan dipasang berdampingan: tangga 3 naik lewat 3, 6, 9, 12; tangga 4 naik lewat 4, 8, 12, 16. Lihat, keduanya bertumpu di pijakan yang sama: 12 — karena 3 x 4 dan 4 x 3 memang sama besar.',
+        },
+        {
+          objek: 'gridTigaEmpat', judul: 'Kotak Isi 3 x 4',
+          teks: 'Papan latihan berkotak 3 baris dan 4 kolom, seluruhnya berisi 12 bola. Diurutkan per baris jadi 3 x 4; diurutkan per kolom jadi 4 x 3. Jawabannya tetap 12 — urutan tidak mengubah banyaknya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Tangga Sahabat!',
+          teks: 'Jadi tabel 3 dan tabel 4 adalah dua tangga sahabat: satu melangkah tiga-tiga, satu melangkah empat-empat, dan keduanya bertemu di 12. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-048 · Tabel Perkalian 6-9 — senja tebing jalur pendakian ----- */
+    'p1-048': {
+      tema: 'tebing',
+      npc: { glif: 'H', ucap: ['Makin tinggi,', 'makin kuat!'] },
+      stasiun: [
+        {
+          objek: 'jalurEnam', judul: 'Jalur Kelipatan Enam',
+          teks: 'Jalur pendakian pertama berpijak kelipatan 6: 6, 12, 18, 24, 30, 36. Enam langkah berat di awal, tetapi pijakannya teratur — itulah tabel 6.',
+        },
+        {
+          objek: 'tanggaTujuh', judul: 'Tangga Kelipatan Tujuh',
+          teks: 'Jalur kedua melangkah tujuh-tujuh: 7, 14, 21, 28, 35, 42. Enam pijakan membawa pendaki sampai 42 — itulah hasil 7 x 6.',
+        },
+        {
+          objek: 'empatJalur', judul: 'Empat Jalur Berdampingan',
+          teks: 'Papan petunjuk menampilkan empat jalur naik sekaligus: 6 x 8 = 48, 7 x 8 = 56, 8 x 8 = 64, 9 x 8 = 72. Makin tinggi jalurnya, makin tinggi hasilnya — semuanya keluarga kelipatan 8.',
+        },
+        {
+          objek: 'benderaPuncak', judul: 'Puncak Para Jenius',
+          teks: 'Di puncak tertancap bendera dengan papan tulis: 9 x 9 = 81. Mendaki tabel 6 sampai 9 memang sedikit berat, tetapi pendaki yang tekun selalu sampai — dan berat itulah tanda kamu naik kelas.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pendaki Tabel!',
+          teks: 'Jadi tabel 6 sampai 9 itu jalur pendakian: pijakannya makin berat, pemandangannya makin luas. Siapa bisa menaikinya, ia akan kuat menghitung apa pun. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-049 · Trik Perkalian 9 — malam kemah api unggun ----- */
+    'p1-049': {
+      tema: 'kemah',
+      npc: { glif: 'N', ucap: ['Jari tahu', 'rahasia 9!'] },
+      stasiun: [
+        {
+          objek: 'jariSembilan', judul: 'Trik Jari 9 x 3',
+          teks: 'Letakkan 10 jari di atas meja kayu. Tekuk jari yang ketiga dari kiri, lalu baca: di kirinya berdiri 2 jari, di kanannya berdiri 7 jari. Maka 9 x 3 = 27!',
+        },
+        {
+          objek: 'papan27', judul: 'Rahasia di Balik 27',
+          teks: 'Api unggun menerangi papan: 9 x 3 = 27, lalu 2 + 7 = 9. Perhatikan, jawaban tabel 9 punya kebiasaan manis: bila angka-angkanya dijumlahkan, hasilnya selalu kembali ke 9.',
+        },
+        {
+          objek: 'kartuSembilan', judul: 'Tiga Kartu Bukti',
+          teks: 'Tiga kartu bukti digantung di tiang kemah: 18, 45, dan 81. Angka 18 dijumlahkan: 1 + 8 = 9. Angka 45: 4 + 5 = 9. Angka 81: 8 + 1 = 9. Tabel 9 memang keluarga angka 9.',
+        },
+        {
+          objek: 'papanSepuluh', judul: 'Jalan Pintas Lain',
+          teks: 'Papan kedua menunjukkan jalan pintas lain: 10 x 5 = 50, lalu 50 - 5 = 45. Ambil sepuluh kali dulu, kurangi satu kelompok — hasilnya 9 x 5 = 45. Sama persis dengan tabelnya!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jari Sang Penyuluh!',
+          teks: 'Jadi tabel 9 penuh rahasia yang ramah: jarinya menunjukkan jawaban, angka-angkanya selalu berjumlah 9, dan sepuluh kali dikurangi sekali pun cocok. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-050 · Perkalian Bersusun — pagi ruang belajar terang ----- */
+    'p1-050': {
+      tema: 'terang',
+      npc: { glif: 'R', ucap: ['Satuan dulu,', 'puluhan kemudian!'] },
+      stasiun: [
+        {
+          objek: 'kartu23', judul: 'Soal di Papan Tulis',
+          teks: 'Papan pagi ini menulis soal bersusun: 23 x 4. Angka 3 menjaga tempat satuan, angka 2 menjaga tempat puluhan. Kita kalikan satu-satu, selalu mulai dari satuan.',
+        },
+        {
+          objek: 'kaliSatuan', judul: 'Satuan Dulu: 3 x 4',
+          teks: 'Satuan berhitung lebih dulu: 3 x 4 = 12. Tulis 2 di tempat satuan, lalu simpan 1 di atas puluhan — sepuluh itu tidak hilang, hanya dititipkan rapi.',
+        },
+        {
+          objek: 'kaliPuluhan', judul: 'Puluhan Kemudian: 2 x 4',
+          teks: 'Sekarang giliran puluhan: 2 x 4 = 8. Jangan lupa simpanan tadi: 8 + 1 = 9. Maka di tempat puluhan tertulis 9.',
+        },
+        {
+          objek: 'papan92', judul: 'Kumpulkan: 92',
+          teks: 'Hasil akhir terbaca rapi: 23 x 4 = 92. Sembilan ikat puluhan dan 2 keping satuan berdiri berdampingan. Kerja besar selesai berkat langkah kecil yang tertib.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Bersusun Itu Rapi!',
+          teks: 'Jadi perkalian bersusun itu urutannya tetap: satuan dulu, simpan bila penuh, puluhan kemudian, lalu kumpulkan. Dua puluh tiga kali empat menjadi sembilan puluh dua. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-051 · Bagi Itu Membagi Rata — siang halaman bazar kanopi ----- */
+    'p1-051': {
+      tema: 'bazar',
+      npc: { glif: 'b', ucap: ['Bagi sama rata,', 'semua senang!'] },
+      stasiun: [
+        {
+          objek: 'nampanSepuluh', judul: 'Sepuluh Kelereng, Dua Piring',
+          teks: 'Di meja bazar ada nampan berisi 10 kelereng dan 2 piring kosong. Tugasmu membagi rata: 10 : 2. Semua kelereng harus mendapat tempat, tak boleh ada piring yang isinya lebih banyak.',
+        },
+        {
+          objek: 'satuSatu', judul: 'Dibagikan Bergantian',
+          teks: 'Bagikan bergantian satu-satu: satu untuk piring kiri, satu untuk piring kanan. Setelah lima kali giliran, nampan kosong dan tiap piring berisi 5 kelereng.',
+        },
+        {
+          objek: 'piringLima', judul: 'Sama Banyak, Sama Adil',
+          teks: 'Kedua piring kini sama isi: lima dan lima. Maka 10 : 2 = 5. Pembagian rata artinya tiap penerima mendapat bagian yang sama banyak — itulah keadilan yang paling sederhana.',
+        },
+        {
+          objek: 'rotiEnam', judul: 'Roti untuk Tiga Kantong',
+          teks: 'Latihan kedua di meja sebelah: 6 roti untuk 3 kantong. Dibagikan bergantian, tiap kantong berisi 2 roti. Maka 6 : 3 = 2 — dan hasil pembagian selalu bisa dicek ulang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Adil Itu Gampang!',
+          teks: 'Jadi pembagian itu seni berbagi rata: sebarkan bergantian satu-satu sampai tiap penerima sama banyak. Sepuluh kelereng untuk dua piring menjadi lima-lima. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-052 · Pembagian dengan Sisa — senja warung kue lampu gantung ----- */
+    'p1-052': {
+      tema: 'warung',
+      npc: { glif: 'w', ucap: ['Sisa satu?', 'Bukan masalah!'] },
+      stasiun: [
+        {
+          objek: 'kueTujuh', judul: 'Tujuh Kue di Nampan',
+          teks: 'Warung hampir tutup; tersisa 7 kue di nampan dan 2 piring di meja. Nenek membagi rata: 7 : 2. Bisakah kedua piring mendapat bagian sama banyak?',
+        },
+        {
+          objek: 'kueTigaTiga', judul: 'Tiga-Tiga, Sisa Satu',
+          teks: 'Dibagikan bergantian satu-satu: piring kiri mendapat 3, piring kanan mendapat 3 — lalu di nampan tinggal 1 kue yang tak lagi punya pasangan. Itulah sisa: 7 : 2 = 3 sisa 1.',
+        },
+        {
+          objek: 'papanSisa2', judul: 'Papan Catatan Warung',
+          teks: 'Papan catatan menuliskan hasilnya: 7 : 2 = 3 sisa 1. Angka 3 menceritakan isi tiap piring; angka 1 menceritakan kue yang menunggu giliran hari esok.',
+        },
+        {
+          objek: 'kueCek', judul: 'Cek Balik Tetap Tujuh',
+          teks: 'Nenek selalu cek balik: 2 x 3 = 6, lalu 6 + 1 = 7. Cocok! Selama hasil kali ditambah sisa kembali ke angka awal, pembagianmu pasti benar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sisa Itu Menunggu!',
+          teks: 'Jadi sisa bukanlah salah; ia hanya menunggu giliran berikutnya: 7 kue bagi 2 piring menjadi 3 dan 3, dengan 1 yang menunggu. Jangan lupa cek balik: kalikan dulu, tambahkan sisanya. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-053 · Pembagian Bersusun — malam lorong tangga lampu menyala ----- */
+    'p1-053': {
+      tema: 'lorong',
+      npc: { glif: 'P', ucap: ['Turunkan', 'satu per satu!'] },
+      stasiun: [
+        {
+          objek: 'kartu96', judul: 'Soal Tangga Panjang',
+          teks: 'Di lorong berdiri papan bersusun: 96 : 3. Angka 9 menaungi 9 ikat puluhan; angka 6 adalah 6 keping satuan. Bagian demi bagian akan diturunkan menyusuri tangga.',
+        },
+        {
+          objek: 'ikatSembilan', judul: 'Puluhan Dulu: 9 Ikat',
+          teks: 'Bagikan ikat puluhan lebih dulu: 9 ikat untuk 3 piring, tiap piring mendapat 1 ikat. Tulis 3 di tempat puluhan — karena 9 : 3 = 3 puluhan.',
+        },
+        {
+          objek: 'turunkanEnam', judul: 'Turunkan Enam Keping',
+          teks: 'Sekarang keping satuan diturunkan: 6 keping untuk 3 piring, tiap piring mendapat 2 keping. Tulis 2 di tempat satuan. Tangga sudah dituruni sampai anak terakhir!',
+        },
+        {
+          objek: 'papan32', judul: 'Sampai Bawah: 32',
+          teks: 'Jawaban terbaca di ujung tangga: 96 : 3 = 32. Tiap piring berisi 3 ikat puluhan dan 2 keping. Cek balik pun cocok: 3 x 32 = 96.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Turun Tangga Rapi!',
+          teks: 'Jadi pembagian bersusun itu menuruni tangga angka: bagi puluhan dulu, turunkan satuan, tulis jawabannya per anak tangga. Sembilan puluh enam dibagi tiga menjadi tiga puluh dua. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-054 · Tantangan Kali-Bagi — malam arena obor turnamen ----- */
+    'p1-054': {
+      tema: 'arena',
+      npc: { glif: 'U', ucap: ['Kali dan bagi,', 'pasangan setia!'] },
+      stasiun: [
+        {
+          objek: 'tumpukan24', judul: 'Enam Tumpukan, Empat Isi',
+          teks: 'Obor-obor menyala di arena: 6 tumpukan bola, tiap tumpukan berisi 4. Kalimat perkaliannya: 6 x 4 = 24. Hitung semuanya satu per satu: dua puluh empat bola.',
+        },
+        {
+          objek: 'piringBalik', judul: 'Dibalik Jadi Pembagian',
+          teks: 'Kini bola-bola itu dipindahkan ke 6 piring sama rata: tiap piring berisi 4. Kalimatnya berbalik arah: 24 : 6 = 4. Hasil kali tadi menjadi angka awal pembagian.',
+        },
+        {
+          objek: 'kartuKaliBagi', judul: 'Empat Kartu Satu Arena',
+          teks: 'Empat kartu juara tergantung berderet: 6 x 4 = 24, 4 x 6 = 24, 24 : 6 = 4, 24 : 4 = 6. Kali dan bagi saling membuka kartu satu sama lain — isinya selalu seirama.',
+        },
+        {
+          objek: 'tekaDuaPuluh', judul: 'Teka Malam Ini',
+          teks: 'Teka penutup menyala di papan tengah: ? x 5 = 20. Arena berbisik: cek dengan bagi — 20 : 5 = 4. Maka yang bersembunyi adalah 4, dan kalimat kembali utuh: 4 x 5 = 20.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pasangan Seumur Hidup!',
+          teks: 'Jadi kali dan bagi memang pasangan setia: 6 x 4 = 24 selalu berbalik menjadi 24 : 6 = 4. Bila ada angka hilang, cukup panggil pasangannya. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */

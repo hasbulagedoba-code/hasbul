@@ -195,6 +195,18 @@
     layang:  { glif: ['4', '2', '6'],     awan: '#fffdf2', awan2: '#e8f4fa' },
     berbagi: { glif: ['7', '3', '4'],     awan: '#ffe2c4', awan2: '#ffd9b0' },
     misteri: { glif: ['4', '5', '9'],     awan: null,      awan2: null },
+    barisan: { glif: ['3', '5', 'x'],     awan: '#ffe9c4', awan2: '#ffd9b0' },
+    pasangan:{ glif: ['2', '4', '6'],     awan: null,      awan2: null },
+    lima:    { glif: ['5', '0', '5'],     awan: '#ffd9c4', awan2: '#f8c8b0' },
+    stasiun: { glif: ['1', '0', '4'],     awan: null,      awan2: null },
+    bengkel: { glif: ['3', '4', '1'],     awan: null,      awan2: null },
+    tebing:  { glif: ['6', '7', '8'],     awan: '#ffe2c4', awan2: '#ffd9b0' },
+    kemah:   { glif: ['9', '2', '7'],     awan: null,      awan2: null },
+    terang:  { glif: ['2', '3', '9'],     awan: null,      awan2: null },
+    bazar:   { glif: ['1', '0', '5'],     awan: '#fffdf2', awan2: '#e8f4fa' },
+    warung:  { glif: ['7', '2', '1'],     awan: '#ffe2c4', awan2: '#ffd9b0' },
+    lorong:  { glif: ['9', '6', '3'],     awan: null,      awan2: null },
+    arena:   { glif: ['6', '4', '2'],     awan: null,      awan2: null },
   };
   const cfgTema = TEMA_CFG[TEMA_NAMA] || TEMA_CFG.siang;
 
@@ -253,6 +265,18 @@
     layang:  { jenis: 'drift', warna: '#fffdf2', y: [16, 150], n: 9 },
     berbagi: { jenis: 'drift', warna: '#ffd166', y: [186, 240], n: 9 },
     misteri: { jenis: 'kedip', warna: '#cdd9f5', y: [16, 140], n: 22 },
+    barisan: { jenis: 'drift', warna: '#ffd9a3', y: [186, 240], n: 9 },
+    pasangan:{ jenis: 'kedip', warna: '#fffdf2', y: [16, 140], n: 22 },
+    lima:    { jenis: 'drift', warna: '#ffe9a3', y: [150, 240], n: 10 },
+    stasiun: { jenis: 'kedip', warna: '#cdd9f5', y: [16, 150], n: 24 },
+    bengkel: { jenis: 'kilau', warna: '#ffe9a3', y: [130, 244], n: 8 },
+    tebing:  { jenis: 'drift', warna: '#ffd166', y: [186, 240], n: 9 },
+    kemah:   { jenis: 'kedip', warna: '#ffe9a3', y: [16, 180], n: 14 },
+    terang:  { jenis: 'kilau', warna: '#fff3cf', y: [140, 244], n: 8 },
+    bazar:   { jenis: 'kilau', warna: '#fff8e0', y: [186, 240], n: 8 },
+    warung:  { jenis: 'drift', warna: '#ffd166', y: [186, 240], n: 9 },
+    lorong:  { jenis: 'kedip', warna: '#fffdf2', y: [16, 140], n: 22 },
+    arena:   { jenis: 'kilau', warna: '#ffd9a3', y: [60, 244], n: 12 },
   };
   const rand = (a, b) => a + Math.random() * (b - a);
   let amb = [];
@@ -1483,6 +1507,277 @@
       tanah(c, '#223058', '#1c2a4e', '#2a3a66');
       jalan(c, '#3a4a78', '#324068', '#384872', '#465684');
       for (let i = 0; i < 7; i++) P(c, (i * 71 + 25) % W, 240 + (i % 3) * 8, 4, 2, '#2c3c64');
+    }
+
+    /* ---- BARISAN: fajar padang latihan, garis baris di rumput ---- */
+    else if (TEMA_NAMA === 'barisan') {
+      P(c, 0, 0, W, 44, '#ffe9c4');
+      P(c, 0, 44, W, 42, '#ffd9a8');
+      P(c, 0, 86, W, 38, '#f8c98f');
+      P(c, 0, 124, W, 28, '#f2bd80');
+      lingkaran(c, 90, 118, 14, '#ffb86b');
+      lingkaran(c, 90, 118, 10, '#ff9d4a');
+      gunungDi(c, 200, 90, 58, 186, '#d8a088');
+      gunungDi(c, 380, 100, 54, 186, '#c89080');
+      P(c, 0, 150, W, 36, '#c8a878');
+      hutanDi(c, '#5a8f4a', '#4f8040');
+      tanah(c, '#96c45e', '#86b452', '#a6d46e');
+      jalan(c, '#d9bd85', '#c2a56e', '#c9ad74', '#e3cd96');
+      for (let r = 0; r < 3; r++) {                  // garis baris latihan
+        P(c, 40 + r * 14, 196 + r * 16, W - 90, 1, 'rgba(255,253,242,.28)');
+        for (let i = 0; i < 9; i++) P(c, 46 + i * 44, 196 + r * 16, 6, 1, 'rgba(255,253,242,.5)');
+      }
+    }
+
+    /* ---- PASANGAN: malam jalan lentera, tiang berpasangan ---- */
+    else if (TEMA_NAMA === 'pasangan') {
+      P(c, 0, 0, W, 50, '#131c3c');
+      P(c, 0, 50, W, 46, '#172448');
+      P(c, 0, 96, W, 40, '#1c2c54');
+      P(c, 0, 136, W, 22, '#223460');
+      for (let i = 0; i < 24; i++) {
+        const sx = (i * 71 + 9) % (W - 10) + 5, sy = 8 + (i * 27) % 126;
+        P(c, sx, sy, i % 4 === 0 ? 2 : 1, i % 4 === 0 ? 2 : 1, i % 3 ? '#fffdf2' : '#cdd9f5');
+      }
+      lingkaran(c, 418, 32, 10, '#f2ecd8');
+      lingkaran(c, 423, 29, 8, '#172448');
+      gunungDi(c, 100, 96, 60, 186, '#182850');
+      gunungDi(c, 350, 104, 56, 186, '#1a2c54');
+      P(c, 0, 150, W, 36, '#26365e');
+      for (let i = 0; i < 4; i++) {                  // tiang lampu jauh berpasangan
+        const lx = 60 + i * 118;
+        P(c, lx, 156, 2, 26, '#3a4a78');
+        lingkaran(c, lx - 3, 154, 2, '#ffd166');
+        lingkaran(c, lx + 5, 154, 2, '#ffd166');
+      }
+      hutanDi(c, '#1a352c', '#162e26');
+      tanah(c, '#32603e', '#2c5638', '#3d7048');
+      jalan(c, '#a98f60', '#8f774c', '#a3875a', '#bfa470');
+    }
+
+    /* ---- LIMA: sore taman bunga, kelopak lima di rumput ---- */
+    else if (TEMA_NAMA === 'lima') {
+      P(c, 0, 0, W, 42, '#ffd9c4');
+      P(c, 0, 42, W, 40, '#f8c8b0');
+      P(c, 0, 82, W, 38, '#f0bc9e');
+      P(c, 0, 120, W, 30, '#e8b08e');
+      lingkaran(c, 402, 114, 14, '#ffb86b');
+      lingkaran(c, 402, 114, 10, '#ff9d4a');
+      gunungDi(c, 90, 88, 56, 186, '#c89090');
+      gunungDi(c, 330, 96, 60, 186, '#b88286');
+      P(c, 0, 150, W, 36, '#c89888');
+      hutanDi(c, '#4f8f4a', '#457f40');
+      tanah(c, '#a0c860', '#90b854', '#b0d870');
+      jalan(c, '#d9b877', '#c2a05e', '#c9a763', '#e3c58c');
+      for (let i = 0; i < 6; i++) {                  // bunga kelopak lima kecil
+        const fx = 34 + i * 74, fy = 200 + (i % 3) * 14;
+        for (let p = 0; p < 5; p++) {
+          const a = p * Math.PI * 2 / 5 - Math.PI / 2;
+          P(c, fx + Math.round(Math.cos(a) * 4), fy + Math.round(Math.sin(a) * 4), 2, 2, '#f2b8cc');
+        }
+        P(c, fx, fy, 2, 2, '#ffd166');
+      }
+    }
+
+    /* ---- STASIUN: malam stasiun kereta, rel & peron ---- */
+    else if (TEMA_NAMA === 'stasiun') {
+      P(c, 0, 0, W, 48, '#121a38');
+      P(c, 0, 48, W, 44, '#162244');
+      P(c, 0, 92, W, 40, '#1b2a50');
+      P(c, 0, 132, W, 22, '#213258');
+      for (let i = 0; i < 22; i++) {
+        const sx = (i * 79 + 15) % (W - 10) + 5, sy = 8 + (i * 31) % 122;
+        P(c, sx, sy, i % 5 === 0 ? 2 : 1, i % 5 === 0 ? 2 : 1, i % 3 ? '#fffdf2' : '#cdd9f5');
+      }
+      lingkaran(c, 60, 30, 9, '#f2ecd8');
+      lingkaran(c, 65, 27, 7, '#162244');
+      P(c, 0, 150, W, 36, '#2a3a60');
+      P(c, 0, 158, W, 2, '#5a6a94');                 // rel di kejauhan
+      P(c, 0, 166, W, 2, '#5a6a94');
+      for (let i = 0; i < 15; i++) P(c, 8 + i * 32, 160, 12, 2, '#3a4a78');
+      for (let i = 0; i < 5; i++) {                  // lampu peron
+        const lx = 40 + i * 100;
+        P(c, lx, 172, 2, 14, '#3a4a78');
+        lingkaran(c, lx + 1, 170, 2.4, '#ffd166');
+      }
+      tanah(c, '#32603e', '#2c5638', '#3d7048');
+      jalan(c, '#a98f60', '#8f774c', '#a3875a', '#bfa470');
+    }
+
+    /* ---- BENGKEL: pagi bengkel kayu, jendela cahaya & rak alat ---- */
+    else if (TEMA_NAMA === 'bengkel') {
+      P(c, 0, 0, W, 52, '#c89868');
+      P(c, 0, 52, W, 48, '#bd8c5c');
+      P(c, 0, 100, W, 44, '#b28252');
+      P(c, 0, 144, W, 38, '#a87848');
+      for (let i = 0; i < 3; i++) {                  // jendela pagi
+        const wx = 56 + i * 150;
+        P(c, wx, 58, 52, 42, '#8a6a44');
+        P(c, wx + 4, 62, 44, 34, '#bfe4f5');
+        P(c, wx + 4, 62, 44, 12, '#d8f0fa');
+        P(c, wx + 24, 62, 3, 34, '#8a6a44');
+        P(c, wx + 4, 76, 44, 3, '#8a6a44');
+      }
+      P(c, 0, 148, W, 4, '#8a6a44');                 // garis dinding
+      for (let i = 0; i < 8; i++) P(c, (i * 61 + 23) % W, 30 + (i % 3) * 8, 10, 2, '#8a6a44');
+      tanah(c, '#a8845c', '#98764e', '#b8946a');
+      jalan(c, '#c9a763', '#ad8c50', '#b8945a', '#d9bd85');
+    }
+
+    /* ---- TEBING: senja tebing pendakian, jalur zigzag ---- */
+    else if (TEMA_NAMA === 'tebing') {
+      P(c, 0, 0, W, 42, '#ffd9a8');
+      P(c, 0, 42, W, 40, '#fccd94');
+      P(c, 0, 82, W, 38, '#f4bd82');
+      P(c, 0, 120, W, 30, '#ecb072');
+      lingkaran(c, 396, 110, 14, '#ffb86b');
+      lingkaran(c, 396, 110, 10, '#ff9d4a');
+      P(c, 40, 66, 120, 120, '#b08060');             // tebing kiri
+      P(c, 48, 78, 104, 10, '#c09070');
+      P(c, 48, 104, 88, 10, '#c09070');
+      P(c, 48, 130, 72, 10, '#c09070');
+      P(c, 330, 84, 110, 102, '#a87858');            // tebing kanan
+      P(c, 340, 96, 92, 10, '#ba8a68');
+      P(c, 340, 122, 76, 10, '#ba8a68');
+      P(c, 0, 150, W, 36, '#c09878');
+      tanah(c, '#c8a068', '#b89058', '#d8b078');
+      jalan(c, '#d9bd85', '#c2a56e', '#c9ad74', '#e3cd96');
+      for (let i = 0; i < 8; i++) P(c, (i * 67 + 21) % W, 218 + (i % 3) * 10, 3, 2, '#8a7048');
+    }
+
+    /* ---- KEMAH: malam api unggun, tenda & kunang ---- */
+    else if (TEMA_NAMA === 'kemah') {
+      P(c, 0, 0, W, 50, '#101a34');
+      P(c, 0, 50, W, 46, '#14203c');
+      P(c, 0, 96, W, 40, '#182646');
+      P(c, 0, 136, W, 22, '#1d2c4e');
+      for (let i = 0; i < 20; i++) {
+        const sx = (i * 83 + 12) % (W - 10) + 5, sy = 8 + (i * 29) % 120;
+        P(c, sx, sy, i % 4 === 0 ? 2 : 1, i % 4 === 0 ? 2 : 1, i % 3 ? '#fffdf2' : '#cdd9f5');
+      }
+      gunungDi(c, 90, 94, 62, 186, '#152242');
+      gunungDi(c, 360, 102, 56, 186, '#182648');
+      for (let i = 0; i < 6; i++) {                  // siluet pohon
+        const tx = 24 + i * 88;
+        P(c, tx, 168, 3, 16, '#0e1a30');
+        P(c, tx - 6, 156, 15, 12, '#0e1a30');
+        P(c, tx - 3, 146, 9, 10, '#122140');
+      }
+      P(c, 0, 150, W, 36, '#1e3050');
+      P(c, 330, 172, 34, 20, '#26365c');             // tenda kecil di kejauhan
+      P(c, 344, 162, 6, 30, '#26365c');
+      P(c, 337, 184, 20, 8, '#101a34');
+      tanah(c, '#2c5238', '#264a32', '#376044');
+      jalan(c, '#a98f60', '#8f774c', '#a3875a', '#bfa470');
+      for (let i = 0; i < 6; i++) P(c, (i * 77 + 33) % W, 190 + (i % 3) * 14, 1, 1, '#ffe9a3');
+    }
+
+    /* ---- TERANG: pagi ruang belajar terang, jendela lebar ---- */
+    else if (TEMA_NAMA === 'terang') {
+      P(c, 0, 0, W, 54, '#f2e8d4');
+      P(c, 0, 54, W, 48, '#ecdec4');
+      P(c, 0, 102, W, 44, '#e4d4ba');
+      P(c, 0, 146, W, 36, '#dcccb0');
+      for (let i = 0; i < 2; i++) {                  // jendela pagi lebar
+        const wx = 90 + i * 210;
+        P(c, wx, 52, 90, 54, '#c8b088');
+        P(c, wx + 5, 57, 80, 44, '#c8ecf8');
+        P(c, wx + 5, 57, 80, 16, '#e2f5fb');
+        P(c, wx + 42, 57, 3, 44, '#c8b088');
+        P(c, wx + 5, 76, 80, 3, '#c8b088');
+      }
+      P(c, 0, 150, W, 4, '#c8b088');
+      tanah(c, '#d8c8a8', '#ccbc9a', '#e2d4b6');
+      jalan(c, '#c9a763', '#ad8c50', '#b8945a', '#d9bd85');
+    }
+
+    /* ---- BAZAR: siang halaman bazar, kanopi warna-warni ---- */
+    else if (TEMA_NAMA === 'bazar') {
+      P(c, 0, 0, W, 46, '#9fdcf5');
+      P(c, 0, 46, W, 42, '#8fd3f0');
+      P(c, 0, 88, W, 40, '#a5e0f5');
+      P(c, 0, 128, W, 24, '#b7e8f8');
+      lingkaran(c, 430, 30, 12, '#ffe9a3');
+      lingkaran(c, 430, 30, 9, '#ffd166');
+      P(c, 0, 150, W, 36, '#b8a888');
+      for (let i = 0; i < 4; i++) {                  // kanopi bazar bergaris
+        const kx = 24 + i * 118;
+        P(c, kx, 140, 92, 16, i % 2 ? '#d86a6a' : '#4aa8a0');
+        for (let s = 0; s < 5; s++) P(c, kx + s * 19, 140, 10, 16, i % 2 ? '#f0a0a0' : '#7cc8c0');
+        P(c, kx + 6, 156, 3, 30, '#8a6a44');
+        P(c, kx + 82, 156, 3, 30, '#8a6a44');
+      }
+      tanah(c, '#a8b068', '#98a058', '#b8c078');
+      jalan(c, '#d9b877', '#c2a05e', '#c9a763', '#e3c58c');
+    }
+
+    /* ---- WARUNG: senja warung kue, lampu gantung hangat ---- */
+    else if (TEMA_NAMA === 'warung') {
+      P(c, 0, 0, W, 42, '#ffd9a8');
+      P(c, 0, 42, W, 40, '#fccd94');
+      P(c, 0, 82, W, 38, '#f4bd82');
+      P(c, 0, 120, W, 30, '#ecb072');
+      lingkaran(c, 90, 112, 13, '#ffb86b');
+      lingkaran(c, 90, 112, 9, '#ff9d4a');
+      P(c, 250, 84, 160, 68, '#a87848');             // bangunan warung
+      P(c, 250, 84, 160, 10, '#8a6238');
+      P(c, 262, 108, 40, 30, '#5f4426');             // jendela
+      P(c, 262, 108, 40, 30, 'rgba(255,209,102,.35)');
+      P(c, 330, 104, 56, 40, '#5f4426');             // etalase
+      P(c, 333, 107, 50, 34, '#ffd9a3');
+      P(c, 348, 142, 14, 10, '#5f4426');             // pintu
+      P(c, 0, 150, W, 36, '#c09878');
+      for (let i = 0; i < 3; i++) {                  // lampu gantung
+        const lx = 280 + i * 34;
+        P(c, lx, 152, 1, 8, '#5f4426');
+        lingkaran(c, lx, 163, 3, '#ffd166');
+      }
+      tanah(c, '#b89868', '#a88858', '#c8a878');
+      jalan(c, '#d9b877', '#c2a05e', '#c9a763', '#e3c58c');
+    }
+
+    /* ---- LORONG: malam lorong tangga, lampu dinding berderet ---- */
+    else if (TEMA_NAMA === 'lorong') {
+      P(c, 0, 0, W, 52, '#141c3a');
+      P(c, 0, 52, W, 48, '#182246');
+      P(c, 0, 100, W, 44, '#1c2850');
+      P(c, 0, 144, W, 38, '#202e56');
+      P(c, 0, 148, W, 4, '#2a3a68');                 // railing atas
+      for (let i = 0; i < 8; i++) {                  // lampu dinding menyala
+        const lx = 30 + i * 60;
+        P(c, lx, 160, 8, 10, '#2a3a68');
+        lingkaran(c, lx + 4, 165, 3, '#ffd166');
+        P(c, lx + 3, 170, 3, 12, 'rgba(255,209,102,.18)');
+      }
+      P(c, 300, 170, 180, 6, '#26365e');              // tangga siluet
+      tanah(c, '#26365c', '#203052', '#2d3f68');
+      jalan(c, '#3a4a78', '#324068', '#384872', '#465684');
+      for (let i = 0; i < 7; i++) P(c, (i * 71 + 25) % W, 240 + (i % 3) * 8, 4, 2, '#2c3c64');
+    }
+
+    /* ---- ARENA: malam turnamen obor, tribun gelap ---- */
+    else if (TEMA_NAMA === 'arena') {
+      P(c, 0, 0, W, 50, '#101830');
+      P(c, 0, 50, W, 46, '#141e3a');
+      P(c, 0, 96, W, 40, '#182444');
+      P(c, 0, 136, W, 22, '#1c2a4c');
+      for (let i = 0; i < 18; i++) {
+        const sx = (i * 89 + 17) % (W - 10) + 5, sy = 8 + (i * 33) % 118;
+        P(c, sx, sy, i % 4 === 0 ? 2 : 1, i % 4 === 0 ? 2 : 1, i % 3 ? '#fffdf2' : '#cdd9f5');
+      }
+      P(c, 0, 150, W, 36, '#243458');
+      P(c, 20, 150, 100, 4, '#32426a');              // tribun bertingkat
+      P(c, 12, 144, 116, 6, '#32426a');
+      P(c, 360, 150, 100, 4, '#32426a');
+      P(c, 352, 144, 116, 6, '#32426a');
+      for (let i = 0; i < 4; i++) {                  // obor di kejauhan
+        const ox = 150 + i * 60;
+        P(c, ox, 158, 2, 16, '#5f4426');
+        lingkaran(c, ox + 1, 154, 3, '#ffd166');
+        P(c, ox, 148, 3, 5, 'rgba(255,209,102,.25)');
+      }
+      tanah(c, '#2c4a48', '#264240', '#376058');
+      jalan(c, '#a98f60', '#8f774c', '#a3875a', '#bfa470');
     }
 
     return cv;
@@ -3195,6 +3490,457 @@
     papanLebar(x, ['4+5', '= 9'], 42);
     gambarCahaya(x, 212, 10, '#7dffa8', t);
   }
+  /* --- p1-043: kali itu tambah cepat --- */
+  function gambarBarisLima(x, t) {
+    for (let r = 0; r < 3; r++)
+      for (let i = 0; i < 5; i++)
+        lingkaran(ctx, x - 12 + i * 7, 200 + r * 8, 2.4, r % 2 ? '#a5d8ff' : '#ffe9a3');
+    teksPx(ctx, '3 baris x 5', x + 4, 186, '#ffe9a3', 6);
+    teksPx(ctx, '15', x + 4, 226, '#7dffa8', 8);
+  }
+  function gambarPapanCepat(x, t) {
+    papanLebar(x, ['5+5+5', '3 x 5', '= 15'], 48);
+  }
+  function gambarLoncatLima(x, t) {
+    const pijak = [[x - 8, 210, '5'], [x + 8, 200, '10'], [x + 24, 190, '15']];
+    for (const [px, py, lb] of pijak) {
+      P(ctx, px - 8, py, 16, 7, '#8a6a44');
+      P(ctx, px - 8, py, 16, 2, '#a3825a');
+      teksPx(ctx, lb, px, py - 9, '#fffdf2', 6);
+    }
+    P(ctx, x + 36, 178, 2, 34, '#7a5230');          // bendera tujuan
+    P(ctx, x + 38, 178, 9, 6, '#ff9d9d');
+    for (let i = 0; i < 7; i++) P(ctx, x - 4 + i * 5, 236, 2, 2, 'rgba(255,253,242,.5)');
+    teksPx(ctx, '3 lompatan!', x + 6, 172, '#ffe9a3', 6);
+  }
+  function gambarKantongKelereng(x, t) {
+    P(ctx, x - 22, 196, 48, 3, '#7a5230');          // rak gantungan
+    P(ctx, x - 22, 196, 2, 30, '#7a5230');
+    P(ctx, x + 24, 196, 2, 30, '#7a5230');
+    for (let k = 0; k < 3; k++) {
+      const kx = x - 16 + k * 14;
+      P(ctx, kx, 199, 1, 5, '#5a4426');
+      P(ctx, kx - 6, 204, 13, 14, '#c9a763');
+      P(ctx, kx - 6, 204, 13, 2, '#e0c784');
+      teksPx(ctx, '5', kx, 208, '#5f4426', 6);
+    }
+    teksPx(ctx, '3 x 5 = 15', x + 2, 184, '#7dffa8', 7);
+  }
+  /* --- p1-044: tabel perkalian 2 --- */
+  function gambarPasangSandal(x, t) {
+    P(ctx, x - 24, 208, 54, 3, '#7a5230');          // rak sandal
+    for (let p = 0; p < 5; p++) {
+      const px = x - 22 + p * 12;
+      P(ctx, px, 202, 4, 6, '#c9a763'); P(ctx, px, 200, 3, 2, '#e0c784');   // sandal kiri
+      P(ctx, px + 5, 202, 4, 6, '#a5d8ff'); P(ctx, px + 5, 200, 3, 2, '#d0ecff'); // sandal kanan
+      teksPx(ctx, String((p + 1) * 2), px + 4, 190, '#fffdf2', 6);
+    }
+    teksPx(ctx, '5 pasang', x + 2, 178, '#ffe9a3', 6);
+  }
+  function gambarTiangLampu2(x, t) {
+    for (let p = 0; p < 5; p++) {
+      const px = x - 24 + p * 12;
+      P(ctx, px, 204, 2, 40, '#5a6a94');
+      P(ctx, px - 3, 202, 8, 2, '#5a6a94');
+      ctx.globalAlpha = 0.5 + 0.4 * Math.sin(t * 2.4 + p);
+      lingkaran(ctx, px - 1, 206, 2.4, '#ffd166');
+      lingkaran(ctx, px + 5, 206, 2.4, '#ffd166');
+      ctx.globalAlpha = 1;
+      teksPx(ctx, String((p + 1) * 2), px + 1, 188, '#fffdf2', 6);
+    }
+    teksPx(ctx, '2 tiang x 2', x + 2, 176, '#ffe9a3', 6);
+  }
+  function gambarTanggaLompat2(x, t) {
+    const anak = [[x - 8, 236, '2'], [x + 4, 226, '4'], [x + 16, 216, '6'], [x + 28, 206, '8'], [x + 40, 196, '10']];
+    for (const [ax, ay, lb] of anak) {
+      P(ctx, ax - 7, ay, 14, 6, '#8a6a44');
+      P(ctx, ax - 7, ay, 14, 2, '#a3825a');
+      teksPx(ctx, lb, ax, ay - 9, '#ffe9a3', 6);
+    }
+  }
+  function gambarPapanTabel2(x, t) {
+    papanLebar(x, ['2x1=2', '2x2=4', '2x3=6', '2x4=8', '2x5=10'], 52);
+  }
+  /* --- p1-045: tabel perkalian 5 --- */
+  function gambarJariSatu(x, t) {
+    gambarCahaya(x + 2, 234, 12, '#ffe9a3', t);
+    jariTangan(x + 2, 244, 5);
+    teksPx(ctx, '1 x 5 = 5', x + 6, 216, '#7dffa8', 7);
+  }
+  function gambarJariDua(x, t) {
+    gambarCahaya(x + 14, 232, 13, '#ffe9a3', t);
+    jariTangan(x + 2, 244, 5);
+    jariTangan(x + 26, 244, 5);
+    teksPx(ctx, '2 x 5 = 10', x + 14, 214, '#7dffa8', 7);
+  }
+  function gambarBungaKelopak(x, t) {
+    for (let b = 0; b < 4; b++) {
+      const bx = x - 12 + b * 14, by = 204 + (b % 2) * 3;
+      P(ctx, bx, by + 4, 1, 22, '#3f7f3a');
+      for (let p = 0; p < 5; p++) {
+        const a = p * Math.PI * 2 / 5 - Math.PI / 2;
+        lingkaran(ctx, bx + 1 + Math.cos(a) * 4, by + Math.sin(a) * 4, 2.2, '#f2b8cc');
+      }
+      lingkaran(ctx, bx + 1, by, 1.8, '#ffd166');
+      teksPx(ctx, String((b + 1) * 5), bx, by - 12, '#fffdf2', 6);
+    }
+    teksPx(ctx, '4 x 5 = 20', x + 8, 178, '#7dffa8', 7);
+  }
+  function gambarPapanJam(x, t) {
+    const cx = x + 8, cy = 206;
+    lingkaran(ctx, cx, cy, 21, '#8a6a44');
+    lingkaran(ctx, cx, cy, 18, '#fffdf2');
+    for (let i = 0; i < 12; i++) {
+      const a = i * Math.PI / 6;
+      P(ctx, cx + Math.round(Math.sin(a) * 15) - 1, cy - Math.round(Math.cos(a) * 15) - 1, 2, 2, '#5a6a94');
+    }
+    for (let n = 1; n <= 4; n++) {                  // angka 1-4 disorot
+      const a = n * Math.PI / 6;
+      teksPx(ctx, String(n), cx + Math.round(Math.sin(a) * 11), cy - Math.round(Math.cos(a) * 11) - 2, '#c07d0c', 5);
+    }
+    P(ctx, cx, cy, 2, 10, '#2a3757');               // jarum menit ke 4 (20 menit)
+    P(ctx, cx + 1, cy + 9, 6, 2, '#2a3757');
+    P(ctx, cx, cy - 8, 2, 8, '#8a94a8');            // jarum jam
+    lingkaran(ctx, cx + 1, cy, 2, '#c07d0c');
+    teksPx(ctx, 'tiap angka = 5 menit', x + 4, 176, '#ffe9a3', 5);
+    teksPx(ctx, '20 menit', cx + 20, 226, '#7dffa8', 6);
+  }
+  /* --- p1-046: tabel perkalian 10 --- */
+  function gambarGerbongSatu(x, t) {
+    P(ctx, x - 6, 202, 36, 26, '#9aa6b8');          // gerbong
+    P(ctx, x - 6, 202, 36, 3, '#c3ccda');
+    for (let i = 0; i < 10; i++) {                  // 10 peti: 2 baris x 5
+      const sx = x - 2 + (i % 5) * 7, sy = 206 + Math.floor(i / 5) * 10;
+      P(ctx, sx, sy, 6, 9, '#c9a763');
+      P(ctx, sx, sy + 4, 6, 1, '#8a6a44');
+    }
+    lingkaran(ctx, x + 2, 232, 3.4, '#3a4458');
+    lingkaran(ctx, x + 22, 232, 3.4, '#3a4458');
+    teksPx(ctx, '1 x 10 = 10', x + 12, 190, '#7dffa8', 7);
+  }
+  function gambarGerbongEmpat(x, t) {
+    for (let g = 0; g < 4; g++) {
+      const gx = x - 28 + g * 16;
+      P(ctx, gx, 204, 14, 20, '#9aa6b8');
+      P(ctx, gx, 204, 14, 2, '#c3ccda');
+      teksPx(ctx, '10', gx + 7, 210, '#5f4426', 5);
+      lingkaran(ctx, gx + 4, 228, 3, '#3a4458');
+      lingkaran(ctx, gx + 10, 228, 3, '#3a4458');
+      teksPx(ctx, String((g + 1) * 10), gx + 7, 192, '#ffe9a3', 6);
+    }
+    teksPx(ctx, '4 x 10 = 40', x + 2, 180, '#7dffa8', 7);
+  }
+  function gambarNolEmas(x, t) {
+    papanLebar(x, ['2x10', '= 20'], 44);
+    gambarCahaya(x + 16, 190, 9, '#ffd166', t);
+    const oy = 190 + Math.round(Math.sin(t * 2.4) * 2);
+    lingkaran(ctx, x + 16, oy, 5.4, '#ffd166');
+    lingkaran(ctx, x + 16, oy, 3.8, '#ffe9a3');
+    teksPx(ctx, '0', x + 16, oy - 3, '#8a6a1c', 6);
+  }
+  function gambarPijakanPuluhan(x, t) {
+    const pijak = [[x - 18, '0'], [x - 4, '10'], [x + 10, '20'], [x + 24, '30']];
+    for (const [px, lb] of pijak) {
+      P(ctx, px - 7, 208, 15, 10, '#8a6a44');
+      P(ctx, px - 7, 208, 15, 2, '#a3825a');
+      teksPx(ctx, lb, px, 211, '#fffdf2', 6);
+    }
+    for (let i = 0; i < 3; i++) {                   // busur lompatan
+      P(ctx, x - 8 + i * 14, 200 - (i === 1 ? 3 : 0), 2, 2, '#ffe9a3');
+      P(ctx, x - 3 + i * 14, 198 - (i === 1 ? 3 : 0), 2, 2, '#ffe9a3');
+    }
+    teksPx(ctx, 'dari 0, 3 lompatan', x + 4, 186, '#ffe9a3', 5);
+  }
+  /* --- p1-047: tabel perkalian 3 & 4 --- */
+  function gambarSegitigaTiga(x, t) {
+    for (let s = 0; s < 4; s++) {
+      const cx = x - 24 + s * 16;
+      P(ctx, cx - 7, 218, 14, 2, '#c98a4b');        // alas
+      P(ctx, cx - 7, 214, 2, 4, '#c98a4b'); P(ctx, cx + 5, 214, 2, 4, '#c98a4b');
+      P(ctx, cx - 5, 208, 2, 6, '#c98a4b'); P(ctx, cx + 3, 208, 2, 6, '#c98a4b');
+      P(ctx, cx - 2, 202, 4, 6, '#c98a4b');         // puncak
+      teksPx(ctx, String((s + 1) * 3), cx, 190, '#fffdf2', 6);
+    }
+    teksPx(ctx, 'tiap segitiga 3 sisi', x + 4, 178, '#ffe9a3', 5);
+  }
+  function gambarKursiEmpat(x, t) {
+    for (let k = 0; k < 4; k++) {
+      const cx = x - 24 + k * 16;
+      P(ctx, cx - 5, 208, 10, 3, '#a3744a');        // dudukan
+      P(ctx, cx + 3, 196, 2, 12, '#a3744a');        // sandaran
+      P(ctx, cx - 5, 211, 1, 10, '#8a5f38'); P(ctx, cx - 1, 211, 1, 10, '#8a5f38');
+      P(ctx, cx + 1, 211, 1, 10, '#8a5f38'); P(ctx, cx + 4, 211, 1, 10, '#8a5f38');
+      teksPx(ctx, String((k + 1) * 4), cx, 186, '#fffdf2', 6);
+    }
+    teksPx(ctx, 'tiap kursi 4 kaki', x + 4, 174, '#ffe9a3', 5);
+  }
+  function gambarTanggaDua(x, t) {
+    P(ctx, x - 10, 194, 2, 30, '#a3744a'); P(ctx, x + 2, 194, 2, 30, '#a3744a');
+    P(ctx, x + 16, 186, 2, 38, '#8a94c8'); P(ctx, x + 28, 186, 2, 38, '#8a94c8');
+    const tiga = [[220, '3'], [212, '6'], [204, '9'], [196, '12']];
+    for (const [ry, lb] of tiga) {
+      P(ctx, x - 10, ry, 14, 2, lb === '12' ? '#ffd166' : '#c98a4b');
+      teksPx(ctx, lb, x + 6, ry - 2, lb === '12' ? '#ffd166' : '#fffdf2', 5);
+    }
+    const empat = [[220, '4'], [210, '8'], [200, '12'], [190, '16']];
+    for (const [ry, lb] of empat) {
+      P(ctx, x + 16, ry, 14, 2, lb === '12' ? '#ffd166' : '#8a94c8');
+      teksPx(ctx, lb, x + 32, ry - 2, lb === '12' ? '#ffd166' : '#fffdf2', 5);
+    }
+    teksPx(ctx, 'bertemu di 12', x + 4, 176, '#ffe9a3', 6);
+  }
+  function gambarGridTigaEmpat(x, t) {
+    P(ctx, x - 18, 194, 44, 34, '#8a6a44');
+    P(ctx, x - 15, 197, 38, 28, '#5f4426');
+    for (let r = 0; r < 3; r++)
+      for (let k = 0; k < 4; k++) {
+        lingkaran(ctx, x - 10 + k * 10, 202 + r * 10, 3, '#ffe9a3');
+        lingkaran(ctx, x - 10 + k * 10, 201 + r * 10, 1.8, '#fff3cf');
+      }
+    teksPx(ctx, '3 x 4 = 4 x 3 = 12', x + 4, 182, '#7dffa8', 6);
+  }
+  /* --- p1-048: tabel perkalian 6-9 --- */
+  function gambarJalurEnam(x, t) {
+    const pijak = [[x - 2, 232, '6'], [x + 6, 224, '12'], [x + 14, 216, '18'], [x + 22, 208, '24'], [x + 30, 200, '30'], [x + 38, 192, '36']];
+    for (const [px, py, lb] of pijak) {
+      P(ctx, px - 6, py, 12, 6, '#8a7048');
+      P(ctx, px - 6, py, 12, 2, '#a38858');
+      teksPx(ctx, lb, px, py - 9, '#fffdf2', 5);
+    }
+    teksPx(ctx, 'jalur 6', x + 6, 178, '#ffe9a3', 6);
+  }
+  function gambarTanggaTujuh(x, t) {
+    P(ctx, x, 194, 2, 46, '#a3744a'); P(ctx, x + 14, 194, 2, 46, '#a3744a');
+    const anak = [[234, '7'], [226, '14'], [218, '21'], [210, '28'], [202, '35'], [194, '42']];
+    for (const [ry, lb] of anak) {
+      P(ctx, x, ry, 16, 2, '#c98a4b');
+      teksPx(ctx, lb, x + 20, ry - 2, lb === '42' ? '#ffd166' : '#fffdf2', 5);
+    }
+    teksPx(ctx, '7 x 6 = 42', x + 8, 182, '#ffe9a3', 6);
+  }
+  function gambarEmpatJalur(x, t) {
+    papanLebar(x, ['6x8=48', '7x8=56', '8x8=64', '9x8=72'], 52);
+  }
+  function gambarBenderaPuncak(x, t) {
+    P(ctx, x - 16, 236, 36, 10, '#8a7048');         // puncak batu
+    P(ctx, x - 8, 228, 20, 8, '#9a8058');
+    P(ctx, x + 6, 186, 2, 44, '#7a5230');           // tiang bendera
+    P(ctx, x + 8, 186, 10, 7, '#ff9d9d');
+    P(ctx, x + 8, 193, 7, 4, '#f0b8b8');
+    teksPx(ctx, '9 x 9 = 81', x - 2, 172, '#ffd166', 7);
+  }
+  /* --- p1-049: trik perkalian 9 --- */
+  function gambarJariSembilan(x, t) {
+    P(ctx, x - 24, 224, 52, 6, '#8a6a44');          // meja
+    P(ctx, x - 20, 230, 3, 16, '#7a5230'); P(ctx, x + 20, 230, 3, 16, '#7a5230');
+    for (let i = 0; i < 10; i++) {
+      const fx = x - 20 + i * 5;
+      if (i === 2) {                                // jari ke-3 ditekuk
+        P(ctx, fx, 218, 3, 5, '#d89870');
+        P(ctx, fx, 216, 3, 2, '#e8b08a');
+      } else {
+        P(ctx, fx, 208, 3, 16, '#e8b08a');
+        P(ctx, fx, 208, 3, 2, '#f2c8a4');
+      }
+    }
+    teksPx(ctx, '2', x - 15, 198, '#ffd166', 7);
+    teksPx(ctx, '7', x + 9, 198, '#ffd166', 7);
+    teksPx(ctx, '9 x 3 = 27', x + 3, 184, '#7dffa8', 7);
+  }
+  function gambarPapan27(x, t) {
+    papanLebar(x, ['9x3=27', '2+7=9'], 50);
+    gambarCahaya(x, 206, 10, '#ffe9a3', t);
+  }
+  function gambarKartuSembilan(x, t) {
+    P(ctx, x - 30, 188, 60, 3, '#7a5230');          // rel gantungan
+    const isi = [['18', '1+8=9'], ['45', '4+5=9'], ['81', '8+1=9']];
+    for (let k = 0; k < 3; k++) {
+      const kx = x - 24 + k * 24;
+      P(ctx, kx, 191, 1, 6, '#5a4426');
+      P(ctx, kx - 11, 197, 22, 16, '#fffdf2');
+      P(ctx, kx - 11, 197, 22, 2, '#c8b890');
+      teksPx(ctx, isi[k][0], kx, 201, '#2a3757', 6);
+      teksPx(ctx, isi[k][1], kx, 218, '#ffd166', 4);
+    }
+    teksPx(ctx, 'selalu 9!', x, 180, '#ffe9a3', 6);
+  }
+  function gambarPapanSepuluh(x, t) {
+    papanLebar(x, ['10x5=50', '50-5=45', '9x5=45'], 58);
+  }
+  /* --- p1-050: perkalian bersusun --- */
+  function gambarKartu23(x, t) {
+    papanBersusun3(x, '23', '4', '', 'x', 42);
+  }
+  function gambarKaliSatuan(x, t) {
+    papanBersusun3(x, '23', '4', '2', 'x', 42);
+    teksPx(ctx, '1', x - 9, 192, '#ff9d9d', 7);     // simpanan di atas puluhan
+    P(ctx, x - 8, 198, 1, 3, '#ff9d9d');
+  }
+  function gambarKaliPuluhan(x, t) {
+    papanBersusun3(x, '23', '4', '92', 'x', 42);
+  }
+  function gambarPapan92(x, t) {
+    papanLebar(x, ['23 x 4', '= 92'], 48);
+    teksPx(ctx, '9 ikat, 2 keping', x, 186, '#c07d0c', 5);
+  }
+  /* --- p1-051: bagi itu membagi rata --- */
+  function gambarNampanSepuluh(x, t) {
+    P(ctx, x - 14, 222, 46, 7, '#a3744a');          // nampan
+    P(ctx, x - 14, 222, 46, 2, '#bd8a5a');
+    for (let i = 0; i < 10; i++)                    // 10 kelereng: 2 baris x 5
+      lingkaran(ctx, x - 10 + (i % 5) * 8, 214 + Math.floor(i / 5) * 7, 2.6, i % 2 ? '#a5d8ff' : '#ffe9a3');
+    for (let p = 0; p < 2; p++) {                   // 2 piring kosong
+      lingkaran(ctx, x + 18 + p * 14, 242, 6, '#e8e0d0');
+      lingkaran(ctx, x + 18 + p * 14, 242, 4, '#f8f2e4');
+    }
+    teksPx(ctx, '10 : 2', x + 8, 196, '#ffe9a3', 7);
+  }
+  function gambarSatuSatu(x, t) {
+    for (let p = 0; p < 2; p++) {
+      const px = x + 2 + p * 24;
+      lingkaran(ctx, px, 242, 7, '#e8e0d0');
+      lingkaran(ctx, px, 242, 5, '#f8f2e4');
+      for (let i = 0; i < 5; i++)                   // 5 kelereng tiap piring
+        lingkaran(ctx, px, 234 - i * 6, 2.2, i % 2 ? '#a5d8ff' : '#ffe9a3');
+    }
+    teksPx(ctx, '5 giliran', x + 14, 198, '#ffe9a3', 6);
+  }
+  function gambarPiringLima(x, t) {
+    for (let p = 0; p < 2; p++) {
+      const px = x + 2 + p * 24;
+      lingkaran(ctx, px, 242, 8, '#e8e0d0');
+      lingkaran(ctx, px, 242, 6, '#f8f2e4');
+      for (let i = 0; i < 5; i++) {
+        const a = -Math.PI / 2 + (i - 2) * 0.55;
+        lingkaran(ctx, px + Math.sin(a) * 4.5, 240 - Math.cos(a) * 3, 2.2, i % 2 ? '#a5d8ff' : '#ffe9a3');
+      }
+      teksPx(ctx, '5', px, 222, '#fffdf2', 6);
+    }
+    teksPx(ctx, '10 : 2 = 5', x + 14, 204, '#7dffa8', 7);
+  }
+  function gambarRotiEnam(x, t) {
+    for (let k = 0; k < 3; k++) {
+      const kx = x + 2 + k * 14;
+      P(ctx, kx - 5, 226, 11, 12, '#c9a763');       // kantong
+      P(ctx, kx - 5, 226, 11, 2, '#e0c784');
+      P(ctx, kx - 2, 223, 5, 3, '#8a6a44');
+      for (let r = 0; r < 2; r++)                   // 2 roti tiap kantong
+        lingkaran(ctx, kx, 218 - r * 6, 2.6, '#e8b06a');
+    }
+    teksPx(ctx, '6 : 3 = 2', x + 10, 198, '#7dffa8', 7);
+  }
+  /* --- p1-052: pembagian dengan sisa --- */
+  function gambarKueTujuh(x, t) {
+    P(ctx, x - 14, 224, 44, 7, '#a3744a');          // nampan
+    for (let i = 0; i < 7; i++) {                   // 7 kue: 4 atas 3 bawah
+      const kx = x - 10 + (i % 4) * 9, ky = 212 + Math.floor(i / 4) * 9;
+      lingkaran(ctx, kx, ky, 3.2, '#f2c17d');
+      lingkaran(ctx, kx, ky - 1, 2, '#ffd9a3');
+    }
+    for (let p = 0; p < 2; p++) {                   // 2 piring
+      lingkaran(ctx, x + 16 + p * 15, 242, 6, '#e8e0d0');
+      lingkaran(ctx, x + 16 + p * 15, 242, 4, '#f8f2e4');
+    }
+    teksPx(ctx, '7 : 2', x + 10, 196, '#ffe9a3', 7);
+  }
+  function gambarKueTigaTiga(x, t) {
+    for (let p = 0; p < 2; p++) {
+      const px = x + 2 + p * 22;
+      lingkaran(ctx, px, 242, 7, '#e8e0d0');
+      lingkaran(ctx, px, 242, 5, '#f8f2e4');
+      for (let i = 0; i < 3; i++)
+        lingkaran(ctx, px - 4 + i * 4, 233, 2.6, '#f2c17d');
+      teksPx(ctx, '3', px, 220, '#fffdf2', 6);
+    }
+    lingkaran(ctx, x + 30, 240, 3.2, '#f2c17d');    // 1 kue menunggu di nampan
+    lingkaran(ctx, x + 30, 239, 2, '#ffd9a3');
+    P(ctx, x + 24, 244, 12, 2, '#a3744a');
+    teksPx(ctx, 'sisa 1', x + 30, 218, '#ffd166', 5);
+    teksPx(ctx, '7:2 = 3 sisa 1', x + 12, 200, '#ffe9a3', 5);
+  }
+  function gambarPapanSisa2(x, t) {
+    papanLebar(x, ['7 : 2', '3 sisa 1'], 64);
+  }
+  function gambarKueCek(x, t) {
+    papanLebar(x, ['2x3=6', '6+1=7'], 48);
+    gambarCahaya(x, 206, 10, '#7dffa8', t);
+  }
+  /* --- p1-053: pembagian bersusun --- */
+  function gambarKartu96(x, t) {
+    teksPx(ctx, '9 ikat & 6 keping', x, 178, '#ffe9a3', 5);
+    P(ctx, x - 27, 188, 54, 52, '#1e2a44');         // papan tangga
+    P(ctx, x - 27, 188, 54, 2, '#37476f');
+    teksPx(ctx, '96 : 3', x, 193, '#fffdf2', 7);
+    P(ctx, x - 21, 206, 42, 1, '#5a6a94');
+    for (let i = 0; i < 9; i++) {                   // 9 ikat puluhan
+      const bx = x - 20 + i * 5;
+      P(ctx, bx, 211, 4, 6, '#c9a763');
+      P(ctx, bx, 213, 4, 1, '#8a6a44');
+    }
+    for (let i = 0; i < 6; i++)                     // 6 keping satuan
+      lingkaran(ctx, x - 19 + i * 5, 225, 1.8, '#ffe9a3');
+    P(ctx, x - 27, 236, 54, 2, '#141d33');
+    P(ctx, x - 22, 238, 3, 8, '#7a5230'); P(ctx, x + 19, 238, 3, 8, '#7a5230');
+  }
+  function gambarIkatSembilan(x, t) {
+    for (let p = 0; p < 3; p++) {
+      const px = x + 2 + p * 14;
+      lingkaran(ctx, px, 242, 6, '#e8e0d0');
+      lingkaran(ctx, px, 242, 4, '#f8f2e4');
+      P(ctx, px - 3, 230, 7, 8, '#c9a763');         // 1 ikat tiap piring
+      P(ctx, px - 3, 233, 7, 1, '#8a6a44');
+      teksPx(ctx, '1', px, 220, '#fffdf2', 5);
+    }
+    teksPx(ctx, '9 : 3 = 3 puluhan', x + 8, 202, '#ffe9a3', 5);
+  }
+  function gambarTurunkanEnam(x, t) {
+    for (let p = 0; p < 3; p++) {
+      const px = x + 2 + p * 14;
+      lingkaran(ctx, px, 242, 6, '#e8e0d0');
+      lingkaran(ctx, px, 242, 4, '#f8f2e4');
+      for (let k = 0; k < 2; k++)                   // 2 keping tiap piring
+        lingkaran(ctx, px - 2 + k * 5, 234, 2, '#ffe9a3');
+      teksPx(ctx, '2', px, 222, '#7dffa8', 5);
+    }
+    teksPx(ctx, '6 keping', x + 10, 206, '#a5d8ff', 5);
+  }
+  function gambarPapan32(x, t) {
+    papanLebar(x, ['96 : 3', '= 32', '3x32=96'], 58);
+  }
+  /* --- p1-054: tantangan kali-bagi --- */
+  function gambarTumpukan24(x, t) {
+    for (let s = 0; s < 6; s++) {
+      const sx = x - 20 + s * 10;
+      for (let b = 0; b < 4; b++)                   // 4 bola tiap tumpukan
+        lingkaran(ctx, sx, 218 - b * 6, 2.4, s % 2 ? '#a5d8ff' : '#ffe9a3');
+      P(ctx, sx - 4, 222, 9, 2, '#8a6a44');         // alas tumpukan
+    }
+    teksPx(ctx, '6 x 4 = 24', x + 5, 188, '#7dffa8', 7);
+  }
+  function gambarPiringBalik(x, t) {
+    for (let p = 0; p < 6; p++) {
+      const px = x - 20 + p * 10;
+      P(ctx, px - 4, 220, 9, 2, '#a3744a');         // piring kecil
+      for (let b = 0; b < 4; b++)                   // 4 bola: 2x2
+        lingkaran(ctx, px - 2 + (b % 2) * 5, 210 + Math.floor(b / 2) * 6, 2.2, p % 2 ? '#ffe9a3' : '#a5d8ff');
+    }
+    teksPx(ctx, '24 : 6 = 4', x + 5, 194, '#ffe9a3', 7);
+  }
+  function gambarKartuKaliBagi(x, t) {
+    const isi = ['6x4=24', '4x6=24', '24:6=4', '24:4=6'];
+    for (let i = 0; i < 4; i++) {
+      const kx = x - 18 + (i % 2) * 36, ky = 190 + Math.floor(i / 2) * 22;
+      P(ctx, kx - 16, ky, 32, 16, i < 2 ? '#fffdf2' : '#e8f4ff');
+      P(ctx, kx - 16, ky, 32, 2, '#c8b890');
+      P(ctx, kx - 16, ky + 14, 32, 2, '#c8b890');
+      teksPx(ctx, isi[i], kx, ky + 4, '#2a3757', 5);
+    }
+    teksPx(ctx, 'pasangan setia', x, 178, '#ffe9a3', 6);
+  }
+  function gambarTekaDuaPuluh(x, t) {
+    papanLebar(x, ['?x5=20', '20:5=4'], 52);
+    gambarCahaya(x, 206, 11, '#ffd166', t);
+  }
 
   const OBJEK_GAMBAR = {
     api: gambarApi, tulang: gambarTulang, tablet: gambarTablet, nol: gambarNol,
@@ -3240,6 +3986,18 @@
     layangEmpat: gambarLayangEmpat, layangDua: gambarLayangDua, layangEnam: gambarLayangEnam, papanCerita: gambarPapanCerita,
     kalengTujuh: gambarKalengTujuh, tigaDibagikan: gambarTigaDibagikan, permenEmpat: gambarPermenEmpat, papanPertanyaan: gambarPapanPertanyaan,
     papanTeka: gambarPapanTeka, jejakSembilan: gambarJejakSembilan, limaDitemukan: gambarLimaDitemukan, papanJawab: gambarPapanJawab,
+    barisLima: gambarBarisLima, papanCepat: gambarPapanCepat, loncatLima: gambarLoncatLima, kantongKelereng: gambarKantongKelereng,
+    pasangSandal: gambarPasangSandal, tiangLampu2: gambarTiangLampu2, tanggaLompat2: gambarTanggaLompat2, papanTabel2: gambarPapanTabel2,
+    jariSatu: gambarJariSatu, jariDua: gambarJariDua, bungaKelopak: gambarBungaKelopak, papanJam: gambarPapanJam,
+    gerbongSatu: gambarGerbongSatu, gerbongEmpat: gambarGerbongEmpat, nolEmas: gambarNolEmas, pijakanPuluhan: gambarPijakanPuluhan,
+    segitigaTiga: gambarSegitigaTiga, kursiEmpat: gambarKursiEmpat, tanggaDua: gambarTanggaDua, gridTigaEmpat: gambarGridTigaEmpat,
+    jalurEnam: gambarJalurEnam, tanggaTujuh: gambarTanggaTujuh, empatJalur: gambarEmpatJalur, benderaPuncak: gambarBenderaPuncak,
+    jariSembilan: gambarJariSembilan, papan27: gambarPapan27, kartuSembilan: gambarKartuSembilan, papanSepuluh: gambarPapanSepuluh,
+    kartu23: gambarKartu23, kaliSatuan: gambarKaliSatuan, kaliPuluhan: gambarKaliPuluhan, papan92: gambarPapan92,
+    nampanSepuluh: gambarNampanSepuluh, satuSatu: gambarSatuSatu, piringLima: gambarPiringLima, rotiEnam: gambarRotiEnam,
+    kueTujuh: gambarKueTujuh, kueTigaTiga: gambarKueTigaTiga, papanSisa2: gambarPapanSisa2, kueCek: gambarKueCek,
+    kartu96: gambarKartu96, ikatSembilan: gambarIkatSembilan, turunkanEnam: gambarTurunkanEnam, papan32: gambarPapan32,
+    tumpukan24: gambarTumpukan24, piringBalik: gambarPiringBalik, kartuKaliBagi: gambarKartuKaliBagi, tekaDuaPuluh: gambarTekaDuaPuluh,
   };
 
   function gambarStasiun(st, t) {
