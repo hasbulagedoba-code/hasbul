@@ -45,20 +45,6 @@
     flex:0 0 auto;
   }
 
-  /* ---------- chip penjuru (kiri-atas) ---------- */
-  .chip-wilayah {
-    position:fixed; top:calc(12px + env(safe-area-inset-top)); left:14px; z-index:25;
-    pointer-events:none;
-    background:#141d33; border:3px solid #2a3757; border-radius:12px;
-    padding:9px 13px 10px; box-shadow:0 5px 0 rgba(0,0,0,.35);
-    max-width:min(60vw,330px);
-  }
-  .chip-wilayah .nama { display:block; font-size:calc(18px * var(--skala)); font-weight:900; color:#ffd166; line-height:1.12; }
-  .chip-wilayah .slogan { display:block; font-size:calc(13.5px * var(--skala)); font-weight:800; color:#aec0e4; margin-top:3px; }
-  body.coarse .chip-wilayah { padding:7px 11px 8px; max-width:min(42vw,300px); }
-  body.coarse .chip-wilayah .slogan { display:none; }
-  body.coarse .chip-wilayah .nama { font-size:calc(15px * var(--skala)); }
-
   /* ---------- A- / A+ + tombol DUNIA ---------- */
   #akses {
     position:fixed; top:calc(12px + env(safe-area-inset-top)); right:14px; z-index:35;
@@ -149,23 +135,6 @@
     color:#9fb2d8; background:#2a3757; border-radius:7px; padding:5px 7px 4px;
   }
   .df-status.siap { color:#0d3a22; background:#5ee89b; }
-
-  /* ---------- petunjuk ---------- */
-  .hint {
-    position:fixed; left:50%; transform:translateX(-50%);
-    bottom:calc(16px + env(safe-area-inset-bottom)); z-index:25;
-    pointer-events:none; text-align:center;
-    font-size:calc(15px * var(--skala)); font-weight:800; color:#eef4ff;
-    background:#141d33; border:2px solid #2a3757; border-radius:999px;
-    padding:9px 18px; box-shadow:0 4px 0 rgba(0,0,0,.3);
-    opacity:0; transition:opacity .6s ease;
-    max-width:calc(100vw - 28px);
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-  }
-  .hint.tampil { opacity:1; }
-  .hint.pudar { opacity:0 !important; }
-  body.coarse .hint { bottom:calc(124px + env(safe-area-inset-bottom)); font-size:calc(13.5px * var(--skala)); padding:8px 15px; }
-  body.dlg-buka .hint { display:none; }
 
   /* ---------- tombol aksi besar (MASUK / LIHAT JUDUL / PERGI) ---------- */
   #aksiBtn {
@@ -275,12 +244,6 @@
     font-size:calc(clamp(17px, 5vw, 25px) * var(--skala));
     line-height:1.6; letter-spacing:1px; color:#ffd166;
   }
-  .intro .catatan { margin-top:18px; font-size:calc(14.5px * var(--skala)); font-weight:700; color:#aec0e4; line-height:1.5; }
-  .intro .ramah {
-    margin-top:12px; font-size:calc(13px * var(--skala)); font-weight:800; color:#7dffa8;
-    background:rgba(93,232,155,.08); border:2px solid rgba(93,232,155,.25);
-    border-radius:10px; padding:8px 10px; line-height:1.45;
-  }
   .intro button {
     margin-top:22px; font-family:'Press Start 2P',monospace;
     font-size:calc(13px * var(--skala));
@@ -307,11 +270,6 @@
   <div id="daftar" aria-label="Daftar judul Pintu 1"></div>
 </div>
 
-<div class="chip-wilayah" id="chipWilayah" aria-live="polite">
-  <span class="nama" id="chipNama">Pintu 1 &middot; Kamp Angka</span>
-  <span class="slogan" id="chipSlogan">100 judul menanti dijelajahi</span>
-</div>
-
 <div id="akses" aria-label="Pengaturan ukuran tulisan">
   <button id="btnDunia" type="button">&#8592; DUNIA</button>
   <button id="btnMin" type="button" aria-label="Perkecil tulisan">A&minus;</button>
@@ -319,8 +277,6 @@
 </div>
 
 <button id="btnDaftar" type="button" aria-label="Buka daftar judul">&#9776; JUDUL</button>
-
-<div class="hint tampil" id="hint">Ketuk papan judul &mdash; Akio berjalan ke sana</div>
 
 <button id="aksiBtn" type="button">LIHAT JUDUL</button>
 
@@ -347,9 +303,7 @@
 <div class="intro" id="intro">
   <div class="panel">
     <div class="akio-css" aria-hidden="true"></div>
-    <h1>PINTU 1<br>KAMP ANGKA</h1>
-    <div class="catatan">Setiap papan di kamp adalah sub-judul artikel:<br>dekati papan, pahami judulnya, lalu lanjut ke bahasan<br>bila kamu penasaran. Bahasan muncul sesuai pilihanmu.</div>
-    <div class="ramah">Tulisan besar &amp; nyaman untuk mata minus.</div>
+    <h1>PINTU 1 &middot;<br>KAMP ANGKA</h1>
     <button id="btnMasuk" type="button">MASUK KAMP</button>
   </div>
 </div>

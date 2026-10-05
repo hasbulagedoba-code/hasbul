@@ -18,10 +18,6 @@
   /* ---------- elemen ---------- */
   const layar = document.getElementById('layar');
   const ctx = layar.getContext('2d');
-  const chipNama = document.getElementById('chipNama');
-  const chipSlogan = document.getElementById('chipSlogan');
-  const chipEl = document.getElementById('chipWilayah');
-  const hintEl = document.getElementById('hint');
   const introEl = document.getElementById('intro');
   const btnMasuk = document.getElementById('btnMasuk');
   const btnDunia = document.getElementById('btnDunia');
@@ -138,7 +134,6 @@
     layarSkr = trans.tujuan;
     player.x = Math.max(14, Math.min(W - 14, trans.masukX));
     player.vx = 0; player.state = 'diam';
-    perbaruiChip(true);
     segarDaftar();
   }
 
@@ -151,34 +146,6 @@
   ];
   let kilau = [];
   const rand = (a, b) => a + Math.random() * (b - a);
-
-  /* ---------- hint ---------- */
-  const hintDasar = adalahSentuh
-    ? 'Ketuk papan judul - Akio berjalan ke sana'
-    : 'Tekan \u2190 \u2192 untuk berjalan \u00b7 Enter saat dekat papan';
-  hintEl.textContent = hintDasar;
-  let hintHilang = false;
-  function hilangkanHint() { if (!hintHilang) { hintHilang = true; hintEl.classList.add('pudar'); } }
-  setTimeout(hilangkanHint, 14000);
-
-  /* ---------- chip ---------- */
-  let chipKey = '';
-  function perbaruiChip(paksa) {
-    const key = kunciLayar();
-    if (key === chipKey && !paksa) return;
-    chipKey = key;
-    if (layarSkr.mode === 'pusat') {
-      chipNama.textContent = 'Pintu 1 \u00b7 Kamp Angka';
-      chipSlogan.textContent = totalTerbaca() + '/100 judul terjelajahi';
-    } else {
-      const kat = katAktif();
-      chipNama.textContent = kat.nama;
-      chipSlogan.textContent = kat.sub + ' \u00b7 Lapisan ' + (layarSkr.hal + 1) + '/' + nHal(layarSkr.k);
-    }
-    chipEl.classList.remove('tampil');
-    void chipEl.offsetWidth;
-    chipEl.classList.add('tampil');
-  }
 
   /* ---------- input ---------- */
   const keys = { kiri: false, kanan: false };
@@ -216,13 +183,12 @@
     if (wy > 130) {
       for (const o of objek()) {
         if (o.type === 'npc') continue;
-        if (Math.abs(wx - o.x) < 26) { tujuObject(o); hilangkanHint(); return; }
+        if (Math.abs(wx - o.x) < 26) { tujuObject(o); return; }
       }
     }
     if (wy > GROUND - 60) {
       player.target = Math.max(14, Math.min(W - 14, wx));
       player.tuju = null;
-      hilangkanHint();
     }
   });
 
@@ -296,8 +262,7 @@
     if (!daftarEl) return;
     let html = '';
     if (layarSkr.mode === 'pusat') {
-      html += '<div class="df-kepala"><span class="df-judul">PINTU 1 \u00b7 100 JUDUL</span>'
-        + '<span class="df-sub">Ketuk pintu \u2014 Akio berjalan ke sana</span></div>';
+      html += '';
       P1.KATEGORI.forEach((kat, i) => {
         const baca = terbaca(i + 1);
         const penuh = baca >= kat.jumlah;
@@ -335,7 +300,6 @@
     if (baris.dataset.g !== undefined) {
       const i = parseInt(baris.dataset.g, 10);
       tujuObject({ type: 'gerbang', x: S.GERBANG_X(i), i });
-      hilangkanHint();
       return;
     }
     if (baris.dataset.t) {
@@ -345,7 +309,7 @@
       if (layarSkr.mode === 'area' && layarSkr.k === t.k && halT === layarSkr.hal) {
         const daftar = daftarStasiun();
         const idx = daftar.findIndex(x => x.id === t.id);
-        if (idx >= 0) { tujuObject({ type: 'judul', x: S.STASIUN_X[idx], t }); hilangkanHint(); }
+        if (idx >= 0) { tujuObject({ type: 'judul', x: S.STASIUN_X[idx], t }); }
       } else {
         mulaiTransisi({ mode: 'area', k: t.k, hal: halT }, 36, t.id);
       }
@@ -399,7 +363,6 @@
       player.vx *= 1 - Math.min(1, dt * 9);
       if (Math.abs(player.vx) < 4) { player.vx = 0; player.state = 'diam'; }
     }
-    if (Math.abs(player.vx) > 6 && !hintHilang) hilangkanHint();
     player.x = Math.max(14, Math.min(W - 14, player.x + player.vx * dt));
     player.walkT += Math.abs(player.vx) * dt;
 
@@ -431,8 +394,6 @@
     }
     for (const kl of kilau) kl.umur += dt;
     kilau = kilau.filter(kl => kl.umur < kl.hidup);
-
-    perbaruiChip();
   }
 
   function updatePartikel(dt, t) {
