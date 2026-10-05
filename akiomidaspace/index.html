@@ -162,16 +162,6 @@
   }
   .leg-status.buka { color:#0d3a22; background:#5ee89b; }
 
-  /* ---------- label AKIO mengikuti bola (besar & terbaca) ---------- */
-  #labelAkio {
-    position:fixed; left:0; top:0; z-index:20; pointer-events:none;
-    font-size:calc(13.5px * var(--skala)); font-weight:900; letter-spacing:.6px;
-    color:#ffd166; background:rgba(10,15,28,.8);
-    border:2px solid rgba(255,209,102,.45); border-radius:999px;
-    padding:3px 11px 4px; text-shadow:0 1px 0 rgba(0,0,0,.55);
-    will-change:transform; white-space:nowrap;
-  }
-
   /* ---------- petunjuk ---------- */
   .hint {
     position:fixed; left:50%; transform:translateX(-50%);
@@ -223,11 +213,13 @@
     background:#28365c; border-color:#4d6196;
   }
 
-  /* ---------- layar muat gerbang (pixel) ---------- */
+  /* ---------- layar muat gerbang (pixel, simetris, anti-terpotong) ---------- */
   .muat {
     position:fixed; inset:0; z-index:60;
-    display:flex; align-items:center; justify-content:center;
+    display:flex;                                  /* panel margin:auto: tengah saat muat, bisa digulir saat layar pendek */
     background:rgba(8,12,24,.88);
+    overflow-y:auto; -webkit-overflow-scrolling:touch;
+    padding:20px 12px;
     opacity:0; visibility:hidden; pointer-events:none;
     transition:opacity .4s ease, visibility 0s linear .4s;
   }
@@ -236,14 +228,14 @@
     transition:opacity .4s ease;
   }
   .muat-aura {
-    position:absolute; inset:-20%; pointer-events:none;
+    position:fixed; inset:0; pointer-events:none;   /* fixed: tak ikut menggulung */
     background:radial-gradient(circle at 50% 42%, var(--aura, rgba(99,200,255,.16)), rgba(8,12,24,0) 60%);
   }
   .muat-isi {
-    position:relative; text-align:center; max-width:94vw;
+    position:relative; text-align:center; width:min(372px, 94vw); margin:auto;
     background:#141d33; border:4px solid #2a3757; border-radius:14px;
     box-shadow:0 10px 0 rgba(0,0,0,.4);
-    padding:26px 22px 20px;
+    padding:22px 20px;
   }
   .muat-lompat { position:relative; width:54px; height:72px; margin:0 auto 16px; }
   .muat-bola {
@@ -283,19 +275,21 @@
   .muat-titik span:nth-child(3) { animation-delay:.4s; }
   @keyframes muatKedip { 0%,60%,100% { opacity:.25; } 30% { opacity:1; } }
   .muat-iklan {
-    margin:18px auto 0; width:min(330px,84vw);
+    margin:16px auto 0; width:min(324px, 100%);   /* pas mengikuti panel: bingkai simetris di semua layar */
     background:rgba(255,255,255,.05);
-    border:2px solid #2a3757; border-radius:10px; padding:11px 8px 7px;
+    border:2px solid #2a3757; border-radius:10px; padding:10px;
   }
   .muat-label {
     display:block; font-family:'Press Start 2P',monospace;
     font-size:calc(8px * var(--skala));
-    letter-spacing:2px; color:#6d80aa; margin-bottom:3px;
+    letter-spacing:2px; color:#6d80aa; margin:0 0 4px; text-align:center;
   }
   .muat-slot { min-height:250px; }
   .muat-slot:not(:empty) { min-height:0; }
+  .muat-slot .ad-slot { margin:0 auto !important; }   /* rapikan margin injeksi iklan agar benar-benar di tengah */
+  .muat-slot iframe { background:#18213a !important; } /* sebelum kreatif iklan termuat: biru tua rapi, bukan dunia tembus pandang */
   .muat-garis {
-    margin:16px auto 0; width:min(330px,84vw); height:6px; border-radius:3px;
+    margin:14px auto 0; width:min(324px, 100%); height:6px; border-radius:3px;
     background:#0e1526; overflow:hidden;
   }
   .muat-garis span {
@@ -305,12 +299,26 @@
   }
   @keyframes muatGaris { from { transform:translateX(-110%); } to { transform:translateX(300%); } }
   .muat-batal {
-    position:absolute; top:calc(12px + env(safe-area-inset-top)); right:14px; z-index:61;
-    font-family:'Press Start 2P',monospace; font-size:calc(11px * var(--skala));
-    color:#e3ebfa; background:#1a2440; border:3px solid #37476f; border-radius:10px;
-    padding:11px 15px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
+    display:block; margin:16px auto 0;              /* di dalam panel, tengah bawah: komposisi simetris */
+    font-family:'Press Start 2P',monospace; font-size:calc(12px * var(--skala));
+    color:#e3ebfa; background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
+    border-radius:10px; padding:13px 24px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
   }
-  .muat-batal:active { transform:translateY(3px); box-shadow:0 1px 0 #0a0f1c; }
+  .muat-batal:active { transform:translateY(3px); border-bottom-width:2px; box-shadow:0 1px 0 #0a0f1c; }
+  /* layar pendek: padatkan tanpa memotong iklan — overlay tetap bisa digulir */
+  @media (max-height:680px) {
+    .muat { padding:12px 10px; }
+    .muat-isi { padding:16px 16px 14px; }
+    .muat-lompat { width:44px; height:58px; margin-bottom:10px; }
+    .muat-bola { height:42px; bottom:12px; }
+    .muat-bayangan { left:9px; right:9px; }
+    .muat-judul { font-size:calc(clamp(11px, 3vw, 14px) * var(--skala)); }
+    .muat-iklan { margin-top:12px; }
+    .muat-batal { margin-top:12px; padding:11px 20px; }
+  }
+  @media (max-height:560px) {
+    .muat-lompat { display:none; }
+  }
   @media (prefers-reduced-motion:reduce) {
     .muat-bola, .muat-bayangan, .muat-titik span, .muat-garis span { animation:none; }
   }
@@ -387,8 +395,6 @@
   <div id="legenda" aria-label="Daftar wilayah Perpustakaan Matematika"></div>
 </div>
 
-<div id="labelAkio" aria-hidden="true">AKIO</div>
-
 <div class="chip-wilayah" id="chipWilayah" aria-live="polite">
   <span class="kecil">WILAYAH</span>
   <span class="nama" id="chipNama">Dunia Akiomida</span>
@@ -425,8 +431,8 @@
       <div class="muat-slot" id="muatSlot"></div>
     </div>
     <div class="muat-garis" aria-hidden="true"><span></span></div>
+    <button class="muat-batal" id="muatBatal" type="button">KEMBALI</button>
   </div>
-  <button class="muat-batal" id="muatBatal" type="button">KEMBALI</button>
 </div>
 
 <div class="intro" id="intro">

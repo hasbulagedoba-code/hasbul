@@ -5,7 +5,7 @@
      camX abadi 0 — karakter mustahil hilang dari pandangan.
    - Tugas user jelas: gerakkan Akio (bulatan emas) ke pintu wilayah.
    - Ramah MATA MINUS: daftar wilayah bernomor dengan huruf besar,
-     tombol A- / A+ untuk memperbesar semua tulisan, label AKIO besar,
+     tombol A- / A+ untuk memperbesar semua tulisan,
      tombol MASUK besar di mobile.
    - SYARIAH: tidak ada makhluk hidup — burung & kupu-kupu diganti
      simbol matematika melayang.
@@ -27,7 +27,6 @@
   const btnMasuk = document.getElementById('btnMasuk');
   const legendaEl = document.getElementById('legenda');
   const btnLegenda = document.getElementById('btnLegenda');
-  const labelAkio = document.getElementById('labelAkio');
   const btnMasukPintu = document.getElementById('btnMasukPintu');
 
   const adalahSentuh = window.matchMedia('(pointer: coarse)').matches
@@ -283,21 +282,6 @@
     }
   }
 
-  /* ---------- label AKIO mengikuti bola (huruf besar, mudah dibaca) ---------- */
-  let labelPos = '';
-  function perbaruiLabelAkio() {
-    if (!rectCache || !labelAkio) return;
-    const vw = window.innerWidth;
-    let sx = rectCache.left + player.x / W * rectCache.width;
-    sx = Math.max(52, Math.min(vw - 52, sx));      // tak terpotong di tepi layar
-    const sy = rectCache.top + (player.y - 24 * player.scale) / H * rectCache.height;
-    const key = (sx | 0) + ':' + (sy | 0);
-    if (key !== labelPos) {
-      labelPos = key;
-      labelAkio.style.transform = 'translate(' + sx.toFixed(1) + 'px,' + sy.toFixed(1) + 'px) translate(-50%,-100%)';
-    }
-  }
-
   /* ---------- pembaruan ---------- */
   const KECEPATAN = 112, MASUK_LAMA = 0.8;
   let diamDiPintu = 0;
@@ -330,7 +314,6 @@
         if (u >= 1) { m.fase = 'selesai'; bukaMuatan(m.z); }
       }
       perbaruiChip();
-      perbaruiLabelAkio();
       if (btnMasukPintu) btnMasukPintu.classList.remove('tampil');
       return;
     }
@@ -372,7 +355,6 @@
     }
 
     perbaruiChip();
-    perbaruiLabelAkio();
   }
 
   function gerak(dt) {
