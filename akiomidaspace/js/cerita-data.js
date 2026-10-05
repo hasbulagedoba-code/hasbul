@@ -705,7 +705,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'timbangMiring', judul: 'Kalau Tidak Rata?',
-          teks: 'Sekarang piring kiri menulis 5, piring kanan menulis 8. Timbangan miring: nilainya tidak sama, maka tanda = tak boleh dipakai. Yang pas adalah tanda rahang > atau < — dan kalimatnya benar kembali.',
+          teks: 'Sekarang piring kiri menulis 5, piring kanan menulis 8. Timbangan miring: nilainya tidak sama, maka tanda = tak boleh dipakai. Yang pas tanda rahang <, mulutnya membuka ke 8 yang lebih berat — kalimat 5 < 8 benar kembali.',
         },
         {
           objek: 'papan1557', judul: 'Pencipta Tanda =',
@@ -854,6 +854,342 @@ window.CERITA = (function () {
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kalimatnya Terbaca!',
           teks: 'Jadi setiap kalimat matematika adalah cerita mini: ada siapa, ada peristiwa, ada akhirnya. Bacalah pelan-pelan, pahami dengan tenang — begitulah ilmu masuk dengan nyaman. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-031 · Penjumlahan Pertama — pagi lingkar pasir kelereng ----- */
+    'p1-031': {
+      tema: 'lingkar',
+      npc: { glif: '5', ucap: ['Dua dan tiga', 'jadi lima!'] },
+      stasiun: [
+        {
+          objek: 'lingkarPasir', judul: 'Lingkar Pasir Kita',
+          teks: 'Di lingkar pasir ini kelereng menjadi sahabat bermain sejak lama. Permainannya sederhana: kelereng digulung pelan lalu berhenti berdampingan. Hari ini lingkar kita berubah menjadi tempat belajar angka.',
+        },
+        {
+          objek: 'kelerengDua', judul: 'Dua Kelereng Biru',
+          teks: 'Pertama, dua kelereng biru berhenti di lingkar. Hitung bersama: satu, dua. Jumlahnya dua.',
+        },
+        {
+          objek: 'kelerengTiga', judul: 'Tiga Kelereng Merah',
+          teks: 'Kemudian tiga kelereng merah bergulir masuk. Hitung juga: satu, dua, tiga. Jumlahnya tiga.',
+        },
+        {
+          objek: 'gabungLima', judul: 'Digabung Jadi Lima',
+          teks: 'Sekarang kelereng biru dan merah berkumpul dalam satu lingkar. Hitung semuanya: satu, dua, tiga, empat, lima. Tulisannya: 2 + 3 = 5. Menggabungkan dua kelompok lalu menghitung dari awal — itulah penjumlahan pertama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jadi Satu Kelompok!',
+          teks: 'Jadi penjumlahan itu menggabungkan kelompok yang terpisah menjadi satu, lalu menghitung semuanya dari awal. Dua dan tiga kini menjadi lima. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-032 · Berhitung dengan Jari — ruang kelas pagi ----- */
+    'p1-032': {
+      tema: 'kelas',
+      npc: { glif: 'J', ucap: ['Jari siap', 'menghitung!'] },
+      stasiun: [
+        {
+          objek: 'telapak', judul: 'Alat Hitung Bawaan',
+          teks: 'Buka kedua tanganmu: sepuluh jari selalu siap menghitung di mana saja, tanpa alat apa pun. Sejak dulu, jari menjadi alat hitung pertama bagi anak-anak di seluruh dunia.',
+        },
+        {
+          objek: 'angkatTiga', judul: 'Angkat Tiga Jari',
+          teks: 'Coba angkat tiga jari, sisanya menekuk. Hitung yang berdiri: satu, dua, tiga. Tiga jari berdiri, dua jari menekuk — satu tangan tetap berisi lima jari.',
+        },
+        {
+          objek: 'angkatTigaEmpat', judul: 'Tangan Kiri Tiga, Kanan Empat',
+          teks: 'Sekarang tangan kiri mengangkat tiga jari, tangan kanan empat jari. Hitung semua yang berdiri: satu sampai tujuh. Jadi 3 + 4 = 7.',
+        },
+        {
+          objek: 'jariPenuh', judul: 'Sepuluh, Penuh!',
+          teks: 'Angkat sembilan, satu jari menekuk — hampir penuh. Angkat sepuluh: kedua tangan membuka lebar. Dari kosong sampai sepuluh, jari selalu sanggup menemani berhitung.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Alat di Tangan Sendiri!',
+          teks: 'Jadi sepuluh jari adalah alat hitung pertamamu: angkat yang diperlukan, hitung yang berdiri. Tiga dan empat berkumpul menjadi tujuh. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-033 · Menjumlah Lewat 10 — gudang senja, kotak sepuluh ----- */
+    'p1-033': {
+      tema: 'gudang',
+      npc: { glif: '8', ucap: ['Isi dulu sampai', 'sepuluh!'] },
+      stasiun: [
+        {
+          objek: 'kotakSepuluh', judul: 'Kotak Berisi Delapan',
+          teks: 'Di gudang berdiri kotak berisi sepuluh tempat: lima di baris atas, lima di baris bawah. Kotak ini sudah berisi 8 bungkah, dua tempat masih kosong.',
+        },
+        {
+          objek: 'limaDatang', judul: 'Datang Lima Bungkah',
+          teks: 'Pengantar tiba membawa 5 bungkah baru. Lebih banyak daripada tempat kosong? Sabar — isi yang kosong lebih dulu. Ada 2 tempat kosong, maka 2 bungkah masuk dan kotak menjadi penuh.',
+        },
+        {
+          objek: 'tumpukTiga', judul: 'Sisanya Ditumpuk',
+          teks: 'Sisa 3 bungkah tak kebagian tempat, maka ditumpuk rapi di atas kotak. Hitung isi gudang sekarang: 10 bungkah di dalam kotak, 3 di puncak tumpukan.',
+        },
+        {
+          objek: 'papanDelapanLima', judul: 'Catatan Gudang',
+          teks: 'Di papan catatan tertulis: 8 + 5 = 13. Caranya: penuhi kotak sampai 10 lebih dulu, sisanya 3 ditumpuk di atas. Hasilnya tetap 13.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Penuh Dulu Sisanya!',
+          teks: 'Jadi menjumlah lewat 10 punya trik: penuhi dulu sampai sepuluh, sisanya tinggal ditumpuk. Delapan dan lima bertemu menjadi tiga belas. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-034 · Penjumlahan Bersusun — meja tulis malam berlampu ----- */
+    'p1-034': {
+      tema: 'tulis',
+      npc: { glif: '2', ucap: ['Satuan di bawah', 'satuan!'] },
+      stasiun: [
+        {
+          objek: 'papanBersusun', judul: 'Angka Berbaris Rapi',
+          teks: 'Malam ini kita menyusun angka seperti barisan yang rapi: satuan duduk di bawah satuan, puluhan di bawah puluhan. Lihat papan: 23 berdiri di atas, 14 di bawahnya, ditahan garis lurus.',
+        },
+        {
+          objek: 'kolomSatuan', judul: 'Kolom Satuan Dulu',
+          teks: 'Kerjakan kolom satuan lebih dulu: 3 ditambah 4 menjadi 7. Tulis 7 di kolom satuan.',
+        },
+        {
+          objek: 'kolomPuluhan', judul: 'Kolom Puluhan Menyusul',
+          teks: 'Lalu kolom puluhan: 2 ditambah 1 menjadi 3. Tulis 3 di tempatnya. Baca hasilnya pelan-pelan: tiga puluh tujuh.',
+        },
+        {
+          objek: 'papanHasilTambah', judul: 'Catatan Lengkap',
+          teks: 'Papan catatan kini lengkap: 23 + 14 = 37. Tidak ada angka yang tersesat, karena setiap angka tinggal di kolomnya masing-masing.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rapi Itu Mudah!',
+          teks: 'Jadi penjumlahan bersusun itu menyusun angka per kolom: satuan bertemu satuan, puluhan bertemu puluhan, dikerjakan dari kanan. 23 dan 14 menjadi 37. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-035 · Menyimpan ke Puluhan — fajar pos hitung dua kotak ----- */
+    'p1-035': {
+      tema: 'menara',
+      npc: { glif: '9', ucap: ['Titipan rapi,', 'hitungan amanah!'] },
+      stasiun: [
+        {
+          objek: 'posHitung', judul: 'Pos Hitung Dua Kotak',
+          teks: 'Di pos hitung ada dua kotak: kotak kecil untuk keping satuan, kotak besar untuk ikat puluhan. Angka 35 tinggal di sini: 3 ikat di kotak besar, 5 keping di kotak kecil.',
+        },
+        {
+          objek: 'limaTujuh', judul: 'Lima + Tujuh = Dua Belas',
+          teks: 'Sekarang datang 7 keping untuk ditambahkan. Kotak kecil hanya sanggup menampung sampai 9, maka kepingnya dihitung dulu: 5 + 7 = 12. Dua belas — terlalu ramai untuk satu kotak kecil!',
+        },
+        {
+          objek: 'simpanSatu', judul: 'Satu Disimpan ke Sebelah',
+          teks: 'Maka 2 keping ditulis di kolom satuan, sedangkan 1 keping yang berpindah menjadi puluhan disimpan ke kolom sebelah — dicatat rapi seperti titipan yang dijaga amanah.',
+        },
+        {
+          objek: 'papanSimpan', judul: 'Simpanan Dihitung Juga',
+          teks: 'Kotak besar menerima simpanan itu: 3 ikat lama ditambah 1 ikat baru menjadi 4 ikat. Hasilnya 35 + 7 = 42. Titipan terbayar penuh.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Amanah Tersalurkan!',
+          teks: 'Jadi menyimpan itu mengantar kelebihan ke tempat yang benar: satuan yang penuh menitipkan satu ke kotak puluhan. 35 + 7 = 42, amanah tersalurkan rapi. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-036 · Pengurangan Pertama — sore piknik alas tenun ----- */
+    'p1-036': {
+      tema: 'piknik',
+      npc: { glif: 'k', ucap: ['Lima kue,', 'sisa tiga!'] },
+      stasiun: [
+        {
+          objek: 'piringLima', judul: 'Piring Lima Kue',
+          teks: 'Meja piknik menyajikan piring berisi 5 kue. Hitung dulu sebelum disantap: satu, dua, tiga, empat, lima.',
+        },
+        {
+          objek: 'duaDimakan', judul: 'Dua Dimakan',
+          teks: 'Dua kue diambil dan dimakan dengan selera. Maka kita tulis 5 − 2: tanda kurang mencatat, dari lima ada dua yang pergi.',
+        },
+        {
+          objek: 'tigaTersisa', judul: 'Tiga Tersisa di Piring',
+          teks: 'Piring kini menyisakan 3 kue. Hitung lagi: satu, dua, tiga. Jadi 5 − 2 = 3.',
+        },
+        {
+          objek: 'bungkusNanti', judul: 'Bungkus untuk Nanti',
+          teks: 'Tiga kue sisa dibungkus rapi untuk esok hari. Berkurang bukan berarti kehilangan: yang dimakan mengenyangkan, yang tersisa dijaga baik-baik.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sisa Itu Jelas!',
+          teks: 'Jadi pengurangan itu mencari sisa: hitung yang ada, catat yang pergi, hitung lagi yang tertinggal. Lima kue dimakan dua, sisanya tiga. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-037 · Pengurangan Bersusun — malam kantor hitung lampu minyak ----- */
+    'p1-037': {
+      tema: 'kantor',
+      npc: { glif: 'L', ucap: ['Susun rapi,', 'kurang tertib!'] },
+      stasiun: [
+        {
+          objek: 'papanKurangBersusun', judul: 'Susun Dulu, Kurang Kemudian',
+          teks: 'Di meja hitung, pengurangan pun disusun rapi seperti penjumlahan: 47 berdiri di atas, 23 di bawahnya. Satuan bertemu satuan, puluhan bertemu puluhan.',
+        },
+        {
+          objek: 'kurangSatuan', judul: 'Kolom Satuan Dulu',
+          teks: 'Kolom satuan dulu: 7 dikurangi 3 menjadi 4. Tulis 4 di bawah kolom satuan.',
+        },
+        {
+          objek: 'kurangPuluhan', judul: 'Kolom Puluhan Menyusul',
+          teks: 'Lalu kolom puluhan: 4 dikurangi 2 menjadi 2. Tulis 2 di tempatnya. Baca hasilnya: dua puluh empat.',
+        },
+        {
+          objek: 'papanHasilKurang', judul: 'Catatan Selesai',
+          teks: 'Catatan selesai: 47 − 23 = 24. Bersusun membuat pengurangan tertib — tak ada angka yang tertukar tempat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tertib Itu Tenang!',
+          teks: 'Jadi pengurangan bersusun mengikuti adab yang sama: susun per kolom, kerjakan dari satuan lebih dulu. 47 kurang 23, sisanya jelas 24. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-038 · Teknik Meminjam — sore kampung tetangga ----- */
+    'p1-038': {
+      tema: 'tetangga',
+      npc: { glif: 'M', ucap: ['Pinjam satu,', 'kembalikan!'] },
+      stasiun: [
+        {
+          objek: 'papanTakMuat', judul: 'Satuan Kurang, Bagaimana?',
+          teks: 'Kita kurangi 15 dari 42. Kolom satuan menuliskan 2 di atas dan 5 di bawah. Bagaimana mengurangi 5 dari 2? Tenang — ada teknik tua yang terkenal: meminjam.',
+        },
+        {
+          objek: 'pinjamSatu', judul: 'Pinjam Satu Puluhan',
+          teks: 'Dari kolom puluhan dipinjam satu ikat: angka 4 menyusut menjadi 3. Ikat itu dibuka menjadi 10 keping dan menghampiri satuan — kini 2 keping dan 10 keping berkumpul menjadi 12.',
+        },
+        {
+          objek: 'duaBelasKurangLima', judul: 'Dua Belas Kurang Lima',
+          teks: 'Satuan pun sanggup: 12 − 5 = 7. Tulis 7 di kolom satuan.',
+        },
+        {
+          objek: 'papanHasilPinjam', judul: 'Pinjaman Tercatat',
+          teks: 'Kolom puluhan melanjutkan: 3 dikurangi 1 menjadi 2. Hasilnya 42 − 15 = 27. Pinjaman satu ikat tercatat wajar — tak ada yang hilang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pinjam Itu Solusi!',
+          teks: 'Jadi jika satuan kurang, pinjam satu puluhan: satuan membesar menjadi 12, puluhan menyusut satu. 42 − 15 = 27 — seperti meminjam gula ke tetangga lalu mengembalikannya tepat waktu. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-039 · Keluarga Angka — pagi teras kayu empat kartu ----- */
+    'p1-039': {
+      tema: 'teras',
+      npc: { glif: 'F', ucap: ['Satu keluarga,', 'empat kalimat!'] },
+      stasiun: [
+        {
+          objek: 'tigaSahabat', judul: 'Tiga Sahabat Angka',
+          teks: 'Di teras ini berkumpul tiga sahabat angka: 3, 4, dan 7. Mereka sekeluarga — selalu hadir bersama dalam kalimat-kalimat yang anggotanya tak pernah berganti.',
+        },
+        {
+          objek: 'kalimatTambahDua', judul: 'Dua Kalimat Tambah',
+          teks: 'Kalimat tambah keluarga ini ada dua: 3 + 4 = 7 dan 4 + 3 = 7. Posisi boleh ditukar, jumlahnya tetap 7.',
+        },
+        {
+          objek: 'kalimatKurangDua', judul: 'Dua Kalimat Kurang',
+          teks: 'Kalimat kurangnya juga dua: 7 − 3 = 4 dan 7 − 4 = 3. Yang terbesar berkurang oleh salah satu sahabatnya, sisanya sahabat yang satu lagi.',
+        },
+        {
+          objek: 'kartuEmpat', judul: 'Empat Kartu Satu Keluarga',
+          teks: 'Empat kartu tergantung berderet: dua kartu tambah, dua kartu kurang — semuanya hanya memakai 3, 4, dan 7. Hafal satu kartu, tiga kartu lainnya terbuka sendiri.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sekeluarga Selamanya!',
+          teks: 'Jadi keluarga angka adalah empat kalimat dari tiga anggota: dua tambah, dua kurang. Keluarga 3, 4, 7 tak akan pernah berganti anggota. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-040 · Soal Cerita Tambah — siang bukit angin layang-layang ----- */
+    'p1-040': {
+      tema: 'layang',
+      npc: { glif: '6', ucap: ['Empat plus dua', 'jadi enam!'] },
+      stasiun: [
+        {
+          objek: 'layangEmpat', judul: 'Cerita di Bukit',
+          teks: 'Budi bermain layang-layang di bukit yang berangin. Empat layang-layang miliknya menari di langit. Cerita hari ini dimulai dari angka 4.',
+        },
+        {
+          objek: 'layangDua', judul: 'Ibu Membawa 2 Lagi',
+          teks: 'Ibu tiba membawa 2 layang-layang baru hasil belian. Maka cerita berkata: 4 ditambah 2. Tulisan singkatnya: 4 + 2.',
+        },
+        {
+          objek: 'layangEnam', judul: 'Hitung Semuanya',
+          teks: 'Sekarang hitung layang-layang di langit: satu, dua, tiga, empat, lima, enam. Jawabannya: 4 + 2 = 6.',
+        },
+        {
+          objek: 'papanCerita', judul: 'Kalimat Dari Cerita',
+          teks: 'Papan di bukit menuliskan kalimat cerita: 4 + 2 = 6. Soal cerita hanyalah kisah yang memakai angka — cari yang digabung, tulis kalimatnya, hitung.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Cerita Jadi Hitungan!',
+          teks: 'Jadi soal cerita tambah itu ramah: temukan dua kelompok yang dipersatukan, tulis kalimatnya, lalu hitung. Empat layang-layang bertemu dua menjadi enam. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-041 · Soal Cerita Kurang — sore halaman bangku berbagi ----- */
+    'p1-041': {
+      tema: 'berbagi',
+      npc: { glif: '7', ucap: ['Tujuh permen,', 'tiga pergi!'] },
+      stasiun: [
+        {
+          objek: 'kalengTujuh', judul: 'Tujuh Permen di Kaleng',
+          teks: 'Kaleng permen di bangku halaman berisi 7 permen. Dina membukanya dan menghitung: satu sampai tujuh. Cerita dimulai: ada 7.',
+        },
+        {
+          objek: 'tigaDibagikan', judul: 'Tiga Dibagikan',
+          teks: 'Tiga permen dibagikan kepada teman yang lewat. Satu, dua, tiga — tiga permen berpindah tangan. Ceritanya: dari 7, ada 3 yang pergi. Tulisnya: 7 − 3.',
+        },
+        {
+          objek: 'permenEmpat', judul: 'Sisa Empat di Kaleng',
+          teks: 'Kaleng ditutup kembali, isinya tinggal 4. Hitung sisa: satu, dua, tiga, empat. Jawabannya: 7 − 3 = 4.',
+        },
+        {
+          objek: 'papanPertanyaan', judul: 'Pertanyaan Tersembunyi',
+          teks: 'Di papan cerita tertulis soalnya: ada 7 permen, 3 dibagikan, sisa berapa? Setiap soal cerita menyimpan pertanyaan — temukan dulu pertanyaannya, baru hitung.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sisanya Terjawab!',
+          teks: 'Jadi soal cerita kurang menanyakan sisa: kenali angka awal, hitung yang pergi, kurangkan. Tujuh permen dibagikan tiga, tersisa empat. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-042 · Tantangan Tambah-Kurang — malam kabut papan misteri ----- */
+    'p1-042': {
+      tema: 'misteri',
+      npc: { glif: '?', ucap: ['Siapa angka', 'yang hilang?'] },
+      stasiun: [
+        {
+          objek: 'papanTeka', judul: 'Angka yang Kabur',
+          teks: 'Di papan misteri tertulis: 4 + ? = 9. Satu angka membawa diri dan meninggalkan lubang. Kalimat matematika kini berlubang — dan kamulah detektif yang menjaga kasus ini.',
+        },
+        {
+          objek: 'jejakSembilan', judul: 'Jejak di Tempat Kejadian',
+          teks: 'Jejak di tempat kejadian terbaca: 9 titik cahaya berhenti di papan, itu nilai akhir kalimat. Empat di antaranya berdiri dekat angka 4 di sisi kiri.',
+        },
+        {
+          objek: 'limaDitemukan', judul: 'Hitung Kekurangannya',
+          teks: 'Detektif menghitung kekurangannya: dari 4 menuju 9 ada 5 langkah. Maka angka yang kabur adalah 5 — kalimat kembali utuh: 4 + 5 = 9.',
+        },
+        {
+          objek: 'papanJawab', judul: 'Kasus Ditutup',
+          teks: 'Papan misteri kini tertulis 4 + 5 = 9. Kasus ditutup: angka yang hilang ditemukan dengan menghitung mundur dari jawaban.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Detektif Angka!',
+          teks: 'Jadi kalimat berlubang adalah teka-teki yang ramah: lihat jawabannya, hitung kekurangannya, temukan angkanya. Empat dan lima berkumpul menjadi sembilan. Owalah, ternyata begini toh — mudah, bukan?',
         },
       ],
     },
