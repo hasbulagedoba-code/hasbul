@@ -351,11 +351,6 @@
     animation:melayang 2.6s ease-in-out infinite;
   }
   @keyframes melayang { 0%,100% { transform:translateY(0) scale(1,1); } 50% { transform:translateY(-10px) scale(.97,1.04); } }
-  .intro .kecil {
-    display:block; font-family:'Press Start 2P',monospace;
-    font-size:calc(9px * var(--skala));
-    letter-spacing:2px; color:#8fa2c8; margin-bottom:14px;
-  }
   .intro h1 {
     font-family:'Press Start 2P',monospace;
     font-size:calc(clamp(17px, 5vw, 26px) * var(--skala));
@@ -432,11 +427,10 @@
 <div class="intro" id="intro">
   <div class="panel">
     <div class="akio-css" aria-hidden="true"></div>
-    <span class="kecil">PERPUSTAKAAN MATEMATIKA</span>
     <h1>DUNIA<br>AKIOMIDA</h1>
     <div class="bawah">Enam wilayah dalam satu layar.</div>
     <div class="catatan">Tugasmu satu: gerakkan Akio, bulatan emas,<br>ke pintu wilayah yang dituju.</div>
-    <div class="ramah">Tulisan besar &amp; nyaman untuk mata minus.<br>Butuh lebih besar? Tekan A+ di pojok kanan atas.</div>
+    <div class="ramah">Tulisan besar &amp; nyaman untuk mata minus.</div>
     <button id="btnMasuk" type="button">MASUK DUNIA</button>
   </div>
 </div>

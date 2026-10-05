@@ -53,11 +53,6 @@
     padding:9px 13px 10px; box-shadow:0 5px 0 rgba(0,0,0,.35);
     max-width:min(60vw,330px);
   }
-  .chip-wilayah .kecil {
-    display:block; font-family:'Press Start 2P',monospace;
-    font-size:calc(9px * var(--skala));
-    letter-spacing:1px; color:#8fa2c8; margin-bottom:5px;
-  }
   .chip-wilayah .nama { display:block; font-size:calc(18px * var(--skala)); font-weight:900; color:#ffd166; line-height:1.12; }
   .chip-wilayah .slogan { display:block; font-size:calc(13.5px * var(--skala)); font-weight:800; color:#aec0e4; margin-top:3px; }
   body.coarse .chip-wilayah { padding:7px 11px 8px; max-width:min(42vw,300px); }
@@ -275,18 +270,12 @@
     animation:melayang 2.6s ease-in-out infinite;
   }
   @keyframes melayang { 0%,100% { transform:translateY(0) scale(1,1); } 50% { transform:translateY(-10px) scale(.97,1.04); } }
-  .intro .kecil {
-    display:block; font-family:'Press Start 2P',monospace;
-    font-size:calc(9px * var(--skala));
-    letter-spacing:2px; color:#8fa2c8; margin-bottom:14px;
-  }
   .intro h1 {
     font-family:'Press Start 2P',monospace;
     font-size:calc(clamp(17px, 5vw, 25px) * var(--skala));
     line-height:1.6; letter-spacing:1px; color:#ffd166;
   }
-  .intro .bawah { margin-top:14px; font-size:calc(17px * var(--skala)); font-weight:800; color:#e8eef8; }
-  .intro .catatan { margin-top:6px; font-size:calc(14.5px * var(--skala)); font-weight:700; color:#aec0e4; line-height:1.5; }
+  .intro .catatan { margin-top:18px; font-size:calc(14.5px * var(--skala)); font-weight:700; color:#aec0e4; line-height:1.5; }
   .intro .ramah {
     margin-top:12px; font-size:calc(13px * var(--skala)); font-weight:800; color:#7dffa8;
     background:rgba(93,232,155,.08); border:2px solid rgba(93,232,155,.25);
@@ -319,7 +308,6 @@
 </div>
 
 <div class="chip-wilayah" id="chipWilayah" aria-live="polite">
-  <span class="kecil">PERPUSTAKAAN MATEMATIKA</span>
   <span class="nama" id="chipNama">Pintu 1 &middot; Kamp Angka</span>
   <span class="slogan" id="chipSlogan">100 judul menanti dijelajahi</span>
 </div>
@@ -359,11 +347,9 @@
 <div class="intro" id="intro">
   <div class="panel">
     <div class="akio-css" aria-hidden="true"></div>
-    <span class="kecil">PERPUSTAKAAN MATEMATIKA</span>
     <h1>PINTU 1<br>KAMP ANGKA</h1>
-    <div class="bawah">10 penjuru &middot; 100 judul pertama.</div>
     <div class="catatan">Setiap papan di kamp adalah sub-judul artikel:<br>dekati papan, pahami judulnya, lalu lanjut ke bahasan<br>bila kamu penasaran. Bahasan muncul sesuai pilihanmu.</div>
-    <div class="ramah">Tulisan besar &amp; nyaman untuk mata minus.<br>Butuh lebih besar? Tekan A+ di pojok kanan atas.</div>
+    <div class="ramah">Tulisan besar &amp; nyaman untuk mata minus.</div>
     <button id="btnMasuk" type="button">MASUK KAMP</button>
   </div>
 </div>
