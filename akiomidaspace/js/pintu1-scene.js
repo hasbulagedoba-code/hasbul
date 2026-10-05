@@ -9,7 +9,7 @@ window.P1SCENE = (function () {
 
   const K = window.KAMP;
   const W = 480, H = 270, GROUND = 246;          // samakan dengan kamp-scene
-  const P = K.gambar.P, lingkaran = K.gambar.lingkaran, teksPx = K.gambar.teksPx;
+  const P = K.gambar.P, lingkaran = K.gambar.lingkaran;
 
   const STASIUN_X = [90, 200, 310, 420];         // 4 judul per lapisan
   const GERBANG_X = i => 32 + i * 46;            // 10 gerbang di pusat
@@ -217,18 +217,7 @@ window.P1SCENE = (function () {
     cv.width = W; cv.height = H;
     const c = cv.getContext('2d');
     bakarDasar(c);
-    // papan besar tengah: PINTU 1
     const KAT = window.P1.KATEGORI;
-    c.font = '8px "Press Start 2P", monospace';
-    const t1 = 'PINTU 1 - KAMP ANGKA';
-    const t2 = window.P1.TOPIK.length + ' JUDUL MENANTI';
-    const wb = Math.ceil(Math.max(c.measureText(t1).width, c.measureText(t2).width)) + 16;
-    const bx = Math.round(W / 2 - wb / 2);
-    P(c, bx - 2, 12, wb + 4, 36, '#37476f');
-    P(c, bx, 14, wb, 32, '#141d33');
-    P(c, bx + 1, 15, wb - 2, 2, '#1c2740');
-    teksPx(c, t1, W / 2, 19, '#ffd166', 8);
-    teksPx(c, t2, W / 2, 33, '#e8eef8', 7);
     // 10 gerbang selang-seling tinggi
     for (let i = 0; i < KAT.length; i++) gerbang(c, GERBANG_X(i), KAT[i], i);
     // semak kecil pengisi antar gerbang
