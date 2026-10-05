@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#0d1424">
-<title>Kamp Angka — Dunia Hidup | Perpustakaan Matematika</title>
-<meta name="description" content="Kamu tiba di Kamp Angka, kamp perintis Dunia Akiomida. Bukan membaca artikel: jalani kehidupan kamp. Dekati penduduk, tekan TANYA, dengar dari mana angka bermula, lalu bantu bangun tenda dengan hitunganmu.">
-<meta property="og:title" content="Kamp Angka — Dunia Hidup">
-<meta property="og:description" content="Jalani kamp, bicara dengan penduduk, bangun tenda dengan hitungan. Belajar terasa seperti bermain.">
+<title>Pintu 1 — Kamp Angka: 100 Judul | Perpustakaan Matematika</title>
+<meta name="description" content="Dunia Pintu 1 Perpustakaan Matematika: 100 judul terpampang di 10 penjuru kamp pixel. Jelajahi dengan menggerakkan Akio, pahami tiap judul lewat pengantar singkat, lalu lanjut ke bahasan lengkap bila penasaran. Tulisan besar ramah mata minus.">
+<meta property="og:title" content="Pintu 1 — Kamp Angka: 100 Judul">
+<meta property="og:description" content="10 penjuru, 100 judul: dari Cerita & Sejarah sampai Teka-Teki & Pola. Jelajahi dunia hidup, pilih judul yang mau dipahami.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +45,7 @@
     flex:0 0 auto;
   }
 
-  /* ---------- chip kamp (kiri-atas) ---------- */
+  /* ---------- chip penjuru (kiri-atas) ---------- */
   .chip-wilayah {
     position:fixed; top:calc(12px + env(safe-area-inset-top)); left:14px; z-index:25;
     pointer-events:none;
@@ -58,11 +58,11 @@
     font-size:calc(9px * var(--skala));
     letter-spacing:1px; color:#8fa2c8; margin-bottom:5px;
   }
-  .chip-wilayah .nama { display:block; font-size:calc(18px * var(--skala)); font-weight:900; color:#63c8ff; line-height:1.12; }
+  .chip-wilayah .nama { display:block; font-size:calc(18px * var(--skala)); font-weight:900; color:#ffd166; line-height:1.12; }
   .chip-wilayah .slogan { display:block; font-size:calc(13.5px * var(--skala)); font-weight:800; color:#aec0e4; margin-top:3px; }
-  body.coarse .chip-wilayah { padding:7px 11px 8px; }
+  body.coarse .chip-wilayah { padding:7px 11px 8px; max-width:min(42vw,300px); }
   body.coarse .chip-wilayah .slogan { display:none; }
-  body.coarse .chip-wilayah .nama { font-size:calc(16px * var(--skala)); }
+  body.coarse .chip-wilayah .nama { font-size:calc(15px * var(--skala)); }
 
   /* ---------- A- / A+ + tombol DUNIA ---------- */
   #akses {
@@ -81,6 +81,80 @@
   #akses button:disabled { opacity:.4; cursor:default; }
   #btnDunia { font-size:calc(12px * var(--skala)); letter-spacing:1px; }
 
+  /* ---------- tombol daftar judul (desktop/landscape) ---------- */
+  #btnDaftar {
+    position:fixed; top:calc(70px + env(safe-area-inset-top)); right:14px; z-index:35;
+    font-family:'Press Start 2P',monospace; font-size:calc(9px * var(--skala));
+    color:#e3ebfa; background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
+    border-radius:11px; padding:12px 13px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
+    letter-spacing:1px; transition:transform .06s ease, box-shadow .06s ease;
+  }
+  #btnDaftar.tahan { transform:translateY(3px); border-bottom-width:2px; box-shadow:0 1px 0 #0a0f1c; background:#28365c; }
+  @media (orientation:portrait) { body.coarse #btnDaftar { display:none; } }
+
+  /* ---------- DAFTAR JUDUL: huruf besar, ramah mata minus ---------- */
+  #daftar {
+    display:flex; flex-direction:column; gap:7px;
+    background:#141d33; border:3px solid #2a3757; border-radius:14px;
+    box-shadow:0 8px 0 rgba(0,0,0,.35);
+    padding:12px 12px 11px;
+    width:min(348px, 86vw);
+    max-height:calc(100vh - 190px); overflow-y:auto; -webkit-overflow-scrolling:touch;
+    position:fixed; right:14px; top:calc(122px + env(safe-area-inset-top)); z-index:34;
+    transform:translateX(calc(100% + 40px)); opacity:0; visibility:hidden; pointer-events:none;
+    transition:transform .35s ease, opacity .3s ease, visibility 0s linear .35s;
+  }
+  #daftar.buka {
+    transform:none; opacity:1; visibility:visible; pointer-events:auto;
+    transition:transform .35s ease, opacity .3s ease;
+  }
+  body.coarse #daftar {
+    position:static; width:min(440px,100%); max-height:calc(100vh - 460px); min-height:120px;
+    transform:none; opacity:1; visibility:visible; pointer-events:auto; transition:none;
+    flex:0 1 auto;
+  }
+  @media (orientation:landscape) {
+    body.coarse #daftar {
+      position:fixed; right:14px; top:calc(122px + env(safe-area-inset-top));
+      width:min(348px, 60vw); max-height:calc(100vh - 190px);
+      transform:translateX(calc(100% + 40px)); opacity:0; visibility:hidden; pointer-events:none;
+      transition:transform .35s ease, visibility 0s linear .35s;
+      flex:0 0 auto;
+    }
+    body.coarse #daftar.buka {
+      transform:none; opacity:1; visibility:visible; pointer-events:auto;
+      transition:transform .35s ease;
+    }
+  }
+  .df-kepala { display:flex; flex-direction:column; gap:2px; padding:1px 4px 8px; border-bottom:2px solid #2a3757; }
+  .df-judul { font-family:'Press Start 2P',monospace; font-size:calc(10px * var(--skala)); letter-spacing:2px; color:#ffd166; }
+  .df-sub { font-size:calc(13px * var(--skala)); font-weight:800; color:#aec0e4; }
+  .df-baris {
+    display:flex; align-items:center; gap:10px; width:100%; text-align:left;
+    background:#1a2440; border:2px solid #2a3757; border-radius:11px;
+    padding:8px 10px; cursor:pointer; font-family:inherit;
+    transition:transform .06s ease;
+  }
+  .df-baris:active { transform:translateY(2px); }
+  .df-baris:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
+  .df-baris.tujuan { border-color:#ffd166; background:#21254a; }
+  .df-no {
+    flex:0 0 auto; min-width:36px; height:36px; border-radius:10px; padding:0 6px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--zc,#63c8ff);
+    font-family:'Press Start 2P',monospace; font-size:calc(13px * var(--skala));
+    color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.4);
+  }
+  .df-teks { flex:1 1 auto; display:flex; flex-direction:column; gap:1px; min-width:0; }
+  .df-teks b { font-size:calc(16px * var(--skala)); font-weight:900; color:#fff; line-height:1.15; }
+  .df-teks i { font-style:normal; font-size:calc(12.5px * var(--skala)); font-weight:700; color:#9fb2d8; line-height:1.25; }
+  .df-status {
+    flex:0 0 auto; font-family:'Press Start 2P',monospace;
+    font-size:calc(7.5px * var(--skala)); letter-spacing:1px;
+    color:#9fb2d8; background:#2a3757; border-radius:7px; padding:5px 7px 4px;
+  }
+  .df-status.siap { color:#0d3a22; background:#5ee89b; }
+
   /* ---------- petunjuk ---------- */
   .hint {
     position:fixed; left:50%; transform:translateX(-50%);
@@ -98,7 +172,7 @@
   body.coarse .hint { bottom:calc(124px + env(safe-area-inset-bottom)); font-size:calc(13.5px * var(--skala)); padding:8px 15px; }
   body.dlg-buka .hint { display:none; }
 
-  /* ---------- tombol aksi besar (TANYA / BANTU BANGUN) ---------- */
+  /* ---------- tombol aksi besar (MASUK / LIHAT JUDUL / PERGI) ---------- */
   #aksiBtn {
     position:fixed; left:50%; bottom:calc(26px + env(safe-area-inset-bottom)); z-index:32;
     transform:translateX(-50%) translateY(14px); opacity:0; pointer-events:none;
@@ -111,7 +185,7 @@
   #aksiBtn:active { transform:translateX(-50%) translateY(4px); border-bottom-width:2px; }
   body.dlg-buka #aksiBtn { display:none; }
 
-  /* ---------- panel DIALOG penduduk (huruf besar, mata minus) ---------- */
+  /* ---------- panel DIALOG judul (huruf besar, mata minus) ---------- */
   #dialog {
     position:fixed; left:0; right:0; bottom:0; z-index:40;
     display:flex; justify-content:center;
@@ -121,34 +195,23 @@
   }
   #dialog.aktif { transform:none; pointer-events:auto; }
   .dlg-kardus {
-    width:min(600px,100%);
+    width:min(620px,100%);
     background:#141d33; border:4px solid #2a3757; border-radius:16px;
     box-shadow:0 10px 0 rgba(0,0,0,.4);
     padding:15px 16px 13px;
   }
   .dlg-kepala { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
-  #dlgNama { font-family:'Press Start 2P',monospace; font-size:calc(11px * var(--skala)); letter-spacing:1px; }
-  #dlgTitik { font-family:'Press Start 2P',monospace; font-size:calc(8px * var(--skala)); color:#8fa2c8; }
+  #dlgNama { font-family:'Press Start 2P',monospace; font-size:calc(9px * var(--skala)); letter-spacing:1px; }
+  #dlgTitik { font-family:'Press Start 2P',monospace; font-size:calc(8px * var(--skala)); color:#8fa2c8; white-space:nowrap; }
+  #dlgJudul {
+    margin-top:9px; font-size:calc(20px * var(--skala)); font-weight:900;
+    line-height:1.25; color:#fff;
+  }
   #dlgTeks {
-    margin-top:9px; font-size:calc(17.5px * var(--skala)); font-weight:800;
-    color:#eef4ff; line-height:1.5; min-height:calc(53px * var(--skala));
+    margin-top:8px; font-size:calc(16.5px * var(--skala)); font-weight:800;
+    color:#eef4ff; line-height:1.5;
   }
-  #dlgUmpan {
-    display:none; margin-top:9px; font-size:calc(15px * var(--skala));
-    font-weight:900; line-height:1.4; border-radius:10px; padding:9px 12px;
-  }
-  #dlgUmpan.ok { color:#0d3a22; background:#5ee89b; }
-  #dlgUmpan.no { color:#4a3405; background:#ffd166; }
-  #dlgJawab { display:none; gap:9px; margin-top:11px; flex-wrap:wrap; }
-  .dlg-opsi {
-    flex:1 1 auto; min-width:72px; min-height:54px;
-    font-family:'Press Start 2P',monospace; font-size:calc(15px * var(--skala));
-    color:#eef4ff; background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
-    border-radius:12px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
-  }
-  .dlg-opsi:active { transform:translateY(3px); border-bottom-width:2px; }
-  .dlg-opsi.ulang { font-size:calc(10px * var(--skala)); color:#ffd166; flex:0 0 auto; padding:0 16px; }
-  .dlg-aksi { display:flex; gap:10px; margin-top:13px; justify-content:flex-end; }
+  .dlg-aksi { display:flex; gap:10px; margin-top:13px; justify-content:flex-end; flex-wrap:wrap; }
   .dlg-btn {
     font-family:'Press Start 2P',monospace; font-size:calc(11px * var(--skala));
     border:0; border-radius:11px; padding:13px 20px; cursor:pointer; letter-spacing:1px;
@@ -162,47 +225,6 @@
   }
   .dlg-btn.kedua:active { transform:translateY(3px); border-bottom-width:2px; }
   body.coarse.dlg-buka #panggung { padding-bottom:calc(20px + env(safe-area-inset-bottom)); }
-
-  /* ---------- panel TUGAS DI KAMP (mobile potret: isi ruang tengah) ---------- */
-  #tugas { display:none; }
-  body.coarse #tugas {
-    display:flex; flex-direction:column; gap:7px;
-    width:min(440px,100%);
-    background:#141d33; border:3px solid #2a3757; border-radius:14px;
-    box-shadow:0 6px 0 rgba(0,0,0,.35);
-    padding:11px 11px 10px;
-    flex:0 1 auto; min-height:0; overflow-y:auto; -webkit-overflow-scrolling:touch;
-  }
-  @media (orientation:landscape) { body.coarse #tugas { display:none; } }
-  .tg-kepala {
-    display:flex; flex-direction:column; gap:2px; padding:1px 4px 8px;
-    border-bottom:2px solid #2a3757;
-  }
-  .tg-judul { font-family:'Press Start 2P',monospace; font-size:calc(10px * var(--skala)); letter-spacing:2px; color:#ffd166; }
-  .tg-sub { font-size:calc(12.5px * var(--skala)); font-weight:800; color:#aec0e4; }
-  .tg-baris {
-    display:flex; align-items:center; gap:10px; width:100%; text-align:left;
-    background:#1a2440; border:2px solid #2a3757; border-radius:11px;
-    padding:8px 10px; cursor:pointer; font-family:inherit;
-    transition:transform .06s ease;
-  }
-  .tg-baris:active { transform:translateY(2px); }
-  .tg-no {
-    flex:0 0 auto; width:34px; height:34px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    background:var(--zc,#63c8ff);
-    font-family:'Press Start 2P',monospace; font-size:calc(13px * var(--skala));
-    color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.4);
-  }
-  .tg-teks { flex:1 1 auto; display:flex; flex-direction:column; gap:1px; min-width:0; }
-  .tg-teks b { font-size:calc(15.5px * var(--skala)); font-weight:900; color:#fff; line-height:1.15; }
-  .tg-teks i { font-style:normal; font-size:calc(12px * var(--skala)); font-weight:700; color:#9fb2d8; line-height:1.25; }
-  .tg-status {
-    flex:0 0 auto; font-family:'Press Start 2P',monospace;
-    font-size:calc(7.5px * var(--skala)); letter-spacing:1px;
-    color:#9fb2d8; background:#2a3757; border-radius:7px; padding:5px 7px 4px;
-  }
-  .tg-status.siap { color:#0d3a22; background:#5ee89b; }
 
   /* ---------- kontrol sentuh ---------- */
   #kontrol {
@@ -228,7 +250,7 @@
     background:#28365c; border-color:#4d6196;
   }
 
-  /* ---------- intro kamp ---------- */
+  /* ---------- intro ---------- */
   .intro {
     position:fixed; inset:0; z-index:50;
     display:flex; flex-direction:column; align-items:center;
@@ -261,18 +283,13 @@
   .intro h1 {
     font-family:'Press Start 2P',monospace;
     font-size:calc(clamp(17px, 5vw, 25px) * var(--skala));
-    line-height:1.6; letter-spacing:1px; color:#63c8ff;
+    line-height:1.6; letter-spacing:1px; color:#ffd166;
   }
   .intro .bawah { margin-top:14px; font-size:calc(17px * var(--skala)); font-weight:800; color:#e8eef8; }
   .intro .catatan { margin-top:6px; font-size:calc(14.5px * var(--skala)); font-weight:700; color:#aec0e4; line-height:1.5; }
   .intro .ramah {
     margin-top:12px; font-size:calc(13px * var(--skala)); font-weight:800; color:#7dffa8;
     background:rgba(93,232,155,.08); border:2px solid rgba(93,232,155,.25);
-    border-radius:10px; padding:8px 10px; line-height:1.45;
-  }
-  #introSelesai {
-    display:none; margin-top:12px; font-size:calc(13px * var(--skala)); font-weight:800; color:#ffd166;
-    background:rgba(255,209,102,.08); border:2px solid rgba(255,209,102,.3);
     border-radius:10px; padding:8px 10px; line-height:1.45;
   }
   .intro button {
@@ -297,14 +314,14 @@
 <body>
 
 <div id="panggung">
-  <canvas id="layar" width="480" height="270" aria-label="Kamp Angka: kamp perintis dengan api unggun, tenda pembangunan, gudang, dan empat penduduk bola-lentera bernomor"></canvas>
-  <div id="tugas" aria-label="Tugas di Kamp Angka"></div>
+  <canvas id="layar" width="480" height="270" aria-label="Pintu 1 Kamp Angka: dunia pixel berisi 10 penjuru dan 100 papan judul matematika"></canvas>
+  <div id="daftar" aria-label="Daftar judul Pintu 1"></div>
 </div>
 
-<div class="chip-wilayah" aria-live="polite">
-  <span class="kecil">DUNIA AKIOMIDA</span>
-  <span class="nama">Kamp Angka</span>
-  <span class="slogan" id="chipSlogan">Kamp perintis — jalani hidupnya, bukan bacanya</span>
+<div class="chip-wilayah" id="chipWilayah" aria-live="polite">
+  <span class="kecil">PERPUSTAKAAN MATEMATIKA</span>
+  <span class="nama" id="chipNama">Pintu 1 &middot; Kamp Angka</span>
+  <span class="slogan" id="chipSlogan">100 judul menanti dijelajahi</span>
 </div>
 
 <div id="akses" aria-label="Pengaturan ukuran tulisan">
@@ -313,22 +330,23 @@
   <button id="btnPlus" type="button" aria-label="Perbesar tulisan">A+</button>
 </div>
 
-<div class="hint tampil" id="hint">Dekati penduduk, lalu tekan TANYA</div>
+<button id="btnDaftar" type="button" aria-label="Buka daftar judul">&#9776; JUDUL</button>
 
-<button id="aksiBtn" type="button">TANYA</button>
+<div class="hint tampil" id="hint">Ketuk papan judul &mdash; Akio berjalan ke sana</div>
 
-<div id="dialog" role="dialog" aria-label="Percakapan dengan penduduk kamp">
+<button id="aksiBtn" type="button">LIHAT JUDUL</button>
+
+<div id="dialog" role="dialog" aria-label="Penjelasan judul">
   <div class="dlg-kardus">
     <div class="dlg-kepala">
-      <span id="dlgNama">PENDUDUK</span>
-      <span id="dlgTitik">1/4</span>
+      <span id="dlgNama">PENJURU</span>
+      <span id="dlgTitik">JUDUL 1/10</span>
     </div>
+    <div id="dlgJudul">Judul</div>
     <div id="dlgTeks" aria-live="polite"></div>
-    <div id="dlgUmpan"></div>
-    <div id="dlgJawab"></div>
     <div class="dlg-aksi">
       <button class="dlg-btn kedua" id="btnTutup" type="button">TUTUP</button>
-      <button class="dlg-btn utama" id="btnLanjut" type="button">LANJUT</button>
+      <button class="dlg-btn utama" id="btnLanjut" type="button">LANJUT BELAJAR</button>
     </div>
   </div>
 </div>
@@ -341,17 +359,18 @@
 <div class="intro" id="intro">
   <div class="panel">
     <div class="akio-css" aria-hidden="true"></div>
-    <span class="kecil">DUNIA AKIOMIDA</span>
-    <h1>KAMP ANGKA</h1>
-    <div class="bawah">Kamu tiba di kamp perintis.</div>
-    <div class="catatan">Bukan membaca artikel: di sini kamu menjalani kamp.<br>Kenali penduduknya, dengar kisahnya, bantu bangun tendanya.</div>
-    <div id="introSelesai">Tenda sudah berdiri berkat hitunganmu, Pembangun Kamp.</div>
+    <span class="kecil">PERPUSTAKAAN MATEMATIKA</span>
+    <h1>PINTU 1<br>KAMP ANGKA</h1>
+    <div class="bawah">10 penjuru &middot; 100 judul pertama.</div>
+    <div class="catatan">Setiap papan di kamp adalah sub-judul artikel:<br>dekati papan, pahami judulnya, lalu lanjut ke bahasan<br>bila kamu penasaran. Bahasan muncul sesuai pilihanmu.</div>
     <div class="ramah">Tulisan besar &amp; nyaman untuk mata minus.<br>Butuh lebih besar? Tekan A+ di pojok kanan atas.</div>
     <button id="btnMasuk" type="button">MASUK KAMP</button>
   </div>
 </div>
 
+<script src="js/pintu1-data.js"></script>
 <script src="js/kamp-scene.js"></script>
-<script src="js/kamp-main.js"></script>
+<script src="js/pintu1-scene.js"></script>
+<script src="js/pintu1-main.js"></script>
 </body>
 </html>
