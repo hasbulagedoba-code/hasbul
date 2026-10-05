@@ -141,6 +141,110 @@
     background:#28365c; border-color:#4d6196;
   }
 
+  /* ---------- layar muat (pola sama dengan Dunia Akiomida: iklan dulu, dunia tak langsung muncul) ---------- */
+  .muat {
+    position:fixed; inset:0; z-index:60;
+    display:flex;
+    background:rgba(8,12,24,.92);
+    overflow-y:auto; -webkit-overflow-scrolling:touch;
+    padding:20px 12px;
+    opacity:0; visibility:hidden; pointer-events:none;
+    transition:opacity .4s ease, visibility 0s linear .4s;
+  }
+  .muat.aktif {
+    opacity:1; visibility:visible; pointer-events:auto;
+    transition:opacity .4s ease;
+  }
+  .muat-aura {
+    position:fixed; inset:0; pointer-events:none;
+    background:radial-gradient(circle at 50% 42%, var(--aura, rgba(99,200,255,.16)), rgba(8,12,24,0) 60%);
+  }
+  .muat-isi {
+    position:relative; text-align:center; width:min(372px, 94vw); margin:auto;
+    background:#141d33; border:4px solid #2a3757; border-radius:14px;
+    box-shadow:0 10px 0 rgba(0,0,0,.4);
+    padding:22px 20px;
+  }
+  .muat-lompat { position:relative; width:54px; height:72px; margin:0 auto 16px; }
+  .muat-bola {
+    position:absolute; left:0; right:0; bottom:12px; height:54px; border-radius:50%;
+    background:radial-gradient(circle at 34% 28%, #fff3cf, #f6c453 58%, #d98f2b);
+    box-shadow:0 0 26px rgba(255,214,120,.45), inset 0 -5px 0 rgba(0,0,0,.14);
+    transform-origin:50% 100%;
+    animation:muatNaik 1.1s cubic-bezier(.5,.02,.6,1) infinite;
+  }
+  .muat-bayangan {
+    position:absolute; left:7px; right:7px; bottom:0; height:8px; border-radius:4px;
+    background:rgba(0,0,0,.4);
+    animation:muatBayangan 1.1s cubic-bezier(.5,.02,.6,1) infinite;
+  }
+  @keyframes muatNaik {
+    0%   { transform:translateY(0)     scale(1.14,.80); }
+    16%  { transform:translateY(-8px)  scale(.94,1.09); }
+    46%  { transform:translateY(-26px) scale(1,1); }
+    82%  { transform:translateY(-2px)  scale(.96,1.07); }
+    93%  { transform:translateY(0)     scale(1.16,.78); }
+    100% { transform:translateY(0)     scale(1.14,.80); }
+  }
+  @keyframes muatBayangan {
+    0%,100% { transform:scaleX(1.08); opacity:.36; }
+    46%     { transform:scaleX(.62);  opacity:.15; }
+  }
+  .muat-judul {
+    font-family:'Press Start 2P',monospace;
+    font-size:calc(clamp(13px, 3.4vw, 17px) * var(--skala));
+    line-height:1.7; letter-spacing:.5px;
+    color:#ffd166; max-width:78vw; margin:0 auto;
+  }
+  .muat-sub { margin-top:9px; font-size:calc(15px * var(--skala)); font-weight:800; color:#aec0e4; }
+  .muat-titik { margin-left:2px; }
+  .muat-titik span { display:inline-block; animation:muatKedip 1.2s infinite; }
+  .muat-titik span:nth-child(2) { animation-delay:.2s; }
+  .muat-titik span:nth-child(3) { animation-delay:.4s; }
+  @keyframes muatKedip { 0%,60%,100% { opacity:.25; } 30% { opacity:1; } }
+  .muat-iklan {
+    margin:16px auto 0; width:min(324px, 100%);
+    background:rgba(255,255,255,.05);
+    border:2px solid #2a3757; border-radius:10px; padding:10px;
+  }
+  .muat-slot { min-height:250px; }
+  .muat-slot:not(:empty) { min-height:0; }
+  .muat-slot .ad-slot { margin:0 auto !important; }
+  .muat-slot iframe { background:#18213a !important; }
+  .muat-garis {
+    margin:14px auto 0; width:min(324px, 100%); height:6px; border-radius:3px;
+    background:#0e1526; overflow:hidden;
+  }
+  .muat-garis span {
+    display:block; height:100%; width:40%;
+    background:linear-gradient(90deg, rgba(255,209,102,0), #ffd166, rgba(255,209,102,0));
+    animation:muatGaris 1.4s ease-in-out infinite;
+  }
+  @keyframes muatGaris { from { transform:translateX(-110%); } to { transform:translateX(300%); } }
+  .muat-batal {
+    display:block; margin:16px auto 0;
+    font-family:'Press Start 2P',monospace; font-size:calc(12px * var(--skala));
+    color:#e3ebfa; background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
+    border-radius:10px; padding:13px 24px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
+  }
+  .muat-batal:active { transform:translateY(3px); border-bottom-width:2px; box-shadow:0 1px 0 #0a0f1c; }
+  @media (max-height:680px) {
+    .muat { padding:12px 10px; }
+    .muat-isi { padding:16px 16px 14px; }
+    .muat-lompat { width:44px; height:58px; margin-bottom:10px; }
+    .muat-bola { height:42px; bottom:12px; }
+    .muat-bayangan { left:9px; right:9px; }
+    .muat-judul { font-size:calc(clamp(11px, 3vw, 14px) * var(--skala)); }
+    .muat-iklan { margin-top:12px; }
+    .muat-batal { margin-top:12px; padding:11px 20px; }
+  }
+  @media (max-height:560px) {
+    .muat-lompat { display:none; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .muat-bola, .muat-bayangan, .muat-titik span, .muat-garis span { animation:none; }
+  }
+
   /* ---------- intro ---------- */
   .intro {
     position:fixed; inset:0; z-index:50;
@@ -224,6 +328,23 @@
   <button class="tb" id="btnKanan" type="button" aria-label="Jalan ke kanan">&#9654;</button>
 </div>
 
+<div class="muat" id="muat" role="dialog" aria-label="Memuat Peta Cerita">
+  <div class="muat-aura" id="muatAura"></div>
+  <div class="muat-isi">
+    <div class="muat-lompat" aria-hidden="true">
+      <span class="muat-bola"></span>
+      <span class="muat-bayangan"></span>
+    </div>
+    <div class="muat-judul" id="muatJudul">Membuka Peta Cerita</div>
+    <div class="muat-sub">Memuat Dunia<span class="muat-titik" aria-hidden="true"><span>&middot;</span><span>&middot;</span><span>&middot;</span></span></div>
+    <div class="muat-iklan">
+      <div class="muat-slot" id="muatSlot"></div>
+    </div>
+    <div class="muat-garis" aria-hidden="true"><span></span></div>
+    <button class="muat-batal" id="muatBatal" type="button">KEMBALI</button>
+  </div>
+</div>
+
 <div class="intro" id="intro">
   <div class="panel">
     <div class="akio-css" aria-hidden="true"></div>
@@ -236,5 +357,6 @@
 <script src="js/kamp-scene.js"></script>
 <script src="js/cerita-data.js"></script>
 <script src="js/pelajaran-main.js"></script>
+<script src="../assets/js/ads.js?v=2" defer></script>
 </body>
 </html>

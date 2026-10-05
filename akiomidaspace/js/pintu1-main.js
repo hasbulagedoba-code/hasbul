@@ -89,6 +89,16 @@
 
   /* ---------- keadaan dunia ---------- */
   let layarSkr = { mode: 'pusat' };                  // atau {mode:'area', k, hal}
+  // Masuk langsung ke penjuru tertentu (?k=..&hal=..) — dipakai tombol kembali dari halaman bahasan
+  try {
+    const q = new URLSearchParams(window.location.search);
+    const qk = parseInt(q.get('k') || '', 10);
+    const qh = parseInt(q.get('hal') || '', 10);
+    if (qk >= 1 && qk <= P1.KATEGORI.length) {
+      const maksHal = Math.ceil(P1.KATEGORI[qk - 1].jumlah / 4) - 1;
+      if (qh >= 0 && qh <= maksHal) layarSkr = { mode: 'area', k: qk, hal: qh };
+    }
+  } catch (e) { /* abaikan */ }
   const player = { x: 36, y: GROUND, vx: 0, dir: 1, state: 'diam', walkT: 0, target: null, tuju: null, squash: 0 };
 
   function kunciLayar() {
@@ -254,7 +264,10 @@
   }
   btnTutup.addEventListener('click', tutupDialog);
   btnLanjut.addEventListener('click', () => {
-    if (dlg) window.location.href = 'pelajaran.html?id=' + dlg.id;   // lanjut -> halaman bahasan
+    if (!dlg) return;
+    const halT = Math.floor((dlg.n - 1) / 4);
+    // lanjut -> halaman bahasan; bawa asal penjuru agar tombol kembali tak loncat ke pusat kamp
+    window.location.href = 'pelajaran.html?id=' + dlg.id + '&k=' + dlg.k + '&hal=' + halT;
   });
 
   /* ---------- panel daftar (mata minus) ---------- */
