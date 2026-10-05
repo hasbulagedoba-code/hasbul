@@ -1,10 +1,14 @@
 /* =========================================================
    DUNIA AKIOMIDA — Mesin Utama (world-main.js)
-   PRINSIP BARU:
+   PRINSIP:
    - Layar TETAP 480x270: tidak ada kamera, tidak ada geser.
      camX abadi 0 — karakter mustahil hilang dari pandangan.
-   - Tugas user jelas: gerakkan Akio ke pintu wilayah tujuan.
-   - Keyboard (desktop) + tombol layar (mobile) + ketuk tanah.
+   - Tugas user jelas: gerakkan Akio (bulatan emas) ke pintu wilayah.
+   - Ramah MATA MINUS: daftar wilayah bernomor dengan huruf besar,
+     tombol A- / A+ untuk memperbesar semua tulisan, label AKIO besar,
+     tombol MASUK besar di mobile.
+   - SYARIAH: tidak ada makhluk hidup — burung & kupu-kupu diganti
+     simbol matematika melayang.
    ========================================================= */
 (function () {
   'use strict';
@@ -21,6 +25,10 @@
   const hintEl = document.getElementById('hint');
   const introEl = document.getElementById('intro');
   const btnMasuk = document.getElementById('btnMasuk');
+  const legendaEl = document.getElementById('legenda');
+  const btnLegenda = document.getElementById('btnLegenda');
+  const labelAkio = document.getElementById('labelAkio');
+  const btnMasukPintu = document.getElementById('btnMasukPintu');
 
   const adalahSentuh = window.matchMedia('(pointer: coarse)').matches
     || 'ontouchstart' in window
@@ -29,15 +37,73 @@
   if (adalahSentuh) document.body.classList.add('coarse', 'kontrol-aktif');
 
   /* ---------- ukuran panggung: dunia utuh selalu muat ---------- */
+  let rectCache = null;
   function pasUkuran() {
     const vw = window.innerWidth, vh = window.innerHeight;
-    const cadangan = adalahSentuh ? 150 : 26;
+    // landscape: tombol ada di sudut, tak menutupi kanvas tengah — cadangan kecil
+    const lanskap = vw > vh;
+    const cadangan = adalahSentuh ? (lanskap ? 100 : 150) : 26;
     const k = Math.max(0.55, Math.min((vw - 18) / W, (vh - cadangan - 18) / H));
     layar.style.width = Math.floor(W * k) + 'px';
     layar.style.height = Math.floor(H * k) + 'px';
+    rectCache = layar.getBoundingClientRect();
   }
-  window.addEventListener('resize', pasUkuran);
+  window.addEventListener('resize', () => { pasUkuran(); });
   pasUkuran();
+
+  /* ---------- UKURAN TULISAN (mata minus): A- / A+ tersimpan ---------- */
+  const LANGKAH_SKALA = [1, 1.15, 1.3, 1.5];
+  let idxSkala = 0;
+  try {
+    const s = parseInt(localStorage.getItem('akio-skala') || '0', 10);
+    if (s >= 0 && s < LANGKAH_SKALA.length) idxSkala = s;
+  } catch (e) { /* abaikan */ }
+  function terapSkala() {
+    document.documentElement.style.setProperty('--skala', LANGKAH_SKALA[idxSkala]);
+    try { localStorage.setItem('akio-skala', String(idxSkala)); } catch (e) { /* abaikan */ }
+    const min = document.getElementById('btnMin');
+    const plus = document.getElementById('btnPlus');
+    if (min) min.disabled = idxSkala === 0;
+    if (plus) plus.disabled = idxSkala === LANGKAH_SKALA.length - 1;
+  }
+  document.getElementById('btnMin').addEventListener('click', () => {
+    if (idxSkala > 0) { idxSkala--; terapSkala(); }
+  });
+  document.getElementById('btnPlus').addEventListener('click', () => {
+    if (idxSkala < LANGKAH_SKALA.length - 1) { idxSkala++; terapSkala(); }
+  });
+  terapSkala();
+
+  /* ---------- DAFTAR WILAYAH: nama besar, bisa diketuk untuk pergi ---------- */
+  (function bangunLegenda() {
+    if (!legendaEl) return;
+    let html = '<div class="leg-kepala">'
+      + '<span class="leg-judul">TUGASMU</span>'
+      + '<span class="leg-sub">Gerakkan Akio ke pintu bernomor</span>'
+      + '</div>';
+    AK.ZONES.forEach((z, i) => {
+      const status = z.open
+        ? '<span class="leg-status buka">TERBUKA</span>'
+        : '<span class="leg-status">SEGERA</span>';
+      html += '<button class="leg-baris' + (z.open ? ' tujuan' : '') + '" data-z="' + i + '" type="button"'
+        + ' aria-label="Pergi ke ' + z.name + '">'
+        + '<span class="leg-no" style="--zc:' + z.color + ';--zd:' + z.deep + '">' + (i + 1) + '</span>'
+        + '<span class="leg-teks"><b>' + z.name + '</b><i>' + z.slogan + '</i></span>'
+        + status
+        + '</button>';
+    });
+    legendaEl.innerHTML = html;
+    legendaEl.addEventListener('click', e => {
+      const baris = e.target.closest('.leg-baris');
+      if (!baris) return;
+      const z = AK.ZONES[parseInt(baris.dataset.z, 10)];
+      if (z) ketukPintu(z);
+    });
+  })();
+  if (btnLegenda) btnLegenda.addEventListener('click', () => {
+    legendaEl.classList.toggle('buka');
+    btnLegenda.classList.toggle('tahan');
+  });
 
   /* ---------- latar dibakar sekali; dibakar ulang saat font pixel tiba ---------- */
   let bg = AK.bakeBG();
@@ -52,23 +118,26 @@
   const akio = window.AKJELLY.buatAkio();
   const player = {
     x: 20, y: 249, vx: 0, dir: 1, state: 'diam', walkT: 0, target: null,
-    scale: 1, squash: 0, blinkT: 2 + Math.random() * 2, kedip: 0, masuk: null, pop: 0,
+    scale: 1, squash: 0, masuk: null, pop: 0,
   };
 
   const npcs = AK.NPCS.map((n, i) => ({
     ...n, i, frames: window.AKJELLY.buatNpc(n), ft: Math.random() * 2, fi: 0,
-    fasaT: i * 1.15, k: 0, tampil: false,          // giliran bicara dijadwalkan: tak saling menumpuk
+    fasaT: i * 1.15, k: 0, tampil: false,          // giliran bicara: tak saling menumpuk
   }));
 
-  /* ---------- partikel & kehidupan ---------- */
+  /* ---------- partikel & kehidupan (syariah: hanya benda & simbol) ---------- */
   const awan = [
     { x: 40, y: 26, v: 4.5, s: 1 }, { x: 230, y: 52, v: 3.2, s: 1.3 }, { x: 380, y: 18, v: 5.4, s: 0.8 },
   ];
-  const burung = [
-    { x: 90, y: 60, v: 22, f: 0 }, { x: 330, y: 84, v: 17, f: 2 },
+  // simbol matematika melayang di langit (pengganti burung)
+  const simbolLangit = [
+    { x: 70, y: 42, g: 'plus', v: 5.2, f: 0 },
+    { x: 250, y: 70, g: 'kali', v: 3.4, f: 2.1 },
+    { x: 352, y: 34, g: 'bagi', v: 4.3, f: 4.2 },
   ];
-  let asap = [], percik = [], daun = [], salju = [], kilau = [], teks = [];
-  let tDaun = 0, tSalju = 0, tPercik = 0, tKilau = 0, tKupu = 0;
+  let asap = [], percik = [], daun = [], salju = [], kilau = [], teks = [], simbolHutan = [];
+  let tDaun = 0, tSalju = 0, tPercik = 0, tKilau = 0, tSimbol = 0;
   const rand = (a, b) => a + Math.random() * (b - a);
 
   /* ---------- input ---------- */
@@ -77,6 +146,10 @@
   addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') { keys.kiri = true; e.preventDefault(); }
     if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') { keys.kanan = true; e.preventDefault(); }
+    if ((e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') && !player.masuk) {
+      const zk = AK.ZONES.find(z => z.open);
+      if (zk && Math.abs(player.x - zk.x) < 26) { ketukPintu(zk); e.preventDefault(); }
+    }
   });
   addEventListener('keyup', e => {
     if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.kiri = false;
@@ -103,19 +176,30 @@
     const wx = (e.clientX - r.left) / r.width * W;
     const wy = (e.clientY - r.top) / r.height * H;
     for (const z of AK.ZONES) {
-      if (Math.abs(wx - z.x) < 26 && wy > 140) { ketukPintu(z); return; }
+      if (Math.abs(wx - z.x) < 26 && wy > 120) { ketukPintu(z); return; }
     }
     if (wy > GROUND - 46 && wy < 268 && !player.masuk) {
       player.target = Math.max(12, Math.min(468, wx));
     }
   });
 
+  /* tombol MASUK besar (mobile) — pintu terbuka di dekatmu */
+  if (btnMasukPintu) {
+    btnMasukPintu.addEventListener('pointerdown', e => {
+      e.preventDefault();
+      const zk = AK.ZONES.find(z => z.open);
+      if (zk) ketukPintu(zk);
+    });
+  }
+
   function ketukPintu(z) {
     if (player.masuk) return;
     if (z.open) {
       player.target = z.x;                       // berjalan menuju pintu, terserap saat tiba
+      hilangkanHint();
     } else {
       teks.push({ x: z.x, y: 150, txt: 'SEGERA HADIR!', t: 0, col: '#ffd166' });
+      pesanHint(z.name + ' — segera hadir!');
       const n = npcs.find(nn => nn.zone === AK.ZONES.indexOf(z));
       if (n) { n.tampil = true; n.k = n.ucap.length - 1; n.fasaT = 0; }
     }
@@ -163,11 +247,21 @@
   muatBatal.addEventListener('click', tutupMuatan);
 
   /* ---------- hint & chip ---------- */
-  hintEl.textContent = adalahSentuh
-    ? 'Gunakan tombol untuk berjalan · ketuk pintu untuk masuk'
-    : 'Tekan \u2190 \u2192 untuk berjalan · dekati pintu wilayah untuk masuk';
-  let hintHilang = false;
+  const hintDasar = adalahSentuh
+    ? 'Ketuk pintu bernomor atau daftar wilayah'
+    : 'Tekan \u2190 \u2192 untuk berjalan \u00b7 klik pintu wilayah untuk masuk';
+  hintEl.textContent = hintDasar;
+  let hintHilang = false, hintTimer = null;
   function hilangkanHint() { if (!hintHilang) { hintHilang = true; hintEl.classList.add('pudar'); } }
+  function pesanHint(txt) {                      // pesan sesaat dengan huruf besar (mata minus)
+    clearTimeout(hintTimer);
+    hintEl.textContent = txt;
+    hintEl.classList.remove('pudar');
+    hintTimer = setTimeout(() => {
+      hintEl.textContent = hintDasar;
+      if (hintHilang) hintEl.classList.add('pudar');
+    }, 2600);
+  }
   setTimeout(hilangkanHint, 13000);
 
   let chipZone = -2;
@@ -189,6 +283,21 @@
     }
   }
 
+  /* ---------- label AKIO mengikuti bola (huruf besar, mudah dibaca) ---------- */
+  let labelPos = '';
+  function perbaruiLabelAkio() {
+    if (!rectCache || !labelAkio) return;
+    const vw = window.innerWidth;
+    let sx = rectCache.left + player.x / W * rectCache.width;
+    sx = Math.max(52, Math.min(vw - 52, sx));      // tak terpotong di tepi layar
+    const sy = rectCache.top + (player.y - 24 * player.scale) / H * rectCache.height;
+    const key = (sx | 0) + ':' + (sy | 0);
+    if (key !== labelPos) {
+      labelPos = key;
+      labelAkio.style.transform = 'translate(' + sx.toFixed(1) + 'px,' + sy.toFixed(1) + 'px) translate(-50%,-100%)';
+    }
+  }
+
   /* ---------- pembaruan ---------- */
   const KECEPATAN = 112, MASUK_LAMA = 0.8;
   let diamDiPintu = 0;
@@ -200,11 +309,6 @@
       if (player.scale >= 1) { player.pop = 0; player.squash = 1; }
     }
     player.squash = Math.max(0, player.squash - dt * 4);
-
-    // kedip mata
-    player.blinkT -= dt;
-    if (player.blinkT <= 0) { player.kedip = 0.14; player.blinkT = 2.2 + Math.random() * 2.4; }
-    if (player.kedip > 0) player.kedip -= dt;
 
     // sekuen masuk gerbang
     if (player.masuk) {
@@ -226,6 +330,8 @@
         if (u >= 1) { m.fase = 'selesai'; bukaMuatan(m.z); }
       }
       perbaruiChip();
+      perbaruiLabelAkio();
+      if (btnMasukPintu) btnMasukPintu.classList.remove('tampil');
       return;
     }
 
@@ -248,6 +354,11 @@
       diamDiPintu = 0;
     }
 
+    // tombol MASUK besar muncul saat dekat pintu terbuka (mobile)
+    if (btnMasukPintu) {
+      btnMasukPintu.classList.toggle('tampil', adalahSentuh && diPintu);
+    }
+
     // NPC: goyangan + giliran bicara
     for (const n of npcs) {
       n.ft += dt; n.fi = Math.floor(n.ft / 1.6) % 2;
@@ -261,6 +372,7 @@
     }
 
     perbaruiChip();
+    perbaruiLabelAkio();
   }
 
   function gerak(dt) {
@@ -330,17 +442,28 @@
     for (const k of kilau) k.umur += dt;
     kilau = kilau.filter(k => k.umur < k.hidup);
 
+    // simbol matematika melayang di hutan simbol (pengganti kupu-kupu)
+    tSimbol += dt;
+    if (tSimbol > 1.8) {
+      tSimbol = 0;
+      const g = ['plus', 'kali', 'bagi'][Math.floor(rand(0, 3))];
+      simbolHutan.push({ x: rand(86, 152), y: rand(170, 210), g, f: rand(0, 6), hidup: rand(3.5, 5.5), umur: 0 });
+    }
+    for (const s of simbolHutan) { s.umur += dt; s.f += dt; s.y -= 5 * dt; s.x += Math.sin(s.f * 1.4) * 6 * dt; }
+    simbolHutan = simbolHutan.filter(s => s.umur < s.hidup);
+
     // teks melayang
     for (const T of teks) T.t += dt;
     teks = teks.filter(T => T.t < 1.5);
 
-    // awan & burung
+    // awan & simbol langit
     for (const a of awan) { a.x += a.v * dt; if (a.x > 500) a.x = -60; }
-    for (const b of burung) { b.x += b.v * dt; b.f += dt * 9; if (b.x > 495) { b.x = -15; b.y = rand(40, 95); } }
+    for (const s of simbolLangit) { s.x += s.v * dt; s.f += dt; if (s.x > 495) { s.x = -15; s.y = rand(28, 84); } }
   }
 
   /* ---------- gambar ---------- */
   function P(x, y, w, h, col) { ctx.fillStyle = col; ctx.fillRect(x | 0, y | 0, w, h); }
+  const mini = window.AKJELLY.gambarMini;
 
   function gambarAwan(a) {
     const s = a.s;
@@ -377,43 +500,44 @@
     P(376, 231, 4, 8, '#d9c4ff');
     ctx.globalAlpha = 1;
   }
-  function gambarKupu(t) {
-    const kx = 118 + Math.sin(t * 0.9) * 22;
-    const ky = 196 + Math.sin(t * 1.7) * 9;
-    const buka = Math.sin(t * 14) > 0;
-    P(kx - 1, ky, 1, 2, '#c07d0c');
-    P(kx, ky, 2, 1, buka ? '#ffd166' : '#e0a32e');
-    P(kx, ky - 1, 2, 1, buka ? '#ffd166' : '#e0a32e');
+  function gambarPanahTerbuka(t) {
+    // panah memantul di atas pintu wilayah terbuka — tujuan tak mungkin salah
+    const zx = 40, ay = 160 + Math.round(Math.sin(t * 4) * 2);
+    P(zx - 4, ay + 1, 8, 2, '#0e1526');          // bayang panah
+    P(zx - 3, ay - 1, 6, 2, '#0e1526');
+    P(zx - 3, ay - 2, 6, 2, '#7dffa8');
+    P(zx - 2, ay, 4, 2, '#7dffa8');
+    P(zx - 1, ay + 2, 2, 2, '#7dffa8');
   }
 
   function gambarBuble(n, kananTerakhir) {
     if (!n.tampil) return kananTerakhir;
     const baris = n.ucap[n.k];
-    ctx.font = '8px "Press Start 2P", monospace';
+    ctx.font = '10px "Press Start 2P", monospace';
     let terpanjang = 0;
     for (const b of baris) terpanjang = Math.max(terpanjang, ctx.measureText(b).width);
-    const bw = Math.ceil(terpanjang) + 10, bh = baris.length * 11 + 7;
+    const bw = Math.ceil(terpanjang) + 10, bh = baris.length * 13 + 7;
     const bx = Math.max(2, Math.min(W - bw - 2, n.x - bw / 2));
     if (bx < kananTerakhir + 6) return kananTerakhir;   // buble lain sedang tampil di dekatnya: tunggu giliran
-    const kepalaAtas = 246 - 21;
-    const by = kepalaAtas - bh - 5;
+    const orbAtas = 224;
+    const by = orbAtas - bh - 6;
     P(bx + 1, by, bw - 2, bh, '#fffdf2');
     P(bx, by + 1, bw, bh - 2, '#fffdf2');
     ctx.fillStyle = '#2a3757';
     ctx.fillRect(bx, by, bw, 1); ctx.fillRect(bx, by + bh - 1, bw, 1);
     ctx.fillRect(bx, by, 1, bh); ctx.fillRect(bx + bw - 1, by, 1, bh);
-    P(n.x - 2, by + bh, 4, 2, '#fffdf2');       // ekor buble
-    P(n.x - 1, by + bh + 2, 2, 2, '#fffdf2');
+    P(n.x - 2, by + bh, 4, 2, '#fffdf2');       // ekor buble menuju bola-lentera
+    P(n.x - 1, by + bh + 2, 2, 3, '#fffdf2');
     ctx.fillStyle = '#1c2740';
     ctx.textBaseline = 'top';
-    for (let i = 0; i < baris.length; i++) ctx.fillText(baris[i], bx + 5, by + 4 + i * 11);
+    for (let i = 0; i < baris.length; i++) ctx.fillText(baris[i], bx + 5, by + 4 + i * 13);
     return bx + bw;
   }
 
   function gambarTeksMelayang(T) {
     const u = T.t / 1.5;
     const y = Math.round(T.y - u * 16);
-    ctx.font = '8px "Press Start 2P", monospace';
+    ctx.font = '10px "Press Start 2P", monospace';
     ctx.textBaseline = 'top';
     ctx.globalAlpha = u > 0.7 ? 1 - (u - 0.7) / 0.3 : 1;
     ctx.fillStyle = '#141d33';
@@ -435,31 +559,40 @@
     }
 
     for (const a of awan) gambarAwan(a);
-    for (const b of burung) {
-      P(b.x, b.y, 3, 1, '#3a4a66');
-      P(b.x + 1, b.y + (Math.sin(b.f) > 0 ? -1 : 1), 1, 1, '#3a4a66');
+    // simbol langit — berkedip lembut (bukan burung, hanya simbol)
+    for (const s of simbolLangit) {
+      ctx.globalAlpha = 0.3 + 0.18 * Math.sin(t * 2 + s.f * 3);
+      mini(ctx, s.g, s.x, s.y + Math.sin(t + s.f) * 2, '#fffdf2');
+      ctx.globalAlpha = 1;
     }
 
     gambarApi(t);
     gambarParon();
     gambarTeleskop(t);
     gambarKristal(t);
-    gambarKupu(t);
+    gambarPanahTerbuka(t);
 
-    // penduduk
-    for (const n of npcs) {
-      gambarBayangan(n.x, 247, 11);
-      ctx.drawImage(n.frames[n.fi], Math.round(n.x - 8), 246 - 20 + (n.fi ? -1 : 0));
+    // simbol hutan simbol melayang (pengganti kupu-kupu)
+    for (const s of simbolHutan) {
+      const u = s.umur / s.hidup;
+      ctx.globalAlpha = u < 0.2 ? u / 0.2 : u > 0.75 ? (1 - u) / 0.25 : 1;
+      mini(ctx, s.g, s.x + Math.sin(s.f) * 2, s.y, '#bff7ea');
+      ctx.globalAlpha = 1;
     }
 
-    // Akio — selalu terlihat, tak pernah tertelan layar
+    // penduduk: bola-lentera wilayah (tanpa wajah)
+    for (const n of npcs) {
+      gambarBayangan(n.x, 247, 9);
+      ctx.drawImage(n.frames[n.fi], Math.round(n.x - 8), 224 - (n.fi ? 1 : 0));
+    }
+
+    // Akio — bulatan emas murni, selalu terlihat, tak pernah tertelan layar
     gambarBayangan(player.x, player.y + 1, 12 * player.scale);
     const fr = player.masuk || player.pop
       ? akio.idle
-      : (player.state === 'jalan' ? akio.jalan[Math.floor(player.walkT / 13) % 4]
-        : (player.kedip > 0 ? akio.kedip : akio.idle));
+      : (player.state === 'jalan' ? akio.jalan[Math.floor(player.walkT / 13) % 4] : akio.idle);
     const sq = player.squash * 0.14;
-    const sw = 18 * player.scale * (1 + sq), sh = 21 * player.scale * (1 - sq);
+    const sw = 18 * player.scale * (1 + sq), sh = 18 * player.scale * (1 - sq);
     ctx.drawImage(fr, Math.round(player.x - sw / 2), Math.round(player.y - sh), Math.max(2, Math.round(sw)), Math.max(2, Math.round(sh)));
 
     // partikel
@@ -517,6 +650,8 @@
       state: player.state, target: player.target,
       masuk: player.masuk ? player.masuk.fase : null,
       muatAktif: muatEl.classList.contains('aktif'),
+      skala: LANGKAH_SKALA[idxSkala],
     }),
+    ke: x => { player.target = Math.max(12, Math.min(468, x)); },  // QA: perintahkan berjalan
   };
 })();

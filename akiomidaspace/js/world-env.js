@@ -2,6 +2,7 @@
    DUNIA AKIOMIDA — Lingkungan (world-env.js)
    DUNIA SATU LAYAR TETAP 480x270 (pixel art, tanpa kamera)
    Semua wilayah selalu terlihat: tidak ada lagi layar geser.
+   Penduduk = bola-lentera bermotif angka/simbol (bukan makhluk hidup).
    ========================================================= */
 window.AK = (function () {
   'use strict';
@@ -26,20 +27,21 @@ window.AK = (function () {
       color: '#a5d8ff', deep: '#4a7fc0', label: ['PUNCAK', 'RISET'] },
   ];
 
-  /* ---------- penduduk: satu per wilayah, selalu di tempatnya ---------- */
+  /* ---------- penduduk: BOLA-LANTERA WILAYAH (syariah: bukan makhluk hidup,
+     tanpa wajah/anggota badan) — satu per wilayah, selalu di tempatnya ---------- */
   const NPCS = [
-    { zone: 0, x: 74,  baju: '#4f9a55', bajuD: '#3c7a42', topi: '#d9b98a', jenis: 'topi',
+    { zone: 0, x: 72,  warna: '#63c8ff', gelap: '#1c6fb4', glif: '1',
       ucap: [['Selamat', 'datang!'], ['Ayo mulai', 'dari sini!']] },
-    { zone: 1, x: 88,  baju: '#3f8f4f', bajuD: '#2f7040', topi: '#2f6b3a', jenis: 'daun',
-      ucap: [['Simbol adalah', 'bahasa ajaib!'], ['Jangan', 'tersesat!']] },
-    { zone: 2, x: 230, baju: '#5a7ea6', bajuD: '#456284', topi: '#c94f4f', jenis: 'rajut',
-      ucap: [['Cari polanya,', 'temukan!'], ['Pola ada di', 'mana-mana!']] },
-    { zone: 3, x: 244, baju: '#b5716b', bajuD: '#96555a', topi: '#8fa2b5', jenis: 'helm',
-      ucap: [['Buktikan', 'dengan alasan!'], ['Segera hadir!']] },
-    { zone: 4, x: 386, baju: '#4a3a6e', bajuD: '#382b54', topi: '#6a3fc0', jenis: 'tudung',
-      ucap: [['Makin dalam,', 'makin paham!'], ['Segera hadir!']] },
-    { zone: 5, x: 398, baju: '#cdd6de', bajuD: '#a7b6c4', topi: '#5a7ea6', jenis: 'kupluk',
-      ucap: [['Sampai jumpa', 'di puncak!'], ['Segera hadir!']] },
+    { zone: 1, x: 92,  warna: '#4fe3c8', gelap: '#0d8a74', glif: 'pi',
+      ucap: [['Simbol itu', 'bahasa!'], ['Awas', 'tersesat!']] },
+    { zone: 2, x: 226, warna: '#ffd166', gelap: '#c07d0c', glif: 'delta',
+      ucap: [['Temukan', 'polanya!'], ['Pola itu', 'seru!']] },
+    { zone: 3, x: 312, warna: '#ff9d9d', gelap: '#bd5a5f', glif: 'eq',
+      ucap: [['Buktikan', 'dengannya!'], ['Segera', 'hadir!']] },
+    { zone: 4, x: 384, warna: '#bb8fff', gelap: '#6a3fc0', glif: 'inf',
+      ucap: [['Makin dalam,', 'makin paham!'], ['Segera', 'hadir!']] },
+    { zone: 5, x: 462, warna: '#a5d8ff', gelap: '#4a7fc0', glif: 'tanya',
+      ucap: [['Sampai jumpa', 'di puncak!'], ['Segera', 'hadir!']] },
   ];
 
   /* ---------- alat gambar pixel ---------- */
@@ -75,9 +77,19 @@ window.AK = (function () {
     lingkaran(c, x - 2, tanahY - tg - r + 1, Math.round(r * 0.55), '#4fa55e');
   }
 
+  // glif pixel untuk lencana nomor pintu (penghubung ke daftar wilayah)
+  const DIGIT = {
+    '1': ['..#..', '.##..', '..#..', '..#..', '..#..', '..#..', '.###.'],
+    '2': ['.###.', '#...#', '....#', '..##.', '.#...', '#....', '#####'],
+    '3': ['####.', '....#', '....#', '.###.', '....#', '....#', '####.'],
+    '4': ['...#.', '..##.', '.#.#.', '#..#.', '#####', '...#.', '...#.'],
+    '5': ['#####', '#....', '####.', '....#', '....#', '#...#', '.###.'],
+    '6': ['.###.', '#....', '####.', '#...#', '#...#', '#...#', '.###.'],
+  };
+
   /* ---------- papan nama: semua label di ketinggian sama ---------- */
   const PLAQUE_Y = 116;
-  function papanNama(c, z) {
+  function papanNama(c, z, urut) {
     const font = '8px "Press Start 2P", monospace';
     c.font = font;
     const w1 = c.measureText(z.label[0]).width;
@@ -99,6 +111,19 @@ window.AK = (function () {
     c.font = font;
     c.fillText(z.label[0], Math.round(z.x - w1 / 2), by + 5);
     c.fillText(z.label[1], Math.round(z.x - w2 / 2), by + 15);
+
+    // lencana NOMOR BESAR di atas papan — terbaca mata minus, penghubung
+    // ke daftar wilayah di layar (nomor sama warna sama)
+    const g = DIGIT[String(urut + 1)];
+    P(c, z.x - 10, 90, 20, 24, '#10182b');
+    P(c, z.x - 10, 90, 20, 1, z.color);
+    P(c, z.x - 10, 113, 20, 1, z.color);
+    P(c, z.x - 10, 90, 1, 24, z.color);
+    P(c, z.x + 9, 90, 1, 24, z.color);
+    for (let r = 0; r < 7; r++)
+      for (let k = 0; k < 5; k++)
+        if (g[r][k] === '#') P(c, z.x - 5 + k * 2, 94 + r * 2, 2, 2, '#fffdf2');
+    P(c, z.x - 1, 114, 2, 2, '#37476f');
   }
 
   /* ---------- pintu gerbang (ceruk + bingkai kayu) ---------- */
@@ -280,8 +305,8 @@ window.AK = (function () {
     // bangunan keenam wilayah
     for (const z of ZONES) BANGUNAN[z.biome](c, z);
 
-    // papan nama — SEMUA tujuan terbaca jelas di ketinggian sama
-    for (const z of ZONES) papanNama(c, z);
+    // papan nama + lencana nomor — SEMUA tujuan terbaca jelas di ketinggian sama
+    ZONES.forEach((z, i) => papanNama(c, z, i));
 
     // lampu jalan
     for (const lx of [78, 234, 312, 392]) {

@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#0d1424">
 <title>Dunia Akiomida — Petualangan Matematika Pixel | Perpustakaan Matematika</title>
-<meta name="description" content="Dunia Akiomida versi pixel art: satu layar penuh, semua wilayah terlihat jelas. Gerakkan Akio si pemandu keemasan ke pintu wilayah tujuan. Ramah mobile.">
+<meta name="description" content="Dunia Akiomida versi pixel art: satu layar penuh, semua wilayah terlihat jelas. Tulisan besar ramah mata minus, karakter bulat tanpa wajah. Gerakkan Akio si bulatan emas ke pintu wilayah tujuan. Ramah mobile.">
 <meta property="og:title" content="Dunia Akiomida — Petualangan Matematika Pixel">
-<meta property="og:description" content="Enam wilayah dalam satu layar. Gerakkan Akio ke pintu tujuan.">
+<meta property="og:description" content="Enam wilayah dalam satu layar. Gerakkan Akio ke pintu tujuan. Tulisan besar, ramah mata minus.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
+  html { --skala:1; }
   html, body { height:100%; overflow:hidden; }
   body {
     font-family:'Nunito','Segoe UI',Tahoma,sans-serif;
@@ -43,57 +44,161 @@
     border:4px solid #1e2a44; border-radius:10px;
     box-shadow:0 14px 44px rgba(0,0,0,.55), 0 0 0 2px rgba(255,255,255,.05);
     touch-action:none; cursor:pointer;
+    flex:0 0 auto;
   }
 
   /* ---------- chip wilayah (kiri-atas) ---------- */
   .chip-wilayah {
     position:fixed; top:calc(12px + env(safe-area-inset-top)); left:14px; z-index:25;
     pointer-events:none;
-    background:#141d33; border:3px solid #2a3757; border-radius:10px;
-    padding:8px 12px 9px; box-shadow:0 5px 0 rgba(0,0,0,.35);
-    max-width:min(64vw,320px);
+    background:#141d33; border:3px solid #2a3757; border-radius:12px;
+    padding:9px 13px 10px; box-shadow:0 5px 0 rgba(0,0,0,.35);
+    max-width:min(60vw,330px);
     opacity:0; transform:translateY(-8px); transition:opacity .4s ease, transform .4s ease;
   }
   .chip-wilayah.tampil { opacity:1; transform:none; }
   .chip-wilayah .kecil {
-    display:block; font-family:'Press Start 2P',monospace; font-size:7px;
-    letter-spacing:1px; color:#7f92b8; margin-bottom:5px;
+    display:block; font-family:'Press Start 2P',monospace;
+    font-size:calc(9px * var(--skala));
+    letter-spacing:1px; color:#8fa2c8; margin-bottom:5px;
   }
-  .chip-wilayah .nama { display:block; font-size:15px; font-weight:900; color:#fff; line-height:1.1; }
-  .chip-wilayah .slogan { display:block; font-size:10.5px; font-weight:700; color:#9fb2d8; margin-top:2px; }
+  .chip-wilayah .nama { display:block; font-size:calc(18px * var(--skala)); font-weight:900; color:#fff; line-height:1.12; }
+  .chip-wilayah .slogan { display:block; font-size:calc(13.5px * var(--skala)); font-weight:800; color:#aec0e4; margin-top:3px; }
+  /* di mobile: chip ramping agar tidak menutupi kanvas */
+  body.coarse .chip-wilayah { padding:7px 11px 8px; }
+  body.coarse .chip-wilayah .slogan { display:none; }
+  body.coarse .chip-wilayah .nama { font-size:calc(16px * var(--skala)); }
+
+  /* ---------- pengaturan tulisan (mata minus): A- / A+ ---------- */
+  #akses {
+    position:fixed; top:calc(12px + env(safe-area-inset-top)); right:14px; z-index:35;
+    display:flex; gap:7px;
+  }
+  #akses button {
+    width:46px; height:46px; border-radius:12px;
+    background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
+    color:#fff; font-family:'Nunito',sans-serif; font-weight:900;
+    font-size:calc(16px * var(--skala)); line-height:1;
+    cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
+    transition:transform .06s ease, box-shadow .06s ease;
+  }
+  #akses button:active { transform:translateY(3px); border-bottom-width:2px; box-shadow:0 1px 0 #0a0f1c; }
+  #akses button:disabled { opacity:.4; cursor:default; }
+
+  /* ---------- tombol daftar wilayah (panel melayang) ---------- */
+  #btnLegenda {
+    position:fixed; top:calc(70px + env(safe-area-inset-top)); right:14px; z-index:35;
+    font-family:'Press Start 2P',monospace; font-size:calc(9px * var(--skala));
+    color:#e3ebfa; background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
+    border-radius:11px; padding:12px 13px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
+    letter-spacing:1px; transition:transform .06s ease, box-shadow .06s ease;
+  }
+  #btnLegenda.tahan { transform:translateY(3px); border-bottom-width:2px; box-shadow:0 1px 0 #0a0f1c; background:#28365c; }
+  @media (orientation:portrait) { body.coarse #btnLegenda { display:none; } }
+
+  /* ---------- DAFTAR WILAYAH: huruf besar, ramah mata minus ---------- */
+  #legenda {
+    display:flex; flex-direction:column; gap:7px;
+    background:#141d33; border:3px solid #2a3757; border-radius:14px;
+    box-shadow:0 8px 0 rgba(0,0,0,.35);
+    padding:12px 12px 11px;
+    width:min(330px, 86vw);
+    max-height:calc(100vh - 190px); overflow-y:auto; -webkit-overflow-scrolling:touch;
+    position:fixed; right:14px; top:calc(122px + env(safe-area-inset-top)); z-index:34;
+    transform:translateX(calc(100% + 40px)); opacity:0; visibility:hidden; pointer-events:none;
+    transition:transform .35s ease, opacity .3s ease, visibility 0s linear .35s;
+  }
+  #legenda.buka {
+    transform:none; opacity:1; visibility:visible; pointer-events:auto;
+    transition:transform .35s ease, opacity .3s ease;
+  }
+  body.coarse #legenda {
+    position:static; width:min(430px,100%); max-height:calc(100vh - 460px); min-height:120px;
+    transform:none; opacity:1; visibility:visible; pointer-events:auto; transition:none;
+    flex:0 1 auto;
+  }
+  @media (orientation:landscape) {
+    body.coarse #legenda {
+      position:fixed; right:14px; top:calc(122px + env(safe-area-inset-top));
+      width:min(330px, 60vw); max-height:calc(100vh - 190px);
+      transform:translateX(calc(100% + 40px)); opacity:0; visibility:hidden; pointer-events:none;
+      transition:transform .35s ease, opacity .3s ease, visibility 0s linear .35s;
+      flex:0 0 auto;
+    }
+    body.coarse #legenda.buka {
+      transform:none; opacity:1; visibility:visible; pointer-events:auto;
+      transition:transform .35s ease, opacity .3s ease;
+    }
+  }
+  .leg-kepala { display:flex; flex-direction:column; gap:2px; padding:1px 4px 8px; border-bottom:2px solid #2a3757; }
+  .leg-judul { font-family:'Press Start 2P',monospace; font-size:calc(10px * var(--skala)); letter-spacing:2px; color:#ffd166; }
+  .leg-sub { font-size:calc(13px * var(--skala)); font-weight:800; color:#aec0e4; }
+  .leg-baris {
+    display:flex; align-items:center; gap:10px; width:100%; text-align:left;
+    background:#1a2440; border:2px solid #2a3757; border-radius:11px;
+    padding:8px 10px; cursor:pointer; font-family:inherit;
+    transition:transform .06s ease;
+  }
+  .leg-baris:active { transform:translateY(2px); }
+  .leg-baris:focus-visible { outline:3px solid #ffd166; outline-offset:2px; }
+  .leg-baris.tujuan {
+    border-color:#ffd166; background:#21254a;
+    box-shadow:0 0 0 1px rgba(255,209,102,.4), 0 0 16px rgba(255,209,102,.16);
+  }
+  .leg-no {
+    flex:0 0 auto; width:36px; height:36px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--zc,#63c8ff); border-bottom:4px solid var(--zd,#1c6fb4);
+    font-family:'Press Start 2P',monospace; font-size:calc(14px * var(--skala));
+    color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.4);
+  }
+  .leg-teks { flex:1 1 auto; display:flex; flex-direction:column; gap:1px; min-width:0; }
+  .leg-teks b { font-size:calc(16.5px * var(--skala)); font-weight:900; color:#fff; line-height:1.15; }
+  .leg-teks i { font-style:normal; font-size:calc(12.5px * var(--skala)); font-weight:700; color:#9fb2d8; line-height:1.25; }
+  .leg-status {
+    flex:0 0 auto; font-family:'Press Start 2P',monospace;
+    font-size:calc(7.5px * var(--skala)); letter-spacing:1px;
+    color:#9fb2d8; background:#2a3757; border-radius:7px; padding:5px 7px 4px;
+  }
+  .leg-status.buka { color:#0d3a22; background:#5ee89b; }
+
+  /* ---------- label AKIO mengikuti bola (besar & terbaca) ---------- */
+  #labelAkio {
+    position:fixed; left:0; top:0; z-index:20; pointer-events:none;
+    font-size:calc(13.5px * var(--skala)); font-weight:900; letter-spacing:.6px;
+    color:#ffd166; background:rgba(10,15,28,.8);
+    border:2px solid rgba(255,209,102,.45); border-radius:999px;
+    padding:3px 11px 4px; text-shadow:0 1px 0 rgba(0,0,0,.55);
+    will-change:transform; white-space:nowrap;
+  }
 
   /* ---------- petunjuk ---------- */
   .hint {
     position:fixed; left:50%; transform:translateX(-50%);
     bottom:calc(16px + env(safe-area-inset-bottom)); z-index:25;
     pointer-events:none; text-align:center;
-    font-size:11.5px; font-weight:800; color:#c6d4f2;
+    font-size:calc(15px * var(--skala)); font-weight:800; color:#eef4ff;
     background:#141d33; border:2px solid #2a3757; border-radius:999px;
-    padding:8px 16px; box-shadow:0 4px 0 rgba(0,0,0,.3);
+    padding:9px 18px; box-shadow:0 4px 0 rgba(0,0,0,.3);
     opacity:0; transition:opacity .6s ease;
     max-width:calc(100vw - 28px);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   }
   .hint.tampil { opacity:1; }
   .hint.pudar { opacity:0 !important; }
-  body.coarse .hint { bottom:calc(114px + env(safe-area-inset-bottom)); }
+  body.coarse .hint { bottom:calc(124px + env(safe-area-inset-bottom)); font-size:calc(13.5px * var(--skala)); padding:8px 15px; }
 
-  /* ---------- panel tugas (mobile) ---------- */
-  #misi {
-    display:none; flex-direction:column; align-items:center; gap:8px;
-    background:#141d33; border:3px solid #2a3757; border-radius:12px;
-    box-shadow:0 5px 0 rgba(0,0,0,.35);
-    padding:13px 18px 12px; max-width:min(88vw,420px); text-align:center;
+  /* ---------- tombol MASUK besar (mobile, pintu terbuka) ---------- */
+  #btnMasukPintu {
+    position:fixed; left:50%; bottom:calc(26px + env(safe-area-inset-bottom)); z-index:32;
+    transform:translateX(-50%) translateY(14px); opacity:0; pointer-events:none;
+    font-family:'Press Start 2P',monospace; font-size:calc(12px * var(--skala));
+    color:#3a2a08; background:#ffd166; border:0; border-bottom:6px solid #c9971c;
+    border-radius:14px; padding:15px 26px; cursor:pointer; letter-spacing:1px;
+    transition:opacity .25s ease, transform .25s ease, border-bottom-width .08s ease;
   }
-  body.coarse #misi { display:flex; }
-  @media (orientation:landscape) { body.coarse #misi { display:none; } }
-  .misi-label {
-    font-family:'Press Start 2P',monospace; font-size:7px;
-    letter-spacing:2px; color:#ffd166;
-  }
-  .misi-teks { font-size:12.5px; font-weight:800; color:#c6d4f2; line-height:1.5; }
-  .misi-teks b { color:#fff; }
-  .misi-pip { display:flex; gap:8px; margin-top:2px; }
-  .misi-pip i { width:11px; height:11px; border-radius:3px; display:block; }
+  #btnMasukPintu.tampil { opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+  #btnMasukPintu:active { transform:translateX(-50%) translateY(4px); border-bottom-width:2px; }
 
   /* ---------- kontrol sentuh ---------- */
   #kontrol {
@@ -105,10 +210,10 @@
   body.coarse #kontrol { display:flex; }
   .tb {
     pointer-events:auto;
-    width:78px; height:78px;
-    font-family:'Press Start 2P',monospace; font-size:20px; line-height:1;
+    width:84px; height:84px;
+    font-family:'Press Start 2P',monospace; font-size:24px; line-height:1;
     color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.4);
-    background:#1a2440; border:3px solid #37476f; border-radius:16px;
+    background:#1a2440; border:3px solid #37476f; border-radius:18px;
     box-shadow:0 6px 0 #0a0f1c, inset 0 2px 0 rgba(255,255,255,.08);
     cursor:pointer; touch-action:none;
     transition:transform .06s ease, box-shadow .06s ease, background .06s ease;
@@ -142,7 +247,7 @@
   }
   .muat-lompat { position:relative; width:54px; height:72px; margin:0 auto 16px; }
   .muat-bola {
-    position:absolute; left:0; right:0; bottom:12px; height:54px; border-radius:12px;
+    position:absolute; left:0; right:0; bottom:12px; height:54px; border-radius:50%;
     background:radial-gradient(circle at 34% 28%, #fff3cf, #f6c453 58%, #d98f2b);
     box-shadow:0 0 26px rgba(255,214,120,.45), inset 0 -5px 0 rgba(0,0,0,.14);
     transform-origin:50% 100%;
@@ -167,10 +272,11 @@
   }
   .muat-judul {
     font-family:'Press Start 2P',monospace;
-    font-size:clamp(11px,3vw,15px); line-height:1.7; letter-spacing:.5px;
+    font-size:calc(clamp(13px, 3.4vw, 17px) * var(--skala));
+    line-height:1.7; letter-spacing:.5px;
     color:#ffd166; max-width:78vw; margin:0 auto;
   }
-  .muat-sub { margin-top:9px; font-size:13.5px; font-weight:800; color:#9fb2d8; }
+  .muat-sub { margin-top:9px; font-size:calc(15px * var(--skala)); font-weight:800; color:#aec0e4; }
   .muat-titik { margin-left:2px; }
   .muat-titik span { display:inline-block; animation:muatKedip 1.2s infinite; }
   .muat-titik span:nth-child(2) { animation-delay:.2s; }
@@ -182,8 +288,9 @@
     border:2px solid #2a3757; border-radius:10px; padding:11px 8px 7px;
   }
   .muat-label {
-    display:block; font-family:'Press Start 2P',monospace; font-size:7px;
-    letter-spacing:2px; color:#5d6f96; margin-bottom:3px;
+    display:block; font-family:'Press Start 2P',monospace;
+    font-size:calc(8px * var(--skala));
+    letter-spacing:2px; color:#6d80aa; margin-bottom:3px;
   }
   .muat-slot { min-height:250px; }
   .muat-slot:not(:empty) { min-height:0; }
@@ -199,9 +306,9 @@
   @keyframes muatGaris { from { transform:translateX(-110%); } to { transform:translateX(300%); } }
   .muat-batal {
     position:absolute; top:calc(12px + env(safe-area-inset-top)); right:14px; z-index:61;
-    font-family:'Press Start 2P',monospace; font-size:9px;
-    color:#c6d4f2; background:#1a2440; border:3px solid #37476f; border-radius:10px;
-    padding:10px 14px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
+    font-family:'Press Start 2P',monospace; font-size:calc(11px * var(--skala));
+    color:#e3ebfa; background:#1a2440; border:3px solid #37476f; border-radius:10px;
+    padding:11px 15px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
   }
   .muat-batal:active { transform:translateY(3px); box-shadow:0 1px 0 #0a0f1c; }
   @media (prefers-reduced-motion:reduce) {
@@ -211,8 +318,9 @@
   /* ---------- intro pixel ---------- */
   .intro {
     position:fixed; inset:0; z-index:50;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    text-align:center; padding:22px;
+    display:flex; flex-direction:column; align-items:center;
+    text-align:center; padding:18px;
+    overflow-y:auto; -webkit-overflow-scrolling:touch;
     background:#0d1424;
     background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1.4px);
     background-size:24px 24px;
@@ -220,40 +328,50 @@
   }
   .intro.pergi { opacity:0; pointer-events:none; }
   .intro .panel {
+    margin:auto;   /* tengah aman saat panel lebih tinggi dari layar */
     background:#141d33; border:4px solid #2a3757; border-radius:16px;
     box-shadow:0 12px 0 rgba(0,0,0,.4);
-    padding:34px 26px 30px; width:min(500px,100%);
+    padding:34px 26px 30px; width:min(520px,100%);
   }
+  @media (max-height:520px) {
+    .intro .panel { padding:20px 20px 22px; box-shadow:0 8px 0 rgba(0,0,0,.4); }
+    .intro .akio-css { width:38px; height:38px; margin-bottom:12px; }
+    .intro h1 { line-height:1.4; }
+    .intro .ramah { display:none; }
+    .intro button { margin-top:16px; padding:13px 28px; }
+  }
+  /* bulatan emas murni — TANPA wajah (syariah) */
   .intro .akio-css {
-    width:46px; height:46px; margin:0 auto 20px; border-radius:12px;
+    width:52px; height:52px; margin:0 auto 20px; border-radius:50%;
     background:radial-gradient(circle at 34% 30%, #ffe9ad, #f6c453 62%, #d98f2b);
     box-shadow:inset 0 -6px 0 rgba(0,0,0,.14), 0 6px 0 rgba(0,0,0,.3);
-    position:relative;
     animation:melayang 2.6s ease-in-out infinite;
   }
-  .intro .akio-css::before, .intro .akio-css::after {
-    content:''; position:absolute; top:17px; width:5px; height:7px;
-    background:#3a2a08; border-radius:2px;
-  }
-  .intro .akio-css::before { left:12px; }
-  .intro .akio-css::after  { right:12px; }
   @keyframes melayang { 0%,100% { transform:translateY(0) scale(1,1); } 50% { transform:translateY(-10px) scale(.97,1.04); } }
   .intro .kecil {
-    display:block; font-family:'Press Start 2P',monospace; font-size:8px;
-    letter-spacing:2px; color:#7f92b8; margin-bottom:14px;
+    display:block; font-family:'Press Start 2P',monospace;
+    font-size:calc(9px * var(--skala));
+    letter-spacing:2px; color:#8fa2c8; margin-bottom:14px;
   }
   .intro h1 {
     font-family:'Press Start 2P',monospace;
-    font-size:clamp(15px,4.6vw,24px); line-height:1.6; letter-spacing:1px;
+    font-size:calc(clamp(17px, 5vw, 26px) * var(--skala));
+    line-height:1.6; letter-spacing:1px;
     color:#ffd166;
   }
-  .intro .bawah { margin-top:14px; font-size:15px; font-weight:800; color:#e8eef8; }
-  .intro .catatan { margin-top:6px; font-size:12.5px; font-weight:700; color:#9fb2d8; }
+  .intro .bawah { margin-top:14px; font-size:calc(17px * var(--skala)); font-weight:800; color:#e8eef8; }
+  .intro .catatan { margin-top:6px; font-size:calc(14px * var(--skala)); font-weight:700; color:#aec0e4; line-height:1.5; }
+  .intro .ramah {
+    margin-top:12px; font-size:calc(13px * var(--skala)); font-weight:800; color:#7dffa8;
+    background:rgba(93,232,155,.08); border:2px solid rgba(93,232,155,.25);
+    border-radius:10px; padding:8px 10px; line-height:1.45;
+  }
   .intro button {
-    margin-top:26px; font-family:'Press Start 2P',monospace; font-size:12px;
+    margin-top:24px; font-family:'Press Start 2P',monospace;
+    font-size:calc(13px * var(--skala));
     color:#3a2a08; background:#ffd166; border:0; border-radius:12px;
     border-bottom:6px solid #c9971c;
-    padding:16px 34px; cursor:pointer; letter-spacing:1px;
+    padding:17px 36px; cursor:pointer; letter-spacing:1px;
     transition:transform .08s ease, border-bottom-width .08s ease;
   }
   .intro button:active { transform:translateY(4px); border-bottom-width:2px; }
@@ -266,19 +384,10 @@
 
 <div id="panggung">
   <canvas id="layar" width="480" height="270" aria-label="Dunia Akiomida, peta pixel dengan enam wilayah matematika dalam satu layar"></canvas>
-  <div id="misi">
-    <span class="misi-label">TUGASMU</span>
-    <span class="misi-teks">Gerakkan Akio ke pintu <b>Kamp Angka</b> —<br>satu-satunya gerbang yang terbuka.</span>
-    <div class="misi-pip" aria-hidden="true">
-      <i class="buka" style="background:#63c8ff;box-shadow:0 0 8px 2px rgba(99,200,255,.45)" title="Kamp Angka — terbuka"></i>
-      <i style="background:rgba(79,227,200,.22)" title="Hutan Simbol — segera hadir"></i>
-      <i style="background:rgba(255,209,102,.22)" title="Pegunungan Pola — segera hadir"></i>
-      <i style="background:rgba(255,157,157,.22)" title="Kota Bukti — segera hadir"></i>
-      <i style="background:rgba(187,143,255,.22)" title="Lembah Kedalaman — segera hadir"></i>
-      <i style="background:rgba(165,216,255,.22)" title="Puncak Riset — segera hadir"></i>
-    </div>
-  </div>
+  <div id="legenda" aria-label="Daftar wilayah Perpustakaan Matematika"></div>
 </div>
+
+<div id="labelAkio" aria-hidden="true">AKIO</div>
 
 <div class="chip-wilayah" id="chipWilayah" aria-live="polite">
   <span class="kecil">WILAYAH</span>
@@ -286,7 +395,16 @@
   <span class="slogan" id="chipSlogan">Gerakkan Akio ke pintu tujuan</span>
 </div>
 
+<div id="akses" aria-label="Pengaturan ukuran tulisan">
+  <button id="btnMin" type="button" aria-label="Perkecil tulisan">A&minus;</button>
+  <button id="btnPlus" type="button" aria-label="Perbesar tulisan">A+</button>
+</div>
+
+<button id="btnLegenda" type="button" aria-label="Buka daftar wilayah">&#9776; WILAYAH</button>
+
 <div class="hint tampil" id="hint">Gerakkan Akio ke pintu wilayah</div>
+
+<button id="btnMasukPintu" type="button">MASUK</button>
 
 <div id="kontrol">
   <button class="tb" id="btnKiri" type="button" aria-label="Jalan ke kiri">&#9664;</button>
@@ -317,7 +435,8 @@
     <span class="kecil">PERPUSTAKAAN MATEMATIKA</span>
     <h1>DUNIA<br>AKIOMIDA</h1>
     <div class="bawah">Enam wilayah dalam satu layar.</div>
-    <div class="catatan">Tugasmu satu: gerakkan Akio ke pintu wilayah yang dituju.</div>
+    <div class="catatan">Tugasmu satu: gerakkan Akio, bulatan emas,<br>ke pintu wilayah yang dituju.</div>
+    <div class="ramah">Tulisan besar &amp; nyaman untuk mata minus.<br>Butuh lebih besar? Tekan A+ di pojok kanan atas.</div>
     <button id="btnMasuk" type="button">MASUK DUNIA</button>
   </div>
 </div>
