@@ -577,6 +577,286 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p1-021 · Tanda Tambah (+) — padang siang, dua jalan bertemu ----- */
+    'p1-021': {
+      tema: 'plus',
+      npc: { glif: 'T', ucap: ['Gabung jadi', 'satu!'] },
+      stasiun: [
+        {
+          objek: 'papanPlus', judul: 'Tanda yang Mengundang',
+          teks: 'Di padang ini dua jalan bertemu menjadi satu. Bentuknya persis tanda plus: dua garis bersilang. Sejak dulu tanda + dipahami sebagai undangan berkumpul — yang di kiri dan yang di kanan dipersilakan menjadi satu rombongan.',
+        },
+        {
+          objek: 'duaKeranjang', judul: 'Dua Keranjang Bertemu',
+          teks: 'Keranjang kiri berisi 3 permen, keranjang kanan berisi 2 permen. Mau menggabungkannya? Tulis: 3 + 2. Tanda plus di antara keduanya berkata: silakan, kumpulkan keduanya jadi satu.',
+        },
+        {
+          objek: 'wadahGabung', judul: 'Jadi Satu Wadah',
+          teks: 'Tuangkan ke satu wadah, lalu hitung dari awal: 1, 2, 3, 4, 5. Jadi 3 + 2 = 5. Menambah itu menggabungkan isi, kemudian menghitung semuanya bersama-sama.',
+        },
+        {
+          objek: 'papanEt', judul: 'Lahir dari Kata "Dan"',
+          teks: 'Lebih dari lima ratus tahun lalu, di buku hitung dagang Eropa, tanda + mula-mula muncul di cetakan. Konon bentuknya lahir dari kata et (artinya "dan") yang ditulis tergesa-gesa sampai melengkung menjadi +. Tanda gabungmu ternyata keturunan kata kecil "dan"!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Gabung Itu Mudah!',
+          teks: 'Jadi setiap kamu menulis 3 + 2, itu undangan berkumpul: yang terpisah menjadi bersama, yang kecil menjadi banyak. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-022 · Tanda Kurang (−) — peron keberangkatan senja ----- */
+    'p1-022': {
+      tema: 'peron',
+      npc: { glif: '-', ucap: ['Berkurang,', 'jangan sedih!'] },
+      stasiun: [
+        {
+          objek: 'papanMin', judul: 'Satu Garis yang Jujur',
+          teks: 'Tanda kurang hanya satu garis datar: −. Bukan tanda sedih, lho. Dia pencatat yang jujur: ada yang berpindah tempat, dimakan, atau dibagikan — maka yang ada tadi kini tinggal sebagian.',
+        },
+        {
+          objek: 'kantongLima', judul: 'Kantong 5 Permen',
+          teks: 'Pagi tadi kantong ini penuh: 5 permen. Hitung dulu sebelum berangkat: 1, 2, 3, 4, 5. Berangkat dengan bekal lengkap, hati pun tenang.',
+        },
+        {
+          objek: 'temanPergi', judul: 'Teman Berangkat Membawa 2',
+          teks: 'Seorang teman berangkat membawa 2 permen untuk bekalnya. Lihat dia melangkah pergi. Maka kita tulis: 5 − 2. Tanda minus mencatat: dari 5, ada 2 yang berpindah.',
+        },
+        {
+          objek: 'papanSisa', judul: 'Hitung yang Tersisa',
+          teks: 'Sekarang hitung sisa kantong: 1, 2, 3. Jadi 5 − 2 = 3. Berkurang bukan berarti rugi — 2 permen itu kini menggembirakan temanmu di jalan!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Min Itu Jujur!',
+          teks: 'Jadi bertemu minus jangan bingung: dia hanya mencatat yang berpindah. Di buku hitung dagang Eropa dulu, − lahir berdampingan dengan +, dan kata minus artinya lebih sedikit. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-023 · Tanda Kali (×) — lapangan parade siang ----- */
+    'p1-023': {
+      tema: 'parade',
+      npc: { glif: 'x', ucap: ['Baris rapi,', 'hitung kilat!'] },
+      stasiun: [
+        {
+          objek: 'papanKali', judul: 'Tanda Silang Sang Kilat',
+          teks: 'Perkenalkan tanda silang: ×. Dia jurus singkat untuk menjumlah yang sama berulang-ulang. Tanpa dia, tulisanmu panjang sekali dan mulutmu capek membacanya.',
+        },
+        {
+          objek: 'barisParade', judul: 'Parade 3 Baris Isi 4',
+          teks: 'Lihat parade di lapangan: 3 baris, tiap baris berisi 4 penduduk. Tulisnya 3 × 4 — artinya angka 4 diulang 3 kali. Hitung satu baris: 4. Dua baris: 8. Tiga baris: 12.',
+        },
+        {
+          objek: 'papan444', judul: 'Jalan Pintasnya',
+          teks: 'Kalau ditulis panjang: 4 + 4 + 4 = 12. Tanda kali adalah jalan pintas kalimat itu: 3 × 4 = 12. Tujuannya sama, tapi lebih kilat dan tak melelahkan.',
+        },
+        {
+          objek: 'papanTahunX', judul: 'Si Muda di Antara Tanda',
+          teks: 'Tanda + sudah berusia lebih dari lima ratus tahun, sedangkan tanda × baru dipakai sekitar tahun 1631 oleh seorang ahli hitung di Inggris. Usianya muda, tetapi jasanya besar: perkalian jadi ringan untuk semua orang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kilat Tapi Tertib!',
+          teks: 'Jadi kalau ada 3 piring dan tiap piring berisi 4 kue, tak perlu menghitung satu-satu: 3 × 4 = 12. Jurus singkat untuk pengulangan yang sama. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-024 · Tanda Bagi (÷) — ruang makan siang hangat ----- */
+    'p1-024': {
+      tema: 'meja',
+      npc: { glif: ':', ucap: ['Bagi rata,', 'hati tenang!'] },
+      stasiun: [
+        {
+          objek: 'papanBagi', judul: 'Tanda yang Menuntun Berbagi',
+          teks: 'Tanda bagi berupa satu garis dengan sebutir titik di atas dan sebutir di bawah: ÷. Garis tengahnya seperti pembatas nampan, dan dua titiknya menandai dua pihak yang akan berbagi.',
+        },
+        {
+          objek: 'nampanKue', judul: 'Nampan 8 Kue',
+          teks: 'Di nampan tersusun 8 kue. Dua anak hendak berbagi sama rata. Sebelum membagi, sepakati dulu: bagi itu adil, tak boleh ada yang merasa dikalahkan.',
+        },
+        {
+          objek: 'piringMasing', judul: 'Dua Piring, Isi 4-4',
+          teks: 'Bagikan bergantian: satu untuk piring kiri, satu untuk piring kanan, sampai nampan kosong. Hasilnya tiap piring berisi 4. Ditulis: 8 ÷ 2 = 4. Itulah pekerjaan tanda bagi.',
+        },
+        {
+          objek: 'papanObelus', judul: 'Nama Tuanya: Obelus',
+          teks: 'Nama tua tanda ÷ adalah obelus. Ia mulai dipakai sebagai tanda bagi dalam buku hitung tahun 1659 karya seorang penghitung dari Swiss. Bentuknya sederhana, tugasnya mulia: menuntun berbagi adil.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Adil Itu Gampang!',
+          teks: 'Jadi saat membagi kue, jeruk, atau waktu bermain: hitung yang ada, bagi sama rata, semua puas. Berbagi adil ternyata juga matematika. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-025 · Tanda Sama Dengan (=) — ruang timbangan pagi biru ----- */
+    'p1-025': {
+      tema: 'setara',
+      npc: { glif: 'S', ucap: ['Kiri kanan,', 'harus setara!'] },
+      stasiun: [
+        {
+          objek: 'papanEq', judul: 'Dua Garis Kembar',
+          teks: 'Tanda sama dengan berupa dua garis kembar yang sejajar: =. Dia penjaga keseimbangan kalimat matematika — apa pun di sisi kiri harus bernilai sama persis dengan di sisi kanan.',
+        },
+        {
+          objek: 'timbangSetara', judul: 'Timbangan yang Seimbang',
+          teks: 'Lihat timbangan ini: piring kiri memuat 3 + 4, piring kanan memuat 7. Keduanya rata. Maka kalimat 3 + 4 = 7 benar — kedua sisinya bernilai sama.',
+        },
+        {
+          objek: 'timbangMiring', judul: 'Kalau Tidak Rata?',
+          teks: 'Sekarang piring kiri menulis 5, piring kanan menulis 8. Timbangan miring: nilainya tidak sama, maka tanda = tak boleh dipakai. Yang pas adalah tanda rahang > atau < — dan kalimatnya benar kembali.',
+        },
+        {
+          objek: 'papan1557', judul: 'Pencipta Tanda =',
+          teks: 'Tanda = diperkenalkan tahun 1557 oleh Robert Recorde, penghitung dari Britania. Konon ia memilih dua garis sejajar karena tak ada dua hal yang lebih sama daripada sepasang garis kembar sepanjang itu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Setara Itu Tenang!',
+          teks: 'Jadi setiap kalimat dengan tanda = menyimpan timbangan: kiri dan kanan harus setara. Kalau keseimbangan terjaga, jawabanmu jujur. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-026 · Lebih Besar & Kecil (> <) — padang tanduk siang ----- */
+    'p1-026': {
+      tema: 'tanduk',
+      npc: { glif: '<', ucap: ['Mulutnya', 'ke yang besar!'] },
+      stasiun: [
+        {
+          objek: 'rahangTerbuka', judul: 'Rahang yang Selalu Lapar',
+          teks: 'Tanda > dan < seperti sepasang rahang yang terbuka lebar. Rahang ini tak pernah salah sasaran: mulutnya selalu membuka ke bilangan yang lebih besar, dan ujung lancipnya menunjuk yang lebih kecil.',
+        },
+        {
+          objek: 'kartu93', judul: 'Kartu 9 > 3',
+          teks: 'Kartu ini menulis 9 > 3. Lihat titik-titiknya: kelompok kiri berisi 9, kelompok kanan berisi 3. Mulut lebar membuka ke 9 — baca: sembilan lebih besar dari tiga.',
+        },
+        {
+          objek: 'kartuBalik', judul: 'Kartu 2 < 6',
+          teks: 'Sekarang dibalik: 2 < 6. Kelompok kiri berisi 2, kanan berisi 6. Mulut lebar membuka ke 6, ujung lancip menunjuk 2 — baca: dua lebih kecil dari enam. Tandanya sama, arahnya yang mengubah makna.',
+        },
+        {
+          objek: 'papanArah', judul: 'Rahasia Mengingat',
+          teks: 'Rahasia kecilnya: bayangkan rahang lapar yang selalu ingin menyantap lebih banyak, maka mulutnya membuka ke bilangan besar. Kalau kedua sisi sama banyak, rahang digantikan tanda sama dengan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Arahnya Jelas!',
+          teks: 'Jadi 9 > 3 dan 2 < 6 kini mudah dibaca: mulut ke yang besar, lancip ke yang kecil. Setiap kartu angka di sekitarmu bisa kamu bacakan sendiri. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-027 · Tanda Kurung ( ) — desa sore dua rumah ----- */
+    'p1-027': {
+      tema: 'desa',
+      npc: { glif: '(', ucap: ['Dalam dulu,', 'baru di luar!'] },
+      stasiun: [
+        {
+          objek: 'gerbangKurung', judul: 'Sepasang Pintu Spesial',
+          teks: 'Tanda kurung selalu berpasangan: satu di kiri, satu di kanan, melingkupi angka di dalamnya. Angka yang berdiri di dalam pasangan pintu ini selalu dihitung lebih dulu — dia tamu spesial yang tak boleh menunggu.',
+        },
+        {
+          objek: 'papanDalam', judul: 'Dalam Kurung Dulu',
+          teks: 'Coba kalimat ini: (2 + 3) × 2. Hormati tamu spesialnya: dalam kurung dihitung dulu — 2 + 3 = 5. Baru dikalikan: 5 × 2 = 10. Hasilnya sepuluh.',
+        },
+        {
+          objek: 'papanTanpa', judul: 'Tanpa Pintu, Berubah!',
+          teks: 'Sekarang pintunya dibuka: 2 + 3 × 2. Kalau dihitung sekadar dari kiri, jawabannya 10 — padahal yang benar 8! Aturannya: kali didahulukan, jadi 3 × 2 = 6, baru 2 + 6 = 8. Satu pasang pintu kecil ternyata mengubah segalanya.',
+        },
+        {
+          objek: 'papanUrutan', judul: 'Urutan Hormat Berhitung',
+          teks: 'Urutan lengkapnya: kurung dihitung paling dulu, lalu kali dan bagi, terakhir tambah dan kurang. Ibarat antre di desa: tamu spesial masuk lebih dulu, yang lain menunggu giliran dengan tertib.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dalam Itu Duluan!',
+          teks: 'Jadi kurung adalah pintu spesial dalam kalimat matematika: siapa tinggal di dalamnya, dia dihitung lebih dulu. Dengan pintu kecil itu, jawaban tak pernah ketukar. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-028 · Tanda Koma Desimal — toko kue malam hangat ----- */
+    'p1-028': {
+      tema: 'kue',
+      npc: { glif: ',', ucap: ['Utuh dulu,', 'lalu kepingan!'] },
+      stasiun: [
+        {
+          objek: 'papanKoma', judul: 'Pintu Kecil Dua Dunia',
+          teks: 'Koma kecil di bawah ini adalah pintu antara dua dunia angka: di sisi kiri tinggal angka utuh, di sisi kanan mulai kepingannya. Satu tanda begitu kecil, tetapi memisahkan dua hal dengan sangat tertib.',
+        },
+        {
+          objek: 'kueUtuhSetengah', judul: 'Satu Utuh, Setengah Lagi',
+          teks: 'Lihat nampan: satu kue utuh dan sepotong setengah kue. Tulisnya 1,5 — koma berkata: di kiriku satu kue utuh, di kananku kepingannya. Setengah ditulis 5 karena satu kue dibayangkan terbelah 10 kepingan, dan setengahnya berarti 5 kepingan.',
+        },
+        {
+          objek: 'papan15', judul: 'Membaca 1,5',
+          teks: 'Di papan tertulis 1,5. Dibaca: satu koma lima. Kirinya 1 utuh, kanannya 5 persepuluh — sama artinya dengan setengah. Nampan di depanmu mengiyakan: satu kue utuh plus setengah kue.',
+        },
+        {
+          objek: 'kueDuaKoma', judul: 'Dua Utuh, Setengah Lagi',
+          teks: 'Kalau ada 2 kue utuh dan setengah kue lagi, tulis 2,5: dua utuh di kiri koma, kepingan di kanannya. Coba tambah: 1,5 + 1 = 2,5 — utuh bertambah utuh, kepingan tetap setengah. Pas!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kecil Tapi Penting!',
+          teks: 'Jadi koma desimal adalah penjaga pintu: kiri untuk yang utuh, kanan untuk kepingan. 1,5 dan 2,5 kini bisa kamu tulis sendiri dengan tertib. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-029 · Simbol Tak Hingga (∞) — bukit malam bintang lebat ----- */
+    'p1-029': {
+      tema: 'malamdalam',
+      npc: { glif: '8', ucap: ['Tanpa ujung,', 'tanpa dinding!'] },
+      stasiun: [
+        {
+          objek: 'delapanMiring', judul: 'Delapan yang Tidur Miring',
+          teks: 'Lambang ini seperti delapan yang tidur miring: ∞. Namanya tak hingga — artinya tak berujung. Coba barisan angka: 1, 2, 3, 4, 5... seumur hidup menghitung pun barisnya tak pernah selesai.',
+        },
+        {
+          objek: 'jalanMelingkar', judul: 'Jalan yang Lenyap di Bukit',
+          teks: 'Lihat jalan di bukit: ia berkelok, lalu lenyap di balik tanjakan, seolah tak berakhir. Barisan angka juga begitu — setiap angka yang kamu sebut, angka berikutnya sudah berdiri menunggu.',
+        },
+        {
+          objek: 'bintangTerbanyak', judul: 'Langit Penuh Bintang',
+          teks: 'Coba hitung bintang malam ini! Berapa pun yang sudah kamu sebutkan, langit masih menyimpan lebih banyak lagi. Inilah rumah si ∞: tempat yang tak bisa dihitung habis.',
+        },
+        {
+          objek: 'papan1655', judul: 'Tahun 1655',
+          teks: 'Lambang ∞ mula-mula ditulis tahun 1655 oleh John Wallis, penghitung dari Britania. Kenapa bentuknya seperti itu? Konon tak seorang pun tahu pasti — mungkin dari delapan yang dimiringkan, mungkin dari lambang tua lain. Yang jelas, dunia jatuh cinta padanya sampai sekarang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tanpa Ujung!',
+          teks: 'Jadi ∞ bukan bilangan biasa: dia tanda untuk yang tak berujung. Barisan angka tak habis, langit tak bertepi, dan rasa ingin tahumu pun dipersilakan tumbuh tanpa batas. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-030 · Membaca Kalimat Matematika — perpustakaan malam ----- */
+    'p1-030': {
+      tema: 'perpus',
+      npc: { glif: 'B', ucap: ['Baca pelan,', 'paham tuntas!'] },
+      stasiun: [
+        {
+          objek: 'bukuTerbuka', judul: 'Kalimat di Halaman Buku',
+          teks: 'Di halaman buku terbentang: 2 + 3 = 5. Matematika pun punya kalimat! Bilangan adalah namanya, tanda adalah kata kerjanya, dan hasil adalah akhir ceritanya.',
+        },
+        {
+          objek: 'kartuKalimat', judul: 'Bongkar Jadi Kartu Kata',
+          teks: 'Bongkar kalimatnya menjadi kartu: dua, tambah, tiga, sama dengan, lima. Dibaca pelan-pelan dari kiri ke kanan: dua ditambah tiga sama dengan lima. Ternyata membaca matematika sama nikmatnya dengan membaca buku cerita.',
+        },
+        {
+          objek: 'papanKalimat2', judul: 'Kalimat Kedua',
+          teks: 'Kalimat lain di papan: 6 − 1 = 5. Dibaca: enam dikurangi satu sama dengan lima. Ceritanya: ada 6 bola, satu dibawa pergi, tinggallah 5. Setiap kalimat matematika menyimpan cerita kecil seperti ini.',
+        },
+        {
+          objek: 'papanTebak', judul: 'Giliranmu Menutup',
+          teks: 'Sekarang kalimatnya belum selesai: 3 + 2 = ? Hitung berkumpulnya: 3 dan 2 jadi 5. Kalimat lengkapnya: 3 + 2 = 5. Kamu baru saja membaca, memahami, lalu menyelesaikan sebuah kalimat matematika.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kalimatnya Terbaca!',
+          teks: 'Jadi setiap kalimat matematika adalah cerita mini: ada siapa, ada peristiwa, ada akhirnya. Bacalah pelan-pelan, pahami dengan tenang — begitulah ilmu masuk dengan nyaman. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */
