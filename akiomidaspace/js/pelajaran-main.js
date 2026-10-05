@@ -1611,11 +1611,13 @@
     teksPx(ctx, '10', x - 4, 226, '#ffd166', 7);
   }
   function gambarMuatan(x) {
-    const peti = [[x - 16, 240], [x - 5, 240], [x + 6, 240], [x - 11, 228], [x + 1, 228]];
+    const peti = [];
+    for (let i = 0; i < 5; i++) peti.push([x - 17 + i * 7, 235]);
+    for (let i = 0; i < 5; i++) peti.push([x - 17 + i * 7, 226]);
     for (const [px2, py2] of peti) {
-      P(ctx, px2, py2, 11, 11, '#a3744a');
-      P(ctx, px2, py2, 11, 2, '#b58a4a');
-      P(ctx, px2 + 5, py2 + 2, 1, 9, '#8a5f38');
+      P(ctx, px2, py2, 7, 9, '#a3744a');
+      P(ctx, px2, py2, 7, 2, '#b58a4a');
+      P(ctx, px2 + 3, py2 + 2, 1, 7, '#8a5f38');
     }
     P(ctx, x - 19, 214, 38, 9, '#f3efe4');
     P(ctx, x - 19, 214, 38, 1, '#e3dcc8');
@@ -1629,7 +1631,7 @@
     P(ctx, x + 6, 236, 10, 2, '#a3744a');
     P(ctx, x + 7, 226, 2, 10, '#a3744a');
     P(ctx, x + 14, 226, 2, 10, '#a3744a');
-    teksPx(ctx, '1', x + 11, 228, '#a5d8ff', 5);
+    teksPx(ctx, '2', x + 11, 228, '#a5d8ff', 5);
     gambarCahaya(x, 218, 10, '#fffdf2', t);
     teksPx(ctx, '12', x, 210, '#fffdf2', 8);
   }
@@ -1678,10 +1680,10 @@
     P(ctx, x + 19, 214, 3, 32, '#8a5f38');
     const tenggelam = Math.sin(t * 1.6);
     P(ctx, x - 20, 216 + tenggelam, 40, 1, '#d9d2c0');
-    const warnaKaus = ['#63c8ff', '#ff9d9d', '#ffd166'];
-    for (let p = 0; p < 3; p++) {
+    const warnaKaus = ['#63c8ff', '#ff9d9d', '#ffd166', '#7dffa8'];
+    for (let p = 0; p < 4; p++) {
       for (let d = 0; d < 2; d++) {
-        const kx = x - 14 + p * 12 + d * 4;
+        const kx = x - 16 + p * 9 + d * 4;
         P(ctx, kx, 218 + tenggelam, 3, 7, warnaKaus[p]);
         P(ctx, kx, 225 + tenggelam, 3, 3, warnaKaus[p]);
         P(ctx, kx - 1, 217 + tenggelam, 5, 1, '#f3efe4');
@@ -1689,17 +1691,17 @@
     }
   }
   function gambarRakSepatu(x) {
-    P(ctx, x - 16, 246, 32, 3, '#8a5f38');
-    P(ctx, x - 16, 236, 32, 3, '#8a5f38');
-    P(ctx, x - 15, 224, 2, 25, '#a3744a');
-    P(ctx, x + 13, 224, 2, 25, '#a3744a');
+    P(ctx, x - 18, 246, 36, 3, '#8a5f38');
+    P(ctx, x - 18, 236, 36, 3, '#8a5f38');
+    P(ctx, x - 17, 224, 2, 25, '#a3744a');
+    P(ctx, x + 15, 224, 2, 25, '#a3744a');
     const warnaSep = ['#c9564b', '#4a7fc0'];
-    for (let p = 0; p < 2; p++) {
-      const py2 = 236 - p * 10;
-      P(ctx, x - 12, py2 - 6, 7, 5, warnaSep[p]);
-      P(ctx, x - 12, py2 - 2, 7, 2, '#f3efe4');
-      P(ctx, x - 3, py2 - 6, 7, 5, warnaSep[p]);
-      P(ctx, x - 3, py2 - 2, 7, 2, '#f3efe4');
+    for (let s = 0; s < 2; s++) {
+      const py2 = 236 - s * 10;
+      for (const bx of [x - 14, x - 8, x + 1, x + 7]) {
+        P(ctx, bx, py2 - 6, 5, 5, warnaSep[s]);
+        P(ctx, bx, py2 - 2, 5, 2, '#f3efe4');
+      }
     }
   }
   function gambarBecakRoda(x) {
@@ -1812,6 +1814,8 @@
     P(ctx, x - 18, 238, 10, 2, '#ffd166');
     P(ctx, x + 8, 238, 10, 10, '#f3efe4');
     P(ctx, x + 8, 238, 10, 2, '#ffd166');
+    teksPx(ctx, '8', x - 13, 250, '#8a5f38', 5);
+    teksPx(ctx, '8', x + 13, 250, '#8a5f38', 5);
   }
   function gambarPapanHarga(x) { papanLebar(x, ['9 > 7', '8 = 8'], 44); }
 
@@ -1819,6 +1823,13 @@
   function gambarGarisFinish(x, t) {
     P(ctx, x - 16, 220, 3, 26, '#8a5f38');
     P(ctx, x + 13, 224, 3, 22, '#8a5f38');
+    const pelari = [[-27, 234], [-19, 229], [-10, 236], [-3, 231], [5, 227]];
+    const warnaP = ['#63c8ff', '#ff9d9d', '#7dffa8', '#ffd166', '#bb8fff'];
+    for (let i = 0; i < 5; i++) {
+      const lompat = Math.round(Math.sin(t * 6 + i * 1.3) * 1.5);
+      lingkaran(ctx, x + pelari[i][0], pelari[i][1] + lompat, 2.5, warnaP[i]);
+      lingkaran(ctx, x + pelari[i][0] - 1, pelari[i][1] + lompat - 1, 1, '#fffdf2');
+    }
     for (let i = 0; i <= 28; i++) {
       const py2 = 222 + Math.round(Math.sin(t * 2.5 + i * 0.4) * 1.5);
       P(ctx, x - 15 + i, py2, 1, 2, i % 2 ? '#c9564b' : '#fffdf2');
@@ -1881,16 +1892,16 @@
     P(ctx, x - 22, 230, 44, 1, '#b8955e');
     const grup = [2, 4, 6, 8];
     const colG = ['#63c8ff', '#7dffa8', '#ffd166', '#ff9d9d'];
-    let gx = x - 20;
+    let gx = x - 21;
     for (let g = 0; g < 4; g++) {
       const awalG = gx;
       for (let i = 0; i < grup[g]; i++) {
         const bob = Math.sin(t * 2 + gx * 0.3) * 1;
         lingkaran(ctx, gx, 226 + bob, 2, colG[g]);
-        gx += 2.5;
+        gx += 1.8;
       }
-      teksPx(ctx, String(grup[g]), Math.round((awalG + gx) / 2), 236, colG[g], 4);
-      gx += 3;
+      teksPx(ctx, String(grup[g]), Math.round((awalG + gx - 1.8) / 2), 236, colG[g], 4);
+      gx += 2;
     }
     P(ctx, x - 24, 246, 48, 2, '#3a6556');
   }

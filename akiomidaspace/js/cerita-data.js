@@ -313,7 +313,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'lampuJalan', judul: 'Tidak Boleh Ada yang Hilang',
-          teks: 'Dulu ada yang bermurah hati berkata, "Buang saja angka 7, jarang terpakai." Begitu 7 pergi, menulis 7 apel, 17 kelereng, sampai 70 hari langsung ketahan! Maka penduduk kampung sepakat: sepuluh sahabat itu harus lengkap, tak boleh satu pun hilang.',
+          teks: 'Dulu ada yang menyarankan, "Buang saja angka 7, jarang terpakai." Begitu 7 pergi, menulis 7 apel, 17 kelereng, sampai 70 hari langsung ketahan! Maka penduduk kampung sepakat: sepuluh sahabat itu harus lengkap, tak boleh satu pun hilang.',
         },
         {
           objek: 'papanSahabat', judul: 'Bersatu Jadi Nama Baru',
@@ -429,7 +429,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'kursi1000', judul: 'Baris Teratas: Ratusan & Ribuan',
-          teks: 'Naik lagi: kursi ratusan — 1 kini bernilai 100. Naik sekali lagi: kursi ribuan — 1 kini bernilai 1.000! Setiap naik satu baris, kekuatan besar sepuluh kali. Barisnya tinggi, tapi aturannya tetap sederhana.',
+          teks: 'Naik lagi: kursi ratusan — 1 kini bernilai 100. Naik sekali lagi: kursi ribuan — 1 kini bernilai 1.000! Setiap naik satu baris, kekuatannya membesar sepuluh kali. Barisnya tinggi, tapi aturannya tetap sederhana.',
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Posisi Itu Sakti!',
@@ -533,7 +533,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'podium', judul: 'Podium Juara 1, 2, 3',
-          teks: 'Di podium, paling tinggi untuk juara pertama, berikutnya juara kedua, lalu juara ketiga. Di sini angka tidak menghitung jumlah — dia menyebut posisi. Namanya bilangan bertingkat: pertama, kedua, ketiga.',
+          teks: 'Di podium, paling tinggi untuk juara pertama, berikutnya juara kedua, lalu juara ketiga. Di sini angka tidak menghitung jumlah — dia menyebut posisi. Namanya bilangan urutan: pertama, kedua, ketiga.',
         },
         {
           objek: 'nomorDada', judul: 'Nomor di Dada Pelari',
@@ -541,7 +541,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'bukuHalaman', judul: 'Urutan Ada di Mana-mana',
-          teks: 'Pulang nanti kamu akan bertemu urutan terus: halaman pertama buku, lantai pertama rumah, tanggal pertama bulan. Semuanya menunjuk posisi — bukan menghitung banyaknya. Itulah keajaiban bilangan bertingkat.',
+          teks: 'Pulang nanti kamu akan bertemu urutan terus: halaman pertama buku, lantai pertama rumah, tanggal pertama bulan. Semuanya menunjuk posisi — bukan menghitung banyaknya. Itulah keajaiban bilangan urutan.',
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Pertama Itu Posisi!',
@@ -553,7 +553,7 @@ window.CERITA = (function () {
     /* ----- p1-020 · Pola Angka Naik — malam taman batu & denting air ----- */
     'p1-020': {
       tema: 'pola',
-      npc: { glif: '2', ucap: ['Temukan', 'aturannya!'] },
+      npc: { glif: '+', ucap: ['Temukan', 'aturannya!'] },
       stasiun: [
         {
           objek: 'lampuTepi', judul: 'Lampu Taman yang Berulang',
@@ -561,7 +561,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'manikBenang', judul: 'Manik +2 Berbaris',
-          teks: 'Manik disusun di benang: 2, 4, 6, 8, lalu 10. Dari manik ke manik selalu ditambah dua butir. Pola +2 itulah detak lagunya. Kalau kamu tahu aturannya, kamu bisa menebak manik berikutnya tanpa menghitung dari awal.',
+          teks: 'Manik disusun berkelompok di benang: kelompok 2, kelompok 4, kelompok 6, kelompok 8. Dari kelompok ke kelompok, jumlah butirnya selalu ditambah dua. Pola +2 itulah detak lagunya — kalau aturannya ketahuan, kamu berani menebak kelompok berikutnya: sepuluh!',
         },
         {
           objek: 'tetesan', judul: 'Denting Air yang Tertib',
