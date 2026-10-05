@@ -13,7 +13,7 @@ window.AK = (function () {
 
   /* ---------- enam wilayah: semuanya di satu layar ---------- */
   const ZONES = [
-    { name: 'Kamp Angka',        slogan: 'Wilayah permulaan perjalanan',  href: 'kamp-angka-matematika.html',        open: true,  x: 40,  biome: 'kamp',
+    { name: 'Kamp Angka',        slogan: 'Wilayah permulaan perjalanan',  href: 'kamp-angka-dunia.html',             open: true,  x: 40,  biome: 'kamp',
       color: '#63c8ff', deep: '#1c6fb4', label: ['KAMP', 'ANGKA'] },
     { name: 'Hutan Simbol',      slogan: 'Wilayah bahasa dan tanda',      href: 'hutan-simbol-matematika.html',      open: false, x: 118, biome: 'hutan',
       color: '#4fe3c8', deep: '#0d8a74', label: ['HUTAN', 'SIMBOL'] },

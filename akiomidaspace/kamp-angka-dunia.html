@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0d1424">
+<title>Kamp Angka — Dunia Hidup | Perpustakaan Matematika</title>
+<meta name="description" content="Kamu tiba di Kamp Angka, kamp perintis Dunia Akiomida. Bukan membaca artikel: jalani kehidupan kamp. Dekati penduduk, tekan TANYA, dengar dari mana angka bermula, lalu bantu bangun tenda dengan hitunganmu.">
+<meta property="og:title" content="Kamp Angka — Dunia Hidup">
+<meta property="og:description" content="Jalani kamp, bicara dengan penduduk, bangun tenda dengan hitungan. Belajar terasa seperti bermain.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { --skala:1; }
+  html, body { height:100%; overflow:hidden; }
+  body {
+    font-family:'Nunito','Segoe UI',Tahoma,sans-serif;
+    background:#0d1424; color:#e8eef8;
+    -webkit-tap-highlight-color:transparent;
+    user-select:none; -webkit-user-select:none;
+    touch-action:manipulation;
+    background-image:radial-gradient(rgba(255,255,255,.045) 1px, transparent 1.4px);
+    background-size:24px 24px;
+  }
+
+  /* ---------- panggung ---------- */
+  #panggung {
+    position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:12px; padding:calc(12px + env(safe-area-inset-top)) 10px calc(12px + env(safe-area-inset-bottom));
+  }
+  body.kontrol-aktif #panggung {
+    justify-content:flex-start;
+    padding-top:calc(78px + env(safe-area-inset-top));
+    padding-bottom:calc(148px + env(safe-area-inset-bottom));
+  }
+  #layar {
+    display:block; background:#9fdcf5;
+    image-rendering:crisp-edges; image-rendering:pixelated;
+    border:4px solid #1e2a44; border-radius:10px;
+    box-shadow:0 14px 44px rgba(0,0,0,.55), 0 0 0 2px rgba(255,255,255,.05);
+    touch-action:none; cursor:pointer;
+    flex:0 0 auto;
+  }
+
+  /* ---------- chip kamp (kiri-atas) ---------- */
+  .chip-wilayah {
+    position:fixed; top:calc(12px + env(safe-area-inset-top)); left:14px; z-index:25;
+    pointer-events:none;
+    background:#141d33; border:3px solid #2a3757; border-radius:12px;
+    padding:9px 13px 10px; box-shadow:0 5px 0 rgba(0,0,0,.35);
+    max-width:min(60vw,330px);
+  }
+  .chip-wilayah .kecil {
+    display:block; font-family:'Press Start 2P',monospace;
+    font-size:calc(9px * var(--skala));
+    letter-spacing:1px; color:#8fa2c8; margin-bottom:5px;
+  }
+  .chip-wilayah .nama { display:block; font-size:calc(18px * var(--skala)); font-weight:900; color:#63c8ff; line-height:1.12; }
+  .chip-wilayah .slogan { display:block; font-size:calc(13.5px * var(--skala)); font-weight:800; color:#aec0e4; margin-top:3px; }
+  body.coarse .chip-wilayah { padding:7px 11px 8px; }
+  body.coarse .chip-wilayah .slogan { display:none; }
+  body.coarse .chip-wilayah .nama { font-size:calc(16px * var(--skala)); }
+
+  /* ---------- A- / A+ + tombol DUNIA ---------- */
+  #akses {
+    position:fixed; top:calc(12px + env(safe-area-inset-top)); right:14px; z-index:35;
+    display:flex; gap:7px;
+  }
+  #akses button {
+    min-width:46px; height:46px; border-radius:12px;
+    background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
+    color:#fff; font-family:'Nunito',sans-serif; font-weight:900;
+    font-size:calc(15px * var(--skala)); line-height:1;
+    cursor:pointer; box-shadow:0 4px 0 #0a0f1c; padding:0 10px;
+    transition:transform .06s ease, box-shadow .06s ease;
+  }
+  #akses button:active { transform:translateY(3px); border-bottom-width:2px; box-shadow:0 1px 0 #0a0f1c; }
+  #akses button:disabled { opacity:.4; cursor:default; }
+  #btnDunia { font-size:calc(12px * var(--skala)); letter-spacing:1px; }
+
+  /* ---------- petunjuk ---------- */
+  .hint {
+    position:fixed; left:50%; transform:translateX(-50%);
+    bottom:calc(16px + env(safe-area-inset-bottom)); z-index:25;
+    pointer-events:none; text-align:center;
+    font-size:calc(15px * var(--skala)); font-weight:800; color:#eef4ff;
+    background:#141d33; border:2px solid #2a3757; border-radius:999px;
+    padding:9px 18px; box-shadow:0 4px 0 rgba(0,0,0,.3);
+    opacity:0; transition:opacity .6s ease;
+    max-width:calc(100vw - 28px);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .hint.tampil { opacity:1; }
+  .hint.pudar { opacity:0 !important; }
+  body.coarse .hint { bottom:calc(124px + env(safe-area-inset-bottom)); font-size:calc(13.5px * var(--skala)); padding:8px 15px; }
+  body.dlg-buka .hint { display:none; }
+
+  /* ---------- tombol aksi besar (TANYA / BANTU BANGUN) ---------- */
+  #aksiBtn {
+    position:fixed; left:50%; bottom:calc(26px + env(safe-area-inset-bottom)); z-index:32;
+    transform:translateX(-50%) translateY(14px); opacity:0; pointer-events:none;
+    font-family:'Press Start 2P',monospace; font-size:calc(12px * var(--skala));
+    color:#3a2a08; background:#ffd166; border:0; border-bottom:6px solid #c9971c;
+    border-radius:14px; padding:15px 26px; cursor:pointer; letter-spacing:1px;
+    transition:opacity .25s ease, transform .25s ease, border-bottom-width .08s ease;
+  }
+  #aksiBtn.tampil { opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+  #aksiBtn:active { transform:translateX(-50%) translateY(4px); border-bottom-width:2px; }
+  body.dlg-buka #aksiBtn { display:none; }
+
+  /* ---------- panel DIALOG penduduk (huruf besar, mata minus) ---------- */
+  #dialog {
+    position:fixed; left:0; right:0; bottom:0; z-index:40;
+    display:flex; justify-content:center;
+    padding:0 10px calc(12px + env(safe-area-inset-bottom));
+    transform:translateY(115%); transition:transform .3s ease;
+    pointer-events:none;
+  }
+  #dialog.aktif { transform:none; pointer-events:auto; }
+  .dlg-kardus {
+    width:min(600px,100%);
+    background:#141d33; border:4px solid #2a3757; border-radius:16px;
+    box-shadow:0 10px 0 rgba(0,0,0,.4);
+    padding:15px 16px 13px;
+  }
+  .dlg-kepala { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+  #dlgNama { font-family:'Press Start 2P',monospace; font-size:calc(11px * var(--skala)); letter-spacing:1px; }
+  #dlgTitik { font-family:'Press Start 2P',monospace; font-size:calc(8px * var(--skala)); color:#8fa2c8; }
+  #dlgTeks {
+    margin-top:9px; font-size:calc(17.5px * var(--skala)); font-weight:800;
+    color:#eef4ff; line-height:1.5; min-height:calc(53px * var(--skala));
+  }
+  #dlgUmpan {
+    display:none; margin-top:9px; font-size:calc(15px * var(--skala));
+    font-weight:900; line-height:1.4; border-radius:10px; padding:9px 12px;
+  }
+  #dlgUmpan.ok { color:#0d3a22; background:#5ee89b; }
+  #dlgUmpan.no { color:#4a3405; background:#ffd166; }
+  #dlgJawab { display:none; gap:9px; margin-top:11px; flex-wrap:wrap; }
+  .dlg-opsi {
+    flex:1 1 auto; min-width:72px; min-height:54px;
+    font-family:'Press Start 2P',monospace; font-size:calc(15px * var(--skala));
+    color:#eef4ff; background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
+    border-radius:12px; cursor:pointer; box-shadow:0 4px 0 #0a0f1c;
+  }
+  .dlg-opsi:active { transform:translateY(3px); border-bottom-width:2px; }
+  .dlg-opsi.ulang { font-size:calc(10px * var(--skala)); color:#ffd166; flex:0 0 auto; padding:0 16px; }
+  .dlg-aksi { display:flex; gap:10px; margin-top:13px; justify-content:flex-end; }
+  .dlg-btn {
+    font-family:'Press Start 2P',monospace; font-size:calc(11px * var(--skala));
+    border:0; border-radius:11px; padding:13px 20px; cursor:pointer; letter-spacing:1px;
+  }
+  .dlg-btn.utama {
+    color:#3a2a08; background:#ffd166; border-bottom:5px solid #c9971c;
+  }
+  .dlg-btn.utama:active { transform:translateY(3px); border-bottom-width:2px; }
+  .dlg-btn.kedua {
+    color:#e3ebfa; background:#1a2440; border:3px solid #37476f; border-bottom-width:5px;
+  }
+  .dlg-btn.kedua:active { transform:translateY(3px); border-bottom-width:2px; }
+  body.coarse.dlg-buka #panggung { padding-bottom:calc(20px + env(safe-area-inset-bottom)); }
+
+  /* ---------- panel TUGAS DI KAMP (mobile potret: isi ruang tengah) ---------- */
+  #tugas { display:none; }
+  body.coarse #tugas {
+    display:flex; flex-direction:column; gap:7px;
+    width:min(440px,100%);
+    background:#141d33; border:3px solid #2a3757; border-radius:14px;
+    box-shadow:0 6px 0 rgba(0,0,0,.35);
+    padding:11px 11px 10px;
+    flex:0 1 auto; min-height:0; overflow-y:auto; -webkit-overflow-scrolling:touch;
+  }
+  @media (orientation:landscape) { body.coarse #tugas { display:none; } }
+  .tg-kepala {
+    display:flex; flex-direction:column; gap:2px; padding:1px 4px 8px;
+    border-bottom:2px solid #2a3757;
+  }
+  .tg-judul { font-family:'Press Start 2P',monospace; font-size:calc(10px * var(--skala)); letter-spacing:2px; color:#ffd166; }
+  .tg-sub { font-size:calc(12.5px * var(--skala)); font-weight:800; color:#aec0e4; }
+  .tg-baris {
+    display:flex; align-items:center; gap:10px; width:100%; text-align:left;
+    background:#1a2440; border:2px solid #2a3757; border-radius:11px;
+    padding:8px 10px; cursor:pointer; font-family:inherit;
+    transition:transform .06s ease;
+  }
+  .tg-baris:active { transform:translateY(2px); }
+  .tg-no {
+    flex:0 0 auto; width:34px; height:34px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--zc,#63c8ff);
+    font-family:'Press Start 2P',monospace; font-size:calc(13px * var(--skala));
+    color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.4);
+  }
+  .tg-teks { flex:1 1 auto; display:flex; flex-direction:column; gap:1px; min-width:0; }
+  .tg-teks b { font-size:calc(15.5px * var(--skala)); font-weight:900; color:#fff; line-height:1.15; }
+  .tg-teks i { font-style:normal; font-size:calc(12px * var(--skala)); font-weight:700; color:#9fb2d8; line-height:1.25; }
+  .tg-status {
+    flex:0 0 auto; font-family:'Press Start 2P',monospace;
+    font-size:calc(7.5px * var(--skala)); letter-spacing:1px;
+    color:#9fb2d8; background:#2a3757; border-radius:7px; padding:5px 7px 4px;
+  }
+  .tg-status.siap { color:#0d3a22; background:#5ee89b; }
+
+  /* ---------- kontrol sentuh ---------- */
+  #kontrol {
+    position:fixed; left:0; right:0; bottom:0; z-index:30;
+    display:none; justify-content:space-between; align-items:flex-end;
+    padding:0 18px calc(18px + env(safe-area-inset-bottom));
+    pointer-events:none;
+  }
+  body.coarse #kontrol { display:flex; }
+  body.dlg-buka #kontrol { display:none; }
+  .tb {
+    pointer-events:auto;
+    width:84px; height:84px;
+    font-family:'Press Start 2P',monospace; font-size:24px; line-height:1;
+    color:#fff; text-shadow:0 2px 0 rgba(0,0,0,.4);
+    background:#1a2440; border:3px solid #37476f; border-radius:18px;
+    box-shadow:0 6px 0 #0a0f1c, inset 0 2px 0 rgba(255,255,255,.08);
+    cursor:pointer; touch-action:none;
+    transition:transform .06s ease, box-shadow .06s ease, background .06s ease;
+  }
+  .tb.tahan {
+    transform:translateY(5px); box-shadow:0 1px 0 #0a0f1c, inset 0 2px 0 rgba(255,255,255,.08);
+    background:#28365c; border-color:#4d6196;
+  }
+
+  /* ---------- intro kamp ---------- */
+  .intro {
+    position:fixed; inset:0; z-index:50;
+    display:flex; flex-direction:column; align-items:center;
+    text-align:center; padding:18px;
+    overflow-y:auto; -webkit-overflow-scrolling:touch;
+    background:#0d1424;
+    background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1.4px);
+    background-size:24px 24px;
+    transition:opacity .55s ease;
+  }
+  .intro.pergi { opacity:0; pointer-events:none; }
+  .intro .panel {
+    margin:auto;
+    background:#141d33; border:4px solid #2a3757; border-radius:16px;
+    box-shadow:0 12px 0 rgba(0,0,0,.4);
+    padding:32px 24px 28px; width:min(520px,100%);
+  }
+  .intro .akio-css {
+    width:52px; height:52px; margin:0 auto 18px; border-radius:50%;
+    background:radial-gradient(circle at 34% 30%, #ffe9ad, #f6c453 62%, #d98f2b);
+    box-shadow:inset 0 -6px 0 rgba(0,0,0,.14), 0 6px 0 rgba(0,0,0,.3);
+    animation:melayang 2.6s ease-in-out infinite;
+  }
+  @keyframes melayang { 0%,100% { transform:translateY(0) scale(1,1); } 50% { transform:translateY(-10px) scale(.97,1.04); } }
+  .intro .kecil {
+    display:block; font-family:'Press Start 2P',monospace;
+    font-size:calc(9px * var(--skala));
+    letter-spacing:2px; color:#8fa2c8; margin-bottom:14px;
+  }
+  .intro h1 {
+    font-family:'Press Start 2P',monospace;
+    font-size:calc(clamp(17px, 5vw, 25px) * var(--skala));
+    line-height:1.6; letter-spacing:1px; color:#63c8ff;
+  }
+  .intro .bawah { margin-top:14px; font-size:calc(17px * var(--skala)); font-weight:800; color:#e8eef8; }
+  .intro .catatan { margin-top:6px; font-size:calc(14.5px * var(--skala)); font-weight:700; color:#aec0e4; line-height:1.5; }
+  .intro .ramah {
+    margin-top:12px; font-size:calc(13px * var(--skala)); font-weight:800; color:#7dffa8;
+    background:rgba(93,232,155,.08); border:2px solid rgba(93,232,155,.25);
+    border-radius:10px; padding:8px 10px; line-height:1.45;
+  }
+  #introSelesai {
+    display:none; margin-top:12px; font-size:calc(13px * var(--skala)); font-weight:800; color:#ffd166;
+    background:rgba(255,209,102,.08); border:2px solid rgba(255,209,102,.3);
+    border-radius:10px; padding:8px 10px; line-height:1.45;
+  }
+  .intro button {
+    margin-top:22px; font-family:'Press Start 2P',monospace;
+    font-size:calc(13px * var(--skala));
+    color:#3a2a08; background:#ffd166; border:0; border-radius:12px;
+    border-bottom:6px solid #c9971c;
+    padding:17px 36px; cursor:pointer; letter-spacing:1px;
+    transition:transform .08s ease, border-bottom-width .08s ease;
+  }
+  .intro button:active { transform:translateY(4px); border-bottom-width:2px; }
+  @media (max-height:520px) {
+    .intro .panel { padding:18px 18px 20px; }
+    .intro .akio-css { width:38px; height:38px; margin-bottom:10px; }
+    .intro button { margin-top:14px; padding:13px 28px; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .intro .akio-css { animation:none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="panggung">
+  <canvas id="layar" width="480" height="270" aria-label="Kamp Angka: kamp perintis dengan api unggun, tenda pembangunan, gudang, dan empat penduduk bola-lentera bernomor"></canvas>
+  <div id="tugas" aria-label="Tugas di Kamp Angka"></div>
+</div>
+
+<div class="chip-wilayah" aria-live="polite">
+  <span class="kecil">DUNIA AKIOMIDA</span>
+  <span class="nama">Kamp Angka</span>
+  <span class="slogan" id="chipSlogan">Kamp perintis — jalani hidupnya, bukan bacanya</span>
+</div>
+
+<div id="akses" aria-label="Pengaturan ukuran tulisan">
+  <button id="btnDunia" type="button">&#8592; DUNIA</button>
+  <button id="btnMin" type="button" aria-label="Perkecil tulisan">A&minus;</button>
+  <button id="btnPlus" type="button" aria-label="Perbesar tulisan">A+</button>
+</div>
+
+<div class="hint tampil" id="hint">Dekati penduduk, lalu tekan TANYA</div>
+
+<button id="aksiBtn" type="button">TANYA</button>
+
+<div id="dialog" role="dialog" aria-label="Percakapan dengan penduduk kamp">
+  <div class="dlg-kardus">
+    <div class="dlg-kepala">
+      <span id="dlgNama">PENDUDUK</span>
+      <span id="dlgTitik">1/4</span>
+    </div>
+    <div id="dlgTeks" aria-live="polite"></div>
+    <div id="dlgUmpan"></div>
+    <div id="dlgJawab"></div>
+    <div class="dlg-aksi">
+      <button class="dlg-btn kedua" id="btnTutup" type="button">TUTUP</button>
+      <button class="dlg-btn utama" id="btnLanjut" type="button">LANJUT</button>
+    </div>
+  </div>
+</div>
+
+<div id="kontrol">
+  <button class="tb" id="btnKiri" type="button" aria-label="Jalan ke kiri">&#9664;</button>
+  <button class="tb" id="btnKanan" type="button" aria-label="Jalan ke kanan">&#9654;</button>
+</div>
+
+<div class="intro" id="intro">
+  <div class="panel">
+    <div class="akio-css" aria-hidden="true"></div>
+    <span class="kecil">DUNIA AKIOMIDA</span>
+    <h1>KAMP ANGKA</h1>
+    <div class="bawah">Kamu tiba di kamp perintis.</div>
+    <div class="catatan">Bukan membaca artikel: di sini kamu menjalani kamp.<br>Kenali penduduknya, dengar kisahnya, bantu bangun tendanya.</div>
+    <div id="introSelesai">Tenda sudah berdiri berkat hitunganmu, Pembangun Kamp.</div>
+    <div class="ramah">Tulisan besar &amp; nyaman untuk mata minus.<br>Butuh lebih besar? Tekan A+ di pojok kanan atas.</div>
+    <button id="btnMasuk" type="button">MASUK KAMP</button>
+  </div>
+</div>
+
+<script src="js/kamp-scene.js"></script>
+<script src="js/kamp-main.js"></script>
+</body>
+</html>
