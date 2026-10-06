@@ -2425,6 +2425,402 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p1-087 · Panjang: cm & m — fajar jalan pengukur bermarka ----- */
+    'p1-087': {
+      tema: 'penggaris',
+      npc: { glif: 'cm', ucap: ['Dunia bisa', 'diukur!'] },
+      stasiun: [
+        {
+          objek: 'penggarisRaksasa', judul: 'Penggaris Raksasa di Jalan',
+          teks: 'Di ujung kamp berbaring sebuah penggaris sepanjang pagar: kayunya bergaris dari nol sampai seratus. Sepanjang itulah satu meter, dan setiap kotak kecilnya bernilai satu sentimeter. Hitung kotaknya bersama: sepuluh kotak membentuk satu batang panjang, dan sepuluh batang panjang penuhi seluruh penggaris. Jadi 1 meter sama dengan 100 sentimeter.',
+        },
+        {
+          objek: 'jariKelingking', judul: 'Pengukur Bawaan Sejak Lahir',
+          teks: 'Sebuah tangan menguji penggaris itu: jari kelingkingnya menempel pas dari garis nol sampai kotak pertama. Kira-kira itulah lebar satu sentimeter pada tangan anak-anak maupun orang dewasa. Tubuh kita memang alat ukur pertama: jari, jengkal tangan, dan langkah kaki semuanya bisa menjadi patokan dadakan.',
+        },
+        {
+          objek: 'langkahMeter', judul: 'Langkah yang Sejengkal Pas',
+          teks: 'Di jalan bermarka, seorang pengukur berjalan besar-besar: satu langkahnya mendarat tepat di garis kapur berikutnya. Markanya berjarak satu meter satu sama lain, dan langkah besarnya kira-kira sejauh itu. Sepuluh langkah rapi berarti kira-kira sepuluh meter jalan sudah terlewati.',
+        },
+        {
+          objek: 'papanMeter', judul: 'Konon, dari Bumi Lahirlah Meter',
+          teks: 'Papan di bawah menara membaca cerita: konon para ilmuwan di negeri Prancis menghitung jarak dari kutub utara sampai garis tengah bumi, lalu membaginya sepuluh juta. Sepanjang itulah mereka menetapkan satu meter. Sejak itu, orang di mana pun bisa menyepakati ukuran yang sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semua Bisa Diukur!',
+          teks: 'Jadi satu meter berisi seratus sentimeter, jari kelingking kira-kira satu sentimeter, dan satu langkah besar kira-kira satu meter. Dari penggaris raksasa tadi sampai langkah kakimu, semua panjang kini punya bahasa yang sama. Owalah, ternyata begini toh — mengukur itu hanya menjodohkan benda dengan garis. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-088 · Berat: gram & kg — siang bazar timbangan jujur ----- */
+    'p1-088': {
+      tema: 'bazarBerat',
+      npc: { glif: 'kg', ucap: ['Timbangan jujur', 'tak bohong!'] },
+      stasiun: [
+        {
+          objek: 'neracaPas', judul: 'Neraca yang Seimbang Sempurna',
+          teks: 'Di lapak pertama tergantung neraca dua piring, dan hari ini ia tak bergoyang sedikit pun. Piring kiri memikul satu bungkus besar bertanda 500, piring kanan memikul dua bungkus kecil masing-masing 250. Dua ratus lima puluh ditambah dua ratus lima puluh tepat lima ratus — pas sudah, seimbang tanpa berat sebelah.',
+        },
+        {
+          objek: 'gulaKilo', judul: 'Bungkus Besar Sang Kilogram',
+          teks: 'Di lapak sebelah tersusun bungkus gula yang biasa dibawa pulang para pembeli: satu bungkus utuh beratnya satu kilogram. Di papan tertulis persahabatan angkanya: 1 kilogram sama dengan 1.000 gram. Berarti setengah kilogram adalah 500 gram — persis berat bungkus di neraca tadi.',
+        },
+        {
+          objek: 'telurKertas', judul: 'Perbandingan yang Mengagetkan',
+          teks: 'Pada timbangan kecil berdampingan dua benda yang jauh berbeda bobotnya: sebutir telur dan selembar kertas. Telur itu kira-kira lima puluh gram, sedangkan kertas cuma kira-kira lima gram. Berarti berat sepuluh lembar kertas hampir sama dengan satu butir telur — betapa ringannya sesuatu tetap bisa tercatat.',
+        },
+        {
+          objek: 'papanKilo', judul: 'Konon, Kilogram Lahir dari Air',
+          teks: 'Papan bazar menceritakan asalnya: konon para ilmuwan dulu menimbang satu liter air murni, lalu berat itulah yang mereka jadikan satu kilogram. Kemudian dibuat pula batang rujukan yang disimpan istimewa di museum negeri Prancis. Sejak itu, setiap timbangan di dunia berbicara bahasa yang sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Berat Punya Bahasa!',
+          teks: 'Jadi 1 kilogram sama dengan 1.000 gram, setengah kilogram 500 gram, telur kira-kira 50 gram, dan kertas kira-kira 5 gram. Neraca jujur tidak bisa dibohongi, dan kini kamu paham bahasanya. Owalah, ternyata begini toh — menimbang itu cuma membandingkan dengan patokan yang disepakati. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-089 · Takaran: liter & ml — sore dapur takaran ----- */
+    'p1-089': {
+      tema: 'takaranAir',
+      npc: { glif: 'ml', ucap: ['Takar rata,', 'masak jadi!'] },
+      stasiun: [
+        {
+          objek: 'gelasUkur250', judul: 'Gelas Ukur Sang Pengukur Setia',
+          teks: 'Di dapur takaran berdiri satu gelas ukur dengan garis-garis kecil di badannya. Air di dalamnya berhenti tepat pada garis 250, artinya 250 mililiter. Gelas air minum di rumah biasanya kira-kira sesegelas itu — jadi angka 250 bukan angka asing, dia teman minummu sendiri.',
+        },
+        {
+          objek: 'botolLiter', judul: 'Botol Besar dan Papan Persahabatan',
+          teks: 'Di sampingnya berdiri botol tinggi bertanda 1 liter, dengan papan persahabatan di bawahnya: 1 liter sama dengan 1.000 mililiter. Kalau gelas tadi mengangkut 250, botol ini menampung empat kali lipatnya. Mililiter itu kepingan kecil, liter adalah utuhannya.',
+        },
+        {
+          objek: 'tekoTuang', judul: 'Empat Gelas Jadi Satu Liter',
+          teks: 'Teko menuang perlahan, dan empat gelas ukur berbaris menerimanya bergantian. Setiap gelas diisi sampai garis 250, sehingga 250 ditambah 250 ditambah 250 ditambah 250 genap 1.000 mililiter. Tuangannya berhenti tepat: empat gelas penuh jadi satu liter.',
+        },
+        {
+          objek: 'papanLiter', judul: 'Konon, Air Menyatukan Dua Ukuran',
+          teks: 'Papan dapur menuliskan rahasia lama: konon, berat satu liter air murni itulah yang dulu dijadikan satu kilogram. Karena itu takaran dan berat ibarat saudara kandung — satu liter air kira-kira seberat satu kilogram. Dari dapur sampai laboratorium, keduanya tetap berjabat tangan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dapur Jadi Laboratorium!',
+          teks: 'Jadi 1 liter sama dengan 1.000 mililiter, satu gelas kira-kira 250 mililiter, dan empat gelas penuh genap satu liter. Dengan takaran yang rata, resep apa pun bisa diulang dengan rasa yang sama. Owalah, ternyata begini toh — memasak di dapur adalah laboratorium takaran. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-090 · Jam & Menit — senja menara jam berlonceng ----- */
+    'p1-090': {
+      tema: 'menaraJam',
+      npc: { glif: '60', ucap: ['Waktu berdetak', 'teratur!'] },
+      stasiun: [
+        {
+          objek: 'jamRaksasa', judul: 'Menara dengan Lingkar Waktu',
+          teks: 'Di pusat kota berdiri menara dengan jam raksasa yang berdetak pelan. Lingkarannya berisi angka 1 sampai 12, dan dua jarum berjalan di atasnya. Yang pendek berjalan santai menandai jam, yang panjang berjalan penuh semangat menandai menit — pandailah membedakan keduanya.',
+        },
+        {
+          objek: 'jarumDua', judul: 'Membaca Jam Pukul Tiga',
+          teks: 'Sekarang jam menunjukkan pukul tiga tepat: jarum pendek berdiri di angka 3, jarum panjang berteduh di angka 12. Artinya tiga jam penuh lewat dan nol menit tambahan. Kalau jarum panjang maju satu angka, itu berarti lima menit berlalu — dua belas angka kali lima menit genap enam puluh.',
+        },
+        {
+          objek: 'detikBerlari', judul: 'Tangga Detik ke Jam',
+          teks: 'Di bawah lonceng tergantung papan berisi tangga waktu: 1 menit berisi 60 detik, dan 1 jam berisi 60 menit. Detik adalah langkah terkecil yang berbunyi tik... tik... tik. Dari detik naik ke menit, dari menit naik ke jam — seperti tangga yang naik enam puluh langkah sekaligus.',
+        },
+        {
+          objek: 'papanEnamPuluh', judul: 'Konon, 60 Itu Angka Adil',
+          teks: 'Papan menara menjelaskan rahasia angka enam puluh: konon bangsa Babilonia kuno memilihnya karena mudah dibagi rata. Enam puluh bisa terbagi adil ke 2, ke 3, ke 4, ke 5, dan ke 6 tanpa sisa — coba hitung: 30, 20, 15, 12, lalu 10. Wah, waktu memang diurus oleh angka yang adil.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Detak Punya Aturan!',
+          teks: 'Jadi 60 detik satu menit, 60 menit satu jam, dan jarum pendek menandai jam sementara yang panjang menandai menit. Angka 60 dipilih konon karena paling adil saat dibagi rata. Owalah, ternyata begini toh — waktu berdetak dengan aturan yang bisa kamu baca sendiri. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-091 · Hari, Minggu & Kalender — malam arsip waktu ----- */
+    'p1-091': {
+      tema: 'arsipWaktu',
+      npc: { glif: '7', ucap: ['Tujuh hari,', 'satu minggu!'] },
+      stasiun: [
+        {
+          objek: 'kalenderTujuh', judul: 'Kalender dengan Tujuh Pilar',
+          teks: 'Di arsip waktu tergantung kalender raksasa dengan tujuh kolom bertanda Senin sampai Minggu. Satu baris penuh berarti satu minggu lewat, dan kolomnya berganti terus tanpa pernah bingung. Tujuh hari itu berputar seperti roda: hari ini Jumat, besok Sabtu, dan kembali lagi tepat sesudah Minggu.',
+        },
+        {
+          objek: 'bulanFase', judul: 'Konon, Bulan Mengajari Berhitung',
+          teks: 'Di jendela arsip tampak bulan berganti bentuk: muda, purnama, lalu menyusut lagi. Konon satu seputaran penuhnya kira-kira tiga puluh hari, dan dari gerak itulah orang zaman dulu menamai waktu "bulan". Langit ternyata guru berhitung yang pertama.',
+        },
+        {
+          objek: 'kabisatEmpat', judul: 'Tahun yang Sisa Seperempat',
+          teks: 'Papan arsip membuka hitungan panjang: setahun kira-kira 365 hari, tetapi sebenarnya ada sisa seperempat hari yang menganggur. Karena itu, biasanya tiap empat tahun sekali keempat seperempat itu digabung menjadi satu hari ekstra di bulan Februari. Tahun dengan 366 hari itu namanya tahun kabisat — kalender pun tetap presisi.',
+        },
+        {
+          objek: 'papanWaktu', judul: 'Buku Catatan Paling Rajin',
+          teks: 'Di lemari arsip tersimpan kalender-kalender setahun penuh, dan tak satu pun halamannya bolong. Kalender adalah buku catatan waktu: minggu merapikan hari, bulan merapikan minggu, tahun merapikan bulan. Siapa pun yang bisa membacanya dijamin tak pernah kehilangan tanggal.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Waktu Tertata Rapi!',
+          teks: 'Jadi tujuh hari satu minggu, kira-kira tiga puluh hari satu bulan, dan setahun kira-kira 365 hari dengan hari ekstra tiap empat tahun. Waktu tidak pernah kacau karena sudah lama diatur dengan hitungan. Owalah, ternyata begini toh — kalender hanyalah buku catatan yang paling rajin. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-092 · Panas & Dingin: Suhu — siang kota dua iklim ----- */
+    'p1-092': {
+      tema: 'duaIklim',
+      npc: { glif: 'C', ucap: ['Dingin panas', 'terukur!'] },
+      stasiun: [
+        {
+          objek: 'termometerBeku', judul: 'Garis Nol: Tempat Air Membeku',
+          teks: 'Di sisi kota yang bersalju berdiri termometer raksasa, dan cairannya diam di garis nol. Di situ gelas air berubah menjadi es: di tempat biasa, air membeku pada 0 derajat. Semakin jauh turun di bawah nol, semakin tebal pula bekunya.',
+        },
+        {
+          objek: 'termometerDidih', judul: 'Garis Seratus: Tempat Air Mendidih',
+          teks: 'Di sisi hangat, panci besar mendesis mengepul di atas tungku, dan termometer di dekatnya naik sampai garis seratus. Di dapur biasa, air mendidih pada 100 derajat — uapnya menari naik ke langit-langit. Dari nol sampai seratus, itulah jalan yang dilalui air dari es sampai uap.',
+        },
+        {
+          objek: 'tubuhTigaTujuh', judul: 'Angka Tubuh Kita Sendiri',
+          teks: 'Di antara dua sisi kota ada papan kecil bertanda 37. Kira-kira itulah suhu tubuh kita saat sehat — tidak sedingin es, tidak sepanas mendidih. Kalau termometer menunjuk jauh di atas angka itu, biasanya seseorang sedang demam dan perlu banyak istirahat.',
+        },
+        {
+          objek: 'papanDerajat', judul: 'Konon, Nama Ilmuwan Jadi Nama Skala',
+          teks: 'Papan kota menceritakan asal-usulnya: skala derajat ini konon diambil dari nama ilmuwan Swedia bernama Celsius. Jadi tiap kali orang menyebut 25 derajat Celsius, mereka ikut mengenangnya. Satu ide sederhana — garis nol dan garis seratus — kini dipakai termometer di seluruh dunia.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Panas Dingin Terukur!',
+          teks: 'Jadi air membeku di 0 derajat, mendidih di 100 derajat, dan tubuh kita sehat di kira-kira 37 derajat. Suhu adalah jam-nya panas dan dingin: bukan kira-kira terasa, tapi terukur jelas. Owalah, ternyata begini toh — derajat hanya garis yang disepakati bersama. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-093 · Pola Berulang — malam festival lampu berpola ----- */
+    'p1-093': {
+      tema: 'festivalPola',
+      npc: { glif: 'AB', ucap: ['Pola itu', 'bisa diramal!'] },
+      stasiun: [
+        {
+          objek: 'lampuFestival', judul: 'Lampu yang Suka Meniru Diri',
+          teks: 'Festival teka-teki dibuka oleh tali lampu gantung: merah, biru, merah, biru, merah, biru — begitu terus sampai ujung gerbang. Polanya rapi: setelah merah selalu biru, setelah biru selalu merah. Coba ramalkan lampu ketujuh sebelum melihatnya — dia berdiri tepat setelah biru, jadi pasti merah.',
+        },
+        {
+          objek: 'ubinPola', judul: 'Ubin yang Berbaris Tertib',
+          teks: 'Di jalan festival, ubin menyusun pola sendiri: segitiga, bulat, segitiga, bulat, segitiga, bulat. Para pengunjung melangkah sambil berbisik polanya, dan tak seorang pun tersandung. Satu kelompok kecil — segitiga lalu bulat — diulang-ulang tanpa lelah, itulah satu pasal pola.',
+        },
+        {
+          objek: 'gelangManik', judul: 'Gelang yang Selalu Kembali',
+          teks: 'Di lapak manik, seorang penjual merangkai gelang dengan urutan kuning, hijau, kuning, hijau sampai melingkar penuh. Yang menarik, gelang itu tak punya ujung: polanya berputar dan kembali ke awal tanpa pernah kacau. Menemukan pola sama dengan menemukan aturan yang setia diulang.',
+        },
+        {
+          objek: 'papanRamalan', judul: 'Papan Ramal Para Penemu Pola',
+          teks: 'Papan besar di gerbang menulis: menemukan pola itu menemukan jalan pintas berpikir. Sebab kalau aturannya ketahuan, langkah berikutnya bisa diramal tanpa perlu menunggu. Otak yang terbiasa mencari pola akan cepat menangkap apa pun yang berulang — dari lagu, dari hari, sampai dari angka.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pola Bisa Ditebak!',
+          teks: 'Jadi merah-biru berulang, segitiga-bulat berulang, dan kuning-hijau berputar tanpa ujung. Pola itu aturan yang berulang, dan aturan yang berulang selalu bisa dilanjutkan. Owalah, ternyata begini toh — meramal pun jadi mudah begitu polanya ketahuan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-094 · Angka yang Hilang — malam kantor detektif teka-teki ----- */
+    'p1-094': {
+      tema: 'kantorTeka',
+      npc: { glif: '6', ucap: ['Pelaku sudah', 'ditemukan!'] },
+      stasiun: [
+        {
+          objek: 'jejakHilang', judul: 'Jejak Angka Terputus',
+          teks: 'Malam ini kantor teka-teki menerima laporan: jejak angka 2, 4, ?, 8 ternyata bolong di tengah. Kartu tanda tanya digantung di papan jejak, dan detektif kecil dipanggil untuk menyelidikinya. Satu-satunya petunjuk: pelakunya seorang angka yang bersembunyi di antara 4 dan 8.',
+        },
+        {
+          objek: 'kacaTeka', judul: 'Kaca Pembesar Meneliti Lompatan',
+          teks: 'Detektif mengangkat kaca pembesar dan meneliti jarak antar angka. Dari 2 ke 4 melompat dua langkah; tak ada jejak yang terlewat. Kalau pelompat ini setia, lompatannya dari 4 ke angka berikutnya pun mestinya dua langkah lagi.',
+        },
+        {
+          objek: 'kartuTebak', judul: 'Pelaku Ditemukan di Balik Loker',
+          teks: 'Loker ketiga dibuka, dan tersenyumlah detektif: kartu angka 6 tersimpan di dalamnya. Empat ditambah dua memang enam, dan enam ditambah dua memang delapan — jejaknya nyambung sempurna. Kasus 2, 4, 6, 8 resmi ditutup dengan satu kartu bukti.',
+        },
+        {
+          objek: 'papanBeda', judul: 'Papan Ciri: Beda Tetangga Sama',
+          teks: 'Di papan kasus ditulis ciri pelakunya: pada barisan naik yang tertib, beda antar tetangga selalu sama. 2 ke 4 beda 2, 4 ke 6 beda 2, 6 ke 8 beda 2 — tiga kali lompatan yang seragam. Begitu beda tetangga ketahuan, angka mana pun yang hilang bisa dipanggil pulang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Detektif Angka Berhasil!',
+          teks: 'Jadi 2, 4, 6, 8 naik rapi dua demi dua, dan si tanda tanya ternyata cuma 6 yang iseng sembunyi. Detektif angka tak butuh keberuntungan — dia hanya membaca lompatannya dengan teliti. Owalah, ternyata begini toh — mencari yang hilang hanyalah mengikuti jejak beda tetangga. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-095 · Kotak Ajaib Sihir — malam paviliun kotak 3x3 ----- */
+    'p1-095': {
+      tema: 'paviliun',
+      npc: { glif: '15', ucap: ['Semua garis', 'berjumlah 15!'] },
+      stasiun: [
+        {
+          objek: 'kotakSihir', judul: 'Paviliun dengan Kotak Bercahaya',
+          teks: 'Di paviliun ujung festival tergantung kotak ajaib tiga kali tiga: 4, 9, 2 di baris paling atas; 3, 5, 7 di tengah; 8, 1, 6 di bawahnya. Semua angka 1 sampai 9 terpakai, tak ada yang diulang. Konon kotak seperti ini pernah muncul di gambar punggung kura-kura sungai di negeri China kuno.',
+        },
+        {
+          objek: 'garisSihir', judul: 'Setiap Garis Bernilai Sama',
+          teks: 'Lampu sorot berjalan menyusuri kotak: baris atas 4 ditambah 9 ditambah 2 genap 15. Baris tengah 3, 5, 7 juga 15; baris bawah 8, 1, 6 tetap 15. Bahkan tiga kolomnya dan dua garis diagonalnya ikut menyusul — semua berjumlah 15 tanpa kecuali.',
+        },
+        {
+          objek: 'kuraLegenda', judul: 'Kura-Kura Sang Pembawa Pola',
+          teks: 'Patung kura-kura batu duduk tenang di sudut paviliun, punggungnya penuh titik-titik tersusun tiga baris. Cerita rakyat menyebut pola itu ditemukan dulu di punggung kura-kura sungai ketika banjir surut. Benar atau tidak, yang pasti polanya murni hitungan: rapi, adil, dan tak pernah berubah.',
+        },
+        {
+          objek: 'papanLimaBelas', judul: 'Mengapa Harus 15? Ini Buktinya',
+          teks: 'Papan sihir membongkar rahasianya dengan hitungan biasa: jumlah semua angka 1 sampai 9 ialah 45. Kotak itu punya tiga baris, dan tiap baris wajib sama berat; 45 dibagi 3 genap 15. Jadi angka 15 bukan sihir semata — dia keharusan yang bisa dihitung siapa pun.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kotak Sihir Terbongkar!',
+          teks: 'Jadi sembilan angka tersusun agar tiap garis berjumlah 15, dan rahasianya 45 dibagi 3. Kotak ajaib ternyata bukan mantra — dia teka-teki hitung yang sudah lama diulang dari zaman ke zaman. Owalah, ternyata begini toh — sihir yang paling indah adalah hitungan yang setia. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-096 · Hitung Cepat di Kepala — siang arena lomba hitung ----- */
+    'p1-096': {
+      tema: 'arenaGeser',
+      npc: { glif: '116', ucap: ['Geser sedikit,', 'hitung ringan!'] },
+      stasiun: [
+        {
+          objek: 'lombaMulai', judul: 'Ajang Lomba Hitung Kilat',
+          teks: 'Arena hitung cepat menyala dengan papan soal pertama: 99 ditambah 17. Peserta yang menghitung dengan jari mulai berkeringat, tetapi juara bertahan malah tersenyum. Dia tahu jurus rahasia yang tak pernah gagal: geser sedikit, hitungan jadi ringan.',
+        },
+        {
+          objek: 'geserSatu', judul: 'Satu Kelereng Pindah Tempat',
+          teks: 'Di meja juri dua tumpukan kelereng bertanda 99 dan 17. Sang juara memindahkan satu kelereng dari tumpukan 17 ke tumpukan 99: kini 100 berdiri rapi dan 17 menjadi 16. Jumlah totalnya tidak berkurang sedikit pun — kelereng hanya pindah rumah.',
+        },
+        {
+          objek: 'papanSeratusEnam', judul: 'Hasil yang Tampak Sekilas',
+          teks: 'Papan jawaban menyala: 100 ditambah 16 sama dengan 116. Tak perlu bersusun, tak perlu menyimpan ke puluhan — jawaban langsung tampak sebelum mata. Jadi 99 ditambah 17 tetap 116, hanya jalannya lebih landai.',
+        },
+        {
+          objek: 'finishKilat', judul: 'Ujian Kilat di Garis Akhir',
+          teks: 'Di garis akhir menunggu soal kedua: 98 ditambah 27. Kali ini dua kelereng berpindah — 98 menjadi 100, dan 27 menjadi 25. Papan juara menulis hasilnya sebelum peluit berbunyi: 100 ditambah 25 genap 125.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Cepat Itu Sah!',
+          teks: 'Jadi 99+17=100+16=116 dan 98+27=100+25=125 — dua-duanya hanya trik memindah kelereng. Matematika membolehkan jalan pintas asal jumlahnya tak berubah sepeser pun. Owalah, ternyata begini toh — menggeser sedikit membuat kepala ringan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-097 · Labirin Angka — senja labirin lampion kelipatan 3 ----- */
+    'p1-097': {
+      tema: 'labirin',
+      npc: { glif: '3', ucap: ['Kelipatan tiga', 'satu-satunya!'] },
+      stasiun: [
+        {
+          objek: 'gerbangLabirin', judul: 'Gerbang yang Pemilih',
+          teks: 'Senja tiba, dan labirin lampion menyalakan gerbangnya dengan papan peringatan: lewati hanya kelipatan 3. Setiap pintu di dalamnya memakai nomor, dan nomor yang bukan kelipatan tiga akan menutup jalan. Hanya pencacah yang teliti yang bisa lolos dengan selamat.',
+        },
+        {
+          objek: 'jalurTiga', judul: 'Jalan Raya Berkelipatan Tiga',
+          teks: 'Jalur utamanya memanjang dengan batu pipih bernomor: 3, 6, 9, 12, 15, 18. Setiap loncatan menambah tiga, dan benar saja — semua nomornya habis dibagi tiga. Semakin jauh dilangkahi, semakin panjang daftarnya: 21, 24, 27, 30 masih menunggu di depan.',
+        },
+        {
+          objek: 'jalanBuntu', judul: 'Dua Pintu yang Menipu',
+          teks: 'Di percabangan menunggu dua pintu menggoda: nomor 14 dan nomor 25. Pintu 14 terbuka sedikit lalu macet — 14 tidak habis dibagi 3; pintu 25 macet juga, karena 25 juga bukan kelipatannya. Dua-duanya jalan buntu, dan labirin tertawa pelan di balik lampionnya.',
+        },
+        {
+          objek: 'papanKetiga', judul: 'Jurus Sihir: Jumlahkan Digitnya',
+          teks: 'Di pusat labirin terpahat jurus rahasianya: untuk mengecek kelipatan 3, jumlahkan digitnya. Angka 27 menjadi 2 ditambah 7 sama dengan 9, dan 9 habis dibagi 3 — berarti 27 lolos. Angka 12 menjadi 1 ditambah 2 sama dengan 3, juga lolos; inilah kompas paling cepat di dalam labirin.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Labirin Selesai!',
+          teks: 'Jadi jalur 3, 6, 9, 12, 15, 18 terus melompat tiga demi tiga, dan pintu 14 serta 25 tertutup rapat. Dengan jurus menjumlahkan digit, cek kelipatan tiga bisa dilakukan tanpa berhitung lama. Owalah, ternyata begini toh — labirin pun tunduk pada aturan kelipatan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-098 · Logika Si A & Si B — pagi lapangan tiga menara ----- */
+    'p1-098': {
+      tema: 'duelLogika',
+      npc: { glif: 'A', ucap: ['Tak perlu', 'meteran!'] },
+      stasiun: [
+        {
+          objek: 'tigaMenara', judul: 'Tiga Menara Bola-Lentera',
+          teks: 'Di lapangan pagi berdiri tiga menara bertingkat dengan bola-lentera di puncaknya: si A di menara tertinggi, si B di menara tengah, si C di menara pendek. Mereka tak bertengkar; mereka hanya berdiri dalam urutan yang bisa dibuktikan. Penonton datang untuk satu hal: membaca urutan dengan logika.',
+        },
+        {
+          objek: 'duelTanya', judul: 'Pertanyaan Tanpa Meteran',
+          teks: 'Papan di tengah lapangan menuliskan dua fakta: si A lebih tinggi dari si B, dan si B lebih tinggi dari si C. Lalu pertanyaannya: siapa yang paling tinggi, dan siapa yang paling pendek? Tak ada meteran yang dibagikan — hanya nalar yang diperbolehkan masuk arena.',
+        },
+        {
+          objek: 'dominoLogika', judul: 'Rantai Logika Seperti Domino',
+          teks: 'Si pemandu menata domino: kartu "A lebih dari B" bersandar pada kartu "B lebih dari C". Begitu tumbang berurutan, muncul kesimpulan ketiga yang tak tertulis: si A pasti lebih tinggi dari si C. Logika bekerja persis begitu — dua fakta yang bersambung bisa melahirkan fakta baru.',
+        },
+        {
+          objek: 'papanKesimpulan', judul: 'Kesimpulan yang Tak Bisa Dibantah',
+          teks: 'Papan akhir menuliskan jawaban lengkap: A paling tinggi, C paling pendek, dan B berada di antaranya. Menariknya, tak ada seorang pun yang perlu mengukur A dan C secara langsung. Urutan tadi sudah rapi dari rantai fakta — begitulah logika: hitungan yang berpikir.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Logika Menguntai!',
+          teks: 'Jadi A lebih tinggi dari B, B lebih tinggi dari C, dan kesimpulannya mengalir sendiri: A juara tinggi, C juara pendek. Dua fakta yang bersambung cukup untuk membuka fakta ketiga tanpa alat ukur. Owalah, ternyata begini toh — logika itu menguntai kepastian. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-099 · Sudoku Mini 4x4 — malam khemah sudoku ----- */
+    'p1-099': {
+      tema: 'khemahSudoku',
+      npc: { glif: '4', ucap: ['Tanpa ulang,', 'pasti tertib!'] },
+      stasiun: [
+        {
+          objek: 'khemahPapan', judul: 'Khemah dengan Papan Angka',
+          teks: 'Di khemah paling ramai tergantung papan empat kali empat dengan sebagian kotaknya terisi angka. Konon teka seperti ini lahir di majalah Amerika, lalu dipopulerkan di negeri Jepang dengan nama Sudoku — artinya kurang lebih "angkanya harus tunggal". Sekarang giliranmu menyelesaikannya.',
+        },
+        {
+          objek: 'papanAturan', judul: 'Tiga Aturan yang Tak Bisa Ditolak',
+          teks: 'Papan aturan khemah menuliskan tiga pasal: tiap baris harus berisi 1 sampai 4, tiap kolom juga, dan tiap kotak kecil dua kali dua pun sama. Tidak boleh ada angka yang berulang di barisnya, kolomnya, atau kotaknya. Singkatnya: satu angka, satu kursi, tak boleh rebutan.',
+        },
+        {
+          objek: 'satuPilihan', judul: 'Taktik Satu-Satunya Pilihan',
+          teks: 'Detektif sudoku menunjukkan taktiknya pada baris yang sudah berisi 1, 2, dan 3. Satu kursi kosong tersisa di baris itu, dan satu-satunya angka yang belum tampak ialah 4. Kalau empat angka harus hadir tanpa ulang, kotak kosong itu memang tak punya pilihan lain.',
+        },
+        {
+          objek: 'papanSolusi', judul: 'Papan Penuh yang Tertib Sempurna',
+          teks: 'Papan solusi menyala penuh: 1, 2, 3, 4 di baris pertama; 3, 4, 1, 2 di baris kedua; 2, 1, 4, 3 di baris ketiga; dan 4, 3, 2, 1 di baris keempat. Periksa cepat membuktikan: tiap baris, tiap kolom, dan tiap kotak kecil memuat 1 sampai 4 tanpa yang berulang. Sudoku pun tersenyum lega.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sudoku Terpecahkan!',
+          teks: 'Jadi papan empat kali empat itu cukup empat angka, asal tiap baris, kolom, dan kotak kecilnya tak ada yang berulang. Taktik andalanmu: cari baris yang tinggal satu kursi kosong, biar jawabannya memaksa sendiri. Owalah, ternyata begini toh — sudoku hanya soal disiplin angka. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-100 · Tantangan Juara Kamp — malam arena juara, penutup 100 judul ----- */
+    'p1-100': {
+      tema: 'arenaJuara',
+      npc: { glif: '100', ucap: ['Seratus judul,', 'kamu luar biasa!'] },
+      stasiun: [
+        {
+          objek: 'gerbangJuara', judul: 'Gerbang Pesta Seratus Judul',
+          teks: 'Malam penutupan festival tiba: gerbang juara menyala dengan empat lampu misi dan papan besar bertuliskan Juara Kamp. Di atasnya terbaca angka 100 — jumlah seluruh judul yang pernah kamu jelajahi di Pintu 1. Empat ujian menantimu; lewati satu, satu lampu menyala.',
+        },
+        {
+          objek: 'ujiPola', judul: 'Ujian Pertama: Ramal Polanya',
+          teks: 'Lampu pertama menampilkan deret angka: 2, 4, 6, dan sebuah kartu tanda tanya. Beda antar tetangganya dua, dua, dan dua lagi — deret ini naik dengan setia. Jadi tanda tanya itu pasti 8, dan lampu pertama pun menyala hijau.',
+        },
+        {
+          objek: 'ujiKali', judul: 'Ujian Kedua: Kali yang Tertib',
+          teks: 'Ujian kedua menggelar tiga kelompok kotak, tiap kelompok berisi 4 kelereng. Tiga kelompok berisi empat artinya 3 × 4, sama seperti 4 + 4 + 4. Hitung kelerengnya satu per satu: genap 12 — lampu kedua ikut menyala.',
+        },
+        {
+          objek: 'ujiHilang', judul: 'Ujian Ketiga: Cari yang Hilang',
+          teks: 'Papan ketiga menulis kalimat bermata kosong: 4 ditambah berapa sama dengan 9? Cara tercepat ialah membaliknya: 9 kurang 4 sama dengan 5. Maka si hilang adalah 5 — kalimatnya kini utuh: 4 + 5 = 9.',
+        },
+        {
+          objek: 'ujiLogika', judul: 'Ujian Keempat: Baca Urutannya',
+          teks: 'Ujian pamungkas menyandingkan tiga bola-lentera: si A lebih tinggi dari si B, si B lebih tinggi dari si C. Tanpa meteran, urutannya sudah terbaca: A paling tinggi dan C paling pendek. Lampu keempat menyala, dan gerbang juara terbuka lebar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Juara Kamp!',
+          teks: 'Jadi pola diramal, perkalian dihitung, angka hilang dipanggil, dan urutan logika dibaca — empat ujian, empat lampu hijau. Seratus judul Pintu 1 kini pernah kamu jejaki, dari kisah angka sampai teka-teki paling seru. Gelar Juara Kamp resmi milikmu. Owalah, ternyata begini toh — semua ilmu besar dimulai dari langkah kecil yang rapi. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */
