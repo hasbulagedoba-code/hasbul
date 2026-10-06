@@ -2145,6 +2145,286 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p1-077 · Dunia Bentuk Datar — siang halaman galeri bentuk ----- */
+    'p1-077': {
+      tema: 'kotak',
+      npc: { glif: '2D', ucap: ['Bentuk ada', 'di mana-mana!'] },
+      stasiun: [
+        {
+          objek: 'jendelaBentuk', judul: 'Jendela Berbentuk Kotak',
+          teks: 'Halaman kamp ini penuh benda yang bentuknya rapi. Jendela rumah pertama berbentuk kotak: empat sisi lurus dengan empat sudut yang sama. Lihat ke mana pun, kotak itu setia menemani — ada di pintu, meja, dan papan tulis.',
+        },
+        {
+          objek: 'rodaBentuk', judul: 'Roda Berbentuk Bulat',
+          teks: 'Roda sepeda yang bersandar di tembok berbentuk bulat sempurna: tidak punya satu sudut pun. Berkat bentuknya yang melingkar, roda dapat berputar mulus tanpa tersentak. Bayangkan bila roda berbentuk kotak — perjalanannya pasti berguncang!',
+        },
+        {
+          objek: 'atapBentuk', judul: 'Atap Berbentuk Segitiga',
+          teks: 'Rumah kecil di ujung halaman memakai atap segitiga: dua garis miring bertemu di puncak. Bentuk itu membuat air hujan mudah mengalir turun ke kedua sisinya. Kotak, bulat, segitiga — tiga bentuk ini hampir selalu kita temui berdampingan.',
+        },
+        {
+          objek: 'papanTigaBentuk', judul: 'Papan Tiga Sahabat Bentuk',
+          teks: 'Di papan depan tertulis tiga sahabat bentuk: kotak dengan empat sisi lurus, lingkaran yang melingkar rapi, dan segitiga dengan tiga sisinya. Mulai sekarang, coba bermain menghitung: berapa banyak bentuk kotak yang ada di kamarmu?',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dunia Penuh Bentuk!',
+          teks: 'Dunia ini dibangun dari bentuk-bentuk sederhana: jendela kotak, roda bulat, atap segitiga. Begitu mata terlatih mengenalnya, setiap benda tampak seperti kumpulan bentuk yang ramah. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-078 · Garis, Sisi & Sudut — fajar jalan lurus tukang kayu ----- */
+    'p1-078': {
+      tema: 'garisSisi',
+      npc: { glif: 'I', ucap: ['Sisi bertemu,', 'sudut jadi!'] },
+      stasiun: [
+        {
+          objek: 'jalanLurus', judul: 'Garis Itu Lurus Terus',
+          teks: 'Fajar ini jalan kamp terlihat jelas: garis putih panjang yang lurus terus tanpa tikungan. Garis adalah jejak terpendek dari satu titik ke titik lain. Berjalan di atasnya, tak ada satu pun arah yang berubah.',
+        },
+        {
+          objek: 'tigaSisiTepi', judul: 'Tiga Garis Jadi Segitiga',
+          teks: 'Di bawah pohon tersusun tiga garis kayu yang ujungnya saling bertemu membentuk segitiga. Garis yang bertemu di ujung berubah nama menjadi sisi. Tiga sisi yang bertemu — itulah segitiga, bentuk pertama yang lahir dari pertemuan garis.',
+        },
+        {
+          objek: 'sikuKayu', judul: 'Sudut Siku Sang Tegap',
+          teks: 'Di meja tukang kayu tergeletak alat berbentuk L untuk memeriksa sudut. Kedua lengannya bertemu membentuk sudut siku — bukaan paling tegap, sama seperti pojok kertas bukumu. Jadi sudut itu bukan benda, melainkan bukaan di antara dua sisi yang bertemu.',
+        },
+        {
+          objek: 'papanSudut', judul: 'Papan Aturan Sisi & Sudut',
+          teks: 'Di papan tertulis aturannya: garis menjadi sisi ketika ujungnya bertemu, dan bukaan di pertemuan itu bernama sudut. Kotak membawa empat sudut, segitiga membawa tiga. Bentuk-bentuk di dunia ini sesungguhnya permainan sisi dan sudut.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Bentuk Terbaca!',
+          teks: 'Jadi bentuk itu dibangun dari sisi, dan setiap pertemuan sisi meninggalkan bukaan bernama sudut. Hitung sisi dan sudutnya, maka bentuk apa pun langsung terbaca. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-079 · Keliling Itu Jalan Keliling — pagi lapangan oval ----- */
+    'p1-079': {
+      tema: 'jalanPutar',
+      npc: { glif: 'Q', ucap: ['Satu putaran', 'penuh!'] },
+      stasiun: [
+        {
+          objek: 'benderaMulai', judul: 'Bendera Titik Mulai',
+          teks: 'Pagi ini lapangan kamp membentang dengan jalan mengelilingi rumputnya. Sebatang bendera kecil ditanam di tepi jalan sebagai titik mulai. Lomba keliling apa pun harus berangkat dan berakhir di titik yang sama.',
+        },
+        {
+          objek: 'jalanOval', judul: 'Jalan yang Setia di Pinggir',
+          teks: 'Perhatikan jalan itu: ia menyusuri tepi lapangan terus-menerus dan tidak pernah memotong ke tengah rumput. Jalan seperti ini disebut jalur keliling, karena seluruh badannya berada di pinggir lapangan.',
+        },
+        {
+          objek: 'jejakKaki', judul: 'Melanggar sampai Kembali',
+          teks: 'Seorang pelari menapak jalurnya langkah demi langkah, melewati tikungan dan rumput, sampai tiba persis di bendera tadi. Jarak satu putaran penuh yang ia lalui itulah keliling lapangan. Kembali ke titik mulai adalah tanda putarannya sah.',
+        },
+        {
+          objek: 'papanPutaran', judul: 'Papan Satu Putaran',
+          teks: 'Di papan tertulis: keliling adalah jarak jalan menyusuri pinggir sampai kembali ke titik awal. Kata keliling pada bangun datar memang dipinjam dari kebiasaan berjalan keliling ini. Keliling meja, keliling kandang — semuanya jarak satu putaran penuh.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Keliling Terjawab!',
+          teks: 'Jadi keliling bukan kata sulit: jarak menyusuri pinggir sampai kembali ke tempat berangkat. Lapangan, meja, dan ponselmu semuanya punya keliling. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-080 · Keliling Persegi Panjang — sore patroli lapangan 8x5 ----- */
+    'p1-080': {
+      tema: 'patroli',
+      npc: { glif: '26', ucap: ['Dua panjang,', 'dua lebar!'] },
+      stasiun: [
+        {
+          objek: 'sisiPanjang', judul: 'Sisi Panjang 8 Langkah',
+          teks: 'Sore ini penjaga kamp mengukur lapangan persegi panjangnya dengan langkah kaki. Sisi panjangnya ditempuh 8 langkah penuh, dari pojok sampai pojok. Angka 8 dituliskan di papan tepi agar tak terlupa.',
+        },
+        {
+          objek: 'sisiLebar', judul: 'Sisi Lebar 5 Langkah',
+          teks: 'Lalu ia berbalik dan mengukur sisi pendek lapangan: 5 langkah. Kini lapangan terbaca jelas — panjang 8 langkah, lebar 5 langkah. Dua ukuran saja sudah cukup untuk mengenal seluruh lapangan.',
+        },
+        {
+          objek: 'patroliPutar', judul: 'Patroli Satu Putaran',
+          teks: 'Tiap petang penjaga berpatroli mengelilingi lapangan: 8 langkah, lalu 5, lalu 8 lagi, lalu 5 lagi, sampai kembali ke pojok mula. Semuanya 8 + 5 + 8 + 5 = 26 langkah. Dua sisi panjang dan dua sisi lebar — itulah seluruh keliling lapangan.',
+        },
+        {
+          objek: 'papan26', judul: 'Rumus yang Dipersingkat',
+          teks: 'Di papan tertulis cerita patroli versi ringkas: (8 + 5) x 2 = 26. Artinya, jumlahkan dulu sisi panjang dan lebarnya, lalu kali dua karena masing-masing punya pasangan. Rumus hanyalah cerita berjalan keliling yang ditulis lebih pendek.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Keliling Terhitung!',
+          teks: 'Jadi keliling persegi panjang tak perlu dihafal buta: jumlahkan panjang dan lebarnya, lalu kali dua. Lapangan 8 dan 5 langkah itu terbukti berkeliling 26 langkah. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-081 · Luas Itu Pasang Ubin — siang lantai baru 3x4 ubin ----- */
+    'p1-081': {
+      tema: 'ubin',
+      npc: { glif: '12', ucap: ['Pagar pinggir,', 'ubin isi!'] },
+      stasiun: [
+        {
+          objek: 'pagarLantai', judul: 'Pagar Keliling Dipasang Dulu',
+          teks: 'Siang ini sepetak halaman akan dijadikan lantai baru. Tukang bangunan memasang pagarnya lebih dulu, mengelilingi tepi halaman dengan pas. Pagar hanya menandai sejauh mana wilayahnya — bagian dalamnya masih kosong.',
+        },
+        {
+          objek: 'ubinPasang', judul: 'Ubin Masuk Satu per Satu',
+          teks: 'Setelah pagar berdiri, ubin persegi dibawa masuk dan dipasang dari pojok, satu per satu. Lihat: sebagian lantai sudah tertutup ubin rapat, sebagian masih menampakkan tanah. Pagar di pinggir, ubin mengisi bagian dalam — inilah bedanya.',
+        },
+        {
+          objek: 'ubinDuaBelas', judul: 'Menghitung Isi Lantai',
+          teks: 'Lantai kecil itu ternyata menampung 12 ubin: hitung barisannya, ada 3 baris dan tiap baris berisi 4 ubin. Seluruh ubin itu bekerja sama menutupi isi lantai sampai tak tersisa tanah. Banyaknya ubin penutup itulah yang disebut luas.',
+        },
+        {
+          objek: 'papanPagarKarpet', judul: 'Papan Pagar & Ubin',
+          teks: 'Di papan tertulis pengingatnya: keliling adalah panjang pagarnya, luas adalah banyak ubin yang menutup isinya. Keliling bertanya "berapa panjang jalan kelilingnya?", luas bertanya "berapa ubin menutupi seluruhnya?". Dua pertanyaan berbeda untuk satu lantai yang sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Luas Terbuka!',
+          teks: 'Jadi luas itu banyak ubin yang dibutuhkan untuk menutupi seluruh bagian dalam. Pagar mengukur pinggir, ubin mengukur isi. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-082 · Luas Persegi Panjang — sore ubin 4 baris berisi 6 ----- */
+    'p1-082': {
+      tema: 'barisUbin',
+      npc: { glif: '24', ucap: ['Baris kali', 'kolom!'] },
+      stasiun: [
+        {
+          objek: 'barisEnam', judul: 'Satu Baris Berisi 6',
+          teks: 'Sore ini lantai yang lebih besar mulai dibangun. Ubin pertama disusun menjadi satu baris lurus berisi 6 ubin. Baris pertama inilah patungan seluruh lantai.',
+        },
+        {
+          objek: 'empatBaris', judul: 'Empat Baris Rapat',
+          teks: 'Baris kedua, ketiga, dan keempat menyusul dipasang tepat di bawah baris pertama. Kini ada 4 baris, dan tiap baris berisi 6 ubin tanpa celah. Menghitungnya pun ringan: 6 + 6 + 6 + 6 = 24 ubin.',
+        },
+        {
+          objek: 'hitungLompat', judul: 'Trik Lompat Kelipatan',
+          teks: 'Seorang tukang menghitung dengan lompatan: 6, 12, 18, 24 — hanya empat kali melompat dan seluruh lantai selesai dihitung! Itulah jurus perkalian yang dikenalkan di penjuru kali dulu. 4 baris berisi 6 ubin sama artinya dengan 4 x 6 = 24.',
+        },
+        {
+          objek: 'papan64', judul: 'Papan Hitung Kilat',
+          teks: 'Di papan tertulis: 4 baris berisi 6 ubin, maka 4 x 6 = 24 ubin. Tidak perlu menempelkan ubin satu per satu untuk mengetahui isinya. Hitungan bisa selesai di kertas sebelum ubin dibawa ke lantai.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Hitung Kilat Jadi!',
+          teks: 'Jadi luas persegi panjang itu baris kali kolom: 4 x 6 = 24 ubin. Rumus panjang kali lebar ternyata hanya cerita menata ubin yang dipersingkat. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-083 · Segitiga Setengah Kotak — malam bengkel karpet segitiga ----- */
+    'p1-083': {
+      tema: 'karpet',
+      npc: { glif: '1/2', ucap: ['Setengah', 'kotak cukup!'] },
+      stasiun: [
+        {
+          objek: 'kotakUbin24', judul: 'Pesanan Kotak 24 Ubin',
+          teks: 'Malam ini bengkel karpet menerima pesanan berbentuk kotak berukuran 4 baris berisi 6 ubin. Hitung cepatnya sudah hafal: 4 x 6 = 24 ubin. Lalu pelanggan bertanya — bila karpetnya dipotong segitiga, berapa ubin yang perlu dibeli?',
+        },
+        {
+          objek: 'segitigaSampir', judul: 'Segitiga di Dalam Kotak',
+          teks: 'Pemilik bengkel menggambar segitiga raksasa di dalam kotak itu: alasnya membentang di sisi bawah, puncaknya menyentuh sisi atas — ibarat selimut yang menyampir menutupi separuh kotak. Kedua sisinya miring persis menghubungkan pojok-pojok kotak.',
+        },
+        {
+          objek: 'duaSegitiga', judul: 'Dua Segitiga Satu Kotak',
+          teks: 'Rahasianya terbuka saat segitiga kembarannya dibalik: segitiga pertama menutup 12 ubin, segitiga kembarannya juga 12, dan 12 + 12 = 24 — kotak penuh! Maka satu segitiga pasti setengah kotaknya. Tidak perlu menghitung ubin segitiga satu per satu.',
+        },
+        {
+          objek: 'papanSetengah', judul: 'Papan Resep Setengah',
+          teks: 'Di papan tertulis resepnya: luas segitiga = 1/2 x alas x tinggi. Contoh kotak tadi: 1/2 x 6 x 4 = 12 ubin. Alas dan tinggi adalah ukuran kotak yang menyampirinya, lalu ambil separuhnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Cukup Setengah!',
+          teks: 'Jadi luas segitiga itu setengah kotak penyampirnya: 1/2 x alas x tinggi. Karpet segitiga tadi cukup dibeli 12 ubin, bukan 24. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-084 · Lingkaran Si Bulat — malam bengkel roda & Pi ----- */
+    'p1-084': {
+      tema: 'rodaDunia',
+      npc: { glif: '3,14', ucap: ['Dari pusat', 'ke tepi!'] },
+      stasiun: [
+        {
+          objek: 'pusatRoda', judul: 'Titik Pusat Roda',
+          teks: 'Malam ini bengkel roda menyala penuh. Sebuah roda kayu baru diletakkan di meja kerja, dengan lubang kecil di tengahnya sebagai tanda pusat. Pusat itu ibarat rumah roda: seluruh bagian roda menjaga jarak yang setia kepadanya.',
+        },
+        {
+          objek: 'jariRoda', judul: 'Jari-Jari yang Sama Panjang',
+          teks: 'Dari pusat dipancarkan jari-jari roda menuju tepinya. Ada tiga jari-jari digambar sebagai contoh, dan panjang ketiganya sama persis. Dari pusat ke tepi, tak pernah lebih panjang, tak pernah lebih pendek — itulah jari-jari.',
+        },
+        {
+          objek: 'taliKeliling', judul: 'Tali Melilit Sekeliling',
+          teks: 'Seutas tali dipakai melilit tepi roda satu putaran penuh, lalu dibentangkan lurus di lantai. Panjang tali itulah keliling lingkaran — sama seperti jalan keliling lapangan dulu, hanya kali ini melingkar bulat.',
+        },
+        {
+          objek: 'papanPi', judul: 'Papan Temuan Angka Setia',
+          teks: 'Di papan tertulis temuan bengkel: keliling lingkaran kira-kira 3,14 kali diameternya — diameter adalah jarak dari tepi ke tepi melalui pusat. Angka 3,14 itu bernama Pi; konon para ahli hitung sudah lama sekali memburu angka setia ini. Roda besar maupun kecil menaati angka yang sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Roda Setia!',
+          teks: 'Jadi lingkaran punya pusat, jari-jari yang sama panjang dari pusat ke tepi, dan keliling yang kira-kira 3,14 kali diameternya. Satu bentuk, satu angka setia di mana-mana. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-085 · Kenalan Kubus & Balok — siang gudang kardus ----- */
+    'p1-085': {
+      tema: 'kardus',
+      npc: { glif: '3D', ucap: ['Punya isi,', 'bukan datar!'] },
+      stasiun: [
+        {
+          objek: 'daduBesar', judul: 'Dadu, Kotak Sempurna',
+          teks: 'Di rak gudang terguling dadu raksasa milik permainan kamp. Dadu itu kubus: seluruh sisinya berbentuk kotak yang sama besar. Tidak ada sisi yang lebih panjang — semua menghadap ke segala arah dengan rapi.',
+        },
+        {
+          objek: 'kardusBesar', judul: 'Kardus, Saudara yang Dipanjangkan',
+          teks: 'Di lantai berdiri kardus berbentuk balok. Balok adalah saudara kubus: sisinya juga kotak, tetapi tidak semua sama besar — ada yang panjang, ada yang lebar, ada yang pendek. Kardus, lemari, dan buku tebal sering berbentuk seperti ini.',
+        },
+        {
+          objek: 'sisiEnamDadu', judul: 'Membuka Kulit Kubus',
+          teks: 'Kubus dibuka di atas kertas: empat kotak berjajar, ditambah satu kotak menempel di atas dan satu di bawah. Hitung bersama: 1, 2, 3, 4, 5, 6 — enam sisi itulah seluruh kulit kubus. Teman datarnya hanya satu lembar, bentuk tiga dimensi punya kulit lebih banyak.',
+        },
+        {
+          objek: 'papanIsi', judul: 'Papan Naik Kelas ke 3D',
+          teks: 'Di papan tertulis: bentuk datar hanya punya panjang dan lebar, sedangkan kubus dan balok punya satu lagi — isi. Karena itulah mereka disebut bentuk tiga dimensi: punya ruang, bisa menampung, dan terasa mantap saat dipegang. Dunia datar tadi naik kelas menjadi dunia berisi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Bentuk Punya Isi!',
+          teks: 'Jadi kubus itu kotak sempurna berenam sisi sama besar, dan balok saudaranya yang sisi-sisinya tidak seragam. Keduanya punya isi — panjang, lebar, dan tinggi. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-086 · Detektif Bentuk di Sekitar — malam kamar 5 bentuk ----- */
+    'p1-086': {
+      tema: 'kamarMalam',
+      npc: { glif: '5!', ucap: ['Lima bentuk', 'menanti!'] },
+      stasiun: [
+        {
+          objek: 'papanMisi', judul: 'Misi Detektif Bentuk',
+          teks: 'Malam ini seorang detektif kecil menerima misi: temukan 5 bentuk di kamar sebelum tidur. Di papan misi tersusun 5 kotak kosong yang harus dicoret satu per satu. Lampu tidur dinyalakan, misi pun dimulai.',
+        },
+        {
+          objek: 'jendelaPintu', judul: 'Dua Bentuk di Dinding',
+          teks: 'Lampu tidur menyapu dinding: jendela berbentuk persegi — centang pertama; pintu berbentuk persegi panjang — centang kedua. Dua bentuk ditemukan tanpa perlu keluar kamar. Detektif mencoret dua kotak pertama di papan misinya.',
+        },
+        {
+          objek: 'piringAtap', judul: 'Dua Bentuk Lagi di Sudut Kamar',
+          teks: 'Di meja belajar terdapat piring berbentuk lingkaran — centang ketiga. Rumah-rumahan di pojok kamar membawa atap segitiga — centang keempat. Kini empat kotak misi telah tercoret, tinggal satu lagi.',
+        },
+        {
+          objek: 'kotakMainan', judul: 'Bentuk Kelima: Kotak Mainan',
+          teks: 'Yang terakhir tersimpan di bawah ranjang: kotak mainan berbentuk kubus — bentuk kelima ditemukan! Daftar misi lengkap: persegi, persegi panjang, lingkaran, segitiga, kubus. Lima bentuk, lima centang, misi tuntas.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Mata Detektif Tajam!',
+          teks: 'Jadi begitu mata terlatih, kamar sendiri pun menjadi tempat berburu bentuk: jendela persegi, pintu persegi panjang, piring lingkaran, atap segitiga, dan kotak kubus. Malam ini 5 bentuk kalah cepat oleh detektif kecil. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */
