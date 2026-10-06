@@ -217,7 +217,7 @@ window.P1 = (function () {
       teaser: 'Seribu, dua ribu, lima ribu: nilai uang berlapis-lapis. Uang adalah angka yang bisa dipegang tangan.' },
     { id: 'p1-075', k: 7, n: 9, judul: 'Belanja & Kembalian',
       teaser: 'Bayar 5.000, belanja 3.000, kembalian 2.000. Menghitung kembalian adalah latihan pengurangan paling seru sedunia!' },
-    { id: 'p1-076', k: 7, n: 10, judul: 'Menabung Seriba',
+    { id: 'p1-076', k: 7, n: 10, judul: 'Menabung Seribu',
       teaser: 'Menyisihkan sedikit tiap hari: 500+500+500 jadi 1.500. Tabungan adalah matematika yang sabar dan menolong.' },
 
     /* --- k8: Bentuk Pertama: Keliling & Luas (10) --- */

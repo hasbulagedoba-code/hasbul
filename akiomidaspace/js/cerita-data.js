@@ -1865,6 +1865,286 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p1-067 · Kenalan Angka Koma — siang warung es, gelas ukur ----- */
+    'p1-067': {
+      tema: 'es',
+      npc: { glif: '0,5', ucap: ['Utuh dulu,', 'kepingan kemudian!'] },
+      stasiun: [
+        {
+          objek: 'gelasUkur', judul: 'Gelas Ukur Satu Utuh',
+          teks: 'Di meja warung es ini berdiri gelas ukur dengan satu garis merah di badannya. Garis itu menandai satu gelas penuh — satu utuh. Selama air belum menyentuh garis, kita sebut: belum satu utuh.',
+        },
+        {
+          objek: 'gelasSetengah', judul: 'Dituang Setengah Gelas',
+          teks: 'Air dituang perlahan sampai berhenti tepat di garis tengah. Kini gelas berisi setengah dari satu utuh. Angkanya ditulis 0,5 — nol utuh, lalu koma, lalu lima dari sepuluh kepingan.',
+        },
+        {
+          objek: 'papanKepingan', judul: 'Di Belakang Koma, Potongan Kecil',
+          teks: 'Papan warung menuliskan aturannya: angka di depan koma menghitung yang utuh, angka di belakang koma menghitung potongan kecilnya. Kepingan itu lahir karena satu utuh dibayangkan terbelah sepuluh. Maka 0,5 berarti 5 potongan dari 10 potongan — persis setengah. Konon tanda koma dipilih para ahli hitung dulu agar utuh dan kepingannya tidak ketukar — tanda kecil, tugas besar.',
+        },
+        {
+          objek: 'kartuSahabat', judul: 'Dua Kartu Sahabat',
+          teks: 'Di dinding warung bergantung dua kartu berdampingan: kartu 0,5 dan kartu 1/2. Isinya sama persis — setengah — hanya bahasanya berbeda. Sepasang sahabat ini akan sering bertemu dalam hitunganmu ke depan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Koma Itu Ramah!',
+          teks: 'Jadi 0,5 bukan angka aneh: dia setengah yang menulis dengan bahasa koma — nol utuh plus lima dari sepuluh kepingan. Setengah gelas, setengah jam, setengah jalan semua bisa dikenalnya. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-068 · Persepuluhan 0,1 — pagi kandang sepuluh bilik ----- */
+    'p1-068': {
+      tema: 'kandang',
+      npc: { glif: '0,1', ucap: ['Satu bilik,', 'satu persepuluh!'] },
+      stasiun: [
+        {
+          objek: 'kandangUtuh', judul: 'Satu Kandang Utuh',
+          teks: 'Pagi ini kandang kelinci baru selesai dibangun: satu kandang panjang, utuh tanpa dibagi-bagi. Papan pintunya menuliskan angka 1. Satu utuh — sebelum dibagi, itulah seluruhnya.',
+        },
+        {
+          objek: 'sepuluhBilik', judul: 'Dibagi Sepuluh Bilik',
+          teks: 'Kini kandang dibagi menjadi 10 bilik sama besar. Hitung sekatnya satu per satu: tidak ada bilik yang lebih lebar, tidak ada yang lebih sempit. Tiap bilik adalah satu potongan dari sepuluh potongan sama besar.',
+        },
+        {
+          objek: 'bilikSatu', judul: 'Nilai Satu Bilik',
+          teks: 'Satu bilik dituliskan nilainya: 0,1 — dibaca nol koma satu. Artinya satu potongan dari sepuluh potongan sama besar. Sepuluh bilik berdiri berjajar, dan tiap bilik membawa nilai yang sama.',
+        },
+        {
+          objek: 'papanKepSepuluh', judul: 'Kumpulkan Sepuluh Kepingan',
+          teks: 'Di papan tertulis: 10 keping 0,1 menjadi 1 utuh. Buktikan dengan kandangnya: bilik 1 sampai bilik 10 bila digabung kembali, kandang itu utuh kembali seperti sedia kala. Persepuluhan itu ramah — dikumpulkan sepuluh selalu kembali ke satu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Persepuluhan Jelas!',
+          teks: 'Jadi 0,1 itu satu dari sepuluh potongan sama besar — seperti satu bilik dari kandang berisi sepuluh. Dibaca nol koma satu, dan sepuluh kepingannya menjadi satu utuh. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-069 · Desimal & Pecahan Saudara — sore taman dua gerbang ----- */
+    'p1-069': {
+      tema: 'gerbangDua',
+      npc: { glif: '=', ucap: ['Dua nama,', 'satu arti!'] },
+      stasiun: [
+        {
+          objek: 'gerbangNolLima', judul: 'Gerbang Bertuliskan 0,5',
+          teks: 'Taman ini punya dua gerbang yang saling berhadapan. Gerbang kiri menuliskan 0,5 dengan tanda koma. Siapa pun yang lewat gerbang ini tiba di satu taman yang sama.',
+        },
+        {
+          objek: 'gerbangSetengah', judul: 'Gerbang Bertuliskan 1/2',
+          teks: 'Gerbang kanan menuliskan 1/2 dengan garis pecahan. Bentuk tulisannya beda, tetapi tujuannya sama: taman yang sama persis. Tidak ada jalur yang lebih jauh — keduanya sejauh sama.',
+        },
+        {
+          objek: 'tamanSatuKue', judul: 'Satu Taman, Satu Kue',
+          teks: 'Di tengah taman, satu meja menyiapkan kue yang sama untuk siapa pun yang datang, dari gerbang mana pun ia masuk. Maka 0,5 = 1/2 — dua nama untuk satu nilai yang sama.',
+        },
+        {
+          objek: 'gerbangSeperempat', judul: 'Pasangan Saudara Lain',
+          teks: 'Di sudut taman berdiri pasangan saudara kedua: gerbang 0,25 dan gerbang 1/4. Sekali lagi dua nama, satu arti — seperempat. Kini kamu punya dua bahasa: bahasa koma dan bahasa pecahan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Bahasa Satu Arti!',
+          teks: 'Jadi 0,5 dan 1/2 adalah saudara kembar yang lahir dengan nama berbeda, begitu pula 0,25 dan 1/4. Bahasa koma atau bahasa pecahan — nilai jawabannya tetap sama. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-070 · Membandingkan Desimal — malam panggung juri ----- */
+    'p1-070': {
+      tema: 'juri',
+      npc: { glif: '>', ucap: ['Lihat angka', 'pertamanya!'] },
+      stasiun: [
+        {
+          objek: 'kartuTujuh', judul: 'Kartu 0,7 di Panggung Kiri',
+          teks: 'Panggung juri malam ini mengangkat kartu 0,7. Kartunya pendek: hanya satu angka di belakang koma. Dibaca nol koma tujuh — artinya tujuh dari sepuluh kepingan.',
+        },
+        {
+          objek: 'kartuDuaLima', judul: 'Kartu 0,25 di Panggung Kanan',
+          teks: 'Kartu kanan lebih panjang tulisannya: 0,25, dua angka di belakang koma. Dibaca nol koma dua lima — artinya dua puluh lima dari seratus kepingan. Banyak orang langsung mengira kartu yang panjang pasti lebih besar. Tunggu dulu!',
+        },
+        {
+          objek: 'kacaPembesar', judul: 'Kaca Pembesar Angka Pertama',
+          teks: 'Juri mengambil kaca pembesar dan menunjuk angka pertama setelah koma: di kiri angka 7, di kanan angka 2. Karena 7 lebih besar dari 2, kartu kiri terbukti unggul. Membandingkan desimal dimulai dari angka pertama setelah koma.',
+        },
+        {
+          objek: 'papanSkor', judul: 'Keputusan di Papan Skor',
+          teks: 'Papan skor menuliskan keputusan juri: 0,7 > 0,25. Panjang tulisan tidak menentukan besar nilai — yang menentukan adalah angka pertama setelah koma. Sekarang kamu tak mudah tertipu oleh kartu yang panjang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jebakan Terbongkar!',
+          teks: 'Jadi membandingkan desimal: lihat dulu angka pertama setelah koma, lalu lanjut ke angka berikutnya bila sama. 0,7 tetap juara atas 0,25 sekalipun tulisannya lebih pendek. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-071 · Persen Itu Apa? — siang lapangan seratus ubin ----- */
+    'p1-071': {
+      tema: 'petak',
+      npc: { glif: '%', ucap: ['Dari seratus!', 'Itu persen!'] },
+      stasiun: [
+        {
+          objek: 'lapanganSeratus', judul: 'Lapangan Seratus Ubin',
+          teks: 'Lapangan permainan ini dipenuhi ubin warna-warni yang dipasang berderet rapi. Hitung sisinya: 10 ubin sepanjang lapangan, 10 ubin selebarnya — seluruhnya 100 ubin. Angka 100 itulah rumah dari semua persen.',
+        },
+        {
+          objek: 'kotakSeratus', judul: 'Kotak 100 Kelereng',
+          teks: 'Di pinggir lapangan ada kotak berisi kelereng warna-warni. Bila dihitung satu-satu, isinya tepat 100 butir. Satu butir kelereng berarti satu dari seratus — itulah satu persen.',
+        },
+        {
+          objek: 'ambilDuaLima', judul: 'Ambil 25 Kelereng',
+          teks: 'Seorang pemain mengambil 25 kelereng dari kotak, sisanya kembali tertata rapi. Yang diambil itu ditulis 25% — dibaca dua puluh lima persen, artinya 25 dari 100. Persen memang bermakna "dari seratus".',
+        },
+        {
+          objek: 'papanPersen', judul: 'Papan Rahasia Persen',
+          teks: 'Di papan tertulis: 25% = 25 dari 100 = 1/4 — seperempat! Konon tanda % tumbuh dari tulisan pedagang lama: kata per cento (artinya dari seratus) yang ditulis makin ringkas sampai menjadi dua lingkaran kecil bergaris. Mengambil 25 dari 100 kelereng sama artinya dengan mengambil seperempat dari semuanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Persen Terbuka!',
+          teks: 'Jadi persen selalu bercerita tentang seratus: 25% berarti 25 dari 100, dan itu persis seperempat. Setiap kali bertemu tanda %, bayangkan kotak 100 kelereng itu. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-072 · Persen Favorit 50% — senja bak air kebun ----- */
+    'p1-072': {
+      tema: 'tangki',
+      npc: { glif: '1/2', ucap: ['Setengah,', 'paling gampang!'] },
+      stasiun: [
+        {
+          objek: 'bakPenuh', judul: 'Bak Penuh: 100%',
+          teks: 'Sore ini bak air di kebun baru saja diisi sampai tepi. Permukaan air menyentuh garis tertinggi yang berlabel 100%. Seratus persen artinya utuh — tidak ada satu tetes pun yang kurang.',
+        },
+        {
+          objek: 'bakSetengah', judul: 'Bak Setengah: 50%',
+          teks: 'Air dipakai untuk menyiram taman, permukaannya turun sampai garis tengah berlabel 50%. Lima puluh persen artinya lima puluh dari seratus — persis setengah bak. Angka ini sahabat lamamu: 50% itu 1/2, sama seperti 0,5.',
+        },
+        {
+          objek: 'bakKosong', judul: 'Bak Kosong: 0%',
+          teks: 'Sisa air terakhir dipakai untuk kolam ikan, dan bak kini kering sampai dasar. Garis dasarnya berlabel 0%. Nol persen artinya tidak ada sama sekali — semuanya sudah dipakai dengan bermanfaat.',
+        },
+        {
+          objek: 'papanSatuKata', judul: 'Tiga Kembar Bak Air',
+          teks: 'Di papan kebun berdiri tiga kalimat pendek: 100% utuh, 50% setengah, 0% habis. Persen menyederhanakan cerita panjang menjadi satu kata yang ringkas. Karena itulah tiga angka ini paling sering dipakai sehari-hari.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Setengah Terbaca!',
+          teks: 'Jadi tiga angka persen ini bisa kamu simpan di luar kepala: 100% utuh, 50% setengah, 0% habis. Bak air di kebun saja sudah mengajarkannya dengan jujur. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-073 · Tiga Rupa Satu Makna — malam ruang cermin ----- */
+    'p1-073': {
+      tema: 'kaca',
+      npc: { glif: '3', ucap: ['Tiga rupa,', 'satu makna!'] },
+      stasiun: [
+        {
+          objek: 'kueDiMeja', judul: 'Setengah Kue di Meja Tengah',
+          teks: 'Ruang cermin malam ini menata satu kue di meja tengah, dan yang tersisa adalah setengah kue dari acara tadi. Sisa inilah yang akan dicermin tiga kali malam ini. Perhatikan bentuknya baik-baik sebelum cermin mulai bekerja.',
+        },
+        {
+          objek: 'kacaPecahan', judul: 'Cermin Pertama: Bahasa Pecahan',
+          teks: 'Cermin pertama menuliskan namanya: 1/2. Satu dari dua potongan sama besar — itulah bahasa pecahan. Cermin ini menggambarkan kue yang dibagi dua, lalu satu potongannya diambil.',
+        },
+        {
+          objek: 'kacaDesimal', judul: 'Cermin Kedua: Bahasa Koma',
+          teks: 'Cermin kedua menulis 0,5 — nol utuh, koma, lalu lima dari sepuluh kepingan. Itulah bahasa koma yang dikenalkan gelas ukur dan kandang persepuluhan dulu. Isinya tetap setengah kue yang sama.',
+        },
+        {
+          objek: 'kacaPersen', judul: 'Cermin Ketiga: Bahasa Persen',
+          teks: 'Cermin ketiga menulis 50% — lima puluh dari seratus, persen sahabat setengah itu. Tiga cermin, tiga tulisan, tetapi kue di setiap cermin tak berubah: semuanya setengah. Maka 1/2 = 0,5 = 50% — tiga rupa, satu makna.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Kunci Satu Pintu!',
+          teks: 'Jadi satu setengah memiliki tiga nama: 1/2, 0,5, dan 50%. Mana pun yang muncul di soal, kamu tahu isinya sama — tiga kunci untuk satu pintu yang sama. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-074 · Kenalan Uang Rupiah — siang toko kelontong ----- */
+    'p1-074': {
+      tema: 'toko',
+      npc: { glif: 'R', ucap: ['Uang itu', 'angka nyata!'] },
+      stasiun: [
+        {
+          objek: 'dompetBuka', judul: 'Dompet Terbuka',
+          teks: 'Di toko kelontong ini seorang pembeli membuka dompetnya. Di dalamnya tersusun lembaran berwarna dan koin berbagai ukuran. Uang rupiah adalah angka yang bisa dipegang — setiap lembar menyebut nilainya sendiri dengan jelas.',
+        },
+        {
+          objek: 'lembarSeribu', judul: 'Lembar 1.000',
+          teks: 'Lembar pertama menunjukkan angka 1.000 — dibaca seribu rupiah. Angka 1 berdiri diikuti tiga nol di belakangnya. Lembar ini sering dipakai untuk membeli permen atau kue kecil.',
+        },
+        {
+          objek: 'barisanLembar', judul: 'Dua Ribu & Lima Ribu',
+          teks: 'Di belakangnya berbaris lembar 2.000 dan lembar 5.000. Nilainya berlapis-lapis: 5.000 lebih besar dari 2.000, dan 2.000 lebih besar dari 1.000. Baca angka depannya dengan teliti — satu angka mengubah seluruh nilai.',
+        },
+        {
+          objek: 'papanKoin', judul: 'Koin Juga Punya Nilai',
+          teks: 'Di piring kaca tersusun koin-koin rupiah, dan salah satunya bernilai 500. Koin dan lembar sama-sama sah dipakai berbelanja. Semua nilai itu tertulis jelas dan jujur — tidak ada yang menyembunyikan harganya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Uang Terbaca!',
+          teks: 'Jadi uang rupiah itu deretan angka yang bisa dipegang: 1.000, 2.000, 5.000, dan koin-koin kecilnya. Saat berbelanja, baca angkanya dengan teliti seperti membaca buku. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-075 · Belanja & Kembalian — sore meja kasir warung ----- */
+    'p1-075': {
+      tema: 'kasir',
+      npc: { glif: '2', ucap: ['Kurang harga,', 'jadi kembalian!'] },
+      stasiun: [
+        {
+          objek: 'permenTigaRibu', judul: 'Harga di Rak',
+          teks: 'Papan harga di rak menuliskan jelas: permen sebungkus 3.000 rupiah. Harga yang tertulis membuat pembeli dan penjual sama-sama tahu nilainya. Inilah muamalah yang baik: tak ada yang bersembunyi.',
+        },
+        {
+          objek: 'bayarLimaRibu', judul: 'Membayar 5.000',
+          teks: 'Pembeli menyerahkan lembar 5.000 ke meja kasir. Lembar itu bernilai lebih besar dari harga permen. Kasir pun mulai berhitung: berapa yang harus kembali ke pembeli?',
+        },
+        {
+          objek: 'kembalianDua', judul: 'Kembalian 2.000',
+          teks: 'Kasir menghitung: 5.000 dikurangi 3.000 sama dengan 2.000. Maka kembalian yang diserahkan adalah lembar 2.000. Hitungannya jujur dan pas — tak ada yang kelebihan, tak ada yang kekurangan.',
+        },
+        {
+          objek: 'papanKurangKasir', judul: 'Kembalian Itu Pengurangan',
+          teks: 'Di papan kasir tertulis kalimatnya: 5.000 - 3.000 = 2.000. Setiap perhitungan kembalian adalah latihan pengurangan yang nyata — bukan cuma soal di buku, tetapi ilmu yang dipakai saat berbelanja.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kasir Terbaca!',
+          teks: 'Jadi kembalian tak perlu ditebak: uang dibayar dikurangi harga, sisanya kembali ke tangan. 5.000 dibayar, 3.000 dipakai, 2.000 kembali. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-076 · Menabung Seribu — pagi meja celengan ----- */
+    'p1-076': {
+      tema: 'celengan',
+      npc: { glif: '1', ucap: ['Sedikit demi', 'sedikit jadi!'] },
+      stasiun: [
+        {
+          objek: 'koinSenin', judul: 'Senin: Koin Pertama',
+          teks: 'Pagi ini seorang anak menitipkan satu koin 500 ke celengannya. Papan catatan menuliskan: Senin 500. Koin pertama itu masih sendirian, tetapi ceritanya baru dimulai.',
+        },
+        {
+          objek: 'koinSelasa', judul: 'Selasa: Koin Kedua',
+          teks: 'Hari Selasa, koin 500 kedua masuk menemani yang pertama. Catatannya kini berbunyi: 500 + 500 = 1.000. Dua koin kecil sudah menyusun satu ribu — nilai tempat bekerja dengan setia.',
+        },
+        {
+          objek: 'koinRabu', judul: 'Rabu: Koin Ketiga',
+          teks: 'Koin ketiga masuk pada hari Rabu, dan catatan makin panjang: 500 + 500 + 500 = 1.500. Tiga koin ternyata melampaui seribu — seribu lima ratus rupiah sudah terkumpul rapi.',
+        },
+        {
+          objek: 'celenganBahagia', judul: 'Celengan yang Setia',
+          teks: 'Celengan itu tak pernah mengeluh menunggu, dan isinya bertambah sesuai catatan: 1.500 rupiah. Menabung adalah matematika yang sabar — angka kecil yang rajin mengumpulkan dirinya menjadi besar. Suatu hari nanti, tabungan itu akan menolong kebutuhan yang lebih berguna.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tabungan Tumbuh!',
+          teks: 'Jadi menabung itu hitungan sederhana yang setia: 500, plus 500, plus 500 — jadi 1.500. Sedikit demi sedikit, lama-lama menjadi banyak. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */
