@@ -146,7 +146,7 @@
     if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') { keys.kiri = true; e.preventDefault(); }
     if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') { keys.kanan = true; e.preventDefault(); }
     if ((e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') && !player.masuk) {
-      const zk = AK.ZONES.find(z => z.open);
+      const zk = pintuTerdekat();
       if (zk && Math.abs(player.x - zk.x) < 26) { ketukPintu(zk); e.preventDefault(); }
     }
   });
@@ -186,9 +186,20 @@
   if (btnMasukPintu) {
     btnMasukPintu.addEventListener('pointerdown', e => {
       e.preventDefault();
-      const zk = AK.ZONES.find(z => z.open);
+      const zk = pintuTerdekat();
       if (zk) ketukPintu(zk);
     });
+  }
+
+  /* pintu wilayah terbuka terdekat dari posisi Akio (pintu mana pun) */
+  function pintuTerdekat() {
+    let terbaik = null, terjauh = 1e9;
+    for (const z of AK.ZONES) {
+      if (!z.open) continue;
+      const d = Math.abs(player.x - z.x);
+      if (d < terjauh) { terbaik = z; terjauh = d; }
+    }
+    return terbaik;
   }
 
   function ketukPintu(z) {
@@ -320,12 +331,12 @@
 
     gerak(dt);
 
-    // pintu kamp angka (wilayah terbuka):
+    // pintu wilayah terbuka (pintu mana pun yang open, terdekat dulu):
     // masuk bila MENJUJUK pintu secara sengaja, atau berhenti di depannya.
     // Jalan lewat saja tidak menyerap — pemain bebas menyeberangi dunia.
-    const zk = AK.ZONES[0];
-    const diPintu = Math.abs(player.x - zk.x) < 10;
-    if (zk.open && diPintu && (player.target === zk.x || player.state === 'diam')) {
+    const zk = pintuTerdekat();
+    const diPintu = zk !== null && Math.abs(player.x - zk.x) < 10;
+    if (diPintu && (player.target === zk.x || player.state === 'diam')) {
       diamDiPintu += dt;
       if (player.target === zk.x || diamDiPintu > 0.4) {
         player.target = null; player.vx = 0;
@@ -415,11 +426,13 @@
     for (const s of salju) { s.f += dt * 2; s.y += 11 * dt; s.x += Math.sin(s.f) * 7 * dt; }
     salju = salju.filter(s => s.y < 252);
 
-    // kilau di pintu kamp angka (wilayah terbuka)
+    // kilau di setiap pintu wilayah terbuka
     tKilau += dt;
     if (tKilau > 0.55) {
       tKilau = 0;
-      kilau.push({ x: 40 + rand(-9, 9), y: rand(212, 240), hidup: rand(0.5, 0.9), umur: 0 });
+      const terbuka = AK.ZONES.filter(z => z.open);
+      const zp = terbuka[Math.floor(Math.random() * terbuka.length)];
+      kilau.push({ x: zp.x + rand(-9, 9), y: rand(212, 240), hidup: rand(0.5, 0.9), umur: 0 });
     }
     for (const k of kilau) k.umur += dt;
     kilau = kilau.filter(k => k.umur < k.hidup);
@@ -483,13 +496,16 @@
     ctx.globalAlpha = 1;
   }
   function gambarPanahTerbuka(t) {
-    // panah memantul di atas pintu wilayah terbuka — tujuan tak mungkin salah
-    const zx = 40, ay = 160 + Math.round(Math.sin(t * 4) * 2);
-    P(zx - 4, ay + 1, 8, 2, '#0e1526');          // bayang panah
-    P(zx - 3, ay - 1, 6, 2, '#0e1526');
-    P(zx - 3, ay - 2, 6, 2, '#7dffa8');
-    P(zx - 2, ay, 4, 2, '#7dffa8');
-    P(zx - 1, ay + 2, 2, 2, '#7dffa8');
+    // panah memantul di atas setiap pintu wilayah terbuka — tujuan tak mungkin salah
+    for (const zo of AK.ZONES) {
+      if (!zo.open) continue;
+      const zx = zo.x, ay = 160 + Math.round(Math.sin(t * 4 + zo.x) * 2);
+      P(zx - 4, ay + 1, 8, 2, '#0e1526');          // bayang panah
+      P(zx - 3, ay - 1, 6, 2, '#0e1526');
+      P(zx - 3, ay - 2, 6, 2, '#7dffa8');
+      P(zx - 2, ay, 4, 2, '#7dffa8');
+      P(zx - 1, ay + 2, 2, 2, '#7dffa8');
+    }
   }
 
   function gambarBuble(n, kananTerakhir) {

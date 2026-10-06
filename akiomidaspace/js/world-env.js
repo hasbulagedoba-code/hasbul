@@ -15,7 +15,7 @@ window.AK = (function () {
   const ZONES = [
     { name: 'Kamp Angka',        slogan: 'Wilayah permulaan perjalanan',  href: 'kamp-angka-dunia.html',             open: true,  x: 40,  biome: 'kamp',
       color: '#63c8ff', deep: '#1c6fb4', label: ['KAMP', 'ANGKA'] },
-    { name: 'Hutan Simbol',      slogan: 'Wilayah bahasa dan tanda',      href: 'hutan-simbol-matematika.html',      open: false, x: 118, biome: 'hutan',
+    { name: 'Hutan Simbol',      slogan: 'Wilayah bahasa dan tanda',      href: 'hutan-simbol-dunia.html',           open: true,  x: 118, biome: 'hutan',
       color: '#4fe3c8', deep: '#0d8a74', label: ['HUTAN', 'SIMBOL'] },
     { name: 'Pegunungan Pola',   slogan: 'Wilayah susunan dan bentuk',    href: 'pegunungan-pola-matematika.html',   open: false, x: 196, biome: 'gunung',
       color: '#ffd166', deep: '#c07d0c', label: ['PEGUNUNGAN', 'POLA'] },
@@ -33,7 +33,7 @@ window.AK = (function () {
     { zone: 0, x: 72,  warna: '#63c8ff', gelap: '#1c6fb4', glif: '1',
       ucap: [['Selamat', 'datang!'], ['Ayo mulai', 'dari sini!']] },
     { zone: 1, x: 92,  warna: '#4fe3c8', gelap: '#0d8a74', glif: 'pi',
-      ucap: [['Simbol itu', 'bahasa!'], ['Awas', 'tersesat!']] },
+      ucap: [['Simbol itu', 'bahasa!'], ['Hutan kini', 'terbuka!']] },
     { zone: 2, x: 226, warna: '#ffd166', gelap: '#c07d0c', glif: 'delta',
       ucap: [['Temukan', 'polanya!'], ['Pola itu', 'seru!']] },
     { zone: 3, x: 312, warna: '#ff9d9d', gelap: '#bd5a5f', glif: 'eq',

@@ -16,6 +16,287 @@ window.CERITA = (function () {
   'use strict';
 
   const PETA = {
+    /* ============ PINTU 2 — HUTAN SIMBOL ============ */
+
+    /* ----- p2-001 · Angka di Bawah Nol — gerbang tambang dengan lift keranjang ----- */
+    'p2-001': {
+      tema: 'tambang',
+      npc: { glif: '-1', ucap: ['Makin turun,', 'makin kecil!'] },
+      stasiun: [
+        {
+          objek: 'gerbangTambang', judul: 'Pintu ke Bawah Tanah',
+          teks: 'Di bibir hutan berdiri gerbang tambang kayu dengan papan tulisan besar, dan di sampingnya bergantung keranjang lift pada tali kokoh. Gedung biasa punya lantai di atas tanah bernomor 1, 2, 3. Tetapi tambang punya lantai di bawah tanah, dan lantai itu ditulis dengan tanda minus: −1, −2, −3. Tanda minus bukan tanda sedih — ia tanda alamat yang berarti "di bawah nol".',
+        },
+        {
+          objek: 'tiangKedalaman', judul: 'Tanda di Tiap Lantai',
+          teks: 'Di lorong tambang berdiri tiang kedalaman dengan tiga papan kecil tersusun dari atas ke bawah: −1, −2, lalu −3. Papan di atas tanah tetap bernomor 0. Turun satu lantai, angkanya berkurang satu: dari 0 ke −1, dari −1 ke −2. Seperti menuruni tangga sambil menghitung langkah mundur.',
+        },
+        {
+          objek: 'taliKeranjang', judul: 'Keranjang Turun Tiga Lantai',
+          teks: 'Sekarang keranjang lift menuruni tambang. Mulai dari lantai 0, tali digulir perlahan: berhenti pertama di −1, berhenti kedua di −2, berhenti ketiga di −3. Hitung bersama: tiga kali turun, dan angka berubah 0, −1, −2, −3. Keranjang berhenti tepat di papan −3, lantai paling dalam hari ini.',
+        },
+        {
+          objek: 'tanggaMinus', judul: 'Makin Turun, Makin Kecil',
+          teks: 'Di dinding tambang terpampang tangga angka menurun: −1 di paling atas, lalu −2, lalu −3 di paling bawah, dengan panah menunjuk ke bawah bertuliskan "makin kecil". Jadi −2 lebih kecil dari −1, dan −3 lebih kecil lagi dari −2. Makin dalam kita turun di bawah nol, makin kecil pula angkanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Di Bawah Pun Ada Angka!',
+          teks: 'Jadi angka tidak berhenti di nol: ia berlanjut ke bawah dengan tanda minus sebagai tanda alamat. Lantai −1, −2, −3 kini terasa seperti lantai biasa — cuma letaknya di bawah tanah. Owalah, ternyata begini toh — minus itu hanya penunjuk arah ke bawah. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-002 · Garis Bilangan Dua Arah — jembatan kayu dengan tiang nol ----- */
+    'p2-002': {
+      tema: 'jembatan',
+      npc: { glif: '0', ucap: ['Nol di tengah,', 'dua arah!'] },
+      stasiun: [
+        {
+          objek: 'jembatanAngka', judul: 'Jembatan Angka',
+          teks: 'Di tengah hutan membentang jembatan kayu yang unik: setiap papan tangganya bertuliskan angka. Dari kiri ke kanan terbaca −3, −2, −1, 0, lalu 1, 2, 3. Jembatan inilah garis bilangan: angka berbaris rapi dengan jarak yang sama, dan nol berdiri tepat di tengah-tengah.',
+        },
+        {
+          objek: 'tiangNolTengah', judul: 'Tiang Nol di Tengah',
+          teks: 'Di tengah jembatan berdiri tiang dengan lampu bertanda 0. Dua papan arah kecil menempel di tiang: satu menunjuk ke kanan, satu menunjuk ke kiri. Ke kanan angka makin besar: 1, 2, 3. Ke kiri angka makin kecil: −1, −2, −3. Tiang nol adalah alamat permulaan untuk kedua arah.',
+        },
+        {
+          objek: 'panahDuaArah', judul: 'Dua Panah Tanpa Ujung',
+          teks: 'Di kedua ujung jembatan berdiri papan panah: panah kanan dan panah kiri, keduanya menghilang ke dalam kabut hutan. Artinya garis bilangan tidak berhenti di 3 dan tidak berhenti di −3: ia terus berlanjut tanpa ujung ke dua arah. Selamanya ada angka baru, di kanan maupun di kiri.',
+        },
+        {
+          objek: 'langkahBilangan', judul: 'Jarak dari Nol',
+          teks: 'Perhatikan jejak kaki di papan jembatan: dari 0 melangkah dua kali ke kanan sampai 2, dan dari 0 melangkah dua kali ke kiri sampai −2. Jauhnya sama persis, kananya saja yang berbeda. Angka 2 dan −2 memang saudara kembar: sama-sama dua langkah dari nol, arahnya saja bertolak belakang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Garis yang Membuka Dua Dunia!',
+          teks: 'Garis bilangan kini terbentang dalam kepalamu: nol di tengah, kanan bertambah besar, kiri bertambah kecil, tanpa ujung di kedua sisi. Setiap soal bilangan negatif akan berjalan di atas jembatan ini. Owalah, ternyata begini toh — cukup satu jalan lurus, dua arah, dan semuanya jelas. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-003 · Suhu di Bawah Nol — gudang es dengan dua termometer ----- */
+    'p2-003': {
+      tema: 'kutub',
+      npc: { glif: '°', ucap: ['Makin dingin,', 'makin turun!'] },
+      stasiun: [
+        {
+          objek: 'termometerGanda', judul: 'Dua Termometer Bersanding',
+          teks: 'Di gudang es berdiri dua termometer raksasa bersisian. Punya cairan naik sampai tanda 5 derajat di atas nol. Temannya justru turun sampai −5 derajat, di bawah garis nol. Keduanya memakai skala yang sama; bedanya hanya arah: satu mengukur panas di atas nol, satu mengukur dingin di bawah nol.',
+        },
+        {
+          objek: 'papanBeku', judul: 'Garis Ajaib Nol Derajat',
+          teks: 'Di papan gudang tertulis aturan penting: 0 derajat adalah tempat air membeku. Lihat garis beku di papan itu: di atas garis air tetap cair, di bawah garis air berubah menjadi es. Nol derajat adalah batas alam antara cair dan beku — itulah sebabnya garis nol di termometer begitu istimewa.',
+        },
+        {
+          objek: 'esTumpuk', judul: 'Satu Blok Satu Derajat',
+          teks: 'Di pojok gudang, lima blok es disusun menumpuk di bawah garis nol papan pengukur. Setiap blok menurunkan suhu satu derajat: satu blok −1, dua blok −2, sampai lima blok −5. Makin tinggi tumpukan es, makin dalam angkanya turun di bawah nol, dan makin dingin ruangan itu.',
+        },
+        {
+          objek: 'duaKamarEs', judul: 'Kamar Mana Lebih Dingin?',
+          teks: 'Dua pintu kamar es berdiri berdampingan. Kamar A bertanda −3 derajat dengan tumpukan tiga blok es. Kamar B bertanda −8 derajat dengan tumpukan delapan blok es. Mana yang lebih dingin? Kamar B! Delapan blok turun lebih dalam dari tiga blok, jadi −8 lebih dingin daripada −3.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dingin Pun Dihitung!',
+          teks: 'Suhu kini punya bahasa: nol derajat tempat air membeku, di atasnya panas bertambah, di bawahnya dingin bertambah. −5 derajat kini terbaca jelas: lima derajat lebih dingin dari es. Owalah, ternyata begini toh — termometer cuma garis bilangan berdiri tegak. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-004 · Utang & Saldo — kios pasar dengan buku catatan jujur ----- */
+    'p2-004': {
+      tema: 'kios',
+      npc: { glif: 'Rp', ucap: ['Catatan jujur,', 'muamalah adil!'] },
+      stasiun: [
+        {
+          objek: 'bukuCatatan', judul: 'Buku Catatan Kios',
+          teks: 'Di kios pasar terbuka buku catatan besar milik penjaga kios. Seorang pembeli menjajan tiga kue dengan janji membayar nanti, maka halaman buku ditulis: utang 3, ditandai angka −3. Angka minus di buku itu berarti "masih kurang tiga" — catatan yang jujur, tak ada yang disembunyikan.',
+        },
+        {
+          objek: 'koinNampanLima', judul: 'Membayar Lima Koin',
+          teks: 'Esok harinya pembeli datang kembali dengan nampan berisi lima koin. Tiga koin dipakai melunasi utang tadi, dan dua koin tersisa di nampan. Lima koin datang, tiga koin masuk kotak kios, dua koin kembali dipegang pembeli. Hitungannya jelas: 5 dikurangi 3 sama dengan 2.',
+        },
+        {
+          objek: 'papanSaldoUtang', judul: 'Saldo Berganti Wajah',
+          teks: 'Papan saldo di kios menceritakan perjalanan itu: mulai dari −3, dibayar 5, berakhir +2. Saldo minus berarti masih utang, saldo nol berarti lunas bersih, dan saldo plus berarti ada sisa. Tanda minus dan plus seperti dua sisi buku: satu sisi kekurangan, satu sisi kelebihan.',
+        },
+        {
+          objek: 'stempelLunas', judul: 'Stempel LUNAS',
+          teks: 'Halaman bertulis −3 kini menerima cap besar bertuliskan LUNAS — utangnya sudah diganti penuh. Halaman baru dibuka, dan di situ tercatat saldo +2 milik pembeli. Dari utang −3 menjadi tabungan +2: buku catatan kios membuktikan bahwa angka negatif dan positif saling menyapa dengan adil.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Minus Itu Catatan Jujur!',
+          teks: 'Angka negatif ternyata penjaga kejujuran: −3 berarti kurang tiga, dan selama dilunasi dengan adil, saldo kembali bersih bahkan berakhir +2. Catatan yang terang membuat jual beli tenang untuk kedua pihak. Owalah, ternyata begini toh — minus cuma cara jujur menulis kekurangan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-005 · Membandingkan Negatif — jurang berkabut dengan tiang kedalaman ----- */
+    'p2-005': {
+      tema: 'jurang',
+      npc: { glif: '-8', ucap: ['Makin dalam,', 'makin kecil!'] },
+      stasiun: [
+        {
+          objek: 'tiangJurangDua', judul: 'Dua Tiang di Jurang',
+          teks: 'Di sisi jurang berkabut tertancap dua tiang kedalaman. Tiang pertama menancap sampai tanda −3, tiang kedua turun jauh lebih dalam sampai −8. Dua-duanya di bawah bibir jurang yang bertanda nol, tetapi tiang −8 menembus kegelapan yang jauh lebih dalam.',
+        },
+        {
+          objek: 'papanLebihKecil', judul: 'Angka Mana Lebih Kecil?',
+          teks: 'Papan di bibir jurang menulis perbandingan: −8 < −3. Hati-hati, ini jebakan klasik! Angka 8 memang terlihat lebih besar daripada 3, tetapi tanda minus membalik segalanya: −8 justru lebih kecil daripada −3, karena −8 lebih jauh turun dari nol. Makin jauh ke kiri di garis bilangan, makin kecil nilainya.',
+        },
+        {
+          objek: 'lenteraJurang', judul: 'Lentera Mengukur Kedalaman',
+          teks: 'Untuk membuktikannya, dua lentera digantung dari bibir jurang dengan tali. Lentera pertama berhenti di tanda −3: talinya pendek, cahayanya masih terang. Lentera kedua turun sampai −8: talinya panjang sekali, dan cahayanya mulai tenggelam dalam gelap. Tali yang lebih panjang artinya lebih jauh dari nol — dan jauh dari nol ke bawah berarti lebih kecil.',
+        },
+        {
+          objek: 'papanUrutanNegatif', judul: 'Barisan yang Tertib',
+          teks: 'Papan terakhir menyusun angka dari yang terbesar ke yang terkecil: 3, 1, 0, −1, −3, lalu −8 di ujung bawah. Barisan ini seperti tangga menurun: setiap anak tangga turun, nilai angkanya mengecil. Begitu barisan tertib, membandingkan dua angka negatif tinggal membaca siapa yang berdiri lebih rendah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jebakan Negatif Terbongkar!',
+          teks: 'Rahasia membandingkan negatif kini terbuka: jangan lihat panjang angkanya, lihat kedalamannya dari nol. −8 turun lebih dalam dari −3, maka −8 lebih kecil. Owalah, ternyata begini toh — cukup bayangkan jurang, dan semua perbandingan jelas. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-006 · Jalan Maju & Mundur — dermaga dengan garis air nol ----- */
+    'p2-006': {
+      tema: 'pelabuhan',
+      npc: { glif: '-2', ucap: ['Naik turun', 'dermaga!'] },
+      stasiun: [
+        {
+          objek: 'tanggaDermaga', judul: 'Tangga Dermaga dan Garis Air',
+          teks: 'Di pelabuhan kecil, tangga kayu menuruni dermaga ke air. Garis permukaan air bertanda 0. Anak tangga di atas air bernomor 1, 2, 3, 4; anak tangga di bawah air bernomor −1, −2, −3, −4. Dermaga ini adalah garis bilangan yang menegak: air adalah nolnya, dan inilah panggung latihan maju-mundur kita.',
+        },
+        {
+          objek: 'perahuNelayan', judul: 'Perahu di Anak Tangga Tiga',
+          teks: 'Sebuah perahu nelayan kecil terikat rapi di anak tangga bertanda 3. Mulut perahu menyentuh tangga tepat pada angka 3 — itu posisi permulaan cerita hari ini. Ingat baik-baik angkanya: mulai dari 3.',
+        },
+        {
+          objek: 'taliTurunPerahu', judul: 'Air Surut Lima Tangga',
+          teks: 'Malam itu air surut, dan perahu ikut turun mengikuti air: lima anak tangga ke bawah. Hitung turunnya: dari 3 melewati 2, lalu 1, lalu 0, lalu −1, dan mendarat di −2. Lima langkah turun dari mulai 3, kaki perahu berhenti tepat di anak tangga −2, dua tangga di bawah garis air.',
+        },
+        {
+          objek: 'papanCatatanKapten', judul: 'Catatan Kapten',
+          teks: 'Kapten perahu mencatat kejadian di papan catatannya: mulai 3, turun 5, mendarat −2. Turun itulah arti tambah dengan negatif, maka catatannya ditulis 3 + (−5) = −2. Menambah bilangan negatif sama artinya dengan melangkah mundur sebanyak angkanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Maju Mundur Kini Jelas!',
+          teks: 'Tambah dengan bilangan negatif ternyata cuma jalan mundur: mulai 3, mundur 5, tiba di −2. Angka minus di dalam kurung adalah pesan arah, bukan hambatan. Owalah, ternyata begini toh — dermaga mengajarkan hitungan lebih jelas daripada papan tulis. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-007 · Kurang yang Membalik — terowongan dengan dua pintu minus ----- */
+    'p2-007': {
+      tema: 'terowongan',
+      npc: { glif: '+5', ucap: ['Minus ketemu', 'minus!'] },
+      stasiun: [
+        {
+          objek: 'pintuMinusGanda', judul: 'Dua Pintu Bertanda Minus',
+          teks: 'Di dalam terowongan hutan berjejer dua pintu kecil, dan keduanya memakai tanda yang sama: minus. Pintu pertama bertanda −, pintu kedua di belakangnya juga bertanda −. Penjelajah yang melihat dua tanda minus berjajar biasanya berpikir jalannya makin mundur. Tetapi terowongan ini menyimpan kejutan.',
+        },
+        {
+          objek: 'kunciBalikArah', judul: 'Kunci Pembalik Arah',
+          teks: 'Di gantungan terowongan tergantung kunci emas pembalik arah. Ketika pintu minus dibuka dengan kunci ini, arah mundur di dalamnya justru terbalik menjadi maju. Mengurangkan bilangan negatif artinya membalik arahnya: mundur yang dibalik menjadi maju. Konon buku tua "Sembilan Babal" dari China kuno sudah mencatat aturan pembalikan seperti ini berabad-abad yang lalu.',
+        },
+        {
+          objek: 'jejakLorong', judul: 'Jejak Maju di Lorong',
+          teks: 'Sekarang mari melangkah. Mulai dari penanda lantai 3, rencananya mundur 2 — tetapi pintu minus membaliknya menjadi maju 2. Jejak kaki menerangi lorong: dari 3 maju ke 4, lalu ke 5. Kaki berhenti di penanda 5, dua langkah lebih jauh dari posisi awal.',
+        },
+        {
+          objek: 'papanBukaRahasia', judul: 'Rahasia Terbukti',
+          teks: 'Di dinding ujung terowongan terpampang papan rahasianya: 3 − (−2) = 3 + 2 = 5. Dua tanda minus yang bertemu saling meneutralkan menjadi maju. Mengurangkan negatif sama artinya dengan menambah — jebakan terowongan kini tinggal trik ramah yang sudah kamu kuasai.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Minus Jadi Maju!',
+          teks: 'Kurang dengan bilangan negatif ternyata pintu balik: 3 − (−2) berubah menjadi 3 + 2, dan jawabannya 5. Dua tanda minus bertemu, arahnya justru maju. Owalah, ternyata begini toh — terowongan menakutkan pun cuma soal membalik arah. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-008 · Dua Balikan Jadi Positif — papan arah, tangga pola, dua cermin ----- */
+    'p2-008': {
+      tema: 'balik',
+      npc: { glif: '6', ucap: ['Dua balikan', 'kembali!'] },
+      stasiun: [
+        {
+          objek: 'papanPanahKiri', judul: 'Papan Petunjuk Menoleh',
+          teks: 'Di persimpangan hutan berdiri papan petunjuk dengan panah menunjuk ke kiri. Panah kiri inilah arti tanda minus pada perkalian: melawan arah. Bila bilangan positif berjalan ke kanan, bilangan ber-tanda-minus berjalan ke kiri. Sederhana: minus adalah pesan untuk berbalik.',
+        },
+        {
+          objek: 'tanggaPolaMinus', judul: 'Tangga yang Naik Mundur',
+          teks: 'Di papan samping tersusun tangga pola untuk (−2) dikali sesuatu: kali 3 hasilnya −6, kali 2 hasilnya −4, kali 1 hasilnya −2, kali 0 hasilnya 0. Lalu kejutannya: kali −1 hasilnya 2, kali −2 hasilnya 4, kali −3 hasilnya 6! Setiap anak tangga selalu naik dua — karena pengali yang minus membalik arah tangga menjadi naik.',
+        },
+        {
+          objek: 'cerminDuaArah', judul: 'Dua Cermin Pas',
+          teks: 'Kedua cermin di pondok hutan menghadap satu sama lain. Sebuah panah di depan cermin pertama tampak terbalik arahnya; lihat pantulannya di cermin kedua — panah kembali menunjuk arah semula! Dibalik sekali arah berubah, dibalik dua kali arah kembali seperti awal. Itulah rahasia (−2) × (−3) = 6: dua kali balik, hasilnya positif.',
+        },
+        {
+          objek: 'papanAturanKali', judul: 'Papan Aturan Tanda',
+          teks: 'Papan terakhir merangkum semua: plus kali plus sama dengan plus, plus kali minus sama dengan minus, minus kali plus sama dengan minus, dan minus kali minus sama dengan plus. Dengan papan ini, (−2) × (−3) terbaca pasti: dua tanda sama bertemu, hasilnya plus 6.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Balikan Pulang ke Rumah!',
+          teks: 'Membalik arah dua kali ternyata pulang ke arah semula: (−2) × (−3) = 6, positif sejati. Kejutan paling manis bilangan negatif kini menjadi milikmu. Owalah, ternyata begini toh — cukup ingat cermin dua kali, dan semua aturan tanda jelas. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-009 · Aturan Tanda Pembagian — meja sortir kurir dua arah ----- */
+    'p2-009': {
+      tema: 'kurir',
+      npc: { glif: '÷', ucap: ['Tanda sama,', 'satu hasil!'] },
+      stasiun: [
+        {
+          objek: 'mejaSortirPaket', judul: 'Meja Sortir Paket',
+          teks: 'Di pos kurir hutan, paket-paket bertanda plus dan minus menunggu di meja sortir. Bakul kanan untuk paket bertanda plus, bakul kiri untuk paket bertanda minus. Kurir hutan membagi tugas dengan tertib: setiap paket harus masuk bakul yang sesuai tandanya.',
+        },
+        {
+          objek: 'papanSamaBeda', judul: 'Aturan Kurir',
+          teks: 'Di dinding pos tergantung papan aturan kurir: tanda yang sama bertemu, hasilnya plus; tanda yang berbeda bertemu, hasilnya minus. Aturan ini setia untuk kali dan juga bagi. Dua hal yang serumpun selalu berbagi aturan — seperti kurir dan saudaranya si pembagi.',
+        },
+        {
+          objek: 'tigaKardusContoh', judul: 'Tiga Kardus Contoh',
+          teks: 'Tiga kardus contoh bersandar di meja, masing-masing dengan tulisannya. Kardus pertama: (−6) ÷ 2 = −3, tandanya beda jadi minus. Kardus kedua: 6 ÷ (−2) = −3, lagi-lagi beda tanda jadi minus. Kardus ketiga: (−6) ÷ (−2) = 3, tanda sama bertemu, hasilnya plus. Tiga contoh, satu aturan.',
+        },
+        {
+          objek: 'sepedaKurirDua', judul: 'Sepeda Dua Arah',
+          teks: 'Sepeda kurir parkir di depan pos dengan panah dua arah: alamat kanan untuk hasil plus, alamat kiri untuk hasil minus. Membagi (−6) dengan (−2)? Tanda sama, maka sepeda melaju ke kanan menuju 3. Membagi 6 dengan (−2)? Tanda beda, sepeda berbelok ke kiri menuju −3.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Aturan Tanda Terkurung!',
+          teks: 'Pembagian bilangan negatif kini tertunduk rapi: tanda sama melahirkan plus, tanda beda melahirkan minus — sama persis dengan sahabatnya si perkalian. Owalah, ternyata begini toh — cukup satu aturan untuk dua jurus. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-010 · Tantangan Lantai Bawah — menara lift tambang lima misi ----- */
+    'p2-010': {
+      tema: 'lift',
+      npc: { glif: '!', ucap: ['Semua jurus,', 'satu misi!'] },
+      stasiun: [
+        {
+          objek: 'menaraLiftTambang', judul: 'Menara Lift Tambang',
+          teks: 'Di akhir penjuru hutan berdiri menara lift tambang dengan papan lantai lengkap: 4, 3, 2, 1, 0, −1, −2, −3, −4 dari atas ke bawah. Keranjang lift siap bergerak naik-turun. Semua jurus bilangan negatif yang sudah kamu kuasai kini dipanggil untuk satu misi besar.',
+        },
+        {
+          objek: 'papanLimaMisi', judul: 'Papan Lima Misi',
+          teks: 'Papan misi menampilkan lima soal. Misi satu: (−4) + 7 = ? Misi dua: (−10) ÷ (−5) = ? Misi tiga: 6 − (−4) = ? Misi empat: (−3) × (−2) = ? Misi lima: mana yang lebih dingin, −9 atau −2? Lima pintu teka-teki, satu kunci yang sudah kamu pegang semuanya.',
+        },
+        {
+          objek: 'rodaTaliLift', judul: 'Roda Pengangkut Bekerja',
+          teks: 'Roda tali mulai berputar saat jawaban diisi satu per satu: (−4) + 7 = 3, lalu (−10) ÷ (−5) = 2, lalu 6 − (−4) = 10, lalu (−3) × (−2) = 6, dan yang paling dingin adalah −9. Setiap jawaban benar memutar roda sekali lagi — dan lift turun semakin dalam menuju gerbang terakhir.',
+        },
+        {
+          objek: 'gerbangLenteraDalam', judul: 'Gerbang Paling Dalam',
+          teks: 'Lift berhenti di lantai −4, dan di sanalah gerbang batu paling dalam terbuka dengan lentera menyala di atasnya. Lima misi, lima jawaban benar, satu gerbang terbuka. Penjuru Bilangan Negatif resmi kamu taklukkan dari puncak 4 sampai dasar −4.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Juara Lantai Bawah Tanah!',
+          teks: 'Menjumlah, mengurang, mengali, membagi, dan membandingkan bilangan negatif — semuanya kini dalam genggamanmu. Tenar judul pertama Hutan Simbol terlampaui, dan sembilan penjuru lagi menunggu di gerbang pusat. Owalah, ternyata begini toh — berani turun ke bawah nol, semua lantai jadi ramah. Mudah, bukan?',
+        },
+      ],
+    },
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
