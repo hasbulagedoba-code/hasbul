@@ -297,6 +297,286 @@ window.CERITA = (function () {
         },
       ],
     },
+    /* ----- p2-011 · Faktor: Pasangan Pengali — pelataran ubin hutan ----- */
+    'p2-011': {
+      tema: 'pelataran',
+      npc: { glif: '3x4', ucap: ['Pasangan pengali,', 'hasil tetap sama!'] },
+      stasiun: [
+        {
+          objek: 'rakUbinDuaBelas', judul: 'Dua Belas Ubin di Pelataran',
+          teks: 'Di tengah hutan simbol terbentang pelataran batu yang asyik: di tengahnya berdiri rak kayu berisi dua belas ubin persegi berwarna hijau lumut. Tukang pelataran memberi tantangan sederhana: tata seluruh ubin menjadi persegi panjang yang rapi, tanpa ubin bersisa dan tanpa kekurangan. Ada berapa cara menatanya? Nah, pasangan bilangan yang hasil kalinya dua belas itulah yang disebut faktor — pembagi yang membuat pembagian habis, sisanya nol.',
+        },
+        {
+          objek: 'barisSatuDuaBelas', judul: 'Tata Paling Panjang',
+          teks: 'Cara pertama: susun semua ubin menjadi satu barisan panjang membentang dari ujung ke ujung. Satu baris berisi dua belas ubin, dan hitungannya pas: 1 x 12 = 12. Maka 1 dan 12 berpasangan — keduanya faktor dari 12. Tata paling panjang ini juga paling mudah dikenali: semua ubin berdiri sebaris tanpa celah tersisip.',
+        },
+        {
+          objek: 'petakDuaEnam', judul: 'Dua Baris Enam Ubin',
+          teks: 'Cara kedua membelah barisan panjang itu menjadi dua baris sejajar. Setiap baris berisi enam ubin, dan dua kali enam hasilnya tetap dua belas: 2 x 6 = 12. Pasangan baru pun tercatat: 2 dan 6 juga faktor dari 12. Perhatikan, ubin tetap sama dua belas buah; hanya susunannya yang berganti bentuk.',
+        },
+        {
+          objek: 'petakTigaEmpat', judul: 'Tiga Baris Empat Ubin',
+          teks: 'Cara ketiga menata menjadi tiga baris pendek. Setiap baris berisi empat ubin, dan tiga kali empat tetap dua belas: 3 x 4 = 12. Kini pasangan ketiga tersimpan rapi: 3 dan 4. Jadi faktor dari 12 adalah 1, 2, 3, 4, 6, dan 12 — enam bilangan yang semuanya habis membagi 12 tanpa sisa.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pasangan Pengali Lengkap!',
+          teks: 'Faktor ternyata cuma pasangan pengali: 1 dan 12, 2 dan 6, 3 dan 4 — semuanya hasil kalinya tetap 12. Begitu menyusun ubin, daftar faktor terlihat tanpa perlu menghafal. Owalah, ternyata begini toh — faktor itu cuma cara-cara menata bilangan yang sama. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-012 · Faktorisasi Prima — kuari batu hutan ----- */
+    'p2-012': {
+      tema: 'kuari',
+      npc: { glif: '2', ucap: ['Pecah sampai', 'bata prima!'] },
+      stasiun: [
+        {
+          objek: 'batuKuari', judul: 'Batu Besar Bernama 12',
+          teks: 'Di penjuru kuari hutan, batu besar bermata dua belas tergeletak di antara tumpukan kerikil. Tukang batu hutan mengucek tangannya: batu sebesar ini terlalu berat untuk diangkat satu-satu. Maka ia memakai resep lama: pecah batu berulang kali sampai tinggal bata-bata kecil yang tak bisa dipecah lagi. Bata terakhir itu bernama bilangan prima.',
+        },
+        {
+          objek: 'paluPecahDua', judul: 'Palu Pertama Turun',
+          teks: 'Palu pertama turun menghantam di tengah batu 12, dan batu itu retak jadi dua bagian: bagian 2 dan bagian 6. Catat terus: 12 = 2 x 6. Tapi tukang batu mengetuk bagian 6 sekali lagi, karena 6 masih bisa dipecah menjadi 2 dan 3. Palu hanya berhenti ketika tak ada bagian yang bisa dipecah lagi.',
+        },
+        {
+          objek: 'bataPrimaTiga', judul: 'Bata yang Tak Bisa Dipecah',
+          teks: 'Sekarang di lantai kuari tersusun tiga bata kecil: bata 2, bata 2, dan bata 3. Coba dipecah? Bata 2 hanya bisa dibagi 1 dan 2 dirinya, bata 3 hanya bisa dibagi 1 dan 3 dirinya. Tak ada celah lagi — itulah tanda bilangan prima. Bata-bata inilah potongan paling dasar dari batu 12.',
+        },
+        {
+          objek: 'papanSusunPrima', judul: 'Resep Bata Batu 12',
+          teks: 'Papan di gerbang kuari menulis resep pekerjaan hari itu: 12 = 2 x 2 x 3. Tiga bata prima dikalikan kembali, hasilnya persis batu semula. Faktorisasi prima artinya memecah bilangan sampai seluruh potongannya berupa bilangan prima — resep paling dasar yang tak bisa dipecah lebih jauh lagi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Batu Besar Jadi Bata Prima!',
+          teks: 'Batu 12 kini tinggal kenangan: ia lahir kembali sebagai 2 x 2 x 3, tiga bata prima yang kokoh. Setiap bilangan lebih dari satu punya resep bata prima sendiri, dan resep itu tidak berubah. Owalah, ternyata begini toh — faktorisasi prima cuma memecah batu sampai bata terkecilnya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-013 · FPB — stan bungkusan hadiah ----- */
+    'p2-013': {
+      tema: 'bungkusan',
+      npc: { glif: '6', ucap: ['Dibagi rata,', 'tanpa sisa!'] },
+      stasiun: [
+        {
+          objek: 'mejaBungkusDua', judul: 'Dua Tumpukan Hadiah',
+          teks: 'Di stan bungkusan hutan, dua tumpukan hadiah menunggu: dua belas pensil warna dan delapan belas permen lembut. Pemilik stan ingin membungkusnya menjadi beberapa bungkusan yang isinya sama persis — semua bungkusan berisi pensil sama banyak dan permen sama banyak, tanpa sisa. Berapa banyak bungkusan yang bisa dibuat? Detektif pembagi dipanggil.',
+        },
+        {
+          objek: 'papanPembagiKembar', judul: 'Pembagi yang Berkenalan',
+          teks: 'Papan bantuan menuliskan pembagi masing-masing tumpukan. Pembagi 12: 1, 2, 3, 4, 6, 12. Pembagi 18: 1, 2, 3, 6, 9, 18. Lalu digarisbawahi yang muncul di kedua daftar: 1, 2, 3, dan 6. Empat bilangan ini adalah pembagi bersama — yang membuat dua tumpukan bisa dibagi rata dengan jumlah bungkusan yang sama.',
+        },
+        {
+          objek: 'bungkusanEnam', judul: 'Enam Bungkusan Terisi Penuh',
+          teks: 'Maka dibuatlah enam bungkusan kertas warna. Setiap bungkusan menerima dua pensil dari tumpukan pertama, karena 12 : 6 = 2, dan tiga permen dari tumpukan kedua, karena 18 : 6 = 3. Enam bungkusan terisi penuh, tak ada pensil atau permen yang menganggur. Semua penerima bungkusan berhak isinya sama persis.',
+        },
+        {
+          objek: 'papanFPBEnam', judul: 'Terbesar di Antara yang Sama',
+          teks: 'Sebenarnya bisa juga memakai tiga bungkusan atau dua bungkusan, tetapi bungkusannya justru sedikit. Pembagi bersama terbesar dari 12 dan 18 adalah 6 — inilah FPB, faktor persekutuan terbesar. Dengan FPB, pembagian jadi paling banyak bungkusannya sekaligus tetap rata. Itulah cara pembagi terbesar bekerja.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Bagi Rata Tanpa Sisa!',
+          teks: 'FPB 12 dan 18 ternyata cuma jawaban dari satu pertanyaan: berapa bungkusan terbanyak agar semua terisi sama rata? Jawabannya 6, dan tiap bungkusan berisi 2 pensil plus 3 permen. Owalah, ternyata begini toh — FPB itu seni membagi rata yang paling jujur. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-014 · KPK — pesta lampion malam hutan ----- */
+    'p2-014': {
+      tema: 'pestaLampu',
+      npc: { glif: '12', ucap: ['Nyalanya', 'bertemu!'] },
+      stasiun: [
+        {
+          objek: 'duaLampionPesta', judul: 'Dua Lampion Bergaya',
+          teks: 'Malam pesta lampion di hutan simbol. Lampion biru menyala berulang setiap empat detik, sedangkan lampion kuning menyala setiap enam detik. Penonton berbisik: kapan kedua lampion menyala bersama pada hitungan yang sama? Mari kita buktikan dengan garis detik, bukan dengan tebakan.',
+        },
+        {
+          objek: 'jalurDetikPesta', judul: 'Garis Detik Menyala',
+          teks: 'Di tanah pesta terbentang jalur detik bertanda 0 sampai 12. Lampion biru menyalakan cahaya di detik 4, lalu 8, lalu 12 — melompat empat demi empat. Lampion kuning menyala di detik 6, lalu 12 — melompat enam demi enam. Kedua jejak cahaya itu berjalan sendiri-sendiri, sampai pada suatu titik mereka berpapasan.',
+        },
+        {
+          objek: 'titikBertemuDuaBelas', judul: 'Nyala Bersama Pertama',
+          teks: 'Di detik 12, lampion biru dan kuning menyala pada saat yang sama — kerlap-kerlipnya bercampur jadi satu cahaya emas. Itulah kelipatan bersama pertama dari 4 dan 6. Bukan detik 8, karena di detik itu hanya biru yang menyala; dan bukan detik 6, karena hanya kuning yang bersinar. Pertemuan pertama mereka memang di 12.',
+        },
+        {
+          objek: 'papanKeluargaKelipatan', judul: 'Keluarga Kelipatan',
+          teks: 'Papan pesta merangkum keluarga kelipatannya. Kelipatan 4: 4, 8, 12, 16, 20, 24. Kelipatan 6: 6, 12, 18, 24. Yang muncul di kedua keluarga: 12, 24, dan terus berlanjut. Yang terkecil di antaranya bernama KPK — kelipatan persekutuan terkecil. Maka KPK 4 dan 6 adalah 12, waktu nyala bersama pertama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Nyala Bersama Ditemukan!',
+          teks: 'KPK ternyata cuma mencari perjumpaan pertama dua lompatan: empat demi empat dan enam demi enam, bersua di detik 12. Dua lampu itu akan menyala bersama lagi di 24, 36, dan seterusnya — tetapi 12 selalu yang pertama. Owalah, ternyata begini toh — KPK itu titik perjumpaan kelipatan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-015 · Jurus Tabel Prima — paviliun buku tua ----- */
+    'p2-015': {
+      tema: 'bukuTua',
+      npc: { glif: '1', ucap: ['Turunkan,', 'bagi lagi!'] },
+      stasiun: [
+        {
+          objek: 'papanTanggaBagi', judul: 'Tangga Pembagian',
+          teks: 'Di paviliun buku tua hutan tergantung papan bergambar tangga dengan angka 24 di puncaknya. Tukang hitung hutan menyebutnya tabel prima: cara menurunkan bilangan anak tangga demi anak tangga sambil membagi. Aturannya cuma satu: bagi selalu dengan prima terkecil yang bisa, turunkan hasilnya, lalu bagi lagi.',
+        },
+        {
+          objek: 'anakTurunDua', judul: 'Turunkan, Lalu Bagi Dua',
+          teks: 'Anak tangga pertama: 24 dibagi 2 sama dengan 12, dan angka 12 diturunkan ke bawah di samping tanda pemisah. Anak tangga kedua: 12 dibagi 2 lagi, hasilnya 6, turun lagi. Tukang hitung tidak menebak-nebak; ia membagi dengan 2 berulang kali karena 2 adalah prima terkecil yang masih habis membagi.',
+        },
+        {
+          objek: 'tanggaSampaiSatu', judul: 'Berhenti di Satu',
+          teks: 'Tangga berlanjut: 6 dibagi 2 sama dengan 3, lalu 3 tak bisa dibagi 2 lagi. Maka tukang hitung memindahkan jurusnya: 3 dibagi 3 sama dengan 1. Di angka 1 tangga berhenti — tak ada bilangan yang lagi-lagi bisa membaginya. Semua pembagi yang dipakai tergantung rapi di sisi tangga: 2, 2, 2, dan 3.',
+        },
+        {
+          objek: 'papanBacaSisiKiri', judul: 'Baca Sisi Kiri Tangga',
+          teks: 'Papan terakhir mengajari cara membacanya: kalikan seluruh pembagi di sisi kiri tangga. Hasilnya 2 x 2 x 2 x 3 = 24, persis bilangan awal. Tabel prima ini rapi karena tak ada faktor yang terlupa — semua bata prima muncul sesuai urutan, dari yang terkecil sampai tangga habis di 1.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tangga Rapi Tanpa Lupa!',
+          teks: 'Faktorisasi 24 ternyata sekadar menuruni tangga: bagi dengan 2 berulang-ulang, lalu 3, berhenti di 1. Sisi kiri tangga langsung memberi 2 x 2 x 2 x 3 tanpa satu bata pun hilang. Owalah, ternyata begini toh — tabel prima cuma tangga turun yang tertib. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-016 · FPB dari Faktorisasi — pondok kartu prima ----- */
+    'p2-016': {
+      tema: 'pondokKartu',
+      npc: { glif: '3', ucap: ['Ambil yang', 'sama saja!'] },
+      stasiun: [
+        {
+          objek: 'duaPetiKartuPrima', judul: 'Dua Peti Kartu Prima',
+          teks: 'Di pondok kartu hutan tersimpan dua peti berisi kartu prima. Peti pertama adalah hasil faktorisasi 12: kartu 2, kartu 2, dan kartu 3. Peti kedua adalah faktorisasi 18: kartu 2, kartu 3, dan kartu 3. Hari ini pondok mengajarkan jurus cepat mencari FPB tanpa mendaftar semua pembagi satu per satu.',
+        },
+        {
+          objek: 'kartuSamaLingkar', judul: 'Kartu yang Berduaan',
+          teks: 'Letakkan kartu kedua peti berdampingan, lalu lingkari kartu yang punya pasangan di peti lawannya. Kartu 2 dari peti 12 berpasangan dengan kartu 2 milik peti 18. Kartu 3 juga menemukan pasangannya di peti seberang. Yang dilingkari itulah faktor persekutuannya: prima-prima yang dimiliki kedua bilangan sekaligus.',
+        },
+        {
+          objek: 'ambilPangkatKecil', judul: 'Ambil yang Terkecil',
+          teks: 'Aturan pondok: dari setiap pasangan, ambil sebanyak yang dimiliki oleh peti yang lebih sedikit. Prima 2 hanya diambil satu kali, prima 3 juga hanya satu kali. Kalikan yang terambil: 2 x 3 = 6. Maka FPB 12 dan 18 adalah 6, ditemukan cuma dalam tiga langkah singkat.',
+        },
+        {
+          objek: 'papanDuaJalanSatuJawab', judul: 'Dua Jalan, Satu Jawaban',
+          teks: 'Papan pondok menyandingkan dua jalan menuju jawaban yang sama. Kemarin, daftar pembagi 12 dan 18 memunculkan angka terbesar bersama: 6. Hari ini, kartu prima berpasangan juga bermuara di 2 x 3 = 6. Dua jalan berbeda, satu jawaban sama persis — tanda bahwa FPB memang milik kedua bilangan itu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kartu Sama Menuntun!',
+          teks: 'Mencari FPB lewat faktorisasi ternyata cuma menjodohkan kartu prima yang sama lalu mengalikannya: 2 dan 3 berkenalan jadi 6. Kalau bilangannya besar dan daftar pembaginya panjang, jalan kartu prima ini jauh lebih cepat. Owalah, ternyata begini toh — FPB itu kartu sama yang dikalikan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-017 · KPK dari Faktorisasi — galeri barisan prima ----- */
+    'p2-017': {
+      tema: 'galeri',
+      npc: { glif: '36', ucap: ['Semua prima,', 'pangkat atas!'] },
+      stasiun: [
+        {
+          objek: 'galeriDuaBaris', judul: 'Galeri Dua Baris Prima',
+          teks: 'Di galeri hutan bergantung dua papan barisan. Papan pertama memajang faktorisasi 12: 2 x 2 x 3. Papan kedua memajang faktorisasi 18: 2 x 3 x 3. Pengunjung galeri sedang mencari sesuatu yang berbeda dari FPB: bukan yang sama saja, melainkan semua prima dengan jumlah terbanyaknya.',
+        },
+        {
+          objek: 'lingkarPangkatAtas', judul: 'Lingkari yang Terbanyak',
+          teks: 'Ambil pena, lalu lingkari setiap prima dengan jumlah terbanyak di antara kedua papan. Prima 2 muncul dua kali di papan 12 dan satu kali di papan 18 — maka lingkari dua kali: 2 x 2. Prima 3 muncul satu kali di papan 12 dan dua kali di papan 18 — lingkari dua kali: 3 x 3. Tak ada satu pun prima yang tertinggal di galeri.',
+        },
+        {
+          objek: 'kaliSemuaGaleri', judul: 'Kalikan Semua yang Dilingkari',
+          teks: 'Sekarang kalikan seluruh lingkaran: 2 x 2 x 3 x 3. Hitung pelannya: 2 x 2 sama dengan 4, 3 x 3 sama dengan 9, lalu 4 x 9 = 36. Maka KPK 12 dan 18 adalah 36 — bilangan yang mampu menampung seluruh kelipatan prima dari kedua papan galeri.',
+        },
+        {
+          objek: 'papanSepakatTigaEnam', judul: 'Galeri Sepakat: 36',
+          teks: 'Galeri memeriksa jawabannya dengan daftar kelipatan. Kelipatan 12: 12, 24, 36, 48. Kelipatan 18: 18, 36, 54. Yang berpapasan pertama memang 36 — sama persis dengan hasil lingkaran tadi. Faktorisasi dengan jumlah terbanyak memang setia menunjuk KPK.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semua Prima Ikut Pulang!',
+          teks: 'KPK lewat faktorisasi ternyata cuma satu kebiasaan: ambil semua prima, pilih yang terbanyak, kalikan semuanya — 2 x 2 x 3 x 3 = 36. Berbeda dengan FPB yang hanya membawa kartu sama sebanyak paling sedikit, KPK membawa semua kartu sebanyak paling banyak. Owalah, ternyata begini toh — dua jurus bersaudara itu tinggal soal ambil sedikit atau ambil semua. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-018 · Menyederhanakan Pecahan — tanur roti hutan ----- */
+    'p2-018': {
+      tema: 'tanur',
+      npc: { glif: '2/3', ucap: ['Bagi FPB,', 'jadi rapi!'] },
+      stasiun: [
+        {
+          objek: 'papanDuaBelasPerDelapanBelas', judul: 'Dua Belas dari Delapan Belas',
+          teks: 'Di tanur roti hutan, loyang besar terbagi delapan belas kotak kecil, dan dua belas kotak di antaranya terisi roti cokelat. Papan kios menulis porsi hari ini: 12/18. Angkanya terlihat panjang, dan pembeli yakin ada cara menulisnya lebih sederhana tanpa mengubah banyaknya roti sedikit pun.',
+        },
+        {
+          objek: 'pisauBagiEnam', judul: 'Pisau FPB Enam',
+          teks: 'Pemanggang memakai pisau FPB. Pembagi bersama terbesar 12 dan 18 adalah 6, maka seluruh loyang dikelompokkan per enam kotak. Bagian atas: 12 : 6 = 2. Bagian bawah: 18 : 6 = 3. Pembilang dan penyebut dibagi dengan angka yang sama — karena itulah nilainya tidak bergeser sedikit pun.',
+        },
+        {
+          objek: 'kartuDuaPerTiga', judul: 'Wajah Baru yang Senilai',
+          teks: 'Di kartu harga baru tertulis 2/3. Lihat loyangnya: dua dari tiga kelompok besar terisi — banyaknya roti persis sama dengan sebelumnya, hanya penandaannya yang lebih ringkas. 12/18 dan 2/3 adalah dua nama untuk porsi yang sama, seperti nama panggilan dan nama lengkap satu orang yang sama.',
+        },
+        {
+          objek: 'papanRapiTuntas', judul: 'Rapi Sampai Selesai',
+          teks: 'Papan kios menutup pelajarannya: pecahan masih bisa disederhanakan bila pembilang dan penyebutnya punya faktor bersama. Coba periksa 2/3: faktor 2 hanyalah 1 dan 2, faktor 3 hanyalah 1 dan 3 — tak ada kesamaan selain 1. Maka 2/3 sudah dalam bentuk paling sederhana, dan di situ pena berhenti.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pecahan Rapi Terbaca!',
+          teks: 'Menyederhanakan pecahan ternyata cuma satu gerakan: bagi atas dan bawah dengan FPB-nya — 12/18 dibagi 6 menjadi 2/3. Porsinya tidak berkurang sedikit pun, tulisannya saja yang merapikan diri. Owalah, ternyata begini toh — pecahan rapi itu pecahan yang sudah dibagi FPB. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-019 · Samakan Penyebut — titian batu dua pulau ----- */
+    'p2-019': {
+      tema: 'titianBatu',
+      npc: { glif: '12', ucap: ['Penyebut sama,', 'tenang!'] },
+      stasiun: [
+        {
+          objek: 'pulauSeperempat', judul: 'Pulau Seperempat',
+          teks: 'Di danau hutan simbol terdapat dua pulau kecil yang dihubungkan titian batu. Pulau pertama terbagi empat kepingan batu, dan satu kepingan menyala keemasan — itulah 1/4. Kalau cahaya itu ingin digabung dengan cahaya pulau seberang, kepingannya harus berukuran sama dulu.',
+        },
+        {
+          objek: 'pulauSeperenam', judul: 'Pulau Seperenam',
+          teks: 'Pulau kedua terbagi enam kepingan batu dengan satu kepingan menyala pula — itulah 1/6. Masalahnya terlihat jelas: kepingan pulau pertama berukuran seperempat, kepingan pulau kedua berukuran seperenam. Beda ukuran seperti batu besar dan batu kecil, dan penyebut yang berbeda tak boleh langsung dijumlahkan.',
+        },
+        {
+          objek: 'titianDuaBelas', judul: 'Titian Dua Belas Kepingan',
+          teks: 'Maka dibangun titian batu dengan dua belas kepingan seragam — dua belas adalah KPK dari 4 dan 6. Di atas titian, 1/4 membesar jadi 3/12 karena satu kepingan seperempat sama luasnya dengan tiga kepingan perduabelas. Demikian pula 1/6 menjadi 2/12. Kini kedua pecahan bicara dalam bahasa kepingan yang sama.',
+        },
+        {
+          objek: 'papanJumlahLimaPerDuaBelas', judul: 'Menyeberang, Menambah Isi',
+          teks: 'Baru setelah penyebutnya sama, penjumlahan berjalan tenang: 3/12 + 2/12 = 5/12. Pembilang yang dijumlah, penyebut tetap bertahan di 12. Hasilnya 5/12 — luas gabungan kedua pulau yang menyala. Tanpa menyamakan penyebut dulu, jawaban akan meleset; dengan KPK, semuanya berjalan pelan dan benar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Pulau Terhubung!',
+          teks: 'Menjumlah pecahan beda penyebut ternyata cuma membangun titian: cari KPK penyebut, ubah 1/4 jadi 3/12 dan 1/6 jadi 2/12, lalu jumlahkan menjadi 5/12. Setelah bahasanya sama, hitungannya semudah menyeberang batu yang rata. Owalah, ternyata begini toh — KPK itu jembatan para penyebut. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-020 · Tantangan Detektif Faktor — kantor pohon raksasa ----- */
+    'p2-020': {
+      tema: 'kantorPohon',
+      npc: { glif: '?', ucap: ['Lima kasus,', 'satu lup!'] },
+      stasiun: [
+        {
+          objek: 'mejaKasusFaktor', judul: 'Kantor Detektif Faktor',
+          teks: 'Di pangkal pohon raksasa hutan simbol terbuka kantor detektif faktor, lengkap dengan meja penuh berkas dan lampu meja menyala. Lima berkas kasus menunggu di atas meja, dan semuanya soal faktor, FPB, dan KPK. Detektif muda — itu kamu hari ini — dipersilakan duduk dan membuka berkas pertama.',
+        },
+        {
+          objek: 'papanLimaKasus', judul: 'Papan Lima Kasus',
+          teks: 'Papan kasus menuliskan semuanya. Kasus satu: sebutkan faktor 15. Kasus dua: faktorisasi prima 20. Kasus tiga: FPB dari 8 dan 12. Kasus empat: KPK dari 3 dan 5. Kasus lima: sederhanakan 10/15. Lima kasus, lima jurus yang sudah kamu latih sepanjang penjuru ini.',
+        },
+        {
+          objek: 'lupPemeriksa', judul: 'Lup Diperiksa Satu-Satu',
+          teks: 'Lup ditembakkan ke tiap berkas. Kasus satu: faktor 15 adalah 1, 3, 5, 15. Kasus dua: 20 = 2 x 2 x 5. Kasus tiga: FPB 8 dan 12 adalah 4. Kasus empat: KPK 3 dan 5 adalah 15, karena keduanya tak berbagi prima. Kasus lima: 10/15 dibagi 5 menjadi 2/3. Lima kasus, lima centang hijau.',
+        },
+        {
+          objek: 'gerbangKoprima', judul: 'Gerbang Koprima',
+          teks: 'Berkas terakhir membuka gerbang koprima. Dua bilangan disebut koprima bila faktor bersamanya hanya 1 — contohnya 8 dan 9: yang satu berisi bata 2 semua, yang satu berisi bata 3 semua. Pasangan koprima juga yang membuat 3 dan 5 langsung ber-KPK 15. Mengenali koprima mempercepat banyak hitungan di penjuru ini.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Detektif Faktor Bersertifikat!',
+          teks: 'Faktor, faktorisasi prima, FPB, KPK, penyederhanaan pecahan, sampai koprima — seluruh berkas penjuru Faktor tertutup rapi. Kembalilah ke gerbang pusat hutan: delapan penjuru lain masih menyimpan kasus yang menanti detektif. Owalah, ternyata begini toh — faktor dan keluarganya cuma kasus yang selesai dengan memecah bilangan. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
