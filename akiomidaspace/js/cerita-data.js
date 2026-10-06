@@ -1432,7 +1432,7 @@ window.CERITA = (function () {
           teks: 'Bagikan bergantian satu-satu: satu untuk piring kiri, satu untuk piring kanan. Setelah lima kali giliran, nampan kosong dan tiap piring berisi 5 kelereng.',
         },
         {
-          objek: 'piringLima', judul: 'Sama Banyak, Sama Adil',
+          objek: 'piringKembar', judul: 'Sama Banyak, Sama Adil',
           teks: 'Kedua piring kini sama isi: lima dan lima. Maka 10 : 2 = 5. Pembagian rata artinya tiap penerima mendapat bagian yang sama banyak — itulah keadilan yang paling sederhana.',
         },
         {
@@ -1526,6 +1526,342 @@ window.CERITA = (function () {
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Pasangan Seumur Hidup!',
           teks: 'Jadi kali dan bagi memang pasangan setia: 6 x 4 = 24 selalu berbalik menjadi 24 : 6 = 4. Bila ada angka hilang, cukup panggil pasangannya. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-055 · Setengah Itu 1/2 — siang dapur keluarga ----- */
+    'p1-055': {
+      tema: 'dapur',
+      npc: { glif: 'f', ucap: ['Setengah itu', 'dua sama besar!'] },
+      stasiun: [
+        {
+          objek: 'kueDapur', judul: 'Satu Kue di Talenan',
+          teks: 'Dapur siang ini harum; di talenan tergeletak satu kue bulat utuh. Ibu hendak membagikannya untuk dua orang, dengan syarat satu: kedua orang harus mendapat bagian sama besar. Perhatikan kuenya — masih utuh, dan belum boleh dimakan siapa pun.',
+        },
+        {
+          objek: 'garisTengah', judul: 'Satu Garis Lewat Tengah',
+          teks: 'Ibu menaruh pisau dan menarik satu garis lurus yang lewat pusat kue. Satu tebasan membuat kue terbagi menjadi dua bagian yang sama besar. Lewat pusat itulah kuncinya: garis yang meleset dari tengah membuat satu sisi besar dan satu sisi kecil.',
+        },
+        {
+          objek: 'piringSetengah', judul: 'Tiap Piring Satu Bagian',
+          teks: 'Kini tiap piring memuat satu bagian. Bagian itu disebut setengah, ditulis 1/2 — satu potongan dari dua potongan sama besar. Dua orang, dua bagian, tak ada yang lebih dan tak ada yang kurang. Adil itulah rasa setengah yang benar.',
+        },
+        {
+          objek: 'potongTimpang', judul: 'Bila Tidak Sama Besar',
+          teks: 'Lihat peringatan di piring sebelah: bila garis potongnya meleset, bagian jadi timpang — satu besar, satu kecil. Yang kecil pasti keberatan, dan potongan seperti itu belum boleh bernama setengah. Kata sama besar memang wajib ada di setiap pecahan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Itu Setengah!',
+          teks: 'Jadi setengah itu satu dari dua bagian yang sama besar: satu kue, satu garis lewat pusat, dua piring rata. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-056 · Seperempat Itu 1/4 — sore pesta ulang tahun ----- */
+    'p1-056': {
+      tema: 'ultah',
+      npc: { glif: 'e', ucap: ['Empat potongan', 'sama besar!'] },
+      stasiun: [
+        {
+          objek: 'mejaUltah', judul: 'Kue untuk Empat Tamu',
+          teks: 'Pesta ulang tahun sore ini menyambut empat tamu, dan kuenya masih utuh di tengah meja. Satu kue harus dibagikan kepada empat orang sampai tiap tamu menerima bagian sama besar. Jawabnya ada pada dua garis potong.',
+        },
+        {
+          objek: 'potongSilang', judul: 'Dua Garis Saling Menyilang',
+          teks: 'Satu garis lurus lewat pusat membagi kue menjadi dua. Lalu satu garis lagi ditarik menyilang garis pertama di pusat: kini kue terbagi empat potongan yang sama besar. Dua garis yang bersilang di tengah adalah jurus membagi empat.',
+        },
+        {
+          objek: 'piringSeperempat', judul: 'Satu Potongan Satu Tamu',
+          teks: 'Tiap tamu menerima satu potongan dari empat potongan sama besar. Namanya seperempat, ditulis 1/4. Angka 1 menceritakan satu potongan di piring; angka 4 menceritakan kue yang dibagi empat.',
+        },
+        {
+          objek: 'duaJadiSetengah', judul: 'Dua Potongan Bersaudara',
+          teks: 'Bila dua potongan seperempat diletakkan berdampingan, keduanya menyatu membentuk setengah kue. Maka 2/4 sama dengan 1/2 — dua nama untuk ukuran yang sama. Pecahan memang suka berganti nama, tetapi ukurannya tidak pernah bohong.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Empat Sama Besar!',
+          teks: 'Jadi seperempat itu satu dari empat bagian sama besar: dua garis bersilang di pusat, empat potongan rapi, satu untuk tiap tamu. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-057 · Pembilang & Penyebut — malam ruang buku resep ----- */
+    'p1-057': {
+      tema: 'resep',
+      npc: { glif: 'p', ucap: ['Atas diambil,', 'bawah dibagi!'] },
+      stasiun: [
+        {
+          objek: 'bukuResep', judul: 'Resep Kue di Halaman Lama',
+          teks: 'Di rak resep terbuka sebuah buku tua; halamannya menggambar kue yang dibagi empat sama besar, dengan tiga potongan diletakkan di piring. Penulis resep menandainya 3/4. Dua angka itu punya nama dan tugas masing-masing.',
+        },
+        {
+          objek: 'penyebutBawah', judul: 'Penyebut: Angka Bawah',
+          teks: 'Angka bawah pada 3/4 bernama penyebut. Tugasnya menjaga jumlah potongan: kue dibagi empat sama besar. Bila penyebutnya berubah, seluruh potongan ikut berubah — karena itu ia duduk di bawah, menopang semuanya.',
+        },
+        {
+          objek: 'pembilangAtas', judul: 'Pembilang: Angka Atas',
+          teks: 'Angka atas pada 3/4 bernama pembilang. Ia menunjuk bagian yang diambil: tiga potongan diletakkan di piring. Pembilang menghitung yang dibawa pergi, dan satu potongan sisanya tetap tinggal di talenan.',
+        },
+        {
+          objek: 'papanTigaEmpat', judul: 'Cara Membacanya',
+          teks: '3/4 dibaca tiga per empat. Begitu juga 1/2 dibaca satu per dua — orang biasa menyebutnya setengah — dan 1/4 dibaca seperempat. Begitu nama pembilang dan penyebut sudah hafal, semua tulisan pecahan langsung bisa dibaca nyaring.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Nama Dua Angka!',
+          teks: 'Jadi setiap pecahan punya dua penjaga: penyebut di bawah menghitung jumlah potongan, pembilang di atas menunjuk yang diambil. Tiga per empat pun kini terbaca jelas. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-058 · Keluarga Pecahan 1/n — pagi meja teh roti ----- */
+    'p1-058': {
+      tema: 'teh',
+      npc: { glif: '/', ucap: ['Makin dibagi,', 'makin kecil!'] },
+      stasiun: [
+        {
+          objek: 'rotiTiga', judul: 'Roti bagi Tiga',
+          teks: 'Meja teh pagi ini menyajikan roti dan tiga piring. Satu roti dipotong tiga sama besar, tiap piring menerima satu potongan: satu per tiga, ditulis 1/3. Tiga potongan itu bila digabung kembali menjadi roti utuh.',
+        },
+        {
+          objek: 'rotiLima', judul: 'Roti bagi Lima',
+          teks: 'Roti kedua dipotong lebih banyak: lima potongan sama besar untuk lima piring. Tiap potongan kini bernilai 1/5. Perhatikan ukurannya — potongan 1/5 lebih ramping daripada 1/3, karena roti yang sama harus menanggung lebih banyak pembagian.',
+        },
+        {
+          objek: 'rotiDelapan', judul: 'Roti bagi Delapan',
+          teks: 'Roti ketiga paling rajin dibagi: delapan potongan sama besar, dan satu potongannya, 1/8, menjadi yang paling kecil di meja. Makin ramai penerima bagiannya, makin ramping tiap potongan — itulah hukum meja teh.',
+        },
+        {
+          objek: 'papanKeluarga', judul: 'Papan Keluarga Satu-Per',
+          teks: 'Papan dinding menuliskan keluarga besar itu berderet: 1/2, 1/3, 1/4, 1/5, 1/8. Semuanya sekeluarga — masing-masing satu potongan dari kue yang dibagi sama besar, hanya jumlah bagiannya yang berbeda. Makin ke bawah, pembaginya makin banyak dan potongannya makin kecil.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Makin Dibagi Makin Kecil!',
+          teks: 'Jadi keluarga pecahan satu-per itu saudara serupa: 1/2, 1/3, 1/4, dan seterusnya — makin banyak bagiannya, makin ramping potongannya. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-059 · Pecahan Senilai — siang meja kue kembar ----- */
+    'p1-059': {
+      tema: 'kembar',
+      npc: { glif: 'E', ucap: ['Rupa beda,', 'ukuran sama!'] },
+      stasiun: [
+        {
+          objek: 'kueKembar', judul: 'Dua Kue Kembar',
+          teks: 'Di meja berdampingan terdapat dua kue kembar: sama bulat, sama besar, dari loyang yang sama. Kue A akan dibagi dua; kue B akan dibagi empat. Pertanyaannya: bisakah bagian keduanya sama besar walau potongannya berbeda jumlah?',
+        },
+        {
+          objek: 'potongBeda', judul: 'Dua Cara Memotong',
+          teks: 'Kue A dipotong lewat pusat dan satu potongannya diambil: itulah 1/2. Kue B dipotong dua garis bersilang dan dua potongannya diambil: itulah 2/4. Sekarang kedua ambilan ditaruh di piring bersebelahan.',
+        },
+        {
+          objek: 'bandingPiring', judul: 'Diletakkan Berdampingan',
+          teks: 'Piring keduanya disandingkan, dan ukurannya sama persis! Satu dari dua ternyata sama besar dengan dua dari empat. Maka 1/2 = 2/4: rupa potongannya beda, ukurannya bersaudara. Pecahan seperti ini bernama pecahan senilai.',
+        },
+        {
+          objek: 'kartuSenilai', judul: 'Keluarga Besar Setengah',
+          teks: 'Papan di dinding menuliskan keluarganya yang panjang: 1/2 = 2/4 = 3/6 = 4/8. Tiga dari enam, empat dari delapan — makin banyak dipotong, makin banyak pula yang harus diambil, dan ukurannya tetap setengah. Seperti dipanggil Kak, Bang, atau Abang: namanya beda, orangnya tetap sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Ukuran Tak Bohong!',
+          teks: 'Jadi pecahan senilai itu ukuran sama dengan rupa berbeda: 1/2, 2/4, 3/6 — sepanjang potongannya sama besar, nilainya tetap setengah. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-060 · Membandingkan Pecahan — siang ladang kakao ----- */
+    'p1-060': {
+      tema: 'cokelat',
+      npc: { glif: 'c', ucap: ['Awas jebak', 'angka besar!'] },
+      stasiun: [
+        {
+          objek: 'batangDua', judul: 'Batang Cokelat bagi Dua',
+          teks: 'Ladang kakao ini menyimpan dua batang cokelat kembar. Batang pertama ditekuk di tengah lalu dipatahkan: jadilah dua potongan sama besar, tiap potongan bernilai 1/2. Potongannya gemuk dan mengenyangkan.',
+        },
+        {
+          objek: 'batangDelapan', judul: 'Batang Cokelat bagi Delapan',
+          teks: 'Batang kedua dipotong lebih rajin: delapan potongan sama besar, tiap potongan bernilai 1/8. Potongannya ramping-ramping, nyaris seperti keping kecil.',
+        },
+        {
+          objek: 'jebakTerbongkar', judul: 'Jebak Angka Terbongkar',
+          teks: 'Di sini jebaknya menunggu: angka 8 tampak lebih besar daripada angka 2, padahal potongan 1/2 justru lebih banyak cokelatnya daripada 1/8. Penyebut yang besar artinya kue dibagi banyak-banyak, jadi tiap potongan ikut mengecil.',
+        },
+        {
+          objek: 'papanPeringatan', judul: 'Papan Peringatan Ladang',
+          teks: 'Papan peringatan menuliskan urutannya dengan jelas: 1/2 > 1/4 > 1/8. Untuk potongan satu-per seperti ini, makin kecil penyebutnya, makin besar potongannya. Ingat baik-baik, supaya tidak tertukar saat memilih bagian.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jebak Terlewati!',
+          teks: 'Jadi membandingkan pecahan satu-per itu mudah: penyebut kecil berarti potongan besar — 1/2 selalu menang atas 1/8. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-061 · Menjumlah Pecahan Senama — senja nampan kue bulat ----- */
+    'p1-061': {
+      tema: 'nampan',
+      npc: { glif: 'a', ucap: ['Senama boleh', 'digabung!'] },
+      stasiun: [
+        {
+          objek: 'kueEmpatNampan', judul: 'Kue Bulat Dibagi Empat',
+          teks: 'Nampan senja ini menyajikan satu kue bulat yang telah dibagi empat potongan sama besar. Di sisi nampan berdiri dua piring kosong yang menunggu diisi. Potongan-potongan itu sejenis: semuanya seperempat.',
+        },
+        {
+          objek: 'ambilSatuDua', judul: 'Piring Kiri dan Piring Kanan',
+          teks: 'Piring kiri menerima satu potongan: isinya 1/4. Piring kanan menerima dua potongan: isinya 2/4. Sekarang keduanya akan digabung menjadi satu piring sajian.',
+        },
+        {
+          objek: 'gabungTigaEmpat', judul: 'Digabung: Tiga Per Empat',
+          teks: 'Potongan-potongan itu dipindahkan ke satu piring: satu potong bertemu dua potong menjadi tiga potong. Maka 1/4 + 2/4 = 3/4. Di nampan tinggal satu potongan sendirian, karena empat potongan sudah tiga yang pergi.',
+        },
+        {
+          objek: 'papanAturanSenama', judul: 'Aturan Nampan',
+          teks: 'Papan catatan toko menuliskan aturannya: bila penyebutnya sama, penyebut tetap duduk di tempat dan pembilangnya yang dijumlahkan. Tetapi potongan yang beda ukuran tidak boleh digabung begitu saja — samakan dulu ukurannya, baru boleh bertemu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Gabung Senama!',
+          teks: 'Jadi menjumlah pecahan senama itu seperti menggabung potongan sejenis: penyebut tetap, pembilang bertambah — 1/4 + 2/4 = 3/4. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-062 · Kurang Pecahan Senama — pagi kantin sekolah ----- */
+    'p1-062': {
+      tema: 'kantin',
+      npc: { glif: 'm', ucap: ['Ambil satu,', 'sisanya jelas!'] },
+      stasiun: [
+        {
+          objek: 'kueTigaEmpat', judul: 'Piring Berisi Tiga Per Empat',
+          teks: 'Kantin pagi ini baru membuka; di piring meja depan berbaris tiga potongan kue, sementara kuenya semula dibagi empat sama besar. Isi piring itu ditulis 3/4 — tiga dari empat potongan.',
+        },
+        {
+          objek: 'makanSatuPotong', judul: 'Satu Potongan Dimakan',
+          teks: 'Seorang pembeli membeli satu potongan untuk sarapan. Dari tiga potongan di piring, satu pergi meninggalkan tempat kosong kecil. Yang tersisa kini tinggal dua potongan.',
+        },
+        {
+          objek: 'sisaDuaEmpat', judul: 'Sisa Dua Per Empat',
+          teks: 'Kalimat kantinnya begini: 3/4 - 1/4 = 2/4. Tiga dikurangi satu tinggal dua, dan penyebutnya tetap empat. Menariknya, 2/4 itu sama besar dengan 1/2 — persis setengah kue, temuan pecahan senilai yang lalu.',
+        },
+        {
+          objek: 'papanKantin', judul: 'Papan Catatan Kantin',
+          teks: 'Papan kantin menuliskan aturan pengurangannya: bila penyebutnya sama, penyebut tetap dan pembilang yang dikurangkan. Hitung potongan yang pergi, maka sisanya otomatis terbaca di piring.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kurang Senama!',
+          teks: 'Jadi pengurangan pecahan senama itu santai: penyebut tetap, pembilang dikurang — 3/4 - 1/4 = 2/4, dan sisanya terbaca jelas di piring. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-063 · Pecahan Campuran — malam meja saji keluarga ----- */
+    'p1-063': {
+      tema: 'saji',
+      npc: { glif: 'q', ucap: ['Utuh plus', 'setengah!'] },
+      stasiun: [
+        {
+          objek: 'piringUtuh', judul: 'Piring Pertama: Satu Utuh',
+          teks: 'Meja saji malam ini menyiapkan kue untuk dua piring. Piring pertama menerima satu kue utuh tanpa kekurangan sedikit pun. Utuh itu artinya satu penuh, ditulis dengan angka 1.',
+        },
+        {
+          objek: 'piringSetengah2', judul: 'Piring Kedua: Setengah',
+          teks: 'Piring kedua mendapat sambungan cerita: satu kue lain dibagi dua sama besar, dan satu potongannya diletakkan di piring itu. Isinya setengah, ditulis 1/2.',
+        },
+        {
+          objek: 'campurSatuSetengah', judul: 'Digabung: Satu Setengah',
+          teks: 'Kini kedua piring disandingkan: satu kue utuh berdampingan dengan satu potongan setengah. Tulisnya 1 1/2, dibaca satu setengah. Angka utuhnya berdiri di depan, pecahannya mengikuti di belakang — itulah pecahan campuran.',
+        },
+        {
+          objek: 'butuhSetengah', judul: 'Hampir Mencapai Dua',
+          teks: 'Pecahan campuran itu hanya setengah langkah dari dua kue utuh. Bila satu potong setengah lagi ditambahkan, setengah dan setengah menyatu menjadi satu utuh — dan meja saji lengkap dengan dua kue penuh.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Utuh Plus Pecahan!',
+          teks: 'Jadi pecahan campuran itu gabungan dua piring: angka utuh di depan, pecahan di belakang — satu utuh plus setengah ditulis 1 1/2, dibaca satu setengah. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-064 · Bagian dari Banyak — sore tikar bermain ----- */
+    'p1-064': {
+      tema: 'tikar',
+      npc: { glif: 'h', ucap: ['Setengah dari', 'sepuluh itu lima!'] },
+      stasiun: [
+        {
+          objek: 'kelerengTikar', judul: 'Sepuluh Kelereng di Tikar',
+          teks: 'Sore di tikar bermain ini terhampar 10 kelereng warna-warni. Dua pemain hendak membaginya dengan adil, dan kata kuncinya: tiap pemain harus menerima setengah dari semuanya.',
+        },
+        {
+          objek: 'bagiDuaPiring', judul: 'Dua Piring Bergantian',
+          teks: 'Kelereng dibagikan bergantian satu-satu ke dua piring: satu untuk piring kiri, satu untuk piring kanan. Setelah sepuluh kali giliran, kedua piring masing-masing berisi 5 kelereng.',
+        },
+        {
+          objek: 'setengahLima', judul: 'Satu Piring Itu Setengahnya',
+          teks: 'Maka setengah dari 10 adalah 5 — kelereng dalam satu piring. Ditulis: 1/2 dari 10 = 5. Menyebutnya pun boleh dengan dua cara: membagi dua rata, atau mengambil setengahnya; hasilnya sama.',
+        },
+        {
+          objek: 'cobaDelapan', judul: 'Coba dengan Delapan Bola',
+          teks: 'Cara yang sama berlaku untuk benda lain: 8 bola warna dibagi dua rata ke dua piring, tiap piring menerima 4. Berarti setengah dari 8 adalah 4. Pecahan memang bisa menyentuh benda utuh yang keping-kepingnya dihitung.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Bagi Dua Rata!',
+          teks: 'Jadi mencari setengah dari banyak itu seperti membagi dua rata: setengah dari 10 adalah 5, setengah dari 8 adalah 4. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-065 · Menggambar Pecahan — malam meja gambar ----- */
+    'p1-065': {
+      tema: 'kertas',
+      npc: { glif: 'g', ucap: ['Warnai dua', 'dari empat!'] },
+      stasiun: [
+        {
+          objek: 'kertasPersegi', judul: 'Persegi di Kertas Gambar',
+          teks: 'Meja gambar malam ini menyediakan kertas dan penggaris. Tugasnya menggambar pecahan, dimulai dari satu persegi besar di tengah kertas. Bentuk apa pun sebenarnya boleh — persegi paling mudah dipotong rapi.',
+        },
+        {
+          objek: 'garisSilangKertas', judul: 'Dua Garis Membagi Empat',
+          teks: 'Satu garis menegak di tengah persegi, lalu satu garis mendatar menyilangnya: tergambar empat kotak kecil yang sama besar. Dua garis bersilang memang jurus pembagi empat, sama seperti di kuenya.',
+        },
+        {
+          objek: 'warnaiDuaKotak', judul: 'Warnai Dua Kotak',
+          teks: 'Sekarang warnai dua kotak dari empat kotak. Gambar itu kini bercerita: dua dari empat, ditulis 2/4. Banyak kotak yang diwarnai menjadi pembilang; banyak seluruh kotak menjadi penyebut — pecahan terbaca langsung dari gambar.',
+        },
+        {
+          objek: 'temanMembaca', judul: 'Gambar Tak Bisa Dibohongi',
+          teks: 'Kelebihan menggambar: teman bisa memeriksa gambar tanpa takut salah baca. Matanya melihat dua kotak terisi dari empat kotak, dan itu berarti setengah persegi — karena 2/4 sama dengan 1/2. Gambar membuat pecahan jadi jujur.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pecahan Terlihat!',
+          teks: 'Jadi menggambar pecahan itu tiga langkah: gambar bentuknya, bagi sama besar, warnai sebanyak pembilang. 2/4 pun terbaca nyaris tanpa berpikir. Owalah, ternyata begini toh — mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p1-066 · Tantangan Potongan Kue — malam gelanggang kuis ----- */
+    'p1-066': {
+      tema: 'gelanggang',
+      npc: { glif: 'Z', ucap: ['Empat teka', 'pecahan!'] },
+      stasiun: [
+        {
+          objek: 'kueDelapanGelang', judul: 'Teka Pertama: Dibagi Delapan',
+          teks: 'Gelanggang kuis malam ini memanggang satu kue besar yang dibagi delapan potongan sama besar. Teka pertamanya: berapa nilai satu potongan? Jawabnya 1/8 — satu dari delapan bagian.',
+        },
+        {
+          objek: 'dimakanTigaGel', judul: 'Teka Kedua: Tiga Dimakan',
+          teks: 'Teka kedua menyusul: tiga potongan dimakan tamu undangan. Yang terlanjur dimakan ditulis 3/8. Gelanggang menyemangati: masih ada potongan tersisa, jangan menyerah!',
+        },
+        {
+          objek: 'sisaLimaDelapan', judul: 'Teka Ketiga: Berapa Sisa?',
+          teks: 'Dari delapan potongan, tiga sudah pergi; tersisa lima potongan di loyang. Maka sisanya 5/8. Uji baliknya manis: 3/8 dan 5/8 bila digabung kembali menjadi 8/8 — satu kue utuh.',
+        },
+        {
+          objek: 'lebihSetengah', judul: 'Teka Bonus: Lebih dari Setengah?',
+          teks: 'Teka bonusnya paling licin: apakah sisa 5/8 lebih banyak daripada setengah kue? Setengah kue sama dengan 4/8, dan 5/8 melampaui 4/8. Maka sisanya lebih dari setengah — pemirsa gelanggang bertepuk tangan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Juara Pecahan!',
+          teks: 'Jadi gelanggang pecahan bisa ditaklukkan dengan bekal lama: membagi sama besar, membaca pembilang dan penyebut, serta mengenali setengah. Owalah, ternyata begini toh — mudah, bukan?',
         },
       ],
     },
