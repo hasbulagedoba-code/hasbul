@@ -182,7 +182,7 @@ window.P2 = (function () {
       teaser: 'Dua garis sejajar dipotong garis miring: sudut-sudutnya berpasangan sama besar. Pola rapi di rel kereta!' },
     { id: 'p2-057', k: 6, n: 7, judul: 'Teorema Pythagoras',
       teaser: 'Di segitiga siku-siku: alas persegi ditambah tinggi persegi sama dengan sisi miring persegi. Konon dipakai tukang bangun sejak kuno.' },
-    { id: 'p2-058', k: 6, n: 8, judul: 'Segitiga Sakti 3-4-5',
+    { id: 'p2-058', k: 6, n: 8, judul: 'Segitiga Andalan 3-4-5',
       teaser: 'Sisi 3, 4, dan 5 membuat sudut sempurna: 3×3 + 4×4 = 5×5. Tali bermata 3-4-5 jadi andalan tukang bangun berabad-abad.' },
     { id: 'p2-059', k: 6, n: 9, judul: 'Mencari Sisi yang Hilang',
       teaser: 'Sisi miring 10, alas 6: tinggi persegi 100 − 36 = 64, maka sisi hilangnya 8. Pythagoras pencari yang hilang.' },
@@ -273,7 +273,7 @@ window.P2 = (function () {
     { id: 'p2-098', k: 10, n: 8, judul: 'Mendaftar Kemungkinan',
       teaser: 'Dua koin dilempar bersama: daftar semua hasilnya dulu, hitung peluangnya kemudian. Lengkap, jelas, adil.' },
     { id: 'p2-099', k: 10, n: 9, judul: 'Peluang di Sekitar Kita',
-      teaser: 'Ramalan cuaca 80 persen artinya hampir pasti hujan. Peluang membantu kita memilih: bawa payung atau tidak.' },
+      teaser: 'Prakiraan cuaca 80 persen artinya hampir pasti hujan. Peluang membantu kita memilih: bawa payung atau tidak.' },
     { id: 'p2-100', k: 10, n: 10, judul: 'Tantangan Peluang Hutan',
       teaser: 'Koin, dadu, roda, dan kantong kelereng berkumpul. Selesaikan semua hitungan kemungkinan, jadilah jagoan peluang!' },
   ];

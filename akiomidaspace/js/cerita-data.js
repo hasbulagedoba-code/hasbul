@@ -314,7 +314,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'nol', judul: 'Nol, Pahlawan Kecil',
-          teks: 'Nol tampak seperti lingkaran kosong, padahal dialah pahlawan paling sakti. Berkat nol, angka 1 bisa berdiri di depan menjadi 10, lalu 100, lalu seribu. Ibarat piring kosong yang memberi tempat kue ditata lebih tinggi, nol memberi tempat agar angka lain naik kelas.',
+          teks: 'Nol tampak seperti lingkaran kosong, padahal dialah pahlawan paling berjasa. Berkat nol, angka 1 bisa berdiri di depan menjadi 10, lalu 100, lalu seribu. Ibarat piring kosong yang memberi tempat kue ditata lebih tinggi, nol memberi tempat agar angka lain naik kelas.',
         },
         {
           objek: 'pohon', judul: 'Pola Ada di Mana-mana',
@@ -386,14 +386,14 @@ window.CERITA = (function () {
     /* ----- p1-004 · Si Nol, Sang Pahlawan Kecil — senja ungu penuh angka ----- */
     'p1-004': {
       tema: 'ungu',
-      npc: { glif: '0', ucap: ['Nol itu', 'sakti!'] },
+      npc: { glif: '0', ucap: ['Nol itu', 'berjasa!'] },
       stasiun: [
         {
           objek: 'lubang', judul: 'Lingkaran Kosong yang Dibenci',
           teks: 'Dulu banyak orang menganggap nol aneh: "kosong kok ditulis?" Bahkan ada tempat yang melarangnya. Padahal sebuah lingkaran kecil ini menyimpan kekuatan terbesar di dunia angka.',
         },
         {
-          objek: 'papan10', judul: 'Sulap 1 Jadi 10',
+          objek: 'papan10', judul: 'Trik 1 Jadi 10',
           teks: 'Taruh 1 di belakang nol: jadi 10. Taruh lagi: 100. Nol ibarat tangga ajaib — tiap satu nol membuat angka naik satu lantai. Satu lingkaran kecil, tangganya tinggi sekali!',
         },
         {
@@ -570,7 +570,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'konstelasi', judul: 'Peta Bintang Para Penjelajah',
-          teks: 'Kapal antariksa menavigasi dengan membaca posisi bintang dan jarak antar planet — matematika murni yang tergambar di langit malam. Peta masa depan selalu ditulis dengan angka.',
+          teks: 'Kapal antariksa menavigasi dengan membaca posisi bintang dan jarak antar planet — matematika murni yang tergambar di langit malam. Peta langit semacam itu selalu ditulis dengan angka.',
         },
         {
           objek: 'tugu', akhir: true, judul: 'Masa Depan Dimulai Hari Ini',
@@ -670,11 +670,11 @@ window.CERITA = (function () {
       stasiun: [
         {
           objek: 'dermaga', judul: 'Dermaga Kapal Angka',
-          teks: 'Di dermaga bersandar sebuah kapal sakti bernama Puluhan. Aturan lautnya satu saja: angka yang duduk di kursi depan menjadi kapten. Kursi di kapal ini bukan tempat duduk biasa — kursi menentukan kekuatan.',
+          teks: 'Di dermaga bersandar sebuah kapal khusus bernama Puluhan. Aturan lautnya satu saja: angka yang duduk di kursi depan menjadi kapten. Kursi di kapal ini bukan tempat duduk biasa — kursi menentukan kekuatan.',
         },
         {
           objek: 'kursiKapten', judul: 'Angka 1 Naik ke Kursi Kapten',
-          teks: 'Angka 1 semula duduk di kursi belakang: nilainya masih 1, kecil dan sederhana. Begitu pindah ke kursi kapten di haluan — ta-da! — kekuatannya langsung sepuluh kali lipat: 10. Angkanya sama, kursinya yang mengubah nasib.',
+          teks: 'Angka 1 semula duduk di kursi belakang: nilainya masih 1, kecil dan sederhana. Begitu pindah ke kursi kapten di haluan — ta-da! — kekuatannya langsung sepuluh kali lipat: 10. Angkanya sama, kursinya yang mengubah segalanya.',
         },
         {
           objek: 'muatan', judul: 'Muatan Sepuluh Peti',
@@ -685,7 +685,7 @@ window.CERITA = (function () {
           teks: 'Sekarang dudukkan 1 dan 2 berdampingan menjadi 12. Angka 1 di kursi puluhan mengurus sepuluh, angka 2 di kursi satuan mengurus dua. Badan mereka sama kecilnya, tapi posisi membuat kekuatannya beda jauh.',
         },
         {
-          objek: 'tugu', akhir: true, judul: 'Owalah, Kursi Itu Sakti!',
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kursi Itu Hebat!',
           teks: 'Jadi setiap kali kamu menulis 10, ingat: itu angka 1 yang baru saja naik ke kursi kapten. Posisi bisa mengubah kekuatan sepuluh kali lipat — seperti kapten di atas kapal. Mudah, bukan?',
         },
       ],
@@ -713,8 +713,8 @@ window.CERITA = (function () {
           teks: 'Naik lagi: kursi ratusan — 1 kini bernilai 100. Naik sekali lagi: kursi ribuan — 1 kini bernilai 1.000! Setiap naik satu baris, kekuatannya membesar sepuluh kali. Barisnya tinggi, tapi aturannya tetap sederhana.',
         },
         {
-          objek: 'tugu', akhir: true, judul: 'Owalah, Posisi Itu Sakti!',
-          teks: 'Ratusan, ribuan, bahkan jutaan — semuanya cuma angka 1 yang pindah kursi baris demi baris. Tidak ada sihir yang rumit, hanya nilai tempat yang tertib. Mudah, bukan?',
+          objek: 'tugu', akhir: true, judul: 'Owalah, Posisi Itu Hebat!',
+          teks: 'Ratusan, ribuan, bahkan jutaan — semuanya cuma angka 1 yang pindah kursi baris demi baris. Tidak ada trik yang rumit, hanya nilai tempat yang tertib. Mudah, bukan?',
         },
       ],
     },
@@ -2878,11 +2878,11 @@ window.CERITA = (function () {
     /* ----- p1-093 · Pola Berulang — malam festival lampu berpola ----- */
     'p1-093': {
       tema: 'festivalPola',
-      npc: { glif: 'AB', ucap: ['Pola itu', 'bisa diramal!'] },
+      npc: { glif: 'AB', ucap: ['Pola itu', 'bisa diulang!'] },
       stasiun: [
         {
           objek: 'lampuFestival', judul: 'Lampu yang Suka Meniru Diri',
-          teks: 'Festival teka-teki dibuka oleh tali lampu gantung: merah, biru, merah, biru, merah, biru — begitu terus sampai ujung gerbang. Polanya rapi: setelah merah selalu biru, setelah biru selalu merah. Coba ramalkan lampu ketujuh sebelum melihatnya — dia berdiri tepat setelah biru, jadi pasti merah.',
+          teks: 'Festival teka-teki dibuka oleh tali lampu gantung: merah, biru, merah, biru, merah, biru — begitu terus sampai ujung gerbang. Polanya rapi: setelah merah selalu biru, setelah biru selalu merah. Coba lanjutkan polanya sebelum melihat lampu ketujuh — dia berdiri tepat setelah biru, jadi pasti merah.',
         },
         {
           objek: 'ubinPola', judul: 'Ubin yang Berbaris Tertib',
@@ -2893,12 +2893,12 @@ window.CERITA = (function () {
           teks: 'Di lapak manik, seorang penjual merangkai gelang dengan urutan kuning, hijau, kuning, hijau sampai melingkar penuh. Yang menarik, gelang itu tak punya ujung: polanya berputar dan kembali ke awal tanpa pernah kacau. Menemukan pola sama dengan menemukan aturan yang setia diulang.',
         },
         {
-          objek: 'papanRamalan', judul: 'Papan Ramal Para Penemu Pola',
-          teks: 'Papan besar di gerbang menulis: menemukan pola itu menemukan jalan pintas berpikir. Sebab kalau aturannya ketahuan, langkah berikutnya bisa diramal tanpa perlu menunggu. Otak yang terbiasa mencari pola akan cepat menangkap apa pun yang berulang — dari lagu, dari hari, sampai dari angka.',
+          objek: 'papanPola', judul: 'Papan Rahasia Para Penemu Pola',
+          teks: 'Papan besar di gerbang menulis: menemukan pola itu menemukan jalan pintas berpikir. Sebab kalau aturannya ketahuan, langkah berikutnya bisa dihitung tanpa perlu menunggu. Otak yang terbiasa mencari pola akan cepat menangkap apa pun yang berulang — dari lagu, dari hari, sampai dari angka.',
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Pola Bisa Ditebak!',
-          teks: 'Jadi merah-biru berulang, segitiga-bulat berulang, dan kuning-hijau berputar tanpa ujung. Pola itu aturan yang berulang, dan aturan yang berulang selalu bisa dilanjutkan. Owalah, ternyata begini toh — meramal pun jadi mudah begitu polanya ketahuan. Mudah, bukan?',
+          teks: 'Jadi merah-biru berulang, segitiga-bulat berulang, dan kuning-hijau berputar tanpa ujung. Pola itu aturan yang berulang, dan aturan yang berulang selalu bisa dilanjutkan. Owalah, ternyata begini toh — melanjutkan pola pun jadi mudah begitu aturannya ketahuan. Mudah, bukan?',
         },
       ],
     },
@@ -2931,17 +2931,17 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-095 · Kotak Ajaib Sihir — malam paviliun kotak 3x3 ----- */
+    /* ----- p1-095 · Kotak Ajaib Angka — malam paviliun kotak 3x3 ----- */
     'p1-095': {
       tema: 'paviliun',
       npc: { glif: '15', ucap: ['Semua garis', 'berjumlah 15!'] },
       stasiun: [
         {
-          objek: 'kotakSihir', judul: 'Paviliun dengan Kotak Bercahaya',
+          objek: 'kotakAjaib', judul: 'Paviliun dengan Kotak Bercahaya',
           teks: 'Di paviliun ujung festival tergantung kotak ajaib tiga kali tiga: 4, 9, 2 di baris paling atas; 3, 5, 7 di tengah; 8, 1, 6 di bawahnya. Semua angka 1 sampai 9 terpakai, tak ada yang diulang. Konon kotak seperti ini pernah muncul di gambar punggung kura-kura sungai di negeri China kuno.',
         },
         {
-          objek: 'garisSihir', judul: 'Setiap Garis Bernilai Sama',
+          objek: 'garisAjaib', judul: 'Setiap Garis Bernilai Sama',
           teks: 'Lampu sorot berjalan menyusuri kotak: baris atas 4 ditambah 9 ditambah 2 genap 15. Baris tengah 3, 5, 7 juga 15; baris bawah 8, 1, 6 tetap 15. Bahkan tiga kolomnya dan dua garis diagonalnya ikut menyusul — semua berjumlah 15 tanpa kecuali.',
         },
         {
@@ -2950,11 +2950,11 @@ window.CERITA = (function () {
         },
         {
           objek: 'papanLimaBelas', judul: 'Mengapa Harus 15? Ini Buktinya',
-          teks: 'Papan sihir membongkar rahasianya dengan hitungan biasa: jumlah semua angka 1 sampai 9 ialah 45. Kotak itu punya tiga baris, dan tiap baris wajib sama berat; 45 dibagi 3 genap 15. Jadi angka 15 bukan sihir semata — dia keharusan yang bisa dihitung siapa pun.',
+          teks: 'Papan bukti membongkar rahasianya dengan hitungan biasa: jumlah semua angka 1 sampai 9 ialah 45. Kotak itu punya tiga baris, dan tiap baris wajib sama berat; 45 dibagi 3 genap 15. Jadi angka 15 bukan kebetulan semata — dia keharusan yang bisa dihitung siapa pun.',
         },
         {
-          objek: 'tugu', akhir: true, judul: 'Owalah, Kotak Sihir Terbongkar!',
-          teks: 'Jadi sembilan angka tersusun agar tiap garis berjumlah 15, dan rahasianya 45 dibagi 3. Kotak ajaib ternyata bukan mantra — dia teka-teki hitung yang sudah lama diulang dari zaman ke zaman. Owalah, ternyata begini toh — sihir yang paling indah adalah hitungan yang setia. Mudah, bukan?',
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kotak Ajaib Terbongkar!',
+          teks: 'Jadi sembilan angka tersusun agar tiap garis berjumlah 15, dan rahasianya 45 dibagi 3. Kotak ajaib ternyata bukan mantra — dia teka-teki hitung yang sudah lama diulang dari zaman ke zaman. Owalah, ternyata begini toh — rahasia paling indah adalah hitungan yang setia. Mudah, bukan?',
         },
       ],
     },
@@ -3005,7 +3005,7 @@ window.CERITA = (function () {
           teks: 'Di percabangan menunggu dua pintu menggoda: nomor 14 dan nomor 25. Pintu 14 terbuka sedikit lalu macet — 14 tidak habis dibagi 3; pintu 25 macet juga, karena 25 juga bukan kelipatannya. Dua-duanya jalan buntu, dan labirin tertawa pelan di balik lampionnya.',
         },
         {
-          objek: 'papanKetiga', judul: 'Jurus Sihir: Jumlahkan Digitnya',
+          objek: 'papanKetiga', judul: 'Jurus Hitung: Jumlahkan Digitnya',
           teks: 'Di pusat labirin terpahat jurus rahasianya: untuk mengecek kelipatan 3, jumlahkan digitnya. Angka 27 menjadi 2 ditambah 7 sama dengan 9, dan 9 habis dibagi 3 — berarti 27 lolos. Angka 12 menjadi 1 ditambah 2 sama dengan 3, juga lolos; inilah kompas paling cepat di dalam labirin.',
         },
         {
@@ -3081,7 +3081,7 @@ window.CERITA = (function () {
           teks: 'Malam penutupan festival tiba: gerbang juara menyala dengan empat lampu misi dan papan besar bertuliskan Juara Kamp. Di atasnya terbaca angka 100 — jumlah seluruh judul yang pernah kamu jelajahi di Pintu 1. Empat ujian menantimu; lewati satu, satu lampu menyala.',
         },
         {
-          objek: 'ujiPola', judul: 'Ujian Pertama: Ramal Polanya',
+          objek: 'ujiPola', judul: 'Ujian Pertama: Lanjutkan Polanya',
           teks: 'Lampu pertama menampilkan deret angka: 2, 4, 6, dan sebuah kartu tanda tanya. Beda antar tetangganya dua, dua, dan dua lagi — deret ini naik dengan setia. Jadi tanda tanya itu pasti 8, dan lampu pertama pun menyala hijau.',
         },
         {
@@ -3098,7 +3098,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Juara Kamp!',
-          teks: 'Jadi pola diramal, perkalian dihitung, angka hilang dipanggil, dan urutan logika dibaca — empat ujian, empat lampu hijau. Seratus judul Pintu 1 kini pernah kamu jejaki, dari kisah angka sampai teka-teki paling seru. Gelar Juara Kamp resmi milikmu. Owalah, ternyata begini toh — semua ilmu besar dimulai dari langkah kecil yang rapi. Mudah, bukan?',
+          teks: 'Jadi pola dilanjutkan, perkalian dihitung, angka hilang dipanggil, dan urutan logika dibaca — empat ujian, empat lampu hijau. Seratus judul Pintu 1 kini pernah kamu jejaki, dari kisah angka sampai teka-teki paling seru. Gelar Juara Kamp resmi milikmu. Owalah, ternyata begini toh — semua ilmu besar dimulai dari langkah kecil yang rapi. Mudah, bukan?',
         },
       ],
     },

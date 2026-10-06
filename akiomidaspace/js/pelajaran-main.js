@@ -413,7 +413,7 @@
   hidupkanAmb();
 
   let asap = [], daun = [], kilau = [];
-  const PARTIKEL_OBJEK = { api: 'asap', roket: 'asap', roketKecil: 'asap', pohon: 'daun', tugu: 'kilau', konstelasi: 'kilau', delapanMiring: 'kilau', bintangTerbanyak: 'kilau', tekoTuang: 'asap', termometerDidih: 'asap', kotakSihir: 'kilau', jamRaksasa: 'kilau', lampuFestival: 'kilau', gerbangJuara: 'kilau', kuraLegenda: 'kilau', kunciBalikArah: 'kilau', tiangNolTengah: 'kilau', gerbangLenteraDalam: 'kilau', menaraLiftTambang: 'kilau', stempelLunas: 'kilau', lenteraJurang: 'kilau', termometerGanda: 'kilau', rodaTaliLift: 'kilau' };
+  const PARTIKEL_OBJEK = { api: 'asap', roket: 'asap', roketKecil: 'asap', pohon: 'daun', tugu: 'kilau', konstelasi: 'kilau', delapanMiring: 'kilau', bintangTerbanyak: 'kilau', tekoTuang: 'asap', termometerDidih: 'asap', kotakAjaib: 'kilau', jamRaksasa: 'kilau', lampuFestival: 'kilau', gerbangJuara: 'kilau', kuraLegenda: 'kilau', kunciBalikArah: 'kilau', tiangNolTengah: 'kilau', gerbangLenteraDalam: 'kilau', menaraLiftTambang: 'kilau', stempelLunas: 'kilau', lenteraJurang: 'kilau', termometerGanda: 'kilau', rodaTaliLift: 'kilau' };
 
   /* ---------- input ---------- */
   const keys = { kiri: false, kanan: false };
@@ -2808,7 +2808,7 @@
       jalan(c, '#3a5a46', '#32503c', '#385642', '#486a54');
     }
 
-    /* ---- PAVILIUN: malam paviliun sihir ungu, atap lengkung ---- */
+    /* ---- PAVILIUN: malam paviliun ungu, atap lengkung ---- */
     else if (TEMA_NAMA === 'paviliun') {
       P(c, 0, 0, W, 48, '#221a3e');
       P(c, 0, 48, W, 44, '#28204a');
@@ -6589,7 +6589,7 @@
       lingkaran(ctx, lx - 1, 205, 2, i % 2 ? '#b0e0ff' : '#ffb0b0');
     }
     teksPx(ctx, 'merah-biru', x, 188, '#ffe9a3', 6);
-    teksPx(ctx, 'ramal: merah', x, 176, '#7dffa8', 6);
+    teksPx(ctx, 'pola: merah', x, 176, '#7dffa8', 6);
   }
   function gambarUbinPola(x, t) {
     for (let i = 0; i < 6; i++) {
@@ -6608,8 +6608,8 @@
     }
     teksPx(ctx, 'kuning hijau berputar', x, 188, '#ffe9a3', 6);
   }
-  function gambarPapanRamalan(x, t) {
-    papanLebar(x, ['pola =', 'bisa diramal'], 66);
+  function gambarPapanPola(x, t) {
+    papanLebar(x, ['pola =', 'bisa diulang'], 66);
     teksPx(ctx, 'pintasan berpikir', x, 176, '#ffe9a3', 6);
   }
 
@@ -6648,7 +6648,7 @@
   }
 
   /* --- p1-095: kotak ajaib --- */
-  function gambarKotakSihir(x, t) {
+  function gambarKotakAjaib(x, t) {
     const kot = [[4, 9, 2], [3, 5, 7], [8, 1, 6]];
     for (let r = 0; r < 3; r++) for (let k = 0; k < 3; k++) {
       const bx = x - 24 + k * 16, by = 206 + r * 14;
@@ -6658,7 +6658,7 @@
     }
     teksPx(ctx, 'semua garis 15', x, 190, '#ffe9a3', 6);
   }
-  function gambarGarisSihir(x, t) {
+  function gambarGarisAjaib(x, t) {
     const kot = [[4, 9, 2], [3, 5, 7], [8, 1, 6]];
     for (let r = 0; r < 3; r++) for (let k = 0; k < 3; k++) {
       const bx = x - 24 + k * 16, by = 206 + r * 14;
@@ -6680,7 +6680,7 @@
   }
   function gambarPapanLimaBelas(x, t) {
     papanLebar(x, ['1 sampai 9', '= 45', '45 : 3 = 15'], 66);
-    teksPx(ctx, 'rahasia sihir', x, 176, '#ffe9a3', 6);
+    teksPx(ctx, 'rahasia angka', x, 176, '#ffe9a3', 6);
   }
 
   /* --- p1-096: hitung cepat --- */
@@ -7453,9 +7453,9 @@
     jamRaksasa: gambarJamRaksasa, jarumDua: gambarJarumDua, detikBerlari: gambarDetikBerlari, papanEnamPuluh: gambarPapanEnamPuluh,
     kalenderTujuh: gambarKalenderTujuh, bulanFase: gambarBulanFase, kabisatEmpat: gambarKabisatEmpat, papanWaktu: gambarPapanWaktu,
     termometerBeku: gambarTermometerBeku, termometerDidih: gambarTermometerDidih, tubuhTigaTujuh: gambarTubuhTigaTujuh, papanDerajat: gambarPapanDerajat,
-    lampuFestival: gambarLampuFestival, ubinPola: gambarUbinPola, gelangManik: gambarGelangManik, papanRamalan: gambarPapanRamalan,
+    lampuFestival: gambarLampuFestival, ubinPola: gambarUbinPola, gelangManik: gambarGelangManik, papanPola: gambarPapanPola,
     jejakHilang: gambarJejakHilang, kacaTeka: gambarKacaTeka, kartuTebak: gambarKartuTebak, papanBeda: gambarPapanBeda,
-    kotakSihir: gambarKotakSihir, garisSihir: gambarGarisSihir, kuraLegenda: gambarKuraLegenda, papanLimaBelas: gambarPapanLimaBelas,
+    kotakAjaib: gambarKotakAjaib, garisAjaib: gambarGarisAjaib, kuraLegenda: gambarKuraLegenda, papanLimaBelas: gambarPapanLimaBelas,
     lombaMulai: gambarLombaMulai, geserSatu: gambarGeserSatu, papanSeratusEnam: gambarPapanSeratusEnam, finishKilat: gambarFinishKilat,
     gerbangLabirin: gambarGerbangLabirin, jalurTiga: gambarJalurTiga, jalanBuntu: gambarJalanBuntu, papanKetiga: gambarPapanKetiga,
     tigaMenara: gambarTigaMenara, duelTanya: gambarDuelTanya, dominoLogika: gambarDominoLogika, papanKesimpulan: gambarPapanKesimpulan,
