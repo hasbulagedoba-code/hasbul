@@ -1977,6 +1977,286 @@ window.CERITA = (function () {
       ],
     },
 
+    /* ----- p2-071 · Sumbu X & Sumbu Y — pagi lapangan persimpangan patok nol ----- */
+    'p2-071': {
+      tema: 'pertigaanNol',
+      npc: { glif: 'x,y', ucap: ['Dua jalan,', 'satu titik!'] },
+      stasiun: [
+        {
+          objek: 'patokNolPersimpangan', judul: 'Dua Jalan Bertemu di Patok Nol',
+          teks: 'Pagi di lapangan hutan, dua jalan tanah saling bersilang membentuk huruf besar: satu mendatar lebar, satu menanjak lurus. Di tempat mereka bertemu tertancap patok batu bermahkota angka nol. Penduduk hutan menyebutnya patok nol — titik kelahiran semua alamat. Sebelum ada persimpangan ini, orang harus menggambarkan letak sesuatu dengan banyak kalimat; kini cukup dua bilangan kecil.',
+        },
+        {
+          objek: 'papanSumbuDuaArah', judul: 'Papan Nama: Sumbu X dan Sumbu Y',
+          teks: 'Di sisi persimpangan berdiri dua papan nama. Jalan mendatar diberi nama sumbu x, jalan menanjak diberi nama sumbu y. Keduanya memanjang dua arah: sumbu x berjalan ke kanan dengan bilangan makin besar dan ke kiri dengan bilangan makin kecil, begitu pula sumbu y ke atas dan ke bawah. Dua nama sederhana, dua arah tak berujung — dan keduanya selalu berbagi satu patok nol yang sama di tengah.',
+        },
+        {
+          objek: 'rumahTitikPertama', judul: 'Rumah Pertama yang Punya Alamat',
+          teks: 'Sedikit ke kanan patok nol berdiri rumah kecil pertama di lapangan ini. Alamatnya dituliskan pada papan pintu: tiga, dua. Artinya maju tiga langkah menyusuri sumbu x, lalu naik dua langkah menyusuri sumbu y — sampailah di rumah itu. Semua titik di lapangan kini bisa diberi alamat dengan cara yang sama: dua bilangan, satu maju satu naik, berangkat selalu dari patok nol.',
+        },
+        {
+          objek: 'papanJalanBertemu', judul: 'Jurus Alamat di Persimpangan',
+          teks: 'Papan kayu di tepi jalan merangkum jurus persimpangan: berangkat dari nol, maju sejauh bilangan pertama, naik sejauh bilangan kedua, titik ditemukan. Uji sekali lagi: alamat dua, satu berarti maju dua lalu naik satu. Tidak ada yang perlu dihafal banyak — hanya dua langkah berurutan yang selalu sama, seberapa jauh pun lapangan itu diperluas.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Jalan Membuat Semua Alamat!',
+          teks: 'Dua jalan polos ternyata sedang merahasiakan keajaiban: begitu bersilang di nol, seluruh lapangan langsung punya sistem alamat. Owalah, ternyata begini toh — sumbu x dan sumbu y adalah dua jalan yang melahirkan jutaan alamat sekaligus. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-072 · Membaca Titik (x, y) — siang halaman engkle berkotak ----- */
+    'p2-072': {
+      tema: 'tanggaTitik',
+      npc: { glif: '(3,2)', ucap: ['X dulu,', 'Y kemudian!'] },
+      stasiun: [
+        {
+          objek: 'lantaiKotakHalaman', judul: 'Halaman Berkotak-Kotak',
+          teks: 'Siang di halaman hutan, lantai rumput digambar menjadi kotak-kotak besar seperti permainan engkle raksasa. Garis kotaknya sejajar dengan dua sumbu persimpangan lapangan, jadi tiap petak bisa dihitung: berapa langkah ke kanan, berapa petak ke atas. Halaman biasa berubah menjadi papan permainan alamat — dan tiap petak punya nama dua bilangannya sendiri.',
+        },
+        {
+          objek: 'langkahTigaDua', judul: 'Tiga Langkah Maju, Dua Langkah Naik',
+          teks: 'Sebut alamat tiga, dua: berdiri di patok nol, maju tiga kotak ke kanan menyusuri sumbu x, lalu naik dua kotak ke atas menyusuri sumbu y. Letakkan batu penanda di kotak itu — itulah titik tiga koma dua. Urutannya setia seperti resep: bilangan pertama bicara maju, bilangan kedua bicara naik. Begitu terbiasa, satu pasang angka langsung terasa seperti lokasi yang bisa dikunjungi.',
+        },
+        {
+          objek: 'titikTertukarDuaTiga', judul: 'Ketika Urutan Tertukar',
+          teks: 'Sekarang cobalah menulis alamatnya terbalik: dua, tiga. Maju dua kotak, naik tiga kotak — batu penanda mendarat di kotak yang berbeda dari tadi! Dua bilangan yang sama, tapi ditukar urutannya, membawa kita ke tempat lain. Di titik tiga koma dua berdiri rumah kecil; di titik dua koma tiga ternyata rumah tetangganya. Alamat bukan sekadar angka — urutannya adalah jiwanya.',
+        },
+        {
+          objek: 'papanXpuluhanY', judul: 'Jurus Setia: X Dulu, Y Kemudian',
+          teks: 'Papan di pagar halaman menuliskan jurus yang menjaga semua alamat tetap jujur: bilangan pertama selalu x, bilangan kedua selalu y. Ditulis dalam kurung dan dipisah koma, seperti tiga koma dua. Kalau sedang ragu, ulangi langkah pelan: maju dulu sejauh x, baru naik sejauh y. Jurus yang dijaga urutannya tak pernah salah menempatkan titik.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Urutan Alamat Itu Serius!',
+          teks: 'Tertukar satu urutan, sampailah di rumah tetangga — halaman engkle ini membuktikan bahwa membaca titik itu soal disiplin kecil yang manis. Owalah, ternyata begini toh: x dulu, y kemudian, dan semua titik tak mungkin keliru rumah. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-073 · Empat Daerah Kuadran — sore alun-alun empat pojok ----- */
+    'p2-073': {
+      tema: 'bazarEmpatPojok',
+      npc: { glif: '(-,+)', ucap: ['Empat daerah,', 'satu alun-alun!'] },
+      stasiun: [
+        {
+          objek: 'alunAlunDuaJalan', judul: 'Alun-Alun yang Dibelah Dua Jalan',
+          teks: 'Sore di alun-alun hutan, dua jalan batu saling bersilang tepat di tengah, membelah lapangan menjadi empat daerah yang sama besar. Jalan pertama adalah sumbu x, jalan kedua adalah sumbu y, dan pertemuan keduanya adalah patok nol. Empat daerah itu punya nama resmi: daerah satu, dua, tiga, dan empat — dihitung berlawanan arah jarum jam mulai dari daerah kanan-atas.',
+        },
+        {
+          objek: 'lampuEmpatPojok', judul: 'Empat Pojok, Empat Lampu',
+          teks: 'Tiap daerah menancapkan satu lampu tanda. Daerah satu di kanan-atas: kedua bilangannya positif, seperti tiga koma dua. Daerah dua di kiri-atas: x-nya negatif, y-nya tetap positif. Daerah tiga di kiri-bawah keduanya negatif, dan daerah empat di kanan-bawah x positif y negatif. Empat lampu itu seperti empat siswa yang memakai seragam berbeda tanda — sekali lihat tandanya, langsung ketahuan rumah daerahnya.',
+        },
+        {
+          objek: 'kiosDaerahSatu', judul: 'Kios di Daerah Satu',
+          teks: 'Kios jajanan berdiri di daerah satu, dan alamat papan pintunya tiga, dua. Perhatikan tanda kedua bilangannya: sama-sama positif. Di daerah mana pun sebuah titik berdiri, tandanya tak pernah diam: alamat selalu membocorkan daerahnya tanpa perlu bertanya. Titik dengan x negatif dan y positif tak mungkin tinggal di daerah satu — tandanya tidak cocok, seperti sepatu yang tidak pas dipakai.',
+        },
+        {
+          objek: 'papanTandaKuadran', judul: 'Tanda Alamat Membocorkan Daerah',
+          teks: 'Papan besar di tengah alun-alun merangkum semua aturan tanda: kanan-atas dua positif, kiri-atas minus lalu positif, kiri-bawah dua minus, kanan-bawah positif lalu minus. Uji dengan cepat: alamat minus empat koma minus dua — kedua bilangan minus — pasti tinggal di daerah tiga. Tidak perlu menggambar dulu; cukup baca tandanya, daerahnya langsung terjawab.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Alamat Membocorkan Daerahnya!',
+          teks: 'Empat daerah ternyata cukup dikawal empat pola tanda, dan setiap alamat otomatis taat pada polanya. Owalah, ternyata begini toh — membaca kuadran semudah membaca tanda plus dan minus pada alamatnya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-074 · Menggambar Titik — malam galeri papan hitam ----- */
+    'p2-074': {
+      tema: 'galeriTitik',
+      npc: { glif: '(2,5)', ucap: ['Tempel', 'di alamatnya!'] },
+      stasiun: [
+        {
+          objek: 'papanHitamGaleri', judul: 'Galeri Papan Hitam Malam Ini',
+          teks: 'Malam di galeri hutan, satu papan hitam raksasa digantung diterangi lampu kuning hangat. Permukaannya digambar garis-garis samar membentuk kisi, dengan sumbu x melintang di tengah dan sumbu y menegak melalui patok nol. Malam ini galeri memakai sistem baru: tiap kartu yang dipajang wajib menulis alamat koordinatnya, sehingga pengunjung bisa menemukan letaknya tanpa disesatkan.',
+        },
+        {
+          objek: 'kartuAlamatDuaLima', judul: 'Kartu Pertama: Dua, Lima',
+          teks: 'Kartu pertama menulis alamat dua, lima. Kurator — bola-lampu tanpa wajah — membawanya ke kisi: maju dua langkah ke kanan di sumbu x, naik lima langkah di sumbu y, lalu menempelkan kartu tepat di persilangan garis. Satu alamat, satu titik, tidak boleh sedikit pun meleset. Pengunjung yang datang besok akan menemukan kartu itu di tempat yang sama, karena alamat tidak pernah berpindah sendiri.',
+        },
+        {
+          objek: 'kartuMinusTigaEmpat', judul: 'Kartu Kedua: Minus Tiga, Empat',
+          teks: 'Kartu kedua membawa kejutan: alamatnya minus tiga, koma empat. Minus tiga artinya maju ke arah sebaliknya — tiga langkah ke kiri dari patok nol — lalu naik empat langkah ke atas. Kartu itu menempel di daerah kiri-atas, dan tepat di titik yang diminta. Bilangan minus bukan musuh; ia hanya petunjuk arah yang jujur, memberi tahu ke mana langkah harus dibalik.',
+        },
+        {
+          objek: 'kartuNolMinusDua', judul: 'Kartu Ketiga: Nol, Minus Dua',
+          teks: 'Kartu ketiga memakai alamat nol, koma minus dua. Maju nol langkah — jadi tetap di patok nol — lalu turun dua langkah menyusuri sumbu y. Kartu itu mendarat tepat di badan sumbu y, dua petak di bawah nol. Ternyata titik boleh berdiri langsung di jalan besar; ia hanya tidak masuk ke daerah mana pun. Tiga kartu terpasang, tiap-tiap satu di alamatnya sendiri, dan tak ada dua kartu berbagi satu titik.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Alamat Satu Titik!',
+          teks: 'Galeri malam ini membuktikan satu hal yang tenang: alamat koordinat itu unik, satu alamat hanya dimiliki satu titik, tak pernah kembar. Owalah, ternyata begini toh — menggambar titik hanyalah kebiasaan dua langkah: baca alamatnya, lalu tempel dengan setia. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-075 · Garis dari Tabel — pagi meja arsip benang ----- */
+    'p2-075': {
+      tema: 'arsipBenang',
+      npc: { glif: 'y=2x', ucap: ['Tabel tertib,', 'garis lurus!'] },
+      stasiun: [
+        {
+          objek: 'tabelXyArsip', judul: 'Tabel x dan y di Meja Arsip',
+          teks: 'Pagi di meja arsip hutan, sebuah lembar tabel terbentang rapi. Kolom kirinya bernama x, kolom kanannya bernama y, dan di antara keduanya berdiri perjanjian kecil: y sama dengan dua kali x. Pilih x sama dengan satu, hitung y jadi dua; pilih x dua, y jadi empat; pilih x tiga, y jadi enam. Tabel itu seperti dapur: masukkan bahan x, keluar masakan y dengan resep yang setia.',
+        },
+        {
+          objek: 'pakuTigaTitik', judul: 'Tiga Paku Ditanam Tepat',
+          teks: 'Lembar tabel lalu diletakkan di atas papan gabus bergaris, dan tiga paku kecil ditancapkan satu per satu. Paku pertama di alamat satu koma dua, paku kedua di dua koma empat, paku ketiga di tiga koma enam — tepat seperti isi tabel, tanpa satu pun digeser. Menanam paku ini adalah langkah paling penting sebelum menarik garis, karena garis tak mau lahir dari titik yang asal tempel.',
+        },
+        {
+          objek: 'benangTertarikLurus', judul: 'Benang Ditarik — Lurus!',
+          teks: 'Sekarang bagian yang paling memuaskan: benang merah ditarik menyentuh ketiga paku sekaligus. Ternyata tanpa dipaksa, benang itu berbaris lurus sempurna, menyusuri ketiga titik dari kiri bawah ke kanan atas. Titik yang lahir dari tabel yang tertib otomatis berbaris rapi — inilah keajaiban senyap dari perjanjian y sama dengan dua kali x. Tabel yang tertib melahirkan garis yang lurus.',
+        },
+        {
+          objek: 'papanGarisLahir', judul: 'Tabel, Titik, lalu Garis',
+          teks: 'Papan arsip menuliskan tiga langkah melahirkan grafik: pilih x, hitung y, tandai titiknya, lalu hubungkan. Coba resep lain — y sama dengan x tambah satu — dan paku-pakunya akan kembali berbaris lurus dengan kemiringan yang beda. Selama hitungan tabelnya jujur, garisnya tak pernah menari sendiri. Grafik yang indah selalu dimulai dari tabel yang disiplin.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tabel Tertib Melahirkan Garis!',
+          teks: 'Tiga paku, satu benang, dan garis lurus muncul sendiri tanpa disuruh — meja arsip pagi ini jadi ruang kelahiran grafik. Owalah, ternyata begini toh: garis lurus hanyalah titik-titik tabel yang setia resep. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-076 · Kemiringan Garis — siang dua tangga tanjakan ----- */
+    'p2-076': {
+      tema: 'jalanTanjak',
+      npc: { glif: '2/1', ucap: ['Naik dua,', 'maju satu!'] },
+      stasiun: [
+        {
+          objek: 'tanggaCuramNaikDua', judul: 'Tangga Curam si Kemiringan Dua',
+          teks: 'Siang di kaki bukit hutan, tangga pertama menanjak menantang. Anak tangganya punya kebiasaan yang bisa dihitung: setiap satu langkah maju ke depan, tangga ini naik dua langkah ke atas. Rasionya dua banding satu, dan itulah kemiringannya — angka dua. Penduduk hutan menyebut tangga ini si curam, karena angka kemiringannya paling besar di antara semua jalur bukit.',
+        },
+        {
+          objek: 'tanggaLandaiNaikSatu', judul: 'Tangga Landai si Kemiringan Satu',
+          teks: 'Tangga kedua di sisi lain bukit bersikap lembut: setiap satu langkah maju, ia naik satu langkah saja. Kemiringannya satu banding satu — angka satu. Naik dua puluh langkah berarti maju dua puluh langkah juga, seperti menuruni tangga yang dijinakkan. Dua tangga menuju puncak yang sama, tapi angka kemiringan mereka bicara beda: dua itu terjal, satu itu santai.',
+        },
+        {
+          objek: 'pendakiDuaJalan', judul: 'Dua Pendaki Membanding Jalur',
+          teks: 'Dua pendaki bola-lampu berangkat bersama, satu lewat jalur curam, satu lewat jalur landai. Yang di jalur curam naik enam langkah hanya setelah maju tiga; yang landai masih butuh maju enam untuk naik enam. Puncaknya sama, lelahnya beda — dan keduanya bisa dihitung sebelum melangkah: cukup bagi naik dengan maju, keluarlah kemiringannya. Angka kecil itu jujur tentang seberapa kerja kaki.',
+        },
+        {
+          objek: 'papanKemiringanDua', judul: 'Papan Jalur: Naik Dua, Maju Satu',
+          teks: 'Papan penunjuk jalur menuliskan resep kemiringan dengan singkat: naik dibagi maju. Jalur curam: dua dibagi satu sama dengan dua. Jalur landai: satu dibagi satu sama dengan satu. Makin besar angkanya, makin tegak jalannya; makin kecil, makin memanjang santainya. Sekali paham, semua tanjakan di dunia langsung bisa dibandingkan lewat satu bilangan saja.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kemiringan Itu Angka!',
+          teks: 'Dua tangga menuju puncak yang sama ternyata dibedakan hanya oleh satu bilangan kecil yang jujur. Owalah, ternyata begini toh — kemiringan adalah naik dibagi maju, dan angkanya langsung terasa di kaki. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-077 · Grafik Perjalanan — malam pos jalan papan jadwal ----- */
+    'p2-077': {
+      tema: 'papanPerjalanan',
+      npc: { glif: 'km', ucap: ['Grafik', 'bercerita!'] },
+      stasiun: [
+        {
+          objek: 'papanWaktuJarakPos', judul: 'Papan Jadwal yang Bercerita',
+          teks: 'Malam di pos jalan hutan, sebuah papan besar menyala: sumbu mendatarnya waktu, sumbu tegaknya jarak tempuh dalam kilometer. Kurir pulang membawa catatan perjalanannya, dan penjaga pos menggambar garis di papan berdasarkan catatan itu. Anehnya, garis itu seperti ikut bicara — tiap belokan dan tiap datarnya menyimpan satu peristiwa dari jalan.',
+        },
+        {
+          objek: 'garisDatarBerhenti', judul: 'Garis Mendatar: Sedang Berhenti',
+          teks: 'Di tengah papan, garis mendatar panjang: naiknya nol selama sepuluh menit. Apa maksudnya? Jarak tidak bertambah sama sekali — berarti kurir sedang berhenti, mungkin mengobrol di warung bakso tepi jalan. Garis mendatar adalah bahasa diam untuk kata berhenti. Tidak perlu tulisan, tidak perlu cerita lisan: papan cukup memanjangkan garisnya, dan semua orang langsung paham.',
+        },
+        {
+          objek: 'garisMiringMelaju', judul: 'Garis Miring: Sedang Melaju',
+          teks: 'Setelah bagian datar, garis menanjak tajam: sepuluh kilometer terlalui dalam sepuluh menit — jarak terus bertambah. Itulah bahasa grafik untuk kata melaju. Miring makin tegak berarti laju makin kencang; miring landai berarti santai saja. Sekali pandang, isi perjalanan kurir terbaca semua: berangkat, melaju, berhenti jajan, melaju lagi sampai pos. Grafik ternyata buku cerita yang ditulis garis.',
+        },
+        {
+          objek: 'papanCeritaPerjalanan', judul: 'Membaca Cerita Tanpa Kata',
+          teks: 'Penjaga pos merangkum di papan kecil: sumbu waktu dan sumbu jarak bila dipasangkan membuat perjalanan bisa digambar. Titik naik artinya bergerak, titik datar artinya istirahat, dan pukul setiap perubahan tercatat jelas. Kalau besok ada petualang baru menanyakan isi perjalanan kurir, tak perlu menebak — cukup baca garisnya, karena garis tak pernah berkhianat pada kejadian yang digambar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Grafik Bisa Bercerita!',
+          teks: 'Mendatar berarti berhenti, miring berarti melaju — papan jadwal malam ini membuktikan bahwa garis bisa menceritakan perjalanan tanpa satu kata pun. Owalah, ternyata begini toh: grafik perjalanan itu buku cerita paling jujur yang pernah digambar. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-078 · Titik Potong Sumbu — senja gerbang awal jalan ----- */
+    'p2-078': {
+      tema: 'gerbangAwal',
+      npc: { glif: 'x=0', ucap: ['Semua cerita', 'mulai di sini!'] },
+      stasiun: [
+        {
+          objek: 'gerbangSumbuYSenja', judul: 'Gerbang di Sumbu Y',
+          teks: 'Senja di jalan kecil hutan, sebuah gerbang kayu berdiri tepat di badan sumbu y, tinggi dan tenang. Papan gerbangnya menulis: semua garis punya rumah awal di sini. Rumah awal itu adalah titik tempat garis menyentuh sumbu y — tempat x-nya nol. Setiap jalan cerita butuh titik mulai, dan bagi garis lurus, titik mulainya selalu terletak di gerbang ini.',
+        },
+        {
+          objek: 'titikAwalNolEmpat', judul: 'Alamat Awal: Nol, Empat',
+          teks: 'Di pagar gerbang tergantung penanda berisi alamat nol, koma empat. Baca pelan: x-nya nol berarti maju nol langkah — tidak bergeser sedikit pun dari sumbu y — lalu naik empat langkah ke atas. Di titik itulah garis kelak memijak tanah pertamanya. Alamat awal memang istimewa: ia satu-satunya alamat garis yang x-nya pasti nol, dan karena itu ia mudah dikenali di kisi mana pun.',
+        },
+        {
+          objek: 'garisLewatGerbang', judul: 'Garis yang Selalu Lewat Rumah Awalnya',
+          teks: 'Sekarang garis digambar melewati titik awal itu lalu menjalar ke kanan atas, melewati alamat satu koma enam, dua koma delapan, tiga koma sepuluh. Geser ke alamat mana pun di garis itu, hitungannya tetap patuh pada kebiasaan yang sama: y sama dengan dua kali x tambah empat. Dan coba masukkan x nol — jawabannya empat lagi, tepat di gerbang. Garis boleh sejauh apa pun berjalan, ia tetap pulang mampir ke rumah awalnya.',
+        },
+        {
+          objek: 'papanRumahAwal', judul: 'Rumah Awal Setiap Garis',
+          teks: 'Papan kecil di bawah gerbang merangkum: titik potong sumbu y adalah alamat garis ketika x sama dengan nol. Garis yang rumah awalnya di nol koma empat beda cerita dengan garis yang rumah awalnya di nol koma minus dua — keduanya naik dengan kebiasaan sama tapi berangkat dari lantai yang berbeda. Banyak cerita matematika dimulai dari membaca titik potong ini lebih dulu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Garis Selalu Pulang ke Awalnya!',
+          teks: 'Garis yang menjauh sejauh apa pun ternyata selalu menyimpan alamat rumahnya di sumbu y, di tempat x bernilai nol. Owalah, ternyata begini toh — titik potong adalah kaki gerbang tempat semua cerita garis dimulai. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-079 · Peta Harta Karun — pagi taman dijaring tali ----- */
+    'p2-079': {
+      tema: 'tamanBenderaX',
+      npc: { glif: '(5,3)', ucap: ['Maju lima,', 'naik tiga!'] },
+      stasiun: [
+        {
+          objek: 'taliGridTaman', judul: 'Taman yang Dijaring Tali',
+          teks: 'Pagi di taman hutan, tali-tali putih diregangkan di atas rumput membentuk kisi besar, dengan dua tali utama lebih tebal sebagai sumbu x dan sumbu y yang bersilang di patok nol. Taman biasa berubah menjadi bidang koordinat raksasa: tiap persilangan tali punya alamat dua bilangan. Yang tadinya rumput tak bertuan, kini tiap petaknya bisa dipanggil dengan namanya.',
+        },
+        {
+          objek: 'petaTamanKertas', judul: 'Peta dengan Alamat',
+          teks: 'Di papan informasi taman terselip peta tua bergambar kisi yang sama, dan di sudutnya tertulis satu baris kecil: alamat karun adalah lima, tiga. Peta itu tak menggambar gambar rumit dan tak memberi teka-teki panjang; ia hanya menuliskan alamat. Penduduk hutan tertawa membacanya — dulu mereka menggali seisi taman, kini karun cukup dipanggil lewat dua bilangannya.',
+        },
+        {
+          objek: 'benderaXMerah', judul: 'Bendera X Ditanam',
+          teks: 'Dua tali kecil disilang membentuk huruf X di atas rumput: tanda mulai di patok nol, maju lima langkah menyusuri sumbu x, lalu naik tiga langkah menyusuri sumbu y. Di persilangan kelima-kekanan dan ketiga-keatas itulah bendera merah ditanam. Tak ada langkah yang dibuang, tak ada sudut taman yang digali sia-sia — alamat lima koma tiga langsung mengantarkan tangan ke tempat yang tepat.',
+        },
+        {
+          objek: 'petiHartaTeralamat', judul: 'Peti yang Teralamat Pas',
+          teks: 'Sekop menyentuh tanah tepat di kaki bendera, dan peti kayu terangkat dari rumput yang dijaraknya sejak tadi. Isinya bukan emas: buku jurnal ahli hitung tua berisi peta-peta beralamat. Di sampulnya tertulis satu kalimat yang ditulis ulang generasi demi generasi: karun di taman ini ditemukan karena dihitung dua langkah — maju lalu naik — bukan karena asal menggali. Hitungan adalah alat; alamat yang benar tak butuh keberuntungan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, X Menandai Alamatnya!',
+          teks: 'Tanpa menggali seisi taman, karun terangkat tepat di alamatnya: maju lima, naik tiga. Owalah, ternyata begini toh — koordinat adalah peta yang paling hemat tenaga, dan X hanyalah bendera kecil untuk alamat yang sudah pasti. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-080 · Tantangan Alamat Hutan — malam menara lima lampion ----- */
+    'p2-080': {
+      tema: 'menaraSinyal',
+      npc: { glif: '5 misi', ucap: ['Lima lampion', 'menyala!'] },
+      stasiun: [
+        {
+          objek: 'menaraSinyalLima', judul: 'Menara Sinyal Lima Lampion',
+          teks: 'Malam penutup penjuru koordinat: menara sinyal tinggi berdiri di lapangan kisi, memasang lima lampion bernomor. Setiap lampion menyimpan satu misi alamat, dan kelima-limanya harus selesai sebelum lampion terakhir padam. Penjaga menara — bola-lampu tanpa wajah — membuka papan tantangan: tandai, baca, tentukan daerah, ukur kemiringan, lalu gambar garisnya. Malam ini seluruh hutan jadi peta.',
+        },
+        {
+          objek: 'misiTandaiEmpatDua', judul: 'Lampion Satu dan Dua: Tandai dan Baca',
+          teks: 'Lampion satu meminta titik empat, dua ditandai di kisi: maju empat, naik dua, bendera kecil ditanam pas. Lampion dua membalik arahnya: sebuah titik menyala di kisi, dan tugasnya membaca alamatnya — maju tiga, naik tiga, jadi tiga koma tiga. Dua arah latihan itu saling menguatkan: bisa menempatkan titik dari alamatnya, dan bisa membacakan alamat dari titiknya.',
+        },
+        {
+          objek: 'misiKuadranSinyal', judul: 'Lampion Tiga: Daerah Mana?',
+          teks: 'Lampion tiga menyodorkan alamat minus tiga, koma minus dua dan menanyakan daerahnya tanpa menggambar. Baca tandanya: x minus, y minus — keduanya negatif — maka titik itu tinggal di daerah tiga, pojok kiri-bawah. Tanda alamat memang selalu membocorkan rumah daerahnya. Satu detik membaca tanda, satu jawaban tenang: lampion tiga padam dengan kemenangannya.',
+        },
+        {
+          objek: 'misiGarisTabelAkhir', judul: 'Lampion Empat dan Lima: Miring dan Garis',
+          teks: 'Lampion empat menantang kemiringan: sebuah jalur naik tiga setiap maju satu — berarti kemiringannya tiga, si paling tegak malam ini. Lampion lima menutup dengan tabel: y sama dengan x tambah satu. Isi tabelnya satu per satu: x nol jadi satu, x satu jadi dua, x dua jadi tiga — tiga titik ditanam, benang ditarik, dan garis lurus menyala di kisi malam. Lima lampion padam serempak, lapangan berkilau rapi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Seluruh Hutan Jadi Peta!',
+          teks: 'Lima misi ternyata memakai dua langkah yang sama berulang: maju lalu naik, baca tanda, hitung naik dibagi maju, isi tabel sampai garis lahir. Owalah, ternyata begini toh — kuasai sumbu, dan seluruh hutan berubah jadi peta yang ramah. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
