@@ -577,6 +577,286 @@ window.CERITA = (function () {
       ],
     },
 
+    /* ----- p2-021 · Huruf Pengganti Angka — kantor pos surat tersegel ----- */
+    'p2-021': {
+      tema: 'posRahasia',
+      npc: { glif: 'x', ucap: ['Si x itu', 'kotak misteri!'] },
+      stasiun: [
+        {
+          objek: 'suratTersegelX', judul: 'Surat Bernama x',
+          teks: 'Di kantor pos hutan terdapat satu surat bersegel lilin emas: alamatnya tidak menulis nama, hanya sebuah huruf besar x. Tukang pos menjelaskan, huruf itu adalah tempat kosong yang menunggu bilangan — begitu isinya ketahuan, surat langsung bisa dibawa berjalan. Jadi x bukan nama orang, melainkan kotak misteri yang menampung sebuah bilangan.',
+        },
+        {
+          objek: 'kotakKunciMisteri', judul: 'Kotak Berkunci',
+          teks: 'Di rak sebelah terdapat kotak kayu berkunci dengan huruf x terukir di tutupnya. Tukang pos mengetuk-ngetuknya: di dalam kotak itu tersimpan sebuah bilangan, dan seluruh hutan sudah sepakat memakai huruf x untuk menunjuk bilangan tersembunyi itu. Ketika kuncinya ditemukan, kotak terbuka, dan bilangan di dalamnya berhenti menjadi teka-teki.',
+        },
+        {
+          objek: 'amplopTerbukaEmpat', judul: 'Kotak Terbuka: Isinya 4',
+          teks: 'Kunci ditemukan, dan kotak misteri terbuka lebar: di dalamnya tergeletak kartu angka 4 berkilau. Artinya x = 4. Mulai sekarang, setiap kali huruf x muncul, kita boleh menggantinya dengan 4 — karena itulah isinya. Huruf dan bilangan tinggal menukar tempat, dan teka-teki selesai.',
+        },
+        {
+          objek: 'papanSuratKalimat', judul: 'Kalimat dengan Huruf',
+          teks: 'Papan pengumuman kantor pos menuliskan kalimat matematika pertama kita: x + 1 = 5. Kalau x adalah 4, maka 4 + 1 memang 5 — kalimat itu benar. Inilah aljabar pertama: kalimat matematika yang memakai huruf untuk menampung bilangan yang belum diketahui. Begitu hurufnya ketahuan, kalimat langsung bisa diperiksa kebenarannya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Huruf Bisa Jadi Angka!',
+          teks: 'Huruf x ternyata cuma kotak yang menampung bilangan: begitu isinya ketahuan, huruf diganti bilangan dan semua hitungan jalan sendiri. Kalimat x + 1 = 5 langsung terbaca benar saat x = 4. Owalah, ternyata begini toh — aljabar cuma kotak misteri yang dibuka. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-022 · Suku Sejenis Berkumpul — kebun apel senja ----- */
+    'p2-022': {
+      tema: 'kebunApel',
+      npc: { glif: '5x', ucap: ['Apel dengan apel,', 'jeruk dengan jeruk!'] },
+      stasiun: [
+        {
+          objek: 'rakKantongDuaTiga', judul: 'Dua Kantong dan Tiga Kantong',
+          teks: 'Senja turun di kebun apel hutan. Pet panen menyusun kantong di rak: dua kantong merah dan tiga kantong kuning, dan setiap kantong berisi porsi buah yang sama banyak, ditandai huruf x. Dua kantong itu ditulis 2x — dua porsi x; tiga kantong itu ditulis 3x — tiga porsi x. Bentuk 2x + 3x muncul sendiri di rak panen hari ini.',
+        },
+        {
+          objek: 'barisanKantongLima', judul: 'Semua Kantong Berjajar',
+          teks: 'Karena merah dan kuning sama-sama berisi porsi x, semua kantong boleh digabung jadi satu barisan: satu, dua, tiga, empat, lima. Lima kantong berisi porsi x berarti 5x. Maka 2x + 3x = 5x — yang sejenis boleh digabung, tinggal hitung banyak kantongnya.',
+        },
+        {
+          objek: 'keranjangApelJeruk', judul: 'Apel dan Jeruk Tak Dicampur',
+          teks: 'Di meja sebelah ada keranjang yang berbeda: keranjang apel dan keranjang jeruk. Pet panen tidak mencampurnya, karena apel dan jeruk beda jenis. Di aljabar juga begitu: 2a + 3b tidak bisa dijadikan satu angka, karena a dan b beda jenis. Beda jenis tetap dipisah — apel dengan apel, jeruk dengan jeruk.',
+        },
+        {
+          objek: 'papanSukuSejenis', judul: 'Papan Suku Sejenis',
+          teks: 'Papan kebun merangkum aturan panen: suku sejenis boleh digabung, suku beda jenis tetap berdiri sendiri. 2x + 3x = 5x karena sama-sama x; 2a + 3b tetap 2a + 3b karena a dan b berbeda. Dengan aturan ini, bentuk panjang bisa dirapikan tanpa takut salah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sejenis Boleh Digabung!',
+          teks: 'Menggabung suku ternyata cuma panen yang tertib: kantong yang sama isi boleh dihitung bersama, yang beda isi tetap di keranjangnya sendiri. 2x + 3x jadi 5x, dan 2a + 3b tetap santai berdua. Owalah, ternyata begini toh — aljabar mengikuti aturan kebun. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-023 · Mengali Bentuk Aljabar — gudang palet kotak ----- */
+    'p2-023': {
+      tema: 'gudangTumpuk',
+      npc: { glif: '6x', ucap: ['Kali semuanya', 'sekaligus!'] },
+      stasiun: [
+        {
+          objek: 'paletDuaKotak', judul: 'Satu Palet Dua Kotak',
+          teks: 'Di gudang simbol hutan, palet kayu pertama ditarik keluar: di atasnya tersusun dua kotak yang identik, dan setiap kotak berisi porsi barang sebesar x. Satu palet berisi dua kotak, maka isinya ditulis 2x. Palet inilah bintang utama pengiriman hari ini.',
+        },
+        {
+          objek: 'tigaPaletSejajar', judul: 'Tiga Palet Dipesan',
+          teks: 'Pengurus gudang mencatat pesanan besar: tiga palet seperti itu. Tiga palet yang masing-masing berisi 2x ditulis 3 x 2x. Perhatikan angka tiga di depan: ia mengalikan seluruh isi palet, bukan satu kotak saja. Angka yang menempel di depan bentuk aljabar punya nama: koefisien.',
+        },
+        {
+          objek: 'kotakGelindingEnam', judul: 'Semua Kotak Turun ke Lantai',
+          teks: 'Untuk membuktikannya, seluruh kotak diturunkan dari palet dan berjajar di lantai gudang: satu, dua, tiga, empat, lima, enam. Tiga palet berisi masing-masing dua kotak sama dengan enam kotak. Maka 3 x 2x = 6x — koefisien 3 benar-benar menyapa semua kotak.',
+        },
+        {
+          objek: 'papanKaliBentuk', judul: 'Papan Pengiriman',
+          teks: 'Papan gudang menulis catatan resmi hari ini: 3 x 2x = 6x. Caranya mudah: kalikan angkanya dulu — 3 x 2 sama dengan 6 — lalu tuliskan hurufnya. Berlaku juga untuk bentuk lain, seperti 4 x 3a = 12a. Koefisien selalu ikut terkalikan seluruhnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Koefisien Ikut Sekalian!',
+          teks: 'Mengali bentuk aljabar ternyata cuma memuat ulang palet: tiga palet isi dua kotak sama dengan enam kotak berjajar. Angka di depan ikut mengalikan semuanya, hurufnya tetap menempel. Owalah, ternyata begini toh — 3 x 2x cuma soal enam kotak. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-024 · Membuka Kurung — rumah kaca kuncup ----- */
+    'p2-024': {
+      tema: 'kacaKuncup',
+      npc: { glif: '2(', ucap: ['Sapa semua', 'di dalam kurung!'] },
+      stasiun: [
+        {
+          objek: 'duaPotKaca', judul: 'Dua Pot di Rumah Kaca',
+          teks: 'Di rumah kaca hutan berdiri dua pot kaca yang persis kembar. Setiap pot menampung satu paket tanaman yang sama: satu bibit muda berlabel x dan tiga kuncup bunga. Tulisan resminya: tiap pot berisi x + 3, dan jumlah potnya dua. Maka seluruh isian rumah kaca ditulis 2(x + 3).',
+        },
+        {
+          objek: 'isianPotPertama', judul: 'Kurung Masih Menggenggam',
+          teks: 'Kaca pot pertama digeser, dan isinya terlihat jelas: satu bibit x berdiri di tengah, dikelilingi tiga kuncup. Tanda kurung itu ibarat dinding kaca: ia menggenggam x + 3 supaya dianggap satu paket utuh. Selama kurung masih tertutup, paket itu belum dibagikan ke siapa pun.',
+        },
+        {
+          objek: 'rakIsianSemua', judul: 'Semua Paket Terbuka',
+          teks: 'Kini kedua pot dibuka sekaligus dan isinya disusun di rak panen: bibit x dari pot pertama dan bibit x dari pot kedua bergabung menjadi 2x; tiga kuncup dari pot pertama dan tiga kuncup dari pot kedua bergabung menjadi 6 kuncup. Angka 2 di luar kurung menyapa semuanya: 2(x + 3) = 2x + 6.',
+        },
+        {
+          objek: 'papanKurungTerbuka', judul: 'Papan Tukang Kebun',
+          teks: 'Papan tukang kebun merangkum cara membuka kurung: angka di luar menyapa setiap anggota di dalam, tak ada yang terlewat. 2(x + 3) menjadi 2x + 6, karena 2 x x = 2x dan 2 x 3 = 6. Lupa menyapa satu anggota saja, hasilnya langsung meleset.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semua Anggota Tersapa!',
+          teks: 'Membuka kurung ternyata cuma membuka dua pot kembar: paket x + 3 dibagikan dua kali, lahirlah 2x dan 6. Angka di luar menyapa semua anggota di dalam — rapi tanpa sisa. Owalah, ternyata begini toh — kurung cuma paket yang dibuka pelan-pelan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-025 · Menyisipkan Nilai — bengkel mesin stempel ----- */
+    'p2-025': {
+      tema: 'mesinStempel',
+      npc: { glif: 'x=4', ucap: ['Ganti huruf,', 'lalu hitung!'] },
+      stasiun: [
+        {
+          objek: 'papanSlotHuruf', judul: 'Mesin dengan Slot Kosong',
+          teks: 'Di bengkel hutan berdiri mesin stempel papan nama dengan satu slot kosong berlabel x di panelnya. Papan pekerjaan menuliskan tugas hari ini: hitung 2x + 1. Masalahnya, slot x masih kosong — mesin menolak berputar sebelum huruf itu diganti bilangan.',
+        },
+        {
+          objek: 'koinNilaiEmpat', judul: 'Koin Angka 4 Disisipkan',
+          teks: 'Pemilik bengkel mengambil koin angka 4 dan menambahkannya ke slot x. Seketika panel berbunyi: x = 4 diterima. Menyisipkan nilai seperti ini punya nama resmi: substitusi — mengganti huruf dengan bilangan yang sudah diketahui, lalu membiarkan mesin menghitung.',
+        },
+        {
+          objek: 'rodaMesinHitung', judul: 'Roda Mesin Berputar',
+          teks: 'Roda mesin berputar menghitung pelan-pelan: 2x berarti 2 x 4, sama dengan 8; lalu 8 + 1 sama dengan 9. Setiap langkah tercatat di panel: ganti dulu, kalikan dulu, baru tambahkan. Urutannya penting, dan mesin tidak pernah melompat.',
+        },
+        {
+          objek: 'strukHasilSembilan', judul: 'Struk Keluar: Hasil 9',
+          teks: 'Ding! Struk hasil tercetak: 2x + 1 = 9 ketika x = 4. Struk itu juga menuliskan pesan kecil: bilangan boleh berganti-ganti — coba lain kali x = 2, hasilnya 2 x 2 + 1 = 5. Substitusi bekerja untuk bilangan apa pun yang disisipkan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Ganti Lalu Hitung!',
+          teks: 'Menyisipkan nilai ternyata cuma dua langkah: ganti huruf dengan bilangannya, lalu hitung sesuai urutan. x = 4 membuat 2x + 1 menjadi 9 — dan bilangan lain pun akan dikerjakan sama rapi. Owalah, ternyata begini toh — substitusi cuma mesin yang diberi koin angka. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-026 · Merapikan Bentuk Panjang — teras kamar senja ----- */
+    'p2-026': {
+      tema: 'kamarRapi',
+      npc: { glif: '8x', ucap: ['Kumpulkan', 'yang sejenis!'] },
+      stasiun: [
+        {
+          objek: 'rakKartuBerantakan', judul: 'Kartu Berserakan',
+          teks: 'Di teras kamar hutan, angin tadi malam membenarkan kartu-kartu hitung di rak: 5x, −2, 3x, dan 4 berserakan tak berurutan. Bentuk panjang 5x − 2 + 3x + 4 memang terlihat ramai — seperti kamar yang belum dirapikan. Sebelum dihitung, kumpulkan dulu kartunya.',
+        },
+        {
+          objek: 'tumpukanSejenis', judul: 'Dua Tumpukan Terbentuk',
+          teks: 'Perapian dimulai: kartu yang ada huruf x-nya dikumpulkan ke tumpukan kiri — ada 5x dan 3x. Kartu angka biasa dikumpulkan ke tumpukan kanan — ada −2 dan 4. Dua tumpukan berdiri jelas, tidak ada kartu yang tertinggal di lantai.',
+        },
+        {
+          objek: 'kartuJadiTertata', judul: 'Hitung Tiap Tumpukan',
+          teks: 'Tumpukan kiri dihitung: 5x + 3x sama dengan 8x — suku sejenis yang bergabung, persis kantong panen kemarin. Tumpukan kanan dihitung: −2 + 4 sama dengan 2. Kini rak tampak lapang: cuma dua kartu rapi yang tersisa, 8x dan 2 — semuanya terhitung tanpa satu pun kartu tertukar.',
+        },
+        {
+          objek: 'papanBentukRapi', judul: 'Rak Kembali Rapi',
+          teks: 'Papan kamar menempelkan hasil perapian: 5x − 2 + 3x + 4 = 8x + 2. Bentuk panjang yang ramai kini pendek dan mudah dibaca. Rahasianya cuma satu: kumpulkan suku sejenis, hitung masing-masing, tulis ulang dengan tertib.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rapikan Dulu Beres!',
+          teks: 'Merapikan bentuk aljabar ternyata sama dengan merapikan kamar: pilah dulu yang sejenis, gabungkan, lalu susun ulang. 5x − 2 + 3x + 4 tinggal 8x + 2 — ringkas dan tak ada kartu yang hilang. Owalah, ternyata begini toh — bentuk panjang cuma kamar yang menunggu dirapikan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-027 · Pola Jadi Rumus — tangga kunang-kunang malam ----- */
+    'p2-027': {
+      tema: 'kunangTangga',
+      npc: { glif: '4n', ucap: ['Naik empat', 'tiap langkah!'] },
+      stasiun: [
+        {
+          objek: 'tanggaKunangEmpat', judul: 'Tangga yang Menyala',
+          teks: 'Malam tiba di hutan simbol, dan tangga batu tua mulai menyalakan lampunya: kunang-kunang hinggap di anak tangga bernilai 3, lalu 7, lalu 11, lalu 15. Deretan cahayanya membentuk pola yang tertib — naik dari bawah ke atas tanpa sekali pun meleset.',
+        },
+        {
+          objek: 'panahLompatEmpat', judul: 'Lompatan Empat-Demi-Empat',
+          teks: 'Dari 3 ke 7 naik 4. Dari 7 ke 11 naik 4 lagi. Dari 11 ke 15 naik 4 juga. Setiap langkah tangga selalu naik empat — itulah beda yang setia pada barisan ini. Pola yang setia seperti ini bisa dituliskan jadi rumus, sehingga kita tidak perlu menghitung anak tangga satu-satu.',
+        },
+        {
+          objek: 'anakTanggaKeN', judul: 'Anak Tangga Ke-n',
+          teks: 'Sekarang sebut anak tangga mana pun dengan n: anak tangga pertama n = 1, kedua n = 2, ketiga n = 3. Tiap langkah naik 4, ditulis 4 x n. Tapi cek dulu: 4 x 1 = 4, padahal anak tangga pertama bernilai 3 — selisihnya 1. Maka rumusnya 4n − 1.',
+        },
+        {
+          objek: 'papanRumusEmpatN', judul: 'Rumus Diuji Semua Anak Tangga',
+          teks: 'Papan uji di kaki tangga memeriksa rumusnya satu per satu: n = 1 memberi 4 x 1 − 1 = 3 — benar; n = 2 memberi 4 x 2 − 1 = 7 — benar; n = 3 memberi 4 x 3 − 1 = 11 — benar; n = 4 memberi 4 x 4 − 1 = 15 — benar lagi. Rumus 4n − 1 resmi menjadi nama tangga kunang itu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pola Muat Satu Baris!',
+          teks: 'Pola barisan ternyata bisa dikunci dalam rumus: lihat lompatannya (naik 4), tulis 4n, lalu betulkan selisihnya (−1). Deret 3, 7, 11, 15 kini muat dalam satu baris: 4n − 1 — anak tangga keberapa pun bisa dijawab cepat. Owalah, ternyata begini toh — rumus cuma pola yang ditulis ringkas. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-028 · Koefisien & Konstanta — tenda pendaki senja ----- */
+    'p2-028': {
+      tema: 'tendaPendaki',
+      npc: { glif: '3x', ucap: ['Yang menempel', 'koefisien namanya!'] },
+      stasiun: [
+        {
+          objek: 'rakTigaRansel', judul: 'Tiga Ransel Kembar',
+          teks: 'Di depan tenda pendaki hutan, tiga ransel kembar tergantung rapi di rak. Setiap ransel berisi porsi bekal yang sama banyak, ditandai huruf x. Tiga ransel berisi x ditulis 3x — dan angka tiga yang menempel di depan x itu punya nama: koefisien, si penghitung banyaknya kelompok.',
+        },
+        {
+          objek: 'batuLimaSendiri', judul: 'Batu Berdiri Sendiri',
+          teks: 'Di samping rak, satu batu besar berukir angka 5 berdiri sendiri tanpa menempel ransel apa pun. Ia tidak membawa huruf — namanya konstanta: bilangan yang tetap, tidak berubah walau isi ransel berganti. Dalam bentuk 3x + 5, dialah tamu yang berdiri sendiri.',
+        },
+        {
+          objek: 'papanNamaBagian', judul: 'Papan Nama Bagian',
+          teks: 'Papan depan tenda membagi-bagikan nama dengan jelas: 3 adalah koefisien, x adalah huruf penampung bilangan, dan 5 adalah konstanta. Tiap bagian punya tugas: koefisien menghitung banyak kelompok, huruf menampung isinya, konstanta berdiri tetap.',
+        },
+        {
+          objek: 'tendaBekalPenuh', judul: 'Catatan Bekal Pendaki',
+          teks: 'Buku catatan tenda menuliskan bekal rombongan hari ini: 3x + 5 — tiga ransel berisi x plus lima roti tambahan. Kalau besok ranselnya bertambah satu, bentuknya berubah jadi 4x + 5: koefisien boleh berganti, tetapi konstanta 5 tetap duduk di tempatnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Nama Tiap Bagian!',
+          teks: 'Di 3x + 5 ternyata ada alamat lengkap: 3 si koefisien yang menempel, x si huruf penampung, dan 5 si konstanta yang berdiri sendiri. Mengenali nama tiap bagian membuat bentuk aljabar tak lagi terlihat ramai. Owalah, ternyata begini toh — bentuk aljabar cuma tim kecil dengan tugas masing-masing. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-029 · Membaca Bentuk Aljabar — ladang bunga pagi ----- */
+    'p2-029': {
+      tema: 'ladangBunga',
+      npc: { glif: '2a', ucap: ['Bentuk', 'punya cerita!'] },
+      stasiun: [
+        {
+          objek: 'petakBungaA', judul: 'Dua Petak Bunga a',
+          teks: 'Pagi di ladang bunga hutan. Di sebelah kiri terbentang dua petak bunga putih, dan setiap petak berisi sejumput bunga yang jumlahnya ditandai huruf a. Dua petak berisi a ditulis 2a — kalimat singkat untuk dua kelompok a.',
+        },
+        {
+          objek: 'petakBungaB', judul: 'Tiga Petak Bunga b',
+          teks: 'Di sebelah kanan ladang, tiga petak bunga merah tersusun berjajar. Setiap petak berisi sejumput bunga berlabel b. Tiga petak berisi b ditulis 3b — tiga kelompok b. Ladang hari ini menanam dua jenis kelompok: kelompok a dan kelompok b.',
+        },
+        {
+          objek: 'ladangTerbaca', judul: 'Ladang Jadi Kalimat',
+          teks: 'Penjaga ladang membaca seluruh petak dalam satu kalimat pendek: 2a + 3b — dua kelompok a ditambah tiga kelompok b. Bentuk aljabar memang kalimat singkat tentang banyak bilangan: ia menceritakan susunan kelompok tanpa perlu menyebut jumlah bunganya satu-satu.',
+        },
+        {
+          objek: 'papanDuaA3B', judul: 'Kalimat yang Bisa Diisi',
+          teks: 'Papan ladang mencoba kalimatnya dengan isi nyata: bila a = 2 dan b = 1, maka 2a + 3b sama dengan 2 x 2 + 3 x 1, yaitu 7. Bila isinya berganti, kalimatnya pun ikut menyesuaikan. Itulah kekuatan bentuk aljabar: satu tulisan, berbagai kemungkinan isi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Bentuk Punya Cerita!',
+          teks: 'Membaca 2a + 3b ternyata sama dengan membaca ladang: dua petak berlabel a dan tiga petak berlabel b, berjajar rapi dalam satu kalimat. Begitu huruf-hurufnya diberi isi, kalimat itu menghitung dirinya sendiri. Owalah, ternyata begini toh — bentuk aljabar cuma ladang yang ditulis singkat. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-030 · Tantangan Rumus Hutan — menara jaga malam ----- */
+    'p2-030': {
+      tema: 'menaraTantang',
+      npc: { glif: '?', ucap: ['Lima misi', 'di menara!'] },
+      stasiun: [
+        {
+          objek: 'menaraLimaMisi', judul: 'Menara Lima Misi',
+          teks: 'Di penjuru terakhir Aljabar Pertama berdiri menara jaga tua dengan lima jendela menyala. Papan di kakinya menuliskan lima misi rumus: rumuskan barisan, buka kurung, gabungkan suku, sisipkan nilai, dan baca bentuk aljabar. Selesaikan satu misi, satu jendela makin terang.',
+        },
+        {
+          objek: 'jendelaPolaBarisan', judul: 'Misi Barisan dan Rumusnya',
+          teks: 'Jendela pertama menampilkan barisan 5, 9, 13, dan satu kartu tanda tanya. Bedanya empat terus-menerus, maka tanda tanya itu 17. Jendela kedua meminta rumusnya: naik 4 ditulis 4n, dan karena 4 x 1 = 4 tetapi barisannya mulai dari 5, diperlukan koreksi +1 — rumusnya 4n + 1. Dua jendela pun menyala lebih terang.',
+        },
+        {
+          objek: 'jendelaKurungSuku', judul: 'Misi Kurung dan Suku',
+          teks: 'Jendela ketiga menguji kurung: 3(x + 2) dibuka dengan menyapa kedua anggota — hasilnya 3x + 6. Jendela keempat menguji suku sejenis: 4x + 2x digabung menjadi 6x. Dua pemeriksaan itu lulus, dan dua jendela lagi ikut menyala.',
+        },
+        {
+          objek: 'jendelaNilaiHuruf', judul: 'Misi Terakhir: Sisipkan Nilai',
+          teks: 'Jendela puncak memberi soal pamungkas: bila x = 3, berapakah 2x + 1? Ganti dulu hurufnya: 2 x 3 sama dengan 6, lalu 6 + 1 sama dengan 7. Jendela puncak menyala paling terang — lima misi rumus hutan resmi selesai.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Ahli Rumus Hutan!',
+          teks: 'Barisan dilanjutkan, kurung dibuka, suku digabung, nilai disisipkan — semua jurus Aljabar Pertama kini ada di genggamanmu. Kembalilah ke gerbang pusat hutan: tujuh penjuru lain masih menunggu penjelajah yang pandai membaca huruf. Owalah, ternyata begini toh — aljabar cuma bahasa rapi untuk bilangan yang belum ketahuan. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
