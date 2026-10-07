@@ -1417,6 +1417,286 @@ window.CERITA = (function () {
       ],
     },
 
+    /* ----- p2-051 · Mengenal Sudut — gerbang benteng fajar ----- */
+    'p2-051': {
+      tema: 'gerbangSiku',
+      npc: { glif: '90', ucap: ['Bukaan pintu', 'ada ukurannya!'] },
+      stasiun: [
+        {
+          objek: 'gerbangTerbukaSiku', judul: 'Gerbang yang Membuka Lebar',
+          teks: 'Fajar menyingsing di gerbang benteng hutan. Penjaga mendorong daun pintu besar hingga membuka lebar, lalu menunjuk celahnya. "Lihat," katanya, "bukaan antara pintu dan tembok itu punya ukuran." Bukan panjangnya yang diukur, melainkan keterbukaannya — dari tempat kedua garis itu bertemu sampai ke kedua ujungnya. Bukaan itulah yang disebut sudut: ia selalu lahir dari dua garis yang berjumpa di satu titik.',
+        },
+        {
+          objek: 'sikuKayuTukang', judul: 'Siku Kayu Sang Tukang',
+          teks: 'Penjaga mengeluarkan siku kayu dari sakunya dan menempelkannya di pojok gerbang. Siku kayu itu membentuk bukaan yang pas — tidak sempit, tidak melar. "Bukaan seperti ini bernama sudut siku," katanya, "ukurannya sembilan puluh derajat. Namanya memang diambil dari siku lengan kita: bukaan yang pas saat kita menyapa teman." Tukang bangun membawa siku ke mana-mana, karena sudut siku adalah bukaan paling setia untuk pojok rumah.',
+        },
+        {
+          objek: 'pembukaLancipTumpul', judul: 'Tiga Bukaan, Tiga Nama',
+          teks: 'Gerbang itu pun dicoba dibuka dengan tiga cara. Dibuka sedikit saja, bukaannya sempit dan lancip — lebih kecil dari siku. Dibuka sampai siku kayu pas menempel, itulah sudut siku sembilan puluh derajat. Dibuka lebih lebar lagi, bukaannya menjadi tumpul — lebih besar dari siku. Lancip artinya kurus, siku artinya pas, tumpul artinya lebar. Tiga nama sederhana untuk tiga bukaan yang berbeda.',
+        },
+        {
+          objek: 'papanJenisSudut', judul: 'Papan Penjaga Gerbang',
+          teks: 'Papan kayu di sisi gerbang menuliskan pelajaran pagi itu: sudut adalah bukaan dua garis yang bertemu di satu titik; lancip lebih kecil dari sembilan puluh derajat, siku tepat sembilan puluh, tumpul lebih besar dari sembilan puluh. Penjaga tersenyum, "Sudut ada di mana-mana: buku yang terbuka, jendela, jemuran, bahkan belah ketupat si kakak." Siapa membiasakan diri melihat bukaan, sedetik pun langsung mengenali namanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Bukaan Punya Nama dan Ukuran!',
+          teks: 'Sudut ternyata cuma bukaan dua garis yang bertemu, dan bukaan itu punya tiga nama akrab: lancip yang sempit, siku yang pas sembilan puluh derajat, dan tumpul yang lebar. Owalah, ternyata begini toh — setiap pintu yang membuka sedang memperkenalkan sudut kepada kita. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-052 · Sudut Garis Lurus — jembatan siang ----- */
+    'p2-052': {
+      tema: 'jembatanRata',
+      npc: { glif: '70', ucap: ['Selalu berdua', 'berjumlah 180!'] },
+      stasiun: [
+        {
+          objek: 'dekJembatanLurus', judul: 'Dek Jembatan yang Lurus',
+          teks: 'Siang di jembatan hutan. Deknya lurus memanjang dari ujung ke ujung, bagai garis yang ditarik tanpa melengkung. Penjaga jembatan mengusap dek itu dan berkata, "Garis lurus ini menyimpan angka ajaib: seratus delapan puluh derajat." Sebab garis lurus adalah separuh dari putaran penuh — dan separuh putaran penuh tepat berjumlah seratus delapan puluh derajat.',
+        },
+        {
+          objek: 'duaSudutBerbagi', judul: 'Dua Sudut Berbagi Satu Garis',
+          teks: 'Di tengah dek berdiri sebuah tiang, dan di sekelilingnya dua tanda sudut menghadap ke arah yang berlawanan. Penjaga menjelaskan, "Kedua sudut itu berbagi satu garis lurus: yang satu di kiri tiang, yang satu di kanan." Karena garisnya sendiri berjumlah seratus delapan puluh derajat, maka dua sudut yang berbagi garis itu pun selalu berjumlah seratus delapan puluh derajat. Mereka membagi rata warisan garisnya.',
+        },
+        {
+          objek: 'sudutSeratusSepuluh', judul: 'Sudut 110 Menyala',
+          teks: 'Petunjuk lalu lintas di jembatan itu menyala: sudut pertama terukur seratus sepuluh derajat. Berapa pasangannya? Tinggal dikurangkan: seratus delapan puluh dikurangi seratus sepuluh sama dengan tujuh puluh. Tanpa mengukur ulang pun jawabannya pasti: sudut kedua berjumlah tujuh puluh derajat. Mereka ibarat dua sahabat yang berbagi satu jajang — kalau yang satu ambil seratus sepuluh, sisanya untuk yang kembarannya.',
+        },
+        {
+          objek: 'papanSelaluBerdua', judul: 'Papan Penengah Jembatan',
+          teks: 'Papan penengah di ujung jembatan menuliskan temuan hari ini: dua sudut di garis lurus selalu berjumlah seratus delapan puluh — mereka tidak pernah berselisih, garis lurus menjadi penengahnya. Coba sudut lain: bila yang pertama empat puluh, pasangannya seratus empat puluh; bila yang pertama sembilan puluh, pasangannya juga sembilan puluh. Pasangan itu selalu berdua, dan jumlahnya tak pernah bergeser walau sedikit.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Garis Lurus Jadi Penengah!',
+          teks: 'Dua sudut di garis lurus ternyata selalu berbagi seratus delapan puluh derajat: kenali yang satu, pasangannya langsung ketahuan tanpa perlu mengukur lagi. Owalah, ternyata begini toh — garis lurus adalah penengah paling jujur di hutan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-053 · Sudut Bertemu di Titik — bukit kincir siang ----- */
+    'p2-053': {
+      tema: 'putaranKincir',
+      npc: { glif: '360', ucap: ['Satu putaran', 'penuh 360!'] },
+      stasiun: [
+        {
+          objek: 'kincirPenuh', judul: 'Kincir yang Berputar Penuh',
+          teks: 'Siang cerah di bukit kincir. Empat bilah kincir berputar pelan, sekali lagi sekali, sampai kembali ke arah semula. Penjaga bukit bertepuk tangan, "Satu putaran penuh itu berjumlah tiga ratus enam puluh derajat!" Jadi bila sebuah garis berputar sampai kembali ke tempatnya berdiri, ia baru saja menempuh tiga ratus enam puluh derajat — angka si putaran penuh.',
+        },
+        {
+          objek: 'empatSudutBertemu', judul: 'Empat Bilah di Poros',
+          teks: 'Kincir berhenti, dan keempat bilahnya berhenti di poros yang sama. Di titik poros itu terbentuk empat sudut sekaligus, duduk berdampingan mengelilingi satu titik. Penjaga berkata, "Sudut-sudut yang berkumpul di satu titik selalu berjumlah tiga ratus enam puluh derajat — sama dengan satu putaran penuh." Sebab keempatnya bersama-sama mengisi seluruh ruang di sekeliling titik itu.',
+        },
+        {
+          objek: 'sudutSisaKincir', judul: 'Sisa yang Menutup',
+          teks: 'Kincir terhenti pada posisi yang aneh: sudut pertama seratus dua puluh, sudut kedua sembilan puluh, sudut ketiga sembilan puluh. Ketiganya berjumlah tiga ratus. Sisa ruang di poros tinggal enam puluh derajat — itulah ukuran sudut keempat, tanpa perlu diukur langsung. Semakin banyak sudut yang sudah diketahui, semakin kecil sisa yang harus dicari: kurangkan dari tiga ratus enam puluh, dan yang tertinggal itulah jawabannya.',
+        },
+        {
+          objek: 'papanPutaranPenuh', judul: 'Papan Poros Bukit',
+          teks: 'Papan di kaki bukit menuliskan pelajaran poros: semua sudut yang bertemu di satu titik berjumlah tiga ratus enam puluh derajat. Jarum jam pun demikian — dari angka dua belas kembali ke dua belas, ia melalui tiga ratus enam puluh derajat. Kincir berhenti di posisi mana pun, jumlah sudut di porosnya tetap tiga ratus enam puluh; yang berubah cuma pembagian di antara para sudut.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Putaran Selalu 360!',
+          teks: 'Sudut yang berkumpul di satu titik ternyata selalu mengisi satu putaran penuh: tiga ratus enam puluh derajat, tak lebih dan tak kurang. Kenali sebagian, sisanya langsung ketahuan. Owalah, ternyata begini toh — poros kincir menyimpan pelajaran yang sama dengan jarum jam. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-054 · Rahasia Segitiga — meja kertas malam ----- */
+    'p2-054': {
+      tema: 'mejaKertas',
+      npc: { glif: '180', ucap: ['Robek lalu', 'buktikan!'] },
+      stasiun: [
+        {
+          objek: 'segitigaKertasTiga', judul: 'Segitiga dari Kertas',
+          teks: 'Malam di meja kerja hutan. Seorang penerang lampu memotong kertas menjadi segitiga, lalu menandai ketiga sudutnya dengan tiga warna: lima puluh, enam puluh, dan tujuh puluh derajat. Ia menggoyangkan segitiganya sambil bertanya, "Tebak: apa rahasia yang disimpan ketiga sudut ini?" Meja itu hening sejenak — lalu ia tersenyum, sebab jawabannya bisa dibuktikan dengan tangan sendiri.',
+        },
+        {
+          objek: 'robekTigaSudut', judul: 'Robek Ketiga Sudutnya',
+          teks: 'Lalu dilakukanlah eksperimen paling sering diulang di seluruh hutan: ketiga sudut segitiga kertas itu dirobek satu per satu. Robekan kecil berisi tiap sudut, lengkap dengan tandanya, terkatung-katung di atas meja. "Jangan takut merusak segitiganya," kata penerang lampu, "justru dengan merobeknya, rahasianya baru mau bicara." Segitiga itu pun menjadi tiga kepingan kecil yang siap dipanggil bersaksi.',
+        },
+        {
+          objek: 'tempelJadiGaris', judul: 'Tempel Berjajar: Garis Lurus!',
+          teks: 'Ketiga kepingan sudut ditempel berjajar di atas satu garis, sisi ke sisi. Dan terjadilah kejutan malam itu: ketiganya menyambung rapat membentuk garis lurus sempurna! Garis lurus berjumlah seratus delapan puluh derajat — maka lima puluh ditambah enam puluh ditambah tujuh puluh memang seratus delapan puluh. Segitiga ternyata menyembunyikan garis lurus di dalam perutnya, dan hanya robekan kecil yang sanggup membuktikannya.',
+        },
+        {
+          objek: 'papanBuktiRobek', judul: 'Papan Bukti Malam',
+          teks: 'Papan bukti di dinding meja menuliskan kesimpulan: jumlah ketiga sudut segitiga selalu seratus delapan puluh derajat, bagaimanapun bentuknya. Segitiga kurus, segitiga gemuk, segitiga hampir tegak — semua punya rahasia yang sama. Coba cek: empat puluh ditambah enam puluh ditambah delapan puluh, seratus delapan puluh; tiga puluh ditambah tujuh puluh ditambah delapan puluh, tetap seratus delapan puluh. Siapa pun boleh merobek kertasnya sendiri — jawabannya tak pernah berubah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Segitiga Menyimpan Garis Lurus!',
+          teks: 'Ketiga sudut segitiga ternyata selalu berjumlah seratus delapan puluh derajat — dan buktinya bisa dibuat malam ini juga: robek ketiga sudutnya, tempel berjajar, jadilah garis lurus. Owalah, ternyata begini toh — segitiga memang menyimpan garis lurus di perutnya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-055 · Segiempat & Sudutnya — rumah jendela senja ----- */
+    'p2-055': {
+      tema: 'jendelaRumah',
+      npc: { glif: '4x90', ucap: ['Dua segitiga', 'bersandar!'] },
+      stasiun: [
+        {
+          objek: 'jendelaEmpatSiku', judul: 'Jendela Empat Sudut Siku',
+          teks: 'Senja turun di rumah kayu hutan, dan jendelanya mulai menyala hangat. Jendela itu berbentuk persegi panjang dengan empat sudut yang semuanya siku. Empat sudut siku dikali sembilan puluh derajat, hasilnya tiga ratus enam puluh — tepat satu putaran penuh! Persoalannya lalu meloncat: apakah segiempat bentuk lain juga berjumlah tiga ratus enam puluh, atau hanya jendela yang patuh ini?',
+        },
+        {
+          objek: 'duaSegitigaSahabat', judul: 'Dua Segitiga Bersandar',
+          teks: 'Bapak kayu datang membawa jawaban yang manis. Ia menggambar diagonal pada jendela, sehingga segiempat terbelah menjadi dua segitiga yang bersandar satu sama lain. "Tahu sudah pelajaran kemarin: tiap segitiga berjumlah seratus delapan puluh derajat." Dua segitiga berarti dua kali seratus delapan puluh. Perhatikan pula: potongan diagonal itu membelah dua sudut jendela, sehingga saat disatukan kembali, tak ada sudut yang hilang.',
+        },
+        {
+          objek: 'gabungSegiempat', judul: 'Dua Jadi Satu',
+          teks: 'Seratus delapan puluh ditambah seratus delapan puluh sama dengan tiga ratus enam puluh — jawabannya sama dengan jendela yang empat sudutnya siku! Jadi segiempat apa pun, berapapun bentuknya, jumlah keempat sudutnya selalu tiga ratus enam puluh derajat. Coba cek bentuk paling miring sekalipun: tiga puluh ditambah seratus lima puluh, enam puluh ditambah seratus dua puluh — dua pasang, keduanya berjumpa di tiga ratus enam puluh.',
+        },
+        {
+          objek: 'papanDuaKaliSeratus', judul: 'Papan Rumah Senja',
+          teks: 'Papan di dinding rumah menuliskan pelajaran senja itu: jumlah sudut segiempat selalu tiga ratus enam puluh derajat, karena segiempat adalah dua segitiga yang bersandar — seratus delapan puluh kali dua. Rumah paling bengkok pun tetap patuh pada angka ini. Maka begitulah keluarga sudut: segitiga seratus delapan puluh, segiempat tiga ratus enam puluh — angkanya berlipat, kebiasaannya setia.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Seratus Delapan Puluh Berjumpa Lagi!',
+          teks: 'Jumlah sudut segiempat ternyata selalu tiga ratus enam puluh derajat — cukup lihat dia sebagai dua segitiga bersandar, dan dua seratus delapan puluh langsung berjumpa. Owalah, ternyata begini toh — jendela, pintu, dan papan tulis semuanya memakai rahasia yang sama. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-056 · Garis Sejajar Terpotong — rel kereta pagi ----- */
+    'p2-056': {
+      tema: 'relKereta',
+      npc: { glif: '=Z', ucap: ['Sudut kembar', 'di rel!'] },
+      stasiun: [
+        {
+          objek: 'relSejajarKereta', judul: 'Dua Rel yang Tak Pernah Bertemu',
+          teks: 'Pagi di lintasan kereta hutan. Dua rel membentang lurus berdampingan: jarangnya sama, arahnya sama, dan keduanya tak pernah bertemu di ujung mana pun. Hubungan setia seperti itu punya nama: sejajar. Petugas rel berkata, "Rel boleh tak pernah bertemu, tetapi keduanya tetap saling meniru — dan pengikutnya justru sebuah garis miring yang akan datang sebentar lagi."',
+        },
+        {
+          objek: 'garisMiringTerpotong', judul: 'Garis Miring Mengutip',
+          teks: 'Lalu datanglah tiang sinyal yang miring, melintang memotong kedua rel sekaligus. Di setiap tempat ia berjumpa rel, terbentuklah sudut. Sekilas tampak empat sudut di rel atas dan empat sudut di rel bawah — banyak sekali! Namun petugas rel menyeringai, "Tenang, tidak ada satu pun sudut di sini yang perlu diukur dua kali. Garis miring ini cuma sekali mengutip, lalu menyalinnya ke rel sebelah."',
+        },
+        {
+          objek: 'sudutZBerpasangan', judul: 'Sudut Kembar Pola Z',
+          teks: 'Perhatikan polanya: satu sudut di rel atas dan satu sudut di rel bawah menempel pada garis miring yang sama, membentuk huruf Z. Sudut-sudut posisi Z itu selalu sama besar — sama sekali sama, bukan mirip. Pola huruf F pun demikian: sudut yang sejajar arahnya saling menyalin. Sebab kedua rel itu sejajar, sehingga kemiringan yang sama harus membentuk bukaan yang sama di kedua tempat.',
+        },
+        {
+          objek: 'papanPolaSejajar', judul: 'Papan Petugas Rel',
+          teks: 'Papan petugas di tepi lintasan menuliskan hukum pagi itu: bila dua garis sejajar dipotong sebuah garis miring, sudut-sudut yang berpasangan sama besar — pola Z sama, pola F sama, dan seisi rel pun rapi. Berapa pun kemiringan tiang sinyal, baik seratus sepuluh derajat maupun enam puluh, kedua rel tetap mendapat salinan yang sama persis. Sampai ujung lintasan, pola itu tak pernah lelah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sejajar Berarti Kembar!',
+          teks: 'Garis sejajar yang dipotong garis miring ternyata memakai sudut kembar: pola Z sama besar, pola F sama besar, dan tak ada yang perlu diukur dua kali. Owalah, ternyata begini toh — rel kereta adalah papan tulis terpanjang untuk pelajaran sudut. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-057 · Teorema Pythagoras — lantai ubin siang ----- */
+    'p2-057': {
+      tema: 'lantaiUbin',
+      npc: { glif: '25', ucap: ['Ubin miring', 'menyimpan rahasia!'] },
+      stasiun: [
+        {
+          objek: 'segitigaUbinSiku', judul: 'Segitiga Siku di Lantai',
+          teks: 'Siang di lantai ubin hutan yang putih bersih. Pengatur ubin menata ubin-ubin kecil menjadi sebuah segitiga siku-siku: sisi alas tiga kotak, sisi tegak empat kotak, dan sisi miring lima kotak. Lalu ia membawa tiga tali, masing-masing akan dipakai membentuk kotak di ketiga sisi segitiga itu. "Hari ini," katanya, "lantai ini akan membuktikan rahasia yang dipakai tukang bangun sejak kuno."',
+        },
+        {
+          objek: 'kotakSembilanAlas', judul: 'Kotak Kecil Bersisi 3',
+          teks: 'Tali pertama ditarik mengelilingi sisi alas, membentuk kotak bersisi tiga. Berapa ubin kecil yang muat di dalamnya? Tiga baris berisi tiga: tiga kali tiga sama dengan sembilan. Perhatikan: sisi segitiga diukur dengan kotak, dan luasnya pun dihitung dengan kotak — sisi tiga menghasilkan sembilan. Angka sembilan itulah yang kelak dipakai untuk membandingkan dengan dua kotak lainnya.',
+        },
+        {
+          objek: 'kotakEnamBelasTinggi', judul: 'Kotak Bersisi 4',
+          teks: 'Tali kedua mengelilingi sisi tegak, membentuk kotak bersisi empat. Empat baris berisi empat: empat kali empat sama dengan enam belas ubin kecil. Kini dua kotak sudah punya angka masing-masing: sembilan di alas, enam belas di tegak. Pengatur ubin berbisik, "Sekarang jumlahkan keduanya, lalu lihat apa yang terjadi pada kotak terbesar yang menempel di sisi miring."',
+        },
+        {
+          objek: 'kotakDuaLimaMiring', judul: 'Kotak Besar Bersisi 5',
+          teks: 'Tali ketiga membentuk kotak besar di sisi miring: lima kali lima sama dengan dua puluh lima. Dan kejutannya terbuka: sembilan ditambah enam belas sama dengan dua puluh lima — persis sama! Luas kotak di sisi miring selalu sama dengan jumlah luas dua kotak lainnya. Itulah teorema Pythagoras: kali-diri-lalu-jumlahkan pada dua sisi siku, dan sisi miring tak pernah memungkiri. Konon tukang bangun memakainya sejak zaman kuno, jauh sebelum ada alat ukur modern.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Ubin Miring Membuktikan Sendiri!',
+          teks: 'Rahasia segitiga siku ternyata bisa dibaca di lantai: kotak sisi tiga berisi sembilan, kotak sisi empat berisi enam belas, dan keduanya berjumpa tepat di kotak sisi lima yang berisi dua puluh lima. Owalah, ternyata begini toh — kali-diri lalu jumlahkan, dan sisi miring selalu setia. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-058 · Segitiga Andalan 3-4-5 — bengkel meja siang ----- */
+    'p2-058': {
+      tema: 'bengkelMeja',
+      npc: { glif: '3 4 5', ucap: ['Meja goyang?', 'pasang palang!'] },
+      stasiun: [
+        {
+          objek: 'mejaGoyangEmpat', judul: 'Meja yang Goyang',
+          teks: 'Siang di bengkel tukang kayu. Sebuah meja empat kaki di bawa masuk sambil goyang-goyang — ditempel sedikit saja ia berayun seperti perahu. Tukang kayu memeriksanya dan langsung menemukan biang keladinya: satu pojok meja tidak siku, bukaannya sedikit meleset dari sembilan puluh derajat. "Kaki sudah sama panjang," katanya, "tetapi sudutnya yang bohong. Untuk sudut, kami punya jurus andalan berupa tiga potongan palang."',
+        },
+        {
+          objek: 'palangDiagonal', judul: 'Palang Diagonal 5 Jengkal',
+          teks: 'Tukang kayu mengukur dua sisi pojok meja: tiga jengkal ke arah panjang, empat jengkal ke arah lebar. Lalu ia memotong satu palang selebat lima jengkal dan memaku palang itu secara diagonal, menjembatani ujung kedua sisi. Palang diagonal itu kini duduk di sisi miring sebuah segitiga siku — segitiga bersisi tiga, empat, lima, segitiga paling ternama di dunia tukang bangun.',
+        },
+        {
+          objek: 'mejaKokohSiku', judul: 'Meja Berhenti Goyang',
+          teks: 'Sesaat setelah palang dipaku, meja itu berhenti goyang — ditempak sedikit pun tak berayun! Sebab segitiga bersisi tiga, empat, lima selalu membentuk sudut siku yang sempurna: tiga kali tiga ditambah empat kali empat sama dengan sembilan ditambah enam belas, dan hasilnya dua puluh lima, persis lima kali lima. Palang kecil itu memaksa pojok meja kembali ke sembilan puluh derajat, dan meja pun kokoh seperti baru.',
+        },
+        {
+          objek: 'papanTigaEmpatLima', judul: 'Papan Rahasia Tukang',
+          teks: 'Papan di dinding bengkel menuliskan jurus yang diwariskan turun-temurun: pasangan tiga-empat-lima selalu membentuk sudut siku, karena sembilan ditambah enam belas sama dengan dua puluh lima. Perbesar dua kali menjadi enam-delapan-sepuluh, sudutnya tetap siku; konon tukang bangun sejak kuno memakai pasangan ajaib ini sebelum alat pengukur sudut ditemukan. Tiga potongan kayu murahan ternyata lebih jujur daripada mata paling tajam.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Palang Kecil Menyelamatkan Meja!',
+          teks: 'Meja goyang ternyata cuma butuh segitiga andalan tiga-empat-lima: sembilan ditambah enam belas sama dengan dua puluh lima, sudut siku pun kembali, dan goyangan pun pamit. Owalah, ternyata begini toh — palang diagonal adalah matematika yang memaku dirinya sendiri. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-059 · Mencari Sisi yang Hilang — tangga dinding malam ----- */
+    'p2-059': {
+      tema: 'dindingTangga',
+      npc: { glif: '6-8-10', ucap: ['Tangga, dinding,', 'tanah!'] },
+      stasiun: [
+        {
+          objek: 'tanggaSandingDinding', judul: 'Tangga Sanding Dinding',
+          teks: 'Malam di halaman menara. Sebuah tangga sepanjang sepuluh meter disandarkan ke dinding, dan di bawahnya terbentuk segitiga siku: tangga menjadi sisi miring, dinding menjadi sisi tegak, dan tanah menjadi sisi alas. Penjaga menara berkata, "Tangga ini punya tiga sahabat: panjang tangga, jarak kakinya dari dinding, dan tinggi puncaknya. Kalau dua di antaranya diketahui, yang ketiga tak mungkin bersembunyi."',
+        },
+        {
+          objek: 'jarakEnamLangkah', judul: 'Kaki Tangga Enam Meter',
+          teks: 'Petugas mengukur jarak kaki tangga dari dinding: enam meter. Itulah sisi alas segitiga. Kini dua data sudah di tangan — tangga sepuluh meter, alas enam meter — dan tinggi puncaknya tinggal menunggu untuk dipanggil. Caranya memakai jurus kemarin: kali-diri dulu setiap sisi yang diketahui. Sepuluh kali sepuluh sama dengan seratus, enam kali enam sama dengan tiga puluh enam.',
+        },
+        {
+          objek: 'tinggiDelapanPuncak', judul: 'Puncak di Delapan Meter',
+          teks: 'Sisi miring selalu paling besar, maka sisi tegak dicari dengan mengurangkan: seratus dikurangi tiga puluh enam sama dengan enam puluh empat. Angka enam puluh empat itu adalah kali-diri dari tinggi puncak — berapa yang bila dikali dirinya sendiri menghasilkan enam puluh empat? Delapan! Maka puncak tangga menempel di dinding tepat delapan meter dari tanah. Tangga, dinding, dan tanah membentuk segitiga enam-delapan-sepuluh yang saling menjaga.',
+        },
+        {
+          objek: 'papanSisiHilang', judul: 'Papan Pencari yang Hilang',
+          teks: 'Papan di dinding menara menuliskan jurus pencari yang hilang: kali-diri sisi yang diketahui, kurangkan yang lebih besar dari yang kecil, lalu temukan bilangan yang kali-dirinya menghasilkan sisa itu. Coba ditukar: bila kaki tangga dipindah menjauh menjadi delapan meter, tingginya justru turun menjadi enam — seratus dikurangi enam puluh empat sama dengan tiga puluh enam. Tangga yang makin jauh dari dinding memang makin rendah panjatnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tangga Menemukan Tingginya!',
+          teks: 'Sisi yang hilang ternyata tak pernah benar-benar hilang: kali-diri yang diketahui, kurangkan, lalu panggil bilangan yang kali-dirinya cocok — seratus dikurangi tiga puluh enam sama dengan enam puluh empat, dan delapan pun muncul. Owalah, ternyata begini toh — tangga, dinding, dan tanah memang trio yang tak bisa bersembunyi satu sama lain. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-060 · Tantangan Sudut Hutan — balai geometri malam ----- */
+    'p2-060': {
+      tema: 'balaiGeometri',
+      npc: { glif: '45', ucap: ['Lima misi', 'menantimu!'] },
+      stasiun: [
+        {
+          objek: 'arenaMisiGeometri', judul: 'Balai Lima Misi Geometri',
+          teks: 'Malam di balai geometri, aula paling dalam hutan simbol. Lima lentera besar menyala di dinding, dan tiap lentera menjaga satu misi sudut. Penjaga balai — bola-lentera tanpa wajah yang berdiri tenang — menyapa tanpa suara, sebab balai ini hanya menerima pembaca yang cermat. Papan di tengah menuliskan: selesaikan kelima misi, dan penjuru geometri akan menyimpan namamu di jantung hutan.',
+        },
+        {
+          objek: 'misiBukaanSudut', judul: 'Misi Satu dan Dua',
+          teks: 'Misi satu membuka pintu balai: bukaan pintu itu harus dikenali — sembilan puluh derajat, maka pintu terbuka dengan sudut siku yang sempurna. Misi dua menantang di garis lurus: satu sudut berukuran seratus lima, berapa pasangannya? Seratus delapan puluh dikurangi seratus lima sama dengan tujuh puluh lima. Dua lentera pertama pun melemas cahayanya, seolah mengangguk puas.',
+        },
+        {
+          objek: 'misiSegitigaPutaran', judul: 'Misi Tiga dan Empat',
+          teks: 'Misi tiga memotong kertas segitiga: dua sudutnya empat puluh dan enam puluh, berapa sudut ketiga? Seratus delapan puluh dikurangi seratus, tinggal delapan puluh. Misi empat menghentikan kincir balai di posisi ganjil: tiga sudut porosnya seratus dua puluh, seratus lima puluh, dan empat puluh — sisa porosnya lima puluh, sebab tiga ratus enam puluh dikurangi tiga ratus sepuluh sama dengan lima puluh. Dua lentera lagi menyala penuh.',
+        },
+        {
+          objek: 'misiPythagorasHutan', judul: 'Misi Lima: Segitiga Andalan',
+          teks: 'Lentera terakhir menjaga misi paling dijaga di balai ini: sebuah segitiga siku dengan kaki enam dan tinggi delapan — berapa sisinya miring? Kali-diri keduanya: tiga puluh enam ditambah enam puluh empat sama dengan seratus. Bilangan apa yang kali-dirinya seratus? Sepuluh! Lentera kelima menyala, seluruh balai bermandikan cahaya emas, dan lima misi geometri pun selesai dalam satu malam yang sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Detektif Sudut Hutan!',
+          teks: 'Lima misi ternyata memakai lima jurus yang sudah akrab: kenali bukaannya, kurangkan dari seratus delapan puluh di garis lurus, kurangkan dari tiga ratus enam puluh di titik, jumlahkan sudut segitiga, dan kali-diri untuk sisi miring. Owalah, ternyata begini toh — penjuru geometri adalah rumah bagi detektif yang cermat. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
