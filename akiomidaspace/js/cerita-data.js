@@ -857,6 +857,286 @@ window.CERITA = (function () {
       ],
     },
 
+    /* ----- p2-031 · Timbangan Persamaan — pasar senja dua mangkuk ----- */
+    'p2-031': {
+      tema: 'pasarSenja',
+      npc: { glif: 'x', ucap: ['Dua sisi', 'harus pas!'] },
+      stasiun: [
+        {
+          objek: 'neracaDagang', judul: 'Neraca Pedagang Pasar',
+          teks: 'Senja turun di pasar hutan. Pedagang tua masih berjaga di balik neraca besarnya: mangkuk kiri memuat kotak misteri berlabel x ditambah tiga beban kecil, mangkuk kanan memuat tujuh beban yang sama. Lihat baik-baik: kedua mangkuk berdiri rata, tidak ada yang turun, tidak ada yang naik. Itulah gambaran persamaan — nilai sisi kiri persis sama dengan sisi kanan, dan x + 3 = 7 adalah tulisan singkat untuk keseimbangan itu.',
+        },
+        {
+          objek: 'isiMangkukKiri', judul: 'Isi Mangkuk Kiri',
+          teks: 'Mangkuk kiri diturunkan dan isinya dihitung satu per satu: satu kotak misteri x, lalu tiga beban kecil. Jadi sisi kiri berisi x + 3 — kotaknya belum kita ketahui isinya, tetapi tiga beban itu sudah jelas terlihat. Pedagang menjelaskan, selama kedua sisi masih seimbang, apa pun isi kotak itu, jumlah kiri harus sama dengan tujuh di kanan. Persamaan selalu menyimpan janji itu: dua sisi yang sama berat.',
+        },
+        {
+          objek: 'mangkukTujuh', judul: 'Tujuh Beban di Kanan',
+          teks: 'Mangkuk kanan pun diperlihatkan: satu, dua, tiga, empat, lima, enam, tujuh beban kecil tersusun rapi. Tujuh adalah bilangan yang sudah diketahui — dialah pasangan berat dari seluruh isi kiri. Kalau beban kanan ditambah satu, mangkuk kanan turun dan timbangan berat sebelah; kalau satu beban diambil, kiri justru lebih berat. Maka pedagang selalu menambah atau mengurangi kedua sisi bersamaan, agar neraca tetap rata.',
+        },
+        {
+          objek: 'papanKiriKanan', judul: 'Papan Aturan Pasar',
+          teks: 'Papan depan pasar menuliskan aturan emas pedagang: apa yang terjadi di kiri, harus ikut terjadi di kanan. Inilah arti tanda sama dengan (=): kedua sisi berjumlah persis sama. x + 3 = 7 bukan perintah, melainkan kabar baik — ia memberitahu bahwa dua sisi itu seimbang, dan tugas kita tinggal mencari isi kotak x yang membuat keseimbangan itu benar-benar terjadi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Sisi Harus Pas!',
+          teks: 'Persamaan ternyata cuma timbangan yang tertulis: sisi kiri dan sisi kanan berjanji berjumlah sama, dan kita tinggal menjaga keseimbangan itu. Owalah, ternyata begini toh — tanda sama dengan itu janji dua sisi untuk tetap pas. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-032 · Mencari Nilai x — dermaga ikan fajar ----- */
+    'p2-032': {
+      tema: 'dermagaIkan',
+      npc: { glif: '4', ucap: ['Lepas tiga', 'dari dua sisi!'] },
+      stasiun: [
+        {
+          objek: 'timbanganIkan', judul: 'Neraca Hasil Laut',
+          teks: 'Fajar di dermaga hutan. Nelayan menimbang hasil lautnya dengan neraca tua: di mangkuk kiri ada keranjang misteri berlabel x dan tiga ikan segar; di mangkuk kanan ada tujuh ikan yang sudah dihitung. Neraca berdiri rata, maka tulisan ceritanya begini: x + 3 = 7. Keranjang x masih menyembunyikan isinya, tetapi keseimbangan itu sudah membocorkan banyak hal.',
+        },
+        {
+          objek: 'tigaIkanDiambil', judul: 'Tiga Ikan Lepas Bersamaan',
+          teks: 'Nelayan lalu melakukan hal yang adil: ia mengambil tiga ikan dari mangkuk kiri, dan sekaligus tiga ikan dari mangkuk kanan. Kedua sisi sama-sama berkurang tiga, sehingga neraca tetap rata — tidak berubah sedikit pun. Mengurangi kedua sisi dengan jumlah yang sama selalu aman, karena selisihnya saling meniadakan dan timbangan tidak tahu apa-apa.',
+        },
+        {
+          objek: 'keranjangSendiri', judul: 'Keranjang Tinggal Sendirian',
+          teks: 'Sekarang mangkuk kiri hanya dihuni keranjang x, dan mangkuk kanan tinggal empat ikan: 7 dikurangi 3 sama dengan 4. Neraca masih rata, artinya berat keranjang persis sama dengan empat ikan. Maka terbukalah jawabannya: x = 4. Kotak misteri itu akhirnya terbuka, dan isinya empat.',
+        },
+        {
+          objek: 'papanGeserRuas', judul: 'Papan Catatan Nelayan',
+          teks: 'Papan dermaga mencatat langkah tadi dengan ringkas: x + 3 = 7, pindahkan +3 ke sisi seberang sehingga berubah jadi −3, maka x = 7 − 3, yaitu x = 4. Angka yang pindah ruas selalu berganti tanda — tambah menjadi kurang, kurang menjadi tambah. Itulah jurus pertama detektif persamaan: geser ke seberang, balikkan tandanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pindah Ruas Balik Tanda!',
+          teks: 'Mencari x ternyata cuma melepas beban yang sama dari kedua sisi: +3 pindah ke seberang berubah −3, dan x langsung terlihat. x + 3 = 7 bermuara pada x = 4 — dan begitu dicek, 4 + 3 memang 7. Owalah, ternyata begini toh — cari x itu cuma soal memindahkan angka dengan sopan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-033 · Kali & Bagi pada x — kandang ayam pagi ----- */
+    'p2-033': {
+      tema: 'kandangPagi',
+      npc: { glif: '5', ucap: ['Dua kandang,', 'sama isinya!'] },
+      stasiun: [
+        {
+          objek: 'duaKandangTutup', judul: 'Dua Kandang Kembar',
+          teks: 'Pagi di kandang hutan. Dua kandang kayu kembar berdiri bersebelahan, pintunya masih tertutup, dan setiap kandang berisi ayam yang jumlahnya sama persis — kita tandai dengan huruf x. Papan tulis di pagar menuliskan kabar dari petugas: jumlah ayam kedua kandang bersama-sama ada 10. Tulisannya pendek dan rapi: 2x = 10.',
+        },
+        {
+          objek: 'sepuluhAyamHitung', judul: 'Sepuluh Ayam Berhitung',
+          teks: 'Pintu halaman terbuka, dan sepuluh ayam keluar berjajar di tanah: mereka dibagi menjadi dua kelompok yang sama banyak — lima berjalan ke halaman kiri, lima ke halaman kanan. Tampak jelas sekarang bahwa dua kandang berisi 10 ayam berarti tiap kandang menampung setengahnya. Membagi dua sisi dengan angka yang sama tidak pernah merusak keseimbangan.',
+        },
+        {
+          objek: 'kandangDibukaLima', judul: 'Kandang Terbuka: Isinya Lima',
+          teks: 'Pintu kandang pertama dibuka lebar: lima ayam berkicau riang di dalamnya. Maka x = 5 — karena 2 x 5 memang 10. Yang semula dikali dua, sekarang dibagi dua; kedua langkah itu selalu saling membalik. Kandang kedua pun dibuka, dan isinya sama persis: lima. Dua kandang kembar, dua jawaban kembar.',
+        },
+        {
+          objek: 'papanBagiDua', judul: 'Papan Petugas Kandang',
+          teks: 'Papan petugas merangkum jurusnya: bila 2x = 10, bagi kedua sisi dengan 2, maka x = 5. Berlaku juga sebaliknya: bila x = 5 lalu kedua sisi dikali 2, kembali ke 2x = 10. Kali dan bagi adalah dua kembar yang selalu saling membuka pintu — dan keseimbangan tidak pernah terusik asal keduanya bekerja di kedua sisi sekaligus.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kali dan Bagi Kembar!',
+          teks: 'Mengerjakan 2x = 10 ternyata sama dengan membagi rata isi dua kandang: bagi kedua sisi dengan dua, dan x = 5 langsung berdiri. Kali dan bagi ternyata saling membalik — seperti menutup dan membuka kandang yang sama. Owalah, ternyata begini toh — semua itu cuma soal membagi rata. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-034 · Persamaan Dua Langkah — toko roti sore ----- */
+    'p2-034': {
+      tema: 'tokoRoti',
+      npc: { glif: '11', ucap: ['Kurangi dulu,', 'baru bagi!'] },
+      stasiun: [
+        {
+          objek: 'nampanDuaTiga', judul: 'Meja Toko Roti',
+          teks: 'Sore di toko roti hutan, dan wangi roti hangat memenuhi ruangan. Di meja jualan tersusun dua nampan yang identik — tiap nampan berisi x roti — dan satu piring berisi tiga roti lepas. Nota menuliskan totalnya: 11 roti. Kalimat matematisnya: 2x + 3 = 11, dua nampan misteri ditambah tiga roti lepas.',
+        },
+        {
+          objek: 'piringTigaDipindah', judul: 'Piring Tiga Roti Dipindah',
+          teks: 'Pemilik toko mulai merapikan: piring berisi tiga roti itu dipindah ke rak bawah, keluar dari hitungan meja. Total meja kini 11 dikurangi 3, sama dengan 8 — dan dua nampan itulah isinya. Pada persamaan, langkah pertama selalu seperti ini: singkirkan dulu yang berdiri sendiri, dengan mengurangi kedua sisi sekaligus.',
+        },
+        {
+          objek: 'nampanDibagiDua', judul: 'Dua Nampan Dibagi Rata',
+          teks: 'Sekarang tinggal 2x = 8: dua nampan berisi sama banyak, jumlahnya delapan. Roti dihitung dan dibagi rata ke kedua nampan: empat dan empat. Maka x = 4, dan tiap nampan memang berisi empat roti sejak awal. Cek sekali lagi: 2 x 4 + 3 sama dengan 8 + 3, yaitu 11 — nota kembali pas.',
+        },
+        {
+          objek: 'papanDuaLangkah', judul: 'Papan Nota Dua Langkah',
+          teks: 'Papan nota menuliskan urutan resminya: 2x + 3 = 11; kurangi kedua sisi dengan 3, menjadi 2x = 8; bagi kedua sisi dengan 2, menjadi x = 4. Dua langkah pelan: dahulukan yang berdiri sendiri, barulah bagikan yang menempel. Urutan inilah yang membuat persamaan panjang tetap tertib seperti dapur toko roti.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Langkah Tuntas!',
+          teks: 'Persamaan dua langkah ternyata cuma urusan dapur: singkirkan dulu roti yang lepas, lalu bagi rata isi nampan. 2x + 3 = 11 melangkah santai jadi 2x = 8, lalu x = 4 — dan pemeriksaan ulang membuktikannya. Owalah, ternyata begini toh — pelan-pelan, dua langkah saja. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-035 · x di Dua Sisi — taman jungkat-jungkit siang ----- */
+    'p2-035': {
+      tema: 'tamanJungkit',
+      npc: { glif: '3x', ucap: ['Kumpulkan x', 'di satu sisi!'] },
+      stasiun: [
+        {
+          objek: 'jungkatKantong', judul: 'Jungkat-Jungkit Seimbang',
+          teks: 'Siang di taman hutan. Sebuah jungkat-jungkit panjang berdiri rata dengan muatan di kedua ujungnya: sisi kiri berisi tiga kantong kecil berlabel x plus dua batu; sisi kanan berisi satu kantong kecil x plus sepuluh batu. Jungkat-jungkit tidak miring sama sekali, maka tulisan keseimbangannya: 3x + 2 = x + 10 — x muncul di dua sisi sekaligus.',
+        },
+        {
+          objek: 'satuKantongDiambil', judul: 'Satu Kantong Turun Bersama',
+          teks: 'Anak-anak lalu mengambil satu kantong x dari sisi kiri, dan sekaligus satu kantong x dari sisi kanan — dilepas sama rata, jungkat-jungkit tetap rata. Yang tersisa di kiri 2x + 2, dan di kanan tinggal 10. Cara ini disebut mengumpulkan x: setiap kantong yang sama di dua sisi boleh saling dicabut, dan keseimbangan tidak pernah tersinggung.',
+        },
+        {
+          objek: 'duaBatuDiambil', judul: 'Dua Batu Ikut Dipilah',
+          teks: 'Jungkat-jungkit masih rata, tetapi papan penjaga taman minta lebih rapi lagi: dua batu di kiri dicabut, dan dua batu di kanan dicabut juga. Kini kiri murni 2x dan kanan murni 8. Semua batu sudah berkumpul di satu sisi, semua kantong x di sisi yang satunya — persis tatanan yang dicitrakan papan penjaga taman.',
+        },
+        {
+          objek: 'papanKumpulkanX', judul: 'Papan Penjaga Taman',
+          teks: 'Papan penjaga menuliskan langkah penuhnya: 3x + 2 = x + 10; cabang satu kantong dari tiap sisi, jadi 2x + 2 = 10; cabang dua batu dari tiap sisi, jadi 2x = 8; bagi dua, maka x = 4. Periksa kembali: kiri 3 x 4 + 2 sama dengan 14, kanan 4 + 10 juga 14 — jungkat-jungkit benar-benar seimbang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, x Berkumpul Satu Sisi!',
+          teks: 'Persamaan dengan x di dua sisi ternyata cuma jungkat-jungkit yang dirapikan: pindahkan semua x ke satu sisi, semua angka ke sisi lain, lalu selesaikan seperti biasa. 3x + 2 = x + 10 berakhir tenang di x = 4. Owalah, ternyata begini toh — timbangannya cuma minta dipilah. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-036 · Memeriksa Jawaban — meja lampu malam ----- */
+    'p2-036': {
+      tema: 'mejaKoreksi',
+      npc: { glif: '=', ucap: ['Cek ulang,', 'baru sahih!'] },
+      stasiun: [
+        {
+          objek: 'lembarJawaban', judul: 'Lembar Jawaban di Meja',
+          teks: 'Malam tiba, dan di meja belajar hutan tergeletak satu lembar jawaban: 2x + 3 = 11, dengan kesimpulan x = 4. Lampu belajar menyala terang, dan tugas malam ini satu: memeriksa kembali apakah jawaban itu benar-benar sahih. Detektif yang baik tidak berhenti sebelum membuktikan temuannya sendiri.',
+        },
+        {
+          objek: 'lampuPeriksaKiri', judul: 'Lampu Menyapu Sisi Kiri',
+          teks: 'Lampu digeser ke sisi kiri lembar: ganti x dengan 4, lalu hitung 2 x 4 + 3. Kali dulu, jadi 8; tambah kemudian, jadi 11. Sisi kiri tercatat berjumlah 11. Setiap langkah dihitung pelan — kali dulu sebelum tambah — persis urutan yang dikerjakan mesin stempel di penjuru aljabar kemarin.',
+        },
+        {
+          objek: 'lampuPeriksaKanan', judul: 'Lampu Menyapu Sisi Kanan',
+          teks: 'Lampu lalu berpindah ke sisi kanan lembar: di sana hanya tertulis 11, tanpa perlu dihitung lagi. Maka dibandingkanlah: kiri 11, kanan 11 — sama persis. Tanda sama dengan berjanji jujur, dan malam ini janji itu terbukti. Jawaban x = 4 lolos pemeriksaan dengan sempurna.',
+        },
+        {
+          objek: 'stempelSahih', judul: 'Stempel Hijau Meja',
+          teks: 'Pemilik meja mengambil stempel hijau dan menekannya di pojok lembar: SAHIH. Sejak malam itu, memeriksa jawaban jadi kebiasaan yang menyenangkan — masukkan nilai x ke persamaan awal, hitung kedua sisi, lalu lihat apakah keduanya bertemu di angka yang sama. Kalau belum sama, tak apa: detektif tinggal mengulang langkahnya dengan lebih teliti.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jawaban Sahih Terbukti!',
+          teks: 'Memeriksa jawaban ternyata cuma memutar waktu sedikit: kembalikan x ke persamaan awal, hitung kiri dan kanan, lalu pastikan keduanya sama. x = 4 pada 2x + 3 = 11 terbukti sahih karena 8 + 3 memang 11. Owalah, ternyata begini toh — detektif hebat selalu memeriksa ulang temuannya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-037 · Lebih dari & Kurang dari — gerbang wahana siang ----- */
+    'p2-037': {
+      tema: 'gerbangWahana',
+      npc: { glif: '>', ucap: ['Rahang terbuka', 'ke yang besar!'] },
+      stasiun: [
+        {
+          objek: 'papanMulutTanda', judul: 'Papan Gerbang Wahana',
+          teks: 'Di gerbang wahana hutan berdiri papan kayu dengan dua tanda rahang terukir: > dan <. Penjaga gerbang menjelaskan, dua tanda itu adalah penjaga yang sangat jujur: rahangnya selalu terbuka lebar ke bilangan yang lebih besar, dan ujung lancipnya menunjuk yang lebih kecil. Rahang ini tak pernah salah sasaran sejak zaman dulu.',
+        },
+        {
+          objek: 'buayaTandaLima', judul: 'Rahang Terbuka ke Lima',
+          teks: 'Kartu contoh pertama ditempel di papan: 5 > 3. Lihat rahangnya — mulut terbuka lebar menghadap angka 5, karena lima lebih besar dari tiga. Bacaannya: lima lebih dari tiga. Kalau kartu ditukar menjadi 3 < 5, rahangnya tetap terbuka ke lima; yang berubah hanya posisi ujung lancipnya.',
+        },
+        {
+          objek: 'buayaTandaDua', judul: 'Rahang Menutup ke Dua',
+          teks: 'Kartu kedua bertuliskan 2 < 3. Kini rahang terbuka ke kanan, menghadap angka 3, karena tiga lebih besar dari dua; ujung lancipnya menunjuk angka 2 yang lebih kecil. Jadi tanda > dan < selalu punya dua sisi cerita: mulut untuk yang besar, lancip untuk yang kecil. Sekali terbiasa, kartu angka apa pun langsung terbaca.',
+        },
+        {
+          objek: 'xLebihTigaKumpul', judul: 'x Lebih dari Tiga',
+          teks: 'Papan terakhir menulis kalimat dengan huruf: x > 3. Ini pertidaksamaan — x tidak lagi punya satu jawaban, melainkan banyak: 4 boleh, 5 boleh, 6 boleh, dan seterusnya, semua bilangan yang lebih besar dari 3. Bandingkan dengan persamaan x = 4 yang jawabannya tunggal. Pertidaksamaan bicara tentang wilayah, bukan satu titik.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rahangnya Tak Pernah Salah!',
+          teks: 'Membaca > dan < ternyata tinggal mengikuti rahang jujur itu: terbuka ke yang lebih besar, lancip ke yang lebih kecil. Dan saat huruf x ikut bermain, x > 3 membuka pintu bagi banyak jawaban sekaligus. Owalah, ternyata begini toh — tanda pertidaksamaan cuma penjaga gerbang yang setia arah. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-038 · Garis Pertidaksamaan — landasan lampu malam ----- */
+    'p2-038': {
+      tema: 'landasanLampu',
+      npc: { glif: 'x>3', ucap: ['Panah menyala', 'ke kanan!'] },
+      stasiun: [
+        {
+          objek: 'garisLampuTitik', judul: 'Garis Lampu Bilangan',
+          teks: 'Malam di landasan hutan. Lampu-lampu kecil tertanam membentuk garis lurus, dan tiap lampu diberi nomor: −1, 0, 1, 2, 3, 4, 5, 6. Itulah garis bilangan versi hutan — setiap titik adalah alamat sebuah bilangan, tersusun rapi dari kecil di kiri sampai besar di kanan. Malam ini, garis lampu itu akan menampilkan pertidaksamaan.',
+        },
+        {
+          objek: 'tiangTigaLubang', judul: 'Tiang di Angka Tiga',
+          teks: 'Di lampu bernomor 3 berdiri tiang kecil dengan cincin TERBUKA — bolong di tengah, tidak diisi penuh. Cincin terbuka itu punya arti penting: angka 3 sendiri tidak ikut menjadi jawaban, karena kalimatnya x > 3 — lebih besar dari 3, bukan angka 3-nya. Kalau kalimatnya membolehkan sama dengan, cincin itu baru diisi penuh dan angka 3 ikut menjadi jawaban.',
+        },
+        {
+          objek: 'panahMenyalaKanan', judul: 'Panah Lampu Menyala',
+          teks: 'Tiba-tiba lampu-lampu di kanan angka 3 menyala berurutan: 4 menyala, 5 menyala, 6 menyala, dan panah cahaya melanjutkan sampai tepi landasan. Itulah wajah jawaban x > 3 — bukan satu lampu, melainkan seluruh deret lampu di kanan 3, tanpa henti. Setiap lampu yang menyala adalah bilangan yang membuat kalimat itu benar.',
+        },
+        {
+          objek: 'papanBanyakJawaban', judul: 'Papan Banyaknya Jawaban',
+          teks: 'Papan landasan merangkum malam ini: x > 3 digambar dengan cincin terbuka di 3 dan panah ke kanan; x < 3 digambar dengan cincin terbuka di 3 dan panah ke kiri. Arah panah selalu mengikuti arah rahang tandanya. Pertidaksamaan memang ramah — jawabannya bukan satu titik, melainkan sejalan lampu yang menyala bersama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jawabannya Sejalan!',
+          teks: 'Menggambar pertidaksamaan ternyata cuma menyalakan lampu: cincin terbuka di angka batasnya, lalu panah menyala ke arah yang dijanjikan rahang tanda. x > 3 pun berubah dari tulisan menjadi deret lampu 4, 5, 6, dan seterusnya. Owalah, ternyata begini toh — jawaban pertidaksamaan itu sejalan, bukan sendirian. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-039 · Pertidaksamaan Dua Langkah — kios es sore ----- */
+    'p2-039': {
+      tema: 'kiosEs',
+      npc: { glif: '<', ucap: ['Kurangi dulu,', 'panah setia!'] },
+      stasiun: [
+        {
+          objek: 'gelasDuaSatuBatu', judul: 'Kios Es Batu',
+          teks: 'Sore di kios minuman hutan. Di meja ada dua gelas besar — masing-masing berisi x es batu — dan satu es batu lepas berdiri di nampan. Penjaga kios menuliskan batas harinya di papan: jumlah es batu semua harus kurang dari sembilan. Kalimatnya pendek: 2x + 1 < 9.',
+        },
+        {
+          objek: 'papanKurangSembilan', judul: 'Papan Batas Sembilan',
+          teks: 'Papan batas itu penting: bila es batu mencapai sembilan atau lebih, gelas akan meluap dan meja kios banjir. Maka tanda < berdiri di sana sebagai penjaga — jumlah seluruhnya harus tetap di bawah 9. Penjaga kios menghitung stok tiap sore dengan aturan yang sama, supaya tiap gelas terisi pas dan tak ada yang tumpah.',
+        },
+        {
+          objek: 'esBatuDiambil', judul: 'Satu Batu Dipindah Dulu',
+          teks: 'Langkah pertama mengikuti kebiasaan setia: yang berdiri sendiri dipindah dulu. Es batu di nampan diambil dari hitungan, dan karena kedua sisi sama-sama dikurangi 1, kalimatnya tetap seimbang: 2x < 8. Batasnya berubah menjadi delapan — dua gelas berisi es batu bersama-sama harus kurang dari 8.',
+        },
+        {
+          objek: 'papanXKurangEmpat', judul: 'Dua Gelas Dibagi Rata',
+          teks: 'Kini kedua gelas dibagi rata: 8 dibagi 2 sama dengan 4, maka x < 4 — isi tiap gelas harus kurang dari 4 es batu. Uji cepat: bila x = 3, jumlahnya 2 x 3 + 1 sama dengan 7, masih kurang dari 9 — aman; bila x = 4, jumlahnya 9 — tepat di batas, dan itu dilarang oleh tanda <. Maka panah jawabannya menunjuk ke kiri dari 4.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Panahnya Tetap Setia!',
+          teks: 'Pertidaksamaan dua langkah ternyata setia pada persamaan: kurangi dulu yang berdiri sendiri, bagi rata yang menempel, dan panah jawaban tetap mengikuti arah tandanya. 2x + 1 < 9 berakhir tenang di x < 4. Owalah, ternyata begini toh — bedanya cuma ujung panah, sisanya sama. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-040 · Tantangan Timbangan Hutan — balai timbangan malam ----- */
+    'p2-040': {
+      tema: 'balaiTimbangan',
+      npc: { glif: '!', ucap: ['Lima misi', 'terakhir!'] },
+      stasiun: [
+        {
+          objek: 'balaiLimaMisi', judul: 'Balai Timbangan Besar',
+          teks: 'Di ujung penjuru persamaan berdiri balai besar hutan, dan di jantungnya menggantung timbangan emas raksasa yang berkilau malam itu. Papan balai menuliskan lima misi terakhir: selesaikan persamaan satu langkah, persamaan dua langkah, persamaan ber-x di dua sisi, lalu dua pertidaksamaan. Satu misi selesai, satu lentera balai menyala.',
+        },
+        {
+          objek: 'misiPersamaanDua', judul: 'Misi Dua Persamaan',
+          teks: 'Misi pertama dan kedua menyala bergantian: 4x = 12 diselesaikan dengan membagi dua sisi dengan 4, jadi x = 3; lalu 2x + 5 = 11 diselesaikan dua langkah — kurangi 5 menjadi 2x = 6, bagi 2, jadi x = 3 juga. Dua lentera pertama menyalakan sudut balai dengan hangat, dan timbangan emas bergoyang pelan merayakan.',
+        },
+        {
+          objek: 'misiDuaSisi', judul: 'Misi x di Dua Sisi',
+          teks: 'Misi ketiga paling menantang: 5x + 2 = 2x + 14. Semua x dikumpulkan ke kiri — cabang 2x dari kedua sisi, jadi 3x + 2 = 14; lalu semua angka ke kanan — cabang 2, jadi 3x = 12; bagi 3, dan x = 4. Periksa: kiri 5 x 4 + 2 sama dengan 22, kanan 2 x 4 + 14 juga 22 — seimbang sempurna, lentera ketiga menyala.',
+        },
+        {
+          objek: 'misiPertidaksamaan', judul: 'Misi Dua Pertidaksamaan',
+          teks: 'Dua misi terakhir memakai rahang: x + 2 > 6 dipindah 2-nya menjadi x > 4 — panah ke kanan dari 4; lalu 3x − 1 < 11 menjadi 3x < 12, dibagi 3 menjadi x < 4 — panah ke kiri dari 4. Lima lentera kini menyala penuh, dan timbangan emas balai berdenting pelan merayakan. Gerbang penjuru persamaan terbuka!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Penjaga Timbangan Hutan!',
+          teks: 'Persamaan maupun pertidaksamaan ternyata satu keluarga: sama-sama menjaga keseimbangan — yang satu dengan tanda sama dengan, yang satu dengan rahang dan panah. Kumpulkan x, singkirkan yang berdiri sendiri, bagi rata, dan selalu periksa ulang. Owalah, ternyata begini toh — timbangan hutan kini berbicara padamu. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
