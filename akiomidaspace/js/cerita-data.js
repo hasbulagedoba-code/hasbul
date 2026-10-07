@@ -2257,6 +2257,290 @@ window.CERITA = (function () {
       ],
     },
 
+    /* ----- p2-081 · Data: Kumpulan Angka — pagi kandang burung pengamatan ----- */
+    'p2-081': {
+      tema: 'kandangData',
+      npc: { glif: '7 angka', ucap: ['Kumpulan angka', 'punya cerita!'] },
+      stasiun: [
+        {
+          objek: 'kandangBurungPagi', judul: 'Pagi di Kandang Burung Hutan',
+          teks: 'Pagi di tepi hutan, kandang burung kecil dipenuhi kunjungan. Burung-burung liar datang meminjam mangkuk biji, dan penjaga kandang selalu menjawab satu pertanyaan yang sama tiap hari: berapa burung yang datang? Hari ini jawabannya lima. Satu angka saja belum menceritakan apa-apa — tapi penjaga tidak berhenti di satu hari. Ia bertekad mengulang pertanyaan yang sama, hari demi hari.',
+        },
+        {
+          objek: 'papanCatatTujuhHari', judul: 'Tujuh Hari, Tujuh Angka',
+          teks: 'Selama tujuh hari, papan catat di kandang menampung jawaban-jawaban itu: dua, lima, tiga, lima, enam, lima, empat. Tujuh angka sederhana hasil pengamatan yang sungguh terjadi — itulah yang disebut data. Data bukan angka karangan; ia lahir dari mengamati dan mencatat dengan jujur. Papan catat itu seperti album foto: tiap angka adalah potret satu hari di kandang.',
+        },
+        {
+          objek: 'barisanAngkaKunjungan', judul: 'Kumpulan Angka Menyimpan Kebiasaan',
+          teks: 'Sekarang bacalah pelan-pelan barisan angka di papan: dua, lima, tiga, lima, enam, lima, empat. Ada angka yang berulang-ulang — lima muncul tiga kali! Ternyata burung-burung hutan punya kebiasaan: jumlah kunjungan paling sering lima. Satu angka diam-diam, tapi kumpulannya berbisik tentang kebiasaan. Data yang terkumpul rapi ternyata mampu menceritakan kebiasaan yang tak terlihat mata kasar.',
+        },
+        {
+          objek: 'papanPertanyaanSama', judul: 'Data Itu Jawaban yang Diulang',
+          teks: 'Papan besar di dekat kandang menuliskan rahasia kecil: data adalah kumpulan jawaban dari pertanyaan yang sama, diulang dengan setia. Pertanyaan bisa apa saja: berapa burung datang, berapa tinggi tanaman, berapa derajat cuaca hari ini. Yang penting satu: pertanyaannya sama, jawabannya dicatat jujur. Kumpulan jawaban itulah yang kemudian bercerita — dan sepanjang seri ini kita akan belajar membacanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kumpulan Angka Bisa Bercerita!',
+          teks: 'Tujuh hari mengulang satu pertanyaan, dan kumpulan angka yang tadinya terlihat diam ternyata menyimpan kebiasaan burung. Owalah, ternyata begini toh — data itu bukan sekadar tumpukan angka, ia kumpulan jawaban yang siap bercerita. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-082 · Mean: Rata-rata — siang meja dapur gelas air ----- */
+    'p2-082': {
+      tema: 'mejaGelasRata',
+      npc: { glif: '12:3', ucap: ['Bagi sama rata', 'untuk semua!'] },
+      stasiun: [
+        {
+          objek: 'gelasTigaBedatinggi', judul: 'Tiga Gelas, Tiga Tinggi',
+          teks: 'Siang di meja dapur hutan, tiga gelas berdiri berderet dengan air yang tidak sama tinggi: gelas pertama berisi tiga, gelas kedua berisi empat, gelas ketiga berisi lima. Tiga sahabat bola-lentera datang minum, tapi ada yang gelisah — airnya timpang, tidak adil. Satu gelas banyak, satu gelas sedikit. Bagaimana caranya membagi supaya semua merasa sama?',
+        },
+        {
+          objek: 'tekoTampungSemua', judul: 'Tuang Semua Air ke Teko',
+          teks: 'Lalu muncul ide sederhana yang cerdas: tuangkan semua air ke dalam satu teko. Gelas tiga dituang, gelas empat dituang, gelas lima dituang — air bergabung dan teko kini menampung dua belas. Inilah langkah pertama jurus rata-rata: jumlahkan semua. Yang tadinya berpencah dan timpang kini berkumpul jadi satu, siap dibagi dengan adil.',
+        },
+        {
+          objek: 'gelasTigaRataEmpat', judul: 'Bagi Ulang Sama Tinggi',
+          teks: 'Dari teko, air dituang ulang ke tiga gelas asal, kali ini dengan teliti. Dua belas dibagi tiga — tiap gelas menerima empat. Sekarang lihat: ketiga gelas berdiri sama tinggi, tak ada yang iri! Tinggi empat itulah rata-rata — seberapa isi tiap gelas kalau semua dipaksa sama. Rata-rata adalah keadilan dalam angka: gabungkan, lalu bagi rata.',
+        },
+        {
+          objek: 'papanCaraMean', judul: 'Jurus Rata-rata di Papan Dapur',
+          teks: 'Papan di dinding dapur menuliskan jurusnya dengan rapi: jumlahkan semua data, lalu bagi dengan banyaknya data. Uji dengan contoh lain: enam tambah tujuh tambah delapan sama dengan dua puluh satu, dibagi tiga gelas — rata-ratanya tujuh. Hitungan itu hanya alat, dan alat ini paling jujur: ia tak pernah memihak gelas mana pun. Semua data ikut ditimbang, semuanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rata-rata Itu Bagi yang Adil!',
+          teks: 'Tiga gelas timpang dituang jadi satu, dibagi ulang, dan kini sama tinggi — rata-rata lahir dari keadilan meja dapur. Owalah, ternyata begini toh: jumlahkan semua, bagi banyaknya, dan semua data diperlakukan sama. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-083 · Median: Nilai Tengah — sore halaman batu susun ----- */
+    'p2-083': {
+      tema: 'susunBatuSore',
+      npc: { glif: 'tengah', ucap: ['Nilai tengah', 'tahan sentak!'] },
+      stasiun: [
+        {
+          objek: 'batuLimaBersusun', judul: 'Lima Batu Bersusun Sore Ini',
+          teks: 'Sore di halaman hutan, lima batu diukur ukarannya lalu disusun berbaris dari yang terkecil sampai yang terbesar: empat, lima, enam, delapan, dua belas. Barisan itu rapi seperti antre yang patuh — kecil di kiri, besar di kanan, tanpa satu pun bolak-balik. Menyusun dari kecil ke besar adalah langkah pertama sebelum mencari satu batu istimewa: batu yang berdiri tepat di tengah.',
+        },
+        {
+          objek: 'batuKetigaTengah', judul: 'Batu Tengah Itulah Median',
+          teks: 'Hitung barisan itu: satu, dua, tiga — batu ketiga berdiri di tengah persis, dengan dua batu di kirinya dan dua batu di kanannya. Ukurannya enam, dan itulah median: nilai tengah data yang sudah tersusun. Tidak perlu menjumlah, tidak perlu membagi. Cukup susun, lalu tunjuk yang di tengah. Sederhana seperti menunjuk anak ketiga dari antrean yang berjumlah lima.',
+        },
+        {
+          objek: 'ujungPergiTengahTetap', judul: 'Ujung Pergi, Tengah Diam di Tempat',
+          teks: 'Kini pengujian paling seru: batu terbesar dua belas diganti batu raksasa seratus! Barisan menjadi empat, lima, enam, delapan, seratus. Ujung kanan kini menggila besarnya — tapi lihat batu ketiga: ia tetap enam, sama sekali tak bergeser. Ujung boleh liar sebesar apa pun, nilai tengah tak terseret. Inilah kekuatan tenang median: ia tahan banting terhadap angka-angka ekstrem.',
+        },
+        {
+          objek: 'papanMedianAman', judul: 'Papan: Median Tak Terseret Ujung',
+          teks: 'Papan di pagar halaman merangkum pelajaran sore ini: median adalah nilai tengah data yang sudah disusun dari kecil ke besar. Rata-rata bisa ikut terseret kalau ada data ekstrem, tapi median bertahan di posisinya — karena posisinya ditentukan oleh urutan, bukan oleh besaran ujung. Karena itu median dipakai saat data punya angka jauh: ia mewakili yang tengah dengan setia.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Nilai Tengah Kokoh!',
+          teks: 'Batu raksasa datang menggantikan ujung, dan nilai tengah tetap diam di posisinya tanpa digeser sedikit pun. Owalah, ternyata begini toh — median itu batu tengah yang kokoh: susun datanya, tunjuk yang di tengah, selesai. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-084 · Modus: Paling Sering Muncul — siang rak sandal ----- */
+    'p2-084': {
+      tema: 'rakSandalSiang',
+      npc: { glif: '5 kali', ucap: ['Paling sering', 'itulah juara!'] },
+      stasiun: [
+        {
+          objek: 'rakSandalSembilan', judul: 'Rak Sandal Sembilan Buah',
+          teks: 'Siang di depan rumah pohon, rak sandal menampung sembilan sandal milik para tamu: ada yang merah, ada yang biru, ada yang kuning. Penjaga rak penasaran: warna apa yang paling sering dipakai tamu-tamu ini? Pertanyaan kecil semacam ini adalah pintu masuk modus — data yang paling sering muncul di antara kumpulannya. Semua sandal dicatat warnanya, satu per satu, tanpa ada yang terlewat.',
+        },
+        {
+          objek: 'sandalMerahTumpuk', judul: 'Merah Menumpuk Tertinggi',
+          teks: 'Hasil penghitungan disusun menumpuk: sandal merah berjumlah lima, dan tumpukannya berdiri paling tinggi di rak. Sekali pandang, siapa juaranya langsung terlihat tanpa membaca angka lagi — merah! Lima kemunculan, paling sering di antara semua warna. Itulah modus: nilai yang paling sering hadir. Tidak ada hitungan panjang, tidak ada rumus; cukup hitung kemunculan, lalu angkat jempol untuk yang tertinggi.',
+        },
+        {
+          objek: 'duaWarnaSisa', judul: 'Biru dan Kuning Ikut Dihitung',
+          teks: 'Tumpukan lain juga dihitung dengan jujur: biru muncul tiga kali, kuning hanya satu. Ketiganya adalah datanya; merah hanya salah satu dari mereka — tapi ia yang paling rajin muncul. Modus tidak pernah sembunyi: ia terlihat dari frekuensinya. Dan jika suatu hari tidak ada yang berulang sama sekali, maka dunia itu belum punya modus — data yang tak pernah mengulang tak punya juara kemunculan.',
+        },
+        {
+          objek: 'papanModusJawara', judul: 'Papan: Modus Si Juara Kemunculan',
+          teks: 'Papan dekat rak menuliskan pelajarannya: modus adalah nilai yang paling sering muncul dalam data. Berbeda dengan rata-rata yang harus menjumlah dan membagi, modus hanya butuh penghitungan kemunculan. Ia jawaban untuk pertanyaan "mana yang paling sering?" — rute yang paling sering dilalui, warna yang paling sering dipakai, angka yang paling sering keluar. Juara frekuensi, itulah modus.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Sekali Pandang Modus Ketemu!',
+          teks: 'Sembilan sandal dihitung warnanya, dan tumpukan merah langsung berdiri tertinggi sebagai juara kemunculan. Owalah, ternyata begini toh — modus itu nilai paling sering muncul, terlihat bahkan sebelum angka selesai dibaca. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-085 · Diagram Batang — pagi lapangan panen tongkat ----- */
+    'p2-085': {
+      tema: 'lapanganBatang',
+      npc: { glif: '6-3-9', ucap: ['Tinggi rendah', 'langsung terbaca!'] },
+      stasiun: [
+        {
+          objek: 'tongkatPanenTiga', judul: 'Tiga Tongkat Hasil Panen',
+          teks: 'Pagi di lapangan panen hutan, tiga tongkat kayu ditancapkan berderet di tanah, masing-masing mewakili satu buah: tongkat mangga setinggi enam, tongkat jambu setinggi tiga, tongkat pisang setinggi sembilan. Tingginya dihitung dari jumlah panen hari ini. Tanpa disadari, para penduduk baru saja membuat diagram batang — tongkat yang berdiri tegak menaraikan angka, tinggi rendahnya bercerita.',
+        },
+        {
+          objek: 'batangPisangSembilan', judul: 'Batang Tertinggi: Pisang Sembilan',
+          teks: 'Mata penduduk langsung tertuju ke tongkat paling tinggi: pisang, dengan sembilan. Mereka belum membaca satu angka pun di papan, tapi jawaban "panen apa paling banyak?" sudah terjawab. Inilah keajaiban diagram batang: mata bisa membaca perbandingan lebih cepat daripada membaca angka. Batang yang menjulang berbicara sendiri — juara tak perlu ditunjuk, ia sudah berdiri paling atas.',
+        },
+        {
+          objek: 'batangJambuTerpendek', judul: 'Batang Terpendek: Jambu Tiga',
+          teks: 'Di sisi lain, tongkat jambu berdiri paling pendek dengan angka tiga. Bandingkan dengan pisang: sembilan banding tiga — pisang tiga kali lipat jambu! Perbandingan yang biasanya butuh hitungan kini tampak langsung dari beda tinggi batang. Diagram batang menjadikan angka-angka di papan sebagai tinggi-tinggi yang bisa dilihat mata: makin banyak, makin tinggi; makin sedikit, makin pendek.',
+        },
+        {
+          objek: 'papanBacaSekali', judul: 'Membaca Diagram Batang dengan Benar',
+          teks: 'Papan panen merangkum jurus membacanya: satu batang mewakili satu kelompok, tinggi batang mewakili jumlahnya, dan semua batang berdiri di dasar yang sama agar adil dibandingkan. Tanpa dasar yang rata, perbandingan jadi bohong. Dengan dasar yang rata, sekali pandang semua terbaca: mana juara, mana sisa, mana yang setara. Diagram batang adalah cerita yang digambar dengan tinggi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Batang Tinggi Bercerita!',
+          teks: 'Tiga tongkat berdiri di lapangan, dan tanpa membaca satu angka pun semua orang tahu juaranya pisang sembilan. Owalah, ternyata begini toh — diagram batang mengubah angka jadi tinggi yang terlihat mata. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-086 · Diagram Garis — sore meja suhu piknik ----- */
+    'p2-086': {
+      tema: 'mejaSuhuSore',
+      npc: { glif: '20-28', ucap: ['Naik turun', 'bercerita!'] },
+      stasiun: [
+        {
+          objek: 'kertasSuhuLimaTitik', judul: 'Lima Titik Suhu di Kertas Piknik',
+          teks: 'Sore di meja piknik hutan, sebuah kertas terbentang berisi catatan suhu hari ini. Suhu diukur lima kali, satu pengukuran satu titik: pagi dua puluh, siang awal dua puluh empat, siang penuh dua puluh delapan, petang dua puluh enam, dan malam dua puluh dua. Lima titik itu adalah data pengamatan hari ini — catatan yang sungguh terjadi, ditulis setiap kali termometer ditengok.',
+        },
+        {
+          objek: 'garisSuhuNaik', judul: 'Garis Menanjak: Makin Panas',
+          teks: 'Sekarang titik-titik itu dihubungkan garis. Dari pagi ke siang, garis menanjak: dua puluh naik ke dua puluh empat, lalu ke dua puluh delapan. Menanjaknya garis membisikkan satu kata: makin panas. Setiap langkah naiknya bisa dibaca — naik empat, naik empat lagi. Garis yang menanjak adalah cara mata membaca perubahan tanpa membaca satu angka pun: kaki jalannya naik, suhunya ikut naik.',
+        },
+        {
+          objek: 'garisSuhuTurun', judul: 'Garis Menurun: Makin Sejuk',
+          teks: 'Lalu dari siang penuh ke petang, garis berbalik menurun: dua puluh delapan turun ke dua puluh enam, dan malam mendarat di dua puluh dua. Turunnya itu bercerita: udara makin sejuk menjelang malam. Perhatikan — diagram ini membacakan catatan yang sudah terjadi, seperti membaca ulang buku harian. Apa yang terjadi hari ini tertulis jelas di naik-turunnya garis, tanpa kata, tanpa kalimat.',
+        },
+        {
+          objek: 'papanDenyutData', judul: 'Denyut yang Bercerita Tanpa Kata',
+          teks: 'Papan di tepi meja menuliskan pelajarannya: diagram garis menghubungkan titik-titik data agar perubahan terlihat — naik, turun, atau datar. Garis ini seperti denyut: ia membacakan riwayat, bukan menakar hal-hal di luar ilmunya. Yang ia kerjakan hanya satu: menata catatan yang sudah dicatat agar naik-turunnya bisa dipahami sekali pandang. Titik adalah kejadian, garis adalah hubungannya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Garis Punya Denyut Cerita!',
+          teks: 'Lima titik suhu dihubungkan, dan garisnya membacakan seluruh hari: menanjak saat panas datang, menurun saat sejuk menyapa. Owalah, ternyata begini toh — diagram garis adalah denyut catatan yang bercerita tanpa kata. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-087 · Diagram Lingkaran — malam meja kue pesta ----- */
+    'p2-087': {
+      tema: 'mejaKueMalam',
+      npc: { glif: '40%', ucap: ['Lingkaran penuh', 'porsinya semua!'] },
+      stasiun: [
+        {
+          objek: 'kueBulatPestaMalam', judul: 'Kue Bulat untuk Sepuluh Anak',
+          teks: 'Malam di ruang pesta hutan, satu kue bulat besar terhampar di meja dengan sepuluh lilin menyala di sekelilingnya. Sepuluh anak bola-lentera datang merayakan, dan sebelum meniup lilin, satu pertanyaan muncul: rasa apa yang paling digemari? Hasil penghitungan tangannya: empat anak memilih coklat, tiga memilih stroberi, dan tiga memilih vanila. Sepuluh pilihan, satu kue bulat — bagaimana menggambarnya sekali pandang?',
+        },
+        {
+          objek: 'irisanCoklatEmpat', judul: 'Irisan Terlebar: Coklat Empat Persepuluh',
+          teks: 'Kue lalu dibagi irisan sesuai pilihan: coklat mendapat empat dari sepuluh bagian — irisan paling lebar di kue! Empat dari sepuluh disebut juga empat puluh persen. Sekali pandang, semua anak langsung melihat rasa juara malam ini tanpa perlu berhitung ulang: irisan coklat memang berdiri paling gemuk. Diagram lingkaran mengubah hitungan menjadi porsi yang bisa dilihat mata.',
+        },
+        {
+          objek: 'irisanStroberiVanila', judul: 'Dua Irisan Kembar: Stroberi dan Vanila',
+          teks: 'Sisanya menarik: stroberi mendapat tiga dari sepuluh, vanila juga tiga dari sepuluh — dua irisan kembar yang sama lebar, masing-masing tiga puluh persen. Tidak ada yang berdebat porsi lebih besar, karena ukuran irisannya memang setara. Lingkaran penuh kini terbagi tiga: coklat empat puluh, stroberi tiga puluh, vanila tiga puluh — seluruh sepuluh anak sudah terwakili di atas meja.',
+        },
+        {
+          objek: 'papanPenuhSeratus', judul: 'Lingkaran Penuh = Seratus Persen',
+          teks: 'Papan di dinding pesta menuliskan aturannya: lingkaran penuh berarti seluruh data, yaitu seratus persen. Cek malam ini: empat puluh tambah tiga puluh tambah tiga puluh — tepat seratus, tak kurang setetes pun. Semua irisan selalu berbagi satu lingkaran yang sama, karena semuanya adalah bagian dari satu kelompok. Diagram lingkaran menjawab pertanyaan porsi: siapa berapa bagian dari semuanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Kue Memuat Semua Data!',
+          teks: 'Sepuluh pilihan diubah menjadi tiga irisan di satu kue bulat, dan juara rasa malam ini terlihat sebelum lilin padam. Owalah, ternyata begini toh — diagram lingkaran memuat semua data dalam satu lingkaran penuh. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-088 · Membaca Tabel — pagi gerai buah pasar ----- */
+    'p2-088': {
+      tema: 'geraiTabelPasar',
+      npc: { glif: '4x3', ucap: ['Baris kolom', 'data rapi!'] },
+      stasiun: [
+        {
+          objek: 'geraiBuahPagi', judul: 'Gerai Buah di Pasar Pagi',
+          teks: 'Pagi di pasar hutan, gerai buah segar berdiri dengan keranjang penuh: mangga, jambu, dan pisang dari panen empat hari terakhir. Penjual mencatat semuanya, tapi catatan yang berserakan membuatnya pusing — mana hari Senin, mana yang pisang? Maka ia menyusun ulang catatannya ke dalam tabel: data yang ditata rapi di baris dan kolom, seperti menata baju di almari.',
+        },
+        {
+          objek: 'rakBarisKolom', judul: 'Almari Berbaris dan Berkolom',
+          teks: 'Tabel itu seperti almari: empat laci memanjang ke bawah untuk empat hari — Senin, Selasa, Rabu, Kamis — dan tiga bilah melebar untuk tiga buah. Empat baris kali tiga kolom menghasilkan dua belas kotak, dan tiap kotak menyimpan satu angka panen. Baris menceritakan satu hari, kolom menceritakan satu buah. Dengan rumah yang tertib, tiap angka langsung punya alamat dan tak ada yang tersesat.',
+        },
+        {
+          objek: 'papanTabelPanen', judul: 'Isi Tabel yang Mulai Bercerita',
+          teks: 'Angka-angka mengisi tabel: Senin memuat mangga empat, jambu dua, pisang satu; Selasa mangga tiga, jambu lima, pisang dua; Rabu mangga lima, jambu satu, pisang empat; Kamis mangga dua, jambu dua, pisang tiga. Baca menurun di kolom mangga: empat tambah tiga tambah lima tambah dua — empat belas! Mangga juara panen empat hari ini, sementara jambu dan pisang sama-sama sepuluh.',
+        },
+        {
+          objek: 'papanBacaJudulDulu', judul: 'Jurus Membaca: Judul Dulu, Isi Kemudian',
+          teks: 'Papan gerai menuliskan jurus membaca tabel dengan dua langkah: baca dulu judul baris dan kolomnya, baru isi kotaknya dipahami. Kotak yang isinya empat tak bermakna sebelum kita tahu ia milik baris mana dan kolom apa — empat di Senin-kolom mangga berbeda cerita dengan empat di Kamis-kolom pisang. Judul adalah alamat, isi adalah ceritanya. Baca judul dulu, dan tabel langsung berbicara.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tabel Rapi Langsung Bicara!',
+          teks: 'Catatan berserakan disusun jadi dua belas kotak tertib, dan juara panen mangga empat belas langsung terbaca dari kolomnya. Owalah, ternyata begini toh — tabel itu almari data: rapi dulu, bercerita kemudian. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-089 · Rentang Data — siang dua ladang bersebelahan ----- */
+    'p2-089': {
+      tema: 'duaLadangRentang',
+      npc: { glif: '13-1', ucap: ['Rata sama,', 'rentang beda!'] },
+      stasiun: [
+        {
+          objek: 'ladangKompakTujuh', judul: 'Ladang Kompak di Kiri',
+          teks: 'Siang di dua ladang bersebelahan, tiga tanaman ladang kiri diukur tingginya: enam, tujuh, delapan. Rata-ratanya tujuh — hasil gabungan dua puluh satu dibagi tiga. Ketiga tanamannya hampir sama tinggi, berdiri rapi seperti barisan pasukan yang latihan teratur. Ladang ini disebut kompak: datanya bergerombol dekat, tak ada yang menginjak batas jauh. Semuanya terasa seragam dan tenang.',
+        },
+        {
+          objek: 'ladangMenyebarTujuh', judul: 'Ladang Menyebar di Kanan',
+          teks: 'Ladang kanan mengejutkan: tingginya satu, tujuh, dan tiga belas. Jumlahkan semua — dua puluh satu — dibagi tiga: rata-ratanya juga tujuh! Rata-rata kedua ladang sama persis, tapi lihat wajah ladangnya: satu tanaman kerdil jauh, satu menjulang jauh, tak ada yang mirip tetangganya. Rata-rata yang sama ternyata bisa menyembunyikan dua cerita yang berbeda jauh. Ada rahasia yang belum terbongkar.',
+        },
+        {
+          objek: 'garisUkurRentang', judul: 'Mengukur Rentang: Terbesar Kurang Terkecil',
+          teks: 'Rahasianya dibongkar dengan satu jurus: rentang, yaitu data terbesar dikurangi data terkecil. Ladang kiri: delapan kurang enam sama dengan dua — rentangnya kecil, data memang rapat. Ladang kanan: tiga belas kurang satu sama dengan dua belas — rentangnya enam kali lipat! Rentang mengukur seberapa berjauhan datanya. Rata-rata menyamarkan, rentang membongkar: dua angka ini selalu bekerja berdua.',
+        },
+        {
+          objek: 'papanRataSamaBeda', judul: 'Papan: Rata-rata Sama, Cerita Beda',
+          teks: 'Papan di antara dua ladang menuliskan pelajaran hari ini: rata-rata menceritakan pusat data, rentang menceritakan sebarannya. Keduanya alat bantu yang saling melengkapi — hitungan itu hanya alat, dan membaca keduanya bersama membuat kita jujur pada data. Data kompak dengan rentang kecil terasa teratur; data menyebar dengan rentang besar menuntut perhatian lebih. Satu angka saja tidak cukup cerita.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rentang Membongkar Rahasia!',
+          teks: 'Dua ladang dengan rata-rata sama ternyata menyimpan wajah berbeda, dan rentang membongkarnya: dua banding dua belas. Owalah, ternyata begini toh — terbesar kurang terkecil, dan sebaran data terbaca jujur. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-090 · Tantangan Data Hutan — malam balai riset lima misi ----- */
+    'p2-090': {
+      tema: 'balaiRisetMalam',
+      npc: { glif: '30', ucap: ['Lima misi', 'satu data!'] },
+      stasiun: [
+        {
+          objek: 'balaiRisetLentera', judul: 'Balai Riset Malam Ini Terbuka',
+          teks: 'Malam di balai riset hutan, lentera-lentera menyala di atas meja panjang, dan lima misi tertulis di papan pengumuman: satu peneliti muda harus memeriksa data pengamatan burung lima hari terakhir. Semua ilmu yang dipelajari sepanjang penjuru ini — data, rata-rata, median, modus, diagram, tabel, rentang — kini menunggu dipakai bersama. Satu set data, lima pertanyaan; mari buktikan bahwa kumpulan angka bisa menjawab banyak hal.',
+        },
+        {
+          objek: 'papanDataLimaHari', judul: 'Data Lima Hari di Papan Riset',
+          teks: 'Papan riset memuat datanya dengan jujur: kunjungan burung lima hari terakhir tercatat tiga, lima, lima, tujuh, sepuluh. Lima angka hasil pengamatan yang setia — pertanyaan yang sama dijawab lima kali, tiap jawaban dicatat. Data sekecil ini sudah cukup kaya: ia siap menjawab lima misi di papan, satu per satu, dengan hitungan yang bisa diperiksa ulang siapa pun.',
+        },
+        {
+          objek: 'misiTotalMeanEnam', judul: 'Misi Satu dan Dua: Total dan Rata-rata',
+          teks: 'Misi pertama menjumlah: tiga tambah lima tambah lima tambah tujuh tambah sepuluh sama dengan tiga puluh — total tiga puluh kunjungan dalam lima hari. Misi kedua membaginya: tiga puluh dibagi lima hari sama dengan enam — rata-rata enam kunjungan per hari. Jurus dapur dari penjuru gelas air dipakai lagi di sini: jumlahkan semua, bagi banyaknya. Rata-rata tak pernah kehabisan pekerjaan.',
+        },
+        {
+          objek: 'misiMedianModus', judul: 'Misi Tiga dan Empat: Median dan Modus',
+          teks: 'Misi ketiga menyusun data dari kecil ke besar — tiga, lima, lima, tujuh, sepuluh — dan menunjuk yang di tengah: lima, itulah median. Misi keempat menghitung kemunculan: lima muncul dua kali, lebih sering dari angka lain mana pun — itulah modus. Dua jurus dari dua dunia berbeda, halaman batu dan rak sandal, kini dipakai berdampingan di meja riset yang sama. Data yang setia selalu bisa dijawab dengan jurus yang sama.',
+        },
+        {
+          objek: 'misiRentangTujuh', judul: 'Misi Lima: Rentang Data',
+          teks: 'Misi terakhir mengukur sebarannya: terbesar sepuluh kurang terkecil tiga sama dengan tujuh — rentangnya tujuh kunjungan, artinya harinya cukup berbeda-beda dari yang tenang sampai yang ramai. Kelima misi selesai dengan hitungan yang jujur dan bisa dicek ulang: hitungan itu hanya alat, penelitilah yang menjaga kejujurannya. Lima pertanyaan, satu set data — dan semua terjawab tanpa sisa.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Data Jawab Lima Misi!',
+          teks: 'Total tiga puluh, rata-rata enam, median lima, modus lima, rentang tujuh — satu set data mampu menjawab lima misi sekaligus. Owalah, ternyata begini toh — statistika kecil hanyalah kumpulan jurus jujur untuk membaca angka pengamatan. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
