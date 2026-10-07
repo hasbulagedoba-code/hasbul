@@ -1137,6 +1137,286 @@ window.CERITA = (function () {
       ],
     },
 
+    /* ----- p2-041 · Rasio: Perbandingan — dapur jus mangga senja ----- */
+    'p2-041': {
+      tema: 'dapurJus',
+      npc: { glif: '2:3', ucap: ['Dua banding', 'tiga!'] },
+      stasiun: [
+        {
+          objek: 'gelasManggaDua', judul: 'Dua Gelas Mangga, Tiga Gelas Air',
+          teks: 'Senja turun di dapur hutan. Kakak Beruang menuang jus mangga andalannya: dua gelas penuh bubuk mangga, kemudian tiga gelas air matang. Di papan dapur ia menulis dua angka dipisah titik dua: 2 : 3. Yang penting bukan jumlah total gelasnya, melainkan pasangannya — setiap dua takaran mangga selalu berjumpa tiga takaran air. Tulisan pendek itulah yang disebut rasio: cara rapi membandingkan dua kelompok.',
+        },
+        {
+          objek: 'papanDuaTiga', judul: 'Dibaca: Dua Banding Tiga',
+          teks: 'Rasio 2 : 3 dibaca dua banding tiga. Angka pertama menceritakan kelompok mangga, angka kedua kelompok air, dan titik dua di tengah berfungsi seperti jembatan kecil yang menyatukan keduanya. Jika mangganya dua gelas, airnya tiga gelas; jika mangganya empat gelas, airnya enam gelas — pasangan itu tetap. Membaca rasio artinya membaca cerita dua kelompok dalam satu napas.',
+        },
+        {
+          objek: 'jusKebalik', judul: 'Coba Tukar Urutannya!',
+          teks: 'Malam itu adik ikut mencoba, tetapi ia menukar urutan: tiga gelas mangga untuk dua gelas air. Hasilnya? Jus ternyata pekat sekali, manisnya menusuk lidah! Padahal angkanya sama — dua dan tiga. Ternyata rasio menempel pada urutan ceritanya: 2 : 3 berarti mangga dulu, air belakangan; menukar posisinya berarti menukar jusnya. Angka yang sama dengan urutan yang berbeda adalah cerita yang berbeda.',
+        },
+        {
+          objek: 'papanUrutanRasio', judul: 'Papan Resep Kakak Beruang',
+          teks: 'Papan resep kakak beruang menutup pelajaran malam: rasio membandingkan dua kelompok sebagaimana urutan penyebutannya. 2 : 3 selalu berarti mangga dulu lalu air, dan takaran total boleh diperbesar — empat banding enam, enam banding sembilan — asal pasangannya tetap dipelihara. Siapa menjaga pasangan itu, jusnya selalu pas; siapa menukarnya, jusnya berubah wajah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rasio Itu Pasangan Angka!',
+          teks: 'Rasio ternyata cuma pasangan angka yang berjalan bergandengan: 2 : 3 berarti dua takaran mangga untuk setiap tiga takaran air, dengan urutan yang menyertai cerita. Tukar urutan, berubahlah rasa; gandakan keduanya, rasa tetap setia. Owalah, ternyata begini toh — rasio cuma cara rapi menuliskan perbandingan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-042 · Skala Peta — menara pandang siang ----- */
+    'p2-042': {
+      tema: 'menaraPeta',
+      npc: { glif: '1000', ucap: ['Peta kecil,', 'dunia besar!'] },
+      stasiun: [
+        {
+          objek: 'mejaPetaGulung', judul: 'Peta di Menara Pandang',
+          teks: 'Siang cerah di menara pandang hutan. Penjaga menara membuka gulungan peta tua di meja bundar: hutan seakan mengerut menjadi selembar kertas, lengkap dengan jalan, sungai, dan menara ini sendiri yang kini sebesar kelingking. Di pojok peta tertulis dua angka kecil dengan titik dua: 1 : 1000. Angka malu-malu itu ternyata menyimpan rahasia terbesar peta.',
+        },
+        {
+          objek: 'jengkalTunggal', judul: 'Satu Jengkal di Peta',
+          teks: 'Penjaga menara menempelkan jengkal tangannya di peta. "Satu jengkal di sini," katanya, "mewakili seribu jengkal di jalan sungguhan." Itulah arti 1 : 1000 — satu banding seribu. Angka kiri menceritakan ukuran di peta, angka kanan ukuran di dunia nyata. Peta adalah dunia yang dipangkas rapi dengan gunting rasio.',
+        },
+        {
+          objek: 'tigaJengkalJalan', judul: 'Tiga Jengkal Berlari Jauh',
+          teks: 'Maka diujilah: jarak antara menara dan sungai di peta sepanjang tiga jengkal. Kalikan tiga dengan seribu, dan jalan sungguhannya menjadi tiga ribu jengkal — cukup untuk berjalan sore hari sampai kaki lelah. Tiga jengkal kecil di kertas menyimpan ribuan jengkal petualangan. Semakin besar angka kanannya, semakin luas dunia yang tersembunyi di kertas.',
+        },
+        {
+          objek: 'papanSkalaSeribu', judul: 'Papan Kaki Menara',
+          teks: 'Papan di kaki menara menuliskan aturan membaca skala: angka kiri untuk peta, angka kanan untuk jalan sebenarnya. 1 : 1000 dibaca satu banding seribu; kalau tertulis 1 : 500, satu jengkal peta hanya mewakili lima ratus jengkal jalan. Skala seperti kunci — ia memberi tahu berapa kali dunia dimampatkan agar muat di atas kertas.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Peta Kecil Dunia Besar!',
+          teks: 'Skala peta ternyata cuma rasio yang setia: 1 : 1000 berarti satu jengkal di kertas menjaga seribu jengkal di jalan. Kalikan jarak di peta dengan angka kanan, dan dunia nyata langsung terbentang. Owalah, ternyata begini toh — peta kecil mampu menjawab jalan yang besar. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-043 · Harga Satuan — kios permen pagi ----- */
+    'p2-043': {
+      tema: 'kiosPermen',
+      npc: { glif: '500', ucap: ['Satu permen', 'berapa?'] },
+      stasiun: [
+        {
+          objek: 'kantongEnamPermen', judul: 'Kantong Enam Permen',
+          teks: 'Pagi di pasar hutan. Kios pertama memajang kantong berisi enam permen warna-warni dengan nota tertulis tiga ribu. Pembeli kecil mengernyit: murah atau mahal, ya? Kantong besar memang tampak menggoda, tetapi kios di seberang juga berteriak menawarkan empat permen seharga dua ribu empat ratus. Mana yang sebenarnya lebih hemat?',
+        },
+        {
+          objek: 'notaTigaRibu', judul: 'Nota Kios Pertama',
+          teks: 'Rahasia membandingkan harga ada pada satu pertanyaan: berapa harga satu permen? Di kios pertama, tiga ribu dibagi enam permen sama dengan lima ratus — jadi satu permen lima ratus. Angka itulah harga satuan: harga untuk kepingan tunggal, diperoleh dengan membagi total dan banyaknya. Cara ini membuat semua kantong bisa berdiri di garis start yang sama.',
+        },
+        {
+          objek: 'permenLimaRatus', judul: 'Satu Permen Lima Ratus',
+          teks: 'Sekarang giliran kios seberang: dua ribu empat ratus dibagi empat sama dengan enam ratus. Satu permen di sana berharga enam ratus. Bandingkan dengan lima ratus di kios pertama — lima ratus lebih kecil, artinya lebih hemat. Uji balik pun cocok: lima ratus dikali enam sama dengan tiga ribu, persis nota kios pertama.',
+        },
+        {
+          objek: 'papanDuaKios', judul: 'Papan Detektif Harga',
+          teks: 'Papan detektif harga di dinding pasar menuliskan temuan hari ini: kantong kios kedua totalnya lebih kecil — dua ribu empat ratus memang lebih sedikit dari tiga ribu — tetapi per-permennya lebih mahal. Total kecil belum tentu paling hemat; harga satuanlah yang jujur. Detektif pasar selalu bertanya dulu: satu keping berapa?',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Harga Satuan Bongkar Rahasia!',
+          teks: 'Harga satuan ternyata cuma soal membagi rata: total dibagi banyaknya, dan setiap kantong langsung berbicara jujur. Tiga ribu untuk enam permen berarti lima ratus per keping — dan perbandingan antar kios menjadi adil. Owalah, ternyata begini toh — harga satuan membongkar rahasia yang paling hemat. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-044 · Proporsi Tetap Setia — dapur kue ulang tahun malam ----- */
+    'p2-044': {
+      tema: 'dapurKue',
+      npc: { glif: '4:6', ucap: ['Gandakan', 'semuanya!'] },
+      stasiun: [
+        {
+          objek: 'kartuResepDuaTiga', judul: 'Resep untuk Empat Teman',
+          teks: 'Malam di dapur hutan berbau manis. Beruang koki menyiapkan kue ulang tahun untuk empat teman: resepnya dua takar gula bertemu tiga takar tepung. Ia menulisnya di kartu resep: 2 : 3 — dua banding tiga. Kue kecil itu selalu jadi favorit, karena rasa manis-lembutnya terasa pas di lidah siapa pun yang datang.',
+        },
+        {
+          objek: 'mangkokGandaEmpat', judul: 'Tamu Bertambah Dua Kali',
+          teks: 'Besok pesta berdua kali lebih ramai — delapan teman akan datang. Beruang koki tersenyum dan menggandakan semua takaran sekaligus: gula dari dua menjadi empat takar, tepung dari tiga menjadi enam takar. Kartu resep baru menuliskan 4 : 6 — empat banding enam. Semua angka membesar bersama-sama, tak ada yang tertinggal di rumah.',
+        },
+        {
+          objek: 'duaKueSamaRasa', judul: 'Dua Kue, Satu Rasa',
+          teks: 'Dua kue pun jadi: kue kecil dari resep lama dan kue besar dari resep baru. Ditiup lilinnya dan dicicipi bergantian — rasanya sama persis! Ternyata 2 : 3 dan 4 : 6 adalah rasio kembar: kalikan silang, dua kali enam sama dengan tiga kali empat. Jumlahnya membesar, tetapi perbandingannya tetap setia pada rasa aslinya.',
+        },
+        {
+          objek: 'papanProporsiSetia', judul: 'Papan Dapur Malam',
+          teks: 'Papan dapur malam itu menuliskan nama ilmunya: proporsi — rasio yang tetap setia meski jumlahnya membesar atau mengecil. Boleh dikali dua, dikali tiga, dibagi dua; asal semua angka digerakkan bersama, perbandingannya tak akan lari ke mana-mana. Resep yang setia adalah proporsi yang hidup di dapur setiap hari.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Resepnya Setia Diperbesar!',
+          teks: 'Proporsi ternyata rasio yang tak kenal lupa: diperbesar sekali pun, 2 : 3 tetap berjumpa 4 : 6 dengan rasa yang sama persis. Syaratnya cuma satu — semua takaran bergerak bersama. Owalah, ternyata begini toh — resep bisa membesar tanpa kehilangan dirinya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-045 · Kecepatan & Waktu — lintasan lari siang ----- */
+    'p2-045': {
+      tema: 'lintasanLari',
+      npc: { glif: '60', ucap: ['Tempo setia', 'tiap menit!'] },
+      stasiun: [
+        {
+          objek: 'garisStartKelinci', judul: 'Garis Start Lomba',
+          teks: 'Siang di padang lomba hutan. Garis start memanjang, dua pelari siap: kelinci yang terkenal cepat dan kancil sahabatnya. Juri katak meniup peluit sambil membawa papan catatan: kelinci melangkah enam puluh langkah setiap satu menit — tidak lebih, tidak kurang, tempo yang setia seperti detak jantung yang teratur.',
+        },
+        {
+          objek: 'kelinciEnamPuluh', judul: 'Tempo Kelinci',
+          teks: 'Menit pertama berlalu: enam puluh langkah tertulis di papan juri. Kelinci melangkah rapi dengan jarak yang sama tiap menit, seperti kereta yang tak pernah terlambat. Angka enam puluh itulah kecepatannya — rasio antara jarak yang dilalui dan waktu yang dipakai. Kecepatan selalu berjalan berdua dengan kata "tiap": enam puluh langkah tiap menit.',
+        },
+        {
+          objek: 'duaMenitSeratus', judul: 'Dua Menit Berlalu',
+          teks: 'Menit kedua berlalu, dan papan juri menuliskan seratus dua puluh; menit ketiga, seratus delapan puluh. Tempo enam puluh tiap menit dijahit berulang-ulang: satu menit enam puluh, dua menit seratus dua puluh, tiga menit seratus delapan puluh. Waktu makin panjang, jarak ikut memanjang dengan rasio yang tak bergeser sedikit pun.',
+        },
+        {
+          objek: 'papanTempoJarak', judul: 'Papan Juri Lomba',
+          teks: 'Papan juri menutup lomba dengan aturannya: kecepatan merangkai jarak dan waktu seperti benang dua sisi kain — tahu satu menitnya, kalikan waktu untuk mendapat jarak; tahu jaraknya, bagi kecepatan untuk mendapat waktu. Kelinci menang penuh sorakan, tetapi pemenang sebenarnya adalah rasio enam puluh banding satu yang setia di papan juri.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kecepatan Penjahit Rapi!',
+          teks: 'Kecepatan ternyata rasio yang menjahit jarak dan waktu: enam puluh langkah tiap menit berarti dua menit seratus dua puluh, tiga menit seratus delapan puluh — cukup kalikan atau bagi, tempo tak pernah meleset. Owalah, ternyata begini toh — kecepatan cuma perbandingan yang disiplin. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-046 · Rasio Bertemu Persen — kios donat sore ----- */
+    'p2-046': {
+      tema: 'kotakDonat',
+      npc: { glif: '75%', ucap: ['Tiga bahasa', 'satu rasa!'] },
+      stasiun: [
+        {
+          objek: 'kotakDelapanDonat', judul: 'Kotak Delapan Donat',
+          teks: 'Sore di kios donat hutan. Kotak karton dibuka: delapan donat menghuninya, enam berselimut cokelat dan dua bertabur stroberi. Pemilik kios berbisik kepada pembeli kecil, "Enam dari delapan adalah cokelat." Angka itu juga bisa ditulis 6 : 8 — enam banding delapan — rasio donat cokelat terhadap seluruh isi kotak yang manis.',
+        },
+        {
+          objek: 'susunTigaDariEmpat', judul: 'Disederhanakan: 3 dari 4',
+          teks: 'Pembeli kecil mencoba merapikan: enam dan delapan sama-sama bisa dibagi dua, sehingga 6 : 8 menyusut rapi menjadi 3 : 4 — tiga dari setiap empat donat. Tidak ada yang berubah, hanya tulisannya yang lebih ramping. Coba bayangkan empat donat berjajar: tiga di antaranya cokelat, satu stroberi. Persis seperti isi kotak besar tadi.',
+        },
+        {
+          objek: 'papanTujuhLima', judul: 'Papan Kios: 75 Persen',
+          teks: 'Kios donat punya papan harga khusus: pemiliknya menuliskan 75 persen cokelat. Dari mana angka itu? Dari 3 : 4 — kalikan keduanya sampai sisi kanannya menjadi seratus: tiga kali dua puluh lima sama dengan tujuh puluh lima, empat kali dua puluh lima sama dengan seratus. Kata "persen" memang berarti per seratus, dan 75 per 100 itulah jawabannya.',
+        },
+        {
+          objek: 'papanTigaBahasa', judul: 'Tiga Kostum Satu Tokoh',
+          teks: 'Maka malam itu pembeli kecil mengerti: rasio, pecahan, dan persen adalah tiga kostum untuk satu tokoh. 3 : 4 memakai kostum rasio, tiga per empat memakai kostum pecahan, dan 75% memakai kostum persen — tokohnya tetap satu: bagian cokelat dari keseluruhan donat. Memilih kostum yang mana pun, ceritanya tetap sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Kostum Satu Makna!',
+          teks: 'Rasio, pecahan, dan persen ternyata satu keluarga: 3 : 4, tiga per empat, dan 75% hanyalah tiga kostum untuk satu makna. Ubah kelipatannya sampai berbasis seratus, dan persen muncul dengan senyum. Owalah, ternyata begini toh — tiga bahasa, satu perbandingan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-047 · Skala Miniatur — toko mainan sore ----- */
+    'p2-047': {
+      tema: 'tokoMiniatur',
+      npc: { glif: '1:24', ucap: ['Kali 24,', 'jadi raksasa!'] },
+      stasiun: [
+        {
+          objek: 'rakMobilMainan', judul: 'Rak Mobil Mainan',
+          teks: 'Sore di toko mainan hutan. Rak paling atas memajang mobil merah ramping dengan label kecil: skala 1 : 24. Pemilik toko menepuk label itu sambil tersenyum, "Angka satu adalah mobil mainanmu; angka dua puluh empat adalah mobil sebenarnya di jalan raya. Setiap satu bagian di mainanmu, ada dua puluh empat bagian di aslinya."',
+        },
+        {
+          objek: 'penggarisDuaPuluh', judul: 'Mengukur dengan Penggaris',
+          teks: 'Penggaris pun keluar bermain. Panjang mobil mainan diukur dari kap mesin sampai bagasi: dua puluh sentimeter rapi. Angka kecil itu menjadi batu loncatan — sekarang tugas kita hanya mengalikannya dengan dua puluh empat, sesuai janji yang tertulis di skala. Penggaris dan skala bekerja berpasangan seperti dua sahabat karib.',
+        },
+        {
+          objek: 'mobilJadiRaksasa', judul: 'Kali Dua Puluh Empat',
+          teks: 'Dua puluh dikali dua puluh empat sama dengan empat ratus delapan puluh. Mobil sebenarnya panjangnya empat ratus delapan puluh sentimeter — hampir lima meter! Sebesar mobil keluarga yang parkir di depan rumah. Mainan sekecil telapak tangan ternyata menampung mobil raksasa di dalam skala kecilnya; cukup dikali, dunia langsung membesar.',
+        },
+        {
+          objek: 'papanKaliDuaEmpat', judul: 'Papan Pemilik Toko',
+          teks: 'Papan pemilik toko menuliskan jalan pulangnya: mobil asli dibagi dua puluh empat, kembali menjadi mainan; mainan dikali dua puluh empat, tumbuh menjadi asli. Skala 1 : 24 selalu berjalan dua arah. Itulah kekuatan rasio — ia bisa mengecilkan apa pun agar muat di rak, lalu membesarkannya lagi tanpa kehilangan bentuk aslinya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Mainan Menjadi Raksasa!',
+          teks: 'Skala miniatur ternyata rasio dua arah: ukur mainanmu, kali dua puluh empat, dan mobil asli langsung berdiri; bagi kembali, mainannya kembali mungil. Dua puluh sentimeter menjadi empat ratus delapan puluh hanya dengan satu langkah kali. Owalah, ternyata begini toh — angka kecil bisa membesarkan dunia. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-048 · Berbalik Nilai — kerja bakti gali sumur pagi ----- */
+    'p2-048': {
+      tema: 'sumurDesa',
+      npc: { glif: '24', ucap: ['Makin banyak,', 'makin cepat!'] },
+      stasiun: [
+        {
+          objek: 'galianEmpatPekerja', judul: 'Empat Pekerja, Enam Hari',
+          teks: 'Pagi di desa hutan, semua warga berkumpul di tanah kosong: sumur baru akan digali. Empat pekerja berangkat sejak pagi, dan kalender dinding menandai enam lingkaran yang dicoreti satu per satu sampai sumur jadi. Enam hari penuh untuk empat orang — catatan pertama ditulis di papan desa: empat pekerja, enam hari.',
+        },
+        {
+          objek: 'galianDelapanPekerja', judul: 'Delapan Pekerja Datang',
+          teks: 'Desa sebelah mendengar kabar dan mengirim bantuan: kini delapan pekerja bekerja bersama, dua kali lebih ramai dari sebelumnya. Kalender baru pun dicoret lebih cepat — tiga lingkaran saja, sumur selesai! Papan desa menuliskan catatan kedua: delapan pekerja, tiga hari. Sumurnya sama dalamnya; yang berubah hanya waktu tunggu.',
+        },
+        {
+          objek: 'papanKaliSilang', judul: 'Rahasia Angka 24',
+          teks: 'Kepala desa menyipitkan mata dan menemukan rahasia di balik dua catatan itu: empat kali enam sama dengan dua puluh empat, dan delapan kali tiga juga dua puluh empat. Total kerja tidak pernah berpindah — ia hanya berganti tangan. Jika enam pekerja yang datang, dua puluh empat dibagi enam sama dengan empat hari. Semua catatan berjumpa di angka yang sama.',
+        },
+        {
+          objek: 'papanBerbalikNilai', judul: 'Papan Kepala Desa',
+          teks: 'Papan kepala desa menuliskan namanya: perbandingan berbalik nilai — bila satu sisi naik, pasangannya turun dengan rapi, seperti jungkat-jungkit angka yang seimbang. Makin banyak pekerja, makin singkat hari; makin sedikit pekerja, makin panjang hari. Yang bekerja hanyalah total kerja yang setia: jumlah pekerja dikali hari, selalu dua puluh empat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Angka 24 Tak Pernah Pindah!',
+          teks: 'Berbalik nilai ternyata jungkat-jungkit angka: empat pekerja enam hari, delapan pekerja tiga hari, enam pekerja empat hari — pekerja dikali hari selalu dua puluh empat. Satu sisi naik, pasangannya turun, dan keseimbangan tak pernah runtuh. Owalah, ternyata begini toh — total kerja cuma pindah tangan, bukan berubah. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-049 · Resep & Takaran — warung kelontong malam ----- */
+    'p2-049': {
+      tema: 'dapurWarung',
+      npc: { glif: '8', ucap: ['Semua ikut', 'digandakan!'] },
+      stasiun: [
+        {
+          objek: 'bukuResepWarung', judul: 'Buku Resep Warung',
+          teks: 'Malam di warung kelontong hutan. Buku resep terbuka di rak: kuah favorit untuk empat mangkuk butuh dua mangkok tepung, satu sendok garam, dan tiga gelas kaldu. Tulisannya berjejer rapi seperti barisan kecil yang saling berpegangan tangan. Malam ini warung terasa tenang — atau begitulah dugaan semua orang.',
+        },
+        {
+          objek: 'delapanTamuDatang', judul: 'Delapan Tamu Mendadak!',
+          teks: 'Tiba-tiba pintu terbuka lebar: rombongan musafir masuk, delapan mangkuk dipesan sekaligus! Pemilik warung hampir tersedak tehnya — pesanan menjadi dua kali lipat. Ia menarik napas panjang dan membuka buku resep lagi: kalau mangkuknya digandakan, takaran pun harus digandakan. Itulah undang-undang dapur yang tak pernah tertulis.',
+        },
+        {
+          objek: 'semuaIkutGanda', judul: 'Semua Takaran Ikut Dobel',
+          teks: 'Mangkok tepung dari dua menjadi empat, sendok garam dari satu menjadi dua, gelas kaldu dari tiga menjadi enam — semua bahan bergerak bersama tanpa kecuali. Kuah untuk delapan mangkuk pun siap dalam kedipan mata, dan rasanya persis seperti resep asli. Dobel mangkuk, dobel segalanya; itulah janji yang harus ditepati takaran.',
+        },
+        {
+          objek: 'papanTakaranUtuh', judul: 'Papan Dapur: SEMUA IKUT',
+          teks: 'Papan dapur warung menuliskan peringatan lucu dari kejadian lama: suatu malam garam hampir terlupa digandakan — kuahnya jadi hambar, dan tamu pun saling melirik bingung. Satu bahan yang tidak ikut bergerak bisa mengubah seluruh rasa. Maka tulisan besar terpampang: SEMUA IKUT — proporsi hanya setia bila semua takaran bergerak serempak.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semuanya Ikut Bergoyang!',
+          teks: 'Resep ganda ternyata cuma proporsi yang mengajak semua bahan menari: tamu dobel berarti tepung, garam, dan kaldu ikut dobel — dua menjadi empat, satu menjadi dua, tiga menjadi enam. Satu yang tertinggal, rasa berubah wajah. Owalah, ternyata begini toh — dapur adalah tempat proporsi paling lezat. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-050 · Tantangan Skala Hutan — gua peta karun malam ----- */
+    'p2-050': {
+      tema: 'petaKarun',
+      npc: { glif: '5', ucap: ['Lima segel', 'menunggu!'] },
+      stasiun: [
+        {
+          objek: 'petaKarunTerkunci', judul: 'Peta Karun Bermata Lima',
+          teks: 'Malam di gua paling dalam hutan. Peta karun tua tergantung bercahaya redup, dengan lima segel bernomor menutupi lokasi harta. Penjaga gua menceritakan: hanya ahli rasio yang mampu membukanya — satu segel terbuka untuk satu jawaban tepat. Malam ini segel-segel itu mulai bergetar pelan, seakan menunggu pemiliknya datang.',
+        },
+        {
+          objek: 'misiRasioSkala', judul: 'Segel Satu dan Dua',
+          teks: 'Segel satu dan dua menyala bersamaan. Segel satu menanyakan rasio: 4 : 6 disederhanakan menjadi 2 : 3 — kedua angka dibagi dua, pasangannya tetap. Segel dua menanyakan skala: peta berskala 1 : 100 menunjukkan jarak lima sentimeter, maka jalan sebenarnya lima ratus sentimeter. Dua segel pun berguguran, dan peta makin terang menyala.',
+        },
+        {
+          objek: 'misiHargaPersen', judul: 'Segel Tiga dan Empat',
+          teks: 'Segel tiga dan empat ikut menyala. Segel tiga soal harga satuan: delapan buah seharga empat ribu berarti lima ratus sebuah — total dibagi banyaknya. Segel empat soal persen: tiga dari empat sama dengan tujuh puluh lima persen, karena tiga kali dua puluh lima sama dengan tujuh puluh lima. Peta kini bercahaya hampir penuh; tinggal satu segel gelap.',
+        },
+        {
+          objek: 'misiBerbalikPeta', judul: 'Segel Lima: Peta Terbuka',
+          teks: 'Segel terakhir menantang: enam pekerja menyelesaikan jembatan dalam empat hari; berapa hari untuk dua belas pekerja? Enam kali empat sama dengan dua puluh empat, maka dua puluh empat dibagi dua belas sama dengan dua hari. Segel kelima berguguran, dan seluruh peta menyala penuh — karun itu ternyata jurnal ahli hitung tua berisi rahasia resep dan skala hutan!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Ahli Rasio Membaca Segala Peta!',
+          teks: 'Lima segel ternyata cuma lima soal rasio berkostum: perbandingan, skala, harga satuan, persen, dan berbalik nilai — semua memakai jurus yang sama: jaga pasangannya, bagi ratanya, kalikan bersamanya. Owalah, ternyata begini toh — rasio adalah kunci yang membuka segala peta. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
