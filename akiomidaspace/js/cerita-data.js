@@ -1697,6 +1697,286 @@ window.CERITA = (function () {
       ],
     },
 
+    /* ----- p2-061 · Kubus: Sisi & Isi — siang bengkel kado, enam kartu persegi ----- */
+    'p2-061': {
+      tema: 'mejaKado',
+      npc: { glif: '54', ucap: ['Enam kartu,', 'lengkap semua!'] },
+      stasiun: [
+        {
+          objek: 'kotakKadoKubus', judul: 'Kotak Kado Bersegi Sama',
+          teks: 'Meja kado di bengkel hutan menyediakan kotak kado berbentuk kubus dengan sisi tiga senti. Kubus adalah kotak istimewa: keenam sisinya persegi dan sama besar, seperti dadu mainan. Coba lihat dari depan, dari atas, lalu dari samping — semuanya tampilan persegi yang kembar. Inilah rahasia pertama kubus: satu bentuk, enam wajah yang seragam.',
+        },
+        {
+          objek: 'kartuPersegiEnam', judul: 'Enam Kartu Membungkus Sempurna',
+          teks: 'Tukang kado menyiapkan enam kartu persegi, tiap kartu berukuran tiga senti kali tiga senti. Satu kartu menutup satu sisi: luasnya tiga kali tiga sama dengan sembilan sentimeter persegi. Enam kartu itu ditempel satu per satu — depan, belakang, kiri, kanan, atas, bawah — dan kotak tertutup rapat tanpa sisa kertas. Jadi luas permukaan kubus enam kali sembilan sama dengan lima puluh empat. Angka lima puluh empat itu jawaban dari enam wajah kubus.',
+        },
+        {
+          objek: 'kubusSusunIsi', judul: 'Isi Ruang yang Tersembunyi',
+          teks: 'Kalau kulitnya sudah jelas, sekarang isi ruangnya. Bayangkan kubus kecil bersisi satu senti, lalu susun di dalam kotak: satu lantai muat tiga kali tiga sama dengan sembilan kubus kecil, dan ada tiga lantai dari bawah ke atas. Sembilan dikali tiga sama dengan dua puluh tujuh kubus kecil mengisi penuh. Itulah volume kotak kado: dua puluh tujuh sentimeter kubik. Kulit dihitung dari luar; isi dihitung dari lapisan di dalam.',
+        },
+        {
+          objek: 'papanKubusJurus', judul: 'Jurus Kubus di Papan Bengkel',
+          teks: 'Papan bengkel menuliskan dua jurus kubus sekali baca: luas permukaan enam kali sisi kali sisi, dan volume sisi kali sisi kali sisi. Uji sekali lagi dengan sisi tiga: enam kali sembilan sama dengan lima puluh empat, dan tiga kali tiga kali tiga sama dengan dua puluh tujuh. Dua jawaban tadi kembali persis. Jurus yang benar selalu membawa kita ke tempat yang sama, seberapa sering pun diuji.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kubus Terbuka Semua Sisinya!',
+          teks: 'Kubus ternyata cuma punya dua pertanyaan: berapa kulitnya dan berapa isinya. Kulit dijawab enam kartu persegi, isi dijawab tumpukan kubus kecil. Owalah, ternyata begini toh — bentuk paling rapi di dunia juga paling gampang dihitung. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-062 · Balok & Permukaannya — pagi lantai bengkel, kardus jadi jaring ----- */
+    'p2-062': {
+      tema: 'lantaiJaring',
+      npc: { glif: '88', ucap: ['Tiga pasang', 'kembar!'] },
+      stasiun: [
+        {
+          objek: 'kardusBalokUtuh', judul: 'Kardus Pipih di Lantai Bengkel',
+          teks: 'Pagi di lantai bengkel hutan, sebuah kardus balok bersandar tenang. Panjangnya enam senti, lebarnya empat, tingginya dua. Balok itu seperti kubus yang diulur: sisinya persegi panjang, bukan persegi lagi. Keenam sisinya tersusun rapi menjadi tiga pasang: depan dan belakang, atas dan bawah, kiri dan kanan — tiga kembaran yang menunggu dihitung.',
+        },
+        {
+          objek: 'jaringBalokRata', judul: 'Kardus Dibongkar Jadi Jaring',
+          teks: 'Kardusnya direkat lalu dibongkar perlahan sampai terbentang pipih di lantai — jaring balok! Sekarang semua sisi terlihat sekaligus tanpa perlu memutar-mutar kotak. Hitung bersama: dua persegi panjang besar berukuran enam kali empat, dua sedang berukuran enam kali dua, dan dua kecil berukuran empat kali dua. Tidak ada sisi yang sembunyi; jaring membongkar semua rahasia sekaligus.',
+        },
+        {
+          objek: 'pasangKembarTiga', judul: 'Tiga Pasang, Tiga Jawaban',
+          teks: 'Tiap pasang dihitung satu per satu. Pasang depan-belakang: dua kali enam kali empat sama dengan empat puluh delapan. Pasang atas-bawah: dua kali enam kali dua sama dengan dua puluh empat. Pasang kiri-kanan: dua kali empat kali dua sama dengan enam belas. Jumlahkan semuanya: empat puluh delapan tambah dua puluh empat tambah enam belas sama dengan delapan puluh delapan sentimeter persegi. Itulah luas permukaan kardus kita.',
+        },
+        {
+          objek: 'papanJumlahEnamSisi', judul: 'Jurus Tiga Kali Lalu Jumlahkan',
+          teks: 'Papan di dinding menuliskan jurus balok: kalikan luas tiap macam sisi dengan dua, lalu jumlahkan ketiganya. Uji ulang: empat puluh delapan, dua puluh empat, dan enam belas berjalan pulang ke delapan puluh delapan. Kardus mana pun ukurannya diubah, jurus ini tetap jalan: tiga perkalian, satu penjumlahan. Tidak perlu menghitung enam sisi satu-satu lagi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jaring Membongkar Semua Sisi!',
+          teks: 'Balok ternyata hanya kubus yang terulur, dan jaringnya membuktikan keenam sisinya tak pernah sembunyi. Tiga pasang kembar, tiga perkalian, satu penjumlahan. Owalah, ternyata begini toh — membongkar kardus pun bisa jadi ilmu luas permukaan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-063 · Volume Balok — sore dapur, laci kotak susu dua lapis ----- */
+    'p2-063': {
+      tema: 'dapurSusun',
+      npc: { glif: '48', ucap: ['Susun lapis', 'demi lapis!'] },
+      stasiun: [
+        {
+          objek: 'laciKosongEnamEmpat', judul: 'Laci Kosong yang Menunggu',
+          teks: 'Sore di dapur hutan, sebuah laci kotak susu menunggu diisi. Laci itu berukuran enam kotak memanjang dan empat kotak melebar — seperti papan catur yang lonjong. Pertanyaannya sederhana: berapa kotak susu kecil yang bisa muat mengisi laci sampai penuh sampai ke atas? Jawabannya tidak ditebak; jawabannya disusun satu per satu sampai laci berkata penuh.',
+        },
+        {
+          objek: 'kubusSusuSusun', judul: 'Lantai Pertama: Dua Puluh Empat',
+          teks: 'Kotak susu kecil disusun berjajar di lantai laci: enam kotak ke kanan, empat baris ke belakang. Enam kali empat sama dengan dua puluh empat — lantai pertama penuh rapi tanpa celah. Satu lapis demi satu lapis adalah cara paling jujur menghitung isi: tidak ada kotak yang menggantung di udara, semua bersandar pada tumpukan di bawahnya.',
+        },
+        {
+          objek: 'susunDuaLapis', judul: 'Lapis Kedua: Empat Puluh Delapan',
+          teks: 'Lantai kedua disusun lagi dua puluh empat kotak di atas lantai pertama, dan tinggi laci memang tepat untuk dua lapis. Dua puluh empat tambah dua puluh empat sama dengan empat puluh delapan kotak susu mengisi penuh. Hitung pintasnya: enam kali empat kali dua sama dengan empat puluh delapan. Panjang kali lebar kali tinggi — tiga ukuran, satu jawaban.',
+        },
+        {
+          objek: 'papanPanjangLebarTinggi', judul: 'Jurus Panjang-Lebar-Tinggi di Dinding',
+          teks: 'Papan dapur menuliskan jurus volume balok: panjang kali lebar kali tinggi. Laci tadi membuktikannya: enam kali empat kali dua sama dengan empat puluh delapan. Coba bayangkan laci serupa yang tingginya tiga lapis — jawabannya bergeser jadi tujuh puluh dua, cukup tambah satu kali dua puluh empat lagi. Makin tinggi laci, makin banyak lapisan, makin besar isinya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Isi Laci Terhitung Sampai Atas!',
+          teks: 'Volume balok ternyata cuma soal menyusun: satu lantai dihitung dulu, lalu dikalikan banyak lapisnya. Owalah, ternyata begini toh — panjang kali lebar kali tinggi adalah cerita tentang tumpukan yang rapi. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-064 · Prisma Segitiga — senja kaki bukit, atap rumah kartu diseret ----- */
+    'p2-064': {
+      tema: 'atapPrisma',
+      npc: { glif: '120', ucap: ['Atap rumah', 'punya isi!'] },
+      stasiun: [
+        {
+          objek: 'rumahAtapPrisma', judul: 'Atap Rumah di Kaki Bukit',
+          teks: 'Senja menyapa rumah mainan di kaki bukit hutan, dan atapnya berbentuk prisma segitiga: penampangnya segitiga, badannya memanjang seperti roti lapis. Prisma itu gampang dikenali — bayangkan satu kartu segitiga yang diseret lurus sejauh panjang atap. Jejak seretan itulah yang mengisi seluruh ruang di bawah genteng.',
+        },
+        {
+          objek: 'kartuSegitigaAlas', judul: 'Luas Kartu Segitiga: Dua Belas',
+          teks: 'Kartu segitiga di penampang atap punya alas enam senti dan tinggi segitiga empat senti. Rumus luas segitiga adalah alas kali tinggi dibagi dua: enam kali empat sama dengan dua puluh empat, lalu dibagi dua jadi dua belas sentimeter persegi. Kenapa dibagi dua? Sebuah persegi enam kali empat pasti bisa dipotong jadi dua segitiga kembar — kartu kita adalah separuhnya.',
+        },
+        {
+          objek: 'geserSegitigaAtap', judul: 'Diseret Sepuluh Kali: Seratus Dua Puluh',
+          teks: 'Sekarang kartu segitiga itu diseret sepanjang atap dari ujung depan sampai ujung belakang, sejauh sepuluh senti. Setiap geseran satu senti menyapu luas dua belas sentimeter persegi, dan geseran itu terjadi sepuluh kali: dua belas kali sepuluh sama dengan seratus dua puluh. Itulah volume atap prisma — seratus dua puluh sentimeter kubik isi ruang genteng.',
+        },
+        {
+          objek: 'papanLuasKaliPanjang', judul: 'Jurus Prisma di Papan Senja',
+          teks: 'Papan di teras menuliskan jurus prisma: volume sama dengan luas alas dikali tinggi prisma — atau panjang seretannya. Uji lagi: dua belas kali sepuluh sama dengan seratus dua puluh, cocok persis dengan hitungan seretan tadi. Prisma apa pun — penampang segitiga, segilima, bahkan berbentuk hati — semuanya dihitung dengan cara yang sama: luas kartunya, kali jarak seretnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Atap Ternyata Roti Lapis Angka!',
+          teks: 'Prisma segitiga ternyata cuma kartu segitiga yang diseret: hitung luas kartunya, kalikan panjang seretan. Owalah, ternyata begini toh — atap rumah menyimpan pelajaran volume yang bisa diseret dengan tangan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-065 · Tabung: Si Kaleng — siang kantin, label kaleng terbentang ----- */
+    'p2-065': {
+      tema: 'rakKaleng',
+      npc: { glif: '44', ucap: ['Benangnya', 'melingkar!'] },
+      stasiun: [
+        {
+          objek: 'kalengSusuRak', judul: 'Rak Kaleng di Kantin Hutan',
+          teks: 'Siang di kantin hutan, rak berisi kaleng susu berkilauan. Kaleng punya bentuk yang namanya tabung: dua tutup berbentuk lingkaran, dan badan yang melengkung mulus. Berbeda dengan kubus dan balok yang bertumpu pada persegi, tabung bertumpu pada lingkaran. Jadi untuk mengukurnya kita perlu jurus bundar yang baru: keliling lingkaran.',
+        },
+        {
+          objek: 'duaTutupBundar', judul: 'Dua Tutup, Satu Ukuran',
+          teks: 'Tutup kaleng dicungkil pelan-pelan, dan ternyata berpasangan: satu di atas, satu di bawah, sama bundar sama besar. Jejari tiap tutup tujuh senti. Maka tabung itu bisa dibayangkan sebagai dua piring bundar yang dijajarkan oleh badan melengkung di tengah. Dua tutup itulah atap dan dasar kaleng — wajah atas dan wajah bawah si tabung.',
+        },
+        {
+          objek: 'benangKelilingEmpat', judul: 'Benang Keliling: Empat Puluh Empat',
+          teks: 'Seutas benang dililit sekali mengikuti lingkar kaleng, lalu diregangkan di atas penggaris: empat puluh empat senti. Cocok dengan hitungan keliling lingkaran — dua kali dua puluh dua per tujuh kali tujuh sama dengan empat puluh empat. Benang itu alat, hitungan itu alat juga; keduanya saling menjaga supaya tidak ada yang salah ukur.',
+        },
+        {
+          objek: 'labelTerbentang', judul: 'Label Dikupas: Persegi Panjang!',
+          teks: 'Ini momen paling mengejutkan di kantin: label kaleng dikupas pelan dari sambungannya, lalu... terbentang! Bentuknya persegi panjang, bukan bulat. Lebar kertas label sama dengan keliling kaleng, empat puluh empat senti; tingginya sama dengan tinggi kaleng. Selimut tabung ternyata cuma persegi panjang yang dipeluk melingkar sampai ujungnya bertemu lagi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tabung Ternyata Kaleng Berlabel!',
+          teks: 'Tabung ternyata cuma dua lingkaran plus satu kertas yang dipeluk bundar. Kupas labelnya, dan rahasianya terbentang rata di lantai. Owalah, ternyata begini toh — si kaleng di dapur menyimpan pelajaran geometri yang bundar. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-066 · Luas Selimut Tabung — malam bengkel, kertas digulung jadi tabung ----- */
+    'p2-066': {
+      tema: 'bengkelGulung',
+      npc: { glif: '440', ucap: ['Gulung dan', 'ukur!'] },
+      stasiun: [
+        {
+          objek: 'kertasGulungSelimut', judul: 'Kertas yang Mengaku Tabung',
+          teks: 'Malam di bengkel hutan, selembar kertas persegi panjang tergulung menjadi tabung tanpa tutup. Melepas gulungan, kertasnya kembali rata; menggulung lagi, ia jadi tabung lagi. Bentuk bundar dan bentuk rata ternyata cuma dua rupa untuk kertas yang sama. Malam ini kita belajar menghitung luas kertas itu: luas selimut tabung.',
+        },
+        {
+          objek: 'gulungDiBotol', judul: 'Gulungan Menempel di Botol',
+          teks: 'Gulungan kertas dipasangkan pada botol besar yang tingginya sepuluh senti, dan kertasnya melingkar pas memeluk badan botol. Lebar kertas yang melingkar itu harus sama dengan keliling botol — kalau kurang, ada celah; kalau lebih, ada lipatan. Di bengkel ini kertasnya dipotong pas: lebarnya empat puluh empat senti, sama seperti keliling kaleng susu di kantin kemarin.',
+        },
+        {
+          objek: 'papanKelilingTinggi', judul: 'Lebar Kali Tinggi Kertas',
+          teks: 'Kertas dibentangkan di meja bengkel dan diukur dua arah: lebarnya mengikuti keliling lingkaran, empat puluh empat senti; tingginya mengikuti tinggi tabung, sepuluh senti. Maka luas selimut sama persis dengan luas persegi panjang itu: lebar kali tinggi. Tak ada rumus baru yang rumit — hanya perkalian persegi panjang yang sudah lama kita kenal.',
+        },
+        {
+          objek: 'hitungSelimutEmpat', judul: 'Empat Ratus Empat Puluh',
+          teks: 'Saatnya menghitung: empat puluh empat kali sepuluh sama dengan empat ratus empat puluh sentimeter persegi. Itulah luas selimut tabung kita. Boleh dicek dengan cara tukang bengkel: alasi tabung di atas kertas berpetak lalu hitung petaknya satu per satu — hasilnya akan berkumpul di angka yang sama. Hitungan dan petakan berjabat tangan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Selimut Tabung Terbentang Rata!',
+          teks: 'Luas selimut ternyata cuma luas kertasnya: keliling lingkaran dikali tinggi tabung. Owalah, ternyata begini toh — rumus bundar yang paling ramai itu diam-diam persegi panjang yang dipeluk bundar. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-067 · Kenalan Kerucut & Bola — pagi bukit pasir, tiga tuangan jadi satu ----- */
+    'p2-067': {
+      tema: 'bukitPasir',
+      npc: { glif: 'x3', ucap: ['Tiga cangkir', 'sama satu!'] },
+      stasiun: [
+        {
+          objek: 'topiKerucutPasir', judul: 'Topi Ulang Tahun Berisi Pasir',
+          teks: 'Pagi di bukit pasir hutan, sebuah topi ulang tahun berbentuk kerucut berdiri di atas pasir halus. Kerucut punya alas bundar dan puncak runcing — seperti es krim cone yang berdiri sopan. Kalau kerucut ini diisi pasir sampai penuh, berapa banyak pasir yang tertampung? Bukit pasir ini punya cara paling jujur untuk menjawab: menuang dan menghitung.',
+        },
+        {
+          objek: 'tabungPasirSama', judul: 'Teman Seukuran: Si Tabung',
+          teks: 'Di samping topi berdiri tabung pasir bersisi tebal, dan ukurannya sengaja dijodohkan: alasnya sama bundar sama besar dengan alas topi, tingginya juga sama persis. Dua wadah ini seperti saudara yang lahir dari lingkaran yang sama — bedanya cuma satu punya puncak runcing, satunya beratap datar. Sekarang, siapa yang lebih banyak menampung pasir?',
+        },
+        {
+          objek: 'tuangTigaCangkir', judul: 'Satu, Dua, Tiga — Penuh Pas!',
+          teks: 'Topi kerucut dicelup penuh ke pasir, lalu isinya dituang hati-hati ke tabung. Tuang pertama: tabung baru sepertiga penuh. Tuang kedua: tinggal sepertiga lagi yang kosong. Tuang ketiga: tabung pas penuh sampai bibirnya! Tiga cangkir kerucut sama dengan satu tabung — jadi volume kerucut sepertiga volume tabung yang seukuran. Ini bisa diulang siapa pun di taman pasir, dan hasilnya selalu tiga.',
+        },
+        {
+          objek: 'bolaSepakTaman', judul: 'Bola Sepak Juga Punya Isi',
+          teks: 'Di tepi bukit, bola sepak bersandar sambil menunggu giliran. Bola juga punya volume — isi ruang di balik kulitnya yang bundar sempurna. Untuk kenalan hari ini cukup satu hal: bola dihitung mulai dari jari-jarinya, dan rumus lengkapnya menunggu di petualangan yang lebih tinggi. Yang penting hari ini: kerucut sepertiga tabung, dan bola menunggu giliran dengan sabar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Tuangan Sama Satu Tabung!',
+          teks: 'Kerucut dan tabung ternyata saudara: sama alas, sama tinggi, beda tiga kali isi. Owalah, ternyata begini toh — bukit pasir adalah laboratorium yang bisa dikunjungi kapan saja, gratis setiap hari. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-068 · Liter & Sentimeter Kubik — siang meja ukur, kubus bening sepuluh senti ----- */
+    'p2-068': {
+      tema: 'mejaLiter',
+      npc: { glif: '1L', ucap: ['Seribu kubus', 'satu liter!'] },
+      stasiun: [
+        {
+          objek: 'kubusSepuluhSepuluh', judul: 'Kubus Bening Sepuluh Senti',
+          teks: 'Di meja ukur air berdiri kubus bening bersisi sepuluh senti. Kalau diisi kubus kecil bersisi satu senti, satu lantainya memuat sepuluh kali sepuluh sama dengan seratus kubus, dan ada sepuluh lantai dari dasar sampai tutup. Seratus kali sepuluh sama dengan seribu kubus kecil. Angka seribu itu bukan kebetulan — ia gerbang menuju liter.',
+        },
+        {
+          objek: 'botolLiterSatu', judul: 'Kubus Itu Menampung Satu Liter',
+          teks: 'Kubus bening itu lalu diisi air dari botol besar, dan airnya berhenti tepat di bibir kubus saat satu liter habis dituang. Maka dunia sepakat menulis: satu liter sama dengan seribu sentimeter kubik. Setiap kubus kecil bersisi satu senti itu menampung satu mililiter — seribu titik kecil berkumpul jadi satu liter penuh.',
+        },
+        {
+          objek: 'gelasBagiEmpat', judul: 'Empat Gelas Satu Liter',
+          teks: 'Liter bisa dipecah menjadi gelas-gelas: gelas ukur di meja ini menampung dua ratus lima puluh mililiter. Empat kali dua ratus lima puluh sama dengan seribu mililiter — empat gelas penuh berjabatan dengan satu liter. Maka minum delapan gelas air sehari sama dengan dua liter — hitungan yang gampang diingat sekaligus baik untuk tubuh.',
+        },
+        {
+          objek: 'papanLiterKubik', judul: 'Papan Satuan yang Bersaudara',
+          teks: 'Papan di meja menuliskan keluarga satuan isi: seribu sentimeter kubik sama dengan seribu mililiter sama dengan satu liter; dan satu mililiter sama dengan satu sentimeter kubik. Uji dengan botol air minum: tulisan enam ratus mililiter sama artinya enam ratus sentimeter kubik — sedikit lebih dari separuh kubus bening tadi. Satuan isi ternyata satu keluarga besar yang bersahabat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kubus dan Liter Ternyata Saudara!',
+          teks: 'Satu liter ternyata cuma kubus sepuluh senti yang diisi air penuh; seribu kubus kecil seribu mililiter. Owalah, ternyata begini toh — satuan isi berjabat tangan dalam satu keluarga yang rukun. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-069 · Mengukur Isi Benda Nyata — senja toko ikan, akuarium-ember-botol ----- */
+    'p2-069': {
+      tema: 'tokoAkuarium',
+      npc: { glif: '60L', ucap: ['Ukur dulu,', 'hitung kemudian!'] },
+      stasiun: [
+        {
+          objek: 'akuariumTokoSore', judul: 'Toko Ikan Saat Senja',
+          teks: 'Senja turun di toko ikan hutan, dan akuarium kaca berkilau memantulkan lampu kuning. Pemilik toko — bola-lentera tanpa wajah yang bergerak tenang — ingin tahu berapa liter air yang dibutuhkan akuarium terbesarnya. Sebelum mengangkat galon, ia selalu mengukur dulu: panjang, lebar, tinggi. Mengukur dulu, hitung kemudian — begitu urutan tukang yang teliti.',
+        },
+        {
+          objek: 'ukurAkuariumTigaSisi', judul: 'Lima Puluh Kali Tiga Puluh Kali Empat Puluh',
+          teks: 'Meteran pita menyapu tiga sisi akuarium: panjang lima puluh senti, lebar tiga puluh senti, tinggi empat puluh senti. Volumenya lima puluh kali tiga puluh kali empat puluh sama dengan enam puluh ribu sentimeter kubik. Dan ingat gerbang kemarin: seribu sentimeter kubik sama dengan satu liter. Maka enam puluh ribu dibagi seribu sama dengan enam puluh liter air.',
+        },
+        {
+          objek: 'emberDuaPuluh', judul: 'Tiga Ember Pas Penuh',
+          teks: 'Ember penampung toko menampung dua puluh ribu sentimeter kubik, sama dengan dua puluh liter. Berapa kali ember itu harus diangkut? Enam puluh liter dibagi dua puluh liter sama dengan tiga kali — tiga angkut penuh, dan akuarium tepat terisi sampai batas aman. Tidak ada air tumpah percuma, tidak ada galon menganggur; muamalah toko ikan berjalan hemat dan rapi.',
+        },
+        {
+          objek: 'botolSatuSetengah', judul: 'Kalau Cuma Punya Botol Kecil',
+          teks: 'Botol kecil toko menampung seribu lima ratus sentimeter kubik — satu setengah liter. Berapa botol untuk mengisi akuarium? Enam puluh dibagi satu setengah sama dengan empat puluh botol. Wah, empat puluh kali bolak-balik! Maka pemilik toko memilih ember besar. Peralatan boleh berbeda, jawabannya tetap enam puluh liter — hitungan yang setia menemani pilihan mana pun.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Akuarium Tahu Isinya Sendiri!',
+          teks: 'Akuarium, ember, dan botol ternyata bisa diwawancara lewat meteran: ukur tiga sisinya, kalikan, lalu bagi seribu. Owalah, ternyata begini toh — liter di sekitar kita cuma menunggu dihitung. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-070 · Tantangan Gudang Bentuk — malam gudang, lima misi mandor ----- */
+    'p2-070': {
+      tema: 'gudangKardus',
+      npc: { glif: '27', ucap: ['Lima misi', 'gudang!'] },
+      stasiun: [
+        {
+          objek: 'gudangKardusMalam', judul: 'Gudang yang Menantang Malam',
+          teks: 'Malam di gudang bentuk, lentera-lentera kecil menyala di antara tumpukan kardus. Penjaga gudang — bola-lentera tanpa wajah — menyalakan papan tantangan di pintu: lima misi untuk siapa pun yang percaya diri menghitung isi dan kulit kardus. Mandor yang cermat tidak menebak; ia mengukur, mengalikan, lalu menjawab dengan tenang.',
+        },
+        {
+          objek: 'misiKardusTigaUkuran', judul: 'Misi Satu dan Dua: Ukur dan Banding',
+          teks: 'Misi satu: kardus A berukuran empat kali dua kali tiga — isinya dua puluh empat kubus kecil. Misi dua: bandingkan kardus B yang bersisi dua, isinya delapan, dengan kardus C yang bersisi tiga, isinya dua puluh tujuh. Meski A memanjang, juara isi tetap C: dua puluh tujuh mengalahkan dua puluh empat dengan selisih tipis. Ukuran yang kelihatan besar belum tentu berisi paling banyak — itulah kenapa mandor menghitung, bukan menebak.',
+        },
+        {
+          objek: 'misiKubusMuatKardus', judul: 'Misi Tiga: Berapa Kardus Kecil Muat?',
+          teks: 'Misi tiga menyodorkan kubus besar bersisi empat — isinya empat kali empat kali empat sama dengan enam puluh empat — dan kardus kecil bersisi dua yang isinya delapan. Berapa kardus kecil muat mengisi kubus besar? Enam puluh empat dibagi delapan sama dengan delapan kardus rapi. Kubus besar itu seperti gedung berlantai-lantai, dan kardus kecil adalah kamar-kamarnya.',
+        },
+        {
+          objek: 'misiTangkiDanKado', judul: 'Misi Empat dan Lima: Tangki dan Kado',
+          teks: 'Misi empat: tangki berukuran lima kali empat kali tiga — enam puluh sentimeter kubik, berarti enam puluh liter air siap diangkut kereta dorong gudang. Misi lima: kado kubus bersisi lima — luas pembungkusnya enam kali lima kali lima sama dengan seratus lima puluh sentimeter persegi. Dua puluh empat, delapan, dua puluh tujuh, enam puluh empat, enam puluh, seratus lima puluh — semua angka gudang hari ini lahir dari perkalian yang sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Mandor Muda Lulus Lima Misi!',
+          teks: 'Lima misi ternyata memakai satu jurus yang sama lima kali: ukur sisinya, kalikan untuk isi, jumlahkan kulitnya bila perlu. Owalah, ternyata begini toh — gudang penuh kardus adalah kelas volume paling nyata. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
