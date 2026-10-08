@@ -6472,6 +6472,286 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p3-031 · Kotak Angka Berdaya — pagi lapangan papan skor ----- */
+    'p3-031': {
+      tema: 'lapanganPapanSkor',
+      npc: { glif: 'kotak', ucap: ['Angka tertata', 'siap bekerja!'] },
+      stasiun: [
+        {
+          objek: 'papanSkorGunung', judul: 'Papan Skor Batu di Lapangan',
+          teks: 'Pagi di lapangan gunung, sebuah papan skor batu menyala dengan kotak-kotak angka rapi. Baris atas milik Tim A berisi 4, 7, 2; baris bawah milik Tim B berisi 9, 1, 5. Tiga kolomnya adalah tiga babak pertandingan. Angka yang tertata seperti ini punya nama: matriks — kotak angka yang siap bekerja.',
+        },
+        {
+          objek: 'kotakAngkaBabak', judul: 'Enam Kotak yang Membicarakan Dua Tim',
+          teks: 'Coba baca papan itu pelan-pelan: Tim A mendapat 4 di babak satu, 7 di babak dua, lalu 2 di babak tiga. Tim B mendapat 9, 1, lalu 5. Enam kotak kecil ternyata menyimpan satu cerita utuh tentang dua tim yang bertanding. Itulah kekuatan angka yang tertata — ia bercerita tanpa perlu kalimat panjang.',
+        },
+        {
+          objek: 'garisBarisKolom', judul: 'Garis Pembatas yang Menata',
+          teks: 'Garis-garis tipis di papan memisahkan baris dan kolom, dan itulah rahasia tata kotaknya. Baris berjalan mendatar dari kiri ke kanan, kolom berjalan tegak dari atas ke bawah. Kalau baris dan kolom kacau, ceritanya ikut kacau. Maka matriks selalu tertata rapi: barisnya diam di tempat, kolomnya pun begitu.',
+        },
+        {
+          objek: 'lencanaTertataRapi', judul: 'Menambah Angka, Menang dengan Terang',
+          teks: 'Tim A menjumlah skornya: 4 + 7 + 2 = 13. Tim B menjumlah skornya: 9 + 1 + 5 = 15. Maka Tim B menang 15 lawan 13 — dan semuanya terbaca hanya dari enam kotak kecil. Hitungan itu hanya alat. Bantu saja — alat yang menata skor supaya siapa pun bisa memeriksa ulang dengan jujur.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kotak Angka Ternyata Siap Bekerja!',
+          teks: 'Papan skor batu itu kini terbaca habis: enam kotak, dua tim, tiga babak, satu pemenang. Owalah, ternyata begini toh — matriks hanyalah kotak-kotak angka yang tertata rapi supaya mudah dibaca, dicari, dan dijumlahkan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-032 · Alamat Baris-Kolom — siang penginapan gunung ----- */
+    'p3-032': {
+      tema: 'lorongPenginapan',
+      npc: { glif: 'a23', ucap: ['Baris dulu,', 'kolom kemudian!'] },
+      stasiun: [
+        {
+          objek: 'lorongPenginapanGunung', judul: 'Penginapan dengan Kamar Bernomor',
+          teks: 'Siang di penginapan gunung, deretan kamar tersusun dua lantai, tiap lantai tiga kamar, dan tiap pintu diberi angka. Lantai satu berangka 5, 9, 3; lantai dua berangka 7, 2, 8. Susunan kamar seperti ini persis matriks: barisnya lantai, kolomnya kamar di sepanjang lorong.',
+        },
+        {
+          objek: 'pintuKamarLantaiDua', judul: 'Mencari Kamar di Baris 2, Kolom 3',
+          teks: 'Tamu bertanya: berapa isi kotak di baris 2, kolom 3? Caranya seperti mencari kamar: naik ke lantai 2 dulu, lalu berjalan ke kamar ke-3. Di sana terpampang angka 8. Singkatnya, alamat itu ditulis a dua-tiga — baris 2 dulu, kolom 3 kemudian, persis lantai dulu baru nomor kamarnya.',
+        },
+        {
+          objek: 'papanUrutanAlamat', judul: 'Urutan Alamat Tak Boleh Ditukar',
+          teks: 'Papan penginapan menulis aturan emas: baris dulu, kolom kemudian. Kalau ditukar, alamatnya berubah! Isi kotak baris 1 kolom 2 adalah 9, tapi isi kotak baris 2 kolom 1 adalah 7 — dua alamat yang mirip, isinya beda. Seperti kamar lantai 1 nomor 2 berbeda dengan lantai 2 nomor 1.',
+        },
+        {
+          objek: 'kunciTukarAlamat', judul: 'Kunci Alamat untuk Semua Kotak',
+          teks: 'Dengan jurus alamat baris-kolom, isi kotak mana pun bisa dipanggil namanya: baris 1 kolom 3 adalah 3, baris 2 kolom 2 adalah 2, baris 2 kolom 3 adalah 8. Satu kotak, satu alamat, tidak pernah ganda. Begitulah angka besar di matriks bisa ditemukan tanpa membaca semuanya satu per satu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Setiap Kotak Ternyata Punya Alamat!',
+          teks: 'Lantai dulu, kamar kemudian — dan tiap kotak angka langsung ketemu tanpa berpindah-pindah. Owalah, ternyata begini toh — alamat matriks hanyalah cara memanggil kotak: barisnya dulu, kolomnya kemudian, dan urutannya tak boleh ditukar. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-033 · Menjumlah Sejawat — sore meja piknik ----- */
+    'p3-033': {
+      tema: 'mejaPiknikSejawat',
+      npc: { glif: '2+1', ucap: ['Jumlahkan', 'dengan pasangannya!'] },
+      stasiun: [
+        {
+          objek: 'duaPiringKueSejawat', judul: 'Dua Piring Kue di Meja Piknik',
+          teks: 'Sore di meja piknik gunung, ada dua piring kue bertuliskan kotak angka. Piring pertama berisi 2 dan 4 di barisnya, lalu 1 dan 3 di bawahnya. Piring kedua berisi 1 dan 0, lalu 2 dan 2. Tamu piknik ingin menjumlahkan keduanya — dan ada cara yang paling tertib di dunia.',
+        },
+        {
+          objek: 'piringHasilSejawat', judul: 'Setiap Kotak Menjumlah Pasangannya',
+          teks: 'Cara tertibnya begini: setiap kotak menjumlah dirinya dengan pasangan di alamat yang sama. Baris 1 kolom 1: 2 + 1 = 3. Baris 1 kolom 2: 4 + 0 = 4. Baris 2 kolom 1: 1 + 2 = 3. Baris 2 kolom 2: 3 + 2 = 5. Jadi hasilnya piring baru berisi 3 dan 4 di atas, 3 dan 5 di bawah.',
+        },
+        {
+          objek: 'kotakUkuranBeda', judul: 'Kotak yang Tidak Bisa Dijumlah',
+          teks: 'Di ujung meja ada kotak berukuran lain: dua baris dengan tiga kolom. Piring dua-dua itu tak bisa dijumlah dengannya — karena sebagian kotaknya tidak punya pasangan. Pasangan harus tinggal di alamat yang sama, baris dan kolomnya persis. Maka sebelum menjumlah, cek dulu: ukurannya harus sama.',
+        },
+        {
+          objek: 'papanAturanSejawat', judul: 'Aturan Piknik yang Adil',
+          teks: 'Papan piknik menulis aturannya: jumlahkan matriks berarti menjumlah tiap kotak dengan pasangannya di alamat yang sama. Tidak ada kotak yang melompat, tidak ada yang lewat. Semua sejawat, semua adil. Dengan aturan ini, dua papan skor pun bisa digabung jadi satu papan yang lebih besar ceritanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Menjumlah Matriks Ternyata Kerja Berpasangan!',
+          teks: 'Kotak bertemu pasangannya, menjumlah, lalu duduk di alamat yang sama di piring hasil. Owalah, ternyata begini toh — penjumlahan matriks hanyalah kerja berpasangan yang tertib: alamat sama, jumlahkan, selesai. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-034 · Menggandakan Matriks — pagi dapur resep ganda ----- */
+    'p3-034': {
+      tema: 'dapurResepGanda',
+      npc: { glif: 'dua porsi', ucap: ['Semua kotak', 'ikut dikali!'] },
+      stasiun: [
+        {
+          objek: 'papanResepSatuPorsi', judul: 'Resep Satu Porsi di Dapur Gunung',
+          teks: 'Pagi di dapur gunung, papan resep menulis takaran dalam kotak-kotak: baris atas 3 dan 1, baris bawah 2 dan 4 — mungkin sendok gula dan takaran tepung. Itu resep untuk satu porsi kue. Semua angkanya rapi, siap dipakai, dan tak ada yang boleh lupa dihitung.',
+        },
+        {
+          objek: 'resepDigandakanDua', judul: 'Pelanggan Minta Dua Porsi!',
+          teks: 'Tiba-tiba pesanan datang: dua porsi kue! Maka resep pun digandakan. Angka di depan — angka 2 — menyapa SEMUA kotak sekaligus: 3 jadi 6, 1 jadi 2, 2 jadi 4, 4 jadi 8. Tidak ada kotak yang terlewat, karena angka 2 itu menyapa semuanya secara adil, dari pojok pertama sampai pojok terakhir.',
+        },
+        {
+          objek: 'timbanganBahanDobel', judul: 'Timbangan Membuktikan Hasilnya',
+          teks: 'Timbangan dapur ikut memeriksa: takaran yang tadinya 3 sekarang memang 6, dan takaran yang tadinya 4 sekarang memang 8. Menggandakan matriks ternyata semudah menggandakan resep — kalikan bilangan itu ke setiap kotak, dan hasilnya tinggal dibaca rapi di kotak masing-masing. Tidak ada kotak yang perlu dihitung dua kali, karena sapaannya sudah selesai sekaligus.',
+        },
+        {
+          objek: 'nampanKueDuaPorsi', judul: 'Dua Porsi Siap Disajikan',
+          teks: 'Nampan pun berisi kue dua porsi, dan kotak resep barunya tertulis 6 dan 2 di atas, 4 dan 8 di bawah. Perhatikan bentuknya: ukuran kotak tidak berubah, tetap dua baris dua kolom — hanya isinya yang berlipat. Bilangan di depan matriks itu seperti pesanan: ia tak mengubah bentuk, ia hanya menyapa isinya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Menggandakan Matriks Ternyata Menyapa Semua!',
+          teks: 'Satu angka di depan, empat kotak di dalam, semua terjawab dua kali lipat tanpa kecuali. Owalah, ternyata begini toh — menggandakan matriks hanyalah menyapa setiap kotak dengan bilangan yang sama, adil dari pojok pertama sampai terakhir. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-035 · Baris Menyapa Kolom — siang pelataran batu ----- */
+    'p3-035': {
+      tema: 'pelataranBarisKolom',
+      npc: { glif: 'jabat', ucap: ['Baris sapa kolom,', 'kalikan sejawat!'] },
+      stasiun: [
+        {
+          objek: 'barisAnakKiri', judul: 'Baris Anak-Anak di Kiri',
+          teks: 'Siang di pelataran batu gunung, dua anak berdiri berbaris ke samping di kiri, memegang kartu 1 dan 2; di baris kedua dua anak lagi dengan kartu 3 dan 4. Di kanan, dua anak lain berdiri berkolom dengan kartu 5 dan 7; kolom kedua kartu 6 dan 8. Mereka akan bersalaman dengan tertib.',
+        },
+        {
+          objek: 'kolomAnakKanan', judul: 'Sapaan Tertib: Kalikan, Lalu Jumlahkan',
+          teks: 'Baris kiri menyapa kolom kanan: anak pertama bertukar kartu dengan tiap anggota kolom — kalikan sejawatnya lalu jumlahkan hasilnya. Kartu 1 menyapa 5: hasilnya 5. Kartu 2 menyapa 7: hasilnya 14. Jumlahkan: 5 + 14 = 19. Itulah isi kotak pertama matriks jawaban mereka.',
+        },
+        {
+          objek: 'kartuHasilSembilanBelas', judul: 'Sembilan Sapaan, Empat Kotak Jawaban',
+          teks: 'Sapaan terus berlanjut hingga semua baris selesai menyapa semua kolom. Hasilnya satu matriks jawaban: 19 dan 22 di baris atas, 43 dan 50 di baris bawah. Empat kotak jawaban dari delapan kartu yang saling mengalikan dan menjumlah — sapaan paling tertib di gunung memang punya hasil yang rapi.',
+        },
+        {
+          objek: 'papanArahBerbeda', judul: 'Kejutan: Kalau Dibalik, Hasilnya Berubah!',
+          teks: 'Papan pelataran menulis kejutan besar: coba kalau kolom kanan yang menyapa dulu! Hasilnya bukan lagi 19 di kotak pertama, melainkan 23 — karena arah sapanya berbeda. Jadi A kali B tidak sama dengan B kali A. Menyapa dari arah berbeda memberi jawaban berbeda, dan itu bukan salah — memang begitulah perkalian matriks.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Baris Ternyata Menyapa Kolom!',
+          teks: 'Kalikan sejawat, jumlahkan, tulis di kotak pertemuan — dan ingat, arah sapanya tak boleh dibalik sembarangan. Owalah, ternyata begini toh — perkalian matriks hanyalah sapaan tertib antara baris dan kolom yang bekerja satu persatu. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-036 · Dua Petunjuk Bertemu — sore beranda dua kakak ----- */
+    'p3-036': {
+      tema: 'berandaDuaKakak',
+      npc: { glif: '4 dan 3', ucap: ['Dua petunjuk', 'satu jawaban!'] },
+      stasiun: [
+        {
+          objek: 'berandaDuaBangku', judul: 'Dua Kakak Beradik di Beranda',
+          teks: 'Sore di beranda rumah gunung, dua kakak beradik duduk di bangku. Orang tua mereka menulis dua petunjuk di papan: jumlah umur kalian 7, dan selisih umur kalian 1. Petunjuk pertama saja belum cukup — banyak pasangan umur yang jumlahnya 7, seperti 5 dan 2, atau 6 dan 1.',
+        },
+        {
+          objek: 'papanJumlahTujuh', judul: 'Petunjuk Kedua Memangkas Semuanya',
+          teks: 'Nah, petunjuk kedua beraksi: selisihnya 1. Dari daftar tadi, cuma 4 dan 3 yang selisihnya tepat satu. Maka kakak berumur 4 dan adik berumur 3. Cek dengan dua petunjuk: 4 + 3 = 7 benar, dan 4 - 3 = 1 benar. Dua petunjuk bersama ternyata memangkas semua kemungkinan sampai tinggal satu jawaban.',
+        },
+        {
+          objek: 'papanSelisihSatu', judul: 'Jurus Menjumlah Dua Petunjuk',
+          teks: 'Ada jurus lebih cepat lagi: jumlahkan kedua petunjuk! 7 + 1 = 8, dan itu dua kali umur kakak, jadi kakak berumur 4. Tinggal dicoret dari jumlah: 7 - 4 = 3, itulah umur adik. Persamaan x + y = 7 dan x - y = 1 memang sahabat baik — dijumlahkan, angka y langsung hilang, x ketemu.',
+        },
+        {
+          objek: 'kueAngkaEmpatTiga', judul: 'Dua Kue Ulang Tahun 4 dan 3',
+          teks: 'Malamnya dibawakan dua kue kecil dengan angka 4 dan 3 — kakak dan adik kini tahu umurnya sendiri. Dua petunjuk yang dulunya cuma angka mati kini jadi cerita dua saudara. Inilah kekuatan sistem persamaan: petunjuk yang bingung sendirian, bila dipasangkan, bisa menemukan sesuatu yang pasti.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Petunjuk Ternyata Saling Lengkapi!',
+          teks: 'Jumlah 7, selisih 1 — dan dua umur langsung ketemu tanpa menebak-nebak. Owalah, ternyata begini toh — sistem persamaan hanyalah dua petunjuk yang saling membantu sampai jawabannya tinggal satu. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-037 · Titik Temu Dua Garis — senja persimpangan ----- */
+    'p3-037': {
+      tema: 'persimpanganDuaJalan',
+      npc: { glif: 'temu', ucap: ['Cari titik', 'tempat bertemu!'] },
+      stasiun: [
+        {
+          objek: 'jalanTanjakDuaX', judul: 'Jalan Pertama yang Menanjak',
+          teks: 'Senja di pegunungan, dua jalan batu membentang dan akan bertemu di suatu tempat. Jalan pertama punya aturan: dua langkah naik untuk setiap langkah ke samping — itulah garis y = 2x. Di langkah ke-1 ia sudah di ketinggian 2, di langkah ke-2 ia sudah di ketinggian 4.',
+        },
+        {
+          objek: 'jalanTanggaPlusDua', judul: 'Jalan Kedua yang Landai',
+          teks: 'Jalan kedua lebih landai: selalu dua tinggi lebih dari langkahnya — itulah garis y = x + 2. Di langkah ke-0 ia di ketinggian 2, di langkah ke-1 ia di 3, di langkah ke-2 ia di 4. Tunggu sebentar — di langkah ke-2, kedua jalan sama-sama berada di ketinggian 4!',
+        },
+        {
+          objek: 'tiangTitikTemuDuaEmpat', judul: 'Tiang Penanda di Titik Temu (2, 4)',
+          teks: 'Tepat di langkah 2, ketinggian 4, berdiri tiang penanda menyala: (2, 4). Di titik itulah dua jalan bertemu dan sama-sama setuju — dua aturan berbeda, satu tempat yang memenuhi keduanya. Titik temu dua garis itulah jawaban yang disetujui keduanya. Hitungan itu hanya alat — bantu saja mencari tempat damainya.',
+        },
+        {
+          objek: 'duaJalanSejajarJauh', judul: 'Dua Jalan yang Tak Pernah Bertemu',
+          teks: 'Kejauhan terlihat dua jalan lain yang berjalan berdampingan selamanya: keduanya menanjak dua setiap langkah, tapi salah satunya selalu tiga tinggi lebih dulu. Mereka tidak pernah bertemu — tak ada titik temu. Begitu juga garis sejajar: tak ada jawaban yang disetujui keduanya, dan itu juga jawaban yang jujur.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Titik Temu Ternyata Jawaban Kedua Garis!',
+          teks: 'Dua aturan jalan, satu langkah yang memenuhi keduanya, satu tiang menyala sebagai tanda damai. Owalah, ternyata begini toh — mencari titik temu hanyalah mencari tempat di mana dua hitungan sama-sama benar. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-038 · Matriks Penyimpan Data — siang kelas rapor ----- */
+    'p3-038': {
+      tema: 'kelasRaporGunung',
+      npc: { glif: '3x2', ucap: ['Data tertata', 'mudah dibaca!'] },
+      stasiun: [
+        {
+          objek: 'papanRaporKelasKecil', judul: 'Rapor Tiga Anak di Kelas Kecil',
+          teks: 'Siang di kelas kecil gunung, papan rapor menampung nilai tiga anak: Ayu, Budi, dan Citra. Tiap anak punya dua nilai: Matematika dan Menggambar. Ayu nilainya 8 dan 7, Budi 9 dan 6, Citra 7 dan 8. Enam nilai itu disusun jadi kotak tiga baris dua kolom — matriks 3 kali 2.',
+        },
+        {
+          objek: 'kotakNilaiTigaAnak', judul: 'Setiap Baris Milik Satu Anak',
+          teks: 'Cara bacanya gampang: satu baris milik satu anak. Baris kedua adalah Budi, kolom pertama milik Matematika, maka alamat baris 2 kolom 1 berisi 9 — nilai Matematika Budi. Tak perlu baca satu per satu; cari alamatnya, langsung ketemu. Data yang tertata rapi memang penurut dicari.',
+        },
+        {
+          objek: 'kartuAlamatNilaiSembilan', judul: 'Menjumlah Kolom untuk Kelas',
+          teks: 'Menghitung juga bisa: berapa jumlah nilai Matematika kelas? Baca kolom pertama turun: 8 + 9 + 7 = 24. Kolom Menggambar: 7 + 6 + 8 = 21. Satu papan kecil sekarang menceritakan tiga anak, dua pelajaran, dan dua rekap kelas sekaligus. Matriks memang rumah paling rapi untuk data.',
+        },
+        {
+          objek: 'papanJumlahKolom', judul: 'Data Besar Tinggal Diperbesar',
+          teks: 'Papan terakhir menyingkap rahasia sekolah besar: seratus anak hanya perlu seratus baris, dan sepuluh pelajaran cukup sepuluh kolom. Bentuknya tetap sama, cuma diperbesar. Nilai, stok buah, jadwal kereta — semuanya bisa tinggal di kotak baris-kolom yang sama. Yang penting tertata, karena tertata artinya mudah dibaca.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Matriks Ternyata Rumah Rapi Data!',
+          teks: 'Baris untuk anak, kolom untuk pelajaran, alamat untuk mencari, jumlah untuk rekap. Owalah, ternyata begini toh — matriks hanyalah rumah rapi tempat data tinggal supaya mudah dibaca dan dihitung. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-039 · Sistem Tiga Petunjuk — malam gudang tiga kotak ----- */
+    'p3-039': {
+      tema: 'gudangTigaKotak',
+      npc: { glif: '1 2 3', ucap: ['Tiga kotak', 'satu trik!'] },
+      stasiun: [
+        {
+          objek: 'tigaKotakHadiahAbc', judul: 'Tiga Kotak di Gudang Malam',
+          teks: 'Malam di gudang gunung, tiga kotak hadiah berlabel A, B, dan C menunggu ditimbang. Penjaga gudang hanya sempat menimbang berpasangan: A bersama B beratnya 3, B bersama C beratnya 5, dan A bersama C beratnya 4. Tiga petunjuk, tiga kotak yang belum dikenali isinya.',
+        },
+        {
+          objek: 'timbanganPasanganKotak', judul: 'Trik Gudang: Jumlahkan Semua Timbangan',
+          teks: 'Penjaga lalu memakai trik pintar: jumlahkan ketiga timbangan! 3 + 5 + 4 = 12. Perhatikan: tiap kotak ikut tertimbang dua kali di angka itu — A ikut dua kali, B ikut dua kali, C ikut dua kali. Maka 12 adalah dua kali berat ketiga kotak, jadi berat ketiganya bersama adalah 6.',
+        },
+        {
+          objek: 'papanTrikJumlahSemua', judul: 'Menarik Balik Satu per Satu',
+          teks: 'Sekarang kotak-kotaknya tinggal ditarik balik dari jumlah 6. A bersama B beratnya 3, maka C sendirian beratnya 6 - 3 = 3. B bersama C beratnya 5, maka A sendirian beratnya 6 - 5 = 1. A bersama C beratnya 4, maka B sendirian beratnya 6 - 4 = 2. Ketiga rahasia terbuka tanpa menebak.',
+        },
+        {
+          objek: 'lampuIsiTigaKotak', judul: 'Lampu Menyala: 1, 2, 3!',
+          teks: 'Tiga lampu di atas kotak menyala berurutan: A berisi 1, B berisi 2, C berisi 3. Cek ulang dengan petunjuk asli: A + B = 1 + 2 = 3 benar; B + C = 2 + 3 = 5 benar; A + C = 1 + 3 = 4 benar. Tiga persamaan mencari tiga jawaban — kerja tim yang rapat, persis seperti papan angka besar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Petunjuk Ternyata Bisa Menimbang Balik!',
+          teks: 'Jumlahkan semua timbangan, tarik balik satu per satu, dan tiga kotak langsung mengakui isinya. Owalah, ternyata begini toh — sistem tiga persamaan hanyalah trik menimbang yang rapi: gabungkan dulu, tarik balik kemudian. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-040 · Tantangan Papan Angka — malam puncak papan ----- */
+    'p3-040': {
+      tema: 'puncakPapanAngka',
+      npc: { glif: 'papan!', ucap: ['Lima papan', 'menyala!'] },
+      stasiun: [
+        {
+          objek: 'limaPapanMisiAngka', judul: 'Lima Papan Misi di Puncak Malam',
+          teks: 'Malam di puncak Pegunungan Pola, lima papan angka menyala satu per satu seperti penjaga gerbang. Setiap papan menyimpan satu misi dari pelajaran papan angka: alamat, sejawat, gandakan, sapaan, dan sistem. Pendaki yang selesai satu misi akan melihat papan berikutnya terang penuh.',
+        },
+        {
+          objek: 'papanMisiAlamatJumlah', judul: 'Misi Satu dan Dua: Alamat dan Sejawat',
+          teks: 'Papan pertama menunjukkan papan skor lama: 4, 7, 2 di baris atas dan 9, 1, 5 di bawah — baris 2 kolom 1 berapa? Jawabnya 9, alamatnya benar sekali. Papan kedua menjumlah dua kotak kue: 2 + 1 di alamat yang sama, hasilnya 3. Dua papan menyala terang, tiga misi lagi menunggu.',
+        },
+        {
+          objek: 'papanMisiSapaSistem', judul: 'Misi Tiga sampai Lima: Ganda, Sapa, Sistem',
+          teks: 'Papan ketiga menggandakan resep 3, 1, 2, 4 menjadi 6, 2, 4, 8 — semua kotak terjawab dua kali lipat. Papan keempat mengajak menyapa: baris 2 dan 3 menyapa kolom 4 dan 5, hasilnya 2 x 4 + 3 x 5 = 23. Papan kelima meminta dua petunjuk: jumlah 7, selisih 1 — jawabannya 4 dan 3, persis dua saudara dulu itu.',
+        },
+        {
+          objek: 'gerbangJuaraPapanAngka', judul: 'Gerbang Juara Papan Angka',
+          teks: 'Lima papan kini menyala penuh, dan gerbang batu juara terbuka perlahan di depan puncak. Di baliknya tidak ada hadiah ajaib — hanya pemandangan deretan papan angka yang kini terasa seperti teman lama: kotaknya jelas, alamatnya tertib, sapaannya rapi, dan petunjuknya selalu saling membantu. Pendaki yang tadi takut angka kini berdiri paling tegak di depannya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Penakluk Papan Angka Gunung!',
+          teks: 'Alamat dipanggil, sejawat dijumlah, kotak digandakan, baris menyapa kolom, dan tiga kotak beratnya terjawab — lima misi, lima kemenangan. Owalah, ternyata begini toh — matriks dan sistem persamaan hanyalah papan angka yang tertata rapi menunggu untuk dibaca. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */
