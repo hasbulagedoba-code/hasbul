@@ -73,8 +73,8 @@ window.P1 = (function () {
       teaser: 'Pi (π) itu 3,14 terus dan terus tanpa ujung. Angka paling setia: tak pernah berhenti menemani semua lingkaran.' },
     { id: 'p1-009', k: 1, n: 9, judul: 'Timbangan Pasar & Kejujuran',
       teaser: 'Timbangan jujur dan takaran tepat membuat jual beli adil untuk semua pihak. Matematika menjaga muamalah tetap bersih.' },
-    { id: 'p1-010', k: 1, n: 10, judul: 'Matematika Masa Depan',
-      teaser: 'Dari roket sampai robot: semuanya terbang berkat hitungan. Masa depan dimulai dari angka yang kamu pelajari hari ini.' },
+    { id: 'p1-010', k: 1, n: 10, judul: 'Matematika Teknologi',
+      teaser: 'Dari roket sampai robot: semuanya terbang berkat hitungan. Teknologi hebat dimulai dari angka yang kamu pelajari hari ini.' },
 
     /* --- k2: Mengenal Angka (10) --- */
     { id: 'p1-011', k: 2, n: 1, judul: 'Kenalan 0 Sampai 9',

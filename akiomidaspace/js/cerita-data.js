@@ -2850,7 +2850,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Jadi, Matematika Itu Apa?',
-          teks: 'Matematika itu bahasa untuk berpikir tentang bilangan, bentuk, dan pola — lahir dari kebutuhan manusia menghitung, menakar, dan berbagi dengan adil. Begitu polanya ketahuan, semua soal berubah menjadi temuan. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Matematika itu bahasa untuk berpikir tentang bilangan, bentuk, dan pola — lahir dari kebutuhan manusia menghitung, menakar, dan berbagi dengan adil. Begitu polanya ketahuan, semua soal berubah menjadi temuan. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -2934,7 +2934,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Pahlawan Kecil Dunia Angka',
-          teks: 'Jadi kalau kamu menulis 100 di buku, ingatlah lingkaran kecil itu: pahlawan yang diam-dia menopang semua angka besar. Owalah, ternyata kosong pun bisa seberarti itu — mudah, bukan?',
+          teks: 'Jadi kalau kamu menulis 100 di buku, ingatlah lingkaran kecil itu: pahlawan yang diam-dia menopang semua angka besar. Owalah, ternyata kosong pun bisa seberarti itu — Mudah, bukan?',
         },
       ],
     },
@@ -3046,7 +3046,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Angka Paling Setia Sedunia',
-          teks: 'Pi seperti sahabat yang tak pernah putus di tengah jalan: 3,14159... terus dan terus menemani semua lingkaran. Owalah — ternyata rahasia seluruh lingkaran di dunia dipegang satu angka setia ini — mudah, bukan?',
+          teks: 'Pi seperti sahabat yang tak pernah putus di tengah jalan: 3,14159... terus dan terus menemani semua lingkaran. Owalah — ternyata rahasia seluruh lingkaran di dunia dipegang satu angka setia ini — Mudah, bukan?',
         },
       ],
     },
@@ -3079,10 +3079,10 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-010 · Matematika Masa Depan — malam peluncuran antariksa ----- */
+    /* ----- p1-010 · Matematika Teknologi — malam peluncuran antariksa ----- */
     'p1-010': {
       tema: 'future',
-      npc: { glif: '?', ucap: ['Masa depan', 'menantimu!'] },
+      npc: { glif: '?', ucap: ['Teknologi', 'menantimu!'] },
       stasiun: [
         {
           objek: 'roket', judul: 'Roket Menunggu Hitungan',
@@ -3101,8 +3101,8 @@ window.CERITA = (function () {
           teks: 'Kapal antariksa menavigasi dengan membaca posisi bintang dan jarak antar planet — matematika murni yang tergambar di langit malam. Peta langit semacam itu selalu ditulis dengan angka.',
         },
         {
-          objek: 'tugu', akhir: true, judul: 'Masa Depan Dimulai Hari Ini',
-          teks: 'Roket, satelit, robot, dan bintang-bintang itu sedang menunggu generasi yang gemar berhitung. Owalah — masa depan ternyata dimulai dari angka yang kamu pelajari hari ini. Mudah, bukan?',
+          objek: 'tugu', akhir: true, judul: 'Teknologi Dimulai Hari Ini',
+          teks: 'Roket, satelit, robot, dan bintang-bintang itu sedang menunggu generasi yang gemar berhitung. Owalah — teknologi hebat ternyata dimulai dari angka yang kamu pelajari hari ini. Mudah, bukan?',
         },
       ],
     },
@@ -3130,7 +3130,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Cukup Sepuluh!',
-          teks: 'Sepuluh angka saja, semua bilangan di dunia bisa ditulis — dari nol sampai milyaran. Tidak perlu seribu lambang, cukup sepuluh sahabat yang setia. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Sepuluh angka saja, semua bilangan di dunia bisa ditulis — dari nol sampai milyaran. Tidak perlu seribu lambang, cukup sepuluh sahabat yang setia. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3382,7 +3382,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Polanya Ketahuan!',
-          teks: 'Pola +2 pada manik dan teka-teki tadi — semua deret angka punya aturannya masing-masing. Tugasmu bukan menghafal, tapi mengendus aturannya seperti detektif. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Pola +2 pada manik dan teka-teki tadi — semua deret angka punya aturannya masing-masing. Tugasmu bukan menghafal, tapi mengendus aturannya seperti detektif. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3410,7 +3410,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Gabung Itu Mudah!',
-          teks: 'Jadi setiap kamu menulis 3 + 2, itu undangan berkumpul: yang terpisah menjadi bersama, yang kecil menjadi banyak. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi setiap kamu menulis 3 + 2, itu undangan berkumpul: yang terpisah menjadi bersama, yang kecil menjadi banyak. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3438,7 +3438,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Min Itu Jujur!',
-          teks: 'Jadi bertemu minus jangan bingung: dia hanya mencatat yang berpindah. Di buku hitung dagang Eropa dulu, − lahir berdampingan dengan +, dan kata minus artinya lebih sedikit. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi bertemu minus jangan bingung: dia hanya mencatat yang berpindah. Di buku hitung dagang Eropa dulu, − lahir berdampingan dengan +, dan kata minus artinya lebih sedikit. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3466,7 +3466,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kilat Tapi Tertib!',
-          teks: 'Jadi kalau ada 3 piring dan tiap piring berisi 4 kue, tak perlu menghitung satu-satu: 3 × 4 = 12. Jurus singkat untuk pengulangan yang sama. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi kalau ada 3 piring dan tiap piring berisi 4 kue, tak perlu menghitung satu-satu: 3 × 4 = 12. Jurus singkat untuk pengulangan yang sama. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3494,7 +3494,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Adil Itu Gampang!',
-          teks: 'Jadi saat membagi kue, jeruk, atau waktu bermain: hitung yang ada, bagi sama rata, semua puas. Berbagi adil ternyata juga matematika. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi saat membagi kue, jeruk, atau waktu bermain: hitung yang ada, bagi sama rata, semua puas. Berbagi adil ternyata juga matematika. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3522,7 +3522,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Setara Itu Tenang!',
-          teks: 'Jadi setiap kalimat dengan tanda = menyimpan timbangan: kiri dan kanan harus setara. Kalau keseimbangan terjaga, jawabanmu jujur. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi setiap kalimat dengan tanda = menyimpan timbangan: kiri dan kanan harus setara. Kalau keseimbangan terjaga, jawabanmu jujur. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3550,7 +3550,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Arahnya Jelas!',
-          teks: 'Jadi 9 > 3 dan 2 < 6 kini mudah dibaca: mulut ke yang besar, lancip ke yang kecil. Setiap kartu angka di sekitarmu bisa kamu bacakan sendiri. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi 9 > 3 dan 2 < 6 kini mudah dibaca: mulut ke yang besar, lancip ke yang kecil. Setiap kartu angka di sekitarmu bisa kamu bacakan sendiri. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3578,7 +3578,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Dalam Itu Duluan!',
-          teks: 'Jadi kurung adalah pintu spesial dalam kalimat matematika: siapa tinggal di dalamnya, dia dihitung lebih dulu. Dengan pintu kecil itu, jawaban tak pernah ketukar. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi kurung adalah pintu spesial dalam kalimat matematika: siapa tinggal di dalamnya, dia dihitung lebih dulu. Dengan pintu kecil itu, jawaban tak pernah ketukar. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3606,7 +3606,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kecil Tapi Penting!',
-          teks: 'Jadi koma desimal adalah penjaga pintu: kiri untuk yang utuh, kanan untuk kepingan. 1,5 dan 2,5 kini bisa kamu tulis sendiri dengan tertib. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi koma desimal adalah penjaga pintu: kiri untuk yang utuh, kanan untuk kepingan. 1,5 dan 2,5 kini bisa kamu tulis sendiri dengan tertib. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3634,7 +3634,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Tanpa Ujung!',
-          teks: 'Jadi ∞ bukan bilangan biasa: dia tanda untuk yang tak berujung. Barisan angka tak habis, langit tak bertepi, dan rasa ingin tahumu pun dipersilakan tumbuh tanpa batas. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi ∞ bukan bilangan biasa: dia tanda untuk yang tak berujung. Barisan angka tak habis, langit tak bertepi, dan rasa ingin tahumu pun dipersilakan tumbuh tanpa batas. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3662,7 +3662,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kalimatnya Terbaca!',
-          teks: 'Jadi setiap kalimat matematika adalah cerita mini: ada siapa, ada peristiwa, ada akhirnya. Bacalah pelan-pelan, pahami dengan tenang — begitulah ilmu masuk dengan nyaman. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi setiap kalimat matematika adalah cerita mini: ada siapa, ada peristiwa, ada akhirnya. Bacalah pelan-pelan, pahami dengan tenang — begitulah ilmu masuk dengan nyaman. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3690,7 +3690,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Jadi Satu Kelompok!',
-          teks: 'Jadi penjumlahan itu menggabungkan kelompok yang terpisah menjadi satu, lalu menghitung semuanya dari awal. Dua dan tiga kini menjadi lima. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi penjumlahan itu menggabungkan kelompok yang terpisah menjadi satu, lalu menghitung semuanya dari awal. Dua dan tiga kini menjadi lima. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3718,7 +3718,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Alat di Tangan Sendiri!',
-          teks: 'Jadi sepuluh jari adalah alat hitung pertamamu: angkat yang diperlukan, hitung yang berdiri. Tiga dan empat berkumpul menjadi tujuh. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi sepuluh jari adalah alat hitung pertamamu: angkat yang diperlukan, hitung yang berdiri. Tiga dan empat berkumpul menjadi tujuh. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3746,7 +3746,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Penuh Dulu Sisanya!',
-          teks: 'Jadi menjumlah lewat 10 punya trik: penuhi dulu sampai sepuluh, sisanya tinggal ditumpuk. Delapan dan lima bertemu menjadi tiga belas. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi menjumlah lewat 10 punya trik: penuhi dulu sampai sepuluh, sisanya tinggal ditumpuk. Delapan dan lima bertemu menjadi tiga belas. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3774,7 +3774,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Rapi Itu Mudah!',
-          teks: 'Jadi penjumlahan bersusun itu menyusun angka per kolom: satuan bertemu satuan, puluhan bertemu puluhan, dikerjakan dari kanan. 23 dan 14 menjadi 37. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi penjumlahan bersusun itu menyusun angka per kolom: satuan bertemu satuan, puluhan bertemu puluhan, dikerjakan dari kanan. 23 dan 14 menjadi 37. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3802,7 +3802,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Amanah Tersalurkan!',
-          teks: 'Jadi menyimpan itu mengantar kelebihan ke tempat yang benar: satuan yang penuh menitipkan satu ke kotak puluhan. 35 + 7 = 42, amanah tersalurkan rapi. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi menyimpan itu mengantar kelebihan ke tempat yang benar: satuan yang penuh menitipkan satu ke kotak puluhan. 35 + 7 = 42, amanah tersalurkan rapi. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3830,7 +3830,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Sisa Itu Jelas!',
-          teks: 'Jadi pengurangan itu mencari sisa: hitung yang ada, catat yang pergi, hitung lagi yang tertinggal. Lima kue dimakan dua, sisanya tiga. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi pengurangan itu mencari sisa: hitung yang ada, catat yang pergi, hitung lagi yang tertinggal. Lima kue dimakan dua, sisanya tiga. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3858,7 +3858,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Tertib Itu Tenang!',
-          teks: 'Jadi pengurangan bersusun mengikuti adab yang sama: susun per kolom, kerjakan dari satuan lebih dulu. 47 kurang 23, sisanya jelas 24. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi pengurangan bersusun mengikuti adab yang sama: susun per kolom, kerjakan dari satuan lebih dulu. 47 kurang 23, sisanya jelas 24. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3886,7 +3886,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Pinjam Itu Solusi!',
-          teks: 'Jadi jika satuan kurang, pinjam satu puluhan: satuan membesar menjadi 12, puluhan menyusut satu. 42 − 15 = 27 — seperti meminjam gula ke tetangga lalu mengembalikannya tepat waktu. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi jika satuan kurang, pinjam satu puluhan: satuan membesar menjadi 12, puluhan menyusut satu. 42 − 15 = 27 — seperti meminjam gula ke tetangga lalu mengembalikannya tepat waktu. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3914,7 +3914,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Sekeluarga Selamanya!',
-          teks: 'Jadi keluarga angka adalah empat kalimat dari tiga anggota: dua tambah, dua kurang. Keluarga 3, 4, 7 tak akan pernah berganti anggota. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi keluarga angka adalah empat kalimat dari tiga anggota: dua tambah, dua kurang. Keluarga 3, 4, 7 tak akan pernah berganti anggota. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3942,7 +3942,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Cerita Jadi Hitungan!',
-          teks: 'Jadi soal cerita tambah itu ramah: temukan dua kelompok yang dipersatukan, tulis kalimatnya, lalu hitung. Empat layang-layang bertemu dua menjadi enam. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi soal cerita tambah itu ramah: temukan dua kelompok yang dipersatukan, tulis kalimatnya, lalu hitung. Empat layang-layang bertemu dua menjadi enam. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3970,7 +3970,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Sisanya Terjawab!',
-          teks: 'Jadi soal cerita kurang menanyakan sisa: kenali angka awal, hitung yang pergi, kurangkan. Tujuh permen dibagikan tiga, tersisa empat. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi soal cerita kurang menanyakan sisa: kenali angka awal, hitung yang pergi, kurangkan. Tujuh permen dibagikan tiga, tersisa empat. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -3998,7 +3998,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Detektif Angka!',
-          teks: 'Jadi kalimat berlubang adalah teka-teki yang ramah: lihat jawabannya, hitung kekurangannya, temukan angkanya. Empat dan lima berkumpul menjadi sembilan. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi kalimat berlubang adalah teka-teki yang ramah: lihat jawabannya, hitung kekurangannya, temukan angkanya. Empat dan lima berkumpul menjadi sembilan. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4026,7 +4026,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Jurus Singkat!',
-          teks: 'Jadi perkalian itu penjumlahan berkelompok sama rata: 3 x 5 artinya lima, ditambah lima, ditambah lima lagi. Kelompoknya rapi, jurusnya jadi singkat. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi perkalian itu penjumlahan berkelompok sama rata: 3 x 5 artinya lima, ditambah lima, ditambah lima lagi. Kelompoknya rapi, jurusnya jadi singkat. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4054,7 +4054,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Selalu Genap!',
-          teks: 'Jadi tabel 2 itu ilmu berpasangan: tiap kelompok selalu berisi dua, hitungannya lompat dua-dua: 2, 4, 6, 8, 10. Sepasang demi sepasang sampai sepuluh. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi tabel 2 itu ilmu berpasangan: tiap kelompok selalu berisi dua, hitungannya lompat dua-dua: 2, 4, 6, 8, 10. Sepasang demi sepasang sampai sepuluh. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4082,7 +4082,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Lima Itu Ramah!',
-          teks: 'Jadi tabel 5 itu sahabat jari: 5, 10, 15, 20 — dan satu rahasia lagi, hasilnya selalu berakhir angka 5 atau 0. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi tabel 5 itu sahabat jari: 5, 10, 15, 20 — dan satu rahasia lagi, hasilnya selalu berakhir angka 5 atau 0. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4110,7 +4110,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Cukup Tambah Nol!',
-          teks: 'Jadi tabel 10 itu paling pemurah: hitung satu, dua, tiga... lalu taruh nol di belakangnya. Sepuluh, dua puluh, tiga puluh — kereta pun berangkat. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi tabel 10 itu paling pemurah: hitung satu, dua, tiga... lalu taruh nol di belakangnya. Sepuluh, dua puluh, tiga puluh — kereta pun berangkat. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4138,7 +4138,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Dua Tangga Sahabat!',
-          teks: 'Jadi tabel 3 dan tabel 4 adalah dua tangga sahabat: satu melangkah tiga-tiga, satu melangkah empat-empat, dan keduanya bertemu di 12. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi tabel 3 dan tabel 4 adalah dua tangga sahabat: satu melangkah tiga-tiga, satu melangkah empat-empat, dan keduanya bertemu di 12. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4166,7 +4166,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Pendaki Tabel!',
-          teks: 'Jadi tabel 6 sampai 9 itu jalur pendakian: pijakannya makin berat, pemandangannya makin luas. Siapa bisa menaikinya, ia akan kuat menghitung apa pun. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi tabel 6 sampai 9 itu jalur pendakian: pijakannya makin berat, pemandangannya makin luas. Siapa bisa menaikinya, ia akan kuat menghitung apa pun. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4194,7 +4194,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Jari Sang Penyuluh!',
-          teks: 'Jadi tabel 9 penuh rahasia yang ramah: jarinya menunjukkan jawaban, angka-angkanya selalu berjumlah 9, dan sepuluh kali dikurangi sekali pun cocok. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi tabel 9 penuh rahasia yang ramah: jarinya menunjukkan jawaban, angka-angkanya selalu berjumlah 9, dan sepuluh kali dikurangi sekali pun cocok. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4222,7 +4222,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Bersusun Itu Rapi!',
-          teks: 'Jadi perkalian bersusun itu urutannya tetap: satuan dulu, simpan bila penuh, puluhan kemudian, lalu kumpulkan. Dua puluh tiga kali empat menjadi sembilan puluh dua. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi perkalian bersusun itu urutannya tetap: satuan dulu, simpan bila penuh, puluhan kemudian, lalu kumpulkan. Dua puluh tiga kali empat menjadi sembilan puluh dua. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4250,7 +4250,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Adil Itu Gampang!',
-          teks: 'Jadi pembagian itu seni berbagi rata: sebarkan bergantian satu-satu sampai tiap penerima sama banyak. Sepuluh kelereng untuk dua piring menjadi lima-lima. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi pembagian itu seni berbagi rata: sebarkan bergantian satu-satu sampai tiap penerima sama banyak. Sepuluh kelereng untuk dua piring menjadi lima-lima. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4278,7 +4278,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Sisa Itu Menunggu!',
-          teks: 'Jadi sisa bukanlah salah; ia hanya menunggu giliran berikutnya: 7 kue bagi 2 piring menjadi 3 dan 3, dengan 1 yang menunggu. Jangan lupa cek balik: kalikan dulu, tambahkan sisanya. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi sisa bukanlah salah; ia hanya menunggu giliran berikutnya: 7 kue bagi 2 piring menjadi 3 dan 3, dengan 1 yang menunggu. Jangan lupa cek balik: kalikan dulu, tambahkan sisanya. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4306,7 +4306,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Turun Tangga Rapi!',
-          teks: 'Jadi pembagian bersusun itu menuruni tangga angka: bagi puluhan dulu, turunkan satuan, tulis jawabannya per anak tangga. Sembilan puluh enam dibagi tiga menjadi tiga puluh dua. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi pembagian bersusun itu menuruni tangga angka: bagi puluhan dulu, turunkan satuan, tulis jawabannya per anak tangga. Sembilan puluh enam dibagi tiga menjadi tiga puluh dua. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4334,7 +4334,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Pasangan Seumur Hidup!',
-          teks: 'Jadi kali dan bagi memang pasangan setia: 6 x 4 = 24 selalu berbalik menjadi 24 : 6 = 4. Bila ada angka hilang, cukup panggil pasangannya. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi kali dan bagi memang pasangan setia: 6 x 4 = 24 selalu berbalik menjadi 24 : 6 = 4. Bila ada angka hilang, cukup panggil pasangannya. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4362,7 +4362,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Itu Setengah!',
-          teks: 'Jadi setengah itu satu dari dua bagian yang sama besar: satu kue, satu garis lewat pusat, dua piring rata. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi setengah itu satu dari dua bagian yang sama besar: satu kue, satu garis lewat pusat, dua piring rata. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4390,7 +4390,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Empat Sama Besar!',
-          teks: 'Jadi seperempat itu satu dari empat bagian sama besar: dua garis bersilang di pusat, empat potongan rapi, satu untuk tiap tamu. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi seperempat itu satu dari empat bagian sama besar: dua garis bersilang di pusat, empat potongan rapi, satu untuk tiap tamu. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4418,7 +4418,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Nama Dua Angka!',
-          teks: 'Jadi setiap pecahan punya dua penjaga: penyebut di bawah menghitung jumlah potongan, pembilang di atas menunjuk yang diambil. Tiga per empat pun kini terbaca jelas. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi setiap pecahan punya dua penjaga: penyebut di bawah menghitung jumlah potongan, pembilang di atas menunjuk yang diambil. Tiga per empat pun kini terbaca jelas. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4446,7 +4446,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Makin Dibagi Makin Kecil!',
-          teks: 'Jadi keluarga pecahan satu-per itu saudara serupa: 1/2, 1/3, 1/4, dan seterusnya — makin banyak bagiannya, makin ramping potongannya. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi keluarga pecahan satu-per itu saudara serupa: 1/2, 1/3, 1/4, dan seterusnya — makin banyak bagiannya, makin ramping potongannya. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4474,7 +4474,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Ukuran Tak Bohong!',
-          teks: 'Jadi pecahan senilai itu ukuran sama dengan rupa berbeda: 1/2, 2/4, 3/6 — sepanjang potongannya sama besar, nilainya tetap setengah. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi pecahan senilai itu ukuran sama dengan rupa berbeda: 1/2, 2/4, 3/6 — sepanjang potongannya sama besar, nilainya tetap setengah. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4502,7 +4502,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Jebak Terlewati!',
-          teks: 'Jadi membandingkan pecahan satu-per itu mudah: penyebut kecil berarti potongan besar — 1/2 selalu menang atas 1/8. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi membandingkan pecahan satu-per itu mudah: penyebut kecil berarti potongan besar — 1/2 selalu menang atas 1/8. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4530,7 +4530,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Gabung Senama!',
-          teks: 'Jadi menjumlah pecahan senama itu seperti menggabung potongan sejenis: penyebut tetap, pembilang bertambah — 1/4 + 2/4 = 3/4. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi menjumlah pecahan senama itu seperti menggabung potongan sejenis: penyebut tetap, pembilang bertambah — 1/4 + 2/4 = 3/4. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4558,7 +4558,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kurang Senama!',
-          teks: 'Jadi pengurangan pecahan senama itu santai: penyebut tetap, pembilang dikurang — 3/4 - 1/4 = 2/4, dan sisanya terbaca jelas di piring. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi pengurangan pecahan senama itu santai: penyebut tetap, pembilang dikurang — 3/4 - 1/4 = 2/4, dan sisanya terbaca jelas di piring. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4586,7 +4586,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Utuh Plus Pecahan!',
-          teks: 'Jadi pecahan campuran itu gabungan dua piring: angka utuh di depan, pecahan di belakang — satu utuh plus setengah ditulis 1 1/2, dibaca satu setengah. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi pecahan campuran itu gabungan dua piring: angka utuh di depan, pecahan di belakang — satu utuh plus setengah ditulis 1 1/2, dibaca satu setengah. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4614,7 +4614,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Bagi Dua Rata!',
-          teks: 'Jadi mencari setengah dari banyak itu seperti membagi dua rata: setengah dari 10 adalah 5, setengah dari 8 adalah 4. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi mencari setengah dari banyak itu seperti membagi dua rata: setengah dari 10 adalah 5, setengah dari 8 adalah 4. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4642,7 +4642,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Pecahan Terlihat!',
-          teks: 'Jadi menggambar pecahan itu tiga langkah: gambar bentuknya, bagi sama besar, warnai sebanyak pembilang. 2/4 pun terbaca nyaris tanpa berpikir. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi menggambar pecahan itu tiga langkah: gambar bentuknya, bagi sama besar, warnai sebanyak pembilang. 2/4 pun terbaca nyaris tanpa berpikir. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4670,7 +4670,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Juara Pecahan!',
-          teks: 'Jadi gelanggang pecahan bisa ditaklukkan dengan bekal lama: membagi sama besar, membaca pembilang dan penyebut, serta mengenali setengah. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi gelanggang pecahan bisa ditaklukkan dengan bekal lama: membagi sama besar, membaca pembilang dan penyebut, serta mengenali setengah. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4698,7 +4698,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Koma Itu Ramah!',
-          teks: 'Jadi 0,5 bukan angka aneh: dia setengah yang menulis dengan bahasa koma — nol utuh plus lima dari sepuluh kepingan. Setengah gelas, setengah jam, setengah jalan semua bisa dikenalnya. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi 0,5 bukan angka aneh: dia setengah yang menulis dengan bahasa koma — nol utuh plus lima dari sepuluh kepingan. Setengah gelas, setengah jam, setengah jalan semua bisa dikenalnya. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4726,7 +4726,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Persepuluhan Jelas!',
-          teks: 'Jadi 0,1 itu satu dari sepuluh potongan sama besar — seperti satu bilik dari kandang berisi sepuluh. Dibaca nol koma satu, dan sepuluh kepingannya menjadi satu utuh. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi 0,1 itu satu dari sepuluh potongan sama besar — seperti satu bilik dari kandang berisi sepuluh. Dibaca nol koma satu, dan sepuluh kepingannya menjadi satu utuh. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4754,7 +4754,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Dua Bahasa Satu Arti!',
-          teks: 'Jadi 0,5 dan 1/2 adalah saudara kembar yang lahir dengan nama berbeda, begitu pula 0,25 dan 1/4. Bahasa koma atau bahasa pecahan — nilai jawabannya tetap sama. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi 0,5 dan 1/2 adalah saudara kembar yang lahir dengan nama berbeda, begitu pula 0,25 dan 1/4. Bahasa koma atau bahasa pecahan — nilai jawabannya tetap sama. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4782,7 +4782,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Jebakan Terbongkar!',
-          teks: 'Jadi membandingkan desimal: lihat dulu angka pertama setelah koma, lalu lanjut ke angka berikutnya bila sama. 0,7 tetap juara atas 0,25 sekalipun tulisannya lebih pendek. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi membandingkan desimal: lihat dulu angka pertama setelah koma, lalu lanjut ke angka berikutnya bila sama. 0,7 tetap juara atas 0,25 sekalipun tulisannya lebih pendek. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4810,7 +4810,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Persen Terbuka!',
-          teks: 'Jadi persen selalu bercerita tentang seratus: 25% berarti 25 dari 100, dan itu persis seperempat. Setiap kali bertemu tanda %, bayangkan kotak 100 kelereng itu. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi persen selalu bercerita tentang seratus: 25% berarti 25 dari 100, dan itu persis seperempat. Setiap kali bertemu tanda %, bayangkan kotak 100 kelereng itu. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4838,7 +4838,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Setengah Terbaca!',
-          teks: 'Jadi tiga angka persen ini bisa kamu simpan di luar kepala: 100% utuh, 50% setengah, 0% habis. Bak air di kebun saja sudah mengajarkannya dengan jujur. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi tiga angka persen ini bisa kamu simpan di luar kepala: 100% utuh, 50% setengah, 0% habis. Bak air di kebun saja sudah mengajarkannya dengan jujur. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4866,7 +4866,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Kunci Satu Pintu!',
-          teks: 'Jadi satu setengah memiliki tiga nama: 1/2, 0,5, dan 50%. Mana pun yang muncul di soal, kamu tahu isinya sama — tiga kunci untuk satu pintu yang sama. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi satu setengah memiliki tiga nama: 1/2, 0,5, dan 50%. Mana pun yang muncul di soal, kamu tahu isinya sama — tiga kunci untuk satu pintu yang sama. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4894,7 +4894,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Uang Terbaca!',
-          teks: 'Jadi uang rupiah itu deretan angka yang bisa dipegang: 1.000, 2.000, 5.000, dan koin-koin kecilnya. Saat berbelanja, baca angkanya dengan teliti seperti membaca buku. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi uang rupiah itu deretan angka yang bisa dipegang: 1.000, 2.000, 5.000, dan koin-koin kecilnya. Saat berbelanja, baca angkanya dengan teliti seperti membaca buku. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4922,7 +4922,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kasir Terbaca!',
-          teks: 'Jadi kembalian tak perlu ditebak: uang dibayar dikurangi harga, sisanya kembali ke tangan. 5.000 dibayar, 3.000 dipakai, 2.000 kembali. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi kembalian tak perlu ditebak: uang dibayar dikurangi harga, sisanya kembali ke tangan. 5.000 dibayar, 3.000 dipakai, 2.000 kembali. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4950,7 +4950,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Tabungan Tumbuh!',
-          teks: 'Jadi menabung itu hitungan sederhana yang setia: 500, plus 500, plus 500 — jadi 1.500. Sedikit demi sedikit, lama-lama menjadi banyak. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi menabung itu hitungan sederhana yang setia: 500, plus 500, plus 500 — jadi 1.500. Sedikit demi sedikit, lama-lama menjadi banyak. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -4978,7 +4978,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Dunia Penuh Bentuk!',
-          teks: 'Dunia ini dibangun dari bentuk-bentuk sederhana: jendela kotak, roda bulat, atap segitiga. Begitu mata terlatih mengenalnya, setiap benda tampak seperti kumpulan bentuk yang ramah. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Dunia ini dibangun dari bentuk-bentuk sederhana: jendela kotak, roda bulat, atap segitiga. Begitu mata terlatih mengenalnya, setiap benda tampak seperti kumpulan bentuk yang ramah. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5006,7 +5006,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Bentuk Terbaca!',
-          teks: 'Jadi bentuk itu dibangun dari sisi, dan setiap pertemuan sisi meninggalkan bukaan bernama sudut. Hitung sisi dan sudutnya, maka bentuk apa pun langsung terbaca. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi bentuk itu dibangun dari sisi, dan setiap pertemuan sisi meninggalkan bukaan bernama sudut. Hitung sisi dan sudutnya, maka bentuk apa pun langsung terbaca. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5034,7 +5034,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Keliling Terjawab!',
-          teks: 'Jadi keliling bukan kata sulit: jarak menyusuri pinggir sampai kembali ke tempat berangkat. Lapangan, meja, dan ponselmu semuanya punya keliling. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi keliling bukan kata sulit: jarak menyusuri pinggir sampai kembali ke tempat berangkat. Lapangan, meja, dan ponselmu semuanya punya keliling. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5062,7 +5062,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Keliling Terhitung!',
-          teks: 'Jadi keliling persegi panjang tak perlu dihafal buta: jumlahkan panjang dan lebarnya, lalu kali dua. Lapangan 8 dan 5 langkah itu terbukti berkeliling 26 langkah. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi keliling persegi panjang tak perlu dihafal buta: jumlahkan panjang dan lebarnya, lalu kali dua. Lapangan 8 dan 5 langkah itu terbukti berkeliling 26 langkah. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5090,7 +5090,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Luas Terbuka!',
-          teks: 'Jadi luas itu banyak ubin yang dibutuhkan untuk menutupi seluruh bagian dalam. Pagar mengukur pinggir, ubin mengukur isi. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi luas itu banyak ubin yang dibutuhkan untuk menutupi seluruh bagian dalam. Pagar mengukur pinggir, ubin mengukur isi. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5118,7 +5118,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Hitung Kilat Jadi!',
-          teks: 'Jadi luas persegi panjang itu baris kali kolom: 4 x 6 = 24 ubin. Rumus panjang kali lebar ternyata hanya cerita menata ubin yang dipersingkat. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi luas persegi panjang itu baris kali kolom: 4 x 6 = 24 ubin. Rumus panjang kali lebar ternyata hanya cerita menata ubin yang dipersingkat. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5146,7 +5146,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Cukup Setengah!',
-          teks: 'Jadi luas segitiga itu setengah kotak penyampirnya: 1/2 x alas x tinggi. Karpet segitiga tadi cukup dibeli 12 ubin, bukan 24. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi luas segitiga itu setengah kotak penyampirnya: 1/2 x alas x tinggi. Karpet segitiga tadi cukup dibeli 12 ubin, bukan 24. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5174,7 +5174,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Roda Setia!',
-          teks: 'Jadi lingkaran punya pusat, jari-jari yang sama panjang dari pusat ke tepi, dan keliling yang kira-kira 3,14 kali diameternya. Satu bentuk, satu angka setia di mana-mana. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi lingkaran punya pusat, jari-jari yang sama panjang dari pusat ke tepi, dan keliling yang kira-kira 3,14 kali diameternya. Satu bentuk, satu angka setia di mana-mana. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5202,7 +5202,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Bentuk Punya Isi!',
-          teks: 'Jadi kubus itu kotak sempurna berenam sisi sama besar, dan balok saudaranya yang sisi-sisinya tidak seragam. Keduanya punya isi — panjang, lebar, dan tinggi. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi kubus itu kotak sempurna berenam sisi sama besar, dan balok saudaranya yang sisi-sisinya tidak seragam. Keduanya punya isi — panjang, lebar, dan tinggi. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5230,7 +5230,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Mata Detektif Tajam!',
-          teks: 'Jadi begitu mata terlatih, kamar sendiri pun menjadi tempat berburu bentuk: jendela persegi, pintu persegi panjang, piring lingkaran, atap segitiga, dan kotak kubus. Malam ini 5 bentuk kalah cepat oleh detektif kecil. Owalah, ternyata begini toh — mudah, bukan?',
+          teks: 'Jadi begitu mata terlatih, kamar sendiri pun menjadi tempat berburu bentuk: jendela persegi, pintu persegi panjang, piring lingkaran, atap segitiga, dan kotak kubus. Malam ini 5 bentuk kalah cepat oleh detektif kecil. Owalah, ternyata begini toh — Mudah, bukan?',
         },
       ],
     },
@@ -5627,6 +5627,288 @@ window.CERITA = (function () {
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Juara Kamp!',
           teks: 'Jadi pola dilanjutkan, perkalian dihitung, angka hilang dipanggil, dan urutan logika dibaca — empat ujian, empat lampu hijau. Seratus judul Pintu 1 kini pernah kamu jejaki, dari kisah angka sampai teka-teki paling seru. Gelar Juara Kamp resmi milikmu. Owalah, ternyata begini toh — semua ilmu besar dimulai dari langkah kecil yang rapi. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ============ PINTU 3 — PEGUNUNGAN POLA ============ */
+
+    /* ----- p3-001 · Mesin Fungsi — pagi bengkel mesin emas ----- */
+    'p3-001': {
+      tema: 'bengkelMesin',
+      npc: { glif: 'f(x)', ucap: ['Masukkan angka,', 'keluar kejutan!'] },
+      stasiun: [
+        {
+          objek: 'mesinKotakEmas', judul: 'Mesin Ajaib di Bengkel',
+          teks: 'Pagi di bengkel gunung, satu mesin kotak emas berdiri megah dengan corong besar di atas dan mulut kecil di bawah. Penduduk bengkel mengajak mencoba: masukkan bilangan ke corongnya, lalu tunggu mulut bawahnya berbicara. Masukkan 3 — keluar 6. Coba lagi, masukkan 3 sekali lagi — keluar 6 juga. Mesin ini tidak pernah berubah pikiran.',
+        },
+        {
+          objek: 'corongMasukAngka', judul: 'Corong: Rumah Masukan',
+          teks: 'Corong di atas mesin adalah pintu masukan. Bilangan apa pun boleh masuk: 1, 5, 10, bahkan 100. Yang penting satu per satu — satu bilangan masuk, satu hasil keluar. Corong itu sabar menerima semua tamu, dan setiap tamu diberi giliran dengan tertib.',
+        },
+        {
+          objek: 'mulutKeluarEnam', judul: 'Mulut: Rumah Keluaran',
+          teks: 'Mulut di bawah mesin adalah pintu keluaran. Ketika 3 masuk lewat corong, mesin bekerja sekejap, lalu 6 meluncur keluar. Masukan 3 selalu menghasilkan keluaran 6 — hari ini, besok, sebulan lagi, tetap 6. Keluaran itu hadiah yang tak pernah mengkhianati.',
+        },
+        {
+          objek: 'papanMesinTetap', judul: 'Aturan yang Tetap',
+          teks: 'Papan bengkel menuliskan rahasia mesin: aturannya tetap. Masukan yang sama selalu menghasilkan keluaran yang sama — itulah tanda mesin yang jujur. Mesin seperti ini punya nama keren: fungsi. Hitungan itu hanya alat; yang membuat mesin dipercaya adalah setianya pada aturan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Fungsi Itu Mesin yang Setia!',
+          teks: 'Corong menerima masukan, mulut menyodorkan keluaran, dan aturannya tetap selamanya. Owalah, ternyata begini toh — fungsi hanyalah mesin yang setia pada aturannya sendiri. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-002 · Masukan & Keluaran — siang meja percobaan ----- */
+    'p3-002': {
+      tema: 'mejaMesinPintar',
+      npc: { glif: 'f', ucap: ['x masuk,', 'f(x) keluar!'] },
+      stasiun: [
+        {
+          objek: 'mejaPercobaanPintar', judul: 'Meja Percobaan Sang Peneliti',
+          teks: 'Siang di bengkel gunung, satu meja percobaan dipenuhi kartu dan mesin kecil. Mesin pintar itu diberi nama pendek: f. Penduduk menulis nama f pada label dan menempelkannya di dada mesin. Dari hari itu, mesin kecil punya identitas — dan identitas itulah kunci semua catatan percobaannya.',
+        },
+        {
+          objek: 'kartuMasukX', judul: 'Kartu Masukan x',
+          teks: 'Pada meja tergeletak kartu bertuliskan x. Huruf x adalah kotak kosong: bilangan apa pun boleh menempatinya. Hari ini x mengaku 3, besok x boleh mengaku 5. Kartu x masuk lewat corong mesin f, dan mesin langsung bekerja.',
+        },
+        {
+          objek: 'kartuKeluarFx', judul: 'Kartu Keluaran f(3)',
+          teks: 'Keluaran mesin f untuk masukan 3 ditulis f(3), dibaca "f dari 3". Ketika mesin pengganda menerima 3, hasilnya 6: jadi f(3) = 6. Perhatikan — tulisan itu bukan f kali 3; f(3) hanya tanda hasil mesin untuk masukan 3.',
+        },
+        {
+          objek: 'papanBukanKali', judul: 'Bukan Perkalian Biasa',
+          teks: 'Papan meja menegaskan: f adalah nama mesin, bukan bilangan yang bisa dikali. Karena itu f(3) = 6 dan f(5) = 10 — keduanya hasil mesin, bukan perkalian huruf. Mesin mana pun boleh diberi nama f; nama boleh sama, aturannya yang membedakan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, f(x) Hanyalah Nama Hasil Mesin!',
+          teks: 'x masuk, mesin bernama f bekerja, lalu f(x) keluar sebagai hasil. Owalah, ternyata begini toh — f(x) bukan perkalian aneh, melainkan nama keren untuk hasil mesin. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-003 · Aturan Mesin — sore papan aturan taman ----- */
+    'p3-003': {
+      tema: 'papanAturanMesin',
+      npc: { glif: '2x', ucap: ['Satu aturan,', 'semua taat!'] },
+      stasiun: [
+        {
+          objek: 'mesinGandakanDua', judul: 'Mesin Pengganda di Taman',
+          teks: 'Sore di taman lembah, satu mesin berdiri dengan label besar: kali dua. Aturannya sederhana sekali — setiap masukan digandakan. Mesin ini tidak memilih pilih tamu: semua masukan diperlakukan sama, semua digandakan dua kali.',
+        },
+        {
+          objek: 'tigaMasukEnamKeluar', judul: 'Masuk 3, Keluar 6',
+          teks: 'Masukkan 3: mesin berdengung sekejap, lalu 6 meluncur keluar. Cek bersama: dua kali tiga sama dengan enam. Masukkan 5 — keluar 10. Masukkan 10 — keluar 20. Keluaran selalu dua kali masukannya, tanpa satu pun pengecualian.',
+        },
+        {
+          objek: 'deretKeluaranTali', judul: 'Barisan Keluaran di Tali',
+          teks: 'Penduduk menggantungkan kartu pada tali kuning: masukan 1, 2, 3, 4 dan keluaran 2, 4, 6, 8. Lihat barisannya — keluaran berbaris rapi dengan jarak sama. Pola rapi seperti itu tanda mesin yang aturannya lurus dan setia.',
+        },
+        {
+          objek: 'papanAturanTetap', judul: 'Rumus Mesin: y = 2x',
+          teks: 'Papan taman menuliskan rumus mesin: y = 2x. Huruf y adalah nama keluaran, x adalah masukan. Dengan rumus itu, mesin bisa ditiru siapa pun di mana pun — cukup kalikan dua. Aturan yang tertulis jelas membuat semua orang bisa bekerja sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Aturan Memerintah Semua Keluaran!',
+          teks: 'Masuk 3 keluar 6, masuk 5 keluar 10, masuk 10 keluar 20 — satu aturan mengatur semuanya. Owalah, ternyata begini toh — y = 2x hanyalah cara menulis mesin pengganda. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-004 · Tabel Pasangan — malam arsip tabel ----- */
+    'p3-004': {
+      tema: 'arsipTabel',
+      npc: { glif: '(x,y)', ucap: ['Setiap x', 'punya teman!'] },
+      stasiun: [
+        {
+          objek: 'mejaTabelDuaKolom', judul: 'Tabel Dua Kolom di Arsip',
+          teks: 'Malam di ruang arsip gunung, lampu minyak menemani satu meja bertabel dua kolom. Kolom kiri bernama x untuk masukan, kolom kanan bernama y untuk keluaran. Mesin malam ini beraturan berbeda: kali dua lalu tambah satu — y = 2x + 1.',
+        },
+        {
+          objek: 'pasanganSatuTiga', judul: 'Pasangan Pertama: 1 dan 3',
+          teks: 'Masukkan 1: mesin menggandakan menjadi 2, lalu menambah satu menjadi 3. Jadi 1 bersanding dengan 3 — ditulis (1, 3). Cek cepat: dua kali satu tambah satu memang tiga. Pasangan pertama tercatat rapi di tabel.',
+        },
+        {
+          objek: 'pasanganDuaLima', judul: 'Pasangan Kedua: 2 dan 5',
+          teks: 'Masukkan 2: dua kali dua sama dengan empat, tambah satu jadi 5. Maka 2 bersanding dengan 5 — (2, 5). Tabel kini memuat dua pasangan, dan keduanya tunduk pada aturan yang sama: y = 2x + 1.',
+        },
+        {
+          objek: 'papanSatuTeman', judul: 'Satu x, Satu Teman',
+          teks: 'Papan arsip menuliskan hukum tabel: setiap x hanya punya satu teman y. Tidak ada antrean ganda, tidak ada teman tiba tiba diganti. Tabel adalah album pasangan mesin — catatan tertib yang bisa dipercaya sepenuhnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tabel Adalah Album Pasangan Mesin!',
+          teks: '1 bersanding dengan 3, 2 bersanding dengan 5, dan tak ada satu pun x yang dua kali berpindah teman. Owalah, ternyata begini toh — tabel hanyalah album foto pasangan masukan-keluaran. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-005 · Titik di Bidang — pagi lapangan kisi tali ----- */
+    'p3-005': {
+      tema: 'lapanganKisi',
+      npc: { glif: '(2,4)', ucap: ['Pasangan', 'punya alamat!'] },
+      stasiun: [
+        {
+          objek: 'kisiTaliLapangan', judul: 'Kisi Raksasa di Lapangan',
+          teks: 'Pagi di lapangan lembah, tali-tali kuat ditarik melintang membentuk kisi raksasa. Tali mendatar disebut sumbu x, tali tegak disebut sumbu y, dan keduanya bertemu di titik nol. Lapangan biasa berubah menjadi peta besar untuk semua pasangan mesin.',
+        },
+        {
+          objek: 'patokTitikDuaEmpat', judul: 'Patok di (2, 4)',
+          teks: 'Ambil pasangan (2, 4): dari nol, maju dua ke kanan menyusuri sumbu x, lalu naik empat menyusuri sumbu y. Di persilangan itulah sebuah patok bendera ditancapkan. Pasangan masukan-keluaran kini punya alamat di lapangan — maju dulu, naik kemudian.',
+        },
+        {
+          objek: 'tigaPatokMesin', judul: 'Titik-Titik Mesin Berdiri',
+          teks: 'Patok berikutnya berdiri satu per satu: (1, 2), (2, 4), lalu (3, 6). Semuanya pasangan mesin y = 2x yang sama. Setiap pasangan diberi alamat sendiri, dan tidak ada dua patok yang berebut satu alamat.',
+        },
+        {
+          objek: 'papanSatuAlamat', judul: 'Satu Pasangan, Satu Alamat',
+          teks: 'Papan pinggir lapangan menegaskan: satu pasangan hanya punya satu titik. (2, 4) dan (4, 2) adalah dua alamat berbeda — jangan tertukar! Koordinat dari Hutan Simbol kini dipinjam mesin fungsi untuk memamerkan hasilnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pasangan Jadi Titik yang Bertetangga!',
+          teks: 'Maju dua, naik empat, tancapkan patok — pasangan angka kini punya rumah di bidang. Owalah, ternyata begini toh — titik hanyalah alamat dari pasangan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-006 · Garis dari Mesin — siang jalan menanjak ----- */
+    'p3-006': {
+      tema: 'jalanLurusNaik',
+      npc: { glif: '2x+1', ucap: ['Titik rapi', 'jadi garis!'] },
+      stasiun: [
+        {
+          objek: 'jalanMenanjakLurus', judul: 'Jalan Menanjak yang Lurus',
+          teks: 'Siang di kaki lembah, satu jalan tanah menanjak lurus menuju punggung gunung. Tak ada belokan sedikit pun — jalan ini tahu tujuannya. Penduduk berkata, jalan lurus itu mirip sesuatu yang baru kita pelajari: grafik mesin yang setia.',
+        },
+        {
+          objek: 'titikBerbarisRapi', judul: 'Titik Berbaris Rapi',
+          teks: 'Di sepanjang jalan, patok-patok kecil berdiri beraturan: (1, 2), (2, 4), (3, 6), (4, 8). Semuanya pasangan mesin pengganda y = 2x. Jarak antar patok selalu sama — tanda bahwa mereka berbaris mengikuti satu aturan yang sama.',
+        },
+        {
+          objek: 'taliSambungGaris', judul: 'Tali Menyambung Semuanya',
+          teks: 'Seutas tali ditarik dari patok pertama ke patok terakhir. Kejutannya: tali berhimpit sempurna dengan semua patok — tak ada satu pun yang melenceng. Semua titik mesin tunduk pada satu garis yang sama.',
+        },
+        {
+          objek: 'papanGarisLurus', judul: 'Mesin Garis Lurus',
+          teks: 'Papan tepi jalan menuliskan penemuan hari ini: mesin dengan aturan kali tetap membuat titik-titiknya sejajar sempurna. Grafiknya bernama garis lurus. Makin banyak titik dicoba, makin yakin garis itu sungguh lurus.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semua Titik Taat pada Satu Garis!',
+          teks: 'Patok berbaris, tali menunjukkan jalan, dan semua titik mesin berhimpit rapi. Owalah, ternyata begini toh — grafik mesin pengganda adalah garis lurus yang setia. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-007 · Grafik Naik & Turun — senja jembatan bergelombang ----- */
+    'p3-007': {
+      tema: 'jembatanBergelombang',
+      npc: { glif: 'naik', ucap: ['Grafik', 'punya arah!'] },
+      stasiun: [
+        {
+          objek: 'jembatanNaikTurun', judul: 'Jembatan Naik-Turun Senja',
+          teks: 'Senja di lembah, jembatan tali membentang naik dulu lalu turun. Penduduk menyeberang sambil membaca bentuknya: bagian mana yang mendaki, bagian mana yang menurun. Jembatan itu ternyata grafik raksasa yang bisa didaki kaki.',
+        },
+        {
+          objek: 'panahMenanjakKanan', judul: 'Bagian Menanjak',
+          teks: 'Di bagian menanjak, setiap langkah ke kanan membawa kita lebih tinggi. Itu tanda keluaran makin besar: masukan bertambah, keluaran ikut bertambah. Grafik menanjak berarti mesin sedang makin rajin — hasilnya kian tumbuh.',
+        },
+        {
+          objek: 'panahMenurunKanan', judul: 'Bagian Menurun',
+          teks: 'Di bagian menurun, langkah ke kanan justru membawa lebih rendah. Keluaran makin kecil: mesinnya seperti bola yang digulir menuruni bukit. Contoh mesinnya y = 10 − x: masuk 1 keluar 9, masuk 5 keluar 5, masuk 9 keluar 1.',
+        },
+        {
+          objek: 'papanGrafikArah', judul: 'Grafik Punya Arah',
+          teks: 'Papan ujung jembatan merangkum: menanjak berarti makin besar, menurun berarti makin kecil, mendatar berarti tak berubah. Tiga kata itu cukup untuk membaca arah grafik mana pun — cukup lihat ke mana jalan meluncur. Dari sekarang, setiap garis yang kamu temui bisa kamu bacakan arahnya seperti membaca jembatan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Bentuk Grafik Menunjukkan Arah!',
+          teks: 'Naik berarti tumbuh, turun berarti menyusut, datar berarti diam. Owalah, ternyata begini toh — membaca grafik semudah membaca jembatan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-008 · Jalur Bola Kuadrat — siang halaman lempar bola ----- */
+    'p3-008': {
+      tema: 'halamanLempar',
+      npc: { glif: 'x2', ucap: ['Lengkung', 'sama dua sisi!'] },
+      stasiun: [
+        {
+          objek: 'bolaLemparMelengkung', judul: 'Bola Melengkung di Siang Hari',
+          teks: 'Siang di halaman lembah, bola dilempar tinggi lalu kembali: naik melengkung, turun melengkung. Jejaknya di udara bukan garis lurus, melainkan lengkung anggun. Penduduk bertanya-tanya — bentuk apa itu, dan bisakah digambar?',
+        },
+        {
+          objek: 'jejakLengkungKertas', judul: 'Jejak yang Digambar',
+          teks: 'Di kertas besar, titik-titik dihubungkan mengikuti jejak bola. Mesinnya bernama y = x²: masuk 1 keluar 1, masuk 2 keluar 4, masuk 3 keluar 9. Titik-titik itu membentuk lengkung yang sama persis dengan jejak bola tadi!',
+        },
+        {
+          objek: 'lengkungCerminKanan', judul: 'Dua Sisi Berhadapan',
+          teks: 'Perhatikan lengkungnya: sisi kiri dan sisi kanan berhadapan seperti di depan cermin. Masuk 2 keluar 4; masuk minus 2 juga keluar 4. Dua kali dua sama dengan empat, minus dua kali minus dua juga empat — keduanya kembar!',
+        },
+        {
+          objek: 'papanSimetriParabola', judul: 'Nama Lengkung: Parabola',
+          teks: 'Papan halaman menuliskan namanya: parabola. Lengkung simetris itu muncul pada lemparan bola, air pancur, bahkan kerucut cahaya lampu. Grafik kuadrat bukan sekadar gambar di kertas — ia tinggal di sekitar kita.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jalur Bola adalah Grafik Kuadrat!',
+          teks: 'Bola melengkung, kertas membuktikan, cermin menyatakan dua sisinya sama. Owalah, ternyata begini toh — y = x² hanyalah jalur bola yang digambar di kertas. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-009 · Grafik Bercerita — malam pos pandang ----- */
+    'p3-009': {
+      tema: 'posGrafik',
+      npc: { glif: 'grafik', ucap: ['Grafik', 'bercerita!'] },
+      stasiun: [
+        {
+          objek: 'papanGrafikEmber', judul: 'Papan Grafik di Pos Pandang',
+          teks: 'Malam di pos pandang gunung, satu papan grafik menyala ditemani lampu minyak. Cerita yang digambarkan: sebuah ember diisi air kran. Garisnya menanjak beberapa saat, lalu mendatar terus. Apa yang sebenarnya terjadi pada ember itu?',
+        },
+        {
+          objek: 'garisNaikKran', judul: 'Garis Naik: Kran Menyala',
+          teks: 'Bagian menanjak adalah waktunya kran menyala: air masuk, air dalam ember bertambah terus. Dari 0 liter menjadi 18 liter dalam enam detik — garis memanjat dari nol menuju tinggi. Naiknya garis adalah naiknya air.',
+        },
+        {
+          objek: 'garisDatarPenuh', judul: 'Garis Datar: Ember Penuh',
+          teks: 'Lalu garis mendatar sempurna. Air tak bertambah lagi — ember penuh! Kran dimatikan, permukaan air diam di 18 liter. Garis datar itu bisu tapi jujur: tak ada yang berubah, tak ada yang tumpah.',
+        },
+        {
+          objek: 'papanBacaCerita', judul: 'Grafik Perjalanan Juga Bercerita',
+          teks: 'Papan kedua bercerita perjalanan: garis naik berarti berjalan, garis datar berarti berhenti istirahat, garis naik lagi berarti jalan lagi. Grafik adalah buku cerita bergambar — cukup dibaca naik-turunnya, ceritanya langsung terbongkar. Malam ini cobalah membaca satu grafik sendiri: tebak dulu ceritanya, cek kemudian.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Grafik adalah Buku Cerita Bergambar!',
+          teks: 'Naik berarti terisi, datar berarti penuh, naik lagi berarti jalan lagi. Owalah, ternyata begini toh — grafik bercerita tanpa satu kata pun. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-010 · Tantangan Lembah Mesin — malam balai lima misi ----- */
+    'p3-010': {
+      tema: 'balaiMesin',
+      npc: { glif: 'mesin', ucap: ['Lima misi', 'menantimu!'] },
+      stasiun: [
+        {
+          objek: 'limaLampuMisiMesin', judul: 'Balai Juara Lembah Mesin',
+          teks: 'Malam di balai juara lembah, lima lampu misi menyala bergantian di atas panggung. Di tengahnya berdiri mesin-mesin yang kini menghadapi satu penantang: kamu. Selesaikan satu misi, satu lampu berubah hijau. Kelima lampu hijau adalah tiket gerbang juara.',
+        },
+        {
+          objek: 'mesinTekaAturan', judul: 'Misi Satu: Tebak Aturan',
+          teks: 'Misi pertama menampilkan tabel misterius: masuk 0 keluar 5, masuk 1 keluar 7, masuk 2 keluar 9. Beda keluarannya selalu dua — aturannya kali dua tambah lima! Buktikan: masuk 3 keluar 11. Lampu pertama menyala hijau.',
+        },
+        {
+          objek: 'papanTabelTeka', judul: 'Misi Dua: Gambar Grafiknya',
+          teks: 'Misi kedua meminjamkan penggaris: gambar grafik y = 3x. Hitung tiga pasangnya — masuk 1 keluar 3, masuk 2 keluar 6, masuk 3 keluar 9 — lalu tandai titiknya. Sambungkan: garis lurus yang menanjak! Lampu kedua hijau.',
+        },
+        {
+          objek: 'gerbangJuaraLembah', judul: 'Misi Tiga sampai Lima',
+          teks: 'Tiga ujian pamungkas menunggu di gerbang. Ujian pertama memeriksa simetri parabola: dua kali dua sama dengan empat, dan minus dua kali minus dua juga empat. Ujian kedua membaca grafik ember yang naik lalu datar, dan ujian ketiga membaca mesin y = 12 − 2x yang menurun setia: masuk 0 keluar 12, masuk 6 keluar 0. Gerbang juara perlahan terbuka.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Ahli Mesin Lembah!',
+          teks: 'Aturan ditebak, grafik digambar, cermin diperiksa, cerita dibaca, arah dibuktikan — lima misi, lima lampu hijau. Sepuluh dunia lembah mesin kini pernah kamu jelajahi. Owalah, ternyata begini toh — fungsi hanyalah mesin setia yang bisa kita baca. Mudah, bukan?',
         },
       ],
     },
