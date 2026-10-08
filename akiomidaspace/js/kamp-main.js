@@ -1,18 +1,9 @@
-/* =========================================================
-   KAMP ANGKA — Mesin Dunia Hidup (kamp-main.js)
-   - Satu layar tetap: tanpa kamera, tanpa geser.
-   - Belajar lewat DIALOG NPC: dekati penduduk, tekan TANYA.
-   - Aktivitas "Bantu Bangun Tenda": jawab hitung, tiang berdiri.
-   - Mata minus: A-/A+ (berbagi setelan dengan Dunia), teks besar.
-   - Syariah: semua tokoh bulatan bermotif angka, tanpa wajah.
-   ========================================================= */
 (function () {
   'use strict';
 
   const K = window.KAMP;
   const { W, H, GROUND } = K;
 
-  /* ---------- penduduk & bahasan (sumber: ruang Sejarah Matematika) ---------- */
   const NPCS = [
     { id: 'satu', nama: 'KAK SATU', x: 96, warna: '#63c8ff', gelap: '#1c6fb4', glif: '1', aksi: 'TANYA',
       ket: 'Dari mana angka bermula',
@@ -50,7 +41,6 @@
       ] },
   ];
 
-  /* soal aktivitas bangun tenda (hitung anak: maju & berkelompok) */
   const SOAL = [
     { t: 'Tenda butuh 5 tiang. Sudah berdiri 2. Berapa tiang lagi yang harus dipasang?',
       opsi: ['2', '3', '4'], benar: 1,
@@ -66,7 +56,6 @@
       salah: 'Mulai dari 6 lalu hitung maju sampai 8: tujuh, delapan. Berapa batu yang dilewati?' },
   ];
 
-  /* ---------- elemen halaman ---------- */
   const layar = document.getElementById('layar');
   const ctx = layar.getContext('2d');
   const chipSlogan = document.getElementById('chipSlogan');
@@ -90,7 +79,6 @@
     || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   if (adalahSentuh) document.body.classList.add('coarse', 'kontrol-aktif');
 
-  /* ---------- ukuran panggung: dunia utuh selalu muat ---------- */
   function pasUkuran() {
     const vw = window.innerWidth, vh = window.innerHeight;
     const lanskap = vw > vh;
@@ -102,16 +90,15 @@
   window.addEventListener('resize', pasUkuran);
   pasUkuran();
 
-  /* ---------- ukuran tulisan A- / A+ (berbagi setelan dengan Dunia) ---------- */
   const LANGKAH_SKALA = [1, 1.15, 1.3, 1.5];
   let idxSkala = 0;
   try {
     const s = parseInt(localStorage.getItem('akio-skala') || '0', 10);
     if (s >= 0 && s < LANGKAH_SKALA.length) idxSkala = s;
-  } catch (e) { /* abaikan */ }
+  } catch (e) {  }
   function terapSkala() {
     document.documentElement.style.setProperty('--skala', LANGKAH_SKALA[idxSkala]);
-    try { localStorage.setItem('akio-skala', String(idxSkala)); } catch (e) { /* abaikan */ }
+    try { localStorage.setItem('akio-skala', String(idxSkala)); } catch (e) {  }
     const min = document.getElementById('btnMin');
     const plus = document.getElementById('btnPlus');
     if (min) min.disabled = idxSkala === 0;
@@ -125,13 +112,11 @@
   });
   terapSkala();
 
-  /* ---------- kemajuan bangun tersimpan ---------- */
   let tiang = 0;
-  try { tiang = Math.max(0, Math.min(3, parseInt(localStorage.getItem('kamp-tiang') || '0', 10) || 0)); } catch (e) { /* abaikan */ }
+  try { tiang = Math.max(0, Math.min(3, parseInt(localStorage.getItem('kamp-tiang') || '0', 10) || 0)); } catch (e) {  }
   const selesai = tiang >= 3;
   if (selesai && chipSlogan) chipSlogan.textContent = 'Tenda sudah berdiri berkatmu';
 
-  /* ---------- latar & tokoh ---------- */
   let bg = K.bakeBG();
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => { bg = K.bakeBG(); }).catch(() => {});
@@ -140,7 +125,6 @@
   const player = { x: 26, y: GROUND, vx: 0, dir: 1, state: 'diam', walkT: 0, target: null, squash: 0, tujuNpc: null };
   const npcs = NPCS.map((n, i) => ({ ...n, i, bob: i * 1.3 }));
 
-  /* ---------- partikel & kehidupan ---------- */
   const awan = [{ x: 40, y: 22, v: 4.2, s: 1 }, { x: 250, y: 40, v: 3.1, s: 1.3 }];
   const simbolLangit = [
     { x: 90, y: 56, g: '+', v: 4.6, f: 0 },
@@ -150,7 +134,6 @@
   let asap = [], kilau = [], confetti = [];
   const rand = (a, b) => a + Math.random() * (b - a);
 
-  /* ---------- input ---------- */
   const keys = { kiri: false, kanan: false };
   addEventListener('keydown', e => {
     if (document.body.classList.contains('dlg-buka')) return;
@@ -177,7 +160,6 @@
   ikatTombol('btnKiri', 'kiri');
   ikatTombol('btnKanan', 'kanan');
 
-  /* ketuk layar: ke penduduk (berkenalan otomatis) atau ke titik jalan */
   layar.addEventListener('pointerdown', e => {
     if (document.body.classList.contains('dlg-buka')) return;
     e.preventDefault();
@@ -194,7 +176,6 @@
     }
   });
 
-  /* tombol aksi besar (TANYA / BANTU BANGUN) — dekat penduduk */
   let npcDekat = null;
   aksiBtn.addEventListener('pointerdown', e => {
     e.preventDefault();
@@ -209,13 +190,12 @@
     hilangkanHint();
   }
 
-  /* ---------- panel TUGAS DI KAMP: pilih penduduk → Akio berjalan ke dia ---------- */
   const tugasEl = document.getElementById('tugas');
   function sudahBaca(id) {
     try { return localStorage.getItem('kamp-baca-' + id) === '1'; } catch (e) { return false; }
   }
   function tandaiBaca(id) {
-    try { localStorage.setItem('kamp-baca-' + id, '1'); } catch (e) { /* abaikan */ }
+    try { localStorage.setItem('kamp-baca-' + id, '1'); } catch (e) {  }
   }
   function segarTugas() {
     if (!tugasEl) return;
@@ -251,8 +231,7 @@
   });
   segarTugas();
 
-  /* ---------- dialog ---------- */
-  let dlg = null;                                   // { npc, hal, mode, soal, terjawab }
+  let dlg = null;
   function bukaDialog(n) {
     if (dlg) return;
     player.target = null; player.vx = 0;
@@ -337,7 +316,7 @@
       btnLanjut.style.display = '';
       btnLanjut.textContent = dlg.soal >= SOAL.length - 1 ? 'PASANG TERAKHIR' : 'LANJUT';
       tiang++;
-      try { localStorage.setItem('kamp-tiang', String(tiang)); } catch (e) { /* abaikan */ }
+      try { localStorage.setItem('kamp-tiang', String(tiang)); } catch (e) {  }
       ledakKilau(268, 236);
       segarTugas();
     } else {
@@ -376,7 +355,6 @@
   });
   btnTutup.addEventListener('click', tutupDialog);
 
-  /* ---------- hint & chip ---------- */
   const hintDasar = adalahSentuh
     ? 'Ketuk tanah untuk berjalan \u00b7 dekati penduduk lalu tekan tombolnya'
     : 'Tekan \u2190 \u2192 untuk berjalan \u00b7 dekati penduduk lalu tekan Enter';
@@ -385,7 +363,6 @@
   function hilangkanHint() { if (!hintHilang) { hintHilang = true; hintEl.classList.add('pudar'); } }
   setTimeout(hilangkanHint, 14000);
 
-  /* ---------- partikel ---------- */
   function ledakKilau(x, y) {
     for (let i = 0; i < 14; i++) {
       confetti.push({ x, y, vx: rand(-34, 34), vy: rand(-70, -26), hidup: rand(0.5, 1), umur: 0,
@@ -405,7 +382,6 @@
     for (const s of simbolLangit) { s.x += s.v * dt; s.f += dt; if (s.x > 495) { s.x = -15; s.y = rand(40, 90); } }
   }
 
-  /* ---------- pembaruan ---------- */
   const KECEPATAN = 108;
   function update(dt, t) {
     const dlgBuka = document.body.classList.contains('dlg-buka');
@@ -431,7 +407,6 @@
       player.x = Math.max(14, Math.min(466, player.x));
       player.walkT += Math.abs(player.vx) * dt;
 
-      // tiba di penduduk yang dituju → otomatis berkenalan
       if (player.tujuNpc && Math.abs(player.x - player.tujuNpc.x) < 26) {
         const n = player.tujuNpc;
         player.tujuNpc = null; player.vx = 0; player.state = 'diam';
@@ -439,7 +414,6 @@
       }
     }
 
-    // penduduk terdekat → tombol aksi
     npcDekat = null;
     if (!dlgBuka) {
       let terbaik = 1e9;
@@ -459,7 +433,6 @@
     for (const n of npcs) n.bob += dt * 2;
   }
 
-  /* ---------- gambar ---------- */
   function gambarAwan(a) {
     const s = a.s;
     K.gambar.P(ctx, a.x, a.y + 4 * s, 26 * s, 6 * s, '#fffdf2');
@@ -480,13 +453,11 @@
       ctx.globalAlpha = 1;
     }
 
-    // penduduk bola-lentera
     for (const n of npcs) {
       K.gambar.bayangan(ctx, n.x, GROUND - 1, 10);
       K.gambar.bolaLentera(ctx, n.x, GROUND - 10, n.warna, n.gelap, n.glif, n.bob);
     }
 
-    // konfetti & asap
     for (const s of asap) {
       const u = s.umur / s.hidup;
       ctx.globalAlpha = 0.5 * (1 - u);
@@ -500,13 +471,11 @@
       ctx.globalAlpha = 1;
     }
 
-    // Akio paling depan — bulatan emas, tak pernah keluar layar
     K.gambar.bayangan(ctx, player.x, player.y + 1, 12);
     const fr = player.state === 'jalan' ? Math.floor(player.walkT / 13) % 4 : 0;
     K.gambar.akio(ctx, player.x, player.y, 1, player.squash, player.state === 'jalan' ? fr : 0);
   }
 
-  /* ---------- loop ---------- */
   let last = 0;
   function loop(ts) {
     const dt = Math.min(0.05, (ts - last) / 1000 || 0.016);
@@ -518,7 +487,6 @@
   }
   requestAnimationFrame(loop);
 
-  /* ---------- intro & kembali ---------- */
   if (selesai) {
     const cat = document.getElementById('introSelesai');
     if (cat) cat.style.display = '';
@@ -529,7 +497,6 @@
   });
   btnDunia.addEventListener('click', () => { window.location.href = 'index.html'; });
 
-  /* ---------- API debug (QA) ---------- */
   window.KAMPDBG = {
     get: () => ({
       px: Math.round(player.x), vx: Math.round(player.vx), state: player.state,

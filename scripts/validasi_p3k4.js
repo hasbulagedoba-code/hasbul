@@ -1,4 +1,3 @@
-/* validasi_p3k4.js — validasi programatik batch p3-031..040 (k4 Matriks & Sistem Persamaan) */
 const fs = require('fs');
 const path = require('path');
 const DIR = path.join(__dirname, '..', 'akiomidaspace', 'js');
@@ -8,7 +7,6 @@ const p3data = fs.readFileSync(path.join(DIR, 'pintu3-data.js'), 'utf8');
 let ok = 0, gagal = 0;
 function cek(nama, syarat) { if (syarat) ok++; else { gagal++; console.log('GAGAL:', nama); } }
 
-/* ---------- ekstrak blok naskah p3-031..040 ---------- */
 function blok(id) {
   const re = new RegExp("'" + id + "': \\{([\\s\\S]*?)\\n    \\},");
   const m = cerita.match(re);
@@ -21,7 +19,6 @@ const TEMAK4 = ['lapanganPapanSkor', 'lorongPenginapan', 'mejaPiknikSejawat', 'd
 const GLIFK4 = ['kotak', 'a23', '2+1', 'dua porsi', 'jabat', '4 dan 3', 'temu', '3x2', '1 2 3', 'papan!'];
 const OBJEKK4 = ['papanSkorGunung', 'kotakAngkaBabak', 'garisBarisKolom', 'lencanaTertataRapi', 'lorongPenginapanGunung', 'pintuKamarLantaiDua', 'papanUrutanAlamat', 'kunciTukarAlamat', 'duaPiringKueSejawat', 'piringHasilSejawat', 'kotakUkuranBeda', 'papanAturanSejawat', 'papanResepSatuPorsi', 'resepDigandakanDua', 'timbanganBahanDobel', 'nampanKueDuaPorsi', 'barisAnakKiri', 'kolomAnakKanan', 'kartuHasilSembilanBelas', 'papanArahBerbeda', 'berandaDuaBangku', 'papanJumlahTujuh', 'papanSelisihSatu', 'kueAngkaEmpatTiga', 'jalanTanjakDuaX', 'jalanTanggaPlusDua', 'tiangTitikTemuDuaEmpat', 'duaJalanSejajarJauh', 'papanRaporKelasKecil', 'kotakNilaiTigaAnak', 'kartuAlamatNilaiSembilan', 'papanJumlahKolom', 'tigaKotakHadiahAbc', 'timbanganPasanganKotak', 'papanTrikJumlahSemua', 'lampuIsiTigaKotak', 'limaPapanMisiAngka', 'papanMisiAlamatJumlah', 'papanMisiSapaSistem', 'gerbangJuaraPapanAngka'];
 
-/* ---------- 1. struktur per naskah ---------- */
 ids.forEach((id, idx) => {
   const b = blok(id);
   cek(id + ' blok ada', !!b);
@@ -41,14 +38,12 @@ ids.forEach((id, idx) => {
   cek(id + ' ucap 2 baris', [...b.matchAll(/ucap: \['[^']*', '[^']*'\]/g)].length === 1);
 });
 
-/* ---------- 2. tema di TEMA_CFG + AMB_CFG + bakarLatar ---------- */
 TEMAK4.forEach(t => {
   cek('TEMA_CFG: ' + t, main.includes('    ' + t + ": { glif: ["));
   cek('AMB_CFG: ' + t, main.includes('    ' + t + ': { jenis:'));
   cek('bakarLatar: ' + t, main.includes("TEMA_NAMA === '" + t + "'"));
 });
 
-/* ---------- 3. objek: registry + partikel + fungsi tepat-1 ---------- */
 OBJEKK4.forEach(o => {
   const fn = 'gambar' + o.charAt(0).toUpperCase() + o.slice(1);
   cek('registry: ' + o, main.includes(o + ': ' + fn));
@@ -57,7 +52,6 @@ OBJEKK4.forEach(o => {
   cek('fungsi tepat-1: ' + fn, def === 1, def);
 });
 
-/* ---------- 4. keunikan global ---------- */
 const semuaGlif = [...cerita.matchAll(/glif:\s*'([^']*)'/g)].map(m => m[1]);
 GLIFK4.forEach(g => cek('glif unik: ' + g, semuaGlif.filter(x => x === g).length === 1, semuaGlif.filter(x => x === g).length));
 const semuaTema = [...cerita.matchAll(/tema:\s*'([^']*)'/g)].map(m => m[1]);
@@ -96,7 +90,6 @@ let temuanTeaser = 0;
 teaserP3.forEach((t, i) => { const low = t.toLowerCase(); if (KATA.some(k => low.includes(k) && !whitelist.some(w => low.includes(w)))) { temuanTeaser++; console.log('TEASER:', i); } });
 cek('anti-ramalan teaser P3: nol', temuanTeaser === 0, temuanTeaser);
 
-/* ---------- 6. angka kunci matematika dalam teks batch k4 ---------- */
 const isiK4 = ids.map(blok).join('\n');
 cek('skor 15-13 hadir', isiK4.includes('15 lawan 13'));
 cek('alamat isi 8 (baris2 kolom3)', isiK4.includes('terpampang angka 8'));
@@ -112,7 +105,6 @@ cek('jawaban 1, 2, 3', isiK4.includes('A berisi 1, B berisi 2, C berisi 3'));
 cek('misi akhir 2 x 4 + 3 x 5 = 23', isiK4.includes('2 x 4 + 3 x 5 = 23'));
 cek('hitungan itu hanya alat hadir', isiK4.toLowerCase().includes('hitungan itu hanya alat'));
 
-/* ---------- 7. regresi: 240 naskah utuh (tugu + Owalah + Mudah bukan utk P3, struktur) ---------- */
 let regresi = 0;
 semuaBlok.forEach(b => {
   if (b.id.startsWith('p1-') || b.id.startsWith('p2-')) {
@@ -123,11 +115,9 @@ semuaBlok.forEach(b => {
 });
 cek('regresi 240 naskah utuh', regresi === 0, regresi);
 
-/* ---------- 8. P3 100 judul utuh ---------- */
 const toCount = [...p3data.matchAll(/id: 'p3-\d{3}'/g)].length;
 cek('pintu3-data 100 judul', toCount === 100, toCount);
 
-/* ---------- 9. glif TEMA_CFG batch k4 ASCII aman ---------- */
 TEMAK4.forEach((t, i) => {
   const re = new RegExp('    ' + t + ": \\{ glif: \\['([^']*)', '([^']*)', '([^']*)'\\]");
   const m = main.match(re);

@@ -1,10 +1,3 @@
-/* ============================================================
-   VALIDASI STRUKTUR P3 BATCH 1 (p3-001..010) + SELURUH 210 NASKAH
-   Cek: struktur naskah, tugu & payoff, keunikan tema/objek/glif,
-   keberadaan tema & objek di pelajaran-main.js, anti-ramalan,
-   regresi p1 & p2, jumlah judul pintu3-data.
-   Jalankan: node scripts/validasi_p3k1.js -> harus SEMUA OK
-   ============================================================ */
 const fs = require('fs');
 const path = require('path');
 const R = path.join(__dirname, '..', 'akiomidaspace', 'js');
@@ -18,7 +11,6 @@ const cer = fs.readFileSync(path.join(R, 'cerita-data.js'), 'utf8');
 const pmain = fs.readFileSync(path.join(R, 'pelajaran-main.js'), 'utf8');
 const p3 = fs.readFileSync(path.join(R, 'pintu3-data.js'), 'utf8');
 
-/* ---------- ekstrak naskah ---------- */
 function ambilNaskah(id) {
   const re = new RegExp("'" + id + "': \\{([\\s\\S]*?)\\n    \\},");
   const m = cer.match(re);
@@ -26,7 +18,6 @@ function ambilNaskah(id) {
 }
 const idsP3 = Array.from({ length: 10 }, (_, i) => 'p3-' + String(i + 1).padStart(3, '0'));
 
-/* ---------- struktur per naskah baru ---------- */
 const temaBaru = [], objekBaru = [], glifBaru = [];
 for (const id of idsP3) {
   const blok = ambilNaskah(id);
@@ -56,7 +47,6 @@ for (const id of idsP3) {
   }
 }
 
-/* ---------- keunikan dalam batch ---------- */
 tes('10 tema unik dalam batch', new Set(temaBaru).size === 10, temaBaru.join(','));
 tes('10 glif unik dalam batch', new Set(glifBaru).size === 10, glifBaru.join(','));
 tes('40 objek unik dalam batch', new Set(objekBaru).size === 40);
@@ -66,7 +56,6 @@ tes('nama objek tak bentrok dengan seluruh naskah lama', (() => {
   return objekBaru.every(o => !setLama.has(o) || semuaLama.filter(x => x === o).length === 1);
 })());
 
-/* ---------- anti-ramalan pada batch baru ---------- */
 const TERLARANG = ['ramal', 'meramal', 'ramalan', 'numerologi', 'prediksi', 'takdir', 'peruntungan', 'nasib', 'masa depan', 'zodiak', 'horoskop', 'dukun', 'jimat', 'mantra', 'tarot'];
 const teksBatch = idsP3.map(id => ambilNaskah(id) || '').join(' ');
 let bersih = true;
@@ -74,13 +63,12 @@ for (const kata of TERLARANG) if (teksBatch.toLowerCase().includes(kata)) { bers
 tes('batch baru bebas kata terlarang', bersih);
 tes('frasa pelindung "hitungan itu hanya alat" hadir di batch', teksBatch.toLowerCase().includes('hitungan itu hanya alat'));
 
-/* ---------- regresi seluruh naskah ---------- */
 const semuaId = [...cer.matchAll(/'(p\d-\d{3})': \{/g)].map(m => m[1]);
 tes('total naskah = 210', semuaId.length === 210, 'dapat ' + semuaId.length);
 tes('p1 utuh 100', semuaId.filter(i => i.startsWith('p1-')).length === 100);
 tes('p2 utuh 100', semuaId.filter(i => i.startsWith('p2-')).length === 100);
 tes('p3 utuh 10', semuaId.filter(i => i.startsWith('p3-')).length === 10);
-// tiap naskah lama masih punya tugu + Mudah bukan?
+
 let semuaLamaUtuh = true;
 for (const id of semuaId.filter(i => !idsP3.includes(i))) {
   const blok = ambilNaskah(id);
@@ -90,7 +78,6 @@ for (const id of semuaId.filter(i => !idsP3.includes(i))) {
 }
 tes('seluruh 200 naskah lama tetap utuh (tugu + Mudah bukan?)', semuaLamaUtuh);
 
-/* ---------- pintu3-data: 100 judul, 10 penjuru ---------- */
 const judulP3 = [...p3.matchAll(/id: 'p3-(\d{3})', k: (\d+), n: (\d+)/g)];
 tes('pintu3-data memuat 100 judul', judulP3.length === 100, 'dapat ' + judulP3.length);
 tes('pintu3-data: 10 penjuru x 10 nomor urut benar', (() => {

@@ -1,22 +1,9 @@
-/* =========================================================
-   DUNIA AKIOMIDA — Mesin Utama (world-main.js)
-   PRINSIP:
-   - Layar TETAP 480x270: tidak ada kamera, tidak ada geser.
-     camX abadi 0 — karakter mustahil hilang dari pandangan.
-   - Tugas user jelas: gerakkan Akio (bulatan emas) ke pintu wilayah.
-   - Ramah MATA MINUS: daftar wilayah bernomor dengan huruf besar,
-     tombol A- / A+ untuk memperbesar semua tulisan,
-     tombol MASUK besar di mobile.
-   - SYARIAH: tidak ada makhluk hidup — burung & kupu-kupu diganti
-     simbol matematika melayang.
-   ========================================================= */
 (function () {
   'use strict';
 
   const AK = window.AK;
   const { W, H, GROUND } = AK;
 
-  /* ---------- elemen ---------- */
   const layar = document.getElementById('layar');
   const ctx = layar.getContext('2d');
   const chipEl = document.getElementById('chipWilayah');
@@ -35,11 +22,10 @@
     || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   if (adalahSentuh) document.body.classList.add('coarse', 'kontrol-aktif');
 
-  /* ---------- ukuran panggung: dunia utuh selalu muat ---------- */
   let rectCache = null;
   function pasUkuran() {
     const vw = window.innerWidth, vh = window.innerHeight;
-    // landscape: tombol ada di sudut, tak menutupi kanvas tengah — cadangan kecil
+
     const lanskap = vw > vh;
     const cadangan = adalahSentuh ? (lanskap ? 100 : 150) : 26;
     const k = Math.max(0.55, Math.min((vw - 18) / W, (vh - cadangan - 18) / H));
@@ -50,16 +36,15 @@
   window.addEventListener('resize', () => { pasUkuran(); });
   pasUkuran();
 
-  /* ---------- UKURAN TULISAN (mata minus): A- / A+ tersimpan ---------- */
   const LANGKAH_SKALA = [1, 1.15, 1.3, 1.5];
   let idxSkala = 0;
   try {
     const s = parseInt(localStorage.getItem('akio-skala') || '0', 10);
     if (s >= 0 && s < LANGKAH_SKALA.length) idxSkala = s;
-  } catch (e) { /* abaikan */ }
+  } catch (e) {  }
   function terapSkala() {
     document.documentElement.style.setProperty('--skala', LANGKAH_SKALA[idxSkala]);
-    try { localStorage.setItem('akio-skala', String(idxSkala)); } catch (e) { /* abaikan */ }
+    try { localStorage.setItem('akio-skala', String(idxSkala)); } catch (e) {  }
     const min = document.getElementById('btnMin');
     const plus = document.getElementById('btnPlus');
     if (min) min.disabled = idxSkala === 0;
@@ -73,7 +58,6 @@
   });
   terapSkala();
 
-  /* ---------- DAFTAR WILAYAH: nama besar, bisa diketuk untuk pergi ---------- */
   (function bangunLegenda() {
     if (!legendaEl) return;
     let html = '<div class="leg-kepala">'
@@ -104,16 +88,13 @@
     btnLegenda.classList.toggle('tahan');
   });
 
-  /* ---------- latar dibakar sekali; dibakar ulang saat font pixel tiba ---------- */
   let bg = AK.bakeBG();
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => { bg = AK.bakeBG(); }).catch(() => {});
   }
 
-  /* ---------- cahaya gerbang (sprite jadi, nol gradien per frame) ---------- */
   const glow = AK.ZONES.map(z => AK.makeGlow(z.color, 30));
 
-  /* ---------- tokoh ---------- */
   const akio = window.AKJELLY.buatAkio();
   const player = {
     x: 20, y: 249, vx: 0, dir: 1, state: 'diam', walkT: 0, target: null,
@@ -122,14 +103,13 @@
 
   const npcs = AK.NPCS.map((n, i) => ({
     ...n, i, frames: window.AKJELLY.buatNpc(n), ft: Math.random() * 2, fi: 0,
-    fasaT: i * 1.15, k: 0, tampil: false,          // giliran bicara: tak saling menumpuk
+    fasaT: i * 1.15, k: 0, tampil: false,
   }));
 
-  /* ---------- partikel & kehidupan (syariah: hanya benda & simbol) ---------- */
   const awan = [
     { x: 40, y: 26, v: 4.5, s: 1 }, { x: 230, y: 52, v: 3.2, s: 1.3 }, { x: 380, y: 18, v: 5.4, s: 0.8 },
   ];
-  // simbol matematika melayang di langit (pengganti burung)
+
   const simbolLangit = [
     { x: 70, y: 42, g: 'plus', v: 5.2, f: 0 },
     { x: 250, y: 70, g: 'kali', v: 3.4, f: 2.1 },
@@ -139,7 +119,6 @@
   let tDaun = 0, tSalju = 0, tPercik = 0, tKilau = 0, tSimbol = 0;
   const rand = (a, b) => a + Math.random() * (b - a);
 
-  /* ---------- input ---------- */
   const keys = { kiri: false, kanan: false };
 
   addEventListener('keydown', e => {
@@ -168,7 +147,6 @@
   ikatTombol('btnKiri', 'kiri');
   ikatTombol('btnKanan', 'kanan');
 
-  /* ketuk layar: ke pintu, atau ke titik tanah */
   layar.addEventListener('pointerdown', e => {
     e.preventDefault();
     const r = layar.getBoundingClientRect();
@@ -182,7 +160,6 @@
     }
   });
 
-  /* tombol MASUK besar (mobile) — pintu terbuka di dekatmu */
   if (btnMasukPintu) {
     btnMasukPintu.addEventListener('pointerdown', e => {
       e.preventDefault();
@@ -191,7 +168,6 @@
     });
   }
 
-  /* pintu wilayah terbuka terdekat dari posisi Akio (pintu mana pun) */
   function pintuTerdekat() {
     let terbaik = null, terjauh = 1e9;
     for (const z of AK.ZONES) {
@@ -205,7 +181,7 @@
   function ketukPintu(z) {
     if (player.masuk) return;
     if (z.open) {
-      player.target = z.x;                       // berjalan menuju pintu, terserap saat tiba
+      player.target = z.x;
       hilangkanHint();
     } else {
       teks.push({ x: z.x, y: 150, txt: 'SEGERA HADIR!', t: 0, col: '#ffd166' });
@@ -215,7 +191,6 @@
     }
   }
 
-  /* ---------- layar muat gerbang (alur iklan dipertahankan) ---------- */
   const muatEl = document.getElementById('muat');
   const muatJudul = document.getElementById('muatJudul');
   const muatAura = document.getElementById('muatAura');
@@ -235,7 +210,7 @@
     if (!muatSlotTerpasang) {
       const slot = document.createElement('div');
       slot.className = 'ad-slot';
-      muatSlot.appendChild(slot);                // ads.js otomatis menyuntik iklan
+      muatSlot.appendChild(slot);
       muatSlotTerpasang = true;
     }
     muatEl.classList.add('aktif');
@@ -250,20 +225,19 @@
       const z = player.masuk.z;
       player.x = Math.max(12, z.x - 26); player.y = 249;
       player.vx = 0; player.target = null;
-      player.scale = 0.25; player.pop = 1;       // muncul lagi dengan pop halus
+      player.scale = 0.25; player.pop = 1;
       player.masuk = null;
     }
   }
   muatBatal.addEventListener('click', tutupMuatan);
 
-  /* ---------- hint & chip ---------- */
   const hintDasar = adalahSentuh
     ? 'Ketuk pintu bernomor atau daftar wilayah'
     : 'Tekan \u2190 \u2192 untuk berjalan \u00b7 klik pintu wilayah untuk masuk';
   hintEl.textContent = hintDasar;
   let hintHilang = false, hintTimer = null;
   function hilangkanHint() { if (!hintHilang) { hintHilang = true; hintEl.classList.add('pudar'); } }
-  function pesanHint(txt) {                      // pesan sesaat dengan huruf besar (mata minus)
+  function pesanHint(txt) {
     clearTimeout(hintTimer);
     hintEl.textContent = txt;
     hintEl.classList.remove('pudar');
@@ -293,19 +267,17 @@
     }
   }
 
-  /* ---------- pembaruan ---------- */
   const KECEPATAN = 112, MASUK_LAMA = 0.8;
   let diamDiPintu = 0;
 
   function update(dt, t) {
-    // pop kembali dari salah klik
+
     if (player.pop) {
       player.scale = Math.min(1, player.scale + dt * 3);
       if (player.scale >= 1) { player.pop = 0; player.squash = 1; }
     }
     player.squash = Math.max(0, player.squash - dt * 4);
 
-    // sekuen masuk gerbang
     if (player.masuk) {
       const m = player.masuk;
       if (m.fase === 'jalan') {
@@ -319,9 +291,9 @@
         m.t += dt;
         const u = Math.min(1, m.t / MASUK_LAMA);
         const e = u * u * (3 - 2 * u);
-        player.scale = 1 - 0.7 * e;                          // mengecil TETAP terlihat
+        player.scale = 1 - 0.7 * e;
         player.x += (m.z.x - player.x) * Math.min(1, dt * 8);
-        player.y = 249 - 30 * e;                             // naik ke mulut pintu
+        player.y = 249 - 30 * e;
         if (u >= 1) { m.fase = 'selesai'; bukaMuatan(m.z); }
       }
       perbaruiChip();
@@ -331,9 +303,6 @@
 
     gerak(dt);
 
-    // pintu wilayah terbuka (pintu mana pun yang open, terdekat dulu):
-    // masuk bila MENJUJUK pintu secara sengaja, atau berhenti di depannya.
-    // Jalan lewat saja tidak menyerap — pemain bebas menyeberangi dunia.
     const zk = pintuTerdekat();
     const diPintu = zk !== null && Math.abs(player.x - zk.x) < 10;
     if (diPintu && (player.target === zk.x || player.state === 'diam')) {
@@ -348,12 +317,10 @@
       diamDiPintu = 0;
     }
 
-    // tombol MASUK besar muncul saat dekat pintu terbuka (mobile)
     if (btnMasukPintu) {
       btnMasukPintu.classList.toggle('tampil', adalahSentuh && diPintu);
     }
 
-    // NPC: goyangan + giliran bicara
     for (const n of npcs) {
       n.ft += dt; n.fi = Math.floor(n.ft / 1.6) % 2;
       const dekat = Math.abs(player.x - n.x) < 30;
@@ -385,30 +352,27 @@
     }
     if (Math.abs(player.vx) > 6 && !hintHilang) hilangkanHint();
     player.x += player.vx * dt;
-    player.x = Math.max(12, Math.min(468, player.x));        // tak pernah keluar layar
+    player.x = Math.max(12, Math.min(468, player.x));
     player.walkT += Math.abs(player.vx) * dt;
   }
 
-  /* ---------- partikel kehidupan ---------- */
   function updatePartikel(dt, t) {
-    // asap cerobong pegunungan + api unggun kamp
+
     if (Math.random() < dt * 2.2) asap.push({ x: 219 + rand(-1, 1), y: 162, vy: rand(-11, -7), vx: rand(-3, 1), hidup: rand(2.2, 3.4), umur: 0, s: rand(2, 3) });
     if (Math.random() < dt * 1.6) asap.push({ x: 24 + rand(-2, 2), y: 234, vy: rand(-13, -9), vx: rand(-2, 2), hidup: rand(1.6, 2.6), umur: 0, s: rand(1.5, 2.5) });
     for (const s of asap) { s.umur += dt; s.x += s.vx * dt; s.y += s.vy * dt; s.vy *= 1 - dt * 0.2; }
     asap = asap.filter(s => s.umur < s.hidup);
 
-    // percikan api unggun
     tPercik += dt;
     if (tPercik > 0.5) {
       tPercik = 0;
       for (let i = 0; i < 2; i++) percik.push({ x: 24 + rand(-3, 3), y: 240, vx: rand(-9, 9), vy: rand(-34, -20), hidup: rand(0.4, 0.8), umur: 0 });
     }
-    // percikan paron kota bukti
+
     if (Math.random() < dt * 1.4) for (let i = 0; i < 3; i++) percik.push({ x: 304 + rand(-2, 2), y: 242, vx: rand(-14, 14), vy: rand(-30, -14), hidup: rand(0.3, 0.6), umur: 0 });
     for (const s of percik) { s.umur += dt; s.x += s.vx * dt; s.y += s.vy * dt; s.vy += 70 * dt; }
     percik = percik.filter(s => s.umur < s.hidup);
 
-    // daun gugur hutan simbol
     tDaun += dt;
     if (tDaun > 1.1) {
       tDaun = 0;
@@ -417,7 +381,6 @@
     for (const d of daun) { d.hidup += dt; d.f += dt * 2.4; d.y += 14 * dt; d.x += Math.sin(d.f) * 12 * dt; }
     daun = daun.filter(d => d.y < 250);
 
-    // salju puncak riset
     tSalju += dt;
     if (tSalju > 0.4) {
       tSalju = 0;
@@ -426,7 +389,6 @@
     for (const s of salju) { s.f += dt * 2; s.y += 11 * dt; s.x += Math.sin(s.f) * 7 * dt; }
     salju = salju.filter(s => s.y < 252);
 
-    // kilau di setiap pintu wilayah terbuka
     tKilau += dt;
     if (tKilau > 0.55) {
       tKilau = 0;
@@ -437,7 +399,6 @@
     for (const k of kilau) k.umur += dt;
     kilau = kilau.filter(k => k.umur < k.hidup);
 
-    // simbol matematika melayang di hutan simbol (pengganti kupu-kupu)
     tSimbol += dt;
     if (tSimbol > 1.8) {
       tSimbol = 0;
@@ -447,16 +408,13 @@
     for (const s of simbolHutan) { s.umur += dt; s.f += dt; s.y -= 5 * dt; s.x += Math.sin(s.f * 1.4) * 6 * dt; }
     simbolHutan = simbolHutan.filter(s => s.umur < s.hidup);
 
-    // teks melayang
     for (const T of teks) T.t += dt;
     teks = teks.filter(T => T.t < 1.5);
 
-    // awan & simbol langit
     for (const a of awan) { a.x += a.v * dt; if (a.x > 500) a.x = -60; }
     for (const s of simbolLangit) { s.x += s.v * dt; s.f += dt; if (s.x > 495) { s.x = -15; s.y = rand(28, 84); } }
   }
 
-  /* ---------- gambar ---------- */
   function P(x, y, w, h, col) { ctx.fillStyle = col; ctx.fillRect(x | 0, y | 0, w, h); }
   const mini = window.AKJELLY.gambarMini;
 
@@ -471,7 +429,7 @@
     ctx.fillRect((x - w / 2) | 0, (y - 1) | 0, w, 2);
   }
   function gambarApi(t) {
-    P(18, 244, 12, 3, '#6e4522');               // kayu unggun
+    P(18, 244, 12, 3, '#6e4522');
     P(21, 242, 7, 2, '#8a5a30');
     const naik = Math.sin(t * 9) * 1.5;
     P(21, 236 + naik, 6, 6 - naik * 0.5, '#ff6b35');
@@ -484,7 +442,7 @@
     P(301, 247, 7, 2, '#4a5668');
   }
   function gambarTeleskop(t) {
-    const naik = Math.round((Math.sin(t * 0.6) + 1) * 2);   // 0..4 — teleskop menoleh pelan
+    const naik = Math.round((Math.sin(t * 0.6) + 1) * 2);
     for (let i = 0; i < 8; i++) P(433 + i, 151 - Math.round(i * naik / 8), 1, 2, '#3d5f8f');
     P(440 + (naik > 2 ? 0 : 0), 150 - Math.round(7 * naik / 8), 2, 2, '#ffd166');
   }
@@ -496,11 +454,11 @@
     ctx.globalAlpha = 1;
   }
   function gambarPanahTerbuka(t) {
-    // panah memantul di atas setiap pintu wilayah terbuka — tujuan tak mungkin salah
+
     for (const zo of AK.ZONES) {
       if (!zo.open) continue;
       const zx = zo.x, ay = 160 + Math.round(Math.sin(t * 4 + zo.x) * 2);
-      P(zx - 4, ay + 1, 8, 2, '#0e1526');          // bayang panah
+      P(zx - 4, ay + 1, 8, 2, '#0e1526');
       P(zx - 3, ay - 1, 6, 2, '#0e1526');
       P(zx - 3, ay - 2, 6, 2, '#7dffa8');
       P(zx - 2, ay, 4, 2, '#7dffa8');
@@ -516,7 +474,7 @@
     for (const b of baris) terpanjang = Math.max(terpanjang, ctx.measureText(b).width);
     const bw = Math.ceil(terpanjang) + 10, bh = baris.length * 13 + 7;
     const bx = Math.max(2, Math.min(W - bw - 2, n.x - bw / 2));
-    if (bx < kananTerakhir + 6) return kananTerakhir;   // buble lain sedang tampil di dekatnya: tunggu giliran
+    if (bx < kananTerakhir + 6) return kananTerakhir;
     const orbAtas = 224;
     const by = orbAtas - bh - 6;
     P(bx + 1, by, bw - 2, bh, '#fffdf2');
@@ -524,7 +482,7 @@
     ctx.fillStyle = '#2a3757';
     ctx.fillRect(bx, by, bw, 1); ctx.fillRect(bx, by + bh - 1, bw, 1);
     ctx.fillRect(bx, by, 1, bh); ctx.fillRect(bx + bw - 1, by, 1, bh);
-    P(n.x - 2, by + bh, 4, 2, '#fffdf2');       // ekor buble menuju bola-lentera
+    P(n.x - 2, by + bh, 4, 2, '#fffdf2');
     P(n.x - 1, by + bh + 2, 2, 3, '#fffdf2');
     ctx.fillStyle = '#1c2740';
     ctx.textBaseline = 'top';
@@ -548,7 +506,6 @@
   function draw(t) {
     ctx.drawImage(bg, 0, 0);
 
-    // denyut cahaya gerbang
     for (let i = 0; i < AK.ZONES.length; i++) {
       const z = AK.ZONES[i];
       ctx.globalAlpha = 0.42 + 0.22 * Math.sin(t * 2.2 + i * 1.3);
@@ -557,7 +514,7 @@
     }
 
     for (const a of awan) gambarAwan(a);
-    // simbol langit — berkedip lembut (bukan burung, hanya simbol)
+
     for (const s of simbolLangit) {
       ctx.globalAlpha = 0.3 + 0.18 * Math.sin(t * 2 + s.f * 3);
       mini(ctx, s.g, s.x, s.y + Math.sin(t + s.f) * 2, '#fffdf2');
@@ -570,7 +527,6 @@
     gambarKristal(t);
     gambarPanahTerbuka(t);
 
-    // simbol hutan simbol melayang (pengganti kupu-kupu)
     for (const s of simbolHutan) {
       const u = s.umur / s.hidup;
       ctx.globalAlpha = u < 0.2 ? u / 0.2 : u > 0.75 ? (1 - u) / 0.25 : 1;
@@ -578,13 +534,11 @@
       ctx.globalAlpha = 1;
     }
 
-    // penduduk: bola-lentera wilayah (tanpa wajah)
     for (const n of npcs) {
       gambarBayangan(n.x, 247, 9);
       ctx.drawImage(n.frames[n.fi], Math.round(n.x - 8), 224 - (n.fi ? 1 : 0));
     }
 
-    // Akio — bulatan emas murni, selalu terlihat, tak pernah tertelan layar
     gambarBayangan(player.x, player.y + 1, 12 * player.scale);
     const fr = player.masuk || player.pop
       ? akio.idle
@@ -593,7 +547,6 @@
     const sw = 18 * player.scale * (1 + sq), sh = 18 * player.scale * (1 - sq);
     ctx.drawImage(fr, Math.round(player.x - sw / 2), Math.round(player.y - sh), Math.max(2, Math.round(sw)), Math.max(2, Math.round(sh)));
 
-    // partikel
     for (const s of asap) {
       const u = s.umur / s.hidup;
       ctx.globalAlpha = 0.5 * (1 - u);
@@ -615,13 +568,11 @@
       ctx.globalAlpha = 1;
     }
 
-    // buble bicara paling depan — bergantian, tak pernah saling menimpa
     let bubKanan = -999;
     for (const n of npcs) bubKanan = Math.max(bubKanan, gambarBuble(n, bubKanan));
     for (const T of teks) gambarTeksMelayang(T);
   }
 
-  /* ---------- loop ---------- */
   let last = 0;
   function loop(ts) {
     const dt = Math.min(0.05, (ts - last) / 1000 || 0.016);
@@ -633,16 +584,14 @@
   }
   requestAnimationFrame(loop);
 
-  /* ---------- intro ---------- */
   btnMasuk.addEventListener('click', () => {
     introEl.classList.add('pergi');
     setTimeout(() => { if (introEl.parentNode) introEl.parentNode.removeChild(introEl); }, 700);
   });
 
-  /* ---------- API debug (QA) ---------- */
   window.AKDBG = {
     get: () => ({
-      camX: 0,                                   // kamera abadi: tidak ada geser
+      camX: 0,
       px: Math.round(player.x), py: Math.round(player.y),
       vx: Math.round(player.vx), dir: player.dir,
       state: player.state, target: player.target,
@@ -650,6 +599,6 @@
       muatAktif: muatEl.classList.contains('aktif'),
       skala: LANGKAH_SKALA[idxSkala],
     }),
-    ke: x => { player.target = Math.max(12, Math.min(468, x)); },  // QA: perintahkan berjalan
+    ke: x => { player.target = Math.max(12, Math.min(468, x)); },
   };
 })();

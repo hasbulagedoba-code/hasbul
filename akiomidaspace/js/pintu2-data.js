@@ -1,17 +1,6 @@
-/* =========================================================
-   PINTU 2 — HUTAN SIMBOL: DATA 100 JUDUL (pintu2-data.js)
-   Isi dunia Pintu 2: 10 penjuru (kategori) berisi 100 judul.
-   Struktur & helper sama persis dengan pintu1-data.js agar
-   mesin pelajaran.html bisa melayani kedua pintu.
-   Wilayah: bahasa dan tanda — bilangan negatif, faktor,
-   aljabar, persamaan, rasio, sudut, isi ruang, koordinat,
-   statistika, peluang.
-   Syariah: semua contoh netral & muamalah adil.
-   ========================================================= */
 window.P2 = (function () {
   'use strict';
 
-  /* ---------- 10 penjuru hutan ---------- */
   const KATEGORI = [
     { id: 'k1',  nama: 'Bilangan Negatif', label: ['BILANGAN', 'NEGATIF'],
       sub: 'Angka di bawah nol', jumlah: 10,
@@ -55,9 +44,8 @@ window.P2 = (function () {
       ucap: ['Hitung', 'kemungkinannya!'] },
   ];
 
-  /* ---------- 100 judul (k = penjuru 1..10, n = nomor di penjuru) ---------- */
   const TOPIK = [
-    /* --- k1: Bilangan Negatif (10) --- */
+
     { id: 'p2-001', k: 1, n: 1, judul: 'Angka di Bawah Nol',
       teaser: 'Ada angka yang lebih kecil dari nol: −1, −2, −3. Seperti lantai bawah tanah di gedung besar — makin turun, makin dalam.' },
     { id: 'p2-002', k: 1, n: 2, judul: 'Garis Bilangan Dua Arah',
@@ -79,7 +67,6 @@ window.P2 = (function () {
     { id: 'p2-010', k: 1, n: 10, judul: 'Tantangan Lantai Bawah',
       teaser: 'Lift tambang penuh soal: turun berapa lantai, dingin berapa derajat? Selesaikan semua untuk membuka gerbang paling dalam!' },
 
-    /* --- k2: Faktor, FPB & KPK (10) --- */
     { id: 'p2-011', k: 2, n: 1, judul: 'Faktor: Pasangan Pengali',
       teaser: '12 bisa jadi 1×12, 2×6, atau 3×4. Pasangan itu namanya faktor: pembagi yang membuat sisa nol.' },
     { id: 'p2-012', k: 2, n: 2, judul: 'Faktorisasi Prima',
@@ -101,7 +88,6 @@ window.P2 = (function () {
     { id: 'p2-020', k: 2, n: 10, judul: 'Tantangan Detektif Faktor',
       teaser: 'Bilangan mana habis dibagi 3? Mana pasangan koprima? Buktikan ketelitianmu di penjuru paling teliti ini.' },
 
-    /* --- k3: Aljabar Pertama (10) --- */
     { id: 'p2-021', k: 3, n: 1, judul: 'Huruf Pengganti Angka',
       teaser: 'x itu kotak misteri yang menampung bilangan. Begitu isinya ketahuan, kotak dibuka dan jawaban muncul.' },
     { id: 'p2-022', k: 3, n: 2, judul: 'Suku Sejenis Berkumpul',
@@ -123,7 +109,6 @@ window.P2 = (function () {
     { id: 'p2-030', k: 3, n: 10, judul: 'Tantangan Rumus Hutan',
       teaser: 'Temukan rumus barisan, buka kurung bersarang, gabungkan suku. Penjuru aljabar menguji kerapian berpikirmu.' },
 
-    /* --- k4: Persamaan & Pertidaksamaan (10) --- */
     { id: 'p2-031', k: 4, n: 1, judul: 'Timbangan Persamaan',
       teaser: 'x + 3 = 7 adalah timbangan seimbang. Bila sisi kiri berubah, sisi kanan harus ikut agar tetap pas.' },
     { id: 'p2-032', k: 4, n: 2, judul: 'Mencari Nilai x',
@@ -145,7 +130,6 @@ window.P2 = (function () {
     { id: 'p2-040', k: 4, n: 10, judul: 'Tantangan Timbangan Hutan',
       teaser: 'Persamaan bersusun dan pertidaksamaan menantimu. Selesaikan, periksa kembali, dan buka gerbang terakhir.' },
 
-    /* --- k5: Rasio, Skala & Proporsi (10) --- */
     { id: 'p2-041', k: 5, n: 1, judul: 'Rasio: Perbandingan',
       teaser: '2 : 3 dibaca dua banding tiga: perbandingan dua kelompok. Seperti adonan: 2 takaran tepung untuk 3 takaran air.' },
     { id: 'p2-042', k: 5, n: 2, judul: 'Skala Peta',
@@ -167,7 +151,6 @@ window.P2 = (function () {
     { id: 'p2-050', k: 5, n: 10, judul: 'Tantangan Skala Hutan',
       teaser: 'Peta harta karun berskala, resep ganda, harga satuan: buktikan rasiomu jadi jurus paling tajam.' },
 
-    /* --- k6: Sudut & Pythagoras (10) --- */
     { id: 'p2-051', k: 6, n: 1, judul: 'Mengenal Sudut',
       teaser: 'Sudut adalah bukaan antara dua garis yang bertemu: lancip sempit, siku pas 90 derajat, tumpul terbuka lebar.' },
     { id: 'p2-052', k: 6, n: 2, judul: 'Sudut Garis Lurus',
@@ -189,7 +172,6 @@ window.P2 = (function () {
     { id: 'p2-060', k: 6, n: 10, judul: 'Tantangan Sudut Hutan',
       teaser: 'Ukur sudut, buktikan 180 derajat, dan selesaikan segitiga siku-siku. Penjuru geometri menunggu detektif sudut.' },
 
-    /* --- k7: Luas Permukaan & Volume (10) --- */
     { id: 'p2-061', k: 7, n: 1, judul: 'Kubus: Sisi & Isi',
       teaser: 'Kubus punya 6 sisi persegi sama besar. Luas permukaan 6 × sisi × sisi; volumenya sisi × sisi × sisi.' },
     { id: 'p2-062', k: 7, n: 2, judul: 'Balok & Permukaannya',
@@ -211,7 +193,6 @@ window.P2 = (function () {
     { id: 'p2-070', k: 7, n: 10, judul: 'Tantangan Gudang Bentuk',
       teaser: 'Kardus mana yang paling banyak berisi? Susun, ukur, bandingkan — jadilah mandor gudang paling teliti.' },
 
-    /* --- k8: Koordinat & Grafik Pertama (10) --- */
     { id: 'p2-071', k: 8, n: 1, judul: 'Sumbu X & Sumbu Y',
       teaser: 'Dua garis berpotongan di nol: mendatar bernama sumbu x, tegak bernama sumbu y. Kini semua titik punya alamat.' },
     { id: 'p2-072', k: 8, n: 2, judul: 'Membaca Titik (x, y)',
@@ -233,7 +214,6 @@ window.P2 = (function () {
     { id: 'p2-080', k: 8, n: 10, judul: 'Tantangan Alamat Hutan',
       teaser: 'Tandai titik, gambar garis, baca grafik perjalanan. Kuasai sumbu, dan seluruh hutan jadi peta yang ramah.' },
 
-    /* --- k9: Statistika Kecil (10) --- */
     { id: 'p2-081', k: 9, n: 1, judul: 'Data: Kumpulan Angka',
       teaser: 'Data adalah kumpulan angka dari pengamatan: tinggi teman sekelas, cuaca harian. Kumpulan itu menyimpan cerita.' },
     { id: 'p2-082', k: 9, n: 2, judul: 'Mean: Rata-rata',
@@ -255,7 +235,6 @@ window.P2 = (function () {
     { id: 'p2-090', k: 9, n: 10, judul: 'Tantangan Data Hutan',
       teaser: 'Kumpulkan data daun, hitung mean-median-modus, gambar diagramnya. Jadilah peneliti muda di hutan simbol!' },
 
-    /* --- k10: Peluang Dasar (10) --- */
     { id: 'p2-091', k: 10, n: 1, judul: 'Peluang Itu Apa?',
       teaser: 'Peluang menghitung kemungkinan: dari 0 (mustahil) sampai 1 (pasti). Di antaranya terbentang dunia "mungkin".' },
     { id: 'p2-092', k: 10, n: 2, judul: 'Koin: Dua Sisi',
@@ -281,7 +260,7 @@ window.P2 = (function () {
   function topikKategori(k) { return TOPIK.filter(t => t.k === k); }
   function katById(id) { return KATEGORI.find(k => k.id === id) || null; }
   function topikById(id) { return TOPIK.find(t => t.id === id) || null; }
-  function topikLain(id, arah) {                      // judul berikut/sebelumnya dalam penjuru yang sama
+  function topikLain(id, arah) {
     const t = topikById(id);
     if (!t) return null;
     const daftar = topikKategori(t.k);

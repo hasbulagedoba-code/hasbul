@@ -1,12 +1,3 @@
-/* =========================================================
-   PINTU 2 — MESIN DUNIA 100 JUDUL (pintu2-main.js)
-   Hutan Simbol: satu layar tetap 480x270, tanpa kamera.
-   PUSAT: 10 gerbang penjuru. AREA: 4 papan judul per lapisan.
-   Tugas user: gerakkan Akio ke papan judul -> judul dijelaskan,
-   bila mau lanjut -> redirect ke halaman bahasan (pelajaran.html).
-   Mata minus: panel daftar huruf besar, A-/A+, dialog besar.
-   Syariah: penduduk bola-lentera tanpa wajah, isi netral & adil.
-   ========================================================= */
 (function () {
   'use strict';
 
@@ -14,7 +5,6 @@
   const W = S.W, H = S.H, GROUND = S.GROUND;
   const { P, teksPx, lingkaran } = K.gambar;
 
-  /* ---------- elemen ---------- */
   const layar = document.getElementById('layar');
   const ctx = layar.getContext('2d');
   const introEl = document.getElementById('intro');
@@ -37,7 +27,6 @@
     || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   if (adalahSentuh) document.body.classList.add('coarse', 'kontrol-aktif');
 
-  /* ---------- ukuran panggung ---------- */
   function pasUkuran() {
     const vw = window.innerWidth, vh = window.innerHeight;
     const lanskap = vw > vh;
@@ -49,16 +38,15 @@
   window.addEventListener('resize', () => { pasUkuran(); });
   pasUkuran();
 
-  /* ---------- A- / A+ (berbagi setelan dengan Dunia) ---------- */
   const LANGKAH_SKALA = [1, 1.15, 1.3, 1.5];
   let idxSkala = 0;
   try {
     const s = parseInt(localStorage.getItem('akio-skala') || '0', 10);
     if (s >= 0 && s < LANGKAH_SKALA.length) idxSkala = s;
-  } catch (e) { /* abaikan */ }
+  } catch (e) {  }
   function terapSkala() {
     document.documentElement.style.setProperty('--skala', LANGKAH_SKALA[idxSkala]);
-    try { localStorage.setItem('akio-skala', String(idxSkala)); } catch (e) { /* abaikan */ }
+    try { localStorage.setItem('akio-skala', String(idxSkala)); } catch (e) {  }
     const min = document.getElementById('btnMin');
     const plus = document.getElementById('btnPlus');
     if (min) min.disabled = idxSkala === 0;
@@ -72,12 +60,11 @@
   });
   terapSkala();
 
-  /* ---------- kemajuan baca (tersimpan) ---------- */
   function sudah(id) {
     try { return localStorage.getItem('pintu2-baca-' + id) === '1'; } catch (e) { return false; }
   }
   function tandaiBaca(id) {
-    try { localStorage.setItem('pintu2-baca-' + id, '1'); } catch (e) { /* abaikan */ }
+    try { localStorage.setItem('pintu2-baca-' + id, '1'); } catch (e) {  }
   }
   function terbaca(k) {
     return PD.topikKategori(k).filter(t => sudah(t.id)).length;
@@ -86,9 +73,8 @@
     return PD.TOPIK.filter(t => sudah(t.id)).length;
   }
 
-  /* ---------- keadaan dunia ---------- */
-  let layarSkr = { mode: 'pusat' };                  // atau {mode:'area', k, hal}
-  // Masuk langsung ke penjuru tertentu (?k=..&hal=..) — dipakai tombol kembali dari halaman bahasan
+  let layarSkr = { mode: 'pusat' };
+
   try {
     const q = new URLSearchParams(window.location.search);
     const qk = parseInt(q.get('k') || '', 10);
@@ -97,7 +83,7 @@
       const maksHal = Math.ceil(PD.KATEGORI[qk - 1].jumlah / 4) - 1;
       if (qh >= 0 && qh <= maksHal) layarSkr = { mode: 'area', k: qk, hal: qh };
     }
-  } catch (e) { /* abaikan */ }
+  } catch (e) {  }
   const player = { x: 36, y: GROUND, vx: 0, dir: 1, state: 'diam', walkT: 0, target: null, tuju: null, squash: 0 };
 
   function kunciLayar() {
@@ -112,7 +98,6 @@
     return layarSkr.mode === 'area' ? PD.KATEGORI[layarSkr.k - 1] : null;
   }
 
-  /* ---------- objek interaktif layar aktif ---------- */
   function objek() {
     if (layarSkr.mode === 'pusat') {
       const g = [];
@@ -128,10 +113,9 @@
     return o;
   }
 
-  /* ---------- transisi antar layar (pudar, tanpa geser) ---------- */
   const DUR_TRANS = 0.18;
-  let trans = null;                                  // {fase, t, tujuan, masukX, terbuka?}
-  let tungguBuka = null;                             // topic id yg dibuka otomatis usai transisi
+  let trans = null;
+  let tungguBuka = null;
 
   function mulaiTransisi(tujuan, masukX, bukaId) {
     if (trans) return;
@@ -146,7 +130,6 @@
     segarDaftar();
   }
 
-  /* ---------- partikel & kehidupan ---------- */
   const awan = [{ x: 40, y: 22, v: 4.2, s: 1 }, { x: 250, y: 40, v: 3.1, s: 1.3 }];
   const simbolLangit = [
     { x: 90, y: 56, g: '+', v: 4.6, f: 0 },
@@ -156,7 +139,6 @@
   let kilau = [];
   const rand = (a, b) => a + Math.random() * (b - a);
 
-  /* ---------- input ---------- */
   const keys = { kiri: false, kanan: false };
   addEventListener('keydown', e => {
     if (document.body.classList.contains('dlg-buka')) return;
@@ -201,7 +183,6 @@
     }
   });
 
-  /* ---------- menuju objek & aksi ---------- */
   function tujuObject(o) {
     if (trans || document.body.classList.contains('dlg-buka')) return;
     const offset = o.type === 'judul' ? -22 : (o.type === 'gerbang' ? 0 : 0);
@@ -229,14 +210,12 @@
     if (o.type === 'judul') bukaDialog(o.t);
   }
 
-  /* ---------- objek terdekat (tombol aksi besar + Enter) ---------- */
   let nearObj = null;
   aksiBtn.addEventListener('pointerdown', e => {
     e.preventDefault();
     if (nearObj && !trans) lakukan(nearObj);
   });
 
-  /* ---------- dialog judul ---------- */
   let dlg = null;
   function bukaDialog(t) {
     if (dlg || trans) return;
@@ -265,11 +244,10 @@
   btnLanjut.addEventListener('click', () => {
     if (!dlg) return;
     const halT = Math.floor((dlg.n - 1) / 4);
-    // lanjut -> halaman bahasan; bawa asal penjuru agar tombol kembali tak loncat ke pusat kamp
+
     window.location.href = 'pelajaran.html?id=' + dlg.id + '&k=' + dlg.k + '&hal=' + halT;
   });
 
-  /* ---------- panel daftar (mata minus) ---------- */
   function segarDaftar() {
     if (!daftarEl) return;
     let html = '';
@@ -333,12 +311,10 @@
   });
   segarDaftar();
 
-  /* ---------- pembaruan ---------- */
   const KECEPATAN = 108;
   function update(dt) {
     const dlgBuka = document.body.classList.contains('dlg-buka');
 
-    // transisi pudar
     if (trans) {
       aksiBtn.classList.remove('tampil');
       trans.t += dt;
@@ -378,7 +354,6 @@
     player.x = Math.max(14, Math.min(W - 14, player.x + player.vx * dt));
     player.walkT += Math.abs(player.vx) * dt;
 
-    // objek terdekat -> tombol aksi
     nearObj = null;
     let terbaik = 1e9;
     for (const o of objek()) {
@@ -393,7 +368,6 @@
       aksiBtn.classList.remove('tampil');
     }
 
-    // kilau di papan judul yang belum dibaca
     if (layarSkr.mode === 'area') {
       const daftar = daftarStasiun();
       for (let i = 0; i < daftar.length; i++) {
@@ -413,7 +387,6 @@
     for (const s of simbolLangit) { s.x += s.v * dt; s.f += dt; if (s.x > 495) { s.x = -15; s.y = rand(40, 90); } }
   }
 
-  /* ---------- gambar ---------- */
   function gambarAwan(a) {
     const s = a.s;
     P(ctx, a.x, a.y + 4 * s, 26 * s, 6 * s, '#fffdf2');
@@ -428,7 +401,7 @@
     bw = Math.ceil(bw) + 10;
     const bh = baris.length * 13 + 7;
     const bx = Math.max(2, Math.min(W - bw - 2, npcX - bw / 2));
-    const by = GROUND - 10 - 9 - 6 - bh;             // di atas bola penduduk
+    const by = GROUND - 10 - 9 - 6 - bh;
     P(ctx, bx + 1, by, bw - 2, bh, '#fffdf2');
     P(ctx, bx, by + 1, bw, bh - 2, '#fffdf2');
     ctx.fillStyle = '#2a3757';
@@ -443,7 +416,6 @@
   function draw(t) {
     ctx.drawImage(S.bakar(kunciLayar()), 0, 0);
 
-    // denyut cahaya gerbang di pusat
     if (layarSkr.mode === 'pusat') {
       for (let i = 0; i < PD.KATEGORI.length; i++) {
         const kat = PD.KATEGORI[i];
@@ -460,7 +432,6 @@
       ctx.globalAlpha = 1;
     }
 
-    // penduduk bola-lentera + buble sapaan saat didekati
     const npcX = layarSkr.mode === 'pusat' ? 239 : 255;
     const ucap = layarSkr.mode === 'pusat'
       ? ['Pilih jalur,', 'penjelajah!']
@@ -471,7 +442,6 @@
     K.gambar.bolaLentera(ctx, npcX, GROUND - 10, '#4fe3c8', '#0d8a74', glif, t * 2);
     if (dekat && !document.body.classList.contains('dlg-buka')) gambarBuble(npcX, ucap);
 
-    // kilau papan belum dibaca
     for (const kl of kilau) {
       const u = kl.umur / kl.hidup;
       ctx.globalAlpha = 1 - u;
@@ -479,12 +449,10 @@
       ctx.globalAlpha = 1;
     }
 
-    // Akio — bulatan emas murni
     K.gambar.bayangan(ctx, player.x, player.y + 1, 12);
     const fr = player.state === 'jalan' ? Math.floor(player.walkT / 13) % 4 : 0;
     K.gambar.akio(ctx, player.x, player.y, 1, player.squash, player.state === 'jalan' ? fr : 0);
 
-    // transisi pudar
     if (trans) {
       const u = Math.min(1, trans.t / DUR_TRANS);
       ctx.globalAlpha = trans.fase === 'keluar' ? u : 1 - u;
@@ -494,7 +462,6 @@
     }
   }
 
-  /* ---------- loop ---------- */
   let last = 0;
   function loop(ts) {
     const dt = Math.min(0.05, (ts - last) / 1000 || 0.016);
@@ -506,19 +473,16 @@
   }
   requestAnimationFrame(loop);
 
-  /* ---------- latar dibakar ulang saat font pixel tiba ---------- */
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => { S.kosongkan(); segarDaftar(); }).catch(() => { });
   }
 
-  /* ---------- intro & kembali ---------- */
   btnMasuk.addEventListener('click', () => {
     introEl.classList.add('pergi');
     setTimeout(() => { if (introEl.parentNode) introEl.parentNode.removeChild(introEl); }, 700);
   });
   btnDunia.addEventListener('click', () => { window.location.href = 'index.html'; });
 
-  /* ---------- API debug (QA) ---------- */
   window.P2DBG = {
     get: () => ({
       px: Math.round(player.x), state: player.state, target: player.target,

@@ -1,14 +1,6 @@
-/* =========================================================
-   PINTU 1 — KAMP ANGKA: DATA 100 JUDUL (pintu1-data.js)
-   Isi dunia Pintu 1: 10 penjuru (kategori) berisi 100 judul.
-   Judul = sub-judul artikel: papan di dunia + teaser pengantar.
-   Bahasan lengkap muncul saat pengunjung mau lanjut (redirect).
-   Syariah: semua contoh netral & muamalah adil.
-   ========================================================= */
 window.P1 = (function () {
   'use strict';
 
-  /* ---------- 10 penjuru kamp ---------- */
   const KATEGORI = [
     { id: 'k1',  nama: 'Cerita & Sejarah Ringan', label: ['CERITA', 'SEJARAH'],
       sub: 'Dari mana matematika bermula', jumlah: 10,
@@ -52,9 +44,8 @@ window.P1 = (function () {
       ucap: ['Tebak-tebakan', 'asah otak!'] },
   ];
 
-  /* ---------- 100 judul (k = penjuru 1..10, n = nomor di penjuru) ---------- */
   const TOPIK = [
-    /* --- k1: Cerita & Sejarah Ringan (10) --- */
+
     { id: 'p1-001', k: 1, n: 1, judul: 'Matematika Itu Apa Sih?',
       teaser: 'Matematika itu ilmu mencari pola. Seperti mengenali langkah kaki sendiri: begitu polanya ketahuan, semua soal jadi terasa gampang.' },
     { id: 'p1-002', k: 1, n: 2, judul: 'Berhitung Zaman Batu',
@@ -76,7 +67,6 @@ window.P1 = (function () {
     { id: 'p1-010', k: 1, n: 10, judul: 'Matematika Teknologi',
       teaser: 'Dari roket sampai robot: semuanya terbang berkat hitungan. Teknologi hebat dimulai dari angka yang kamu pelajari hari ini.' },
 
-    /* --- k2: Mengenal Angka (10) --- */
     { id: 'p1-011', k: 2, n: 1, judul: 'Kenalan 0 Sampai 9',
       teaser: 'Sepuluh sahabat kecil yang bisa menulis semua angka di alam semesta. Cukup sepuluh, tidak kurang satu pun!' },
     { id: 'p1-012', k: 2, n: 2, judul: 'Berhitung Maju 1-10',
@@ -98,7 +88,6 @@ window.P1 = (function () {
     { id: 'p1-020', k: 2, n: 10, judul: 'Pola Angka Naik',
       teaser: '+2, +2, +2: 2, 4, 6, 8. Angka suka berbaris dengan aturan. Tugasmu: temukan aturannya!' },
 
-    /* --- k3: Simbol & Bahasa Matematika (10) --- */
     { id: 'p1-021', k: 3, n: 1, judul: 'Tanda Tambah (+)',
       teaser: 'Tanda penggabung: permen di tangan kiri bertemu permen di tangan kanan. Plus itu ajakan berkumpul!' },
     { id: 'p1-022', k: 3, n: 2, judul: 'Tanda Kurang (−)',
@@ -120,7 +109,6 @@ window.P1 = (function () {
     { id: 'p1-030', k: 3, n: 10, judul: 'Membaca Kalimat Matematika',
       teaser: '2 + 3 = 5 itu kalimat lengkap: ada ceritanya, ada jawabannya. Matematika juga bisa dibaca seperti buku cerita!' },
 
-    /* --- k4: Penjumlahan & Pengurangan (12) --- */
     { id: 'p1-031', k: 4, n: 1, judul: 'Penjumlahan Pertama',
       teaser: '2 kelereng bertemu 3 kelereng jadi 5. Menggabungkan adalah dasar dari semua hitungan di dunia.' },
     { id: 'p1-032', k: 4, n: 2, judul: 'Berhitung dengan Jari',
@@ -146,7 +134,6 @@ window.P1 = (function () {
     { id: 'p1-042', k: 4, n: 12, judul: 'Tantangan Tambah-Kurang',
       teaser: 'Angka hilang: 4 + ? = 9. Kini kamu detektif yang mencari pelaku kaburnya angka!' },
 
-    /* --- k5: Perkalian & Pembagian (12) --- */
     { id: 'p1-043', k: 5, n: 1, judul: 'Kali Itu Tambah Cepat',
       teaser: '3×5 itu 5+5+5. Perkalian cuma penjumlahan yang diangkat jadi prajurit: lebih cepat, hasil sama persis.' },
     { id: 'p1-044', k: 5, n: 2, judul: 'Tabel Perkalian 2',
@@ -172,7 +159,6 @@ window.P1 = (function () {
     { id: 'p1-054', k: 5, n: 12, judul: 'Tantangan Kali-Bagi',
       teaser: 'Kali dan bagi saling membongkar rahasia: 6×4=24, maka 24÷6=4. Mereka pasangan setia seumur hidup!' },
 
-    /* --- k6: Pecahan & Potongan Kue (12) --- */
     { id: 'p1-055', k: 6, n: 1, judul: 'Setengah Itu 1/2',
       teaser: 'Satu kue dibagi dua sama besar: tiap bagian bernilai setengah. Adil itu indah sejak potongan pertama.' },
     { id: 'p1-056', k: 6, n: 2, judul: 'Seperempat Itu 1/4',
@@ -198,7 +184,6 @@ window.P1 = (function () {
     { id: 'p1-066', k: 6, n: 12, judul: 'Tantangan Potongan Kue',
       teaser: 'Kue dibagi 8, dimakan 3, lalu sisanya dibagi dua... siap? Kuis pecahan paling menggoda di seluruh kamp!' },
 
-    /* --- k7: Desimal, Persen & Uang (10) --- */
     { id: 'p1-067', k: 7, n: 1, judul: 'Kenalan Angka Koma',
       teaser: '0,5 itu sahabat dekat 1/2. Angka di belakang koma adalah potongan kecil dari satu utuh.' },
     { id: 'p1-068', k: 7, n: 2, judul: 'Persepuluhan 0,1',
@@ -220,7 +205,6 @@ window.P1 = (function () {
     { id: 'p1-076', k: 7, n: 10, judul: 'Menabung Seribu',
       teaser: 'Menyisihkan sedikit tiap hari: 500+500+500 jadi 1.500. Tabungan adalah matematika yang sabar dan menolong.' },
 
-    /* --- k8: Bentuk Pertama: Keliling & Luas (10) --- */
     { id: 'p1-077', k: 8, n: 1, judul: 'Dunia Bentuk Datar',
       teaser: 'Kotak, lingkaran, segitiga: bentuk-bentuk itu menempel di mana-mana. Jendela, piring, roda sepeda!' },
     { id: 'p1-078', k: 8, n: 2, judul: 'Garis, Sisi & Sudut',
@@ -242,7 +226,6 @@ window.P1 = (function () {
     { id: 'p1-086', k: 8, n: 10, judul: 'Detektif Bentuk di Sekitar',
       teaser: 'Misi: temukan 5 bentuk di kamarmu malam ini! Setelah pelajaran ini, duniamu tampak penuh matematika.' },
 
-    /* --- k9: Ukuran, Waktu & Takaran (6) --- */
     { id: 'p1-087', k: 9, n: 1, judul: 'Panjang: cm & m',
       teaser: 'Jari kelingking kira-kira 1 cm, satu langkah besar kira-kira 1 m. Penggaris adalah alat ukur paling setia.' },
     { id: 'p1-088', k: 9, n: 2, judul: 'Berat: gram & kg',
@@ -256,7 +239,6 @@ window.P1 = (function () {
     { id: 'p1-092', k: 9, n: 6, judul: 'Panas & Dingin: Suhu',
       teaser: 'Derajat mengukur panas dan dingin: air membeku di 0°, mendidih di 100°. Termometer itu jam-nya suhu.' },
 
-    /* --- k10: Teka-Teki & Pola (8) --- */
     { id: 'p1-093', k: 10, n: 1, judul: 'Pola Berulang',
       teaser: 'Merah-biru-merah-biru... pola itu aturan yang berulang. Menemukan pola = menemukan jalan pintas berpikir.' },
     { id: 'p1-094', k: 10, n: 2, judul: 'Angka yang Hilang',
@@ -278,7 +260,7 @@ window.P1 = (function () {
   function topikKategori(k) { return TOPIK.filter(t => t.k === k); }
   function katById(id) { return KATEGORI.find(k => k.id === id) || null; }
   function topikById(id) { return TOPIK.find(t => t.id === id) || null; }
-  function topikLain(id, arah) {                      // judul berikut/sebelumnya dalam penjuru yang sama
+  function topikLain(id, arah) {
     const t = topikById(id);
     if (!t) return null;
     const daftar = topikKategori(t.k);

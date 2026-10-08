@@ -1,4 +1,3 @@
-/* Validasi programatik PINTU 3 k3 — Eksponen & Logaritma (p3-021..030) */
 const fs = require('fs');
 const path = '/home/z/my-project/hasbul-repo/akiomidaspace/js/';
 const cerita = fs.readFileSync(path + 'cerita-data.js', 'utf8');
@@ -16,12 +15,11 @@ function cek(nama, kondisi, detail) {
 const ID_BARU = [];
 for (let i = 21; i <= 30; i++) ID_BARU.push('p3-' + String(i).padStart(3, '0'));
 
-/* ===== 1. struktur tiap naskah baru ===== */
 function blokNaskah(src, id) {
   const awal = src.indexOf("'" + id + "': {");
   if (awal < 0) return null;
   const next = src.indexOf("\n    '", awal + 10);
-  const tutup = src.indexOf("\n  };", awal + 10);   // penutup PETA (blok terakhir)
+  const tutup = src.indexOf("\n  };", awal + 10);
   let batas = next > 0 ? next : src.length;
   if (tutup > 0 && tutup < batas) batas = tutup;
   return src.slice(awal, batas);
@@ -92,12 +90,11 @@ for (const g of glifBaru) cek('glif "' + g + '" tepat-1 global', glifSemua.filte
 const objSemua = [...cerita.matchAll(/objek:\s*'([^']*)'/g)].map(m => m[1]);
 for (const o of OBJ) cek('objek "' + o + '" tepat-1 global', objSemua.filter(x => x === o).length === 1, objSemua.filter(x => x === o).length + 'x');
 
-/* ===== 6. anti-ramalan seluruh 230 naskah ===== */
 global.window = {};
 require(path + 'pintu1-data.js');
 require(path + 'pintu2-data.js');
 require(path + 'pintu3-data.js');
-/* ambil CERITA dengan eval ringan: cerita-data adalah IIFE window.CERITA */
+
 const src2 = fs.readFileSync(path + 'cerita-data.js', 'utf8');
 eval(src2);
 const CERITA = window.CERITA;
@@ -124,7 +121,6 @@ for (const tx of teksSemua) {
 }
 cek('anti-ramalan seluruh naskah: nol pelanggaran', temuan === 0, temuan + ' temuan');
 
-/* ===== 7. kata kunci matematika di teks baru ===== */
 const angkaKunci = {
   'p3-021': ['2 × 2 × 2 = 8', '16', '100'],
   'p3-022': ['0,1', '256', '25,6', '439.804', '384.400'],
@@ -143,7 +139,6 @@ for (const id of ID_BARU) {
 }
 cek("'hitungan itu hanya alat' hadir di batch", /hitungan itu hanya alat/i.test(cerita.slice(cerita.indexOf("'p3-021'"), cerita.indexOf("'p3-030'") + 3000)));
 
-/* ===== 8. regresi seluruh 230 naskah: tugu utuh ===== */
 const blokIds = [...cerita.matchAll(/'(p[123]-\d{3})':\s*\{/g)].map(m => m[1]);
 cek('total naskah 230', blokIds.length === 230, blokIds.length);
 for (const id of blokIds) {

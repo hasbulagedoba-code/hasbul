@@ -1,15 +1,8 @@
-/* =========================================================
-   KAMP ANGKA — Dunia Hidup (kamp-scene.js)
-   Satu layar tetap 480x270, pixel art, tanpa kamera.
-   Penduduk = bola-lentera bermotif angka (syariah: bukan
-   makhluk hidup — tanpa mata, mulut, hidung, tangan).
-   ========================================================= */
 window.KAMP = (function () {
   'use strict';
 
   const W = 480, H = 270, GROUND = 246;
 
-  /* ---------- alat gambar pixel ---------- */
   function P(c, x, y, w, h, col) { c.fillStyle = col; c.fillRect(x | 0, y | 0, w, h); }
   function lingkaran(c, cx, cy, r, col) {
     for (let y = -r; y <= r; y++) {
@@ -40,19 +33,16 @@ window.KAMP = (function () {
     c.fillText(txt, Math.round(x - c.measureText(txt).width / 2), Math.round(y));
   }
 
-  /* ---------- latar dibakar sekali ---------- */
   function bakeBG() {
     const cv = document.createElement('canvas');
     cv.width = W; cv.height = H;
     const c = cv.getContext('2d');
 
-    // langit pita pixel
     P(c, 0, 0, W, 46, '#9fdcf5');
     P(c, 0, 46, W, 42, '#8fd3f0');
     P(c, 0, 88, W, 40, '#a5e0f5');
     P(c, 0, 128, W, 24, '#b7e8f8');
 
-    // matahari pixel + rafia sinar
     lingkaran(c, 434, 30, 12, '#ffe9a3');
     lingkaran(c, 434, 30, 9, '#ffd166');
     for (let i = 0; i < 8; i++) {
@@ -60,27 +50,23 @@ window.KAMP = (function () {
       P(c, 434 + Math.round(Math.cos(a) * 15), 30 + Math.round(Math.sin(a) * 15), 2, 2, '#ffe9a3');
     }
 
-    // pegunungan dua lapis
     gunung(c, 74, 84, 58, 186, '#a9c8e2');
     gunung(c, 214, 74, 70, 186, '#98bcd9');
     gunung(c, 396, 88, 62, 186, '#a9c8e2');
-    P(c, 0, 150, W, 36, '#93bfd8');          // kabut kaki gunung
+    P(c, 0, 150, W, 36, '#93bfd8');
 
-    // hutan tipis di kejauhan
     for (let i = 0; i < 14; i++) {
       const tx = 8 + i * 34, ty = 176 + (i % 3) * 2;
       lingkaran(c, tx, ty, 5, '#2f7a44');
       lingkaran(c, tx - 3, ty + 2, 3, '#2a6d3c');
     }
 
-    // tanah rumput
     P(c, 0, 182, W, 88, '#7ec850');
     for (let i = 0; i < 60; i++) {
       const gx = (i * 53) % W, gy = 186 + (i * 29) % 48;
       P(c, gx, gy, 2, 1, i % 2 ? '#6fb844' : '#8fd15c');
     }
 
-    // jalan setapak tanah
     P(c, 0, 236, W, 24, '#d9b877');
     P(c, 0, 236, W, 2, '#c2a05e');
     P(c, 0, 258, W, 2, '#c2a05e');
@@ -89,7 +75,6 @@ window.KAMP = (function () {
       P(c, px2, py2, 3, 2, i % 3 ? '#c9a763' : '#e3c58c');
     }
 
-    // papan nama KAMP ANGKA
     P(c, 46, 196, 4, 42, '#7a5230');
     P(c, 76, 196, 4, 42, '#7a5230');
     P(c, 34, 168, 58, 32, '#8a5f38');
@@ -98,20 +83,17 @@ window.KAMP = (function () {
     teksPx(c, 'KAMP', 63, 174, '#ffe9a3');
     teksPx(c, 'ANGKA', 63, 186, '#fffdf2');
 
-    // tumpuk kayu bakar (dekat tenda bangunan)
     for (let r = 0; r < 3; r++)
       for (let i = 0; i < 4 - r; i++)
         P(c, 210 + i * 7 + r * 3, 234 - r * 4, 7, 4, r % 2 ? '#8a5a30' : '#7a4e28');
     P(c, 213, 234, 2, 4, '#5f3d1e');
 
-    // tumpuk batu jalan
     for (let i = 0; i < 5; i++) {
       const sx = 352 + (i % 3) * 7, sy = 240 - (i % 2) * 4;
       lingkaran(c, sx, sy, 3, '#9aa6b8');
       P(c, sx - 1, sy - 2, 2, 1, '#c3ccda');
     }
 
-    // tenda selesai (kanan) — hunian penduduk
     for (let y = 0; y <= 34; y++) {
       const ww = Math.round(y * 0.85);
       P(c, 334 - ww, 210 + y, ww * 2 + 1, 1, '#c98a4b');
@@ -119,19 +101,17 @@ window.KAMP = (function () {
     P(c, 334, 214, 1, 32, '#a96f35');
     P(c, 328, 238, 12, 8, '#5f4426');
     P(c, 331, 240, 6, 6, '#3a2a18');
-    P(c, 302, 244, 64, 2, '#b58a4a');        // alas tenda
+    P(c, 302, 244, 64, 2, '#b58a4a');
 
-    // gudang peti + tiang bendera
     P(c, 392, 224, 22, 16, '#8a5f38');
     P(c, 392, 224, 22, 3, '#a3744a');
     P(c, 394, 231, 18, 2, '#6b4a2c');
     P(c, 396, 240, 18, 14, '#7a5230');
     P(c, 396, 240, 18, 3, '#8f6238');
     P(c, 404, 246, 4, 4, '#5f4426');
-    P(c, 434, 190, 3, 56, '#8a5f38');        // tiang bendera
+    P(c, 434, 190, 3, 56, '#8a5f38');
     lingkaran(c, 435, 188, 2, '#ffd166');
 
-    // pohon pendamping
     pohon(c, 16, 238, 1.3);
     pohon(c, 130, 234, 1);
     pohon(c, 312, 234, 1.1);
@@ -140,7 +120,6 @@ window.KAMP = (function () {
     return cv;
   }
 
-  /* ---------- gambar dinamis per-frame ---------- */
   function apiUnggun(c, t) {
     P(c, 136, 242, 16, 3, '#6e4522');
     P(c, 140, 240, 9, 2, '#8a5a30');
@@ -158,10 +137,9 @@ window.KAMP = (function () {
     teksPx(c, '1', 444, 192, '#fffdf2', 7);
   }
 
-  /* tenda pembangunan: tiang 0..3, selesai = atap berdiri */
   function tendaBangun(c, tiang, selesai, t) {
-    P(c, 236, 244, 64, 2, '#b58a4a');                    // alas
-    // rangka dasar (samar, selalu ada)
+    P(c, 236, 244, 64, 2, '#b58a4a');
+
     P(c, 240, 240, 3, 6, '#8a6a45');
     P(c, 293, 240, 3, 6, '#8a6a45');
     if (selesai) {
@@ -174,28 +152,26 @@ window.KAMP = (function () {
       P(c, 265, 240, 6, 6, '#3a2a18');
       teksPx(c, '1', 268, 220, '#fff3cf', 7);
     } else {
-      // tiang berdiri sesuai kemajuan
+
       const px3 = [250, 286, 268];
       for (let i = 0; i < tiang; i++) {
         const tg = 10 + i * 6;
         P(c, px3[i] - 1, 244 - tg, 3, tg, '#c98a4b');
         P(c, px3[i] - 1, 244 - tg, 1, tg, '#a96f35');
       }
-      if (tiang > 0) P(c, 248, 244 - 16, 42, 2, '#8a6a45');   // balok atas miring
+      if (tiang > 0) P(c, 248, 244 - 16, 42, 2, '#8a6a45');
       teksPx(c, 'BUTUH TIANG', 268, 250 - 30, '#e8eef8', 6);
     }
   }
 
-  /* bola-lentera penduduk (syariah: bulat murni + glif angka) */
   function bolaLentera(c, x, y, warna, gelap, glif, bob) {
     const yy = y - Math.round(Math.abs(Math.sin(bob)) * 2);
     lingkaran(c, x, yy, 9, gelap);
     lingkaran(c, x - 1, yy - 2, 8, warna);
-    P(c, x - 4, yy - 6, 3, 2, '#ffffff');                 // kilap cahaya
+    P(c, x - 4, yy - 6, 3, 2, '#ffffff');
     teksPx(c, glif, x, yy - 4, '#fffdf2', 8);
   }
 
-  /* Akio: bulatan emas murni, tanpa wajah */
   function akio(c, x, y, scale, sq, jalan) {
     const r = Math.max(2, Math.round(9 * scale));
     const yy = y - Math.round((jalan ? Math.abs(Math.sin(jalan)) * 2 : 0));

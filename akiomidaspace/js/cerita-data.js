@@ -1,24 +1,8 @@
-/* =========================================================
-   PETA CERITA — naskah living-art tiap judul (cerita-data.js)
-   - pelajaran.html?id=... membuka dunia cerita bergaya sama:
-     satu layar tetap, jejak stasiun bercahaya, Akio berjalan.
-   - Tiap judul punya rasa sendiri: tema latar (tema), penduduk
-     pemandu (npc: glif + sapaan), dan stasiun berobjek unik —
-     supaya tiap petualangan terasa beda, bukan mesin cetak.
-   - PETA[id].stasiun = urutan tahap; tahap terakhir (akhir:true)
-     adalah penutup cerita berisi payoff "Owalah, mudah bukan?".
-   - Judul yang belum punya naskah otomatis mendapat dunia
-     fallback (teaser + catatan segera hadir).
-   - Syariah: cerita netral, muamalah adil, penduduk dunia =
-     bola-lentera tanpa wajah; tiada makhluk berwajah.
-   ========================================================= */
 window.CERITA = (function () {
   'use strict';
 
   const PETA = {
-    /* ============ PINTU 2 — HUTAN SIMBOL ============ */
 
-    /* ----- p2-001 · Angka di Bawah Nol — gerbang tambang dengan lift keranjang ----- */
     'p2-001': {
       tema: 'tambang',
       npc: { glif: '-1', ucap: ['Makin turun,', 'makin kecil!'] },
@@ -46,7 +30,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-002 · Garis Bilangan Dua Arah — jembatan kayu dengan tiang nol ----- */
     'p2-002': {
       tema: 'jembatan',
       npc: { glif: '0', ucap: ['Nol di tengah,', 'dua arah!'] },
@@ -74,7 +57,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-003 · Suhu di Bawah Nol — gudang es dengan dua termometer ----- */
     'p2-003': {
       tema: 'kutub',
       npc: { glif: '°', ucap: ['Makin dingin,', 'makin turun!'] },
@@ -102,7 +84,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-004 · Utang & Saldo — kios pasar dengan buku catatan jujur ----- */
     'p2-004': {
       tema: 'kios',
       npc: { glif: 'Rp', ucap: ['Catatan jujur,', 'muamalah adil!'] },
@@ -130,7 +111,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-005 · Membandingkan Negatif — jurang berkabut dengan tiang kedalaman ----- */
     'p2-005': {
       tema: 'jurang',
       npc: { glif: '-8', ucap: ['Makin dalam,', 'makin kecil!'] },
@@ -158,7 +138,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-006 · Jalan Maju & Mundur — dermaga dengan garis air nol ----- */
     'p2-006': {
       tema: 'pelabuhan',
       npc: { glif: '-2', ucap: ['Naik turun', 'dermaga!'] },
@@ -186,7 +165,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-007 · Kurang yang Membalik — terowongan dengan dua pintu minus ----- */
     'p2-007': {
       tema: 'terowongan',
       npc: { glif: '+5', ucap: ['Minus ketemu', 'minus!'] },
@@ -214,7 +192,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-008 · Dua Balikan Jadi Positif — papan arah, tangga pola, dua cermin ----- */
     'p2-008': {
       tema: 'balik',
       npc: { glif: '6', ucap: ['Dua balikan', 'kembali!'] },
@@ -242,7 +219,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-009 · Aturan Tanda Pembagian — meja sortir kurir dua arah ----- */
     'p2-009': {
       tema: 'kurir',
       npc: { glif: '÷', ucap: ['Tanda sama,', 'satu hasil!'] },
@@ -270,7 +246,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-010 · Tantangan Lantai Bawah — menara lift tambang lima misi ----- */
     'p2-010': {
       tema: 'lift',
       npc: { glif: '!', ucap: ['Semua jurus,', 'satu misi!'] },
@@ -297,7 +272,7 @@ window.CERITA = (function () {
         },
       ],
     },
-    /* ----- p2-011 · Faktor: Pasangan Pengali — pelataran ubin hutan ----- */
+
     'p2-011': {
       tema: 'pelataran',
       npc: { glif: '3x4', ucap: ['Pasangan pengali,', 'hasil tetap sama!'] },
@@ -325,7 +300,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-012 · Faktorisasi Prima — kuari batu hutan ----- */
     'p2-012': {
       tema: 'kuari',
       npc: { glif: '2', ucap: ['Pecah sampai', 'bata prima!'] },
@@ -353,7 +327,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-013 · FPB — stan bungkusan hadiah ----- */
     'p2-013': {
       tema: 'bungkusan',
       npc: { glif: '6', ucap: ['Dibagi rata,', 'tanpa sisa!'] },
@@ -381,7 +354,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-014 · KPK — pesta lampion malam hutan ----- */
     'p2-014': {
       tema: 'pestaLampu',
       npc: { glif: '12', ucap: ['Nyalanya', 'bertemu!'] },
@@ -409,7 +381,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-015 · Jurus Tabel Prima — paviliun buku tua ----- */
     'p2-015': {
       tema: 'bukuTua',
       npc: { glif: '1', ucap: ['Turunkan,', 'bagi lagi!'] },
@@ -437,7 +408,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-016 · FPB dari Faktorisasi — pondok kartu prima ----- */
     'p2-016': {
       tema: 'pondokKartu',
       npc: { glif: '3', ucap: ['Ambil yang', 'sama saja!'] },
@@ -465,7 +435,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-017 · KPK dari Faktorisasi — galeri barisan prima ----- */
     'p2-017': {
       tema: 'galeri',
       npc: { glif: '36', ucap: ['Semua prima,', 'pangkat atas!'] },
@@ -493,7 +462,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-018 · Menyederhanakan Pecahan — tanur roti hutan ----- */
     'p2-018': {
       tema: 'tanur',
       npc: { glif: '2/3', ucap: ['Bagi FPB,', 'jadi rapi!'] },
@@ -521,7 +489,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-019 · Samakan Penyebut — titian batu dua pulau ----- */
     'p2-019': {
       tema: 'titianBatu',
       npc: { glif: '12', ucap: ['Penyebut sama,', 'tenang!'] },
@@ -549,7 +516,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-020 · Tantangan Detektif Faktor — kantor pohon raksasa ----- */
     'p2-020': {
       tema: 'kantorPohon',
       npc: { glif: '?', ucap: ['Lima kasus,', 'satu lup!'] },
@@ -577,7 +543,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-021 · Huruf Pengganti Angka — kantor pos surat tersegel ----- */
     'p2-021': {
       tema: 'posRahasia',
       npc: { glif: 'x', ucap: ['Si x itu', 'kotak misteri!'] },
@@ -605,7 +570,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-022 · Suku Sejenis Berkumpul — kebun apel senja ----- */
     'p2-022': {
       tema: 'kebunApel',
       npc: { glif: '5x', ucap: ['Apel dengan apel,', 'jeruk dengan jeruk!'] },
@@ -633,7 +597,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-023 · Mengali Bentuk Aljabar — gudang palet kotak ----- */
     'p2-023': {
       tema: 'gudangTumpuk',
       npc: { glif: '6x', ucap: ['Kali semuanya', 'sekaligus!'] },
@@ -661,7 +624,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-024 · Membuka Kurung — rumah kaca kuncup ----- */
     'p2-024': {
       tema: 'kacaKuncup',
       npc: { glif: '2(', ucap: ['Sapa semua', 'di dalam kurung!'] },
@@ -689,7 +651,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-025 · Menyisipkan Nilai — bengkel mesin stempel ----- */
     'p2-025': {
       tema: 'mesinStempel',
       npc: { glif: 'x=4', ucap: ['Ganti huruf,', 'lalu hitung!'] },
@@ -717,7 +678,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-026 · Merapikan Bentuk Panjang — teras kamar senja ----- */
     'p2-026': {
       tema: 'kamarRapi',
       npc: { glif: '8x', ucap: ['Kumpulkan', 'yang sejenis!'] },
@@ -745,7 +705,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-027 · Pola Jadi Rumus — tangga kunang-kunang malam ----- */
     'p2-027': {
       tema: 'kunangTangga',
       npc: { glif: '4n', ucap: ['Naik empat', 'tiap langkah!'] },
@@ -773,7 +732,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-028 · Koefisien & Konstanta — tenda pendaki senja ----- */
     'p2-028': {
       tema: 'tendaPendaki',
       npc: { glif: '3x', ucap: ['Yang menempel', 'koefisien namanya!'] },
@@ -801,7 +759,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-029 · Membaca Bentuk Aljabar — ladang bunga pagi ----- */
     'p2-029': {
       tema: 'ladangBunga',
       npc: { glif: '2a', ucap: ['Bentuk', 'punya cerita!'] },
@@ -829,7 +786,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-030 · Tantangan Rumus Hutan — menara jaga malam ----- */
     'p2-030': {
       tema: 'menaraTantang',
       npc: { glif: '?', ucap: ['Lima misi', 'di menara!'] },
@@ -857,7 +813,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-031 · Timbangan Persamaan — pasar senja dua mangkuk ----- */
     'p2-031': {
       tema: 'pasarSenja',
       npc: { glif: 'x', ucap: ['Dua sisi', 'harus pas!'] },
@@ -885,7 +840,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-032 · Mencari Nilai x — dermaga ikan fajar ----- */
     'p2-032': {
       tema: 'dermagaIkan',
       npc: { glif: '4', ucap: ['Lepas tiga', 'dari dua sisi!'] },
@@ -913,7 +867,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-033 · Kali & Bagi pada x — kandang ayam pagi ----- */
     'p2-033': {
       tema: 'kandangPagi',
       npc: { glif: '5', ucap: ['Dua kandang,', 'sama isinya!'] },
@@ -941,7 +894,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-034 · Persamaan Dua Langkah — toko roti sore ----- */
     'p2-034': {
       tema: 'tokoRoti',
       npc: { glif: '11', ucap: ['Kurangi dulu,', 'baru bagi!'] },
@@ -969,7 +921,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-035 · x di Dua Sisi — taman jungkat-jungkit siang ----- */
     'p2-035': {
       tema: 'tamanJungkit',
       npc: { glif: '3x', ucap: ['Kumpulkan x', 'di satu sisi!'] },
@@ -997,7 +948,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-036 · Memeriksa Jawaban — meja lampu malam ----- */
     'p2-036': {
       tema: 'mejaKoreksi',
       npc: { glif: '=', ucap: ['Cek ulang,', 'baru sahih!'] },
@@ -1025,7 +975,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-037 · Lebih dari & Kurang dari — gerbang wahana siang ----- */
     'p2-037': {
       tema: 'gerbangWahana',
       npc: { glif: '>', ucap: ['Rahang terbuka', 'ke yang besar!'] },
@@ -1053,7 +1002,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-038 · Garis Pertidaksamaan — landasan lampu malam ----- */
     'p2-038': {
       tema: 'landasanLampu',
       npc: { glif: 'x>3', ucap: ['Panah menyala', 'ke kanan!'] },
@@ -1081,7 +1029,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-039 · Pertidaksamaan Dua Langkah — kios es sore ----- */
     'p2-039': {
       tema: 'kiosEs',
       npc: { glif: '<', ucap: ['Kurangi dulu,', 'panah setia!'] },
@@ -1109,7 +1056,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-040 · Tantangan Timbangan Hutan — balai timbangan malam ----- */
     'p2-040': {
       tema: 'balaiTimbangan',
       npc: { glif: '!', ucap: ['Lima misi', 'terakhir!'] },
@@ -1137,7 +1083,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-041 · Rasio: Perbandingan — dapur jus mangga senja ----- */
     'p2-041': {
       tema: 'dapurJus',
       npc: { glif: '2:3', ucap: ['Dua banding', 'tiga!'] },
@@ -1165,7 +1110,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-042 · Skala Peta — menara pandang siang ----- */
     'p2-042': {
       tema: 'menaraPeta',
       npc: { glif: '1000', ucap: ['Peta kecil,', 'dunia besar!'] },
@@ -1193,7 +1137,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-043 · Harga Satuan — kios permen pagi ----- */
     'p2-043': {
       tema: 'kiosPermen',
       npc: { glif: '500', ucap: ['Satu permen', 'berapa?'] },
@@ -1221,7 +1164,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-044 · Proporsi Tetap Setia — dapur kue ulang tahun malam ----- */
     'p2-044': {
       tema: 'dapurKue',
       npc: { glif: '4:6', ucap: ['Gandakan', 'semuanya!'] },
@@ -1249,7 +1191,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-045 · Kecepatan & Waktu — lintasan lari siang ----- */
     'p2-045': {
       tema: 'lintasanLari',
       npc: { glif: '60', ucap: ['Tempo setia', 'tiap menit!'] },
@@ -1277,7 +1218,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-046 · Rasio Bertemu Persen — kios donat sore ----- */
     'p2-046': {
       tema: 'kotakDonat',
       npc: { glif: '75%', ucap: ['Tiga bahasa', 'satu rasa!'] },
@@ -1305,7 +1245,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-047 · Skala Miniatur — toko mainan sore ----- */
     'p2-047': {
       tema: 'tokoMiniatur',
       npc: { glif: '1:24', ucap: ['Kali 24,', 'jadi raksasa!'] },
@@ -1333,7 +1272,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-048 · Berbalik Nilai — kerja bakti gali sumur pagi ----- */
     'p2-048': {
       tema: 'sumurDesa',
       npc: { glif: '24', ucap: ['Makin banyak,', 'makin cepat!'] },
@@ -1361,7 +1299,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-049 · Resep & Takaran — warung kelontong malam ----- */
     'p2-049': {
       tema: 'dapurWarung',
       npc: { glif: '8', ucap: ['Semua ikut', 'digandakan!'] },
@@ -1389,7 +1326,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-050 · Tantangan Skala Hutan — gua peta karun malam ----- */
     'p2-050': {
       tema: 'petaKarun',
       npc: { glif: '5', ucap: ['Lima segel', 'menunggu!'] },
@@ -1417,7 +1353,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-051 · Mengenal Sudut — gerbang benteng fajar ----- */
     'p2-051': {
       tema: 'gerbangSiku',
       npc: { glif: '90', ucap: ['Bukaan pintu', 'ada ukurannya!'] },
@@ -1445,7 +1380,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-052 · Sudut Garis Lurus — jembatan siang ----- */
     'p2-052': {
       tema: 'jembatanRata',
       npc: { glif: '70', ucap: ['Selalu berdua', 'berjumlah 180!'] },
@@ -1473,7 +1407,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-053 · Sudut Bertemu di Titik — bukit kincir siang ----- */
     'p2-053': {
       tema: 'putaranKincir',
       npc: { glif: '360', ucap: ['Satu putaran', 'penuh 360!'] },
@@ -1501,7 +1434,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-054 · Rahasia Segitiga — meja kertas malam ----- */
     'p2-054': {
       tema: 'mejaKertas',
       npc: { glif: '180', ucap: ['Robek lalu', 'buktikan!'] },
@@ -1529,7 +1461,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-055 · Segiempat & Sudutnya — rumah jendela senja ----- */
     'p2-055': {
       tema: 'jendelaRumah',
       npc: { glif: '4x90', ucap: ['Dua segitiga', 'bersandar!'] },
@@ -1557,7 +1488,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-056 · Garis Sejajar Terpotong — rel kereta pagi ----- */
     'p2-056': {
       tema: 'relKereta',
       npc: { glif: '=Z', ucap: ['Sudut kembar', 'di rel!'] },
@@ -1585,7 +1515,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-057 · Teorema Pythagoras — lantai ubin siang ----- */
     'p2-057': {
       tema: 'lantaiUbin',
       npc: { glif: '25', ucap: ['Ubin miring', 'menyimpan rahasia!'] },
@@ -1613,7 +1542,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-058 · Segitiga Andalan 3-4-5 — bengkel meja siang ----- */
     'p2-058': {
       tema: 'bengkelMeja',
       npc: { glif: '3 4 5', ucap: ['Meja goyang?', 'pasang palang!'] },
@@ -1641,7 +1569,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-059 · Mencari Sisi yang Hilang — tangga dinding malam ----- */
     'p2-059': {
       tema: 'dindingTangga',
       npc: { glif: '6-8-10', ucap: ['Tangga, dinding,', 'tanah!'] },
@@ -1669,7 +1596,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-060 · Tantangan Sudut Hutan — balai geometri malam ----- */
     'p2-060': {
       tema: 'balaiGeometri',
       npc: { glif: '45', ucap: ['Lima misi', 'menantimu!'] },
@@ -1697,7 +1623,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-061 · Kubus: Sisi & Isi — siang bengkel kado, enam kartu persegi ----- */
     'p2-061': {
       tema: 'mejaKado',
       npc: { glif: '54', ucap: ['Enam kartu,', 'lengkap semua!'] },
@@ -1725,7 +1650,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-062 · Balok & Permukaannya — pagi lantai bengkel, kardus jadi jaring ----- */
     'p2-062': {
       tema: 'lantaiJaring',
       npc: { glif: '88', ucap: ['Tiga pasang', 'kembar!'] },
@@ -1753,7 +1677,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-063 · Volume Balok — sore dapur, laci kotak susu dua lapis ----- */
     'p2-063': {
       tema: 'dapurSusun',
       npc: { glif: '48', ucap: ['Susun lapis', 'demi lapis!'] },
@@ -1781,7 +1704,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-064 · Prisma Segitiga — senja kaki bukit, atap rumah kartu diseret ----- */
     'p2-064': {
       tema: 'atapPrisma',
       npc: { glif: '120', ucap: ['Atap rumah', 'punya isi!'] },
@@ -1809,7 +1731,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-065 · Tabung: Si Kaleng — siang kantin, label kaleng terbentang ----- */
     'p2-065': {
       tema: 'rakKaleng',
       npc: { glif: '44', ucap: ['Benangnya', 'melingkar!'] },
@@ -1837,7 +1758,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-066 · Luas Selimut Tabung — malam bengkel, kertas digulung jadi tabung ----- */
     'p2-066': {
       tema: 'bengkelGulung',
       npc: { glif: '440', ucap: ['Gulung dan', 'ukur!'] },
@@ -1865,7 +1785,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-067 · Kenalan Kerucut & Bola — pagi bukit pasir, tiga tuangan jadi satu ----- */
     'p2-067': {
       tema: 'bukitPasir',
       npc: { glif: 'x3', ucap: ['Tiga cangkir', 'sama satu!'] },
@@ -1893,7 +1812,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-068 · Liter & Sentimeter Kubik — siang meja ukur, kubus bening sepuluh senti ----- */
     'p2-068': {
       tema: 'mejaLiter',
       npc: { glif: '1L', ucap: ['Seribu kubus', 'satu liter!'] },
@@ -1921,7 +1839,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-069 · Mengukur Isi Benda Nyata — senja toko ikan, akuarium-ember-botol ----- */
     'p2-069': {
       tema: 'tokoAkuarium',
       npc: { glif: '60L', ucap: ['Ukur dulu,', 'hitung kemudian!'] },
@@ -1949,7 +1866,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-070 · Tantangan Gudang Bentuk — malam gudang, lima misi mandor ----- */
     'p2-070': {
       tema: 'gudangKardus',
       npc: { glif: '27', ucap: ['Lima misi', 'gudang!'] },
@@ -1977,7 +1893,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-071 · Sumbu X & Sumbu Y — pagi lapangan persimpangan patok nol ----- */
     'p2-071': {
       tema: 'pertigaanNol',
       npc: { glif: 'x,y', ucap: ['Dua jalan,', 'satu titik!'] },
@@ -2005,7 +1920,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-072 · Membaca Titik (x, y) — siang halaman engkle berkotak ----- */
     'p2-072': {
       tema: 'tanggaTitik',
       npc: { glif: '(3,2)', ucap: ['X dulu,', 'Y kemudian!'] },
@@ -2033,7 +1947,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-073 · Empat Daerah Kuadran — sore alun-alun empat pojok ----- */
     'p2-073': {
       tema: 'bazarEmpatPojok',
       npc: { glif: '(-,+)', ucap: ['Empat daerah,', 'satu alun-alun!'] },
@@ -2061,7 +1974,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-074 · Menggambar Titik — malam galeri papan hitam ----- */
     'p2-074': {
       tema: 'galeriTitik',
       npc: { glif: '(2,5)', ucap: ['Tempel', 'di alamatnya!'] },
@@ -2089,7 +2001,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-075 · Garis dari Tabel — pagi meja arsip benang ----- */
     'p2-075': {
       tema: 'arsipBenang',
       npc: { glif: 'y=2x', ucap: ['Tabel tertib,', 'garis lurus!'] },
@@ -2117,7 +2028,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-076 · Kemiringan Garis — siang dua tangga tanjakan ----- */
     'p2-076': {
       tema: 'jalanTanjak',
       npc: { glif: '2/1', ucap: ['Naik dua,', 'maju satu!'] },
@@ -2145,7 +2055,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-077 · Grafik Perjalanan — malam pos jalan papan jadwal ----- */
     'p2-077': {
       tema: 'papanPerjalanan',
       npc: { glif: 'km', ucap: ['Grafik', 'bercerita!'] },
@@ -2173,7 +2082,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-078 · Titik Potong Sumbu — senja gerbang awal jalan ----- */
     'p2-078': {
       tema: 'gerbangAwal',
       npc: { glif: 'x=0', ucap: ['Semua cerita', 'mulai di sini!'] },
@@ -2201,7 +2109,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-079 · Peta Harta Karun — pagi taman dijaring tali ----- */
     'p2-079': {
       tema: 'tamanBenderaX',
       npc: { glif: '(5,3)', ucap: ['Maju lima,', 'naik tiga!'] },
@@ -2229,7 +2136,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-080 · Tantangan Alamat Hutan — malam menara lima lampion ----- */
     'p2-080': {
       tema: 'menaraSinyal',
       npc: { glif: '5 misi', ucap: ['Lima lampion', 'menyala!'] },
@@ -2257,7 +2163,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-081 · Data: Kumpulan Angka — pagi kandang burung pengamatan ----- */
     'p2-081': {
       tema: 'kandangData',
       npc: { glif: '7 angka', ucap: ['Kumpulan angka', 'punya cerita!'] },
@@ -2285,7 +2190,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-082 · Mean: Rata-rata — siang meja dapur gelas air ----- */
     'p2-082': {
       tema: 'mejaGelasRata',
       npc: { glif: '12:3', ucap: ['Bagi sama rata', 'untuk semua!'] },
@@ -2313,7 +2217,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-083 · Median: Nilai Tengah — sore halaman batu susun ----- */
     'p2-083': {
       tema: 'susunBatuSore',
       npc: { glif: 'tengah', ucap: ['Nilai tengah', 'tahan sentak!'] },
@@ -2341,7 +2244,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-084 · Modus: Paling Sering Muncul — siang rak sandal ----- */
     'p2-084': {
       tema: 'rakSandalSiang',
       npc: { glif: '5 kali', ucap: ['Paling sering', 'itulah juara!'] },
@@ -2369,7 +2271,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-085 · Diagram Batang — pagi lapangan panen tongkat ----- */
     'p2-085': {
       tema: 'lapanganBatang',
       npc: { glif: '6-3-9', ucap: ['Tinggi rendah', 'langsung terbaca!'] },
@@ -2397,7 +2298,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-086 · Diagram Garis — sore meja suhu piknik ----- */
     'p2-086': {
       tema: 'mejaSuhuSore',
       npc: { glif: '20-28', ucap: ['Naik turun', 'bercerita!'] },
@@ -2425,7 +2325,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-087 · Diagram Lingkaran — malam meja kue pesta ----- */
     'p2-087': {
       tema: 'mejaKueMalam',
       npc: { glif: '40%', ucap: ['Lingkaran penuh', 'porsinya semua!'] },
@@ -2453,7 +2352,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-088 · Membaca Tabel — pagi gerai buah pasar ----- */
     'p2-088': {
       tema: 'geraiTabelPasar',
       npc: { glif: '4x3', ucap: ['Baris kolom', 'data rapi!'] },
@@ -2481,7 +2379,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-089 · Rentang Data — siang dua ladang bersebelahan ----- */
     'p2-089': {
       tema: 'duaLadangRentang',
       npc: { glif: '13-1', ucap: ['Rata sama,', 'rentang beda!'] },
@@ -2509,7 +2406,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-090 · Tantangan Data Hutan — malam balai riset lima misi ----- */
     'p2-090': {
       tema: 'balaiRisetMalam',
       npc: { glif: '30', ucap: ['Lima misi', 'satu data!'] },
@@ -2541,7 +2437,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-091 · Peluang Itu Apa? — pagi gerbang garis 0-1 ----- */
     'p2-091': {
       tema: 'gerbangKemungkinan',
       npc: { glif: '0-1', ucap: ['Dari nol ke satu,', 'semua mungkin!'] },
@@ -2569,7 +2464,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-092 · Koin: Dua Sisi — siang lapangan bola lempar koin ----- */
     'p2-092': {
       tema: 'lapanganKoin',
       npc: { glif: 'A/G', ucap: ['Dua sisi,', 'sama berkuasa!'] },
@@ -2597,7 +2491,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-093 · Dadu: Enam Kemungkinan — malam papan permainan keluarga ----- */
     'p2-093': {
       tema: 'mejaUlarTangga',
       npc: { glif: '1/6', ucap: ['Enam sisi,', 'sama setia!'] },
@@ -2625,7 +2518,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-094 · Pasti & Mustahil — fajar puncak bukit ----- */
     'p2-094': {
       tema: 'puncakPasti',
       npc: { glif: '0 1', ucap: ['Ujung nol,', 'ujung satu!'] },
@@ -2653,7 +2545,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-095 · Roda Putar Peluang — senja festival roda warna ----- */
     'p2-095': {
       tema: 'festivalRoda',
       npc: { glif: '3/4', ucap: ['Irisan lebar,', 'sering terpilih!'] },
@@ -2681,7 +2572,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-096 · Kantong Kelereng — pagi kios mainan ----- */
     'p2-096': {
       tema: 'kiosKelereng',
       npc: { glif: '3M1B', ucap: ['Tiga merah,', 'satu biru!'] },
@@ -2709,7 +2599,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-097 · Peluang sebagai Pecahan — siang kelas hutan ----- */
     'p2-097': {
       tema: 'kelasPecahan',
       npc: { glif: '=1', ucap: ['Semuanya berjumlah', 'tepat satu!'] },
@@ -2737,7 +2626,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-098 · Mendaftar Kemungkinan — senja teras dua koin ----- */
     'p2-098': {
       tema: 'terasDuaKoin',
       npc: { glif: 'A-G', ucap: ['Daftar dulu,', 'hitung kemudian!'] },
@@ -2765,7 +2653,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-099 · Peluang di Sekitar Kita — sore teras langit mendung ----- */
     'p2-099': {
       tema: 'terasMendung',
       npc: { glif: '4/5', ucap: ['Baca tanda,', 'siap payung!'] },
@@ -2793,7 +2680,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p2-100 · Tantangan Peluang Hutan — malam balai juara lima misi ----- */
     'p2-100': {
       tema: 'balaiPeluang',
       npc: { glif: '10/10', ucap: ['Lima misi', 'penjuru pamungkas!'] },
@@ -2825,7 +2711,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
         {
@@ -2855,7 +2740,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-002 · Berhitung Zaman Batu — senja di padang gembala ----- */
     'p1-002': {
       tema: 'senja',
       npc: { glif: '1', ucap: ['Satu batu,', 'satu domba!'] },
@@ -2883,7 +2767,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-003 · Kisah Al-Khawarizmi — malam di Baitul Hikmah ----- */
     'p1-003': {
       tema: 'malam',
       npc: { glif: 'A', ucap: ['Langkah rapi,', 'hasil rapi!'] },
@@ -2911,7 +2794,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-004 · Si Nol, Sang Pahlawan Kecil — senja ungu penuh angka ----- */
     'p1-004': {
       tema: 'ungu',
       npc: { glif: '0', ucap: ['Nol itu', 'berjasa!'] },
@@ -2939,7 +2821,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-005 · Piramida & Tali 3-4-5 — gurun terik, langit kuning ----- */
     'p1-005': {
       tema: 'gurun',
       npc: { glif: '3', ucap: ['Tali 3-4-5,', 'sudut tegak!'] },
@@ -2967,7 +2848,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-006 · Angka Romawi yang Aneh — kota batu berkabut ----- */
     'p1-006': {
       tema: 'kota',
       npc: { glif: 'X', ucap: ['I, II, III...', 'capek ya!'] },
@@ -2995,7 +2875,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-007 · Abakus, Kalkulator Kuno — ruang kayu hangat ----- */
     'p1-007': {
       tema: 'kayu',
       npc: { glif: '+', ucap: ['Geser butir,', 'hitung cepat!'] },
@@ -3023,7 +2902,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-008 · Kisah Pi yang Tak Selesai — malam penuh lingkaran ----- */
     'p1-008': {
       tema: 'malam2',
       npc: { glif: '3', ucap: ['3,14', 'terus terus!'] },
@@ -3051,7 +2929,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-009 · Timbangan Pasar & Kejujuran — pasar siang ramai ----- */
     'p1-009': {
       tema: 'pasar',
       npc: { glif: '=', ucap: ['Timbang jujur,', 'hati tenang!'] },
@@ -3079,7 +2956,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-010 · Matematika Teknologi — malam peluncuran antariksa ----- */
     'p1-010': {
       tema: 'future',
       npc: { glif: '?', ucap: ['Teknologi', 'menantimu!'] },
@@ -3107,7 +2983,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-011 · Kenalan 0 Sampai 9 — pagi lembut di Kampung Angka ----- */
     'p1-011': {
       tema: 'kampung',
       npc: { glif: '9', ucap: ['Sepuluh sahabat,', 'cukup semuanya!'] },
@@ -3135,7 +3010,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-012 · Berhitung Maju 1-10 — fajar di Gunung Tangga ----- */
     'p1-012': {
       tema: 'tangga',
       npc: { glif: '2', ucap: ['Satu langkah,', 'naik satu!'] },
@@ -3163,7 +3037,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-013 · Berhitung Mundur 10-0 — fajar bukit peluncuran ----- */
     'p1-013': {
       tema: 'fajar',
       npc: { glif: '!', ucap: ['Sepuluh...', 'nol, terbang!'] },
@@ -3191,7 +3064,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-014 · Nilai Tempat: Puluhan — siang pelabuhan kapal ----- */
     'p1-014': {
       tema: 'kapal',
       npc: { glif: 'K', ucap: ['Pindah kursi,', 'kuasa naik!'] },
@@ -3219,7 +3091,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-015 · Ratusan & Ribuan — malam panggung tirai merah ----- */
     'p1-015': {
       tema: 'panggung',
       npc: { glif: '*', ucap: ['Naik baris,', 'besar 10 kali!'] },
@@ -3247,7 +3118,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-016 · Angka Genap Berpasangan — siang halaman jemuran ----- */
     'p1-016': {
       tema: 'jemur',
       npc: { glif: '4', ucap: ['Berpasangan', 'rapi!'] },
@@ -3275,7 +3145,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-017 · Angka Ganjil Sisa Satu — sore taman lampion ----- */
     'p1-017': {
       tema: 'taman',
       npc: { glif: '5', ucap: ['Sisa satu,', 'tetap seru!'] },
@@ -3303,7 +3172,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-018 · Membandingkan Angka — siang toko permen ----- */
     'p1-018': {
       tema: 'permen',
       npc: { glif: '>', ucap: ['Mulut buka,', 'arah banyak!'] },
@@ -3331,7 +3199,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-019 · Urutan: Pertama & Kedua — siang lapangan lomba ----- */
     'p1-019': {
       tema: 'lomba',
       npc: { glif: '1', ucap: ['Juara itu', 'posisi!'] },
@@ -3359,7 +3226,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-020 · Pola Angka Naik — malam taman batu & denting air ----- */
     'p1-020': {
       tema: 'pola',
       npc: { glif: '+', ucap: ['Temukan', 'aturannya!'] },
@@ -3387,7 +3253,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-021 · Tanda Tambah (+) — padang siang, dua jalan bertemu ----- */
     'p1-021': {
       tema: 'plus',
       npc: { glif: 'T', ucap: ['Gabung jadi', 'satu!'] },
@@ -3415,7 +3280,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-022 · Tanda Kurang (−) — peron keberangkatan senja ----- */
     'p1-022': {
       tema: 'peron',
       npc: { glif: '-', ucap: ['Berkurang,', 'jangan sedih!'] },
@@ -3443,7 +3307,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-023 · Tanda Kali (×) — lapangan parade siang ----- */
     'p1-023': {
       tema: 'parade',
       npc: { glif: 'x', ucap: ['Baris rapi,', 'hitung kilat!'] },
@@ -3471,7 +3334,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-024 · Tanda Bagi (÷) — ruang makan siang hangat ----- */
     'p1-024': {
       tema: 'meja',
       npc: { glif: ':', ucap: ['Bagi rata,', 'hati tenang!'] },
@@ -3499,7 +3361,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-025 · Tanda Sama Dengan (=) — ruang timbangan pagi biru ----- */
     'p1-025': {
       tema: 'setara',
       npc: { glif: 'S', ucap: ['Kiri kanan,', 'harus setara!'] },
@@ -3527,7 +3388,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-026 · Lebih Besar & Kecil (> <) — padang tanduk siang ----- */
     'p1-026': {
       tema: 'tanduk',
       npc: { glif: '<', ucap: ['Mulutnya', 'ke yang besar!'] },
@@ -3555,7 +3415,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-027 · Tanda Kurung ( ) — desa sore dua rumah ----- */
     'p1-027': {
       tema: 'desa',
       npc: { glif: '(', ucap: ['Dalam dulu,', 'baru di luar!'] },
@@ -3583,7 +3442,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-028 · Tanda Koma Desimal — toko kue malam hangat ----- */
     'p1-028': {
       tema: 'kue',
       npc: { glif: ',', ucap: ['Utuh dulu,', 'lalu kepingan!'] },
@@ -3611,7 +3469,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-029 · Simbol Tak Hingga (∞) — bukit malam bintang lebat ----- */
     'p1-029': {
       tema: 'malamdalam',
       npc: { glif: '8', ucap: ['Tanpa ujung,', 'tanpa dinding!'] },
@@ -3639,7 +3496,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-030 · Membaca Kalimat Matematika — perpustakaan malam ----- */
     'p1-030': {
       tema: 'perpus',
       npc: { glif: 'B', ucap: ['Baca pelan,', 'paham tuntas!'] },
@@ -3667,7 +3523,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-031 · Penjumlahan Pertama — pagi lingkar pasir kelereng ----- */
     'p1-031': {
       tema: 'lingkar',
       npc: { glif: '5', ucap: ['Dua dan tiga', 'jadi lima!'] },
@@ -3695,7 +3550,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-032 · Berhitung dengan Jari — ruang kelas pagi ----- */
     'p1-032': {
       tema: 'kelas',
       npc: { glif: 'J', ucap: ['Jari siap', 'menghitung!'] },
@@ -3723,7 +3577,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-033 · Menjumlah Lewat 10 — gudang senja, kotak sepuluh ----- */
     'p1-033': {
       tema: 'gudang',
       npc: { glif: '8', ucap: ['Isi dulu sampai', 'sepuluh!'] },
@@ -3751,7 +3604,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-034 · Penjumlahan Bersusun — meja tulis malam berlampu ----- */
     'p1-034': {
       tema: 'tulis',
       npc: { glif: '2', ucap: ['Satuan di bawah', 'satuan!'] },
@@ -3779,7 +3631,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-035 · Menyimpan ke Puluhan — fajar pos hitung dua kotak ----- */
     'p1-035': {
       tema: 'menara',
       npc: { glif: '9', ucap: ['Titipan rapi,', 'hitungan amanah!'] },
@@ -3807,7 +3658,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-036 · Pengurangan Pertama — sore piknik alas tenun ----- */
     'p1-036': {
       tema: 'piknik',
       npc: { glif: 'k', ucap: ['Lima kue,', 'sisa tiga!'] },
@@ -3835,7 +3685,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-037 · Pengurangan Bersusun — malam kantor hitung lampu minyak ----- */
     'p1-037': {
       tema: 'kantor',
       npc: { glif: 'L', ucap: ['Susun rapi,', 'kurang tertib!'] },
@@ -3863,7 +3712,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-038 · Teknik Meminjam — sore kampung tetangga ----- */
     'p1-038': {
       tema: 'tetangga',
       npc: { glif: 'M', ucap: ['Pinjam satu,', 'kembalikan!'] },
@@ -3891,7 +3739,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-039 · Keluarga Angka — pagi teras kayu empat kartu ----- */
     'p1-039': {
       tema: 'teras',
       npc: { glif: 'F', ucap: ['Satu keluarga,', 'empat kalimat!'] },
@@ -3919,7 +3766,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-040 · Soal Cerita Tambah — siang bukit angin layang-layang ----- */
     'p1-040': {
       tema: 'layang',
       npc: { glif: '6', ucap: ['Empat plus dua', 'jadi enam!'] },
@@ -3947,7 +3793,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-041 · Soal Cerita Kurang — sore halaman bangku berbagi ----- */
     'p1-041': {
       tema: 'berbagi',
       npc: { glif: '7', ucap: ['Tujuh permen,', 'tiga pergi!'] },
@@ -3975,7 +3820,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-042 · Tantangan Tambah-Kurang — malam kabut papan misteri ----- */
     'p1-042': {
       tema: 'misteri',
       npc: { glif: '?', ucap: ['Siapa angka', 'yang hilang?'] },
@@ -4003,7 +3847,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-043 · Kali Itu Tambah Cepat — fajar padang latihan berbaris ----- */
     'p1-043': {
       tema: 'barisan',
       npc: { glif: 'C', ucap: ['Kali itu', 'jurus cepat!'] },
@@ -4031,7 +3874,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-044 · Tabel Perkalian 2 — malam jalan lentera sepasang ----- */
     'p1-044': {
       tema: 'pasangan',
       npc: { glif: 'D', ucap: ['Lompat dua-dua,', 'selalu genap!'] },
@@ -4059,7 +3901,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-045 · Tabel Perkalian 5 — sore taman bunga kelopak lima ----- */
     'p1-045': {
       tema: 'lima',
       npc: { glif: 'V', ucap: ['Lima demi lima!', 'Berakhir 5 atau 0!'] },
@@ -4087,7 +3928,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-046 · Tabel Perkalian 10 — malam stasiun kereta barang ----- */
     'p1-046': {
       tema: 'stasiun',
       npc: { glif: 'O', ucap: ['Nol di belakang,', 'puluhan meluncur!'] },
@@ -4115,7 +3955,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-047 · Tabel Perkalian 3 & 4 — pagi bengkel kayu berjendela ----- */
     'p1-047': {
       tema: 'bengkel',
       npc: { glif: 'G', ucap: ['Tangga tiga &', 'tangga empat!'] },
@@ -4143,7 +3982,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-048 · Tabel Perkalian 6-9 — senja tebing jalur pendakian ----- */
     'p1-048': {
       tema: 'tebing',
       npc: { glif: 'H', ucap: ['Makin tinggi,', 'makin kuat!'] },
@@ -4171,7 +4009,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-049 · Trik Perkalian 9 — malam kemah api unggun ----- */
     'p1-049': {
       tema: 'kemah',
       npc: { glif: 'N', ucap: ['Jari tahu', 'rahasia 9!'] },
@@ -4199,7 +4036,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-050 · Perkalian Bersusun — pagi ruang belajar terang ----- */
     'p1-050': {
       tema: 'terang',
       npc: { glif: 'R', ucap: ['Satuan dulu,', 'puluhan kemudian!'] },
@@ -4227,7 +4063,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-051 · Bagi Itu Membagi Rata — siang halaman bazar kanopi ----- */
     'p1-051': {
       tema: 'bazar',
       npc: { glif: 'b', ucap: ['Bagi sama rata,', 'semua senang!'] },
@@ -4255,7 +4090,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-052 · Pembagian dengan Sisa — senja warung kue lampu gantung ----- */
     'p1-052': {
       tema: 'warung',
       npc: { glif: 'w', ucap: ['Sisa satu?', 'Bukan masalah!'] },
@@ -4283,7 +4117,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-053 · Pembagian Bersusun — malam lorong tangga lampu menyala ----- */
     'p1-053': {
       tema: 'lorong',
       npc: { glif: 'P', ucap: ['Turunkan', 'satu per satu!'] },
@@ -4311,7 +4144,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-054 · Tantangan Kali-Bagi — malam arena obor turnamen ----- */
     'p1-054': {
       tema: 'arena',
       npc: { glif: 'U', ucap: ['Kali dan bagi,', 'pasangan setia!'] },
@@ -4339,7 +4171,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-055 · Setengah Itu 1/2 — siang dapur keluarga ----- */
     'p1-055': {
       tema: 'dapur',
       npc: { glif: 'f', ucap: ['Setengah itu', 'dua sama besar!'] },
@@ -4367,7 +4198,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-056 · Seperempat Itu 1/4 — sore pesta ulang tahun ----- */
     'p1-056': {
       tema: 'ultah',
       npc: { glif: 'e', ucap: ['Empat potongan', 'sama besar!'] },
@@ -4395,7 +4225,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-057 · Pembilang & Penyebut — malam ruang buku resep ----- */
     'p1-057': {
       tema: 'resep',
       npc: { glif: 'p', ucap: ['Atas diambil,', 'bawah dibagi!'] },
@@ -4423,7 +4252,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-058 · Keluarga Pecahan 1/n — pagi meja teh roti ----- */
     'p1-058': {
       tema: 'teh',
       npc: { glif: '/', ucap: ['Makin dibagi,', 'makin kecil!'] },
@@ -4451,7 +4279,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-059 · Pecahan Senilai — siang meja kue kembar ----- */
     'p1-059': {
       tema: 'kembar',
       npc: { glif: 'E', ucap: ['Rupa beda,', 'ukuran sama!'] },
@@ -4479,7 +4306,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-060 · Membandingkan Pecahan — siang ladang kakao ----- */
     'p1-060': {
       tema: 'cokelat',
       npc: { glif: 'c', ucap: ['Awas jebak', 'angka besar!'] },
@@ -4507,7 +4333,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-061 · Menjumlah Pecahan Senama — senja nampan kue bulat ----- */
     'p1-061': {
       tema: 'nampan',
       npc: { glif: 'a', ucap: ['Senama boleh', 'digabung!'] },
@@ -4535,7 +4360,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-062 · Kurang Pecahan Senama — pagi kantin sekolah ----- */
     'p1-062': {
       tema: 'kantin',
       npc: { glif: 'm', ucap: ['Ambil satu,', 'sisanya jelas!'] },
@@ -4563,7 +4387,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-063 · Pecahan Campuran — malam meja saji keluarga ----- */
     'p1-063': {
       tema: 'saji',
       npc: { glif: 'q', ucap: ['Utuh plus', 'setengah!'] },
@@ -4591,7 +4414,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-064 · Bagian dari Banyak — sore tikar bermain ----- */
     'p1-064': {
       tema: 'tikar',
       npc: { glif: 'h', ucap: ['Setengah dari', 'sepuluh itu lima!'] },
@@ -4619,7 +4441,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-065 · Menggambar Pecahan — malam meja gambar ----- */
     'p1-065': {
       tema: 'kertas',
       npc: { glif: 'g', ucap: ['Warnai dua', 'dari empat!'] },
@@ -4647,7 +4468,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-066 · Tantangan Potongan Kue — malam gelanggang kuis ----- */
     'p1-066': {
       tema: 'gelanggang',
       npc: { glif: 'Z', ucap: ['Empat teka', 'pecahan!'] },
@@ -4675,7 +4495,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-067 · Kenalan Angka Koma — siang warung es, gelas ukur ----- */
     'p1-067': {
       tema: 'es',
       npc: { glif: '0,5', ucap: ['Utuh dulu,', 'kepingan kemudian!'] },
@@ -4703,7 +4522,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-068 · Persepuluhan 0,1 — pagi kandang sepuluh bilik ----- */
     'p1-068': {
       tema: 'kandang',
       npc: { glif: '0,1', ucap: ['Satu bilik,', 'satu persepuluh!'] },
@@ -4731,7 +4549,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-069 · Desimal & Pecahan Saudara — sore taman dua gerbang ----- */
     'p1-069': {
       tema: 'gerbangDua',
       npc: { glif: '=', ucap: ['Dua nama,', 'satu arti!'] },
@@ -4759,7 +4576,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-070 · Membandingkan Desimal — malam panggung juri ----- */
     'p1-070': {
       tema: 'juri',
       npc: { glif: '>', ucap: ['Lihat angka', 'pertamanya!'] },
@@ -4787,7 +4603,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-071 · Persen Itu Apa? — siang lapangan seratus ubin ----- */
     'p1-071': {
       tema: 'petak',
       npc: { glif: '%', ucap: ['Dari seratus!', 'Itu persen!'] },
@@ -4815,7 +4630,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-072 · Persen Favorit 50% — senja bak air kebun ----- */
     'p1-072': {
       tema: 'tangki',
       npc: { glif: '1/2', ucap: ['Setengah,', 'paling gampang!'] },
@@ -4843,7 +4657,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-073 · Tiga Rupa Satu Makna — malam ruang cermin ----- */
     'p1-073': {
       tema: 'kaca',
       npc: { glif: '3', ucap: ['Tiga rupa,', 'satu makna!'] },
@@ -4871,7 +4684,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-074 · Kenalan Uang Rupiah — siang toko kelontong ----- */
     'p1-074': {
       tema: 'toko',
       npc: { glif: 'R', ucap: ['Uang itu', 'angka nyata!'] },
@@ -4899,7 +4711,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-075 · Belanja & Kembalian — sore meja kasir warung ----- */
     'p1-075': {
       tema: 'kasir',
       npc: { glif: '2', ucap: ['Kurang harga,', 'jadi kembalian!'] },
@@ -4927,7 +4738,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-076 · Menabung Seribu — pagi meja celengan ----- */
     'p1-076': {
       tema: 'celengan',
       npc: { glif: '1', ucap: ['Sedikit demi', 'sedikit jadi!'] },
@@ -4955,7 +4765,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-077 · Dunia Bentuk Datar — siang halaman galeri bentuk ----- */
     'p1-077': {
       tema: 'kotak',
       npc: { glif: '2D', ucap: ['Bentuk ada', 'di mana-mana!'] },
@@ -4983,7 +4792,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-078 · Garis, Sisi & Sudut — fajar jalan lurus tukang kayu ----- */
     'p1-078': {
       tema: 'garisSisi',
       npc: { glif: 'I', ucap: ['Sisi bertemu,', 'sudut jadi!'] },
@@ -5011,7 +4819,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-079 · Keliling Itu Jalan Keliling — pagi lapangan oval ----- */
     'p1-079': {
       tema: 'jalanPutar',
       npc: { glif: 'Q', ucap: ['Satu putaran', 'penuh!'] },
@@ -5039,7 +4846,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-080 · Keliling Persegi Panjang — sore patroli lapangan 8x5 ----- */
     'p1-080': {
       tema: 'patroli',
       npc: { glif: '26', ucap: ['Dua panjang,', 'dua lebar!'] },
@@ -5067,7 +4873,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-081 · Luas Itu Pasang Ubin — siang lantai baru 3x4 ubin ----- */
     'p1-081': {
       tema: 'ubin',
       npc: { glif: '12', ucap: ['Pagar pinggir,', 'ubin isi!'] },
@@ -5095,7 +4900,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-082 · Luas Persegi Panjang — sore ubin 4 baris berisi 6 ----- */
     'p1-082': {
       tema: 'barisUbin',
       npc: { glif: '24', ucap: ['Baris kali', 'kolom!'] },
@@ -5123,7 +4927,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-083 · Segitiga Setengah Kotak — malam bengkel karpet segitiga ----- */
     'p1-083': {
       tema: 'karpet',
       npc: { glif: '1/2', ucap: ['Setengah', 'kotak cukup!'] },
@@ -5151,7 +4954,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-084 · Lingkaran Si Bulat — malam bengkel roda & Pi ----- */
     'p1-084': {
       tema: 'rodaDunia',
       npc: { glif: '3,14', ucap: ['Dari pusat', 'ke tepi!'] },
@@ -5179,7 +4981,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-085 · Kenalan Kubus & Balok — siang gudang kardus ----- */
     'p1-085': {
       tema: 'kardus',
       npc: { glif: '3D', ucap: ['Punya isi,', 'bukan datar!'] },
@@ -5207,7 +5008,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-086 · Detektif Bentuk di Sekitar — malam kamar 5 bentuk ----- */
     'p1-086': {
       tema: 'kamarMalam',
       npc: { glif: '5!', ucap: ['Lima bentuk', 'menanti!'] },
@@ -5235,7 +5035,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-087 · Panjang: cm & m — fajar jalan pengukur bermarka ----- */
     'p1-087': {
       tema: 'penggaris',
       npc: { glif: 'cm', ucap: ['Dunia bisa', 'diukur!'] },
@@ -5263,7 +5062,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-088 · Berat: gram & kg — siang bazar timbangan jujur ----- */
     'p1-088': {
       tema: 'bazarBerat',
       npc: { glif: 'kg', ucap: ['Timbangan jujur', 'tak bohong!'] },
@@ -5291,7 +5089,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-089 · Takaran: liter & ml — sore dapur takaran ----- */
     'p1-089': {
       tema: 'takaranAir',
       npc: { glif: 'ml', ucap: ['Takar rata,', 'masak jadi!'] },
@@ -5319,7 +5116,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-090 · Jam & Menit — senja menara jam berlonceng ----- */
     'p1-090': {
       tema: 'menaraJam',
       npc: { glif: '60', ucap: ['Waktu berdetak', 'teratur!'] },
@@ -5347,7 +5143,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-091 · Hari, Minggu & Kalender — malam arsip waktu ----- */
     'p1-091': {
       tema: 'arsipWaktu',
       npc: { glif: '7', ucap: ['Tujuh hari,', 'satu minggu!'] },
@@ -5375,7 +5170,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-092 · Panas & Dingin: Suhu — siang kota dua iklim ----- */
     'p1-092': {
       tema: 'duaIklim',
       npc: { glif: 'C', ucap: ['Dingin panas', 'terukur!'] },
@@ -5403,7 +5197,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-093 · Pola Berulang — malam festival lampu berpola ----- */
     'p1-093': {
       tema: 'festivalPola',
       npc: { glif: 'AB', ucap: ['Pola itu', 'bisa diulang!'] },
@@ -5431,7 +5224,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-094 · Angka yang Hilang — malam kantor detektif teka-teki ----- */
     'p1-094': {
       tema: 'kantorTeka',
       npc: { glif: '6', ucap: ['Pelaku sudah', 'ditemukan!'] },
@@ -5459,7 +5251,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-095 · Kotak Ajaib Angka — malam paviliun kotak 3x3 ----- */
     'p1-095': {
       tema: 'paviliun',
       npc: { glif: '15', ucap: ['Semua garis', 'berjumlah 15!'] },
@@ -5487,7 +5278,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-096 · Hitung Cepat di Kepala — siang arena lomba hitung ----- */
     'p1-096': {
       tema: 'arenaGeser',
       npc: { glif: '116', ucap: ['Geser sedikit,', 'hitung ringan!'] },
@@ -5515,7 +5305,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-097 · Labirin Angka — senja labirin lampion kelipatan 3 ----- */
     'p1-097': {
       tema: 'labirin',
       npc: { glif: '3', ucap: ['Kelipatan tiga', 'satu-satunya!'] },
@@ -5543,7 +5332,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-098 · Logika Si A & Si B — pagi lapangan tiga menara ----- */
     'p1-098': {
       tema: 'duelLogika',
       npc: { glif: 'A', ucap: ['Tak perlu', 'meteran!'] },
@@ -5571,7 +5359,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-099 · Sudoku Mini 4x4 — malam khemah sudoku ----- */
     'p1-099': {
       tema: 'khemahSudoku',
       npc: { glif: '4', ucap: ['Tanpa ulang,', 'pasti tertib!'] },
@@ -5599,7 +5386,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p1-100 · Tantangan Juara Kamp — malam arena juara, penutup 100 judul ----- */
     'p1-100': {
       tema: 'arenaJuara',
       npc: { glif: '100', ucap: ['Seratus judul,', 'kamu luar biasa!'] },
@@ -5631,9 +5417,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ============ PINTU 3 — PEGUNUNGAN POLA ============ */
-
-    /* ----- p3-001 · Mesin Fungsi — pagi bengkel mesin emas ----- */
     'p3-001': {
       tema: 'bengkelMesin',
       npc: { glif: 'f(x)', ucap: ['Masukkan angka,', 'keluar kejutan!'] },
@@ -5661,7 +5444,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-002 · Masukan & Keluaran — siang meja percobaan ----- */
     'p3-002': {
       tema: 'mejaMesinPintar',
       npc: { glif: 'f', ucap: ['x masuk,', 'f(x) keluar!'] },
@@ -5689,7 +5471,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-003 · Aturan Mesin — sore papan aturan taman ----- */
     'p3-003': {
       tema: 'papanAturanMesin',
       npc: { glif: '2x', ucap: ['Satu aturan,', 'semua taat!'] },
@@ -5717,7 +5498,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-004 · Tabel Pasangan — malam arsip tabel ----- */
     'p3-004': {
       tema: 'arsipTabel',
       npc: { glif: '(x,y)', ucap: ['Setiap x', 'punya teman!'] },
@@ -5745,7 +5525,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-005 · Titik di Bidang — pagi lapangan kisi tali ----- */
     'p3-005': {
       tema: 'lapanganKisi',
       npc: { glif: '(2,4)', ucap: ['Pasangan', 'punya alamat!'] },
@@ -5773,7 +5552,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-006 · Garis dari Mesin — siang jalan menanjak ----- */
     'p3-006': {
       tema: 'jalanLurusNaik',
       npc: { glif: '2x+1', ucap: ['Titik rapi', 'jadi garis!'] },
@@ -5801,7 +5579,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-007 · Grafik Naik & Turun — senja jembatan bergelombang ----- */
     'p3-007': {
       tema: 'jembatanBergelombang',
       npc: { glif: 'naik', ucap: ['Grafik', 'punya arah!'] },
@@ -5829,7 +5606,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-008 · Jalur Bola Kuadrat — siang halaman lempar bola ----- */
     'p3-008': {
       tema: 'halamanLempar',
       npc: { glif: 'x2', ucap: ['Lengkung', 'sama dua sisi!'] },
@@ -5857,7 +5633,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-009 · Grafik Bercerita — malam pos pandang ----- */
     'p3-009': {
       tema: 'posGrafik',
       npc: { glif: 'grafik', ucap: ['Grafik', 'bercerita!'] },
@@ -5885,7 +5660,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-010 · Tantangan Lembah Mesin — malam balai lima misi ----- */
     'p3-010': {
       tema: 'balaiMesin',
       npc: { glif: 'mesin', ucap: ['Lima misi', 'menantimu!'] },
@@ -5913,7 +5687,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-011 · Barisan: Pola Berbaris — pagi padang barisan batu ----- */
     'p3-011': {
       tema: 'padangBarisan',
       npc: { glif: '2 4 6', ucap: ['Ikuti', 'barisannya!'] },
@@ -5941,7 +5714,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-012 · Barisan Tambah — siang tangga tambah tiga ----- */
     'p3-012': {
       tema: 'tanggaTambah',
       npc: { glif: '+3', ucap: ['Tambah tiga', 'tiap langkah!'] },
@@ -5969,7 +5741,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-013 · Barisan Gandakan — sore ladang biji bertunas ----- */
     'p3-013': {
       tema: 'ladangGandakan',
       npc: { glif: 'ganda', ucap: ['Dua kali', 'tiap baris!'] },
@@ -5997,7 +5768,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-014 · Suku ke-n — malam menara rumus ----- */
     'p3-014': {
       tema: 'menaraSuku',
       npc: { glif: '3n+1', ucap: ['Langsung', 'lompat!'] },
@@ -6025,7 +5795,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-015 · Rahasia Pasangan — malam api unggun 5050 ----- */
     'p3-015': {
       tema: 'apiUnggunPasangan',
       npc: { glif: '5050', ucap: ['Pasangkan', 'ujungnya!'] },
@@ -6053,7 +5822,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-016 · Deret Gandakan — pagi ladang biji kotak ----- */
     'p3-016': {
       tema: 'ladangBijiDua',
       npc: { glif: '1+2+4', ucap: ['Jumlahkan', 'barisannya!'] },
@@ -6081,7 +5849,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-017 · Bilangan Segitiga — sore halaman kursi segitiga ----- */
     'p3-017': {
       tema: 'halamanKursiSegitiga',
       npc: { glif: '1 3 6', ucap: ['Susun', 'segitiga!'] },
@@ -6109,7 +5876,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-018 · Bilangan Kuadrat — siang kebun petak kuadrat ----- */
     'p3-018': {
       tema: 'kebunPetakKuadrat',
       npc: { glif: 'n x n', ucap: ['Sisi kali', 'sisi!'] },
@@ -6137,7 +5903,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-019 · Pola di Sekitar Kita — sore taman pola ----- */
     'p3-019': {
       tema: 'tamanPolaSenja',
       npc: { glif: 'pola', ucap: ['Burulah', 'polanya!'] },
@@ -6165,7 +5930,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-020 · Tantangan Puncak Pola — malam puncak lima api ----- */
     'p3-020': {
       tema: 'puncakPolaMalam',
       npc: { glif: 'misi', ucap: ['Lima api', 'menantimu!'] },
@@ -6193,7 +5957,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-021 · Pangkat: Kali Berulang — pagi bengkel pangkat ----- */
     'p3-021': {
       tema: 'bengkelPangkat',
       npc: { glif: '2x2x2', ucap: ['Kali berulang', 'jadi pangkat!'] },
@@ -6221,7 +5984,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-022 · Ledakan Lipatan — siang meja lipat kertas ----- */
     'p3-022': {
       tema: 'mejaLipatKertas',
       npc: { glif: 'lipat', ucap: ['Lipat lagi', 'berlipat-lipat!'] },
@@ -6249,7 +6011,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-023 · Kuadrat & Kubik — sore taman bentuk ----- */
     'p3-023': {
       tema: 'tamanBentukPangkat',
       npc: { glif: '2 dan 3', ucap: ['Luas dan isi', 'menunggumu!'] },
@@ -6277,7 +6038,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-024 · Akar: Jalan Pulang — senja jalan pulang akar ----- */
     'p3-024': {
       tema: 'jalanPulangAkar',
       npc: { glif: '7x7', ucap: ['Jalan pulang', 'menanti!'] },
@@ -6305,7 +6065,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-025 · Logaritma Pencari Pangkat — malam kantor detektif ----- */
     'p3-025': {
       tema: 'kantorDetektifLog',
       npc: { glif: 'log2', ucap: ['Kasus baru', 'terbuka!'] },
@@ -6333,7 +6092,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-026 · Pangkat Nol & Minus — pagi tangga dua arah ----- */
     'p3-026': {
       tema: 'tanggaPangkatDuaArah',
       npc: { glif: 'turun', ucap: ['Naik turun', 'tangga pangkat!'] },
@@ -6361,7 +6119,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-027 · Waktu Menggandakan — siang rumah kaca ----- */
     'p3-027': {
       tema: 'rumahKacaTumbuh',
       npc: { glif: '1 2 4', ucap: ['Tumbuh', 'berlipat!'] },
@@ -6389,7 +6146,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-028 · Bola Pantul Setengah — sore lapangan bola ----- */
     'p3-028': {
       tema: 'lapanganBolaSenja',
       npc: { glif: 'setengah', ucap: ['Pantul lagi', 'setengah lagi!'] },
@@ -6417,7 +6173,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-029 · Angka Raksasa & Mini — malam observatorium ----- */
     'p3-029': {
       tema: 'observatoriumAngka',
       npc: { glif: 'x10', ucap: ['Raksasa & mini', 'tertata rapi!'] },
@@ -6445,7 +6200,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-030 · Tantangan Tangga Pangkat — malam puncak tangga ----- */
     'p3-030': {
       tema: 'puncakTanggaPangkat',
       npc: { glif: 'tangga!', ucap: ['Lima tangga', 'menyala!'] },
@@ -6473,7 +6227,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-031 · Kotak Angka Berdaya — pagi lapangan papan skor ----- */
     'p3-031': {
       tema: 'lapanganPapanSkor',
       npc: { glif: 'kotak', ucap: ['Angka tertata', 'siap bekerja!'] },
@@ -6501,7 +6254,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-032 · Alamat Baris-Kolom — siang penginapan gunung ----- */
     'p3-032': {
       tema: 'lorongPenginapan',
       npc: { glif: 'a23', ucap: ['Baris dulu,', 'kolom kemudian!'] },
@@ -6529,7 +6281,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-033 · Menjumlah Sejawat — sore meja piknik ----- */
     'p3-033': {
       tema: 'mejaPiknikSejawat',
       npc: { glif: '2+1', ucap: ['Jumlahkan', 'dengan pasangannya!'] },
@@ -6557,7 +6308,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-034 · Menggandakan Matriks — pagi dapur resep ganda ----- */
     'p3-034': {
       tema: 'dapurResepGanda',
       npc: { glif: 'dua porsi', ucap: ['Semua kotak', 'ikut dikali!'] },
@@ -6585,7 +6335,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-035 · Baris Menyapa Kolom — siang pelataran batu ----- */
     'p3-035': {
       tema: 'pelataranBarisKolom',
       npc: { glif: 'jabat', ucap: ['Baris sapa kolom,', 'kalikan sejawat!'] },
@@ -6613,7 +6362,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-036 · Dua Petunjuk Bertemu — sore beranda dua kakak ----- */
     'p3-036': {
       tema: 'berandaDuaKakak',
       npc: { glif: '4 dan 3', ucap: ['Dua petunjuk', 'satu jawaban!'] },
@@ -6641,7 +6389,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-037 · Titik Temu Dua Garis — senja persimpangan ----- */
     'p3-037': {
       tema: 'persimpanganDuaJalan',
       npc: { glif: 'temu', ucap: ['Cari titik', 'tempat bertemu!'] },
@@ -6669,7 +6416,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-038 · Matriks Penyimpan Data — siang kelas rapor ----- */
     'p3-038': {
       tema: 'kelasRaporGunung',
       npc: { glif: '3x2', ucap: ['Data tertata', 'mudah dibaca!'] },
@@ -6697,7 +6443,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-039 · Sistem Tiga Petunjuk — malam gudang tiga kotak ----- */
     'p3-039': {
       tema: 'gudangTigaKotak',
       npc: { glif: '1 2 3', ucap: ['Tiga kotak', 'satu trik!'] },
@@ -6725,7 +6470,6 @@ window.CERITA = (function () {
       ],
     },
 
-    /* ----- p3-040 · Tantangan Papan Angka — malam puncak papan ----- */
     'p3-040': {
       tema: 'puncakPapanAngka',
       npc: { glif: 'papan!', ucap: ['Lima papan', 'menyala!'] },
@@ -6754,7 +6498,6 @@ window.CERITA = (function () {
     },
   };
 
-  /* dunia fallback untuk judul yang belum punya naskah */
   function untuk(topik) {
     if (PETA[topik.id]) return PETA[topik.id];
     return {

@@ -1,4 +1,3 @@
-/* Validasi programatik batch 5: p2-041..050 penjuru k5 Rasio (aturan Task 21-25) */
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -16,7 +15,6 @@ const t = (nama, ok) => { console.log((ok ? 'OK   ' : 'GAGAL') + ' ' + nama); if
 const ceritaSrc = fs.readFileSync(path.join(ROOT, 'akiomidaspace/js/cerita-data.js'), 'utf8');
 const mainSrc = fs.readFileSync(path.join(ROOT, 'akiomidaspace/js/pelajaran-main.js'), 'utf8');
 
-/* ---- 1. struktur 10 naskah baru ---- */
 const BARU = ['p2-041','p2-042','p2-043','p2-044','p2-045','p2-046','p2-047','p2-048','p2-049','p2-050'];
 const TEMA_BARU = ['dapurJus','menaraPeta','kiosPermen','dapurKue','lintasanLari','kotakDonat','tokoMiniatur','sumurDesa','dapurWarung','petaKarun'];
 const OBJEK_BARU = ['gelasManggaDua','papanDuaTiga','jusKebalik','papanUrutanRasio','mejaPetaGulung','jengkalTunggal','tigaJengkalJalan','papanSkalaSeribu','kantongEnamPermen','notaTigaRibu','permenLimaRatus','papanDuaKios','kartuResepDuaTiga','mangkokGandaEmpat','duaKueSamaRasa','papanProporsiSetia','garisStartKelinci','kelinciEnamPuluh','duaMenitSeratus','papanTempoJarak','kotakDelapanDonat','susunTigaDariEmpat','papanTujuhLima','papanTigaBahasa','rakMobilMainan','penggarisDuaPuluh','mobilJadiRaksasa','papanKaliDuaEmpat','galianEmpatPekerja','galianDelapanPekerja','papanKaliSilang','papanBerbalikNilai','bukuResepWarung','delapanTamuDatang','semuaIkutGanda','papanTakaranUtuh','petaKarunTerkunci','misiRasioSkala','misiHargaPersen','misiBerbalikPeta'];
@@ -39,14 +37,12 @@ for (let i = 0; i < BARU.length; i++) {
   t(id + ' objek daftar baru', objekOk);
 }
 
-/* ---- 2. TEMA_CFG + AMB_CFG + bakarLatar ---- */
 for (const tema of TEMA_BARU) {
   t('TEMA_CFG ' + tema, new RegExp(tema + ": \\{ glif:").test(mainSrc));
   t('AMB_CFG ' + tema, new RegExp(tema + ": \\{ jenis:").test(mainSrc));
   t('bakarLatar ' + tema, mainSrc.includes("TEMA_NAMA === '" + tema + "'"));
 }
 
-/* ---- 3. registry nol duplikat ---- */
 const regMatch = mainSrc.match(/const OBJEK_GAMBAR = \{([\s\S]*?)\n  \};/);
 const kunci = [...regMatch[1].matchAll(/([a-zA-Z0-9_]+): gambar/g)].map(m => m[1]);
 const dup = kunci.filter((k, i) => kunci.indexOf(k) !== i);
@@ -62,7 +58,6 @@ for (const o of OBJEK_BARU) {
   t('registry ' + o, kunci.includes(o));
 }
 
-/* ---- 4. semua objek semua naskah terdaftar ---- */
 let semuaTerdaftar = true;
 const semuaId = [...ceritaSrc.matchAll(/'(p[12]-\d+)': \{/g)].map(m => m[1]);
 for (const id of semuaId) {
@@ -72,7 +67,6 @@ for (const id of semuaId) {
 }
 t('semua objek seluruh naskah terdaftar (' + semuaId.length + ' naskah)', semuaTerdaftar);
 
-/* ---- 5. struktur pintu2-data 100 judul 10 penjuru ---- */
 let p2ok = true;
 for (let k = 1; k <= 10; k++) {
   for (let n = 1; n <= 10; n++) {
@@ -83,7 +77,6 @@ for (let k = 1; k <= 10; k++) {
 }
 t('P2 struktur 100 judul 10 penjuru', p2ok);
 
-/* ---- 6. AUDIT ANTI-RAMALAN pada 10 naskah + 100 teaser ---- */
 const TERLARANG = /ramal|meramal|ramalan|numerolog|prediksi|takdir|peruntungan|nasib|zodiak|horoskop|jimat|weton|primbon|mantra|sihir|sakti|sulap/i;
 let bersih = true;
 for (const id of BARU) {
@@ -100,7 +93,6 @@ for (let k = 1; k <= 10; k++) for (let n = 1; n <= 10; n++) {
 }
 t('anti-ramalan 100 teaser', teaserBersih);
 
-/* ---- 7. regresi p1 + p2 lama ---- */
 let reg1 = true;
 for (let i = 1; i <= 100; i++) {
   const id = 'p1-' + String(i).padStart(3, '0');
@@ -116,7 +108,6 @@ for (let i = 1; i <= 40; i++) {
 }
 t('regresi p2-001..040', reg2);
 
-/* ---- 8. matematika dalam teks (sampel) ---- */
 t('p2-041 menyebut 2 : 3', CERITA.untuk({ id: 'p2-041' }).stasiun[0].teks.includes('2 : 3'));
 t('p2-043 kios B enam ratus', JSON.stringify(CERITA.untuk({ id: 'p2-043' })).includes('enam ratus'));
 t('p2-047 480', JSON.stringify(CERITA.untuk({ id: 'p2-047' })).includes('empat ratus delapan puluh'));

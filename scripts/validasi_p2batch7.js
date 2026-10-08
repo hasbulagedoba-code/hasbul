@@ -1,4 +1,3 @@
-/* Validasi programatik batch 7: p2-061..070 penjuru k7 Luas Permukaan & Volume (aturan Task 21-25) */
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -16,7 +15,6 @@ const t = (nama, ok) => { console.log((ok ? 'OK   ' : 'GAGAL') + ' ' + nama); if
 const ceritaSrc = fs.readFileSync(path.join(ROOT, 'akiomidaspace/js/cerita-data.js'), 'utf8');
 const mainSrc = fs.readFileSync(path.join(ROOT, 'akiomidaspace/js/pelajaran-main.js'), 'utf8');
 
-/* ---- 1. struktur 10 naskah baru ---- */
 const BARU = ['p2-061','p2-062','p2-063','p2-064','p2-065','p2-066','p2-067','p2-068','p2-069','p2-070'];
 const TEMA_BARU = ['mejaKado','lantaiJaring','dapurSusun','atapPrisma','rakKaleng','bengkelGulung','bukitPasir','mejaLiter','tokoAkuarium','gudangKardus'];
 const OBJEK_BARU = ['kotakKadoKubus','kartuPersegiEnam','kubusSusunIsi','papanKubusJurus','kardusBalokUtuh','jaringBalokRata','pasangKembarTiga','papanJumlahEnamSisi','laciKosongEnamEmpat','kubusSusuSusun','susunDuaLapis','papanPanjangLebarTinggi','rumahAtapPrisma','kartuSegitigaAlas','geserSegitigaAtap','papanLuasKaliPanjang','kalengSusuRak','duaTutupBundar','benangKelilingEmpat','labelTerbentang','kertasGulungSelimut','gulungDiBotol','papanKelilingTinggi','hitungSelimutEmpat','topiKerucutPasir','tabungPasirSama','tuangTigaCangkir','bolaSepakTaman','kubusSepuluhSepuluh','botolLiterSatu','gelasBagiEmpat','papanLiterKubik','akuariumTokoSore','ukurAkuariumTigaSisi','emberDuaPuluh','botolSatuSetengah','gudangKardusMalam','misiKardusTigaUkuran','misiKubusMuatKardus','misiTangkiDanKado'];
@@ -39,14 +37,12 @@ for (let i = 0; i < BARU.length; i++) {
   t(id + ' objek daftar baru', objekOk);
 }
 
-/* ---- 2. TEMA_CFG + AMB_CFG + bakarLatar ---- */
 for (const tema of TEMA_BARU) {
   t('TEMA_CFG ' + tema, new RegExp(tema + ": \\{ glif:").test(mainSrc));
   t('AMB_CFG ' + tema, new RegExp(tema + ": \\{ jenis:").test(mainSrc));
   t('bakarLatar ' + tema, mainSrc.includes("TEMA_NAMA === '" + tema + "'"));
 }
 
-/* ---- 3. registry nol duplikat ---- */
 const regMatch = mainSrc.match(/const OBJEK_GAMBAR = \{([\s\S]*?)\n  \};/);
 const kunci = [...regMatch[1].matchAll(/([a-zA-Z0-9_]+): gambar/g)].map(m => m[1]);
 const dup = kunci.filter((k, i) => kunci.indexOf(k) !== i);
@@ -62,7 +58,6 @@ for (const o of OBJEK_BARU) {
   t('registry ' + o, kunci.includes(o));
 }
 
-/* ---- 4. semua objek semua naskah terdaftar ---- */
 let semuaTerdaftar = true;
 const semuaId = [...ceritaSrc.matchAll(/'(p[12]-\d+)': \{/g)].map(m => m[1]);
 for (const id of semuaId) {
@@ -72,7 +67,6 @@ for (const id of semuaId) {
 }
 t('semua objek seluruh naskah terdaftar (' + semuaId.length + ' naskah)', semuaTerdaftar);
 
-/* ---- 5. struktur pintu2-data 100 judul 10 penjuru ---- */
 let p2ok = true;
 for (let k = 1; k <= 10; k++) {
   for (let n = 1; n <= 10; n++) {
@@ -83,7 +77,6 @@ for (let k = 1; k <= 10; k++) {
 }
 t('P2 struktur 100 judul 10 penjuru', p2ok);
 
-/* ---- 6. AUDIT ANTI-RAMALAN pada 10 naskah + 100 teaser + semua naskah ---- */
 const TERLARANG = /ramal|meramal|ramalan|numerolog|prediksi|takdir|peruntungan|nasib|zodiak|horoskop|jimat|weton|primbon|mantra|sihir|sakti|sulap/i;
 let bersih = true;
 for (const id of BARU) {
@@ -102,12 +95,11 @@ t('anti-ramalan 100 teaser', teaserBersih);
 let semuaNaskahBersih = true;
 for (const id of semuaId) {
   const c = CERITA.untuk({ id });
-  const gabung = JSON.stringify(c).replace(/bukan mantra/g, ''); // negasi pelindung sah (p1-095)
+  const gabung = JSON.stringify(c).replace(/bukan mantra/g, '');
   if (TERLARANG.test(gabung)) { semuaNaskahBersih = false; console.log('   TERLARANG naskah lama ' + id); }
 }
 t('anti-ramalan seluruh ' + semuaId.length + ' naskah', semuaNaskahBersih);
 
-/* ---- 7. regresi p1 + p2 lama ---- */
 let reg1 = true;
 for (let i = 1; i <= 100; i++) {
   const id = 'p1-' + String(i).padStart(3, '0');
@@ -123,7 +115,6 @@ for (let i = 1; i <= 60; i++) {
 }
 t('regresi p2-001..060', reg2);
 
-/* ---- 8. matematika dalam teks k7 ---- */
 const c61 = JSON.stringify(CERITA.untuk({ id: 'p2-061' }));
 const c62 = JSON.stringify(CERITA.untuk({ id: 'p2-062' }));
 const c63 = JSON.stringify(CERITA.untuk({ id: 'p2-063' }));
@@ -145,7 +136,6 @@ t('p2-068 seribu + liter', c68.includes('seribu') && c68.includes('liter'));
 t('p2-069 enam puluh ribu + enam puluh liter', c69.includes('enam puluh ribu') && c69.includes('enam puluh liter'));
 t('p2-070 lima misi + seratus lima puluh', c70.includes('lima') && c70.includes('seratus lima puluh'));
 
-/* ---- 9. glif NPC batch k7 sesuai rencana + nol tabrakan ---- */
 const GLIF_BARU = ['54', '88', '48', '120', '44', '440', 'x3', '1L', '60L', '27'];
 const semuaGlif = semuaId.filter(id => !BARU.includes(id)).map(id => (CERITA.untuk({ id }).npc || {}).glif || null).filter(Boolean);
 const glifBaru = BARU.map(id => CERITA.untuk({ id }).npc.glif);
@@ -153,7 +143,6 @@ t('10 glif k7 sesuai rencana', JSON.stringify(glifBaru) === JSON.stringify(GLIF_
 const gtabrak = GLIF_BARU.filter((g, i) => GLIF_BARU.indexOf(g) !== i || semuaGlif.includes(g));
 t('glif k7 ' + GLIF_BARU.length + ' nol tabrakan', gtabrak.length === 0);
 
-/* ---- 10. bahasa penghitung netral (hitungan = alat) ---- */
 t('p2-065 menyebut benang & hitungan alat', c65.includes('alat'));
 t('p2-070 menghitung bukan menebak', c70.includes('menghitung, bukan menebak'));
 

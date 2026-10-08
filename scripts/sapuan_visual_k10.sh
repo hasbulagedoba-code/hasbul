@@ -1,5 +1,4 @@
 #!/bin/bash
-# SAPUAN VISUAL 10 dunia k10: screenshot state stasiun-1 (tanpa dialog)
 BASE="http://localhost:8123/akiomidaspace/pelajaran.html"
 OUT=/home/z/my-project/hasbul-qa/100
 mkdir -p "$OUT"

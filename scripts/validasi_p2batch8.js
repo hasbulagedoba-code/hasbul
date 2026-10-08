@@ -1,4 +1,3 @@
-/* Validasi programatik batch k8 (p2-071..080) + regresi penuh */
 'use strict';
 const fs = require('fs');
 const akar = '/home/z/my-project/hasbul-repo/akiomidaspace/';
@@ -8,7 +7,6 @@ const tes = (nama, kondisi, detail) => {
   else { gagal++; console.log('GAGAL ' + nama + (detail ? ' -> ' + detail : '')); }
 };
 
-/* ---------- muat modul ---------- */
 eval(fs.readFileSync(akar + 'js/pintu2-data.js', 'utf8').replace('window.P2', 'globalThis.P2'));
 eval(fs.readFileSync(akar + 'js/cerita-data.js', 'utf8').replace('window.CERITA', 'globalThis.CERITA'));
 const P2 = globalThis.P2, C = globalThis.CERITA;
@@ -26,14 +24,12 @@ function cekTeksTeks(topik) {
   });
 }
 
-/* ---------- 1. struktur P2: 100 judul 10 penjuru ---------- */
 tes('P2 KATEGORI 10', P2.KATEGORI.length === 10);
 tes('P2 TOPIK 100', P2.TOPIK.length === 100, String(P2.TOPIK.length));
 for (let k = 1; k <= 10; k++) {
   tes('P2 penjuru k' + k + ' berisi 10', P2.topikKategori(k).length === 10);
 }
 
-/* ---------- 2. naskah k8: struktur lengkap ---------- */
 const daftarObjek = new Set();
 const regM = sMain.match(/const OBJEK_GAMBAR = \{([\s\S]*?)\n  \};/);
 regM[1].split(',').forEach(p => { const k = p.trim().split(':')[0].trim(); if (k && !k.startsWith('/')) daftarObjek.add(k); });
@@ -58,12 +54,10 @@ for (const id of K8) {
   tes(id + ' matematika dalam teks', (t.stasiun || []).some(s => /\d|nol|satu|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan|sepuluh/i.test(s.teks || '')));
 }
 
-/* ---------- 3. fungsi 40 terdefinisi ---------- */
 for (const f of fnsBaru) {
   tes('fungsi gambar' + f + ' tepat 1', (sMain.match(new RegExp('function gambar' + f + '\\(', 'g')) || []).length === 1, f);
 }
 
-/* ---------- 4. registry & partikel ---------- */
 const k1 = regM[1].split(',').map(x => x.trim().split(':')[0].trim()).filter(x => x && !x.startsWith('/'));
 tes('registry tanpa duplikat', k1.length === new Set(k1).size, String(k1.length - new Set(k1).size));
 const k2m = sMain.match(/const PARTIKEL_OBJEK = \{([\s\S]*?)\};/);
@@ -76,21 +70,18 @@ for (const id of K8) {
   });
 }
 
-/* ---------- 5. tema CFG & AMB ---------- */
 const temaK8 = K8.map(id => C.untuk({ id }).tema);
 for (const tm of temaK8) {
   tes('TEMA_CFG punya ' + tm, new RegExp('\\n\\s{4}' + tm + ': \\{ glif').test(sMain), tm);
   tes('AMB_CFG punya ' + tm, new RegExp('\\n\\s{4}' + tm + ': \\{ jenis').test(sMain), tm);
   tes('bakarLatar punya ' + tm, sMain.includes("TEMA_NAMA === '" + tm + "'"), tm);
 }
-/* anti-celah: nama tema tidak mengandung kata terlarang */
+
 for (const tm of temaK8) tes('tema ' + tm + ' bersih', !LARANG.test(tm));
 
-/* ---------- 6. glif k8 unik satu sama lain ---------- */
 const glifK8 = K8.map(id => C.untuk({ id }).npc.glif);
 tes('glif k8 unik', new Set(glifK8).size === 10, glifK8.join('|'));
 
-/* ---------- 7. regresi: p1 (struktur minimal) + p2 lama (5 stasiun) ---------- */
 const semuaId = [...P2.TOPIK.map(t => t.id)];
 let reg1 = true;
 for (let i = 1; i <= 100; i++) {
@@ -107,7 +98,6 @@ for (let i = 1; i <= 70; i++) {
 }
 tes('regresi p2-001..070', reg2);
 
-/* anti-ramalan seluruh naskah (JSON + buang negasi pelindung) */
 let semuaBersih = true;
 for (const id of semuaId) {
   const gabung = JSON.stringify(C.untuk({ id })).replace(/bukan mantra|tak butuh keberuntungan/g, '');
@@ -115,12 +105,10 @@ for (const id of semuaId) {
 }
 tes('anti-ramalan seluruh ' + semuaId.length + ' naskah', semuaBersih);
 
-/* anti-ramalan: 100 teaser + 100 judul */
 let teaserGagal = 0;
 for (const t of P2.TOPIK) if (LARANG.test(t.teaser || '') || LARANG.test(t.judul || '')) { teaserGagal++; console.log('TEASER ' + t.id); }
 tes('100 teaser & judul bersih', teaserGagal === 0);
 
-/* k8: tugu struktur kontrak penuh per naskah */
 let kontrakGagal = 0;
 for (const id of K8) {
   const t = C.untuk({ id });
@@ -131,7 +119,6 @@ for (const id of K8) {
 }
 tes('kontrak 4-elemen 10 naskah k8', kontrakGagal === 0);
 
-/* ---------- 9. HTML chips ---------- */
 const hsm = fs.readFileSync(akar + 'hutan-simbol-matematika.html', 'utf8');
 tes('k8 chip tetap ada di html', hsm.includes('Koordinat &amp; Grafik Pertama') || hsm.includes('Koordinat & Grafik Pertama'));
 

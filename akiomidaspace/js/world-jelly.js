@@ -1,12 +1,3 @@
-/* =========================================================
-   DUNIA AKIOMIDA — Sprite Pixel (world-jelly.js)
-   PRINSIP SYARIAH:
-   - TIDAK ada makhluk hidup: tanpa mata, mulut, hidung, tangan, kaki.
-   - Akio = bulatan emas murni (satu-satunya yang emas).
-   - Penduduk = bola-lentera warna dengan glif angka/simbol matematika.
-   - Kupu-kupu & burung sudah dihapus; yang melayang hanya simbol.
-   Semua digambar piksel demi piksel.
-   ========================================================= */
 window.AKJELLY = (function () {
   'use strict';
   const P = window.AK.P, lingkaran = window.AK.lingkaran;
@@ -17,7 +8,6 @@ window.AKJELLY = (function () {
     return cv;
   }
 
-  /* ---------- glif pixel untuk bola-lentera (5 atau 7 kolom) ---------- */
   const GLIF = {
     '1':    ['..#..', '.##..', '..#..', '..#..', '..#..', '..#..', '.###.'],
     'pi':   ['#####', '#...#', '#####', '#...#', '#...#', '#...#', '#...#'],
@@ -27,13 +17,11 @@ window.AKJELLY = (function () {
     'tanya':['.###.', '#...#', '....#', '...#.', '..#..', '.....', '..#..'],
   };
 
-  /* ---------- AKIO: bulatan emas murni (18 x 18) — tanpa wajah ---------- */
   function akioFrame(variasi) {
     const cv = kanvas(18, 18), c = cv.getContext('2d');
-    const naik = variasi === 1 ? 1 : 0;          // goyang halus saat berjalan
+    const naik = variasi === 1 ? 1 : 0;
     const cy = 9 - naik;
 
-    // bola emas: rim gelap + isi emas + sorot + bayang bawah (TANPA wajah)
     lingkaran(c, 9, cy + 1, 8, '#a86f1c');
     lingkaran(c, 9, cy, 7, '#f6c453');
     P(c, 5, 4 - naik, 3, 2, '#ffe9ad');
@@ -51,19 +39,16 @@ window.AKJELLY = (function () {
     };
   }
 
-  /* ---------- PENDUDUK: bola-lentera wilayah (16 x 16) — tanpa wajah ---------- */
   function npcOrb(n, fase) {
     const cv = kanvas(16, 16), c = cv.getContext('2d');
-    const naik = fase ? 1 : 0;                   // lentera mengapung pelan
+    const naik = fase ? 1 : 0;
 
-    // bola lentera: cincin gelap + isi warna wilayah
     lingkaran(c, 8, 8 - naik, 7, n.gelap);
     lingkaran(c, 8, 8 - naik, 6, n.warna);
-    P(c, 3, 3 - naik, 2, 1, '#fffdf2');          // kilap kaca
+    P(c, 3, 3 - naik, 2, 1, '#fffdf2');
     P(c, 2, 5 - naik, 1, 1, '#fffdf2');
-    P(c, 5, 12 - naik, 6, 1, n.gelap);           // bayang bawah bola
+    P(c, 5, 12 - naik, 6, 1, n.gelap);
 
-    // glif matematika putih di tengah — bukan wajah, cuma lambang
     const g = GLIF[n.glif];
     const gw = g[0].length, gh = g.length;
     const gx = 8 - (gw >> 1), gy = 8 - (gh >> 1) - naik;
@@ -75,7 +60,6 @@ window.AKJELLY = (function () {
 
   function buatNpc(n) { return [npcOrb(n, 0), npcOrb(n, 1)]; }
 
-  /* ---------- simbol kecil melayang (pengganti kupu-kupu & burung) ---------- */
   const MINI = {
     plus: ['..#..', '..#..', '#####', '..#..', '..#..'],
     kali: ['#...#', '.#.#.', '..#..', '.#.#.', '#...#'],

@@ -1,9 +1,3 @@
-/* ============================================================
-   VALIDASI PROGRAMATIK BATCH 10 — p2-091..100 (k10 Peluang)
-   Struktur naskah, tema/objek terdaftar, registry, partikel,
-   regresi p1 + p2, anti-ramalan, kontrak 4-elemen.
-   Jalankan: node scripts/validasi_p2batch10.js -> SEMUA OK
-   ============================================================ */
 const fs = require('fs');
 const path = require('path');
 let pass = 0, fail = 0;
@@ -16,7 +10,6 @@ const repo = path.join(__dirname, '..', 'akiomidaspace');
 const ceritaSrc = fs.readFileSync(path.join(repo, 'js', 'cerita-data.js'), 'utf8');
 const pelSrc = fs.readFileSync(path.join(repo, 'js', 'pelajaran-main.js'), 'utf8');
 
-/* ---------- evaluasi cerita-data & pintu2-data (CERITA.untuk) ---------- */
 const pintu2Src = fs.readFileSync(path.join(repo, 'js', 'pintu2-data.js'), 'utf8');
 const pintu1Src = fs.readFileSync(path.join(repo, 'js', 'pintu1-data.js'), 'utf8');
 const sandbox = {};
@@ -48,7 +41,6 @@ const OBJEK_K10 = [
   'balaiJuaraPeluang', 'misiKoinDua', 'misiRodaBiru', 'misiKelerengLima', 'misiDuaKoinSeperempat',
 ];
 
-/* ---------- struktur tiap naskah baru ---------- */
 for (let b = 0; b < 10; b++) {
   const id = ids[b];
   const n = CERITA.untuk({ id });
@@ -67,7 +59,7 @@ for (let b = 0; b < 10; b++) {
     tes(`${id} st ${s.objek} objek terdaftar`, OBJEK_K10.includes(s.objek), s.objek);
     tes(`${id} st ${s.objek} judul ada`, !!s.judul);
   }
-  // angka kunci peluang muncul dalam teks naskah
+
   const gabungTeks = n.stasiun.map(s => (s.judul || '') + ' ' + s.teks).join(' ');
   const kataKunci = {
     'p2-091': ['nol', 'satu'], 'p2-092': ['satu per dua'], 'p2-093': ['satu per enam'],
@@ -77,27 +69,24 @@ for (let b = 0; b < 10; b++) {
   for (const k of kataKunci) tes(`${id} kata kunci '${k}'`, gabungTeks.includes(k));
 }
 
-/* ---------- TEMA_CFG + AMB_CFG + bakarLatar ---------- */
 for (const t of TEMA_K10) {
   tes(`TEMA_CFG ada: ${t}`, pelSrc.includes(`${t}: { glif:`));
   tes(`AMB_CFG ada: ${t}`, pelSrc.includes(`${t}: { jenis:`));
   tes(`bakarLatar ada: ${t}`, pelSrc.includes(`TEMA_NAMA === '${t}'`));
 }
 
-/* ---------- fungsi objek terdefinisi & terdaftar ---------- */
 for (const o of OBJEK_K10) {
   const fn = 'gambar' + o.charAt(0).toUpperCase() + o.slice(1);
   tes(`fungsi ${fn} terdefinisi`, new RegExp(`function ${fn}\\(`).test(pelSrc));
   tes(`registry ${o} terdaftar`, pelSrc.includes(`${o}: gambar`));
 }
-// tepat satu definisi per fungsi
+
 for (const o of OBJEK_K10) {
   const fn = 'gambar' + o.charAt(0).toUpperCase() + o.slice(1);
   const hitung = (pelSrc.match(new RegExp(`function ${fn}\\(`, 'g')) || []).length;
   tes(`fungsi ${fn} tepat 1 definisi`, hitung === 1, String(hitung));
 }
 
-/* ---------- registry kunci nol duplikat ---------- */
 const mRegistry = pelSrc.match(/const OBJEK_GAMBAR = \{([\s\S]*?)\n  \};/);
 tes('registry OBJEK_GAMBAR terbaca', !!mRegistry);
 if (mRegistry) {
@@ -117,7 +106,6 @@ if (mPartikel) {
   for (const o of OBJEK_K10) tes(`partikel memuat ${o}`, pk.includes(o));
 }
 
-/* ---------- nama tema anti-celah-grep ---------- */
 const TERLARANG = ['ramal', 'sihir', 'sakti', 'sulap', 'nasib', 'takdir', 'jimat', 'weton',
   'zodiak', 'horoskop', 'numerolog', 'primbon', 'mantra', 'peruntungan', 'astrolog', 'prediksi'];
 for (const t of TEMA_K10) {
@@ -129,7 +117,6 @@ for (const o of OBJEK_K10) {
   tes(`objek anti-celah ${o}`, !TERLARANG.some(w => low.includes(w)));
 }
 
-/* ---------- ANTI-RAMALAN pada 10 naskah baru + seluruh 200 ---------- */
 function bersihTeks(t) {
   const low = t.toLowerCase();
   return !TERLARANG.some(w => low.includes(w));
@@ -138,10 +125,10 @@ for (const id of ids) {
   const n = CERITA.untuk({ id });
   const semua = n.stasiun.map(s => (s.judul || '') + ' ' + s.teks).join(' ');
   tes(`${id} anti-ramalan`, bersihTeks(semua));
-  // determinisme angka: tidak menjanjikan hasil
+
   tes(`${id} tidak menjanjikan pasti utk hal acak`, !semua.includes('dijamin pasti'));
 }
-// seluruh naskah (regresi global): ekstrak semua teks dari sumber
+
 const semuaTeksNaskah = [...ceritaSrc.matchAll(/teks: '([^']*)'/g)].map(m => m[1]).join(' ')
   + ' ' + [...ceritaSrc.matchAll(/judul: '([^']*)'/g)].map(m => m[1]).join(' ')
   + ' ' + [...ceritaSrc.matchAll(/ucap: \[([^\]]*)\]/g)].map(m => m[1]).join(' ');
@@ -149,7 +136,7 @@ const pelanggaran = [];
 for (const w of TERLARANG) {
   const re = new RegExp(w, 'i');
   if (re.test(semuaTeksNaskah)) {
-    // cari konteks
+
     const idx = semuaTeksNaskah.toLowerCase().indexOf(w);
     pelanggaran.push(w + ' :: ...' + semuaTeksNaskah.slice(Math.max(0, idx - 30), idx + 40) + '...');
   }
@@ -159,7 +146,6 @@ if (pelanggaran.length === 1) {
   tes('satu-satunya pelanggaran = negasi pelindung "bukan mantra"', pelanggaran[0].includes('mantra') && /bukan mantra/i.test(pelanggaran[0]));
 }
 
-/* ---------- REGRESI: p1 100 naskah + p2 100 naskah ---------- */
 let p1ok = 0, p2ok = 0;
 for (let i = 1; i <= 100; i++) {
   const idP1 = 'p1-' + String(i).padStart(3, '0');
@@ -172,13 +158,11 @@ for (let i = 1; i <= 100; i++) {
 tes(`regresi p1: 100 tugu utuh (${p1ok})`, p1ok === 100);
 tes(`regresi p2: 100 tugu utuh (${p2ok})`, p2ok === 100);
 
-/* ---------- struktur P2 100 judul 10 penjuru ---------- */
 const toP2 = [...pintu2Src.matchAll(/id: 'p2-(\d{3})', k: (\d+)/g)];
 tes('P2 100 judul', toP2.length === 100, String(toP2.length));
 const penjuru = new Set(toP2.map(m => m[2]));
 tes('P2 10 penjuru', penjuru.size === 10, [...penjuru].join(','));
 
-/* ---------- glif k10 unik lintas seluruh naskah ---------- */
 const glifSemua = [...ceritaSrc.matchAll(/glif:\s*'([^']*)'/g)].map(m => m[1]);
 const glifK10 = ['0-1', 'A/G', '1/6', '0 1', '3/4', '3M1B', '=1', 'A-G', '4/5', '10/10'];
 for (const g of glifK10) {

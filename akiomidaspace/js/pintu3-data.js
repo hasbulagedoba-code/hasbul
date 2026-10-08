@@ -1,18 +1,6 @@
-/* =========================================================
-   PINTU 3 — PEGUNUNGAN POLA: DATA 100 JUDUL (pintu3-data.js)
-   Isi dunia Pintu 3: 10 penjuru (kategori) berisi 100 judul.
-   Struktur & helper sama persis dengan pintu2-data.js agar
-   mesin pelajaran.html bisa melayani ketiga pintu.
-   Wilayah: susunan dan bentuk — fungsi, barisan, eksponen,
-   matriks, trigonometri, vektor, limit, turunan, integral,
-   kombinatorika & data.
-   Syariah: semua contoh netral & muamalah adil; contoh
-   pertumbuhan memakai alam & bola pantul, bukan bunga riba.
-   ========================================================= */
 window.P3 = (function () {
   'use strict';
 
-  /* ---------- 10 penjuru pegunungan ---------- */
   const KATEGORI = [
     { id: 'k1',  nama: 'Fungsi & Grafik', label: ['FUNGSI', 'GRAFIK'],
       sub: 'Mesin masukan-keluaran', jumlah: 10,
@@ -56,9 +44,8 @@ window.P3 = (function () {
       ucap: ['Hitung semua', 'pilihannya!'] },
   ];
 
-  /* ---------- 100 judul (k = penjuru 1..10, n = nomor di penjuru) ---------- */
   const TOPIK = [
-    /* --- k1: Fungsi & Grafik (10) --- */
+
     { id: 'p3-001', k: 1, n: 1, judul: 'Mesin Fungsi',
       teaser: 'Ada mesin ajaib: masukkan bilangan, keluar bilangan baru. Aturannya tetap — masukan sama selalu menghasilkan keluaran yang sama. Itu rahasia fungsi!' },
     { id: 'p3-002', k: 1, n: 2, judul: 'Masukan & Keluaran',
@@ -80,7 +67,6 @@ window.P3 = (function () {
     { id: 'p3-010', k: 1, n: 10, judul: 'Tantangan Lembah Mesin',
       teaser: 'Lima misi menantimu: tebak aturan mesin dari tabelnya, gambar grafiknya, baca ceritanya. Jadilah ahli mesin lembah!' },
 
-    /* --- k2: Barisan & Deret (10) --- */
     { id: 'p3-011', k: 2, n: 1, judul: 'Barisan: Pola Berbaris',
       teaser: '2, 4, 6, 8: barisan adalah bilangan yang berbaris dengan aturan tetap. Setiap anggota tahu jaraknya ke tetangganya!' },
     { id: 'p3-012', k: 2, n: 2, judul: 'Barisan Tambah',
@@ -102,7 +88,6 @@ window.P3 = (function () {
     { id: 'p3-020', k: 2, n: 10, judul: 'Tantangan Puncak Pola',
       teaser: 'Lanjutkan barisan, temukan rumusnya, lalu buktikan dengan mengecek dua suku. Puncak pola menunggu pendaki teliti!' },
 
-    /* --- k3: Eksponen & Logaritma (10) --- */
     { id: 'p3-021', k: 3, n: 1, judul: 'Pangkat: Kali Berulang',
       teaser: '2³ = 2 × 2 × 2 = 8. Pangkat adalah perkalian yang diulang dengan setia. Angka kecil di atas itu ajakan mengali!' },
     { id: 'p3-022', k: 3, n: 2, judul: 'Ledakan Lipatan',
@@ -124,7 +109,6 @@ window.P3 = (function () {
     { id: 'p3-030', k: 3, n: 10, judul: 'Tantangan Tangga Pangkat',
       teaser: 'Naik turun tangga pangkat, buru akar, jawab teka-teki logaritma. Penjuru tertinggi gunung menunggumu!' },
 
-    /* --- k4: Matriks & Sistem Persamaan (10) --- */
     { id: 'p3-031', k: 4, n: 1, judul: 'Kotak Angka Berdaya',
       teaser: 'Matriks adalah kotak-kotak angka rapi, seperti papan skor. Angka yang tertata tak sekadar diam — ia siap bekerja!' },
     { id: 'p3-032', k: 4, n: 2, judul: 'Alamat Baris-Kolom',
@@ -146,7 +130,6 @@ window.P3 = (function () {
     { id: 'p3-040', k: 4, n: 10, judul: 'Tantangan Papan Angka',
       teaser: 'Jumlahkan, gandakan, sapa baris-kolom, dan temukan titik temu. Papan angka gunung menantimu!' },
 
-    /* --- k5: Trigonometri (10) --- */
     { id: 'p3-041', k: 5, n: 1, judul: 'Nama Tiga Sisi',
       teaser: 'Segitiga siku punya alas, tegak, dan sisi miring (yang paling panjang). Kenali tiga sahabat ini, hitung jadi lebih mudah!' },
     { id: 'p3-042', k: 5, n: 2, judul: 'Tangga Bersandar',
@@ -168,7 +151,6 @@ window.P3 = (function () {
     { id: 'p3-050', k: 5, n: 10, judul: 'Tantangan Pengukur Jauh',
       teaser: 'Ukur menara, sungai, dan jurang tanpa tali panjang: trigonometri adalah petakamu. Penjuru pengukur menantimu!' },
 
-    /* --- k6: Vektor & Geometri Ruang (10) --- */
     { id: 'p3-051', k: 6, n: 1, judul: 'Bilangan Berarah',
       teaser: '5 langkah ke timur beda dengan 5 langkah ke barat: vektor punya besar DAN arah. Bilangan yang bisa menunjuk jalan!' },
     { id: 'p3-052', k: 6, n: 2, judul: 'Panah Perjalanan',
@@ -190,7 +172,6 @@ window.P3 = (function () {
     { id: 'p3-060', k: 6, n: 10, judul: 'Tantangan Lintas Lembah',
       teaser: 'Petakan lintasan panah, gabungkan jalan berturut, temukan jalur paling cepat. Angkasa pegunungan menantimu!' },
 
-    /* --- k7: Limit (10) --- */
     { id: 'p3-061', k: 7, n: 1, judul: 'Langkah Setengah',
       teaser: 'Menuju tembok berjarak 1: sisa langkah 1/2, lalu 1/4, lalu 1/8... tak pernah melewati tembok. Langkah mengecil, total menuju satu!' },
     { id: 'p3-062', k: 7, n: 2, judul: '0,9 lalu 0,99 lalu 0,999',
@@ -212,7 +193,6 @@ window.P3 = (function () {
     { id: 'p3-070', k: 7, n: 10, judul: 'Tantangan Tepi Menuju',
       teaser: 'Kejar nilai yang bergerak: saat langkah makin kecil, jawaban makin jelas. Uji kemampuan mendekatmu di tepi gunung!' },
 
-    /* --- k8: Turunan (10) --- */
     { id: 'p3-071', k: 8, n: 1, judul: 'Laju yang Berubah',
       teaser: 'Air keran deras lalu pelan: laju perubahan bisa berubah-ubah. Turunan adalah alat mengukur laju di setiap saat!' },
     { id: 'p3-072', k: 8, n: 2, judul: 'Rata-rata vs Sesaat',
@@ -234,7 +214,6 @@ window.P3 = (function () {
     { id: 'p3-080', k: 8, n: 10, judul: 'Tantangan Lereng Curam',
       teaser: 'Ukur kemiringan di tiap titik lereng, temukan puncak dan lembah. Turunan kompas pendaki kalkulus!' },
 
-    /* --- k9: Integral (10) --- */
     { id: 'p3-081', k: 9, n: 1, judul: 'Menjumlah Potongan',
       teaser: 'Roti dipotong tipis-tipis lalu dijumlahkan kembali: totalnya tetap satu roti. Itulah jiwa integral — potong lalu jumlah!' },
     { id: 'p3-082', k: 9, n: 2, judul: 'Luas di Bawah Garis',
@@ -256,7 +235,6 @@ window.P3 = (function () {
     { id: 'p3-090', k: 9, n: 10, judul: 'Tantangan Lembah Luas',
       teaser: 'Potong, tipiskan, jumlahkan, temukan luas. Jadilah juru ukur lembah paling teliti di Pegunungan Pola!' },
 
-    /* --- k10: Kombinatorika & Data (10) --- */
     { id: 'p3-091', k: 10, n: 1, judul: 'Padanan Kemeja-Celana',
       teaser: '3 kemeja × 2 celana = 6 padanan. Setiap pilihan menyapa semua pilihan lainnya: aturan perkalian menghitung kemungkinan!' },
     { id: 'p3-092', k: 10, n: 2, judul: 'Barisan Antre Foto',
@@ -282,7 +260,7 @@ window.P3 = (function () {
   function topikKategori(k) { return TOPIK.filter(t => t.k === k); }
   function katById(id) { return KATEGORI.find(k => k.id === id) || null; }
   function topikById(id) { return TOPIK.find(t => t.id === id) || null; }
-  function topikLain(id, arah) {                      // judul berikut/sebelumnya dalam penjuru yang sama
+  function topikLain(id, arah) {
     const t = topikById(id);
     if (!t) return null;
     const daftar = topikKategori(t.k);

@@ -1,8 +1,3 @@
-/* ============================================================
-   VALIDASI PROGRAMATIK BATCH 9 — p2-081..090 (k9 Statistika)
-   + regresi seluruh naskah + audit syariah programatik
-   Jalankan: node scripts/validasi_p2batch9.js -> harus LULUS
-   ============================================================ */
 const fs = require('fs');
 const path = require('path');
 let pass = 0, fail = 0;
@@ -21,7 +16,6 @@ const ceritaSrc = fs.readFileSync(path.join(repo, 'js', 'cerita-data.js'), 'utf8
 const pelajaranSrc = fs.readFileSync(path.join(repo, 'js', 'pelajaran-main.js'), 'utf8');
 const p2Src = fs.readFileSync(path.join(repo, 'js', 'pintu2-data.js'), 'utf8');
 
-/* ---------- 1. Struktur 10 naskah k9 ---------- */
 const K9 = ['p2-081','p2-082','p2-083','p2-084','p2-085','p2-086','p2-087','p2-088','p2-089','p2-090'];
 const TEMA = ['kandangData','mejaGelasRata','susunBatuSore','rakSandalSiang','lapanganBatang','mejaSuhuSore','mejaKueMalam','geraiTabelPasar','duaLadangRentang','balaiRisetMalam'];
 const GLIF = ['7 angka','12:3','tengah','5 kali','6-3-9','20-28','40%','4x3','13-1','30'];
@@ -56,7 +50,6 @@ K9.forEach((id, i) => {
   tes(`${id} akhiran Mudah, bukan?`, tugu.teks.includes('Mudah, bukan?'));
 });
 
-/* ---------- 2. Tema, objek, glif di pelajaran-main ---------- */
 TEMA.forEach(t => {
   tes(`TEMA_CFG ${t}`, pelajaranSrc.includes(`${t}: { glif:`));
   tes(`AMB_CFG ${t}`, pelajaranSrc.includes(`${t}: { jenis:`));
@@ -69,7 +62,6 @@ semuaObjek.forEach(o => {
   tes(`partikel ${o}`, pelajaranSrc.includes(`${o}: '`));
 });
 
-/* ---------- 3. Keunikan: registry & partikel tanpa duplikat ---------- */
 function hitungKunci(src, sebelum, sesudah) {
   const awal = src.indexOf(sebelum);
   const akhir = src.indexOf(sesudah, awal);
@@ -84,10 +76,9 @@ tes('registry bertambah 41 (765 total)', reg.total === 765, String(reg.total));
 const par = hitungKunci(pelajaranSrc, 'const PARTIKEL_OBJEK = {', '};');
 tes('partikel tanpa duplikat', par.dup.length === 0, par.dup.join(','));
 tes('partikel bertambah 41 (267 total)', par.total === 267, String(par.total));
-// tiap kunci partikel k9 benar-benar ada di blok PARTIKEL_OBJEK
+
 semuaObjek.forEach(o => tes(`partikel k9 punya kunci blok: ${o}`, par.kunci.includes(o)));
 
-/* ---------- 4. Regresi: seluruh naskah p1 + p2 tetap utuh ---------- */
 for (let i = 1; i <= 100; i++) {
   const id = 'p1-' + String(i).padStart(3, '0');
   const n = CERITA.untuk({ id });
@@ -100,13 +91,12 @@ for (let i = 1; i <= 90; i++) {
   if (i <= 80) tes(`${id} tetap 5 stasiun`, n.stasiun.length === 5, String(n.stasiun.length));
 }
 
-/* ---------- 5. AUDIT SYARIAH PROGRAMATIK ---------- */
 const TERLARANG = ['ramal', 'meramal', 'ramalan', 'numerologi', 'prediksi', 'takdir', 'peruntungan', 'nasib', 'masa depan', 'astrolog', 'zodiak', 'horoskop', 'weton', 'jimat', 'primbon', 'sihir', 'sakti', 'sulap', 'mantra'];
 function auditTeks(teks, sumber) {
   const low = teks.toLowerCase();
   for (const t of TERLARANG) {
     if (low.includes(t)) {
-      // whitelist: negasi pelindung 'bukan mantra' (p1-095)
+
       if (t === 'mantra' && low.includes('bukan mantra')) continue;
       tes(`${sumber} bebas '${t}'`, false, teks.slice(Math.max(0, low.indexOf(t) - 30), low.indexOf(t) + 40));
     }
@@ -117,11 +107,10 @@ K9.forEach(id => {
   auditTeks(n.npc.ucap.join(' '), id + '-npc');
   n.stasiun.forEach(s => auditTeks(s.judul + ' ' + s.teks, id + '-' + s.objek));
 });
-// audit nama tema & objek anti-celah
+
 TEMA.forEach(t => TERLARANG.forEach(w => tes(`tema ${t} bebas '${w}'`, !t.toLowerCase().includes(w))));
 semuaObjek.forEach(o => TERLARANG.forEach(w => tes(`objek ${o} bebas '${w}'`, !o.toLowerCase().includes(w))));
 
-/* ---------- 6. Matematika dalam teks k9 (cakupan angka kunci) ---------- */
 const cekAngka = {
   'p2-082': ['dua belas', 'empat'],
   'p2-083': ['seratus', 'enam'],
@@ -139,10 +128,8 @@ Object.entries(cekAngka).forEach(([id, kata]) => {
   kata.forEach(k => tes(`${id} memuat '${k}'`, gabung.includes(k)));
 });
 
-/* ---------- 7. pintu2-data: 10 judul k9 & 10 judul k10 tetap ada ---------- */
 for (let i = 81; i <= 100; i++) tes(`p2-${String(i).padStart(3, '0')} terdaftar di P2`, p2Src.includes(`'p2-${String(i).padStart(3, '0')}'`));
 
-/* ---------- RINGKASAN ---------- */
 console.log(`\n===== HASIL: ${pass} LULUS, ${fail} GAGAL =====`);
 if (fail > 0) process.exit(1);
 console.log('VALIDASI BATCH 9 SEMUA LULUS.');

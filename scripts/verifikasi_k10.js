@@ -1,8 +1,3 @@
-/* ============================================================
-   VERIFIKASI MATEMATIKA k10 — PELUANG DASAR (p2-091..100)
-   Semua hitungan dalam 10 naskah diverifikasi SEBELUM menulis.
-   Jalankan: node scripts/verifikasi_k10.js -> harus SEMUA OK
-   ============================================================ */
 const fs = require('fs');
 const path = require('path');
 let pass = 0, fail = 0;
@@ -12,21 +7,18 @@ function tes(nama, kondisi, detail) {
 }
 const eq = (a, b) => Math.abs(a - b) < 1e-9;
 
-/* ---------- p2-091 Peluang itu apa: garis 0..1 ---------- */
 tes('p2-091 nol = mustahil (tak pernah terjadi)', 0 === 0);
 tes('p2-091 satu = pasti (selalu terjadi)', 1 === 1);
 tes('p2-091 garis 0..1: 0 < 1', 0 < 1);
 
-/* ---------- p2-092 Koin: dua sisi ---------- */
 const sisiKoin = ['angka', 'gambar'];
 tes('p2-092 koin punya tepat 2 sisi', sisiKoin.length === 2);
 tes('p2-092 peluang angka = 1/2', eq(1 / 2, 0.5));
 tes('p2-092 peluang gambar = 1/2', eq(1 / 2, 0.5));
 tes('p2-092 jumlah semua peluang = 1/2+1/2 = 1', eq(1 / 2 + 1 / 2, 1));
-// dua pihak sama adil: peluang kapten A = peluang kapten B
+
 tes('p2-092 adil: P(A) = P(B) = 1/2', eq(1 / 2, 1 / 2));
 
-/* ---------- p2-093 Dadu: enam kemungkinan ---------- */
 const sisiDadu = [1, 2, 3, 4, 5, 6];
 tes('p2-093 dadu punya tepat 6 sisi', sisiDadu.length === 6);
 tes('p2-093 peluang tiap sisi = 1/6', eq(1 / 6, 0.1666666666666667));
@@ -35,23 +27,20 @@ tes('p2-093 angka 4 muncul 1 dari 6 kemungkinan', sisiDadu.filter(s => s === 4).
 tes('p2-093 tak ada sisi istimewa: semua 1/6',
   sisiDadu.every(() => eq(1 / 6, 1 / 6)));
 
-/* ---------- p2-094 Pasti & Mustahil ---------- */
 tes('p2-094 matahari terbit dari timur = peluang 1 (pasti)', 1 === 1);
 tes('p2-094 koin berdiri tegak ~ peluang 0 (hampir mustahil)', eq(0, 0));
 tes('p2-094 0 < peluang koin muncul (1/2) < 1', 0 < 0.5 && 0.5 < 1);
 
-/* ---------- p2-095 Roda putar: merah 3/4, biru 1/4 ---------- */
-const roda = { merah: 3, biru: 1 }; // perempat roda
+const roda = { merah: 3, biru: 1 };
 tes('p2-095 roda terbagi 4 perempat', roda.merah + roda.biru === 4);
 tes('p2-095 peluang merah = 3/4', eq(roda.merah / 4, 0.75));
 tes('p2-095 peluang biru = 1/4', eq(roda.biru / 4, 0.25));
 tes('p2-095 3/4 + 1/4 = 1 (roda penuh)', eq(3 / 4 + 1 / 4, 1));
 tes('p2-095 irisan merah lebih lebar -> lebih sering', roda.merah > roda.biru);
-// luas irisan = peluang: 3/4 lingkaran = 270 derajat
+
 tes('p2-095 irisan merah 270 derajat, biru 90 derajat',
   eq(roda.merah / 4 * 360, 270) && eq(roda.biru / 4 * 360, 90));
 
-/* ---------- p2-096 Kantong kelereng: 3 merah, 1 biru ---------- */
 const k96 = { merah: 3, biru: 1 };
 const tot96 = k96.merah + k96.biru;
 tes('p2-096 total kelereng = 4', tot96 === 4);
@@ -59,20 +48,18 @@ tes('p2-096 peluang merah = 3/4', eq(k96.merah / tot96, 0.75));
 tes('p2-096 peluang biru = 1/4', eq(k96.biru / tot96, 0.25));
 tes('p2-096 3/4 + 1/4 = 1 (tak ada yang kabur)', eq(k96.merah / tot96 + k96.biru / tot96, 1));
 
-/* ---------- p2-097 Peluang sebagai pecahan: 2 merah 4 biru ---------- */
 const k97 = { merah: 2, biru: 4 };
 const tot97 = k97.merah + k97.biru;
 tes('p2-097 total kelereng = 6', tot97 === 6);
 tes('p2-097 peluang merah = 2/6', eq(k97.merah / tot97, 2 / 6));
 tes('p2-097 peluang biru = 4/6', eq(k97.biru / tot97, 4 / 6));
 tes('p2-097 2/6 + 4/6 = 1', eq(2 / 6 + 4 / 6, 1));
-// pagar 0..1: semua peluang di antara nol dan satu
+
 const semuaP = [0.5, 1 / 6, 0.75, 0.25, 2 / 6, 4 / 6];
 tes('p2-097 semua peluang di pagar 0..1', semuaP.every(p => p > 0 && p < 1));
-// 7/6 > 1 = mustahil sebagai peluang; minus tak mungkin
+
 tes('p2-097 7/6 > 1 tidak sah sebagai peluang', 7 / 6 > 1);
 
-/* ---------- p2-098 Mendaftar kemungkinan: dua koin ---------- */
 const hasilDuaKoin = ['A-A', 'A-G', 'G-A', 'G-G'];
 tes('p2-098 daftar dua koin = 4 hasil (bukan 3!)', hasilDuaKoin.length === 4);
 tes('p2-098 A-G dan G-A adalah dua hasil berbeda', hasilDuaKoin[1] !== hasilDuaKoin[2]);
@@ -80,10 +67,9 @@ tes('p2-098 peluang dua angka = 1/4', eq(1 / 4, 0.25));
 tes('p2-098 peluang campur = 2/4', eq(2 / 4, 0.5));
 tes('p2-098 campur 2x lipat dua angka', eq(2 / 4, 2 * (1 / 4)));
 tes('p2-098 1/4 + 2/4 + 1/4 = 1', eq(1 / 4 + 2 / 4 + 1 / 4, 1));
-// daftar sistematis: koin1 x koin2 = 2 x 2 = 4
+
 tes('p2-098 2 koin x 2 sisi = 4 daftar', 2 * 2 === 4);
 
-/* ---------- p2-099 Peluang di sekitar kita: 8 dari 10 hujan ---------- */
 const catat99 = { hujan: 8, cerah: 2 };
 const tot99 = catat99.hujan + catat99.cerah;
 tes('p2-099 catatan 10 sore mendung', tot99 === 10);
@@ -92,25 +78,22 @@ tes('p2-099 4/5 = 0.8 (dekat ke 1, bukan 1)', 0.8 > 0.5 && 0.8 < 1);
 tes('p2-099 8/10 + 2/10 = 1', eq(8 / 10 + 2 / 10, 1));
 tes('p2-0999 peluang cerah 2/10 tak pernah nol', eq(catat99.cerah / tot99, 0.2) && catat99.cerah / tot99 > 0);
 
-/* ---------- p2-100 Tantangan: lima misi ---------- */
-// misi1 koin 1/2 ; misi2 dadu 1/6
 tes('p2-100 misi1 koin = 1/2', eq(1 / 2, 0.5));
 tes('p2-100 misi2 dadu enam = 1/6', eq(1 / 6, 1 / 6));
-// misi3 roda biru 1/4 + merah 3/4 = 1
+
 tes('p2-100 misi3 1/4 + 3/4 = 1', eq(1 / 4 + 3 / 4, 1));
-// misi4 kantong 2 merah 3 biru: 2/5 + 3/5 = 1
+
 const k100 = { merah: 2, biru: 3 };
 const totK100 = k100.merah + k100.biru;
 tes('p2-100 misi4 total 5 kelereng', totK100 === 5);
 tes('p2-100 misi4 peluang merah 2/5 & biru 3/5',
   eq(k100.merah / totK100, 2 / 5) && eq(k100.biru / totK100, 3 / 5));
 tes('p2-100 misi4 2/5 + 3/5 = 1', eq(2 / 5 + 3 / 5, 1));
-// misi5 dua koin dua angka = 1/4, daftar 4
+
 tes('p2-100 misi5 dua angka = 1/4 & daftar 4', eq(1 / 4, 0.25) && hasilDuaKoin.length === 4);
-// seratus judul pintu dua: 10 penjuru x 10 judul
+
 tes('p2-100 10 penjuru x 10 judul = 100 judul P2', 10 * 10 === 100);
 
-/* ---------- KEUNIKAN GLIF NPC lintas seluruh naskah ---------- */
 const repo = path.join(__dirname, '..', 'akiomidaspace');
 const cerita = fs.readFileSync(path.join(repo, 'js', 'cerita-data.js'), 'utf8');
 const glifSemua = [...cerita.matchAll(/glif:\s*'([^']*)'/g)].map(m => m[1]);
