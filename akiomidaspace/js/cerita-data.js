@@ -5912,6 +5912,286 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p3-011 · Barisan: Pola Berbaris — pagi padang barisan batu ----- */
+    'p3-011': {
+      tema: 'padangBarisan',
+      npc: { glif: '2 4 6', ucap: ['Ikuti', 'barisannya!'] },
+      stasiun: [
+        {
+          objek: 'batuBarisEnam', judul: 'Enam Batu Berbaris Rapi',
+          teks: 'Pagi di padang pegunungan, enam batu putih berbaris lurus di rumput. Di tiap batu ada angka: 2, 4, 6, 8, 10, 12. Mereka berbaris seperti anak pendaki yang berangkat mendaki — rapi, tak ada yang melompat ke depan.',
+        },
+        {
+          objek: 'papanJarakSama', judul: 'Rahasia Ada di Jarak',
+          teks: 'Papan kecil di tepi barisan menulis petunjuk: ukur jarak antar tetangga! 4 sedikit di depan 2 sejauh dua langkah, 6 sejauh dua langkah dari 4, terus begitu sampai akhir. Rahasia barisan bukan di angkanya, tapi di jarak antar tetangganya yang selalu sama.',
+        },
+        {
+          objek: 'jejakLangkahTetap', judul: 'Jejak Pendaki Berjarak Tetap',
+          teks: 'Di tanah becek tercetak jejak kaki seorang pendaki, dan jarak setiap jejak itu sama panjang. Karena langkahnya tetap, jejaknya jadi barisan yang rapi. Barisan angka pun begitu: satu langkah tetap, anggotanya ikut tertata.',
+        },
+        {
+          objek: 'papanRahasiaBarisan', judul: 'Tidak Perlu Hitung Semua',
+          teks: 'Papan besar di ujung padang menulis tantangan: batu kesepuluh angkanya berapa? Tidak perlu menghitung satu-satu — cukup lihat tetangga terakhirnya. Dari 12, satu langkah lagi berarti 12 + 2 = 14. Temukan jaraknya, maka seluruh barisan jadi milikmu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Barisan Itu Jejak Berjarak Sama!',
+          teks: 'Angka boleh berganti-ganti, tapi jarak antar tetangganya tetap setia. Owalah, ternyata begini toh — barisan hanyalah jejak langkah yang berjarak sama, tinggal kita baca. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-012 · Barisan Tambah — siang tangga tambah tiga ----- */
+    'p3-012': {
+      tema: 'tanggaTambah',
+      npc: { glif: '+3', ucap: ['Tambah tiga', 'tiap langkah!'] },
+      stasiun: [
+        {
+          objek: 'tanggaTambahTiga', judul: 'Tangga Batu Bernomor',
+          teks: 'Siang di lereng gunung, sebuah tangga batu menanjak dengan angka di tiap anak tangganya: 5, 8, 11, 14. Naik satu anak tangga, angkanya bertambah tiga. Pendaki kecil mencoba melompati satu anak tangga — angkanya langsung menambah enam!',
+        },
+        {
+          objek: 'papanBedaTetap', judul: 'Beda Itu Nama Jaraknya',
+          teks: 'Di papan kayu tertulis satu kata penting: BEDA = 3. Beda adalah nama jarak antar tetangga dalam barisan tambah. Selama bedanya tetap, barisan itu disebut barisan tambah yang setia — ia tak pernah berubah pikiran.',
+        },
+        {
+          objek: 'batuSukuBerikut', judul: 'Batu Keempat Menunggu Angka',
+          teks: 'Ada satu batu kosong menunggu di atas: batu setelah 14. Mau tahu angkanya? Tambah saja tiga: 14 + 3 = 17. Batu itu menyala senang karena akhirnya punya nama.',
+        },
+        {
+          objek: 'papanCekDuaKali', judul: 'Aturan Pendaki: Cek Dua Kali',
+          teks: 'Papan terakhir mengajarkan kebiasaan pendaki hebat: sebelum percaya, cek dua kali. 5 + 3 = 8 dan 8 + 3 = 11 — dua langkah sudah sama, berarti bedanya benar-benar setia. Hitungan itu hanya alat. Bantu saja — dan alat yang diperiksa dua kali tak pernah menyesatkan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Barisan Tambah Itu Tangga Berbeda Tetap!',
+          teks: 'Naik satu langkah, tambah tiga; naik lagi, tambah tiga lagi. Owalah, ternyata begini toh — barisan tambah hanyalah tangga yang jarak antar anak tangganya selalu sama. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-013 · Barisan Gandakan — sore ladang biji bertunas ----- */
+    'p3-013': {
+      tema: 'ladangGandakan',
+      npc: { glif: 'ganda', ucap: ['Dua kali', 'tiap baris!'] },
+      stasiun: [
+        {
+          objek: 'bijiGandakan', judul: 'Satu Biji Bertunas Jadi Dua',
+          teks: 'Sore di ladang pegunungan, petani menunjukkan biji ajaib milik alam: satu biji bertunas menjadi dua tanaman. Dua tanaman itu nanti berbuah biji lagi, dan lagi-lagi tiap biji menjadi dua. Alam punya cara tumbuhnya sendiri — dan cara itu bisa kita hitung.',
+        },
+        {
+          objek: 'tumpukBijiLima', judul: 'Papan Biji Lima Baris',
+          teks: 'Di papan ladang tersusun catatan biji: baris pertama 1, baris kedua 2, baris ketiga 4, baris keempat 8, baris kelima 16. Tiap baris dua kali baris sebelumnya — bukan bertambah, tapi digandakan. Coba sentuh hitungannya: 8 dikali dua jadi 16, dan seterusnya tanpa gagal.',
+        },
+        {
+          objek: 'papanLedakanDua', judul: 'Tumbuhnya Meledak!',
+          teks: 'Petani bertanya: kira-kira baris kesepuluh berapa? Lanjutkan: 32, 64, 128, 256, 512! Dari satu biji kecil menjadi lima ratus dua belas — tumbuhnya meledak-leledak. Barisan gandakan memang suka memberi kejutan yang besar.',
+        },
+        {
+          objek: 'papanSukuKesepuluh', judul: 'Bandingkan: Tambah vs Gandakan',
+          teks: 'Papan banding di bawah pohon: kalau biji hanya bertambah dua tiap baris, baris kesepuluh isinya cuma 20. Tapi karena digandakan, isinya 512 — dua puluh lima kali lipatnya! Hitungan itu hanya alat. Bantu saja — dan alat ini menunjukkan betapa hebatnya pertumbuhan alam.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Gandakan Itu Tumbuh Meledak!',
+          teks: 'Satu jadi dua, dua jadi empat, empat jadi delapan — tanpa berhenti. Owalah, ternyata begini toh — barisan gandakan hanyalah cerita alam yang tiap langkahnya dua kali lipat. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-014 · Suku ke-n — malam menara rumus ----- */
+    'p3-014': {
+      tema: 'menaraSuku',
+      npc: { glif: '3n+1', ucap: ['Langsung', 'lompat!'] },
+      stasiun: [
+        {
+          objek: 'papanTigaNPlusSatu', judul: 'Papan Menyala: 3n + 1',
+          teks: 'Malam di menara pendakian, sebuah papan menyala dengan tulisan 3n + 1. Huruf n adalah nomor suku: mau suku yang mana, tinggal sebut nomornya. Ini bukan sulap — ini rumus, mesin pelompat barisan.',
+        },
+        {
+          objek: 'lompatanRumusCepat', judul: 'Uji Rumusnya Dulu',
+          teks: 'Pendaki yang bijak tak langsung percaya — ia menguji. Suku pertama: 3 × 1 + 1 = 4. Suku kedua: 3 × 2 + 1 = 7. Suku ketiga: 3 × 3 + 1 = 10. Tiga-tiganya pas dengan barisan 4, 7, 10 — rumus ini setia.',
+        },
+        {
+          objek: 'lampuSukuSeratus', judul: 'Suku Ke-100 Menyala!',
+          teks: 'Tantangan menara: suku keseratus angkanya berapa? Menghitung satu-satu butuh seratus langkah. Dengan rumus: 3 × 100 + 1 = 301! Lampu suku keseratus langsung menyala, secepat kedipan mata.',
+        },
+        {
+          objek: 'papanTanpaHitungSatu', judul: 'Tangga Lompat Pendaki',
+          teks: 'Papan terakhir menulis perbandingan dua pendaki: yang satu naik tangga satu anak demi satu anak, yang lain memakai tangga lompat bernama rumus. Keduanya sampai — tapi yang memakai rumus sampai duluan dan tak kelelahan. Itulah gunanya suku ke-n.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rumus Itu Tangga Lompat!',
+          teks: 'Mau suku ke seratus? Masukkan 100, keluar 301. Owalah, ternyata begini toh — suku ke-n hanyalah tangga lompat yang membawamu langsung ke anggota mana pun. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-015 · Rahasia Pasangan — malam api unggun 5050 ----- */
+    'p3-015': {
+      tema: 'apiUnggunPasangan',
+      npc: { glif: '5050', ucap: ['Pasangkan', 'ujungnya!'] },
+      stasiun: [
+        {
+          objek: 'apiUnggunCerita', judul: 'Cerita di Depan Api Unggun',
+          teks: 'Malam hangat di kemah pendakian, api unggun berdesir. Pembimbing mulai bercerita: ada seorang anak yang diminta guru menjumlahkan 1 + 2 + 3 sampai 100. Semua temannya menggaruk kepala — tapi anak itu selesai dalam sekejap mata!',
+        },
+        {
+          objek: 'kartuPasanganSatuSeratus', judul: 'Rahasianya: Pasangkan Ujungnya',
+          teks: 'Anak itu memasangkan angka dari dua ujung: 1 + 100 = 101, lalu 2 + 99 = 101, lalu 3 + 98 = 101. Semua pasangan berjumlah 101 yang sama! Ujung kiri bertemu ujung kanan, dan setiap pertemuan selalu berjarak sama.',
+        },
+        {
+          objek: 'papanLimaPuluhPasang', judul: 'Lima Puluh Pasangan',
+          teks: 'Berapa banyak pasangan? Angka 1 sampai 100 ada seratus buah, tiap pasangan memakan dua angka, jadi ada 50 pasangan. Maka jumlahnya 50 × 101 = 5050. Selesai — tanpa menghitung panjang lebar!',
+        },
+        {
+          objek: 'papanHasilLimaNolLima', judul: 'Cara Lurus vs Cara Pasangan',
+          teks: 'Coba uji dengan jumlah kecil dulu: 1 sampai 10. Cara pasangan: 1+10 = 11, ada 5 pasangan, jadi 55 — dan hitung lurus pun benar 55. Hitungan itu hanya alat. Bantu saja — dan pasangan membuat alatnya ringan dibawa.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pasangan Ujung Menjumlah Cepat!',
+          teks: 'Seratus angka selesai dengan lima puluh pasangan berjumlah 101. Owalah, ternyata begini toh — menjumlah barisan hanyalah soal memasangkan ujung-ujungnya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-016 · Deret Gandakan — pagi ladang biji kotak ----- */
+    'p3-016': {
+      tema: 'ladangBijiDua',
+      npc: { glif: '1+2+4', ucap: ['Jumlahkan', 'barisannya!'] },
+      stasiun: [
+        {
+          objek: 'kotakBijiBaris', judul: 'Kotak Biji Berbaris',
+          teks: 'Pagi di ladang, lima kotak kayu berbaris di atas papan: isinya 1, 2, 4, 8, dan 16 biji. Petani menantang: kalau semua kotak digabung, berapa jumlah bijinya? Hitung bersama-sama, siapa tahu ada rahasianya.',
+        },
+        {
+          objek: 'papanSatuKurang', judul: 'Jumlahnya Selalu Satu Kurang',
+          teks: 'Mulai dari yang kecil: 1 + 2 = 3 — dan kotak berikutnya berisi 4. Jumlahnya satu kurang! Coba lagi: 1 + 2 + 4 = 7, dan berikutnya 8. Satu kurang lagi! Pola ini muncul terus seperti penjaga yang setia.',
+        },
+        {
+          objek: 'gandakanTumpukDua', judul: '31 Mendekati 32',
+          teks: 'Jumlah semua kotak: 1 + 2 + 4 + 8 + 16 = 31. Dan kotak rahasia berikutnya kalau ditambah pasti berisi 32. Jumlahnya 31 — satu kurang dari 32, selalu begitu, sejauh mana pun barisannya dijalankan.',
+        },
+        {
+          objek: 'papanRahasiaDuaKali', judul: 'Rahasia Dua Kali Kurang Satu',
+          teks: 'Papan terakhir membocorkan jurusnya: jumlahnya selalu dua kali anggota terakhir, kurang satu. Dua kali 16 kurang satu = 31 — pas! Sekarang kamu bisa menjawab tanpa menjumlah ulang dari awal. Petani tertawa lega: jurus ini menghemat waktunya tiap pagi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jumlahnya Satu Kurang dari Berikutnya!',
+          teks: '1+2+4 jadi 7, dan 7 tinggal selisih satu dari 8. Owalah, ternyata begini toh — deret gandakan punya rahasia manis: jumlahnya selalu dua kali anggota terakhir, kurang satu. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-017 · Bilangan Segitiga — sore halaman kursi segitiga ----- */
+    'p3-017': {
+      tema: 'halamanKursiSegitiga',
+      npc: { glif: '1 3 6', ucap: ['Susun', 'segitiga!'] },
+      stasiun: [
+        {
+          objek: 'kursiSusunSegitiga', judul: 'Kursi Pertunjukan Berbentuk Segitiga',
+          teks: 'Sore di halaman panggung gunung, kursi-kursi disusun untuk pertunjukan: baris paling depan 1 kursi, di belakangnya 2 kursi, lalu 3, lalu 4. Dari jauh susunannya membentuk segitiga besar yang rapi sekali. Bentuk inilah yang membuat barisan angkanya disebut bilangan segitiga.',
+        },
+        {
+          objek: 'barisKursiBawah', judul: 'Menghitung Kursi Tiap Susunan',
+          teks: 'Berapa kursi tiap ukuran? Segitiga kecil: cuma 1. Segitiga dua baris: 1 + 2 = 3. Tiga baris: 6. Empat baris: 10. Maka lahir barisan bilangan segitiga: 1, 3, 6, 10 — mereka disebut segitiga karena benar-benar bisa disusun jadi segitiga.',
+        },
+        {
+          objek: 'papanTambahBarisBaru', judul: 'Tambah Baris, Bedanya Tumbuh',
+          teks: 'Perhatikan cara mereka bertumbuh: dari 1 ke 3 nambah 2, dari 3 ke 6 nambah 3, dari 6 ke 10 nambah 4. Tiap baris baru panjangnya bertambah satu. Beda yang tumbuh teratur — itu tanda bilangan segitiga.',
+        },
+        {
+          objek: 'papanSepuluhKursi', judul: 'Dua Segitiga Jadi Kotak!',
+          teks: 'Kejutan papan terakhir: bawa dua segitiga sama, balikkan satunya, dan satukan — jadilah KOTAK! 1 + 3 = 4 = 2 × 2, lalu 3 + 6 = 9 = 3 × 3, lalu 6 + 10 = 16 = 4 × 4. Segitiga ternyata menyimpan kotak di dalam dirinya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Segitiga Menyimpan Kotak!',
+          teks: '1, 3, 6, 10 — dan dua segitiga bertemu jadi kotak sempurna. Owalah, ternyata begini toh — bilangan segitiga hanyalah kursi yang berbaris mengerucut rapi. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-018 · Bilangan Kuadrat — siang kebun petak kuadrat ----- */
+    'p3-018': {
+      tema: 'kebunPetakKuadrat',
+      npc: { glif: 'n x n', ucap: ['Sisi kali', 'sisi!'] },
+      stasiun: [
+        {
+          objek: 'petakSatuSatu', judul: 'Petak Kebun Pertama',
+          teks: 'Siang di kebun sayur pegunungan, petani menunjukkan petak pertamanya: satu kotak kecil bersisi satu. Isinya satu tanaman — 1 × 1 = 1. Semua cerita besar selalu mulai dari langkah kecil yang rapi.',
+        },
+        {
+          objek: 'petakDuaDua', judul: 'Diperluas Dua Kali Dua',
+          teks: 'Tahun berikutnya petaknya diperluas: dua langkah kali dua langkah, isinya 2 × 2 = 4 tanaman. Bentuknya tetap kotak — hanya saja lebih besar dan lebih gemuk hasilnya. Hitung sendiri di tanah: dua kotak ke bawah, dua kotak ke samping, totalnya empat tanaman.',
+        },
+        {
+          objek: 'petakTigaTiga', judul: 'Sisi Tumbuh, Isi Melompat',
+          teks: 'Lalu 3 × 3 = 9, dan 4 × 4 = 16. Catatan kebun pun berbaris: 1, 4, 9, 16 — bilangan kuadrat, angka yang benar-benar berbentuk kotak. Sisi hanya tumbuh satu, tapi isinya melompat jauh.',
+        },
+        {
+          objek: 'papanSisiKaliSisi', judul: 'Kejutan: Selisihnya Bilangan Ganjil!',
+          teks: 'Papan di pagar membocorkan rahasia: lihat selisih antar kotak! 4 − 1 = 3, lalu 9 − 4 = 5, lalu 16 − 9 = 7 — bilangan ganjil berbaris rapi: 3, 5, 7. Maka kotak berikutnya pasti 16 + 9 = 25, dan benar 25 = 5 × 5. Kuadrat tumbuh dengan langkah ganjil!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kuadrat Tumbuh Berlangkah Ganjil!',
+          teks: '1, 4, 9, 16 — dengan selisih 3, 5, 7 yang tak pernah lari dari barisannya. Owalah, ternyata begini toh — bilangan kuadrat hanyalah petak kotak yang sisinya tumbuh satu per satu. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-019 · Pola di Sekitar Kita — sore taman pola ----- */
+    'p3-019': {
+      tema: 'tamanPolaSenja',
+      npc: { glif: 'pola', ucap: ['Burulah', 'polanya!'] },
+      stasiun: [
+        {
+          objek: 'bungaKelopakLima', judul: 'Kelopak yang Setia',
+          teks: 'Sore di taman pegunungan, bunga-bunga biru mekar di tepi jalan. Hitung kelopaknya: satu, dua, tiga, empat, lima. Bunga sebelahnya? Juga lima. Bunga jenis ini memang setia pada polanya — tak pernah gila-gilaan menghitung kelopak.',
+        },
+        {
+          objek: 'papanNadaBerulang', judul: 'Nada yang Berulang',
+          teks: 'Di panggung taman, seseorang memetik gitar: do re mi fa sol la si, lalu kembali lagi ke do. Tangga nada berputar seperti roda — pola yang sama datang kembali setelah tujuh anak tangga. Telinga yang teliti bisa menangkap polanya.',
+        },
+        {
+          objek: 'kalenderKabisatEmpat', judul: 'Kalender Juga Berpola',
+          teks: 'Papan pengumuman taman menempel kalender: tahun kabisat datang berjarak empat tahun — 2024, lalu 2028, lalu 2032. Pola waktu yang bisa dihitung dan dicek, bukan ditebak-tebak. Karena itu kalender bisa disiapkan bertahun-tahun di muka.',
+        },
+        {
+          objek: 'papanPolaSembunyi', judul: 'Pemburu Pola Tak Pernah Kehabisan',
+          teks: 'Papan terakhir menulis: pola menyembunyi di mana-mana — di kelopak, di nada, di kalender, di anak tangga. Alat pemburu pola cuma tiga: mencatat, membandingkan, dan mengecek ulang. Hitungan itu hanya alat. Bantu saja — dan pola yang dicek tak pernah bohong.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pola Ada di Mana-mana!',
+          teks: 'Kelopak lima, nada berulang, kabisat berjarak empat — semua berbaris rapi kalau kita rajin mencatat. Owalah, ternyata begini toh — dunia penuh barisan yang menunggu ditemukan mata yang teliti. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-020 · Tantangan Puncak Pola — malam puncak lima api ----- */
+    'p3-020': {
+      tema: 'puncakPolaMalam',
+      npc: { glif: 'misi', ucap: ['Lima api', 'menantimu!'] },
+      stasiun: [
+        {
+          objek: 'limaApiMisiPuncak', judul: 'Lima Api di Puncak',
+          teks: 'Malam di puncak Pegunungan Pola, lima api unggun menyala melingkar, satu untuk satu misi. Angin gunung berhembus pelan, api bergoyang seperti mengajak. Pendaki yang menyelesaikan satu misi akan melihat apinya berubah terang penuh.',
+        },
+        {
+          objek: 'tekaBarisanPuncak', judul: 'Misi Satu dan Dua',
+          teks: 'Api pertama menantang: lanjutkan barisan 20, 22, 24 — jaraknya dua, maka berikutnya 26. Api kedua menantang: suku ke-50 dari barisan 2n + 3? Masukkan lima puluh: 2 × 50 + 3 = 103. Dua api kini menyala terang.',
+        },
+        {
+          objek: 'papanSukuKeSeratus', judul: 'Misi Tiga dan Empat',
+          teks: 'Api ketiga: jumlah 1 sampai 10? Pasangkan ujungnya: 5 pasangan × 11 = 55. Api keempat: 1 + 2 + 4 + 8 + 16 + 32 = 63 — satu kurang dari 64, seperti biasa. Rahasia-rahasia lamamu kini bekerja untukmu.',
+        },
+        {
+          objek: 'gerbangPuncakPola', judul: 'Misi Lima dan Gerbang Puncak',
+          teks: 'Api kelima: segitiga ke-berapa pun tersusun dari 1 + 2 + 3 + 4 + 5 = 15 kursi. Lima api terang penuh, dan gerbang batu puncak terbuka perlahan. Udara dingin puncak terasa manis bagi yang berlatih dengan jujur.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Pemburu Pola Puncak!',
+          teks: 'Barisan dilanjutkan, rumus dilompati, jumlah dipasangkan, deret ditebak, segitiga disusun — lima api, lima kemenangan. Sepuluh dunia puncak pola kini pernah kamu jelajahi. Owalah, ternyata begini toh — barisan dan deret hanyalah jejak beraturan yang setia menunggu dibaca. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */
