@@ -1,0 +1,175 @@
+    else if (TEMA_NAMA === 'padangDuaPanah') {
+      P(c, 0, 0, W, 46, '#ffefc4');
+      P(c, 0, 46, W, 46, '#f8e6b4');
+      P(c, 0, 92, W, 46, '#f0dca4');
+      P(c, 0, 138, W, 44, '#e8d294');
+      lingkaran(c, 64, 40, 10, '#ffd166');
+      gunungSaljuDi(c, 356, 84, 56, 182, '#b8a488', '#f6eeda');
+      pinusDi(c, '#5c7a44', '#4e6c3a');
+      P(c, 186, 156, 6, 34, '#8a7256');
+      P(c, 150, 160, 34, 4, '#9a8266');
+      P(c, 196, 160, 34, 4, '#9a8266');
+      ctx.globalAlpha = 0.5; lingkaran(c, 142, 158, 3, '#ffe9a3'); lingkaran(c, 238, 158, 3, '#ffe9a3'); ctx.globalAlpha = 1;
+      tanah(c, '#d8cc9c', '#ccc092', '#e2d8a8');
+      jalan(c, '#d4c894', '#c8bc88', '#cec49a', '#e0d6ac');
+    }
+
+    else if (TEMA_NAMA === 'jalanRumahSekolah') {
+      P(c, 0, 0, W, 46, '#d8f0fa');
+      P(c, 0, 46, W, 46, '#cce8f4');
+      P(c, 0, 92, W, 46, '#c0e0ee');
+      P(c, 0, 138, W, 44, '#b4d8e8');
+      lingkaran(c, 396, 40, 9, '#fff3b0');
+      gunungSaljuDi(c, 60, 80, 54, 182, '#9ab4c8', '#f0f8fc');
+      pinusDi(c, '#4a7a52', '#3e6c46');
+      P(c, 84, 158, 44, 34, '#c8845c');
+      P(c, 80, 150, 52, 10, '#a85c3a');
+      P(c, 100, 174, 10, 18, '#6e4a30');
+      P(c, 300, 138, 56, 54, '#b8c4d8');
+      P(c, 296, 130, 64, 10, '#8a94b0');
+      P(c, 310, 148, 10, 12, '#4a5878'); P(c, 330, 148, 10, 12, '#4a5878');
+      P(c, 310, 166, 10, 12, '#4a5878'); P(c, 330, 166, 10, 12, '#4a5878');
+      ctx.globalAlpha = 0.5; lingkaran(c, 328, 124, 3, '#ffe9a3'); ctx.globalAlpha = 1;
+      tanah(c, '#c6d6b0', '#bacaa4', '#d2e0bc');
+      jalan(c, '#ccdcbe', '#c0d0b2', '#c6d6b8', '#d8e6ca');
+    }
+
+    else if (TEMA_NAMA === 'lorongPanahSambung') {
+      P(c, 0, 0, W, 46, '#eef8e0');
+      P(c, 0, 46, W, 46, '#e4f0d0');
+      P(c, 0, 92, W, 46, '#d8e8c4');
+      P(c, 0, 138, W, 44, '#cce0b8');
+      lingkaran(c, 84, 42, 9, '#ffd166');
+      gunungSaljuDi(c, 396, 84, 50, 182, '#9aa884', '#f0f6e4');
+      pinusDi(c, '#567a48', '#486c3c');
+      P(c, 120, 160, 26, 4, '#6e5a44');
+      P(c, 146, 168, 26, 4, '#6e5a44');
+      P(c, 172, 176, 26, 4, '#6e5a44');
+      ctx.globalAlpha = 0.5; lingkaran(c, 134, 158, 3, '#ffe9a3'); ctx.globalAlpha = 1;
+      tanah(c, '#ccd8b0', '#c0cca4', '#d8e4bc');
+      jalan(c, '#d4e0bc', '#c8d4b0', '#cedab4', '#dee8c8');
+    }
+
+    else if (TEMA_NAMA === 'lapanganPanahKembar') {
+      P(c, 0, 0, W, 46, '#fffdf2');
+      P(c, 0, 46, W, 46, '#f2f8ea');
+      P(c, 0, 92, W, 46, '#e8f2dc');
+      P(c, 0, 138, W, 44, '#dcecd0');
+      lingkaran(c, 372, 42, 9, '#ffd166');
+      gunungSaljuDi(c, 88, 82, 56, 182, '#a8b08c', '#f2f8e8');
+      pinusDi(c, '#4e7a4a', '#426c3e');
+      P(c, 196, 150, 5, 44, '#8a6a48');
+      P(c, 201, 150, 5, 44, '#8a6a48');
+      P(c, 190, 146, 30, 5, '#9a7a54');
+      ctx.globalAlpha = 0.5; lingkaran(c, 205, 144, 3, '#ffe9a3'); ctx.globalAlpha = 1;
+      tanah(c, '#d8cc9c', '#ccc092', '#e2d8a8');
+      jalan(c, '#d4c894', '#c8bc88', '#cec49a', '#e0d6ac');
+    }
+
+    else if (TEMA_NAMA === 'tamanKisiKotak') {
+      P(c, 0, 0, W, 46, '#eef8e0');
+      P(c, 0, 46, W, 46, '#e4f0d0');
+      P(c, 0, 92, W, 46, '#d8e8c4');
+      P(c, 0, 138, W, 44, '#cce0b8');
+      lingkaran(c, 70, 40, 9, '#ffd166');
+      gunungSaljuDi(c, 380, 86, 48, 182, '#9aa884', '#f0f6e4');
+      pinusDi(c, '#567a48', '#486c3c');
+      for (let i = 0; i < 5; i++) P(c, 150 + i * 36, 158, 2, 40, '#8a7a5c');
+      for (let i = 0; i < 3; i++) P(c, 150, 158 + i * 20, 146, 2, '#8a7a5c');
+      P(c, 150, 154, 6, 6, '#c85a2a');
+      tanah(c, '#ccd8b0', '#c0cca4', '#d8e4bc');
+      jalan(c, '#d4e0bc', '#c8d4b0', '#cedab4', '#dee8c8');
+    }
+
+    else if (TEMA_NAMA === 'dermagaPerahuSungai') {
+      P(c, 0, 0, W, 46, '#d8f0fa');
+      P(c, 0, 46, W, 46, '#cce8f4');
+      P(c, 0, 92, W, 46, '#c0e0ee');
+      P(c, 0, 138, W, 44, '#b4d8e8');
+      lingkaran(c, 90, 42, 9, '#fff3b0');
+      gunungSaljuDi(c, 350, 80, 56, 182, '#8ca8bc', '#e8f4fa');
+      pinusDi(c, '#4a7a52', '#3e6c46');
+      P(c, 120, 168, 96, 8, '#8a6a48');
+      P(c, 128, 176, 8, 22, '#6e5238'); P(c, 200, 176, 8, 22, '#6e5238');
+      P(c, 262, 172, 58, 10, '#8a6a48');
+      P(c, 268, 182, 46, 12, '#7a5638');
+      P(c, 288, 156, 5, 18, '#5e4a34');
+      ctx.globalAlpha = 0.4; lingkaran(c, 150, 200, 3, '#fffdf2'); lingkaran(c, 240, 206, 3, '#fffdf2'); ctx.globalAlpha = 1;
+      tanah(c, '#b8ccd8', '#acc0cc', '#c4d6e0');
+      jalan(c, '#bccfdc', '#b0c4d0', '#b6c9d6', '#c8dae4');
+    }
+
+    else if (TEMA_NAMA === 'alunKotaBurung') {
+      P(c, 0, 0, W, 46, '#141830');
+      P(c, 0, 46, W, 46, '#181c38');
+      P(c, 0, 92, W, 46, '#1c2040');
+      P(c, 0, 138, W, 44, '#20244a');
+      for (let i = 0; i < 8; i++) lingkaran(c, 36 + i * 54, 18 + (i % 2) * 10, 1.5, '#eef2ff');
+      lingkaran(c, 352, 44, 9, '#e8ecf8');
+      gunungSaljuDi(c, 60, 88, 52, 182, '#2c3252', '#c8d2ea');
+      pinusDi(c, '#1a2036', '#141a2c');
+      P(c, 150, 132, 34, 56, '#2c3454');
+      P(c, 196, 148, 28, 40, '#343c60');
+      P(c, 236, 122, 38, 66, '#2c3454');
+      P(c, 286, 152, 26, 36, '#343c60');
+      for (let i = 0; i < 3; i++) {
+        ctx.globalAlpha = 0.5 + 0.3 * Math.sin(i * 1.8);
+        P(c, 158, 140 + i * 14, 6, 7, '#ffe9a3'); P(c, 172, 140 + i * 14, 6, 7, '#ffe9a3');
+        ctx.globalAlpha = 1;
+      }
+      tanah(c, '#283050', '#222a48', '#303858');
+      jalan(c, '#343c5e', '#2c3454', '#30385a', '#3c4468');
+    }
+
+    else if (TEMA_NAMA === 'menaraTanggaTiga') {
+      P(c, 0, 0, W, 46, '#ffd9a8');
+      P(c, 0, 46, W, 46, '#f8ce98');
+      P(c, 0, 92, W, 46, '#f0c288');
+      P(c, 0, 138, W, 44, '#e8b478');
+      lingkaran(c, 104, 104, 11, '#ff9d6b');
+      gunungSaljuDi(c, 366, 82, 56, 182, '#a8846a', '#f8dcc0');
+      pinusDi(c, '#5a6a46', '#4c5c3a');
+      P(c, 176, 120, 22, 130, '#7a6248');
+      P(c, 172, 114, 30, 8, '#66503a');
+      for (let i = 0; i < 4; i++) P(c, 198 + i * 10, 224 - i * 18, 8, 4, '#9a7a54');
+      ctx.globalAlpha = 0.5; lingkaran(c, 187, 132, 3, '#ffd166'); ctx.globalAlpha = 1;
+      tanah(c, '#d8bc94', '#ccb088', '#e2c89e');
+      jalan(c, '#d4b88e', '#c8ac82', '#ceb488', '#e0c498');
+    }
+
+    else if (TEMA_NAMA === 'galeriTigaPandangan') {
+      P(c, 0, 0, W, 46, '#fffdf2');
+      P(c, 0, 46, W, 46, '#f2f0e4');
+      P(c, 0, 92, W, 46, '#e8e6d8');
+      P(c, 0, 138, W, 44, '#dcdac8');
+      lingkaran(c, 388, 42, 9, '#ffd166');
+      gunungSaljuDi(c, 66, 84, 52, 182, '#a8a48c', '#f4f2e4');
+      pinusDi(c, '#4e7a4a', '#426c3e');
+      P(c, 220, 120, 130, 8, '#8a7256');
+      P(c, 228, 128, 8, 62, '#6e5a44'); P(c, 334, 128, 8, 62, '#6e5a44');
+      P(c, 236, 96, 30, 22, '#3e4266');
+      P(c, 274, 96, 30, 22, '#3e4266');
+      P(c, 312, 96, 30, 22, '#3e4266');
+      ctx.globalAlpha = 0.4; lingkaran(c, 251, 92, 2.5, '#ffe9a3'); lingkaran(c, 289, 92, 2.5, '#ffe9a3'); lingkaran(c, 327, 92, 2.5, '#ffe9a3'); ctx.globalAlpha = 1;
+      tanah(c, '#d8cc9c', '#ccc092', '#e2d8a8');
+      jalan(c, '#d4c894', '#c8bc88', '#cec49a', '#e0d6ac');
+    }
+
+    else if (TEMA_NAMA === 'puncakLintasLembah') {
+      P(c, 0, 0, W, 46, '#161a34');
+      P(c, 0, 46, W, 46, '#1a1e3c');
+      P(c, 0, 92, W, 46, '#1e2244');
+      P(c, 0, 138, W, 44, '#242850');
+      for (let i = 0; i < 9; i++) lingkaran(c, 32 + i * 52, 16 + (i % 3) * 11, 1.5, '#eef2ff');
+      gunungSaljuDi(c, 74, 84, 58, 182, '#303658', '#d8e0f4');
+      gunungSaljuDi(c, 386, 90, 50, 182, '#384062', '#d8e0f4');
+      pinusDi(c, '#1c2240', '#161c30');
+      for (let i = 0; i < 4; i++) {
+        P(c, 240 + i * 30, 160 - i * 8, 20, 10, '#3e4466');
+        ctx.globalAlpha = 0.5; lingkaran(c, 250 + i * 30, 156 - i * 8, 2, '#ffe9a3'); ctx.globalAlpha = 1;
+      }
+      P(c, 150, 140, 26, 5, '#4a5078');
+      P(c, 150, 145, 5, 40, '#3a4166'); P(c, 171, 145, 5, 40, '#3a4166');
+      tanah(c, '#2c3050', '#262a48', '#343858');
+      jalan(c, '#3a3e60', '#323656', '#363a5c', '#44486c');
+    }

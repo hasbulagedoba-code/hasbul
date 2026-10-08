@@ -1,0 +1,135 @@
+
+    'p3-051': {
+      tema: 'padangDuaPanah',
+      npc: { glif: '5 dan 5', ucap: ['Besar saja', 'tak cukup!'] },
+      stasiun: [
+        {
+          objek: 'duaPanahBerlawanan', judul: 'Dua Anak dan Satu Patok',
+          teks: 'Pagi di padang gunung, sebuah patok batu berdiri di tengah lapangan dengan dua panah batu besar mengarah berlawanan. Ani melangkah lima langkah ke timur, sedangkan Budi melangkah lima langkah ke barat. Angka mereka sama-sama lima, tetapi tempat berdiri keduanya kini berjauhan. Di sinilah rahasia pertama vektor: angka biasa hanya bicara berapa banyak, sementara vektor juga bicara ke arah mana.',
+        },
+        {
+          objek: 'papanBesarArah', judul: 'Angka Lima yang Dua Rupa',
+          teks: 'Papan di pinggir padang menulis teka-teki sederhana: lima langkah timur dan lima langkah barat, mana yang benar? Jawabannya keduanya benar, sebab keduanya berbeda arah. Vektor menuliskannya dengan dua bagian: besarannya lima langkah, dan arahnya timur atau barat. Kalau arahnya tidak disebut, ceritanya jadi setengah — seperti undangan pesta tanpa alamat rumahnya.',
+        },
+        {
+          objek: 'patokJarakSepuluh', judul: 'Mengukur Jarak Keduanya',
+          teks: 'Sekarang ukur seberapa jauh Ani dan Budi terpisah. Ani berdiri 5 langkah di timur patok, Budi 5 langkah di barat patok, maka jarak mereka 5 + 5 = 10 langkah. Dua angka 5 yang sama rata ternyata menghasilkan jarak 10 saat menghadap arah berlawanan. Hitungannya sederhana, tetapi tanpa memperhatikan arah, siapa pun akan mengira mereka berdekatan.',
+        },
+        {
+          objek: 'gerbangArahVektor', judul: 'Gerbang Bilangan Berarah',
+          teks: 'Di ujung padang berdiri gerbang berukir dua panah silang, pintu masuk penjuru vektor. Di atasnya tertulis pesan pembuka: bilangan berarah membawa dua kabar sekaligus — seberapa jauh dan ke arah mana. Mulai sekarang, setiap panah yang kau temui di gunung akan bercerita tentang dua hal itu. Hitungan itu hanya alat, tetapi alat yang membuat arah terjelaskan dengan jelas.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Angka Sama Ternyata Bisa Berjauhan!',
+          teks: 'Dua langkah lima yang sama rata, begitu arahnya berlawanan, jaraknya malah 10 langkah. Owalah, ternyata begini toh — vektor hanyalah bilangan yang jujur membawa dua kabar: besarnya dan arahnya, dan keduanya sama pentingnya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-052': {
+      tema: 'jalanRumahSekolah',
+      npc: { glif: '4+3=5', ucap: ['Panah pintas', 'dua kabar!'] },
+      stasiun: [
+        {
+          objek: 'jalanZigzagSekolah', judul: 'Jalan Berliku ke Sekolah',
+          teks: 'Siang di lereng gunung, peta besar terbentang di papan batu: rumah di pojok bawah, sekolah di pojok atas. Jalan setapak berliku lewat toko, belok di taman, lalu menyusur sungai — panjangnya melelahkan. Tetapi di peta itu ada satu panah merah melukis garis lurus dari rumah tepat ke sekolah, pintas yang membuat semua anak penasaran.',
+        },
+        {
+          objek: 'panahLurusTikus', judul: 'Panah Pintas yang Setia',
+          teks: 'Panah merah itu adalah vektor perjalanan: ia tidak ikut berliku, ia hanya menyimpan dua kabar — sejauh mana sekolah dari rumah, dan ke arah mana harus menghadap. Jalan berliku bisa panjang atau pendek, tetapi panah pintas selalu sama, sebab arah rumah ke sekolah tak pernah berubah. Karena itu pemandu gunung suka menggambar panah daripada menceritakan seluruh jalan.',
+        },
+        {
+          objek: 'segitigaJalanSiku', judul: 'Mengukur Panjang Pintas',
+          teks: 'Sekarang hitung panjangnya. Dari rumah, jalan lurus dulu 4 langkah ke utara, lalu belok siku 3 langkah ke timur sampai sekolah. Panah pintas menghubungkan ujung ke ujung, dan panjangnya dijawab jurus penjuru kemarin: 4 × 4 = 16 dan 3 × 3 = 9, lalu 16 + 9 = 25 yang akarnya tepat 5. Jalan berliku 7 langkah, panah pintas hanya 5 — segitiga siku 3-4-5 ikut berjalan di peta sekolah!',
+        },
+        {
+          objek: 'papanPetunjukPanah', judul: 'Dua Kabar dalam Satu Panah',
+          teks: 'Papan penutup merangkum pelajaran siang itu: satu panah vektor membawa dua kabar sekaligus — panjangnya memberi tahu jarak, arahnya memberi tahu menghadap ke mana. Dua panah sama panjang tetapi menghadap beda arah adalah dua panah berbeda, persis dua angka 5 di padang pagi tadi. Kini setiap peta di gunung terasa lebih ramah: cukup baca panahnya, dua kabar langsung tertangkap.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jalan Berliku Ternyata Punya Pintas!',
+          teks: 'Berliku 4 lalu belok 3, panah pintasnya lurus 5 — segitiga siku lama ikut bekerja di peta. Owalah, ternyata begini toh — panah perjalanan hanyalah vektor yang merangkum seluruh jalan menjadi dua kabar: berapa jauh dan ke arah mana. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-053': {
+      tema: 'lorongPanahSambung',
+      npc: { glif: 'sambung!', ucap: ['Ujung ke ujung', 'jadi satu!'] },
+      stasiun: [
+        {
+          objek: 'duaPanahBerturut', judul: 'Dua Panah di Lorong Batu',
+          teks: 'Pagi di lorong gunung yang berumput, dua panah batu terbaruk berurutan di tanah. Panah pertama menyuruh maju 3 langkah, panah kedua menyuruh maju lagi 2 langkah ke arah yang sama. Seorang pengembara menatap keduanya dan bertanya: kalau keduanya dijalankan berturut-turut, sama kah hasilnya dengan satu panah saja? Lorong ini akan menjawabnya langkah demi langkah.',
+        },
+        {
+          objek: 'panahJumlahTunggal', judul: 'Sambung Ekor ke Kepala',
+          teks: 'Jurus penyambungan bekerja begini: kepala panah pertama disambung ekor panah kedua, lalu tarik satu panah baru dari ekor yang paling awal sampai kepala yang paling akhir. Maju 3 lalu maju 2 sama artinya dengan maju 5 sekaligus. Dua panah berturut-turut menjadi satu panah tunggal — itulah penjumlahan panah yang paling sederhana, cukup dibayangkan seperti berjalan biasa.',
+        },
+        {
+          objek: 'jalurMundurSambung', judul: 'Ketika Kedua Panah Beda Arah',
+          teks: 'Lorong berikutnya memberi soal balik: maju 3 langkah, lalu mundur 2 langkah. Sambung lagi dari ekor ke kepala, dan panah hasilnya hanya maju 1 langkah. Arah berlawanan saling menarik: 3 langkah maju ditebus 2 langkah mundur, menyisakan 1. Semakin sering berlatih menyambung, semakin cepat matamu membaca panah hasil tanpa perlu menghitung di tanah.',
+        },
+        {
+          objek: 'papanUjungKeUjung', judul: 'Papan Jurus Ujung ke Ujung',
+          teks: 'Di ujung lorong berdiri papan batu berukir dua panah menyambung. Petunjuknya singkat: bila panah dijalankan berturut-turut, panah jumlahnya ditarik dari ekor yang pertama sampai kepala yang terakhir. Tak perlu menghafal, cukup bayangkan berjalan: tempat berakhirnya perjalananmu itulah ujung panah jumlahnya. Berjalan bertahap atau sekali jalan, tempat berhentinya tetap sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Panah Ternyata Jadi Satu!',
+          teks: 'Maju 3 lalu maju 2 sama dengan maju 5; maju 3 lalu mundur 2 menyisakan maju 1. Owalah, ternyata begini toh — penjumlahan panah hanyalah cerita perjalanan: ujung perjalanan terakhir itulah kepala panah jumlahnya. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-054': {
+      tema: 'lapanganPanahKembar',
+      npc: { glif: '3 dan -3', ucap: ['Kembar menguatkan', 'lawan menghapus!'] },
+      stasiun: [
+        {
+          objek: 'panahKembarSejajar', judul: 'Dua Panah Kembar di Lapangan',
+          teks: 'Siang di lapangan gunung, dua panah batu berdiri berdampingan dengan panjang sama persis dan menghadap arah yang sama. Keduanya disebut panah kembar: sama besar, sama arah, dan boleh saling menggantikan di mana pun berdirinya. Dua anak menarik karung biji dengan panah kembar itu, maka karung bergerak sama jauhnya seolah ditarik satu kekuatan yang rapi.',
+        },
+        {
+          objek: 'panahLawanBerbalik', judul: 'Panah Lawan yang Berbalik',
+          teks: 'Di sisi lain lapangan berdiri satu panah lain: panjangnya sama 3, tetapi kepalanya berbalik ke arah sebaliknya. Panah ini disebut lawan dari panah tadi. Lawan tidak selalu jelek; ia hanya berjalan ke arah balik dengan kekuatan sama besar. Maju 3 dan mundur 3 adalah sepasang lawan yang setia menarik ke arah berlawanan.',
+        },
+        {
+          objek: 'patokKembaliNol', judul: 'Kembali ke Patok Nol',
+          teks: 'Sekarang uji keduanya sekaligus. Dari patok, maju 3 langkah, lalu jalankan panah lawan: mundur 3 langkah. Kakimu berhenti tepat di patok semula — tak maju, tak mundur. Dua panah itu saling meniadakan, dan perjalanan bersihnya nol. Sepasang panah lawan memang unik: digabungkan, keduanya pulang tanpa meninggalkan jejak langkah.',
+        },
+        {
+          objek: 'papanAngkaMinus', judul: 'Menulis Mundur dengan Tanda Minus',
+          teks: 'Papan lapangan mengajarkan cara menulisnya: maju ditulis 3, mundur ditulis −3, maka panah gabungan tertulis 3 + (−3) = 0. Tanda minus bukan hal buruk, ia hanya penanda arah balik. Begitu jalanmu di gunung berbalik arah, cukup ganti tandanya, lalu hitung seperti penjumlahan biasa. Angka dan arah kini tinggal satu tulisan yang rapi di papan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Maju dan Mundur Ternyata Saling Menghapus!',
+          teks: 'Kembar sama arah saling menguatkan, lawan berbalik arah saling menghapus, dan 3 + (−3) pulang tepat ke patok nol. Owalah, ternyata begini toh — panah lawan hanyalah kembar yang berbalik badan, dan jumlahnya selalu nol. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-055': {
+      tema: 'tamanKisiKotak',
+      npc: { glif: '(3,2)', ucap: ['Kanan dulu', 'baru naik!'] },
+      stasiun: [
+        {
+          objek: 'kisiTaliHalaman', judul: 'Tali Kisi di Taman',
+          teks: 'Siang di taman kebun gunung, dua gulung tali direntang membentuk kisi kotak besar di atas rumput, seperti papan catur raksasa yang rata. Setiap persilangan tali adalah alamat, dan setiap kotak bisa dihitung satu per satu. Di pojok kisi tertancap patok kecil bertanda mulai — seluruh permainan arah hari ini berangkat dari sana.',
+        },
+        {
+          objek: 'kartuVektorTigaDua', judul: 'Kartu Perintah (3, 2)',
+          teks: 'Sebuah kartu kayu tertancap di patok, bertuliskan dua angka berkurung: (3, 2). Aturannya ramah: angka pertama menyuruh jalan ke kanan, angka kedua menyuruh naik. Maka langkahkan 3 kotak ke kanan, lalu 2 kotak ke atas, dan tempelkan bendera di persilangan itu. Dua angka kecil ternyata cukup untuk menggambarkan satu panah utuh dari patok sampai bendera.',
+        },
+        {
+          objek: 'kartuVektorDuaTiga', judul: 'Tukar Urutan, Arah Berubah',
+          teks: 'Kartu kedua menantang: (2, 3). Angkanya tetap 3 dan 2, hanya posisinya ditukar. Jalankan lagi: 2 kotak ke kanan dulu, baru 3 ke atas — bendera kini tertancap di persilangan yang berbeda! Dua panah itu sama panjang, tetapi arahnya miring ke tempat lain. Urutan angka dalam kurung ternyata bukan hiasan; menukarnya berarti menuju tujuan yang berbeda.',
+        },
+        {
+          objek: 'papanUrutanPenting', judul: 'Papan Angka Berpasangan',
+          teks: 'Papan penutup taman merangkum hari itu: sepasang angka dalam kurung adalah alamat satu panah — angka pertama bicara kanan, angka kedua bicara naik. Tulis (3, 2) maka panah condong landai; tulis (2, 3) maka panah berdiri lebih tegak. Begitu terbiasa, seluruh kisi kotak di gunung terbaca seperti buku: setiap bendera punya alamat, dan setiap alamat memancangkan satu panah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Angka Ternyata Cukup Menunjuk Arah!',
+          teks: 'Kanan 3 naik 2 tertulis (3, 2), dan begitu ditukar jadi (2, 3) bendera pindah tempat. Owalah, ternyata begini toh — vektor di kisi kotak hanyalah sepasang angka berkurung yang setia menjelaskan arah. Mudah, bukan?',
+        },
+      ],
+    },

@@ -140,7 +140,7 @@ for (const id of ID_BARU) {
 cek("'hitungan itu hanya alat' hadir di batch", /hitungan itu hanya alat/i.test(cerita.slice(cerita.indexOf("'p3-021'"), cerita.indexOf("'p3-030'") + 3000)));
 
 const blokIds = [...cerita.matchAll(/'(p[123]-\d{3})':\s*\{/g)].map(m => m[1]);
-cek('total naskah 230', blokIds.length === 230, blokIds.length);
+cek('total naskah >= 230', blokIds.length >= 230, blokIds.length);
 for (const id of blokIds) {
   const b = blokNaskah(cerita, id);
   cek(id + ' tugu+Owalah', /objek:\s*'tugu',\s*akhir:\s*true/.test(b) && /Owalah/.test(b));

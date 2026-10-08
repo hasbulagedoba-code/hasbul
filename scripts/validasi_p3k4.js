@@ -69,7 +69,7 @@ function blokSemuaNaskah(src) {
   return out;
 }
 const semuaBlok = blokSemuaNaskah(cerita);
-cek('jumlah blok naskah = 240', semuaBlok.length === 240, semuaBlok.length);
+cek('jumlah blok naskah >= 240', semuaBlok.length >= 240, semuaBlok.length);
 let temuan = 0;
 semuaBlok.forEach(b => {
   const low = b.isi.toLowerCase();

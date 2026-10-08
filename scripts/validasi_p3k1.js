@@ -64,10 +64,10 @@ tes('batch baru bebas kata terlarang', bersih);
 tes('frasa pelindung "hitungan itu hanya alat" hadir di batch', teksBatch.toLowerCase().includes('hitungan itu hanya alat'));
 
 const semuaId = [...cer.matchAll(/'(p\d-\d{3})': \{/g)].map(m => m[1]);
-tes('total naskah = 210', semuaId.length === 210, 'dapat ' + semuaId.length);
+tes('total naskah >= 210', semuaId.length >= 210, 'dapat ' + semuaId.length);
 tes('p1 utuh 100', semuaId.filter(i => i.startsWith('p1-')).length === 100);
 tes('p2 utuh 100', semuaId.filter(i => i.startsWith('p2-')).length === 100);
-tes('p3 utuh 10', semuaId.filter(i => i.startsWith('p3-')).length === 10);
+tes('p3 utuh >= 10', semuaId.filter(i => i.startsWith('p3-')).length >= 10);
 
 let semuaLamaUtuh = true;
 for (const id of semuaId.filter(i => !idsP3.includes(i))) {

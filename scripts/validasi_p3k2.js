@@ -65,10 +65,10 @@ tes('frasa pelindung "hitungan itu hanya alat" hadir di batch', teksBatch.toLowe
 tes('frasa "hitungan itu hanya alat" muncul minimal 3x di batch', (teksBatch.toLowerCase().match(/hitungan itu hanya alat/g) || []).length >= 3);
 
 const semuaId = [...cer.matchAll(/'(p\d-\d{3})': \{/g)].map(m => m[1]);
-tes('total naskah = 220', semuaId.length === 220, 'dapat ' + semuaId.length);
+tes('total naskah >= 220', semuaId.length >= 220, 'dapat ' + semuaId.length);
 tes('p1 utuh 100', semuaId.filter(i => i.startsWith('p1-')).length === 100);
 tes('p2 utuh 100', semuaId.filter(i => i.startsWith('p2-')).length === 100);
-tes('p3 utuh 20', semuaId.filter(i => i.startsWith('p3-')).length === 20);
+tes('p3 utuh >= 20', semuaId.filter(i => i.startsWith('p3-')).length >= 20);
 
 let semuaLamaUtuh = true;
 for (const id of semuaId.filter(i => !idsP3.includes(i))) {
