@@ -2541,6 +2541,290 @@ window.CERITA = (function () {
       ],
     },
 
+    /* ----- p2-091 · Peluang Itu Apa? — pagi gerbang garis 0-1 ----- */
+    'p2-091': {
+      tema: 'gerbangKemungkinan',
+      npc: { glif: '0-1', ucap: ['Dari nol ke satu,', 'semua mungkin!'] },
+      stasiun: [
+        {
+          objek: 'gerbangGarisNolSatu', judul: 'Gerbang Garis 0 sampai 1',
+          teks: 'Pagi di hutan simbol, satu gerbang tua berdiri dengan garis cahaya membentang di atasnya: ujung kiri bernomor nol, ujung kanan bernomor satu. Penjaga gerbang menjelaskan pelan-pelan, garis inilah rumah semua kemungkinan. Nol artinya mustahil — tak akan pernah terjadi. Satu artinya pasti — tanpa ragu sedikit pun. Dan di antara keduanya terbentang dunia mungkin, tempat semua kejutan hidup bermain.',
+        },
+        {
+          objek: 'penandaMustahil', judul: 'Ujung Nol: Mustahil',
+          teks: 'Tunjuk ujung kiri gerbang: nol, rumahnya hal yang mustahil. Ikan hutan terbang menyusuri langit? Mustahil — peluangnya nol, sebab ikan tak punya sayap. Angka nol di garis ini bukan penanda sedikit, melainkan penanda tak pernah. Apa pun yang ditaruh di sini tak akan pernah terjadi, berapa pun lama kita menunggu. Ujung nol adalah wilayah paling tenang: tak ada kejutan yang bisa datang dari sana.',
+        },
+        {
+          objek: 'penandaPasti', judul: 'Ujung Satu: Pasti',
+          teks: 'Ujung kanan bernomor satu: rumahnya hal yang pasti. Gerbang ini berdiri di atas tanah? Pasti — peluangnya satu, selama gerbangnya tak dipindahkan. Peluang satu artinya tak ada kemungkinan lain: semua hasil berhimpun di satu jawaban yang sama. Beda dengan nol yang tak pernah, satu adalah selalu. Dua ujung garis ini ibarat dua tembok: di antara keduanya, dunia mungkin bermain bebas.',
+        },
+        {
+          objek: 'duniaDiAntara', judul: 'Di Antara Keduanya: Dunia Mungkin',
+          teks: 'Di tengah garis itulah hidup terjadi. Koin bisa angka bisa gambar, hujan bisa turun bisa tidak, dadu bisa mendarat di sisi mana pun. Semua bermain di antara nol dan satu — tidak mustahil, belum pasti. Peluang hanyalah cara mengukur: seberapa dekat suatu kejutan berdiri ke nol atau ke satu. Hitungan itu hanya alat, membantu kita mengenali kemungkinan — bukan memaksakan hasil. Garis 0 sampai 1 kini jadi peta kejutan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semua Kemungkinan Tinggal di 0 sampai 1!',
+          teks: 'Nol mustahil, satu pasti, dan di antaranya terbentang dunia mungkin yang ramai. Owalah, ternyata begini toh — peluang hanyalah alamat di garis itu: makin dekat nol makin langka, makin dekat satu makin dekat pasti. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-092 · Koin: Dua Sisi — siang lapangan bola lempar koin ----- */
+    'p2-092': {
+      tema: 'lapanganKoin',
+      npc: { glif: 'A/G', ucap: ['Dua sisi,', 'sama berkuasa!'] },
+      stasiun: [
+        {
+          objek: 'koinLemparKapten', judul: 'Koin Berputar di Udara',
+          teks: 'Siang di lapangan bola hutan, dua kapten tim berdiri di tengah lapangan. Wasit melempar satu koin ke udara — koin berputar dan berputar, kilauannya menyapu rumput. Sebelum jatuh, semua menahan napas: angka atau gambar? Beginilah cara dua tim menentukan siapa yang menendang duluan, dan rahasianya sederhana sekali: koin punya dua sisi yang sama rata, tanpa pihak yang lebih istimewa.',
+        },
+        {
+          objek: 'sisiAngkaGambar', judul: 'Dua Sisi, Dua Kemungkinan',
+          teks: 'Koin itu hanya punya dua sisi: sisi angka dan sisi gambar. Tidak ada sisi ketiga yang bersembunyi, tidak ada sisi yang lebih gemuk. Jadi kemungkinannya hanya dua, dan keduanya sama kuat: satu kemungkinan angka dari dua total, ditulis satu per dua. Setengah kemungkinan milik angka, setengah kemungkinan milik gambar — seadil-adilnya pembagian yang pernah ada.',
+        },
+        {
+          objek: 'papanAdilDua', judul: 'Adil untuk Dua Pihak',
+          teks: 'Papan pinggir lapangan menuliskan kenapa koin yang dipilih: karena adil untuk dua pihak. Kapten mana pun tak bisa curang — peluang keduanya persis satu per dua, tak lebih sedikit, tak lebih banyak. Waspada: koin adil ini alat untuk menentukan giliran main, bukan alat taruhan; yang seperti itu haram dan tak kami ajarkan. Lemparkan koin untuk mulai permainan, lalu biarkan dua sisi yang sama berkuasa.',
+        },
+        {
+          objek: 'duaTimSetara', judul: 'Setengah Itu Setimbang',
+          teks: 'Bayangkan satu kue kemungkinan dibagi dua piring sama besar: satu piring untuk angka, satu untuk gambar. Jika koin dilempar sepuluh kali, biasanya angka dan gambar berbagi hasil hampir sama banyak — tak selalu persis lima-lima, tapi selalu mendekat. Makin banyak lemparan, makin jelas keseimbangannya. Inilah pesan koin: ketika kemungkinan dibagi rata, tak ada pihak yang dirugikan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Koin Adil karena Dua Sisinya Setara!',
+          teks: 'Dua sisi, dua kemungkinan, satu per dua untuk tiap pihak — dan lemparan koin jadi cara paling adil menentukan yang mulai. Owalah, ternyata begini toh — setengah kemungkinan berarti setimbang sempurna. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-093 · Dadu: Enam Kemungkinan — malam papan permainan keluarga ----- */
+    'p2-093': {
+      tema: 'mejaUlarTangga',
+      npc: { glif: '1/6', ucap: ['Enam sisi,', 'sama setia!'] },
+      stasiun: [
+        {
+          objek: 'papanUlarTangga', judul: 'Malam Papan Permainan Keluarga',
+          teks: 'Malam di teras rumah pohon, keluarga bola-lentera duduk melingkar di sekeliling papan permainan ular tangga. Di atas meja tergeletak satu dadu kecil — kubus dengan enam sisi. Sebelum giliran pertama dimulai, kakek mengangkat dadu itu tinggi-tinggi dan berkata, kubus kecil ini menyimpan enam kemungkinan, dan semuanya harus kita hormati sama besar. Malam itu, permainan dimulai dari hitungan.',
+        },
+        {
+          objek: 'daduEnamSisi', judul: 'Kubus dengan Enam Sisi',
+          teks: 'Dadu adalah kubus: enam sisi rata, tiap sisi menampung satu angka dari satu sampai enam. Saat dilempar, satu dari enam sisi itulah yang muncul menghadap atas. Enam kemungkinan, tiap kemungkinan satu bagian — ditulis satu per enam. Tidak ada sisi yang lebih sering muncul, tidak ada angka yang lebih disayang dadu; tiap sisi menandatangani perjanjian yang sama rata.',
+        },
+        {
+          objek: 'enamKemungkinan', judul: 'Satu per Enam, Enam Kali Enam',
+          teks: 'Cek kejujurannya dengan pecahan: enam kemungkinan, tiap sisi satu per enam. Jumlahkan semuanya — satu per enam diulang enam kali sama dengan enam per enam, tepat satu! Artinya tak ada kemungkinan yang hilang dan tak ada yang menyusup masuk. Angka empat muncul sekali dari enam — jarang terasa, tapi tetap mungkin; angka mana pun sama: satu per enam, tak lebih dan tak kurang.',
+        },
+        {
+          objek: 'papanMainAdil', judul: 'Main Adil, Tanpa Taruhan',
+          teks: 'Papan dekat meja menuliskan aturan keluarga ini: dadu dilempar untuk keseruan bermain bersama — giliran, langkah, dan tawa — bukan untuk taruhan sepeser pun; yang seperti itu haram dan tak kami ajarkan. Menghitung satu per enam membantu kita menghargai permainan: hasil mana pun datang dengan peluang yang sama, yang menang boleh bangga, yang kalah boleh tertawa. Itulah main yang adil.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Enam Sisi Berarti Enam Peluang Setara!',
+          teks: 'Kubus kecil itu ternyata menyimpan enam kemungkinan yang berbagi rata: satu per enam untuk tiap sisi, dan jumlahnya tepat satu. Owalah, ternyata begini toh — dadu setia karena tak memihak sisi mana pun. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-094 · Pasti & Mustahil — fajar puncak bukit ----- */
+    'p2-094': {
+      tema: 'puncakPasti',
+      npc: { glif: '0 1', ucap: ['Ujung nol,', 'ujung satu!'] },
+      stasiun: [
+        {
+          objek: 'matahariTimurPasti', judul: 'Fajar di Puncak Hutan',
+          teks: 'Fajar menyingsing di puncak bukit hutan, bola-bola cahaya pendaki menunggu pemandangan terbaik: matahari muncul dari timur, seperti setiap pagi sepanjang ingatan hutan. Seorang pendaki tua bertanya, seberapa yakin matahari terbit dari timur lagi besok? Semua menjawab bersama: seyakin-eyakinya — karena matahari tak pernah sekali pun lupa alamatnya. Itulah peluang satu: pasti, selalu, tanpa kecuali.',
+        },
+        {
+          objek: 'koinBerdiriSulit', judul: 'Koin yang Berdiri Tegak',
+          teks: 'Pendaki kecil lalu melempar koin ke permukaan batu rata, dan semua tertawa lepas: koinnya berdiri tegak di tepinya! Seberapa langka kejadian itu? Hampir tak pernah terjadi — peluangnya mendekati nol. Kata hampir penting di sini: secara hitung masih ada celah sekecil debu, tapi begitu kecilnya sehingga seluruh hutan tak akan menunggunya. Nol adalah alamat hal yang tak pernah datang.',
+        },
+        {
+          objek: 'garisDuaUjung', judul: 'Dua Ujung Garis Kemungkinan',
+          teks: 'Di puncak, garis cahaya terhampar dari kaki bukit ke lembah: ujung kiri bernilai nol, ujung kanan bernilai satu. Matahari terbit berdiri kokoh di ujung satu; koin yang berdiri tegak nyaris menempel di ujung nol. Dua ujung ini berbeda total, tapi punya kesamaan: keduanya jarang dihuni. Hampir semua kejutan dunia — hujan, koin, dadu, pertemuan — memilih tinggal di tengah garis.',
+        },
+        {
+          objek: 'papanAntaranya', judul: 'Mengenali Dua Ujung dengan Bijak',
+          teks: 'Papan puncak menuliskan pelajarannya: kenali mana yang benar-benar pasti, kenali mana yang mustahil, dan jangan menyeragamkan keduanya. Menghitung peluang membantu kita tak mudah kaget: yang pasti tak perlu dipertaruhkan, yang mustahil tak perlu ditunggu. Hitungan itu hanya alat — membantu langkah menjadi tenang. Sisanya adalah dunia mungkin di tengah garis, tempat semua petualangan hidup.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pasti dan Mustahil Tinggal di Dua Ujung!',
+          teks: 'Matahari timur berdiri di peluang satu, koin yang berdiri tegak nyaris menyentuh nol — dua ujung garis kemungkinan kini punya wajah. Owalah, ternyata begini toh — peluang satu berarti selalu, peluang nol berarti tak pernah. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-095 · Roda Putar Peluang — senja festival roda warna ----- */
+    'p2-095': {
+      tema: 'festivalRoda',
+      npc: { glif: '3/4', ucap: ['Irisan lebar,', 'sering terpilih!'] },
+      stasiun: [
+        {
+          objek: 'rodaPutarFestival', judul: 'Roda Putar di Festival Senja',
+          teks: 'Senja di festival hutan, satu roda putar raksasa menyala dengan lampu warna-warni. Rodanya dibagi irisan-irisan: merah menguasai tiga perempat roda, biru hanya satu perempat. Anak-anak bola-lentera mengantre memutar, dan penjaga roda berteriak, sebelum memutar, baca dulu rodanya — roda selalu jujur tentang kecenderungannya! Kilauan irisan merah dan biru terlihat dari jauh.',
+        },
+        {
+          objek: 'irisanMerahLebar', judul: 'Irisan Lebar Sering Dihampiri',
+          teks: 'Roda berputar pelan lalu berhenti... di merah! Diputar lagi — merah lagi. Tiga perempat roda diwariskan pada merah: setiap jarum berhenti, tiga dari empat kemungkinan arahnya jatuh di wilayah merah. Ditulis tiga per empat. Makin lebar irisan sebuah warna, makin sering ia disinggahi — mata bisa membacanya langsung bahkan sebelum sempat menghitung. Itulah kejujuran roda yang paling terlihat.',
+        },
+        {
+          objek: 'irisanBiruSempit', judul: 'Irisan Sempit Jarang Terpilih',
+          teks: 'Biru hanya memegang satu perempat roda: satu dari empat kemungkinan. Jarum kadang-kadang mampir ke biru, tapi hampir selalu melanjutkan perjalanan ke merah. Peluang biru ditulis satu per empat — langka, tapi tetap mungkin! Inilah keindahan roda: warna langka tetap punya kesempatan, hanya saja kesempatannya sempit. Cek jumlahnya: tiga per empat tambah satu per empat, tepat satu roda penuh.',
+        },
+        {
+          objek: 'papanLuasIrisan', judul: 'Luas Irisan Sama dengan Peluang',
+          teks: 'Papan festival menuliskan rumus roda: peluang sebuah warna sama dengan luas irisannya dibagi luas roda penuh. Separuh roda berarti separuh peluang, seperempat roda berarti seperempat peluang. Karena itu roda bisa dirancang dengan sengaja: atur lebar irisannya, dan peluangnya akan mengikuti. Hitungan itu hanya alat — roda yang berputar adil dan pemutar yang jujur, itulah yang membuat permainan indah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Irisan Lebar Berarti Peluang Lebar!',
+          teks: 'Tiga perempat roda untuk merah, satu perempat untuk biru — peluang terbaca langsung dari lebar irisannya. Owalah, ternyata begini toh — roda putar hanyalah kue kemungkinan yang dibagi dengan jujur. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-096 · Kantong Kelereng — pagi kios mainan ----- */
+    'p2-096': {
+      tema: 'kiosKelereng',
+      npc: { glif: '3M1B', ucap: ['Tiga merah,', 'satu biru!'] },
+      stasiun: [
+        {
+          objek: 'kantongKelerengEmpat', judul: 'Kantong Kelereng di Kios Mainan',
+          teks: 'Pagi di kios mainan hutan, satu kantong kain tergantung di rak dengan tanda tanya besar. Isinya empat kelereng: tiga merah dan satu biru. Pembeli kecil berpikir, kalau aku mengambil satu tanpa melihat, warna apa yang paling mungkin pulang bersamaku? Tangannya menjangkau masuk, tapi rasa tangan tak bisa memilih — yang bisa memilih hanyalah hitungan isi kantong.',
+        },
+        {
+          objek: 'kelerengMerahTiga', judul: 'Tiga dari Empat untuk Merah',
+          teks: 'Buka kantongnya dan hitung: tiga kelereng merah dari empat kelereng seluruhnya. Maka peluang merah adalah tiga per empat — tiga jalan menuju merah dari empat jalan yang mungkin. Hampir selalu, tangan yang masuk akan pulang membawa merah. Tiga per empat itu dekat ke ujung satu: sering, biasa, nyaris teman lama. Tapi hati-hati — nyaris satu bukan berarti satu.',
+        },
+        {
+          objek: 'kelerengBiruSatu', judul: 'Satu dari Empat untuk Biru',
+          teks: 'Biru hanya punya satu jalan dari empat: peluangnya satu per empat. Langka, istimewa, dan karena itu dirindukan! Saat tangan akhirnya membawa biru keluar, seluruh kios bersorak — kemungkinan yang sempit memang paling meriah saat kejadian. Tiga per empat tambah satu per empat sama dengan empat per empat: tepat satu, tak ada kemungkinan yang kabur dari kantong.',
+        },
+        {
+          objek: 'papanTigaPerEmpat', judul: 'Hitung Isinya, Peluang Terbaca',
+          teks: 'Papan kios menuliskan jurusnya: hitung dulu berapa kelereng warna yang dicari, hitung pula seluruh isinya, lalu susun pecahannya — warna yang dicari di atas, jumlah total di bawah. Kantong mana pun kini bisa dibaca tanpa menebak-nebak. Hitungan itu hanya alat; yang membuka kantong dengan niat baik tetap yang menentukan sikapnya. Kantong kelereng adalah kelas peluang pertama yang paling ramah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Isi Kantong Membocorkan Peluangnya!',
+          teks: 'Tiga merah dari empat berarti tiga per empat, satu biru berarti satu per empat, dan jumlahnya tepat satu. Owalah, ternyata begini toh — peluang kantong tak pernah rahasia selama isinya dihitung. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-097 · Peluang sebagai Pecahan — siang kelas hutan ----- */
+    'p2-097': {
+      tema: 'kelasPecahan',
+      npc: { glif: '=1', ucap: ['Semuanya berjumlah', 'tepat satu!'] },
+      stasiun: [
+        {
+          objek: 'papanSemuaPecahan', judul: 'Kelas Kecil di Pinggir Hutan',
+          teks: 'Siang di kelas hutan yang berdinding papan angka, pelajaran hari ini menyatukan semua dunia yang baru dijelajahi: koin, dadu, roda, dan kantong kelereng. Guru kelas menuliskan satu kalimat besar: semua peluang adalah pecahan, dan pecahan itu selalu tinggal di antara nol dan satu. Koin satu per dua, dadu satu per enam, kelereng tiga per empat — semuanya kini tampak satu keluarga besar.',
+        },
+        {
+          objek: 'kelerengEnamIsi', judul: 'Contoh Baru: Dua dan Empat',
+          teks: 'Kantong baru dibawa masuk: dua kelereng merah dan empat biru, enam seluruhnya. Peluang merah dua per enam, peluang biru empat per enam. Cek ujung-ujungnya: dua per enam lebih besar dari nol — merah mungkin terjadi; empat per enam lebih kecil dari satu — biru belum pasti. Semua pecahan peluang tak pernah keluar dari pagar nol-satu. Itu kontrak yang tak pernah dilanggar pecahan peluang.',
+        },
+        {
+          objek: 'jumlahSelaluSatu', judul: 'Jumlahkan Semuanya: Tepat Satu',
+          teks: 'Sekarang jumlahkan semua kemungkinan kantong itu: dua per enam tambah empat per enam sama dengan enam per enam — tepat satu! Koin: satu per dua tambah satu per dua, satu. Roda: tiga per empat tambah satu per empat, satu. Apa pun dunianya, semua kemungkinan berbagi satu kue yang sama dan menghabiskannya sampai remah terakhir. Tak lebih, tak kurang — inilah tanda hitungan peluang yang jujur.',
+        },
+        {
+          objek: 'koinSetengahSetengah', judul: 'Pagar Nol-Satu Penjaga Kejujuran',
+          teks: 'Pagar nol-satu berguna untuk memeriksa hitungan: ada peluang yang tertulis tujuh per enam? Mustahil — tak ada yang bisa lebih mungkin daripada pasti. Ada peluang minus? Juga tak mungkin — kemungkinan tak pernah berhutang. Jika jumlah semua peluang bukan satu, pasti ada kemungkinan yang tertinggal atau dobel. Hitungan itu hanya alat, tapi alat ini setia menjaga kejujuran — pecahan peluang yang benar selalu rapi di pagar nol-satu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semua Peluang Adalah Pecahan di Pagar 0-1!',
+          teks: 'Satu per dua, satu per enam, tiga per empat — semuanya pecahan antara nol dan satu, dan jumlah semuanya selalu tepat satu. Owalah, ternyata begini toh — peluang hanyalah pecahan yang berbagi satu kue kemungkinan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-098 · Mendaftar Kemungkinan — senja teras dua koin ----- */
+    'p2-098': {
+      tema: 'terasDuaKoin',
+      npc: { glif: 'A-G', ucap: ['Daftar dulu,', 'hitung kemudian!'] },
+      stasiun: [
+        {
+          objek: 'duaKoinLempar', judul: 'Dua Koin di Teras Senja',
+          teks: 'Senja di teras rumah daun, dua sahabat bola-lentera melempar dua koin sekaligus dan berdebat soal kemungkinannya. Satu berkata, kemungkinannya cuma dua: dua angka atau campur. Sahabatnya menyipitkan cahayanya, yakin? Maka mereka menemukan cara yang lebih jujur: mendaftar semua hasil satu per satu, tanpa melewatkan satu pun. Selembar kertas dan arang pun disiapkan di meja kecil.',
+        },
+        {
+          objek: 'daftarEmpatHasil', judul: 'Daftarnya Ternyata Empat',
+          teks: 'Daftar itu dimulai: koin pertama angka dan koin kedua angka — A-A. Koin pertama angka, koin kedua gambar — A-G. Lalu koin pertama gambar, koin kedua angka — G-A. Terakhir, keduanya gambar — G-G. Hitung barisnya: EMPAT kemungkinan, bukan dua! Rahasianya terkuak: A-G dan G-A terlihat kembar, padahal mereka dua kejadian berbeda — koin pertamanya yang berbeda cerita. Daftar berhasil menangkap si kembar itu.',
+        },
+        {
+          objek: 'hasilCampurDua', judul: 'Campur Menang Dua dari Empat',
+          teks: 'Dengan daftar lengkap, peluang langsung terbaca: dua angka satu per empat, dua gambar satu per empat, campur dua per empat — dua kali lipat saudaranya! Tadinya si sahabat mengira campur sama peluangnya dengan dua angka; daftar membongkar kekeliruannya. Menebak membuat kita yakin tanpa bukti, mendaftar membuat kita yakin karena bisa dicek. Empat baris kecil di kertas ternyata lebih kuat dari rasa yakin.',
+        },
+        {
+          objek: 'papanDaftarDulu', judul: 'Jurus: Daftar Dulu, Hitung Kemudian',
+          teks: 'Papan teras menuliskan jurus emas penjuru ini: daftar dulu semua kemungkinan, baru hitung peluangnya. Daftar itu seperti menata kursi sebelum pesta — tanpa daftar, satu tamu bisa terlewat dan hitungan melenceng. Hitungan itu hanya alat; daftarlah yang memastikan alat itu dipakai jujur. Besok siapa pun yang melempar dua koin, kertas kecil itu sudah siap: A-A, A-G, G-A, G-G — lengkap, jelas, adil.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Mendaftar Melahirkan Kemungkinan Tersembunyi!',
+          teks: 'Dua koin yang katanya hanya punya dua kemungkinan ternyata menyimpan empat — A-G dan G-A ternyata dua tamu berbeda. Owalah, ternyata begini toh — daftar dulu, hitung kemudian, dan tak ada kemungkinan yang lolos. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-099 · Peluang di Sekitar Kita — sore teras langit mendung ----- */
+    'p2-099': {
+      tema: 'terasMendung',
+      npc: { glif: '4/5', ucap: ['Baca tanda,', 'siap payung!'] },
+      stasiun: [
+        {
+          objek: 'langitAwanGelap', judul: 'Langit Mendung di Sore Hari',
+          teks: 'Sore di tepi hutan, langit berubah kelabu: awan tebal menggelondong rendah, udara berbau tanah basah, dan burung-burung terbang rendah mencari tempat berlindung. Semua tanda itu sudah lama dikenal penduduk hutan. Tapi tanda saja belum cukup untuk memutuskan — maka dibukalah buku catatan cuaca hutan: dari sepuluh sore terakhir berlangit seperti ini, apa saja yang terjadi?',
+        },
+        {
+          objek: 'sepuluhLangitLalu', judul: 'Catatan Sepuluh Sore Lalu',
+          teks: 'Buku catatan menjawab dengan jujur: dari sepuluh sore berlangit mendung seperti ini, delapan kali hujan turun, dua kali hanya berawan lalu cerah kembali. Delapan dari sepuluh ditulis delapan per sepuluh — atau empat per lima. Peluang hujan malam ini kira-kira empat per lima: dekat ke satu, jauh dari nol. Tapi buku itu juga menuliskan dua sore yang selamat — kemungkinan cerah tak pernah benar-benar nol.',
+        },
+        {
+          objek: 'payungSiapSedia', judul: 'Payung yang Siap di Pojok',
+          teks: 'Dengan peluang empat per lima, keputusannya mudah: payung diambil dan dibawa. Bukan karena hujan dipastikan datang, melainkan karena kemungkinannya besar dan payung ringan dijinjing. Kalau ternyata hujan tak turun, tak ada yang rugi — hanya payung yang menunggu dengan sabar. Begitulah peluang membantu memilih: bukan menjanjikan hasil, melainkan menyiapkan langkah untuk kemungkinan yang lebih besar.',
+        },
+        {
+          objek: 'papanBacaTanda', judul: 'Membaca Tanda, Tanpa Menjanjikan',
+          teks: 'Papan dekat teras menuliskan batas yang penting: kita boleh membaca tanda-tanda langit dan menghitung kemungkinannya dari catatan yang jujur — itu ilmu. Yang tak boleh: mengaku tahu pasti apa yang akan terjadi, sebab langit tetap menyimpan keputusannya sendiri. Hitungan itu hanya alat. Ia membantu kita bawa payung, menanam di musimnya, dan jaga badan — sisanya, biarkan sore menentukan dirinya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Peluang Membantu Kita Siap, Bukan Menjanjikan!',
+          teks: 'Delapan dari sepuluh sore mendung membawa hujan, dan empat per lima cukup untuk mengambil payung. Owalah, ternyata begini toh — peluang di sekitar kita hanyalah tanda yang dihitung jujur, agar langkah kita siap. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p2-100 · Tantangan Peluang Hutan — malam balai juara lima misi ----- */
+    'p2-100': {
+      tema: 'balaiPeluang',
+      npc: { glif: '10/10', ucap: ['Lima misi', 'penjuru pamungkas!'] },
+      stasiun: [
+        {
+          objek: 'balaiJuaraPeluang', judul: 'Balai Juara Malam Ini Terbuka',
+          teks: 'Malam di balai juara hutan, lima lentera menyala di atas meja panjang dan papan pengumuman berkilau: lima misi peluang untuk penjuru pamungkas. Semua ilmu yang dipelajari sepanjang penjuru ini — garis nol-satu, koin, dadu, roda, kantong, pecahan, dan daftar kemungkinan — kini menunggu dipakai bersama. Siapa menyelesaikan kelima misinya dengan hitungan yang jujur, dialah jagoan peluang hutan.',
+        },
+        {
+          objek: 'misiKoinDua', judul: 'Misi Satu dan Dua: Koin dan Dadu',
+          teks: 'Misi pertama melempar koin: berapa peluang muncul angka? Dua sisi, satu yang dicari — satu per dua. Misi kedua menggelindingkan dadu: berapa peluang muncul enam? Enam sisi, satu yang dicari — satu per enam. Dua jawaban cepat untuk dua alat main tua; garis nol-satu mengangguk: satu per dua dan satu per enam berdiri rapi di tengah, tak mustahil dan belum pasti. Lentera pertama dan kedua menyala terang.',
+        },
+        {
+          objek: 'misiRodaBiru', judul: 'Misi Tiga: Roda Biru Sempit',
+          teks: 'Misi ketiga membawa roda festival: irisan biru hanya seperempat roda, merah tiga perempat. Peluang biru? Satu per empat. Peluang merah? Tiga per empat. Cek penjumlahannya: satu per empat tambah tiga per empat sama dengan satu — roda penuh, tak ada kemungkinan bocor. Lentera ketiga menyala, dan bayangannya jatuh tepat di papan jurus luas irisan yang dipelajari sore festival dulu.',
+        },
+        {
+          objek: 'misiKelerengLima', judul: 'Misi Empat: Kantong Lima Kelereng',
+          teks: 'Misi keempat menggoyangkan kantong: dua kelereng merah, tiga biru, lima seluruhnya. Peluang merah dua per lima, peluang biru tiga per lima, jumlahnya lima per lima — tepat satu lagi! Pemeriksa lalu menambahkan ujian kecil: daftarkan hasil lempar dua koin. Empat baris ditulis: A-A, A-G, G-A, G-G — dan peluang dua angka jadi satu per empat. Lentera keempat menyala paling terang malam itu.',
+        },
+        {
+          objek: 'misiDuaKoinSeperempat', judul: 'Misi Lima dan Sertifikat Jagoan',
+          teks: 'Misi terakhir menutup semuanya: jelaskan kenapa jumlah semua peluang selalu satu. Jawabannya tertulis di papan balai: karena semua kemungkinan berbagi satu kue yang sama dan menghabiskannya bersama-sama. Hitungan itu hanya alat — yang jagoan bukan yang paling cepat, melainkan yang paling jujur menghitungnya. Sertifikat jagoan peluang ditandatangani lima lentera, dan seluruh hutan bertepuk tangan malam itu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Penjuru Peluang Tuntas dengan Hitungan Jujur!',
+          teks: 'Satu per dua, satu per enam, satu per empat, dua per lima, satu per empat — lima misi, satu penjuru selesai, dan seratus judul Pintu Kedua kini utuh. Owalah, ternyata begini toh — peluang hanyalah kejujuran yang dihitung: daftar dulu, jumlahkan tepat satu, lalu siapkan payung. Mudah, bukan?',
+        },
+      ],
+    },
+
     /* ----- p1-001 · Matematika Itu Apa Sih? — siang cerah, jejak pertama ----- */
     'p1-001': {
       stasiun: [
