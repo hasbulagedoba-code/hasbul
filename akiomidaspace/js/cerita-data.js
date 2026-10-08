@@ -6192,6 +6192,286 @@ window.CERITA = (function () {
         },
       ],
     },
+
+    /* ----- p3-021 · Pangkat: Kali Berulang — pagi bengkel pangkat ----- */
+    'p3-021': {
+      tema: 'bengkelPangkat',
+      npc: { glif: '2x2x2', ucap: ['Kali berulang', 'jadi pangkat!'] },
+      stasiun: [
+        {
+          objek: 'mesinPangkatTiga', judul: 'Mesin Pengali yang Setia',
+          teks: 'Pagi di bengkel pangkat, sebuah mesin tua menyala siap bekerja. Tukangnya bilang: masukkan angka dua, lalu minta mesin mengali dua dengan dirinya sendiri tiga kali. Mesin pun bekerja dengan setia: 2 × 2 × 2 = 8. Pangkat sebenarnya hanya perkalian yang diulang — tak ada sihir apa pun di dalamnya.',
+        },
+        {
+          objek: 'papanTulisKaliUlang', judul: 'Angka Kecil di Atas Itu Apa?',
+          teks: 'Papan tulis bengkel menunjukkan tulisan besar: 2 dengan angka kecil 4 di atasnya. Tukang menjelaskan: angka kecil itu bukan hiasan, ia pengingat berapa kali kita mengali. Jadi 2 pangkat empat berarti 2 × 2 × 2 × 2 = 16. Begitu juga 10 pangkat dua berarti 10 × 10 = 100.',
+        },
+        {
+          objek: 'kartuPangkatKecil', judul: 'Kartu Ajakan Mengali',
+          teks: 'Di meja ada kartu besar bertuliskan 2 dengan angka kecil 3 di atasnya. Kartu ini seperti undangan kecil: "ayo mengali dua kali tiga kali!" Siapa pun yang membacanya langsung tahu harus bekerja berapa kali. Angka kecil di atas itulah yang disebut pangkat — ajakan mengali yang ringkas.',
+        },
+        {
+          objek: 'rakHasilDelapan', judul: 'Hasil yang Berbentuk',
+          teks: 'Di rak pojok tersusun delapan kubus emas membentuk kubus kecil dua kali dua kali dua. Itulah wajah asli dari 2 pangkat tiga: hasilnya sungguh berbentuk dan bisa disentuh. Hitungan itu hanya alat — dan hasilnya bisa dilihat mata di rak bengkel.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Angka Kecil Ternyata Ajakan Mengali!',
+          teks: 'Mesin mengali setia, angka kecil di atas memberi aba-aba, dan hasilnya tersusun rapi di rak bengkel. Owalah, ternyata begini toh — pangkat hanyalah perkalian yang diulang dengan rajin, tak lebih dari itu. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-022 · Ledakan Lipatan — siang meja lipat kertas ----- */
+    'p3-022': {
+      tema: 'mejaLipatKertas',
+      npc: { glif: 'lipat', ucap: ['Lipat lagi', 'berlipat-lipat!'] },
+      stasiun: [
+        {
+          objek: 'kertasLipatPertama', judul: 'Lipatan Pertama',
+          teks: 'Siang di meja kerajinan, selembar kertas setebal 0,1 milimeter menunggu dilipat. Lipat sekali: jadilah dua lapis, tebalnya 0,2 milimeter. Lipat lagi: empat lapis. Kertas kecil ini punya kebiasaan yang luar biasa — setiap lipatan membuatnya berlipat dua.',
+        },
+        {
+          objek: 'tumpukanLipatDelapan', judul: 'Delapan Lipatan Mengalahkan Buku',
+          teks: 'Terus dilipat: 4 lapis, 8 lapis, 16 lapis — sampai lipatan kedelapan. Sekarang ada 256 lapis kertas dengan tebal 25,6 milimeter. Lebih tebal dari buku cerita! Coba hitung sendiri: 0,1 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 25,6. Tangan boleh lelah, angkanya tetap jujur.',
+        },
+        {
+          objek: 'penggarisTebalTumpuk', judul: 'Kenapa Bisa Menggila Begini?',
+          teks: 'Penggaris di meja mengukur tumpukan dan menunjukkan angka yang melompat-lompat. Rahasianya: lipatan tidak menambah sedikit demi sedikit, ia MENGALI dua kali setiap saat. Mengali berulang itulah yang membuat kecil menjadi raksasa dengan sangat cepat. Pangkat memang pekerja berlipat.',
+        },
+        {
+          objek: 'papanJalanKeBulan', judul: 'Kejutan: Sampai ke Bulan!',
+          teks: 'Papan di dinding menulis angka paling mengagetkan: kalau kertas bisa dilipat 42 kali, tebalnya jadi 439.804 kilometer — menembus bulan! Padahal jarak ke bulan cuma 384.400 kilometer. Tentu tangan kita berhenti jauh sebelum itu, tapi hitungannya benar: lipatan kecil, ledakan besar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lipatan Kecil Ternyata Ledakan!',
+          teks: 'Dari 0,1 milimeter sampai menembus bulan — hanya dengan lipat dan lipat lagi, tanpa alat apa pun. Owalah, ternyata begini toh — pangkat adalah mesin pengganda yang tidur di dalam setiap kertas lipat. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-023 · Kuadrat & Kubik — sore taman bentuk ----- */
+    'p3-023': {
+      tema: 'tamanBentukPangkat',
+      npc: { glif: '2 dan 3', ucap: ['Luas dan isi', 'menunggumu!'] },
+      stasiun: [
+        {
+          objek: 'petakRumputTigaTiga', judul: 'Petak Rumput Berbentuk Kotak',
+          teks: 'Sore di taman bentuk, ada petak rumput berbentuk persegi bersisi tiga langkah. Petani menanam satu bunga di tiap kotak kecil. Hitung isinya: 3 × 3 = 9 bunga. Nah, itulah arti asli pangkat dua — luas sebuah persegi. Angka kecil 2 di atas ternyata menceritakan bentuk.',
+        },
+        {
+          objek: 'kotakKayuKubik', judul: 'Kotak Kayu yang Berisi Ruang',
+          teks: 'Di sebelahnya ada kotak kayu bersisi dua. Di dalamnya muat 2 × 2 × 2 = 8 ruang kecil. Inilah pangkat tiga: bukan lagi luas, tapi isi — seberapa banyak ruang di dalam kotak. Pangkat 3 menghitung dunia yang punya tinggi juga.',
+        },
+        {
+          objek: 'papanLuasDanIsi', judul: 'Papan Taman: Luas dan Isi',
+          teks: 'Papan kayu taman menulis dua kalimat penting: x pangkat dua artinya luas persegi bersisi x, dan x pangkat tiga artinya isi kubus bersisi x. Jadi pangkat bukan angka liar — ia punya bentuk yang bisa digambar di tanah. Kotak datar untuk pangkat dua, kotak penuh untuk pangkat tiga.',
+        },
+        {
+          objek: 'patungBentukSaudara', judul: 'Dua Patung Bersaudara',
+          teks: 'Di pusat taman berdiri dua patung batu bersanding: persegi pipih dan kubus gemuk. Pengunjung menyebut mereka saudara pangkat dua dan pangkat tiga. Dua saudara ini akan menemani semua hitungan luas dan isi sampai nanti. Mengenang bentuknya, kita tak pernah salah memanggilnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pangkat Ternyata Punya Bentuk!',
+          teks: 'Bunga di petak persegi, ruang di dalam kubus — pangkat dua dan tiga tinggal di dalam bentuk. Owalah, ternyata begini toh — kuadrat dan kubik hanyalah cerita luas dan isi yang menyamar jadi angka. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-024 · Akar: Jalan Pulang — senja jalan pulang akar ----- */
+    'p3-024': {
+      tema: 'jalanPulangAkar',
+      npc: { glif: '7x7', ucap: ['Jalan pulang', 'menanti!'] },
+      stasiun: [
+        {
+          objek: 'gerbangRumahEmpatSembilan', judul: 'Gerbang Rumah Nomor 49',
+          teks: 'Senja turun, dan kamu berdiri di depan gerbang rumah bernomor 49. Tapi pintunya bertanya dulu: "siapa yang dikali dirinya sendiri hasilnya 49?" Tidak ada angka lain di papan, hanya soal itu. Rumah nomor 49 ternyata punya kunci soal untuk semua tamu.',
+        },
+        {
+          objek: 'jalanLangkahTujuh', judul: 'Tujuh Lampu Jalan Pulang',
+          teks: 'Jalan pulangnya berpijak lampu: satu, dua, tiga, empat, lima, enam, tujuh lampu menyala. Dan keajaibannya: tujuh dikali tujuh hasilnya tepat 49! Maka kuncinya ditemukan — angka 7 adalah langkah pulang menuju rumah 49.',
+        },
+        {
+          objek: 'papanAkarJalanBalik', judul: 'Papan: Akar adalah Jalan Balik',
+          teks: 'Papan di tepi jalan menulis: akar 49 = 7, karena 7 × 7 = 49. Kalau pangkat itu pergi dari 7 menuju 49, maka akar adalah jalan pulang dari 49 kembali ke 7. Dua arah, satu jalan — pangkat pergi, akar pulang.',
+        },
+        {
+          objek: 'lampuPulangPasangan', judul: 'Dua Lampu yang Saling Membalik',
+          teks: 'Di ujung jalan ada dua lampu besar bertautan. Yang satu menyalakan perjalanan 7 menjadi 49, yang satunya membalik 49 kembali menjadi 7. Mereka selalu bekerja berpasangan: akar 16 = 4 karena 4 × 4 = 16, dan akar 81 = 9 karena 9 × 9 = 81. Satu jalan pulang untuk setiap pangkat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Akar Ternyata Jalan Pulangnya Pangkat!',
+          teks: 'Gerbang 49, tujuh lampu, dan dua lampu yang saling membalik — rumah pun tercapai. Owalah, ternyata begini toh — akar hanyalah jalan pulang dari pangkat, dan pangkat hanyalah pergi berangkatnya akar. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-025 · Logaritma Pencari Pangkat — malam kantor detektif ----- */
+    'p3-025': {
+      tema: 'kantorDetektifLog',
+      npc: { glif: 'log2', ucap: ['Kasus baru', 'terbuka!'] },
+      stasiun: [
+        {
+          objek: 'papanKasusDelapan', judul: 'Kasus Malam Ini: Siapa 8?',
+          teks: 'Malam di kantor detektif pangkat, sebuah papan kasus tergantung besar. Tertulis: "2 pangkat berapa hasilnya 8?" Tidak ada nama pelaku, hanya pertanyaan itu. Detektif muda seperti kamu diminta mencari pangkat yang hilang itu.',
+        },
+        {
+          objek: 'kartuSaksiDuaEmpat', judul: 'Kartu Saksi Berbaris',
+          teks: 'Detektif membuka kartu-kartu saksi satu per satu: 2 pangkat satu sama 2, 2 pangkat dua sama 4, 2 pangkat tiga sama 8. Nah! Saksi ketiga melapor dengan benar — dia yang membuat 8. Kasus mulai terang benderang.',
+        },
+        {
+          objek: 'lampuJawabanTiga', judul: 'Lampu Jawaban Menyala: Tiga!',
+          teks: 'Di atas papan, lampu jawaban menyala besar-besaran dengan angka 3. Maka tertulis resmi: 2 pangkat 3 = 8, selesai malam ini. Detektif pangkat selalu bekerja begini: mencoba satu per satu sampai menemukan pangkat yang pas.',
+        },
+        {
+          objek: 'mejaBerkasLog', judul: 'Meja Berkas Terselesaikan',
+          teks: 'Di meja, berkas-berkas lama sudah tersusun rapi: log dua dari 8 sama 3, log dua dari 16 sama 4, log dua dari 32 sama 5. Semua berkas bercerita sama: logaritma adalah detektif yang bertanya "pangkat berapa?" lalu mencarinya dengan setia. Tidak ada kasus yang bikin bingung selamanya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Logaritma Ternyata Detektif Pangkat!',
+          teks: 'Papan kasus, kartu saksi, lampu jawaban — kasus 8 terpecahkan dengan jawaban 3, dan berkas berikutnya pun menunggu. Owalah, ternyata begini toh — logaritma hanyalah detektif kecil yang mencari pangkat yang hilang. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-026 · Pangkat Nol & Minus — pagi tangga dua arah ----- */
+    'p3-026': {
+      tema: 'tanggaPangkatDuaArah',
+      npc: { glif: 'turun', ucap: ['Naik turun', 'tangga pangkat!'] },
+      stasiun: [
+        {
+          objek: 'anakTanggaNaikPangkat', judul: 'Tangga yang Naik: Kali Dua',
+          teks: 'Pagi di lereng gunung, ada tangga batu yang naik ke atas. Anak tangganya berderet: 2, 4, 8, 16 — setiap naik satu langkah, angkanya dikali dua. Naik tangga pangkat ternyata sama seperti lipatan kertas: makin tinggi, makin besar dengan cepat.',
+        },
+        {
+          objek: 'anakTanggaTurunBagi', judul: 'Tangga yang Turun: Bagi Dua',
+          teks: 'Sekarang turunlah dari puncak: dari 8 turun ke 4, lalu 2, lalu 1. Setiap turun satu langkah, angkanya dibagi dua. Kalau naik itu mengali, maka turun itu membagi — tangga pangkat ternyata bisa dilalui dua arah.',
+        },
+        {
+          objek: 'pijakanNolSatu', judul: 'Pijakan Nol: Tetap Satu',
+          teks: 'Di pijakan bernomor nol, ada satu angka yang berkilau: 2 pangkat 0 sama 1. Kenapa? Karena naik nol langkah berarti tidak mengali sama sekali — angka tetap apa adanya, yaitu 1. Coba cek tangga lain: 3 pangkat 0 juga 1, bahkan 1000 pangkat 0 tetap 1. Semua berangkat dari satu.',
+        },
+        {
+          objek: 'papanLanjutTurunSetengah', judul: 'Tangga Lanjut ke Bawah!',
+          teks: 'Papan di bawah pijakan menulis kejutan: tangganya masih lanjut turun! Di bawah 1 ada 2 pangkat minus satu sama setengah, lalu 2 pangkat minus dua sama seperempat. Pangkat minus bukan angka marah — ia hanya mengajak membagi lebih dalam lagi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tangga Pangkat Ternyata Dua Arah!',
+          teks: 'Naik dikali dua, turun dibagi dua, pijakan nol tetap satu, dan bawahnya setengah-setengah lagi. Owalah, ternyata begini toh — pangkat hanyalah tangga yang bisa dinaiki dan dituruni dua arah. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-027 · Waktu Menggandakan — siang rumah kaca ----- */
+    'p3-027': {
+      tema: 'rumahKacaTumbuh',
+      npc: { glif: '1 2 4', ucap: ['Tumbuh', 'berlipat!'] },
+      stasiun: [
+        {
+          objek: 'cawanKoloniSatu', judul: 'Satu Tetes Hijau di Cawan',
+          teks: 'Siang di rumah kaca, seorang ilmuwan menetesi cawan dengan satu tetes hijau kecil. Ia mencatat di buku: jam nol, koloni berjumlah satu. Lalu ia menunggu satu jam penuh dengan sabar. Yang terjadi berikutnya membuat catatannya makin panjang.',
+        },
+        {
+          objek: 'cawanKoloniEmpat', judul: 'Barisan Catatan yang Berlipat',
+          teks: 'Jam pertama koloni jadi dua, jam kedua jadi empat, jam ketiga jadi delapan. Catatannya berderap rapi: 1, 2, 4, 8, 16. Setiap jam koloni menggandakan dirinya sendiri — seperti kertas yang dilipat, tapi kali ini di dalam cawan. Barisan yang sama, alam yang berbeda.',
+        },
+        {
+          objek: 'papanJamGandakan', judul: 'Rahasia: Jamnya Selalu Sama',
+          teks: 'Papan di dinding rumah kaca menulis rahasia terpenting: waktu untuk menggandakan SELALU SAMA, satu jam setiap kali. Inilah denyut tumbuh berlipat — tidak semrawut, tapi setia pada iramanya. Karena jeda gandanya tetap, jumlahnya melompat makin cepat seperti anak tangga yang makin curam.',
+        },
+        {
+          objek: 'papanDenyutSetia', judul: 'Catatan Ilmuwan yang Jujur',
+          teks: 'Papan terakhir menulis: bambu dan banyak makhluk kecil tumbuh dengan denyut ganda seperti ini — itulah cara alam bertumbuh, dan mengamatinya adalah ilmu yang indah. Hitungan itu hanya alat. Bantu saja — ia mencatat keajaiban tumbuh dengan jujur, tanpa menjanjikan apa-apa.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Denyut Ganda Ternyata Irama Alam!',
+          teks: 'Satu tetes jadi dua, dua jadi empat, empat jadi delapan — dengan jam yang tak pernah berubah sedikit pun. Owalah, ternyata begini toh — tumbuh berlipat hanyalah penggandaan alam yang setia waktu. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-028 · Bola Pantul Setengah — sore lapangan bola ----- */
+    'p3-028': {
+      tema: 'lapanganBolaSenja',
+      npc: { glif: 'setengah', ucap: ['Pantul lagi', 'setengah lagi!'] },
+      stasiun: [
+        {
+          objek: 'bolaKaretDilepas', judul: 'Bola Dilepas dari Seratus',
+          teks: 'Sore di lapangan, seorang anak melepaskan bola karet dari tinggi seratus. Bola jatuh, bunyi, lalu memantul. Tapi pantulan pertamanya tidak setinggi tadi — hanya setengahnya, yaitu 50. Bola ini punya kebiasaan yang bisa dihitung.',
+        },
+        {
+          objek: 'garisPantulanLimaPuluh', judul: 'Pantulan yang Setia Setengah',
+          teks: 'Dari 50, pantulan kedua hanya 25. Dari 25, pantulan ketiga cuma 12,5. Garis-garis tinggi di lapangan membentuk tangga menurun: 100, 50, 25, 12,5. Setiap pantul selalu setengah dari sebelumnya — bola ini memang pekerja yang patuh pada pola.',
+        },
+        {
+          objek: 'papanTinggiMenurun', judul: 'Papan: Menurun dengan Teratur',
+          teks: 'Papan tepi lapangan menulis deret pantulan itu berjajar: 100, 50, 25, 12,5. Makin kecil, tapi kecilnya TIDAK sembarangan — selalu tepat setengah. Ini seperti tangga pangkat yang dituruni: turun satu langkah, dibagi dua. Mengecil pun bisa teratur.',
+        },
+        {
+          objek: 'papanKecilTeratur', judul: 'Ilmu Menyukai Pola yang Jujur',
+          teks: 'Papan terakhir menutup pelajaran: para ilmuwan suka mengamati pantulan karena polanya jujur dan bisa dicek ulang kapan saja. Hitungan itu hanya alat — alat untuk membaca catatan pantulan yang sudah terjadi, bukan untuk menjanjikan apa-apa. Yang setia setengah itu polanya, bukan janjinya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Mengecil Ternyata Selalu Teratur!',
+          teks: 'Seratus, lima puluh, dua puluh lima — bola mengecil dengan patuh setengah demi setengah sampai akhirnya diam. Owalah, ternyata begini toh — pangkat turun hanyalah membagi yang teratur, jujur, dan setia. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-029 · Angka Raksasa & Mini — malam observatorium ----- */
+    'p3-029': {
+      tema: 'observatoriumAngka',
+      npc: { glif: 'x10', ucap: ['Raksasa & mini', 'tertata rapi!'] },
+      stasiun: [
+        {
+          objek: 'teleskopArahLangit', judul: 'Teleskop dan Langit Malam',
+          teks: 'Malam di observatorium, teleskop besar mengarah ke langit berbintang. Para ilmuwan di sini sibuk MENGHITUNG jumlah bintang — bukan menebak nasib dari bintang, karena itu haram dan tidak benar. Yang mereka lakukan hanyalah menghitung, mencatat, dan mengagumi ciptaan dengan jujur.',
+        },
+        {
+          objek: 'papanBintangPuluhDua', judul: 'Angka 1 dengan 22 Nol!',
+          teks: 'Papan hitam observatorium menulis perkiraan jumlah bintang: sekitar 10 pangkat 22. Itu artinya angka 1 diikuti 22 nol — panjang sekali kalau ditulis satu per satu! Maka ilmuwan memakai jalan pintas: tulis saja 10 dengan pangkat 22. Pangkat adalah jalan pintas untuk angka raksasa.',
+        },
+        {
+          objek: 'penggarisRambutMini', judul: 'Rambut Mini yang Juga Punya Pangkat',
+          teks: 'Di meja ada penggaris cermat mengukur sehelai rambut: lebarnya kira-kira 0,0001 meter, atau 0,1 milimeter. Angka ini ditulis ringkas dengan pangkat minus: 10 pangkat minus 4 meter. Jadi pangkat tidak hanya untuk yang raksasa — yang mini pun tertata rapi olehnya.',
+        },
+        {
+          objek: 'bukuTulisPangkat', judul: 'Buku yang Menata Semua',
+          teks: 'Buku catatan observatorium membuka halamannya: bintang sebesar 10 pangkat 22 dan rambut sekecil 10 pangkat minus 4, keduanya tertulis rapi di halaman yang sama. Dengan pangkat, angka raksasa dan mini bisa berjabat tangan. Koma bergeser satu, pangkat bergeser satu — begitu saja aturannya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pangkat Ternyata Penata Angka!',
+          teks: 'Bintang berjuta-juta dan rambut sehalus debu — keduanya tertata rapi oleh pangkat kecil yang ringkas. Owalah, ternyata begini toh — pangkat hanyalah penata angka yang membuat raksasa dan mini muat di satu halaman. Mudah, bukan?',
+        },
+      ],
+    },
+
+    /* ----- p3-030 · Tantangan Tangga Pangkat — malam puncak tangga ----- */
+    'p3-030': {
+      tema: 'puncakTanggaPangkat',
+      npc: { glif: 'tangga!', ucap: ['Lima tangga', 'menyala!'] },
+      stasiun: [
+        {
+          objek: 'limaTanggaMisiPangkat', judul: 'Lima Tangga Menyala di Puncak',
+          teks: 'Malam di puncak Pegunungan Pola, lima anak tangga batu menyala satu per satu seperti menunggu diinjak. Satu tangga untuk satu misi. Pendaki yang menyelesaikan satu misi akan melihat tangganya terang penuh dan bersiap menaiki tangga berikutnya.',
+        },
+        {
+          objek: 'papanMisiDuaLima', judul: 'Misi Satu dan Dua',
+          teks: 'Tangga pertama menantang: berapa 2 pangkat 5? Hitung: 2 × 2 × 2 × 2 × 2 = 32. Tangga kedua menantang: akar dari 81? Cari angka yang dikali dirinya jadi 81 — yaitu 9, karena 9 × 9 = 81. Dua tangga kini menyala terang.',
+        },
+        {
+          objek: 'papanMisiTigaEmpat', judul: 'Misi Tiga dan Empat',
+          teks: 'Tangga ketiga bertanya seperti detektif: 2 pangkat berapa hasilnya 16? Saksi-saksinya: 2, 4, 8, 16 — jawabannya 4. Tangga keempat mengetes pijakan nol: berapa 3 pangkat 0? Ingat, naik nol langkah berarti tak mengali — tetap 1. Empat tangga terang berderet.',
+        },
+        {
+          objek: 'gerbangJuaraTangga', judul: 'Misi Lima dan Gerbang Juara',
+          teks: 'Tangga kelima: kertas 0,1 milimeter dilipat 10 kali jadi berapa lapis? Itu 2 pangkat 10 = 1024 lapis, tebalnya 102,4 milimeter — setinggi segelas air! Lima tangga terang penuh, dan gerbang juara batu terbuka perlahan. Tangga pangkat kini adalah teman lamamu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Penakluk Tangga Pangkat!',
+          teks: 'Pangkat dikali, akar dipulangkan, detektif logaritma dipanggil, pijakan nol diinjak, dan lipatan dihitung — lima tangga, lima kemenangan. Owalah, ternyata begini toh — eksponen dan logaritma hanyalah tangga naik dan jalan pulang yang setia menunggu. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   /* dunia fallback untuk judul yang belum punya naskah */
