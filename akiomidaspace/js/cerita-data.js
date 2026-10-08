@@ -6496,6 +6496,275 @@ window.CERITA = (function () {
         },
       ],
     },
+    'p3-041': {
+      tema: 'padangSegitiga',
+      npc: { glif: '3 sisi', ucap: ['Kenali tiga', 'sahabat sisi!'] },
+      stasiun: [
+        {
+          objek: 'gerbangSegitigaRaksasa', judul: 'Gerbang Segitiga Raksasa di Padang',
+          teks: 'Pagi di padang gunung, sebuah gerbang batu berbentuk segitiga siku berdiri raksasa. Sisi bawahnya terbentang datar seperti lantai, sisi kanannya berdiri tegak seperti dinding, dan satu sisi lagi miring dari puncak turun ke tanah. Tiga sisi ini adalah tiga sahabat yang akan menemanimu belajar sudut dan ukuran sepanjang penjuru ini.',
+        },
+        {
+          objek: 'dindingTegakLantai', judul: 'Dinding Tegak dan Lantai Alas',
+          teks: 'Dua sisi yang bertemu membentuk sudut siku punya nama yang mudah diingat. Sisi yang berdiri lurus ke atas disebut sisi tegak, dan sisi yang tergeletak datar di tanah disebut alas — seperti dinding dan lantai di rumah yang selalu bertemu di sudut. Kalau kertasmu sobek membentuk sudut siku, dua tepi yang bertemu itu persis seperti tegak dan alasnya.',
+        },
+        {
+          objek: 'jalanPintasMiring', judul: 'Jalan Pintas Miring yang Terpanjang',
+          teks: 'Sisi miring adalah jalan pintas dari puncak dinding langsung ke ujung lantai, dan ia selalu menjadi sisi paling panjang. Pada gerbang ini panjang ketiga sisinya 3, 4, dan 5 — dan miringnya adalah 5, lebih panjang dari 4 maupun 3. Buktinya bisa dihitung: 3 × 3 = 9 dan 4 × 4 = 16, lalu 9 + 16 = 25, persis 5 × 5!',
+        },
+        {
+          objek: 'papanNamaSisi', judul: 'Nama Berubah Menurut Pandangan',
+          teks: 'Papan di gerbang menulis rahasia terakhir: nama depan dan samping berubah menurut sudut yang memandang. Dari sudut di tanah, dinding tegak berada di depan mata; tapi dari sudut di puncak, dinding yang sama kini ada di samping. Yang tidak pernah berubah hanya sisi miring — ia tetap miring dari sudut mana pun kamu melihatnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Sisi Ternyata Punya Nama!',
+          teks: 'Alas tergeletak di tanah, tegak berdiri membentuk sudut siku, dan miring melompat dari puncak ke tanah sebagai sisi terpanjang. Owalah, ternyata begini toh — segitiga siku hanyalah tiga sahabat dengan nama yang jelas: alas, tegak, dan miring yang tak pernah kalah panjang. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-042': {
+      tema: 'lorongTanggaSandar',
+      npc: { glif: '4/2', ucap: ['Tinggi dibagi', 'jaraknya!'] },
+      stasiun: [
+        {
+          objek: 'lorongTigaTangga', judul: 'Tiga Tangga Bersandar di Lorong',
+          teks: 'Siang di lorong gunung, tiga tangga bersandar pada dinding yang sama, dan tiap tangga membawa dua angka: berapa tingginya naik dan seberapa jauh maju di tanah. Tangga pertama naik 3 dan maju 3, tangga kedua naik 2 dan maju 4, tangga ketiga naik 4 dan maju 2. Tiga tangga, tiga watak yang berbeda rasa.',
+        },
+        {
+          objek: 'papanNaikMaju', judul: 'Dua Angka Penanda Watak',
+          teks: 'Papan kecil di tiap tangga menulis pasangan angkanya: naik 3 maju 3, naik 2 maju 4, dan naik 4 maju 2. Perhatikan tangga kedua: naiknya sedikit tapi majunya jauh, pasti ia landai. Sedangkan tangga ketiga naiknya tinggi tapi majunya pendek — sudah bisa ditebak, ia paling curam. Dua angka saja sudah cukup menceritakan watak sebuah tangga.',
+        },
+        {
+          objek: 'tanggaPembagiCuram', judul: 'Membagi Tinggi dengan Jarak',
+          teks: 'Cara mengukur curamnya begini: bagi tinggi naik dengan jarak maju. Tangga pertama: 3 ÷ 3 = 1. Tangga kedua: 2 ÷ 4 = 0,5. Tangga ketiga: 4 ÷ 2 = 2. Makin besar hasil baginya, makin curam tangganya — angka 2 berarti naik dua kali lebih cepat daripada maju. Perbandingan tinggi dan jarak ini punya nama: tangen.',
+        },
+        {
+          objek: 'gelangCuramAman', judul: 'Pemilih Tangga yang Aman',
+          teks: 'Pembangun lorong memasang gelang peringatan: tangga dengan angka 2 terlalu curam untuk anak kecil, yang 0,5 nyaman seperti jalan naik halaman, dan yang 1 pas untuk tangga rumah. Hitungan itu hanya alat. Bantu saja — alat kecil yang menjaga langkahmu aman setiap kali memilih tangga untuk dinaiki.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Curam Ternyata Bisa Dihitung!',
+          teks: 'Tiga tangga bersandar, dua angka tiap tangga, satu pembagian kecil — dan wataknya langsung terbaca: 1, 0,5, dan 2. Owalah, ternyata begini toh — tangen hanyalah tinggi dibagi jarak, ukuran kecil yang memberitahu seberapa curam sebuah tangga. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-043': {
+      tema: 'menaraSisiMiring',
+      npc: { glif: 'sin', ucap: ['Tinggi dan alas', 'kawin miring!'] },
+      stasiun: [
+        {
+          objek: 'menaraTanggaSenja', judul: 'Tangga Lima Meter di Menara Senja',
+          teks: 'Senja di menara batu, satu tangga sepanjang 5 meter bersandar santai. Kakinya berjarak 3 meter dari menara, dan puncaknya menyentuh dinding pada ketinggian 4 meter. Tiga, empat, lima — segitiga siku yang sudah kau kenal kini memperkenalkan dua sahabat baru: sinus dan cosinus.',
+        },
+        {
+          objek: 'kartuSinusEmpatLima', judul: 'Sinus: Tinggi di Atas Miring',
+          teks: 'Sinus bertanya: seberapa tinggi tangga menjangkau, dibanding panjang tangganya? Tinggi yang tersentuh adalah 4, tangganya 5, maka sinusnya 4 ÷ 5 = 0,8. Artinya tangga ini mengubah 0,8 kali panjang badannya menjadi ketinggian — hampir seluruh tangga berdiri jadi tempat yang tinggi.',
+        },
+        {
+          objek: 'kartuCosinusTigaLima', judul: 'Cosinus: Alas di Bawah Miring',
+          teks: 'Cosinus sahabatnya bertanya soal kaki: seberapa jauh kakinya menyingkir dari menara, dibanding panjang tangga? Jaraknya 3, tangganya 5, maka cosinusnya 3 ÷ 5 = 0,6. Dua sahabat ini sama-sama membandingkan diri dengan sisi miring — yang satu menjaga ketinggian, yang satu menjaga kaki di tanah.',
+        },
+        {
+          objek: 'papanKuadratSatu', judul: 'Kejutan Dua Sahabat',
+          teks: 'Papan di menara menulis kejutan: kuadratkan kedua sahabat lalu jumlahkan! 0,8 × 0,8 = 0,64 dan 0,6 × 0,6 = 0,36. Jumlahnya 0,64 + 0,36 = 1, persis satu. Kejutannya: pada segitiga siku mana pun, dua sahabat ini selalu berjumlah satu begitu dikuadratkan — coba saja dengan tangga lain, angkanya tak pernah ingkar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Sahabat Ternyata Berjumlah Satu!',
+          teks: 'Tangga lima meter membangkitkan sinus 0,8 dan cosinus 0,6 — dan saat dikuadratkan, keduanya berpadu menjadi tepat satu. Owalah, ternyata begini toh — sinus dan cosinus hanyalah dua cara mengawinkan sisi dengan sisi miring, dan keduanya sahabat yang tak terpisahkan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-044': {
+      tema: 'pelataranMiniatur',
+      npc: { glif: 'rasio', ucap: ['Bentuk sama,', 'rasio sama!'] },
+      stasiun: [
+        {
+          objek: 'duaMenaraBanding', judul: 'Menara Kecil dan Menara Besar',
+          teks: 'Pagi di pelataran batu, dua menara berdiri berdampingan: satu miniatur dengan tinggi 4 dan alas 3, satu menara asli dua kali lipatnya — tinggi 8 dan alas 6. Tali silang dari puncak ke ujung alas: pada miniatur panjangnya 5, pada menara asli 10. Miniatur itu bukan mainan — ia adalah menara besar dalam ukuran saku.',
+        },
+        {
+          objek: 'papanRasioSetia', judul: 'Rasio yang Tak Bergeser',
+          teks: 'Bagi tinggi dengan miring pada miniatur: 4 ÷ 5 = 0,8. Sekarang pada menara asli: 8 ÷ 10 = 0,8. Coba juga alasnya: 3 ÷ 5 = 0,6 dan 6 ÷ 10 = 0,6. Semua angkanya sama persis! Dua kali lipat ukuran ternyata tidak menggeser perbandingannya sedikit pun — rasionya menunggu di tempat yang sama.',
+        },
+        {
+          objek: 'tigaUkuranSebaris', judul: 'Tiga Ukuran Sepakat',
+          teks: 'Pembawa model datang menambahkan menara ketiga tiga kali lipat: tinggi 12, alas 9, miring 15. Bagilah: 12 ÷ 15 = 0,8 dan 9 ÷ 15 = 0,6. Tiga ukuran yang berbeda-beda kini berdiri sepakat dengan rasio yang sama — kecil, sedang, besar, semuanya satu keluarga bentuk yang saling setia.',
+        },
+        {
+          objek: 'kunciSebangun', judul: 'Kunci Sebangun untuk Belajar',
+          teks: 'Karena itu para penjuru membuat miniatur dulu sebelum membangun yang asli. Bentuknya sama, perbandingannya sama, maka hitungan di miniatur pasti sah untuk yang besar. Segitiga-segitiga setia seperti ini disebut sebangun — bentuk kembar dengan ukuran bebas, sahabat terpercaya para pembangun.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Perbandingan Ternyata Setia!',
+          teks: 'Miniatur 3-4-5, menara 6-8-10, model 9-12-15 — tiga ukuran, satu rasio 0,8 dan 0,6 yang tak pernah bergeser. Owalah, ternyata begini toh — segitiga sebangun hanyalah bentuk yang sama dengan ukuran berbeda, dan perbandingannya setia menunggu untuk dihitung. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-045': {
+      tema: 'kebunBayangan',
+      npc: { glif: '45!', ucap: ['Bayangan jadi', 'gurunya!'] },
+      stasiun: [
+        {
+          objek: 'tongkatBayangan', judul: 'Tongkat Kecil dan Bayangannya',
+          teks: 'Sore di kebun gunung, matahari rendah dan sebuah tongkat setinggi 2 meter tertancap di tanah. Bayangannya terbentang tepat 2 meter juga — panjang bayangan sama dengan panjang tongkatnya. Keanehan kecil ini adalah pintu rahasia untuk mengukur benda raksasa tanpa menyentuhnya sama sekali.',
+        },
+        {
+          objek: 'pohonBayanganDuaBelas', judul: 'Bayangan Pohon yang Panjang',
+          teks: 'Di ujung kebun, satu pohon tinggi melempar bayangan sepanjang 12 meter. Pohon itu terlalu tinggi untuk dipanjat, terlalu besar untuk diukur dengan meteran. Tapi bayangannya terbentang manis di tanah, ikut menyerah pada siapa pun yang mau membacanya dengan sabar.',
+        },
+        {
+          objek: 'papanPerbandinganBayang', judul: 'Perbandingan Bayangan Menjawab',
+          teks: 'Papan kebun menulis caranya: bagi tinggi dengan bayangan pada tongkat — 2 ÷ 2 = 1. Maka tinggi = 1 × bayangan. Tinggi pohon: 1 × 12 = 12 meter! Beribu-ribu tahun lalu, Thales di negeri Mesir mengukur piramida raksasa dengan cara yang sama: cukup tongkat, bayangan, dan satu pembagian kecil.',
+        },
+        {
+          objek: 'buktiMemukulSama', judul: 'Rahasia Sudut Empat Lima',
+          teks: 'Kenapa bayangan tongkat sama panjang dengan tongkatnya? Karena sore itu matahari tepat di sudut 45 derajat: naiknya sama banyak dengan majunya. Pada sudut istimewa ini bayangan selalu setia meniru tinggi — menara berbayangan 30 meter pasti tingginya 30 meter juga. Bisa dicek ulang kapan saja sore-sore!',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pohon Raksasa Ternyata Bisa Diukur!',
+          teks: 'Tongkat 2 meter, bayangan 2 meter, pembagian 1 — dan pohon yang tak terjamah langsung terjawab 12 meter. Owalah, ternyata begini toh — mengukur yang tak bisa disentuh hanyalah membaca perbandingan bayangan, warisan Thales yang masih hidup sampai hari ini. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-046': {
+      tema: 'tamanAyunan',
+      npc: { glif: 'ayun!', ucap: ['Naik turun', 'berulang setia!'] },
+      stasiun: [
+        {
+          objek: 'ayunanTamanBunga', judul: 'Ayunan Bunga di Taman Gunung',
+          teks: 'Siang di taman gunung, sebuah ayunan tali berayun santai di antara dua bunga. Ia melaju ke depan, melambat, berhenti sejenak, lalu meluncur kembali ke belakang. Gerak yang sepele ini ternyata menyimpan salah satu bentuk paling terkenal di seluruh matematika — gelombang.',
+        },
+        {
+          objek: 'taliNaikTurun', judul: 'Naik, Turun, Naik Lagi',
+          teks: 'Perhatikan tingginya. Dari titik diam, ayunan naik ke ketinggian 3 di depan, turun melewati titik diam, lalu naik ke ketinggian 3 di belakang, dan balik lagi. Naik, turun, naik, turun — tanpa lelah, tanpa tersesat, dan selalu kembali ke tempat yang sama dengan kecepatan yang sama.',
+        },
+        {
+          objek: 'kertasGrafikAyunan', judul: 'Cerita Ayunan di Kertas',
+          teks: 'Seorang tamu menggambar tinggi ayunan dari waktu ke waktu pada kertas, dan muncullah bentuk menakjubkan: bukit dan lembah yang bergantian rapi seperti perbukitan berulang. Bentuk itu bernama gelombang. Karena lahir dari gerak berulang yang setia, ia menjadi sahabat ayunan, riak laut, hingga denyut jantung.',
+        },
+        {
+          objek: 'jamAyunanSetia', judul: 'Ritme yang Bisa Dipercaya',
+          teks: 'Ayunan ini selalu butuh 2 detik melaju ke depan dan 2 detik pulang — satu putaran penuh 4 detik, tidak pernah terlambat. Kesetiaan itulah yang dipakai jam berpendulum berabad-abad lalu untuk menghitung waktu. Hitungan itu hanya alat. Bantu saja — alat yang mengingatkan manusia agar tak lupa waktunya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Ayunan Ternyata Gelombang!',
+          teks: 'Naik ke 3, turun lewat titik diam, naik ke 3 lagi — dan di kertas, gerak itu hidup menjadi bukit-lembah gelombang yang rapi. Owalah, ternyata begini toh — gerak berulang yang setia ritmenya hanyalah gelombang yang sedang bernyanyi pelan. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-047': {
+      tema: 'bukitRodaRaksasa',
+      npc: { glif: '0-10', ucap: ['Roda berputar,', 'gelombang lahir!'] },
+      stasiun: [
+        {
+          objek: 'rodaRaksasaMalam', judul: 'Roda Raksasa yang Menyala',
+          teks: 'Malam di bukit gunung, sebuah roda raksasa menyala penuh lampu berputar pelan. Satu lampu kecil di tepi rodanya berkilat mengikuti perputaran. Kejadian kecil pada lampu itu adalah kunci lahirnya gelombang sinus yang sesungguhnya di depan matamu.',
+        },
+        {
+          objek: 'lampuTepiRoda', judul: 'Lampu Kecil yang Naik-turun',
+          teks: 'Saat roda berputar, lampu kecil itu naik dari tanah, merangkak sampai puncak 10 meter, lalu turun perlahan kembali ke 0. Naik lagi, turun lagi, berulang tanpa henti. Roda berputar mendatar di tempatnya, tapi lampu di tepinya menari naik-turun dengan anggun seperti penari kecil.',
+        },
+        {
+          objek: 'papanTinggiLampu', judul: 'Catatan Tinggi yang Berulang',
+          teks: 'Papan di kaki bukit mencatat tinggi lampu dari waktu ke waktu: 0, lalu 3, lalu 7, puncak 10, turun 7, 3, kembali 0, dan naik lagi. Baca tulisannya dari kiri ke kanan: bukit dan lembah berulang — persis gelombang! Naik-turun sebuah titik pada roda ternyata menggambar gelombang sinus dengan tangannya sendiri.',
+        },
+        {
+          objek: 'kabinTurunNaik', judul: 'Batas Setia 0 sampai 10',
+          teks: 'Ada satu janji yang tak pernah dilanggar. Tinggi lampu tak pernah melebihi 10 dan tak pernah di bawah 0 — sebesar apa pun rodanya berputar. Kabin-kabin pun naik-turun di antara angka itu dengan setia, membawa penumpang menikmati ritme yang sama sejak roda pertama kali berputar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Roda Berputar Ternyata Melahirkan Gelombang!',
+          teks: 'Lampu naik dari 0 ke 10, turun ke 0 lagi, dan catatannya menjadi bukit-lembah yang berulang selamanya. Owalah, ternyata begini toh — gelombang sinus adalah naik-turun sebuah titik pada lingkaran yang berputar, ditulis rapi baris demi baris. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-048': {
+      tema: 'gerbangTigaSudut',
+      npc: { glif: '30 45', ucap: ['Tiga sudut', 'paling setia!'] },
+      stasiun: [
+        {
+          objek: 'tigaGerbangSudut', judul: 'Tiga Gerbang dengan Tiga Sudut',
+          teks: 'Pagi di penjuru gunung, tiga gerbang segitiga siku berjajar megah: gerbang 45 derajat, gerbang 60 derajat, dan gerbang 30 derajat. Ketiganya paling sering dipanggil dalam soal-soal di seluruh dunia. Bukan karena ajaib, melainkan karena perbandingannya paling mudah digambar, dihitung, dan diingat.',
+        },
+        {
+          objek: 'gerbangKembarEmpatLima', judul: 'Gerbang 45: Kakinya Kembar',
+          teks: 'Gerbang 45 punya dua kaki sama panjang — misalnya naik 1 dan maju 1. Karena kembar, tinggi dan alasnya selalu bergantian posisi: tinggi ÷ miring sama dengan maju ÷ miring, keduanya 0,707. Dan tangennya: 1 ÷ 1 = 1, pas — tangga 45 derajat naik persis sejauh majunya, tidak lebih dan tidak kurang.',
+        },
+        {
+          objek: 'gerbangSetengahTigaPuluh', judul: 'Gerbang 30: Setengah Sisi Miring',
+          teks: 'Gerbang 30 lahir dari segitiga sama sisi yang dibelah dua menjadi kembar. Hadiahnya istimewa: sisi terpendek selalu setengah dari sisi miring. Miringnya 6? Tingginya pasti 3. Miringnya 2? Tingginya 1. Bisa dicek berkali-kali, jawabannya tak pernah berubah: 1 ÷ 2 = 0,5 — setengah selalu.',
+        },
+        {
+          objek: 'gerbangEnamPuluhTinggi', judul: 'Gerbang 60: Kakinya Jangkung',
+          teks: 'Gerbang 60 adalah belahan tadi — sudutnya di puncak segitiga sama sisi. Kakinya jangkung: tingginya 1,73 saat alasnya 1, dan tinggi ÷ miringnya 0,866. Tiga gerbang, tiga watak yang bisa dihitung ulang kapan pun oleh siapa pun — karena itulah mereka disebut sudut istimewa.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Sudut Ternyata Sahabat Lama!',
+          teks: '45 yang berkaki kembar, 30 yang setengah miring, dan 60 yang jangkung — ketiganya bisa digambar, dihitung, dan dipanggil lagi esok hari. Owalah, ternyata begini toh — sudut istimewa hanyalah tiga sahabat tua yang perbandingannya paling mudah diingat. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-049': {
+      tema: 'kolamRiakMalam',
+      npc: { glif: 'riak', ucap: ['Puncak ke puncak', 'jaraknya tetap!'] },
+      stasiun: [
+        {
+          objek: 'kolamRiakBulan', judul: 'Kolam Malam dan Riak Pertama',
+          teks: 'Malam di kolam gunung, bulan purnama tergeletak tenang di permukaan air. Sebuah riak kecil melaju dari tepi ke tepi, punggungnya naik turun membentuk gelombang halus yang berkilau. Malam ini kolam berubah menjadi kelas gelombang paling terbuka di dunia.',
+        },
+        {
+          objek: 'kerikilJatuhTengah', judul: 'Kerikil Kecil, Riak Berbaris',
+          teks: 'Seekor katak menjatuhkan kerikil, dan riak pun lahir berbaris rapi: satu riak, diikuti riak berikutnya, lalu berikutnya lagi. Puncak setiap riak menonjol manis di atas air, dan di antara dua puncak ada lembah yang menekuk pelan. Semua bergerak maju dengan tertib tanpa saling menabrak.',
+        },
+        {
+          objek: 'puncakKePuncakEmpat', judul: 'Jarak Puncak ke Puncak',
+          teks: 'Ukur jarak dari puncak satu riak ke puncak riak berikutnya: puncak pertama di tanda 2, puncak kedua di tanda 6, puncak ketiga di tanda 10. Selisihnya 6 − 2 = 4 dan 10 − 6 = 4 — selalu 4! Jarak puncak ke puncak yang tetap ini punya nama cantik: panjang gelombang.',
+        },
+        {
+          objek: 'lembahRiakSetia', judul: 'Lembah yang Ikut Setia',
+          teks: 'Lembah pun ikut setia. Lembah pertama di tanda 4, berikutnya di 8, lalu 12 — selisihnya juga selalu 4, dan selalu tersisip rapi di tengah antara dua puncak. Riak tak pernah berbohong tentang jaraknya; cukup ukur dua puncak, panjang gelombang langsung terjawab tanpa perlu menebak.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Riak Air Ternyata Teratur!',
+          teks: 'Puncak di 2, 6, 10 dan lembah di 4, 8, 12 — semuanya berjarak 4 yang setia, di atas air yang tenang. Owalah, ternyata begini toh — riak air hanyalah gelombang yang berbaris teratur, dan panjang gelombang hanyalah jarak puncak ke puncak. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-050': {
+      tema: 'puncakPengukurJauh',
+      npc: { glif: 'ukur!', ucap: ['Lima misi', 'puncak menunggu!'] },
+      stasiun: [
+        {
+          objek: 'menaraPengukurMalam', judul: 'Puncak Pengukur Jauh',
+          teks: 'Malam di puncak tertinggi gunung, lima papan misi menyala berderet menghadap lembah yang luas. Masing-masing menyimpan soal tentang sisi, tangga, bayangan, dan riak. Seluruh ilmu penjuru pengukur sudah kau kumpulkan sejak gerbang segitiga raksasa di pagi hari.',
+        },
+        {
+          objek: 'papanMisiSisiTangga', judul: 'Misi Satu dan Dua: Sisi dan Tangga',
+          teks: 'Misi satu: segitiga bersisi 3, 4, dan 5 — mana sisi miringnya? Jawabnya 5, yang paling panjang, berhadapan langsung dengan sudut siku. Misi dua: tangga 5 meter menyentuh dinding di ketinggian 4 meter — tinggi ÷ miring = 4 ÷ 5 = 0,8. Sinus tangga itu 0,8, dan tak perlu memanjat untuk memastikannya.',
+        },
+        {
+          objek: 'papanMisiBayangMenara', judul: 'Misi Tiga dan Empat: Bayangan dan Menara',
+          teks: 'Misi tiga: matahari tepat 45 derajat dan pohon melempar bayangan 8 meter — berapa tingginya? Pada sudut ini bayangan meniru tinggi, jadi 8 meter juga. Misi empat: miniatur menara 3-4-5 berhadapan dengan menara asli 6-8-10 — alas ÷ miring: 6 ÷ 10 = 0,6, sama persis dengan 3 ÷ 5. Perbandingannya tetap setia.',
+        },
+        {
+          objek: 'limaPapanMisiJauh', judul: 'Misi Lima: Setengah Sisi Miring',
+          teks: 'Misi lima menunggu di papan terakhir: segitiga bersudut 30 derajat dengan sisi miring 6 — berapa sisi terpendeknya? Setengah dari miring: 6 ÷ 2 = 3. Lima papan kini menyala penuh, gerbang juara terbuka perlahan, dan seluruh lembah berkilau di bawah kaki sang pengukur jauh.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Pengukur Jauh Sejati!',
+          teks: 'Nama tiga sisi, tangen tangga, bayangan 45 derajat, rasio sebangun, dan setengah sisi miring — lima misi, lima kemenangan dengan hitungan yang bisa dicek ulang siapa pun. Owalah, ternyata begini toh — trigonometri hanyalah seni mengukur yang jauh dan tinggi dari tempat berdirimu sekarang. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   function untuk(topik) {
