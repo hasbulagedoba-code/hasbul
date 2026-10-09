@@ -1,0 +1,130 @@
+    'p3-066': {
+      tema: 'bukitTanggaLandai',
+      npc: { glif: '0,25', ucap: ['Tangga', 'menyamar!'] },
+      stasiun: [
+        {
+          objek: 'tanggaDuaAnak', judul: 'Tangga Dua Anak',
+          teks: 'Sore di bukit batu membentangkan tangga kayu tua dengan dua anak tangga raksasa. Bukit ini tingginya satu dan panjangnya satu, sehingga setiap anak tangga harus mengangkat kaki setinggi 0,5 — berat dan menantang. Pendaki muda yang pertama mencobanya mengeluh pelan, dan tangga tua itu berderit seolah ikut mengeluh bersama.',
+        },
+        {
+          objek: 'tanggaEmpatAnak', judul: 'Tangga Empat Anak',
+          teks: 'Tukang kayu desa datang membawa denah baru: tangga yang sama dibagi menjadi empat anak tangga. Kini setiap anak tangga hanya naik 0,25 — separuh dari sebelumnya, dan langkah kaki terasa jauh lebih ringan. Pendaki yang sama menaikinya sambil tersenyum, karena bukit yang sama kini terasa lebih lembut hanya karena tangganya makin banyak.',
+        },
+        {
+          objek: 'lerengMulusBatu', judul: 'Lereng Batu Mulus',
+          teks: 'Di sebelah tangga berdiri lereng batu mulus tanpa satu pun undakan, dan tukang kayu menantang mata siapa pun: coba bedakan dari kejauhan. Tangga sepuluh anak, masing-masing naik 0,1, terlihat nyaris sama dengan lereng mulus itu — garis batunya rapat dan landai. Dari jarak jauh mata tak lagi mampu membedakan undakan; hanya hitungan yang tahu bahwa di sana masih ada 0,1 yang tersembunyi di setiap langkah.',
+        },
+        {
+          objek: 'gerbangKalkulusBukit', judul: 'Gerbang Lereng Kalkulus',
+          teks: 'Di puncak bukit terbentang gerbang batu dengan ukiran tangga yang bertahap melebur menjadi garis landai. Tukang kayu menutup kisahnya dengan pesan yang tenang: bila undakan dibagi terus tanpa lelah, tangga menyamar jadi lereng mulus dan tak terbedakan lagi. Hitungan itu hanya alat yang menjaga pembagian tetap jujur, dan di balik gerbang inilah lereng kalkulus menanti para pendaki yang penasaran.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tangga Menyamar Jadi Landai!',
+          teks: 'Dua anak naik 0,5, empat anak naik 0,25, sepuluh anak naik 0,1 — makin banyak undakan, makin tak terbedakan dari lereng mulus. Bukit yang sama bisa terasa berat atau lembut, tergantung siapa yang membagi undakannya. Owalah, ternyata begini toh — tangga dan lereng hanyalah saudara yang dipisahkan hitungan. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-067': {
+      tema: 'lintasanKilasLari',
+      npc: { glif: '2 m/s', ucap: ['Kilas', 'makin singkat!'] },
+      stasiun: [
+        {
+          objek: 'lintasanRobotPelari', judul: 'Robot Pelari Sepuluh Meter',
+          teks: 'Pagi cerah menyambut lintasan lari putih dengan papan skor di sisinya. Sebuah robot pelari kecil berdiri di garis start, dan wasit lintasan mengumumkan rencananya: robot ini menempuh sepuluh meter dalam lima detik penuh. Sepuluh dibagi lima menghasilkan dua, sehingga laju rata-ratanya dua meter tiap detik — angka pertama yang tertulis di papan skor.',
+        },
+        {
+          objek: 'papanJendelaDetik', judul: 'Jendela Satu Detik',
+          teks: 'Wasit memasang stopwatch dan menutup jendela pengamatan selebar satu detik. Dalam jendela itu robot melaju dua meter, dan dua dibagi satu tetap menghasilkan 2 m tiap detik. Papan skor menambahkan baris kedua yang persis sama dengan baris pertama, dan penonton mulai bergumam bahwa angka ini terlihat memang setia.',
+        },
+        {
+          objek: 'stopwatchKilas', judul: 'Stopwatch Sepuluh Kilas',
+          teks: 'Lalu wasit memperpendek jendela pengamatan hingga selebar kilas mata, 0,1 detik. Robot hanya menempuh 0,2 meter dalam jendela sekecil itu, tetapi 0,2 dibagi 0,1 tetap menghasilkan dua. Makin singkat jendela, makin jujur jawabannya — laju itu bukan sekadar rata-rata jauh, melainkan sesuatu yang hidup di setiap kilas. Papan skor kini memuat tiga baris dengan angka yang sama persis: dua.',
+        },
+        {
+          objek: 'papanLajuSesaat', judul: 'Laju Sesaat',
+          teks: 'Di akhir lintasan, wasit menutup pengumumannya dengan sorakan kecil penonton. Kelak di jalan yang menurun dan berubah-ubah kecepatan, jendela yang makin pendek inilah yang menangkap laju sesaat — kecepatan yang berlaku tepat di satu titik. Robot berhenti di garis akhir dengan angka dua yang setia mengikutinya dari start sampai selesai.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jendela Kecil Menangkap Laju!',
+          teks: 'Jendela lima detik, satu detik, lalu 0,1 detik — hasilnya tetap 2 m tiap detik, makin singkat makin jujur. Laju sesaat ternyata bisa ditangkap dengan memperkecil jendela pengamatan sampai selebar kilas. Owalah, ternyata begini toh — kecepatan sejati tinggal di dalam sekejap mata. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-068': {
+      tema: 'telagaBijiMenipis',
+      npc: { glif: '1/1000', ucap: ['Biji', 'menipis!'] },
+      stasiun: [
+        {
+          objek: 'telagaBijiPertama', judul: 'Biji Pertama Setengah',
+          teks: 'Malam menyelimuti telaga tenang yang memantulkan bulan purnama seperti cermin. Seekor burung hitam kecil hinggap di batang kayu miring sambil memegang butir biji pertama, lalu melemparkannya ke permukaan air. Satu biji terbagi dua kata telaga: hasilnya 0,5 — separuh telaga beriak lembut, dan angka pertama malam ini tercatat di permukaan yang berkilau.',
+        },
+        {
+          objek: 'papanPembagiRaksasa', judul: 'Papan Pembagi Raksasa',
+          teks: 'Di tepi telaga berdiri papan batu dengan daftar pembagi yang makin raksasa ke bawah. Satu dibagi sepuluh menghasilkan 0,1; satu dibagi seratus menghasilkan 0,01 — pembagi makin besar, hasil makin mungil. Daftar itu seperti tangga turun menuju kecil yang tak berujung, dan setiap undakannya membawa biji burung menjadi lebih halus dari sebelumnya.',
+        },
+        {
+          objek: 'bijiSerbukHalus', judul: 'Serbuk Sebesar 0,001',
+          teks: 'Burung itu kemudian menjatuhkan biji yang sudah terbagi seribu kali lipat kehalusannya. Satu dibagi seribu menghasilkan 0,001 — serbuk sebesar debu yang nyaris tak terlihat di permukaan air, hanya meninggalkan lingkaran riak paling mungil. Mata harus berjongkok dekat permukaan untuk mencarinya, dan itu pun butuh kesabaran ekstra dari siapa pun yang penasaran.',
+        },
+        {
+          objek: 'permukaanAirTenang', judul: 'Menuju Nol Tanpa Menyentuh',
+          teks: 'Permukaan telaga kembali tenang, dan bulan di dalamnya tampak jelas sambil menunggu pertanyaan terakhir. Berapa pun raksasa pembaginya, hasil 1/n tetap ada — makin menempel di nol, tapi tak pernah benar-benar nol selama pembaginya masih berhingga. Riak mungil itu selalu muncul, sekecil apa pun; nol hanyalah arah menuju, bukan tempat tiba.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kecil yang Tak Pernah Tiba di Nol!',
+          teks: '0,5, lalu 0,1, lalu 0,01, lalu 0,001 — biji burung menipis seperti embun dan nyaris menghilang, tetapi riaknya selalu ada. Pembagi boleh jadi raksasa; hasilnya menempel di nol tanpa pernah menyentuhnya. Owalah, ternyata begini toh — menuju nol itu perjalanan yang setia, bukan titik berhenti. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-069': {
+      tema: 'bengkelPoligonBulat',
+      npc: { glif: '6-12-96', ucap: ['Makin', 'bulat!'] },
+      stasiun: [
+        {
+          objek: 'rodaSegiEnam', judul: 'Roda Segi Enam Tukang',
+          teks: 'Siang di bengkel tukang roda diwarnai serbuk kayu yang melayang di sekitar meja kerja. Di dinding tergantung roda kayu segi enam yang berputar pelan di atas roda gila — roda pertama yang dibuat tukang untuk meniru lingkaran. Dengan lingkaran berdiameter satu sebagai pembanding, keliling roda segi enam ini terhitung 3,0, sedikit kerdil dibanding lingkaran yang kelilingnya sekitar 3,14.',
+        },
+        {
+          objek: 'rodaSegiDuaBelas', judul: 'Roda Segi Dua Belas',
+          teks: 'Tukang roda menggantung karya keduanya: roda segi dua belas dengan sudut-sudut yang jauh lebih lembut. Keliling roda ini terhitung 3,11 — sudah menempel dekat ke 3,14 milik lingkaran. Sudut tajam segi enam kini terbagi dua jadi kemiringan kecil, dan roda itu berputar di roda gila dengan goyangan yang makin tak terasa.',
+        },
+        {
+          objek: 'papanKelilingPoligon', judul: 'Papan Keliling Archimedes',
+          teks: 'Di meja kerja terbentang papan ukir dengan daftar keliling yang makin panjang ke bawah. Segi enam 3,0; segi dua belas 3,11; lalu tukang menceritakan Archimedes yang memotong sudut terus-menerus sampai segi 96 dan menangkap angka 3,14 — dua angka milik lingkaran, hanya dengan geometri dan kesabaran. Tidak ada kalkulator di zamannya; yang ada hanya penggaris, poligon, dan keberanian membagi sudut tanpa lelah.',
+        },
+        {
+          objek: 'rodaLingkaranSempurna', judul: 'Lingkaran Poligon Sempurna',
+          teks: 'Di rak paling atas bengkel tersimpan roda lingkaran sempurna yang berputar paling mulus dari semuanya. Tukang roda mengetuknya pelan dan berbisik: bayangkan poligon yang sisi-sisinya dibagi terus tanpa henti — itulah lingkaran, poligon dengan sisi yang tak berhingga. Makin banyak sisi, makin sempurna bentuknya, dan angka 3,14 yang ditangkap Archimedes adalah pemberian poligon yang sabar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lingkaran Ternyata Poligon Sabar!',
+          teks: 'Segi enam 3,0, segi dua belas 3,11, segi 96 punya 3,14 — makin banyak sisi, makin dekat ke keliling lingkaran. Archimedes menangkap dua angka itu tanpa mesin, cukup dengan membagi sudut sampai lelah. Owalah, ternyata begini toh — lingkaran hanyalah poligon yang membagi sisi selamanya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-070': {
+      tema: 'puncakTepiMenuju',
+      npc: { glif: 'menuju!', ucap: ['Lima misi', 'tepi gunung!'] },
+      stasiun: [
+        {
+          objek: 'limaPapanMisiMenuju', judul: 'Lima Papan di Tepi Gunung',
+          teks: 'Malam di puncak gunung membentangkan lima papan misi menyala berjajar di tepi tebing, menghadap lembah yang sunyi di bawahnya. Setiap papan menyimpan satu soal menuju: langkah setengah, sembilan menempel, pembagi raksasa, pagar asimtot, dan poligon berputar. Seluruh ilmu penjuru limit sudah kau kumpulkan dari lorong setengah sampai bengkel roda — kini saatnya membuktikannya sekali jalan di ketinggian.',
+        },
+        {
+          objek: 'papanMisiLangkahSembilan', judul: 'Misi Satu dan Dua: Langkah dan Sembilan',
+          teks: 'Misi satu menanyakan jejak langkah di lorong pagi itu: 1/2 lalu 1/4 lalu 1/8 — ke mana jumlahnya menuju? Jawabnya menuju satu, rapat di bawah angka 1 tanpa pernah melompatinya. Misi dua menanyakan kunang ladang: 0,9 lalu 0,99 lalu 0,999 menuju ke mana? Menuju 1 juga, dengan jarak yang selalu dibagi sepuluh di setiap sembilan. Dua papan menyala penuh, tiga misi lagi berkedip menunggu di sampingnya.',
+        },
+        {
+          objek: 'papanMisiPembagiAsimtot', judul: 'Misi Tiga dan Empat: Pembagi dan Asimtot',
+          teks: 'Misi tiga menghadirkan biji burung malam: satu dibagi seribu menghasilkan 0,001 — menuju ke mana? Menuju nol, menempel tanpa pernah menyentuh. Misi empat menghadirkan jalan batu kebun pagi: pada langkah seratus, tinggi 1/x tinggal 0,01, makin rapat ke pagar yang tak pernah tersentuh. Empat papan kini terang benderang menatap lembah, dan angin puncak membawa suara riak telaga dari jauh.',
+        },
+        {
+          objek: 'gerbangJuaraMenuju', judul: 'Misi Lima dan Gerbang Juara',
+          teks: 'Misi lima menanti di papan tertinggi: Archimedes membagi sudut lingkaran berdiameter satu sampai segi 96 — kelilingnya menangkap angka berapa? 3,14, dua angka milik lingkaran yang lahir dari kesabaran membagi. Lima papan menyala penuh dan gerbang batu juara terbuka menghadap lembah; tak ada harta di baliknya, hanya kepuasan pembaca arah yang kini melihat seluruh lembah sebagai kumpulan perjalanan menuju.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kamu Pembaca Arah Sejati!',
+          teks: 'Menuju 1 dari langkah dan sembilan, menuju 0 dari pembagi, menuju pagar dari asimtot, menuju 3,14 dari poligon — lima misi selesai dengan hitungan yang bisa dicek ulang siapa pun. Hitungan itu hanya alat, tetapi alat yang setia menunjukkan arah tanpa pernah berbohong. Owalah, ternyata begini toh — limit hanyalah seni membaca tujuan dari jejak geraknya. Mudah, bukan?',
+        },
+      ],
+    },
