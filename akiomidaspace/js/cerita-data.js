@@ -7555,6 +7555,266 @@ window.CERITA = (function () {
         },
       ],
     },
+    'p3-081': {
+      tema: 'ladangUbinKotak',
+      npc: { glif: 'ubin!', ucap: ['Potong kecil,', 'jumlah besar!'] },
+      stasiun: [
+        {
+          objek: 'papanUbinDuaBelas', judul: 'Ladang Penuh Ubin',
+          teks: 'Pagi menyapa ladang batu berpetak milik tukang batu tua, dan setiap petak berisi satu ubin kotak yang sama besar. Ia menanam ubin membentuk persegi panjang empat langkah memanjang dan tiga langkah selebar, lalu menghitung bersama pengunjung sambil menunjuk satu per satu. Satu, dua, tiga, sampai dua belas — ladang itu berisi tepat dua belas ubin, dan tak ada satu pun yang setengah.',
+        },
+        {
+          objek: 'tumpukanUbinTiga', judul: 'Tumpukan Tangga',
+          teks: 'Di pinggir ladang ada tumpukan ubin berbentuk tangga: satu di baris paling atas, dua di tengah, tiga di dasar. Tukang batu menjumlah sambil melompati barisnya: satu tambah dua tambah tiga, jadilah enam. Tidak ada rumus yang dipakai; hanya menjumlah potongan demi potongan sampai habis.',
+        },
+        {
+          objek: 'papanTigaSusun', judul: 'Dua Belas Bisa Banyak Bentuk',
+          teks: 'Papan kayu di gerbang menampilkan tiga foto susunan ubin yang sama banyak. Dua belas ubin bisa berbaris satu baris panjang, bisa juga menjadi enam kali dua, atau rapi menjadi empat kali tiga. Bentuknya bertiga berbeda, tetapi jumlah ubinnya sama persis dua belas — jumlah tidak peduli bentuk.',
+        },
+        {
+          objek: 'gerbangJumlahKotak', judul: 'Gerbang Potongan Kecil',
+          teks: 'Gerbang batu berukir pola kotak-kotak kecil menyala lembut saat pengunjung melangkah pulang. Tukang batu berbisik bahwa rahasia ladang ini sederhana: benda besar hanyalah potongan-potongan kecil yang dijumlahkan. Siapa pun yang berani menghitung satu per satu, ia akan mengenal isi ladang apa pun.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semua Itu Cuma Dijumlah!',
+          teks: 'Hari ini ladang memberi dua belas ubin dari empat kali tiga, tangga enam dari satu tambah dua tambah tiga, dan tiga bentuk berbeda dengan jumlah yang sama. Semuanya selesai hanya dengan menjumlah potongan demi potongan. Owalah, ternyata begini toh — luas itu jumlah potongan kecil, dan menjumlah tidak butuh sulit-sulit. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-082': {
+      tema: 'tamanKertasBerpetak',
+      npc: { glif: 'petak!', ucap: ['Hitung petaknya', 'satu-satu!'] },
+      stasiun: [
+        {
+          objek: 'segitigaKotakPetak', judul: 'Taman Kertas Berpetak',
+          teks: 'Taman ini berlantai kertas raksasa bergaris petak, dan di atasnya sebuah lereng lurus membentuk segitiga dari sudut nol hingga puncak di ketinggian empat. Pengunjung diminta menghitung luas di bawah lereng itu dengan cara taman paling jujur: menghitung petak. Lantai berpetak membuat segala sesuatu bisa dihitung tanpa duga-duga.',
+        },
+        {
+          objek: 'kotakKacaSetengah', judul: 'Kotak Kaca Setengah',
+          teks: 'Ada petak yang tidak penuh dilewati lereng, dan taman menyiapkan kotak kaca setengah untuk itu. Empat petak terpotong persis separuh oleh garis lurus, dan setengah petak ditambah setengah petak menjadi satu petak utuh. Jadi hitungannya jujur: enam petak penuh plus dua petak utuh hasil empat setengahan.',
+        },
+        {
+          objek: 'papanEnamSetengah', judul: 'Enam Penuh, Empat Setengah',
+          teks: 'Papan taman menuliskan hitungan itu apa adanya: enam kotak penuh dan empat kotak setengah. Enam ditambah empat kali setengah sama dengan delapan. Lereng lurus yang tadinya terlihat licin kini menjadi delapan petak yang bisa dihitung dengan jari.',
+        },
+        {
+          objek: 'penggarisLuasDelapan', judul: 'Penggaris Menyetujui',
+          teks: 'Penjaga taman memakai penggaris segitiga raksasa untuk memeriksa: setengah kali empat kali empat, hasilnya delapan. Angka penggaris dan angka petak bertemu di tempat yang sama. Dua cara berbeda, satu jawaban — di situlah orang mulai percaya pada hitungannya sendiri.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lereng Lurus Itu Delapan!',
+          teks: 'Segitiga di bawah lereng lurus kini bukan lagi bentuk yang licin: enam petak penuh, empat setengah petak, dan penggaris sama-sama berujung di delapan. Menghitung petak dan memakai rumus ternyata berpapasan di angka yang sama. Owalah, ternyata begini toh — luas di bawah garis hanyalah petak yang dijumlah dengan jujur. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-083': {
+      tema: 'bengkelIrisanTipis',
+      npc: { glif: 'makin tipis', ucap: ['Makin tipis,', 'makin pas!'] },
+      stasiun: [
+        {
+          objek: 'mesinIrisKertas', judul: 'Bengkel Iris Kertas',
+          teks: 'Bengkel ini punya mesin yang mengiris kertas berpetak jadi pita-pita vertikal, dan tugasnya satu: menghitung luas lereng segitiga yang sama seperti di taman sebelah — delapan. Mesin bekerja dengan cara khas bengkel: tiap pita diganti persegi panjang yang rapi. Yang rapi itu memang mudah, tetapi ia harus setia menempel di lereng.',
+        },
+        {
+          objek: 'duaPapanTepiKiriKanan', judul: 'Dua Papan dari Dua Tepi',
+          teks: 'Dua papan di dinding bengkel menulis dua jawaban dari dua cara memasang persegi. Persegi yang menempel di kiri tiap pita menjumlah enam; persegi yang menempel di kanan menjumlah sepuluh. Jawaban sebenarnya delapan bersembunyi di antara keduanya, dan bengkel menuliskan hal itu tanpa malu: enam sampai sepuluh.',
+        },
+        {
+          objek: 'papanKisaranDelapan', judul: 'Iris Makin Tipis',
+          teks: 'Pemilik bengkel memutar tuas, pita dipotong dua kali lebih tipis, dan dua papan menulis angka baru: tujuh dan sembilan. Kisarannya menyempit dari enam-sepuluh menjadi tujuh-sembilan, makin rapat mengurung delapan. Dua sisi berjalan saling mendekat, dan di tengah-tengahnya jawaban tak ke mana-mana.',
+        },
+        {
+          objek: 'timbanganDuaSisiIris', judul: 'Timbangan Dua Sisi',
+          teks: 'Di meja akhir ada timbangan dengan dua wadah: kiri berisi persegi kiri, kanan berisi persegi kanan. Makin tipis irisannya, makin ringan beda kedua wadah — empat menjadi dua, dan nanti akan menjadi setengah. Hitungan itu hanya alat, ujar pemilik bengkel, tetapi alat ini punya dua sisi yang berbisik menuju satu angka yang sama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Sisi Ketemu di Delapan!',
+          teks: 'Bengkel hari ini mengepung satu jawaban dari dua arah: enam dan sepuluh, lalu tujuh dan sembilan, dengan delapan selalu terkurung di tengah. Potongan makin tipis membuat kedua sisi tak bisa berbohong. Owalah, ternyata begini toh — integral mengiris tipis lalu menjumlah, dan dua sisi berpapasan di jawaban yang jujur. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-084': {
+      tema: 'lorongBolakBalik',
+      npc: { glif: 'pulang!', ucap: ['Pergi memecah,', 'pulang menjumlah!'] },
+      stasiun: [
+        {
+          objek: 'pintuDuaArahLorong', judul: 'Lorong dengan Pintu Dua Arah',
+          teks: 'Senja jatuh di lorong panjang yang punya dua pintu kembar menghadap arah berlawanan. Pintu pergi bertulis TURUNAN dan pintu pulang bertulis INTEGRAL; penjaga lorong menyebut keduanya jalan bolak-balik yang setia. Apa yang dipecah saat pergi, disusun kembali saat pulang — tak satu pun hilang di lorong ini.',
+        },
+        {
+          objek: 'papanLajuLima', judul: 'Pergi: dari Laju ke Jarak',
+          teks: 'Papan pintu pergi menampilkan penunggang dengan laju tetap lima langkah tiap detik. Lorong menyusun jaraknya detik demi detik: lima, sepuluh, lima belas, dua puluh. Menjumlah laju yang setia itu pekerjaan integral, dan papan menuliskan jawabannya dengan tenang: dua puluh langkah di detik keempat.',
+        },
+        {
+          objek: 'papanJarakDuaPuluh', judul: 'Pulang: dari Jarak ke Laju',
+          teks: 'Papan pintu pulang menerima angka dua puluh itu dan membaca ulang ceritanya. Jaraknya naik lima setiap detik, maka lajunya lima — persis laju semula. Menurunkan jarak kembali ke laju adalah pekerjaan turunan, dan kedua papan bertukar senyum: keduanya memang satu pasangan.',
+        },
+        {
+          objek: 'cerminTurunanBalik', judul: 'Cermin di Ujung Lorong',
+          teks: 'Di ujung lorong berdiri cermin lebar; siapa pun yang menghadapnya melihat jalan pulangnya sendiri. Turunan memecah cerita jadi laju, integral menyusun laju kembali jadi cerita, seperti dua sisi cermin yang tak bisa hidup sendirian. Hitungan itu hanya alat, kata penjaga lorong, tetapi alat ini punya arah pulang yang tak pernah salah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Integral Itu Jalan Pulangnya Turunan!',
+          teks: 'Lorong kembar ini menuntaskan satu perjalanan: laju lima disusun jadi jarak dua puluh, lalu jarak dua puluh dibaca balik jadi laju lima. Pergi dan pulang memakai dua pintu, tetapi ceritanya satu dan utuh. Owalah, ternyata begini toh — integral adalah jalan pulang si turunan, dua arah satu pasangan. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-085': {
+      tema: 'tamanLengkungBatu',
+      npc: { glif: 'mengepung!', ucap: ['Kurung lengkungnya,', 'jumlah kotaknya!'] },
+      stasiun: [
+        {
+          objek: 'lengkungBatuSembilan', judul: 'Lengkung yang Tadinya Menakutkan',
+          teks: 'Pagi menyala di taman batu yang lantainya berpetak, dan di atasnya membentang lengkung x kuadrat dari nol sampai tiga. Lengkung itu meliuk naik makin curam: di satu tingginya satu, di dua tingginya empat, di tiga tingginya sembilan. Pengunjung biasa menyerah pada bentuknya; taman ini menawarkan cara lain: iriskan.',
+        },
+        {
+          objek: 'kotakTanggaBatuKurva', judul: 'Tangga Batu di Bawah Lengkung',
+          teks: 'Tukang batu taman membangun tangga persegi menempel di bawah lengkung, satu anak tangga selebar satu petak. Tangga bawah menjumlah nol tambah satu tambah empat, hasilnya lima petak. Lengkungnya tak tertangkap rapi, tetapi tangga ini berjanji: aku tidak pernah melebihi lengkung.',
+        },
+        {
+          objek: 'papanLimaEmpatBelas', judul: 'Tangga dari Atas: Lima sampai Empat Belas',
+          teks: 'Tangga kedua dipasang dari atas lengkung, menutupinya dengan angkuh. Tangga atas menjumlah satu tambah empat tambah sembilan, hasilnya empat belas petak. Kini lengkung x kuadrat terkurung rapat: luasnya lebih besar dari lima dan lebih kecil dari empat belas.',
+        },
+        {
+          objek: 'papanTepatSembilan', judul: 'Iris Tipis, Kurungan Menyempit',
+          teks: 'Taman mengiris petak jadi dua kali lebih tipis, dan kurungan menyempit menjadi 6,875 sampai 11,375. Makin tipis irisannya, makin rapat dua tangga mengepung, dan jawabannya tak pernah berpindah: sembilan. Hitungan itu hanya alat, kata tukang batu, tetapi alat ini bisa mengurung lengkung se ganas apa pun.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lengkung Terkurung di Sembilan!',
+          teks: 'Lengkung x kuadrat dari nol sampai tiga hari ini dikalahkan bukan dengan rumus pamungkas, melainkan dengan tangga bawah lima dan tangga atas empat belas yang saling mendekat. Irisan makin tipis membuat kurungan makin pas, dan sembilan menunggu di tengahnya. Owalah, ternyata begini toh — luas di bawah lengkung pun bisa dikepung sampai tuntas. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-086': {
+      tema: 'jalanKurirGrafik',
+      npc: { glif: 'luasnya!', ucap: ['Luas di bawah laju', 'itu jaraknya!'] },
+      stasiun: [
+        {
+          objek: 'kurirSepedaGrafik', judul: 'Kurir dan Papan Lajunya',
+          teks: 'Siang terik tak menyurutkan kurir sepeda ini; ia mengayuh di jalan yang dipenuhi papan grafik raksasa. Grafiknya sederhana: garis laju mendatar di ketinggian dua meter tiap detik, dari detik nol sampai detik sepuluh. Kurir berhenti sejenak dan menantang pengunjung: berapa jarak yang kutempuh, tanpa melihat odometer?',
+        },
+        {
+          objek: 'papanLajuKotakDua', judul: 'Kotak Laju Dua Kali Sepuluh',
+          teks: 'Jawabannya tersimpan dalam kotak yang terbentuk di bawah garis laju: lebar sepuluh detik, tinggi dua meter tiap detik. Luas kotak itu dua kali sepuluh, dua puluh meter. Laju dikali waktu — atau, dengan bahasa ladang ubin: jumlahkan tinggi dua itu sepuluh kali.',
+        },
+        {
+          objek: 'layarGrafikLaju', judul: 'Grafik Laju yang Naik',
+          teks: 'Layar kedua menampilkan perjalanan lain: laju yang naik setia dari nol sampai empat selama sepuluh detik. Di bawahnya terbentuk bukan kotak, melainkan segitiga. Luas segitiga itu setengah kali sepuluh kali empat — dan lagi-lagi dua puluh meter, padahal grafiknya benar-benar berbeda.',
+        },
+        {
+          objek: 'odometerBandingJarak', judul: 'Odometer Menyetujui',
+          teks: 'Kurir membuka odometer sepedanya dan tertawa lebar: kedua perjalanan itu masing-masing dua puluh meter, tepat seperti hitungan luas. Grafik berbeda bisa punya jarak sama, karena yang dihitung bukan bentuknya melainkan luas di bawahnya. Hitungan itu hanya alat, kata kurir, tetapi alat ini bisa membaca jarak dari gambar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Jarak Itu Luas di Bawah Grafik!',
+          teks: 'Hari ini dua grafik laju berbicara: kotak dua kali sepuluh dan segitiga setengah kali sepuluh kali empat, keduanya bermuara di dua puluh meter. Odometer mengiyakan angka luas tanpa berdebat. Owalah, ternyata begini toh — membaca jarak dari grafik laju sama dengan menjumlah luas di bawahnya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-087': {
+      tema: 'menaraTintaHuruf',
+      npc: { glif: 'summa!', ucap: ['Huruf S panjang,', 'artinya jumlah!'] },
+      stasiun: [
+        {
+          objek: 'bukuHurufS', judul: 'Menara Tinta dan Buku S',
+          teks: 'Malam di menara tinta diisi cahaya lentera dan deretan buku matematika tua. Di rak teratas terbuka satu halaman besar dengan huruf memanjang yang menyerupai S tegak. Penjaga menara menyapa: kau pasti pernah melihatnya di papan tulis dan mengira itu sulit; malam ini kau akan tahu ia sesederhana apa.',
+        },
+        {
+          objek: 'penaBuluhTinta', judul: 'Pena Buluh Menulis Panjang',
+          teks: 'Di meja kayu tergeletak pena buluh yang dulu menulis huruf itu. Ia bercerita dengan tinta di ujungnya: aku hanya menuliskan kata summa yang berarti jumlah, lalu S-ku dibuat panjang agar tak tertukar dengan S biasa. Huruf yang menakutkan di papan tulis ternyata cuma satu kata yang memanjang.',
+        },
+        {
+          objek: 'gulunganSumma', judul: 'Gulungan Summa',
+          teks: 'Gulungan tua dibuka pelan, memperlihatkan tulisan pertama huruf S memanjang itu. Di sampingnya tertulis artinya: jumlahkan potongan demi potongan, dari batas kiri sampai batas kanan. Persis seperti ladang ubin dan bengkel iris: integral hanyalah penjumlahan yang ditulis dengan huruf gagah.',
+        },
+        {
+          objek: 'papanTahunTinta', judul: 'Tahun di Papan Tinta',
+          teks: 'Papan peringatan menara menuliskan jejak waktunya: huruf S memanjang itu pertama kali muncul pada tahun seribu tujuh ratus tujuh puluh lima, ditulis tangan oleh Leibniz di catatan kecilnya. Sejak hari itu, jumlah potongan kecil punya lambang yang gagah dan mudah dikenali. Penjaga menara menutup papan itu dan berkata, alat tulis saja berubah, tetapi arti jumlahnya tetap sama sampai kini.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Itu Cuma Huruf S Memanjang!',
+          teks: 'Menara tinta melipat ceritanya rapi: huruf integral adalah S dari kata summa, ditulis Leibniz pada 1675, dan artinya tidak lain jumlah. Segala yang menyeramkan tentang simbol itu runtuh dalam satu malam. Owalah, ternyata begini toh — tanda paling gagah di matematika hanyalah kata jumlah yang memanjang. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-088': {
+      tema: 'guaTetesEmber',
+      npc: { glif: 'tetes!', ucap: ['Tetes kecil,', 'ember penuh!'] },
+      stasiun: [
+        {
+          objek: 'atapTetesanGua', judul: 'Gua yang Berkicau Tetes',
+          teks: 'Malam membawa suara di gua ini: tetes-tetes air jatuh dari atap batu dengan irama yang tak pernah terlambat. Penjaga gua menempatkan pengunjung di bawah talang dan menunjuk ember tanah liat di lantai. Setiap detik, satu tetes dua mililiter jatuh tepat — dan gua ini menghitung apa pun yang setia.',
+        },
+        {
+          objek: 'talangKacaMenetes', judul: 'Talang Kaca Penghitung',
+          teks: 'Talang kaca menampung tetesan dan memajang hitungannya per menit: enam puluh tetes kali dua mililiter, seratus dua puluh mililiter tiap menit. Tetes tunggal terlihat remeh, tetapi talang ini tak pernah berhenti menjumlah. Kecil tidak berarti tak terhitung; ia hanya butuh teman bernama waktu.',
+        },
+        {
+          objek: 'emberTetesMelebar', judul: 'Ember yang Membesar Diam-diam',
+          teks: 'Ember tanah liat berkapasitas satu liter diletakkan di bawah tetes, dan permukaannya naik pelan-pelan. Seratus dua puluh mililiter di menit pertama, dua ratus empat puluh di menit kedua, dan terus bertambah setia. Penjumlahan kecil-kecil inilah wajah lain dari integral: menimbun potongan sampai jadi besar.',
+        },
+        {
+          objek: 'papanDetikLimaRatus', judul: 'Papan di Detik Lima Ratus',
+          teks: 'Papan batu di dinding gua menuliskan pertanyaan pengunjung-pengunjung lama. Kapan ember penuh? Jawabannya dihitung dengan tenang: seribu mililiter dibagi dua mililiter tiap detik, sama dengan lima ratus detik. Hitungan itu hanya alat, kata penjaga gua, tetapi alat ini tahu tepat kapan malam ini ember akan penuh.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tetes yang Dihitung Jadi Ember Penuh!',
+          teks: 'Gua ini menuntaskan satu akumulasi sederhana: dua mililiter tiap detik, seratus dua puluh tiap menit, dan penuh seribu mililiter tepat di detik lima ratus. Tidak ada sihir di dalamnya, hanya penjumlahan yang tak bolong. Owalah, ternyata begini toh — integral itu tetesan kecil yang dihitung setia sampai jadi ember penuh. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-089': {
+      tema: 'kebunTerasering',
+      npc: { glif: 'garis rata', ucap: ['Luas dibagi lebar', 'adalah rata!'] },
+      stasiun: [
+        {
+          objek: 'teraseringTigaTingkat', judul: 'Kebun Terasering Lengkung',
+          teks: 'Sore menyelimuti kebun terasering yang lerengnya mengikuti kurva x kuadrat dari nol sampai tiga. Petani tua membawa tugas aneh: mengganti seluruh lereng lengkung itu dengan sawah datar satu tingkat, asal jumlah airnya sama persis. Luas di bawah lengkung sudah dikenal dari taman batu: sembilan petak.',
+        },
+        {
+          objek: 'garisRataKuning', judul: 'Garis Rata Kuning',
+          teks: 'Petani menarik garis kuning mendatar dan menyodorkan syaratnya: tinggi garis kali lebar tiga harus sama dengan sembilan. Maka tinggi garis rata itu tiga — sembilan dibagi tiga. Sawah datar setinggi tiga kini menyimpan air sebanyak lereng lengkung semula.',
+        },
+        {
+          objek: 'papanLuasSamaRata', judul: 'Dua Sawah, Air Sama',
+          teks: 'Papan kebun membandingkan keduanya dengan gambar: lengkung di atas, garis rata di bawah, keduanya mampu menampung sembilan petak air. Bentuknya bertengkar, jumlahnya berdamai. Itulah pekerjaan garis rata: meratakan yang meliuk tanpa mencuri atau menambah sedikit pun.',
+        },
+        {
+          objek: 'papanRataTigaKurva', judul: 'Bukan Tengah-Tengah!',
+          teks: 'Seorang pengunjung protes. Bukankah rata artinya tengah-tengah, di antara nol dan sembilan, yaitu 4,5? Petani menggeleng dan menunjuk lengkungnya: kurva ini lebih lama duduk di ketinggian rendah, maka ratanya turun ke tiga. Rata-rata kurva bukan tengah-tengah nilai ujungnya — kenyataan yang membuat pengunjung terdiam lama.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rata Itu Luas Dibagi Lebar!',
+          teks: 'Terasering menutup pelajarannya bersih: luas sembilan dibagi lebar tiga memberi garis rata di ketinggian tiga, dan angka itu memang bukan tengah-tengah nol dan sembilan. Kurva punya selera duduknya sendiri, dan garis rata hanya menurutinya. Owalah, ternyata begini toh — nilai rata dari kurva adalah luas dibagi lebar. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-090': {
+      tema: 'lembahLuasMalam',
+      npc: { glif: 'jumlah!', ucap: ['Jumlah potongannya,', 'buktikan!'] },
+      stasiun: [
+        {
+          objek: 'limaPapanMisiLuas', judul: 'Lembah Lima Papan',
+          teks: 'Malam turun di lembah luas, dan lima papan batu menyala memanjang di sepanjang jalan pulang. Masing-masing membawa satu misi dari dunia-dunia yang telah dikunjungi: ladang ubin, taman berpetak, bengkel iris, lorong bolak-balik, dan gua tetes. Penjaga lembah menyerahkan satu tugas: jawab semuanya dengan satu senjata yang sama — menjumlah potongan.',
+        },
+        {
+          objek: 'papanTantanganLuas', judul: 'Tiga Papan Pertama',
+          teks: 'Papan pertama meminta isi tangga ubin: satu tambah dua tambah tiga, jawabannya enam. Papan kedua meminta luas di bawah lereng lurus sampai empat: enam penuh plus dua dari setengahan, jawabannya delapan. Papan ketiga meminta luas di bawah lengkung x kuadrat sampai tiga, yang terkurung rapat oleh lima dan empat belas: jawabannya sembilan.',
+        },
+        {
+          objek: 'papanLembahSembilan', judul: 'Dua Papan Berikutnya',
+          teks: 'Papan keempat menayangkan laju lima langkah tiap detik selama empat detik, dan lembah menjumlahnya: dua puluh langkah. Papan kelima menayangkan gua tetes dua mililiter per detik di ember seribu mililiter, dan lembah membagi dengan tenang: penuh di detik lima ratus. Lima jawaban menyala berjajar, tak satu pun mundur.',
+        },
+        {
+          objek: 'gerbangJuaraLuas', judul: 'Gerbang Juara Luas',
+          teks: 'Gerbang batu di ujung lembah menyala penuh ketika papan terakhir terjawab, dan penjaga lembah berdiri tersenyum di sampingnya. Hitungan itu hanya alat, katanya, tetapi malam ini alat itu menaklukkan lima dunia sekaligus: luas, lengkung, laju, dan tetes. Dari potongan kecil yang dijumlah, lembah memberi gelar juara luas kepada siapa pun yang tak gentar.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lembah Luas Tuntas Dijumlah!',
+          teks: 'Lima misi lembah selesai: enam ubin tangga, delapan di bawah lereng, sembilan di bawah lengkung, dua puluh langkah dari laju, dan lima ratus detik untuk ember penuh. Semuanya kalah oleh satu kebiasaan yang sama: mengiris lalu menjumlah. Owalah, ternyata begini toh — integral adalah seni menjumlah potongan kecil sampai dunia jadi terhitung. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   function untuk(topik) {
