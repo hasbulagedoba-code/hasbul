@@ -7294,6 +7294,267 @@ window.CERITA = (function () {
         },
       ],
     },
+    'p3-071': {
+      tema: 'tamanKeranAir',
+      npc: { glif: 'deras!', ucap: ['Lajunya', 'berubah!'] },
+      stasiun: [
+        {
+          objek: 'keranBergantiDeras', judul: 'Keran yang Mau Deras',
+          teks: 'Pagi menyambut taman berumput hijau, dan di tengahnya berdiri sebuah keran tua yang siap melayani. Pengelola taman membuka keran itu pelan-pelan, lalu memanggil pengunjung untuk mengamati air yang mengalir ke dalam gelas tinggi di bawahnya. Air pertama turun tenang, lalu tiba-tiba deras memenuhi gelas, dan sebelum penuh kerannya dipelankan lagi. Pengelola tersenyum dan berkata bahwa gelas itu sedang bercerita, dan ceritanya bukan tentang air, melainkan tentang laju.',
+        },
+        {
+          objek: 'gelasPengukurAir', judul: 'Gelas yang Naik Tak Sama',
+          teks: 'Gelas pengukur di bawah keran memiliki garis-garis angka yang rapi, dan air di dalamnya naik dengan ritme yang aneh. Detik pertama permukaan air naik 3 cm, detik kedua naik 3 cm lagi, lalu keran dibuka penuh dan permukaan melonjak 6 cm dalam satu detik. Sesudah itu keran dipelankan sehingga air hanya naik 1 cm di detik keempat. Empat detik berlalu, dan gelas kini berisi 13 cm air yang laju naiknya tidak pernah sama.',
+        },
+        {
+          objek: 'papanLajuTigaSaat', judul: 'Papan Laju 3, 3, 6, 1',
+          teks: 'Di samping gelas berdiri sebuah papan kecil yang mencatat setiap laju detik tadi. Tulisannya berbaris jujur: 3, 3, 6, lalu 1 cm tiap detik — empat angka untuk satu gelas yang sama. Dari papan itu terbaca jelas bahwa laju perubahan bisa berubah-ubah, walau yang diukur tetap air yang sama. Pengelola taman menepuk papan itu dan berkata bahwa inilah kerja pengukur laju: mencatat seberapa cepat sesuatu berubah di setiap saat.',
+        },
+        {
+          objek: 'jamDetikTaman', judul: 'Alat Baca di Tiap Saat',
+          teks: 'Pengelola lalu mengeluarkan jam detik dari saku dan menempelkan pita kecil pada garis 6 cm gelas. Hitungan itu hanya alat, dan alat itu berkata: pada detik ketiga air naik 6 cm, pada detik keempat tinggal 1 cm — laju di setiap saat punya angkanya sendiri. Bila air tadi diambil lajunya, dan laju itu digambar pada papan, maka terbentuklah deret 3, 3, 6, 1 yang hidup. Gelas kini bukan sekadar gelas; dia adalah kurva yang bisa dibaca lajunya di titik mana pun.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Gelas Punya Banyak Laju!',
+          teks: 'Deras lalu pelan — empat detik tadi membuktikan bahwa satu gelas air bisa punya banyak laju sekaligus: 3, 3, 6, dan 1. Yang dibaca pengukur bukan airnya, melainkan seberapa cepat airnya berubah di setiap saat. Owalah, ternyata begini toh — turunan adalah alat baca laju di tiap titik, dan laju itu boleh berubah sesuka kerannya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-072': {
+      tema: 'jalanRayaKilometer',
+      npc: { glif: '40-80', ucap: ['Rata-rata', 'sesaat!'] },
+      stasiun: [
+        {
+          objek: 'papanKilometerEnam', judul: 'Papan 60 Kilometer',
+          teks: 'Siang terik menyinari jalan raya yang lurus, dan sebuah papan batu besar berdiri di tepinya dengan angka 60 kilometer. Keluarga pendatang baru saja menempuh seluruh jalan dari papan nol sampai papan itu, dan waktunya tepat satu jam. Ayah memandang papan itu bangga, sementara anaknya menyipitkan mata pada speedometer mobil yang kini diam di angka nol. Sebuah pertanyaan muncul: kalau jaraknya 60 dan waktunya 1 jam, apakah mobil tadi benar-benar selalu melaju 60?',
+        },
+        {
+          objek: 'speedometerBergetar', judul: 'Speedometer yang Bergetar',
+          teks: 'Anak itu membuka catatan perjalanan dan membacanya pelan-pelan di depan ayahnya. Setengah jam pertama, jarum speedometer setia di angka 40 — mobil menempuh 20 kilometer. Setengah jam berikutnya, jarum berdiri di angka 80 — mobil menempuh 40 kilometer. Dua puluh ditambah empat puluh sama dengan 60 kilometer, tepat satu penuh, namun jarum itu tak pernah sekali pun berdiri di angka 60.',
+        },
+        {
+          objek: 'duaMobilRata', judul: 'Dua Mobil, Rata-rata Sama',
+          teks: 'Di pos jalan raya, mobil lain berhenti dan ceritanya lebih heboh lagi. Mobil itu melaju 30 pada setengah jam pertama, lalu menyambar 90 pada setengah jam kedua — dan tetap menempuh 15 ditambah 45, sama 60 kilometer dalam satu jam. Rata-ratanya sama persis dengan mobil keluarga, padahal sepanjang jalan keduanya tidak pernah melaju sama. Rata-rata 60 itu seperti selimut besar yang menutupi semua kecepatan di baliknya.',
+        },
+        {
+          objek: 'jamPerjalananSatu', judul: 'Satu Jam, Dua Jawaban',
+          teks: 'Ayah menutup percakapan itu dengan menunjuk dua alat yang berbeda di mobilnya. Hitungan itu hanya alat, dan alat pembagi 60 : 1 menjawab rata-rata, sedangkan jarum speedometer menjawab laju sesaat — keduanya jujur, hanya saja pertanyaannya berbeda. Rata-rata meratakan seluruh perjalanan menjadi satu angka tenang, sementara speedometer membaca tiap saat dengan getarnya sendiri. Dari 40 ke 80, dari 30 ke 90, semuanya bisa bersembunyi di balik satu angka 60 yang tenang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rata-rata Tak Bercerita Sesaat!',
+          teks: '60 kilometer dalam 1 jam memang bernilai rata-rata 60, tapi jarum speedometer tahu lebih banyak cerita: 40, 80, bahkan 30 dan 90 bisa sembunyi di baliknya. Rata-rata adalah jawaban untuk satu jam penuh, sedangkan laju sesaat adalah jawaban untuk detik ini juga. Owalah, ternyata begini toh — dua pertanyaan berbeda memanggil dua alat berbeda, dan keduanya tak saling berbohong. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-073': {
+      tema: 'galeriGarisSinggung',
+      npc: { glif: 'menempel', ucap: ['Pas satu', 'titik!'] },
+      stasiun: [
+        {
+          objek: 'kurvaBukitHijau', judul: 'Bukit Rumput Melengkung',
+          teks: 'Pagi ini sebuah galeri alam membuka pintunya untuk kurva bukit rumput yang halus dan hijau. Pengelola galeri membawa sebuah papan kayu panjang dan menantang setiap pengunjung: menapakkan papan itu pada bukit tanpa membuatnya goyang atau melayang. Rumput melengkung anggun dari lembah naik ke puncak lalu turun lagi, dan tampaknya tak ada satu papan lurus yang bisa mengikuti seluruh lengkungnya. Tantangannya bukan mengikuti seluruh bukit, melainkan menempel pas di satu titik saja.',
+        },
+        {
+          objek: 'penggarisMenempel', judul: 'Papan yang Menempel Pas',
+          teks: 'Papan kayu itu pertama kali diletakkan di lereng landai, dan ajaibnya ia menempel sempurna tanpa goyang sedikit pun. Maju satu langkah sepanjang papan, naik satu langkah — kemiringannya jelas terbaca: satu. Papan itu tak melayang di ujungnya dan tak menusuk tanah, karena dia hanya menuntut satu titik tempat dia berdiri. Pengunjung yang mencoba menggoyangkannya selalu gagal, seolah papan itu lahir untuk titik itu.',
+        },
+        {
+          objek: 'titikTapakCahaya', judul: 'Titik Tapak Bercahaya',
+          teks: 'Papan dipindah ke puncak bukit, dan di situ ia tergeletak datar sepenuhnya — kemiringan nol, tak miring ke kiri tak ke kanan. Lalu ia dipindah ke lereng curam dekat lembah, dan kali ini maju satu langkah membuatnya naik dua — miring lebih tegak dari sebelumnya. Setiap titik tapak di kurva kini menyala seperti tanda kecil, menandai tempat papan memilih untuk berdiri. Satu kurva, banyak titik, dan setiap titik punya kemiringannya sendiri.',
+        },
+        {
+          objek: 'papanKemiringanSatu', judul: 'Pengintip Kemiringan',
+          teks: 'Pengelola galeri memasang papan tulis kecil di depan bukit dan menuliskan satu kalimat pendek. Garis yang menempel pas di satu titik kurva namanya garis singgung, dan kemiringannya adalah laju kurva di titik itu. Jadi membaca kurva tak perlu menunggu sampai akhir — cukup tempelkan garis singgung, dan kemiringannya berkata kurva sedang naik seberapa cepat. Hitungan itu hanya alat, dan alat ini menempel di satu titik lalu berbisik tentang seluruh arah kurva di sekitarnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Papan Pengintip Kemiringan!',
+          teks: 'Di lereng landai kemiringannya satu, di puncak nol, di lereng curam dua — dan semua itu dibaca dari satu papan yang hanya menempel di satu titik. Garis singgung memang pengintip paling jujur: ia tak mengklaim mengikuti seluruh bukit, ia cukup berdiri pas di satu tempat. Owalah, ternyata begini toh — kemiringan garis singgung di satu titik adalah turunan kurva di titik itu. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-074': {
+      tema: 'bengkelMesinPangkat',
+      npc: { glif: 'x2 ke 2x', ucap: ['Pangkat', 'turun satu!'] },
+      stasiun: [
+        {
+          objek: 'mesinPangkatTurun', judul: 'Mesin Pangkat Turun',
+          teks: 'Siang membakar atap seng sebuah bengkel tua yang kini menghadirkan mesin paling ramai. Mesin itu punya pintu masuk bertuliskan x2 dan pintu keluar bertuliskan 2x, dengan roda gigi berputar di antaranya. Aturannya ditulis besar di badan mesin: pangkat turun ke depan menjadi pengali, lalu pangkatnya turun satu. Jadi x2 yang pangkatnya dua mengirim dua ke depan dan menyisakan x — dan begitulah 2x lahir.',
+        },
+        {
+          objek: 'bolaKuadratLompat', judul: 'Lompatan Bola Kuadrat',
+          teks: 'Di samping mesin, sebuah bola kecil menggelinding di lintasan kotak-kotak yang bercerita tentang x2. Detik pertama bola telah menempuh 1 meter, detik kedua 4 meter, detik ketiga 9 meter — angka-angka kuadrat yang dikenal baik. Lompatannya makin besar: dari 1 ke 4 lompatannya 3, dari 4 ke 9 lompatannya 5. Bola itu makin kencang, dan mesin di sampingnya seperti ingin ikut menjelaskan seberapa kencang.',
+        },
+        {
+          objek: 'rodaGigiGanjil', judul: 'Gigi Ganjil 3, 5, 7, 9',
+          teks: 'Pemilik bengkel menempelkan roda gigi berlabel pada sisi lintasan, satu gigi untuk setiap lompatan bola. Gigi-gigi itu bertuliskan 3, 5, 7, 9 — seluruhnya ganjil, dan makin besar tanpa terkecuali. Sementara itu pintu keluar mesin yang menghitung laju sesaat menuliskan 2, 4, 6, 8, 10 — seluruhnya genap dan rapi. Dua keluarga angka berdiri bersebelahan: ganjil dari lompatan per detik, genap dari laju di tiap detik.',
+        },
+        {
+          objek: 'papanAturanPangkat', judul: 'Ganjil Duduk di Antara Genap',
+          teks: 'Di papan aturan bengkel, pemiliknya menggambar garis dan menuliskan rahasia yang membuat semua yang membacanya tersenyum. Lompatan 3 duduk tepat di antara laju 2 dan 4; lompatan 5 di antara 4 dan 6; lompatan 7 di antara 6 dan 8; dan lompatan 9 di antara 8 dan 10. Setiap ganjil ternyata duduk manis tepat di tengah dua genap bertetangganya — pola yang tak pernah meleset sekali pun. Mesin pangkat turun itu benar-benar setia: beri dia x2, dia balas 2x, dan seluruh deret ikut tertata.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pangkat Turun dan Rahasia Ganjil!',
+          teks: 'Pangkat turun ke depan, pangkat turun satu — x2 berubah menjadi 2x, dan semua angka ikut tertata: ganjil 3, 5, 7, 9 dari lompatan, genap 2, 4, 6, 8, 10 dari laju sesaat. Dan ganjil selalu duduk tepat di antara dua genapnya. Owalah, ternyata begini toh — turunan x2 adalah 2x, aturan kecil yang menata deret besar. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-075': {
+      tema: 'jalanBukitPanah',
+      npc: { glif: 'naik!', ucap: ['Naik, turun,', 'nol!'] },
+      stasiun: [
+        {
+          objek: 'panahNaikHijau', judul: 'Panah Hijau Menanjak',
+          teks: 'Senja menyiram jalan berbukit dengan warna jeruk, dan di tepinya berdiri penjaga panah dengan koleksi tanda berwarna. Jalan di depan menanjak rajin: setiap maju satu langkah, kaki harus naik dua — dan penjaga menancapkan panah hijau di situ. Panah hijau itu berkata sederhana: di titik ini jalan sedang menanjak, lajunya positif. Pendaki yang membaca panah itu tahu persis apa yang harus dipersiapkan.',
+        },
+        {
+          objek: 'papanBerhentiSesaat', judul: 'Berhenti Sejenak di Puncak',
+          teks: 'Mendaki lagi dan lagi, para pendaki akhirnya tiba di puncak yang datar anehnya hanya selebar beberapa langkah. Di tempat ini maju satu langkah tak menaikkan dan tak menurunkan apa pun — datar sempurna sesaat. Penjaga panah menancapkan papan putih bertuliskan nol, dan papan itu diam tanpa arah. Menanjak sudah selesai, menurun belum mulai, dan di antara keduanya ada jeda kecil bernama laju nol.',
+        },
+        {
+          objek: 'panahTurunMerah', judul: 'Panah Merah Menurun',
+          teks: 'Setelah puncak, jalan berbalik arah: setiap maju satu langkah, kaki turun dua — jalan mulai menurunkan para pendakinya. Penjaga panah menancapkan panah merah, dan warnanya jujur menyatakan laju negatif. Turun bukan hal yang buruk di sini; ia cuma kebalikan dari naik, sama jujurnya, sama terukurnya. Yang menarik, panah merah dan panah hijau tak pernah bertemu langsung — selalu ada papan putih nol di antara mereka.',
+        },
+        {
+          objek: 'jalanBergelombang', judul: 'Jalan Bergelombang Panah',
+          teks: 'Dari puncak tadi, jalan membentang bergelombang: turun, naik, turun lagi, dan para pendaki membaca seluruh rute dengan tiga warna saja. Hijau berarti menanjak dengan laju positif, merah berarti menurun dengan laju negatif, dan putih nol menandai puncak atau lembah tempat jalan berhenti sejenak. Tiga tanda sederhana itu mampu menceritakan jalan sepanjang apa pun tanpa satu kata pun. Hitungan itu hanya alat baca arah, dan alat ini cuma butuh tiga warna.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Warna Pembaca Jalan!',
+          teks: 'Hijau untuk menanjak, merah untuk menurun, putih nol untuk berhenti sejenak — seluruh bukit tadi bisa dibaca cuma dengan tiga warna. Laju positif, negatif, dan nol adalah cara jalan bercerita, dan puncak selalu lahir di tempat laju menjadi nol. Owalah, ternyata begini toh — turunan adalah pembaca arah, dan arahnya cuma tiga. Mudah, bukan?',
+        },
+      ],
+    },
+
+    'p3-076': {
+      tema: 'tamanAirMancur',
+      npc: { glif: 'puncak!', ucap: ['Laju nol', 'di puncak!'] },
+      stasiun: [
+        {
+          objek: 'airMancurMelengkung', judul: 'Lengkung Air Mancur',
+          teks: 'Siang cerah menemani taman dengan air mancur yang meloncat melengkung anggun ke udara. Pengelola taman berdiri di sampingnya sambil memegang papan pencatat, dan dia melempar tantangan ke semua pengunjung: kapan persisnya air ini berada di titik paling tinggi? Mata memang bisa melihat lengkungnya, tapi pengelola ingin lebih dari itu — dia ingin titik puncak itu ditemukan dengan hitungan yang bisa dicek ulang siapa pun.',
+        },
+        {
+          objek: 'papanTinggiEmpat', judul: 'Catatan Tinggi 0, 3, 4, 3, 0',
+          teks: 'Papan pencatat itu akhirnya dibaca keras-keras untuk semua pengunjung taman. Di detik nol air masih di kolam, tingginya nol; detik pertama air di 3; detik kedua di 4; detik ketiga kembali 3; dan detik keempat air mendarat di kolam lagi. Lima angka itu — 0, 3, 4, 3, 0 — membentuk lengkung yang simetris sempurna. Puncaknya tampak di detik kedua, tinggi 4, namun pengelola belum puas dengan sekadar melihat.',
+        },
+        {
+          objek: 'titikPuncakKilau', judul: 'Sesaat Diam di Atas',
+          teks: 'Kini bagian paling seru: membaca laju naiknya air dari catatan tadi. Dari 0 ke 3 lajunya plus 3, dari 3 ke 4 lajunya plus 1, dari 4 ke 3 lajunya berubah jadi minus 1, lalu minus 3 saat jatuh ke kolam. Perhatikan saat yang ajaib: laju plus 1 berganti minus 1, dan di antara keduanya laju lewat nol. Di detik kedua itulah air sesaat diam di ketinggian 4 — tak naik, tak turun — dan itulah puncak yang dicari.',
+        },
+        {
+          objek: 'kolamCipratan', judul: 'Pemburu Puncak Tak Menunggu',
+          teks: 'Pengelola taman menutup pelajarannya dengan cipratan air yang berkilau di kolam. Pemburu puncak tak perlu menunggu air jatuh untuk tahu puncaknya; cukup baca di mana kenaikannya berhenti, karena di situlah tinggi mencapai maksimal. Hitungan itu hanya alat, dan alat ini menunjuk detik kedua sebagai puncak dengan tinggi 4, lalu air pun jatuh simetris kembali ke nol. Air mancur yang sama kini terbaca seperti buku: naik, diam sesaat, turun.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pemburu Puncak Kecil!',
+          teks: 'Tinggi 0, 3, 4, 3, 0 — dan puncaknya ketemu bukan dengan menebak, melainkan dengan membaca saat laju kenaikannya menjadi nol di detik kedua. Air sesaat diam di angka 4, lalu jatuh simetris seperti tak pernah naik. Owalah, ternyata begini toh — mencari puncak cukup dengan memburu laju nol, tak perlu menunggu semuanya selesai. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-077': {
+      tema: 'tanggaLajuPercepatan',
+      npc: { glif: 'tingkat', ucap: ['Turunkan', 'dua kali!'] },
+      stasiun: [
+        {
+          objek: 'tanggaTigaAnakLaju', judul: 'Tangga Tiga Anak Tangga',
+          teks: 'Pagi di lintasan lama membawa kabar baik: sebuah tangga raksasa berdiri dengan tiga anak tangga besar, masing-masing diberi nama. Anak pertama bernama jarak, anak kedua bernama laju, dan anak ketiga bernama percepatan. Penjaga lintasan menjelaskan bahwa naik anak tangga itu sama artinya dengan menurunkan — jarak menurunkan laju, dan laju menurunkan percepatan. Setiap anak tangga menceritakan sesuatu tentang anak di bawahnya.',
+        },
+        {
+          objek: 'papanJarakBola', judul: 'Papan Jarak 1, 4, 9',
+          teks: 'Sebuah bola kecil menggelinding menuruni bengkokan lintasan, dan papan jarak di tepiannya mencatat perjalanannya. Detik pertama bola menempuh 1 meter, detik kedua total 4 meter, detik ketiga total 9 meter — deret kuadrat 1, 4, 9 yang terbaca rapi. Anak tangga pertama telah terisi: itulah jarak bola di setiap detik. Sekarang tangga menunggu pendaki menaiki anak yang kedua.',
+        },
+        {
+          objek: 'papanLajuNaikDua', judul: 'Anak Dua: Laju 2, 4, 6',
+          teks: 'Menurunkan jarak menghasilkan laju, dan papan di anak tangga kedua menuliskan hasilnya: 2, 4, 6 meter tiap detik. Bola itu makin kencang — lajunya di detik pertama 2, kedua 4, ketiga 6, tanpa satu pun yang mundur. Anak tangga kedua kini juga terisi, dan penjaga lintasan bertanya menggoda: kalau laju sendiri ikut berubah, siapa yang mengukur perubahannya? Tangga masih punya satu anak lagi di atas.',
+        },
+        {
+          objek: 'papanPercepatanDua', judul: 'Anak Tiga: Percepatan Tetap 2',
+          teks: 'Anak tangga ketiga menunggu dengan papan terakhirnya, dan jawabannya justru paling tenang. Dari laju 2 ke 4 selisihnya 2, dari 4 ke 6 selisihnya juga 2 — percepatan bola itu tetap 2 tiap detik, tak pernah berubah. Turunkan dua kali: dari jarak lahir laju, dari laju lahir percepatan, seperti naik tangga gunung dua undakan. Penjaga lintasan tertawa puas; tangga tiga anak itu kini utuh seluruhnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Turunan Bertingkat!',
+          teks: 'Jarak 1, 4, 9 — turunkan sekali jadi laju 2, 4, 6 — turunkan lagi jadi percepatan 2 yang setia. Tiga papan, tiga cerita, satu tangga yang naik dari jarak sampai percepatan. Owalah, ternyata begini toh — turunan bisa diturunkan lagi, dan setiap tingkat bercerita tentang tingkat di bawahnya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-078': {
+      tema: 'lembahSenyumU',
+      npc: { glif: 'senyum', ucap: ['Dasar', 'ketemu!'] },
+      stasiun: [
+        {
+          objek: 'kurvaSenyumRaksasa', judul: 'Senyum Raksasa di Lembah',
+          teks: 'Siang menerangi sebuah lembah yang bentuknya seperti senyum raksasa — kurva U hijau yang turun, melengkung, lalu naik lagi. Di mulut lembah terpasang papan besar: kurva ini tersenyum, dan tersenyum paling dalam terjadi di satu titik saja. Pengunjung dipersilakan mencari titik terendah lembah itu, dan papan menantang mereka menemukannya tanpa berjalan ke seluruh lembah. Sepertinya mustahil, tapi lembah ini punya petunjuk yang tersembunyi di lajunya.',
+        },
+        {
+          objek: 'papanLembahNol', judul: 'Menurun, Diam, Menanjak',
+          teks: 'Papan petunjuk lembah membaca laju kurvanya dari kiri ke kanan. Di sisi kiri lajunya minus 4 lalu minus 2 — kurva sedang menurun rajin. Di tengah lajunya nol — kurva diam sejenak. Di sisi kanan lajunya plus 2 lalu plus 4 — kurva menanjak makin semangat. Tiga fase itu berjalan berurutan seperti tontonan: menurun, diam, menanjak.',
+        },
+        {
+          objek: 'titikTerendahKilau', judul: 'Titik Terendah Berkilau',
+          teks: 'Tempat menurun menyerah pada menanjak itulah titik yang dicari-cari — dan dia berkilau kecil di dasar lembah. Di titik itu tinggi kurva tercatat minus 4, titik terendah seantero lembah, dengan laju nol yang tenang. Tidak ada titik lain di kurva yang lebih rendah, karena di kiri dia masih turun dan di kanan dia sudah naik. Lembah tak bisa bersembunyi dari pembaca laju; dasar senyumnya menyerah pada angka nol itu.',
+        },
+        {
+          objek: 'burungLingkarLembah', judul: 'Burung Pembaca Lembah',
+          teks: 'Seekor burung putih terbang melingkari lembah sambil menurunkan pita kecil dari paruhnya. Pita itu mengulang satu kebenaran sederhana yang berlaku di lembah mana pun: setiap turunan akhirnya diam, lalu naik. Hitungan itu hanya alat yang menemukan dasar senyum — cukup baca di mana laju menurun berhenti menjadi nol, dan di sanalah titik terendah berdiri. Burung itu terbang pergi, dan lembah tetap tersenyum dengan dasar yang kini tak tersembunyi lagi.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dasar Senyum Ketemu!',
+          teks: 'Menurun, diam, menanjak — tiga fase lembah itu menunjuk satu titik: dasar senyum di tinggi minus 4 dengan laju nol. Tak perlu menyusuri seluruh lembah, cukup buru tempat menurun berhenti. Owalah, ternyata begini toh — kurva bentuk U selalu menyerahkan titik terendahnya pada laju nol. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-079': {
+      tema: 'jalanMotorSore',
+      npc: { glif: '+5/s', ucap: ['Makin', 'kencang!'] },
+      stasiun: [
+        {
+          objek: 'motorSoreKencang', judul: 'Motor dari Kampung',
+          teks: 'Sore keemasan menyambut jalan desa yang berliku, dan sebuah motor berangkat pelan dari depan warung. Pemuda pengendaranya menoleh sambil tersenyum, karena motor tua itu punya kebiasaan yang menarik: ia berangkat pelan lalu makin kencang setiap detiknya. Teman-temannya di warung mengajak menghitung laju motor itu di tiap detik, dan perhitungan pun dimulai dengan tawa. Sore itu akan bercerita tentang laju yang punya laju.',
+        },
+        {
+          objek: 'speedometerNaikTetap', judul: 'Jarum yang Naik Setia',
+          teks: 'Jarum speedometer motor itu bergerak dengan disiplin yang mengagumkan. Di detik pertama lajunya 5 meter tiap detik, detik kedua 10, detik ketiga 15 — naik setia tanpa tersentak. Teman-teman di warung mencatat tiga angka itu di papan kecil: 5, 10, 15. Jarum itu tak pernah diam, dan justru kedisiplinannya itulah yang menyimpan pelajaran.',
+        },
+        {
+          objek: 'papanDetikLima', judul: 'Bertambah Lima Tiap Detik',
+          teks: 'Papan catat itu lalu dibaca dengan cara lain: bukan angkanya, tapi kenaikannya. Dari 5 ke 10 naik 5, dari 10 ke 15 naik 5 lagi — setiap detik laju bertambah tepat 5. Kenaikan laju yang tetap itulah yang disebut percepatan: laju dari laju, ukuran seberapa cepat kecepatan berubah. Motor tua itu ternyata tak asal kencang; ia menambah lajunya dengan hitungan yang setia tiap detik.',
+        },
+        {
+          objek: 'jalanDesaMelengkung', judul: 'Tikungan yang Melambatkan',
+          teks: 'Jalan desa tak pernah benar-benar rata; di tikungan tajam motor itu melambat untuk berbelok. Lajunya yang tadinya naik rajin kini turun — dan turunnya laju itu pun bernama percepatan, cuma tandanya negatif. Jalan desa punya cerita: lurus memanjang membuat laju naik setia, tikungan memangkasnya dengan sopan. Percepatan bukan cuma tentang makin kencang; ia membaca setiap perubahan laju, naik maupun turun.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Laju Punya Laju!',
+          teks: 'Laju 5, 10, 15 — naik 5 tiap detik — itu percepatan: laju dari laju, dan dia bisa positif saat makin kencang atau negatif saat tikungan melambatkan. Motor tua itu mengajarinya tanpa membuka mulut. Owalah, ternyata begini toh — di balik setiap laju ada laju lain yang mengukur perubahannya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-080': {
+      tema: 'puncakLerengCuram',
+      npc: { glif: 'lereng!', ucap: ['Ukur', 'tiap titik!'] },
+      stasiun: [
+        {
+          objek: 'kompasKemiringan', judul: 'Kompas Kemiringan',
+          teks: 'Malam turun di puncak gunung, dan bintang-bintang menyaksikan penjaga lereng membawa kompas aneh berjarum dua arah. Kompas itu bukan penunjuk utara; ia pengukur kemiringan — jarumnya berdiri miring mengikuti tanah tempat ia diletakkan. Penjaga lereng menyapa pendaki yang baru tiba dan menawarkan ujian terakhir: lima misi lereng, dan kompas ini menjadi satu-satunya alat yang boleh dibawa. Pendaki itu mengangguk, dan malam pun memulai ujiannya.',
+        },
+        {
+          objek: 'limaPapanMisiLereng', judul: 'Lima Papan Menantang',
+          teks: 'Lima papan batu menyala lembut di sepanjang lereng, masing-masing membawa satu misi dari dunia-dunia yang telah dikunjungi pendaki. Papan pertama minta laju gelas air: 3, 3, 6, 1 — laju yang berubah di tiap detik. Papan kedua minta beda rata-rata dan sesaat: 60 kilometer per jam bisa berarti 40 lalu 80. Papan ketiga minta laju x2: jawabannya 2x, di titik 3 bernilai 6.',
+        },
+        {
+          objek: 'papanPuncakLembah', judul: 'Puncak dan Lembah Tak Bisa Sembunyi',
+          teks: 'Papan keempat dan kelima menantang pendaki membuktikan kekuatan terbesar kompas itu. Puncak air mancur ada di detik kedua ketinggian 4, tepat ketika kenaikannya menjadi nol. Dasar lembah senyum ada di tengah, ketinggian minus 4, juga dengan laju nol. Puncak naik dan lembah turun ternyata sama-sama ditandai oleh satu tanda: laju nol — dan pendaki menjawab semuanya tanpa ragu.',
+        },
+        {
+          objek: 'gerbangJuaraLereng', judul: 'Gerbang Juara Lereng',
+          teks: 'Gerbang batu di puncak menyala penuh ketika misi terakhir terjawab, dan penjaga lereng berdiri tersenyum di sampingnya. Hitungan itu hanya alat, katanya, tapi malam ini alat itu berpindah tangan — kompas kemiringan kini milik pendaki. Dari laju yang berubah sampai puncak dan lembah, semua lereng di dunia ini kini bisa dibaca titik demi titik. Gerbang itu terbuka lebar, dan bintang-bintang seperti ikut bertepuk.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kompas Lereng di Tanganmu!',
+          teks: 'Lima misi lereng selesai: laju gelas 3, 3, 6, 1; rata-rata 60 vs sesaat 40 dan 80; 2x di titik 3 bernilai 6; puncak air di detik 2 tinggi 4; dasar senyum di laju nol. Semuanya terjawab dengan satu alat yang sama. Owalah, ternyata begini toh — turunan adalah kompas kemiringan, dan kini kompas itu ada di tanganmu. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   function untuk(topik) {
