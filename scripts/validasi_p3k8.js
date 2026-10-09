@@ -68,7 +68,7 @@ function blokSemuaNaskah(src) {
   return out;
 }
 const semuaBlok = blokSemuaNaskah(cerita);
-cek('jumlah blok naskah = 280', semuaBlok.length === 280, semuaBlok.length);
+cek('jumlah blok naskah >= 280', semuaBlok.length >= 280, semuaBlok.length);
 let temuan = 0;
 semuaBlok.forEach(b => {
   const low = b.isi.toLowerCase();

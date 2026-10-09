@@ -5273,7 +5273,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Kotak Ajaib Terbongkar!',
-          teks: 'Jadi sembilan angka tersusun agar tiap garis berjumlah 15, dan rahasianya 45 dibagi 3. Kotak ajaib ternyata bukan mantra — dia teka-teki hitung yang sudah lama diulang dari zaman ke zaman. Owalah, ternyata begini toh — rahasia paling indah adalah hitungan yang setia. Mudah, bukan?',
+          teks: 'Jadi sembilan angka tersusun agar tiap garis berjumlah 15, dan rahasianya 45 dibagi 3. Kotak ajaib ternyata teka-teki hitung yang sudah lama diulang dari zaman ke zaman, tanpa jalan pintas apa pun. Owalah, ternyata begini toh — rahasia paling indah adalah hitungan yang setia. Mudah, bukan?',
         },
       ],
     },
@@ -5774,7 +5774,7 @@ window.CERITA = (function () {
       stasiun: [
         {
           objek: 'papanTigaNPlusSatu', judul: 'Papan Menyala: 3n + 1',
-          teks: 'Malam di menara pendakian, sebuah papan menyala dengan tulisan 3n + 1. Huruf n adalah nomor suku: mau suku yang mana, tinggal sebut nomornya. Ini bukan sulap — ini rumus, mesin pelompat barisan.',
+          teks: 'Malam di menara pendakian, sebuah papan menyala dengan tulisan 3n + 1. Huruf n adalah nomor suku: mau suku yang mana, tinggal sebut nomornya. Ini rumus murni, mesin pelompat barisan yang setia pada hitungannya.',
         },
         {
           objek: 'lompatanRumusCepat', judul: 'Uji Rumusnya Dulu',
@@ -5963,7 +5963,7 @@ window.CERITA = (function () {
       stasiun: [
         {
           objek: 'mesinPangkatTiga', judul: 'Mesin Pengali yang Setia',
-          teks: 'Pagi di bengkel pangkat, sebuah mesin tua menyala siap bekerja. Tukangnya bilang: masukkan angka dua, lalu minta mesin mengali dua dengan dirinya sendiri tiga kali. Mesin pun bekerja dengan setia: 2 × 2 × 2 = 8. Pangkat sebenarnya hanya perkalian yang diulang — tak ada sihir apa pun di dalamnya.',
+          teks: 'Pagi di bengkel pangkat, sebuah mesin tua menyala siap bekerja. Tukangnya bilang: masukkan angka dua, lalu minta mesin mengali dua dengan dirinya sendiri tiga kali. Mesin pun bekerja dengan setia: 2 × 2 × 2 = 8. Pangkat sebenarnya hanya perkalian yang diulang — tak ada jalan pintas apa pun di dalamnya.',
         },
         {
           objek: 'papanTulisKaliUlang', judul: 'Angka Kecil di Atas Itu Apa?',
@@ -7759,7 +7759,7 @@ window.CERITA = (function () {
         },
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Tetes yang Dihitung Jadi Ember Penuh!',
-          teks: 'Gua ini menuntaskan satu akumulasi sederhana: dua mililiter tiap detik, seratus dua puluh tiap menit, dan penuh seribu mililiter tepat di detik lima ratus. Tidak ada sihir di dalamnya, hanya penjumlahan yang tak bolong. Owalah, ternyata begini toh — integral itu tetesan kecil yang dihitung setia sampai jadi ember penuh. Mudah, bukan?',
+          teks: 'Gua ini menuntaskan satu akumulasi sederhana: dua mililiter tiap detik, seratus dua puluh tiap menit, dan penuh seribu mililiter tepat di detik lima ratus. Tidak ada jalan pintas di dalamnya, hanya penjumlahan yang tak bolong. Owalah, ternyata begini toh — integral itu tetesan kecil yang dihitung setia sampai jadi ember penuh. Mudah, bukan?',
         },
       ],
     },
@@ -7812,6 +7812,266 @@ window.CERITA = (function () {
         {
           objek: 'tugu', akhir: true, judul: 'Owalah, Lembah Luas Tuntas Dijumlah!',
           teks: 'Lima misi lembah selesai: enam ubin tangga, delapan di bawah lereng, sembilan di bawah lengkung, dua puluh langkah dari laju, dan lima ratus detik untuk ember penuh. Semuanya kalah oleh satu kebiasaan yang sama: mengiris lalu menjumlah. Owalah, ternyata begini toh — integral adalah seni menjumlah potongan kecil sampai dunia jadi terhitung. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-091': {
+      tema: 'lemariPadanan',
+      npc: { glif: 'padan!', ucap: ['Sapa semua', 'padanannya!'] },
+      stasiun: [
+        {
+          objek: 'lemariKemejaTiga', judul: 'Lemari yang Bertanya',
+          teks: 'Pagi hangat menyapa kamar kecil di rumah nenek, dan sebuah lemari kayu tua berdiri terbuka lebar. Di dalamnya tiga kemeja bersahabat tersampir rapi, kuning, biru, dan hijau, berdampingan dengan dua celana berwarna cokelat dan biru tua. Perjalanan ke desa nenek akan dimulai besok, dan penghuni kamar harus menyiapkan padanan pakaian untuk setiap hari. Lemari itu seolah bertanya: dari kemeja dan celana ini, ada berapa padanan yang bisa dibuat?',
+        },
+        {
+          objek: 'papanEnamPadanan', judul: 'Setiap Kemeja Menyapa Semua Celana',
+          teks: 'Di pintu lemari tertempel papan kecil bergambar kotak-kotak, dan gambar itu mengajarkan satu kebiasaan yang rapi. Kemeja kuning boleh berpadu dengan celana cokelat, boleh juga dengan celana biru tua; begitu pula kemeja biru, begitu pula kemeja hijau. Setiap kemeja menyapa semua celana, satu per satu, tanpa kecuali. Tiga kemeja kali dua celana, hasilnya enam padanan yang tersusun rapi di kotak gambar itu.',
+        },
+        {
+          objek: 'kemejaBaruEmpat', judul: 'Satu Kemeja Baru, Dua Padanan Baru',
+          teks: 'Minggu depan ada kemeja baru datang, warnanya merah bata, dan lemari akan berisi empat kemeja. Papan kotak itu menambahkan satu baris baru, dan baris itu langsung menyapa kedua celana sekaligus. Empat kemeja kali dua celana menjadi delapan padanan, dua lebih banyak dari kemarin. Satu kemeja kecil ternyata membawa dua padanan baru, karena satu pakaian baru harus menjabat tangan dengan semua pakaian pasangannya.',
+        },
+        {
+          objek: 'jadwalSeminggu', judul: 'Cukup untuk Seminggu?',
+          teks: 'Di dasar lemari ada jadwal pakaian sepekan, dan sepekan berarti tujuh hari yang tiap harinya ingin tampil beda. Enam padanan dulu tidak pernah cukup, delapan padanan masih kurang satu, dan kini lemari menambahkan satu celana lagi. Empat kemeja kali tiga celana, jadilah dua belas padanan. Dua belas melebihi tujuh hari dengan sisa lima cadangan, dan tak ada lagi pagi yang kehabisan padanan baru.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lemari Kecil Punya Dua Belas Jawaban!',
+          teks: 'Hari ini lemari tua memberi pelajaran yang tak pernah diduga: tiga kemeja dan dua celana menyusun enam padanan, satu kemeja baru menambah dua, satu celana baru menambah empat, dan hitungan berakhir di dua belas. Menghitung padanan ternyata sesederhana mengalikan pilihan yang satu dengan pilihan yang lain. Hitungan itu hanya alat. Bantu saja. Owalah, ternyata begini toh, lemari kecil menyimpan pilihan lebih banyak dari yang mata lihat. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-092': {
+      tema: 'tamanBarisanFoto',
+      npc: { glif: 'berbaris!', ucap: ['Tiga sahabat,', 'enam gaya!'] },
+      stasiun: [
+        {
+          objek: 'podiumFotoTiga', judul: 'Tiga Sahabat dan Podium Foto',
+          teks: 'Siang cerah menyambut tiga sahabat lama yang sepakat mengabadikan persahabatan mereka di podium foto taman. Podium itu punya tiga tempat berjajar, kiri, tengah, dan kanan, dan ketiganya menanti diisi. Ani, Bima, dan Cika saling pandang lalu tertawa, sebab belum sepakat siapa berdiri di mana. Pertanyaan sederhana pun muncul: ada berapa cara menempatkan tiga orang di tiga tempat itu?',
+        },
+        {
+          objek: 'papanTigaDuaSatu', judul: 'Kiri, Tengah, Kanan',
+          teks: 'Pengelola taman menunjuk papan hitung di sisi podium, dan hitungannya berjalan seperti pertanyaan berantai. Untuk tempat paling kiri ada tiga pilihan: Ani, Bima, atau Cika. Tempat tengah tinggal dua pilihan, dan tempat kanan otomatis tersisa satu. Tiga kali dua kali satu, hasilnya enam urutan berbeda untuk satu foto yang sama.',
+        },
+        {
+          objek: 'albumEnamJepretan', judul: 'Enam Jepretan untuk Album',
+          teks: 'Kamera mulai bekerja, dan album kecil menampung jepretan demi jepretan. Ani di kiri, Bima di tengah, Cika di kanan, jepret. Posisi ditukar sedikit dan wajah barisan langsung terasa beda, jepret lagi, sampai enam foto terkumpul. Tak ada dua foto yang benar-benar sama, karena urutan mengubah cerita barisan, dan enam urutan itulah seluruh kekayaan tiga sahabat.',
+        },
+        {
+          objek: 'sahabatKeempatDatang', judul: 'Teman Baru Ikut Berbaris',
+          teks: 'Tepat saat foto terakhir, Dina datang berlari dan ingin ikut, sehingga barisan kini berisi empat orang. Papan hitung menambah satu lantai: empat kali tiga kali dua kali satu, hasilnya dua puluh empat urutan. Dari enam menjadi dua puluh empat, bertambah empat kali lipat hanya karena satu orang bergabung. Tawa tiga sahabat pecah, sebab album yang tadinya ramping kini akan tebal.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Enam Foto dari Tiga Sahabat!',
+          teks: 'Podium taman sore itu menyisihkan pelajaran manis: tempat kiri punya tiga pilihan, tengah tinggal dua, kanan tinggal satu, dan tiga kali dua kali satu berujung enam foto yang tak ada duanya. Ketika teman bertambah, hitungan melipatgandakan dirinya sendiri, dari enam melompat ke dua puluh empat. Owalah, ternyata begini toh, mengurutkan adalah mengalikan pilihan demi pilihan. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-093': {
+      tema: 'lapanganPasanganSore',
+      npc: { glif: 'sepasang!', ucap: ['Hitung pasangnya', 'tanpa dobel!'] },
+      stasiun: [
+        {
+          objek: 'kertasEmpatNama', judul: 'Empat Nama di Kertas',
+          teks: 'Sore menyala di lapangan desa, dan empat pemain muda menyiapkan giliran latihan estafet. Papan skor kecil dipakai menulis empat nama, dan aturannya satu: giliran pertama dijalani sepasang pemain, dua orang sekaligus. Kertas dan pensel keluar dari tas, lalu pertanyaan pertama terdengar: ada berapa pasang yang mungkin terpilih dari empat nama ini?',
+        },
+        {
+          objek: 'papanDuaBelasSusunan', judul: 'Dua Belas Kertas, Satu Kebenaran',
+          teks: 'Cara pertama menulis nama berurutan: Ani dulu lalu Bima, atau Bima dulu lalu Ani, dan begitu terus untuk semua kemungkinan. Empat nama kali tiga pasangan sisa, hasilnya dua belas kertas terpakai. Namun saat kertas-kertas itu dibaca lagi, dua kertas seperti Ani-Bima dan Bima-Ani ternyata menceritakan satu pasang yang sama. Sepasang pemain tak peduli siapa yang disebut lebih dulu, pasang itu tetap mereka berdua.',
+        },
+        {
+          objek: 'bolaPasangEnam', judul: 'Enam Pasang Berjabat Tangan',
+          teks: 'Cara kedua lebih hemat: bagi dua belas dengan dua, sebab setiap pasang selalu terhitung dua kali. Dua belas dibagi dua, jadilah enam pasang: Ani-Bima, Ani-Cika, Ani-Dina, Bima-Cika, Bima-Dina, dan Cika-Dina. Persis seperti empat orang yang saling berjabat tangan saat perpisahan, tidak ada yang dijabat dua kali, tidak ada yang terlewat, dan tangannya habis tepat enam kali.',
+        },
+        {
+          objek: 'timGiliranMulai', judul: 'Giliran Dimulai, Hitungan Selesai',
+          teks: 'Kertas-kertas urutan dipilah dan disisihkan, lalu enam slip pasangan dimasukkan ke dalam topi. Salah satu slip diambil, dua nama terbaca, dan latihan estafet dimulai dengan giliran pertama yang jelas. Memilih tanpa memedulikan urutan itulah kebiasaan baru yang dipelajari sore itu: cukup sekali menyebut, tidak perlu dua kali. Topi ditutup kembali, menunggu latihan berikutnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Belas Kertas Ternyata Enam Pasang!',
+          teks: 'Lapangan sore itu meninggalkan pelajaran yang sering keliru dihitung orang: menulis nama berurutan menghasilkan dua belas, tetapi pasangan sesungguhnya hanya enam, karena setiap pasang selalu terhitung dua kali. Membagi dua belas dengan dua bukan trik sulit, hanya cara mengakui bahwa Ani-Bima dan Bima-Ani itu satu keluarga. Owalah, ternyata begini toh, memilih tanpa urutan tinggal dibagi dua. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-094': {
+      tema: 'bazarPohonPilihan',
+      npc: { glif: 'cabang!', ucap: ['Gambarkan', 'semua jalur!'] },
+      stasiun: [
+        {
+          objek: 'tendaRotiTigaIsi', judul: 'Tenda Roti Pagi Bazar',
+          teks: 'Pagi bazar desa beraroma roti hangat, dan tenda paling ramai menjual roti isi dengan tiga pilihan: cokelat, keju, dan selai. Setiap roti boleh ditemani dua minuman hangat, teh atau susu. Pembeli kecil kebingungan dengan senang, sebab pilihannya sedikit tetapi paduan rasanya banyak. Penjaga tenda tersenyum dan mengeluarkan selembar kertas besar dari bawah meja.',
+        },
+        {
+          objek: 'pohonKertasCabang', judul: 'Pohon yang Tumbuh di Kertas',
+          teks: 'Kertas besar itu ternyata gambar pohon, dan penjaga tenda menggambar cabangnya pelan-pelan. Batangnya bertiga, satu cabang untuk setiap isian roti, lalu dari tiap batang tumbuh dua cabang kecil untuk teh dan susu. Cokelat bercabang dua, keju bercabang dua, selai juga dua. Tiga kali dua, dan pohon itu berdiri dengan enam ujung jalur yang semuanya kelihatan.',
+        },
+        {
+          objek: 'jalurEnamLampu', judul: 'Enam Jalur, Tak Ada yang Tertinggal',
+          teks: 'Dua pembeli bermain mengikuti jalur pohon dengan jarinya sambil membaca keras-keras. Roti cokelat dengan teh, roti cokelat dengan susu, keju dengan teh, keju dengan susu, selai dengan teh, dan selai dengan susu, enam jalur lengkap. Ujung tiap jalur ditempeli lampu kecil, dan lampu itu menyala bergantian dari kiri ke kanan. Tak satu pun kemungkinan tersesat, sebab pohon menampakkan semuanya sekaligus.',
+        },
+        {
+          objek: 'isianBaruEmpat', judul: 'Isian Baru Menumbuhkan Cabang',
+          teks: 'Menjelang siang, penjaga tenda menaburkan isian baru, pisang karamel, dan pohon di kertas langsung tumbuh satu batang lagi. Batang pisang bercabang dua seperti saudaranya, dan jumlah jalur melompat dari enam menjadi delapan. Tambah satu pilihan di tangkai, tambah dua jalur di ujung, itulah kebiasaan pohon kemungkinan. Pembeli kecil bertepuk tangan, sebab pohon itu tumbuh tanpa membuat siapa pun pusing.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Semua Pilihan Bisa Digambar!',
+          teks: 'Bazar pagi itu menyimpan rahasia berpikir yang rapi: alih-alih menebak berapa banyak paduan, penjaga tenda menggambarnya satu per satu menjadi pohon. Tiga isian kali dua minuman menjadi enam jalur, dan satu isian baru menumbuhkan dua jalur lagi. Hitungan itu hanya alat. Bantu saja. Owalah, ternyata begini toh, kemungkinan yang digambar lebih tenang daripada kemungkinan yang dihafal. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-095': {
+      tema: 'rakBukuMalam',
+      npc: { glif: 'berantai!', ucap: ['Empat kali tiga', 'kali dua kali satu!'] },
+      stasiun: [
+        {
+          objek: 'rakEmpatBuku', judul: 'Empat Buku Menunggu Susunan',
+          teks: 'Malam tenang menyapa sudut bacaan seorang pemuda, dan rak kayu kecil di depannya berisi empat buku kesayangan yang belum tersusun. Ada buku gunung, buku laut, buku bintang, dan buku hutan, masing-masing bersampul warna berbeda. Sebelum tidur, ia ingin menata urutan mereka di rak agar pagi terasa pas. Pertanyaan sederhana muncul di kepalanya: ada berapa cara menyusun empat buku itu?',
+        },
+        {
+          objek: 'rantaiEmpatTigaDuaSatu', judul: 'Pengganda Berantai di Kertas',
+          teks: 'Ia menulis hitungannya di kertas dan menyadari satu hal: rak tak peduli buku mana yang diletakkan lebih dulu, yang penting semua terisi. Tempat pertama punya empat pilihan, tempat kedua tinggal tiga, tempat ketiga tinggal dua, dan tempat terakhir menyambut sisa satu buku. Empat kali tiga kali dua kali satu, hasilnya dua puluh empat. Di kertas itu juga ia membaca tanda seru kecil tulisan gurunya: empat faktorial, tanda seru yang bukan teriakan, melainkan pengganda berantai.',
+        },
+        {
+          objek: 'papanDuaEmpatSusunan', judul: 'Dua Puluh Empat Susunan',
+          teks: 'Dari dua puluh empat susunan, ia hanya butuh satu untuk malam ini, tetapi daftar kecilnya menuliskan semuanya sekadar membuktikan. Susunan pertama ditulis, kedua, kelima, kesepuluh, sampai baris dua puluh empat memenuhi kertas. Tidak ada dua susunan yang sama persis, dan tidak ada satu pun yang hilang dari daftar. Rak kecil itu ternyata menyimpan dua puluh empat dunia yang berbeda urutan.',
+        },
+        {
+          objek: 'bukuKelimaMeledak', judul: 'Buku Kelima Menggandakan Daftar',
+          teks: 'Minggu depan ada buku kelima datang dari toko, sampulnya oranye cerah, dan daftar di kertas mendadak harus dihitung ulang. Lima kali empat kali tiga kali dua kali satu, hasilnya seratus dua puluh, daftar yang tadinya satu lembar kini butuh lima lembar. Satu buku baru melipatlimatkan semua susunan, sebab buku itu harus mencoba duduk di setiap celah rak. Ia tersenyum: buku berikutnya akan membawa seratus dua puluh menjadi tujuh ratus dua puluh.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tanda Seru Itu Pengganda Berantai!',
+          teks: 'Malam itu rak buku kecil mengajarkan satu tanda baca yang luar biasa: empat kali tiga kali dua kali satu menjadi dua puluh empat, dan tanda seru pada empat faktorial adalah pengganda berantai, bukan teriakan. Satu buku tambahan melipat daftar menjadi seratus dua puluh, dan buku berikutnya menjanjikan tujuh ratus dua puluh. Owalah, ternyata begini toh, mengurutkan banyak benda tumbuh seperti bola salju. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-096': {
+      tema: 'papanDuaKelas',
+      npc: { glif: 'rentang!', ucap: ['Rata sama,', 'cerita beda!'] },
+      stasiun: [
+        {
+          objek: 'duaPapanNilai', judul: 'Dua Papan, Dua Kelompok',
+          teks: 'Siang terang membasahi halaman sekolah, dan dua papan data berdiri berdampingan dekat kantin. Papan pertama milik kelompok belajar A dengan lima nilai latihan: tujuh, tujuh, tujuh, tujuh, tujuh. Papan kedua milik kelompok B: tiga, lima, tujuh, sembilan, sebelas. Dari kejauhan kedua papan terlihat seimbang, dan anak-anak makan siang menduga keduanya sama persis.',
+        },
+        {
+          objek: 'timbanganRataTujuh', judul: 'Timbangan Menyatakan Seri',
+          teks: 'Penjaga data menghitung rata-rata kedua papan di depan penonton yang makin ramai. Kelompok A menjumlah tiga puluh lima lalu membagi lima, hasilnya tujuh. Kelompok B juga tiga puluh lima dibagi lima, hasilnya tujuh lagi. Timbangan rata-rata menyatakan seri sempurna, dan sebagian penonton mulai bubar karena yakin tak ada lagi yang perlu dibahas.',
+        },
+        {
+          objek: 'mistarRentangNol', judul: 'Mistar Mengukur Sebaran',
+          teks: 'Namun penjaga data belum menutup papan, dan ia mengeluarkan mistar panjang untuk mengukur hal lain: seberapa jauh angka-angka itu berjaler. Nilai kelompok A semua menempel di tujuh, rentangnya nol, rapat seperti kepingan koin yang ditumpuk. Nilai kelompok B berjalan dari tiga sampai sebelas, rentangnya delapan, menyebar seperti barisan burung. Rata-ratanya sama, sebarannya bertolak belakang.',
+        },
+        {
+          objek: 'batangSebaranGanda', judul: 'Grafik Membongkar Rahasia',
+          teks: 'Untuk memperjelas, penjaga data menggambar dua deret batang kecil di papan ketiga. Batang kelompok A berdiri seragam seperti pagar rapi tanpa celah, sedangkan batang kelompok B naik-turun membentuk tangga yang lebar. Penonton yang tadi bubar kini kembali menengok, sebab grafik itu membongkar rahasia yang disembunyikan angka tunggal. Dua kelompok dengan rata-rata sama ternyata membawa dua cerita yang sangat berbeda.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Rata Sama Ternyata Beda Cerita!',
+          teks: 'Halaman sekolah hari itu memberi bekal yang akan dipakai seumur hidup: dua kelompok bisa berbagi rata-rata yang sama persis, tujuh dengan tujuh, sementara kehidupan sehari-harinya berjauhan. Rentang nol dan rentang delapan adalah dua wajah yang tak mampu ditunjukkan oleh satu angka rata-rata. Hitungan itu hanya alat. Bantu saja. Owalah, ternyata begini toh, rata-rata itu pengantar, rentanglah yang menceritakan sisanya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-097': {
+      tema: 'lorongRaporSore',
+      npc: { glif: 'ringkas!', ucap: ['Lima angka', 'satu cerita!'] },
+      stasiun: [
+        {
+          objek: 'susunanSembilanKartu', judul: 'Sembilan Nilai Berbaris',
+          teks: 'Sore menyala di lorong rapor sekolah, dan wali kelas menyusun sembilan kartu nilai latihan di atas meja panjang. Kartu itu berjajar rapi dari kecil ke besar: empat, lima, lima, enam, tujuh, delapan, delapan, sembilan, sepuluh. Sembilan kartu terasa banyak untuk dibaca satu per satu setiap kali ada yang bertanya. Wali kelas lalu mengangkat papan kecilnya dan berkata, cukup lima angka untuk menceritakan semuanya.',
+        },
+        {
+          objek: 'kartuMedianTujuh', judul: 'Yang Tepat di Tengah',
+          teks: 'Jari pertama menunjuk kartu kelima, dan itu langsung menjadi angka pertama: tujuh, nilai yang berdiri tepat di tengah sembilan kartu. Empat nilai berjajar di kirinya dan empat di kanannya, sehingga separuh siswa berada di bawahnya dan separuh lagi di atasnya. Angka kedua dan ketiga menempel di ujung barisan: empat sebagai nilai paling kecil dan sepuluh sebagai nilai paling besar. Tiga angka sudah berdiri di papan, tinggal dua lagi.',
+        },
+        {
+          objek: 'kotakKuartilGanda', judul: 'Memotong Barisan Dua Kali',
+          teks: 'Jari kedua memotong barisan kartu menjadi dua regu, dan setiap regu diukur tengahnya juga. Regu bawah berisi empat, lima, lima, enam, dan tengahnya bertemu di lima. Regu atas berisi delapan, delapan, sembilan, sepuluh, dan tengahnya bertemu di delapan. Kuartil bawah lima dan kuartil atas delapan, dua potongan tadi adalah pinggiran kotak yang akan dilukis di papan.',
+        },
+        {
+          objek: 'papanLimaAngka', judul: 'Kotak yang Menceritakan Semua',
+          teks: 'Papan kecil itu akhirnya berisi lima angka berjajar: empat, lima, tujuh, delapan, sepuluh, dan dari angka-angka itu wali kelas menggambar kotak sederhana. Kotak membentang dari lima ke delapan dengan garis di tujuh, lalu dua kumis panjang menjulur ke empat dan ke sepuluh. Sembilan kartu kini diringkas tanpa membuang satu pun kebenarannya. Setiap orang yang lewat lorong sore itu cukup membaca satu kotak untuk memahami satu kelas.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lima Angka Cukup Menceritakan!',
+          teks: 'Lorong rapor sore itu menyimpan cara merangkum yang jujur: nilai terkecil empat, kuartil bawah lima, median tujuh, kuartil atas delapan, dan nilai terbesar sepuluh. Lima angka itu cukup menggantikan sembilan kartu, dan kotaknya bahkan menampakkan sebaran yang tak terlihat saat kartu dibaca satu per satu. Owalah, ternyata begini toh, data yang banyak bisa dipangkas tanpa menghilangkan ceritanya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-098': {
+      tema: 'galeriGrafikJujur',
+      npc: { glif: 'sumbu!', ucap: ['Cek sumbunya', 'sebelum kagum!'] },
+      stasiun: [
+        {
+          objek: 'duaBingkaiDonat', judul: 'Dua Bingkai, Satu Pasang Angka',
+          teks: 'Siang itu galeri kecil di tepi jalan memajang dua bingkai grafik dari warung donat yang sama. Bingkai kiri dan bingkai kanan sama-sama menceritakan penjualan dua pekan: pekan pertama seratus donat, pekan kedua seratus lima donat. Angkanya satu pasang yang sama persis, tetapi kedua bingkai itu terlihat menceritakan dua kejadian yang berbeda jauh. Pengunjung galeri berdiri lama di antara keduanya, penasaran.',
+        },
+        {
+          objek: 'bingkaiMenjulang', judul: 'Bingkai yang Menjulang',
+          teks: 'Bingkai kiri memangkas sumbunya mulai dari seratus, sehingga batang pekan pertama tak tampak sama sekali dan batang pekan kedua menjulang penuh di atasnya. Pandangan pertama langsung berseru: penjualan meroket hebat! Padahal yang benar-benar terjadi hanya tambahan lima donat dari seratus. Batang itu tampak mengepul karena lantai bawahnya dipangkas, bukan karena donatnya bertambah banyak.',
+        },
+        {
+          objek: 'bingkaiDariNol', judul: 'Bingkai yang Berangkat dari Nol',
+          teks: 'Bingkai kanan memilih jalan sebaliknya: sumbunya berangkat dari nol, sehingga kedua batang berdiri hampir sama tinggi. Seratus dan seratus lima memang berselisih tipis, hanya lima persen dari batangnya, dan mata pun akhirnya melihat perbandingan yang jujur. Dari nol, tambahan lima donat tampak sekecil kenyataannya. Warung yang sama, angka yang sama, kesan yang berbeda jauh.',
+        },
+        {
+          objek: 'papanCekSumbu', judul: 'Pertanyaan Penjernih Grafik',
+          teks: 'Di bawah kedua bingkai, pemilik galeri menempel papan berisi tiga pertanyaan penjernih: sumbu ini mulai dari nol atau dipangkas, selisih batangnya berapa persen, dan batangnya utuh atau terpotong. Tiga pertanyaan itu cukup untuk menyelidiki grafik mana pun yang berusaha terlihat lebih heboh dari kenyataannya. Hitungan itu hanya alat. Bantu saja. Berita, iklan, dan papan angka di mana pun akan jadi lebih jujur bila ketiganya selalu diajukan lebih dulu.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Angka Sama, Ceritanya Beda!',
+          teks: 'Galeri tepi jalan itu menyimpan kejutan paling berguna: dua grafik dengan angka seratus dan seratus lima yang sama persis bisa terlihat seperti dua berita berbeda, hanya karena satu sumbu dipangkas dan satu sumbu berangkat dari nol. Grafik tidak berbohong dengan angkanya, tetapi lantainya bisa membesar-besarkan cerita. Owalah, ternyata begini toh, cek sumbunya dulu, baru terkejut atau tenang. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-099': {
+      tema: 'pelataranKoinSiang',
+      npc: { glif: 'dua koin', ucap: ['Daftar dulu,', 'hitung kemudian!'] },
+      stasiun: [
+        {
+          objek: 'duaKoinGubuk', judul: 'Dua Koin di Pelataran',
+          teks: 'Siang terik membuat anak-anak pelataran gubuk bermain di bawah pohon, dan permainan estafet mereka menunggu satu hal: siapa berlari duluan. Dua koin tua diambil dari saku, sisi bergambar pohon disebut sisi gambar, dan sisi angka disebut sisi angka. Kedua koin akan dilempar bersamaan, dan semua mata menunggu. Sebelum melempar, anak tertua mengangkat tangan: mari kita daftar dulu semua hasil yang mungkin.',
+        },
+        {
+          objek: 'pohonKoinEmpatJalur', judul: 'Pohon Empat Jalur',
+          teks: 'Di tanah, anak tertua menggambar pohon dengan ranting kayu: koin pertama bercabang dua, gambar atau angka, lalu koin kedua bercabang dua lagi dari tiap cabang. Empat jalur pun berdiri: gambar-gambar, gambar-angka, angka-gambar, dan angka-angka. Jalur gambar-angka dan angka-gambar dihitung berbeda walaupun isi kelihatannya mirip, sebab koin pertama dan koin kedua adalah dua benda berbeda. Semua kemungkinan kini tampak berjajar di tanah, tak ada yang tersembunyi.',
+        },
+        {
+          objek: 'papanSatuPerEmpat', judul: 'Satu dari Empat',
+          teks: 'Hitungan pun lahir dari daftar itu. Dua koin sama-sama gambar hanya melalui satu jalur dari empat, peluangnya satu per empat, sama seperti dua koin sama-sama angka. Yang bercampur, satu gambar satu angka, melalui dua jalur sekaligus, peluangnya dua per empat. Maka lemparan campur dua kali lebih sering mungkin terjadi daripada lemparan kembar, bukan karena rahasia, melainkan karena jalurnya lebih banyak.',
+        },
+        {
+          objek: 'pengingatAlatJujur', judul: 'Alat, Bukan Penentu',
+          teks: 'Anak-anak melempar koin itu lagi dan lagi, dan daftar di tanah tidak pernah berkata jalur mana yang akan keluar berikutnya. Pohon kemungkinan hanya menampakkan semua jalan; yang memilih jalan bukan hitungan, dan tak seorang pun bisa memaksa koin. Hitungan itu hanya alat. Bantu saja. Anak tertua menepuk papan tanahnya: lengkapi daftarnya dulu, barulah bicara peluang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Hitungannya Kemungkinan, Bukan Kepastian!',
+          teks: 'Pelataran siang itu memberi pelajaran dua lapis: daftar lengkap dulu baru hitung, dan hasil lemparan selalu tetap rahasia sampai koin jatuh. Empat jalur, satu per empat untuk kembar, dua per empat untuk campur, dan seluruhnya berjumlah empat per empat, penuh sempurna. Owalah, ternyata begini toh, peluang menghitung kemungkinan, bukan menentukan kepastian. Mudah, bukan?',
+        },
+      ],
+    },
+    'p3-100': {
+      tema: 'puncakDataMalam',
+      npc: { glif: 'enam!', ucap: ['Semua sudah', 'kau pelajari!'] },
+      stasiun: [
+        {
+          objek: 'papanMisiPadanan', judul: 'Misi Pertama: Padanan',
+          teks: 'Malam paling jernih di puncak Pegunungan Pola, dan gerbang juara berdiri terbuka dengan lima papan misi menyala. Papan pertama menantang petualang menghitung padanan lemari: tiga kemeja dan dua celana. Satu kemeja menyapa dua celana, tiga kemeja menyapa enam kali. Angka enam pertama menyala di papan, dan langit malam ikut berkelip.',
+        },
+        {
+          objek: 'papanMisiBarisan', judul: 'Misi Kedua: Barisan',
+          teks: 'Papan kedua mengingatkan podium foto: tiga sahabat menempati tiga tempat, kiri, tengah, dan kanan. Tiga pilihan untuk kiri, dua untuk tengah, satu untuk kanan, dan tiga kali dua kali satu kembali menuntun ke enam. Angka enam kedua menyala berdampingan dengan yang pertama. Petualang tertawa kecil, sebab dua misi yang berbeda ternyata berujung pada tamu yang sama.',
+        },
+        {
+          objek: 'papanMisiPasangan', judul: 'Misi Ketiga: Pasangan',
+          teks: 'Papan ketiga memanggil kembali lapangan sore: empat nama, dua dipilih, urutan tak diperhatikan. Dua belas urutan dibagi dua, dan enam pasang berjabat tangan di ingatan. Untuk ketiga kalinya angka enam menyala, dan kini tiga papan berdiri bersaudara. Enam, enam, enam: tamu istimewa puncak yang datang lewat tiga pintu berbeda.',
+        },
+        {
+          objek: 'papanMisiRentang', judul: 'Misi Keempat dan Kelima',
+          teks: 'Papan keempat memakai dua kelompok nilai: rentang dari tiga sampai sebelas, hitungannya delapan. Papan kelima melempar dua koin bayangan di langit: dua koin sama-sama gambar hanya punya satu jalur dari empat, peluangnya satu per empat. Lima papan menyala penuh, dan gerbang juara berdenyut emas. Puncak menunggu langkah terakhir, yang hanya boleh dilalui siapa pun yang sudah jujur menghitung.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Puncak Ini Punya Nama: Hitung!',
+          teks: 'Malam di puncak Pegunungan Pola menutup perjalanan panjang dengan lima misi yang menyala: enam padanan dari lemari, enam urutan dari podium, enam pasang dari lapangan, rentang delapan dari dua papan, dan satu per empat dari dua koin. Tiga angka enam lewat tiga pintu berbeda membuktikan satu hal, hitungan yang jujur selalu bertemu di tempat yang sama. Hitungan itu hanya alat. Bantu saja. Owalah, ternyata begini toh, puncak tertinggi pun bisa didaki dengan menghitung satu per satu. Mudah, bukan?',
         },
       ],
     },
