@@ -8335,6 +8335,266 @@ window.CERITA = (function () {
         },
       ],
     },
+    'p4-011': {
+      tema: 'halamanBermainSore',
+      npc: { glif: 'dua angka!', ucap: ['Dua angka,', 'satu alamat!'] },
+      stasiun: [
+        {
+          objek: 'petaHalamanKertas', judul: 'Peta Kertas di Meja Taman',
+          teks: 'Sore itu taman bermain kota ramai seperti biasa, dan di meja piknik sudut taman seorang anak sedang menggambar peta halamannya sendiri dengan pensil yang sudah pendek. Ia menandai ayunan, perosotan, dan gundukan pasir besar di tengah, lalu mencoba menunjuk satu titik kecil di dekat gundukan itu pada temannya. Temannya bingung, sebab kata dari ayunan tiga langkah saja bisa berarti banyak tempat sekaligus. Satu angka ternyata belum cukup untuk menunjuk satu titik di peta.',
+        },
+        {
+          objek: 'duaPatokTaman', judul: 'Dua Patok yang Bekerja Bersama',
+          teks: 'Anak itu lalu menancapkan dua patok kecil di dua ujung halaman, satu di dekat ayunan dan satu di dekat perosotan, lalu mencoba lagi caranya menunjuk tempat. Kali ini ia menulis dua angka sekaligus: tiga langkah dari ayunan, dan dua langkah dari perosotan. Tempat itu sekarang tak mungkin tertukar lagi, karena hanya ada satu titik yang berjarak begitu dari kedua patok. Sepasang angka itu bekerja seperti alamat lengkap, dan alamat setengah saja selalu bikin orang tersesat.',
+        },
+        {
+          objek: 'papanTinggiTanah', judul: 'Gundukan yang Tingginya Berlainan',
+          teks: 'Di gundukan pasir itu anak-anak suka mengukur tingginya dengan tongkat bergaris, dan sore itu mereka menemukan sesuatu yang menarik. Titik dua langkah dari ayunan dan tiga langkah dari perosotan tingginya tujuh ruas, sementara titik tiga langkah dari ayunan dan dua langkah dari perosotan tingginya delapan ruas. Dua angkanya sama saja, hanya ditukar tempatnya, tapi tingginya berbeda. Ternyata pada sepasang angka, urutan itu punya arti, dan tanah halaman tahu artinya dengan baik.',
+        },
+        {
+          objek: 'kartuAlamatDuaAngka', judul: 'Kartu Alamat Sepasang Angka',
+          teks: 'Menjelang maghrib anak itu membuat kartu-kartu kecil berisi tantangan untuk teman-temannya, dan tiap kartu menuliskan sepasang angka seperti alamat rahasia. Siapa yang bisa berdiri tepat di alamat itu, ia berhak menendang bola pertama di pertandingan sore nanti. Semua cepat paham, sebab mereka sadar cara ini sama seperti alamat rumah: ada nama jalan dan ada nomornya, dan keduanya harus lengkap. Sepasang angka kecil ternyata cukup untuk memanggil siapa pun datang ke titik yang tepat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Titik Ternyata Beralamat Dua Angka!',
+          teks: 'Malam itu lampu taman menyala, dan peta kertas buatan anak itu tetap terbuka di meja piknik menunggu main besok. Pelajaran sore itu sederhana: satu angka menunjuk banyak tempat, tapi sepasang angka menunjuk tepat satu titik, dan menukar urutannya bisa mengubah tempat itu sama sekali. Owalah, ternyata begini toh cara menunjuk titik, cukup beri dia alamat dua angka yang rapi. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-012': {
+      tema: 'kantorPetaSiang',
+      npc: { glif: 'segaris!', ucap: ['Setinggi sama,', 'segaris!'] },
+      stasiun: [
+        {
+          objek: 'petaKonturGantung', judul: 'Peta Bukit yang Penuh Garis',
+          teks: 'Pojok kantor pos kota menyimpan peta besar bukit di seberang sungai, dan peta itu dipenuhi garis-garis melingkar yang sering membuat orang baru heran. Para kurir bilang garis-garis itu bukan coretan hiasan, melainkan catatan ketinggian yang rapi. Semua tempat yang dilewati satu garis punya tinggi yang sama persis, seperti jalan setapak yang tak naik dan tak turun. Yang berdiri di garis yang sama itu sejajar, walau jaraknya jauh dan tak pernah bertemu.',
+        },
+        {
+          objek: 'patokSetinggiSepuluh', judul: 'Patok yang Berjalan Mengelilingi',
+          teks: 'Suatu siang petugas muda mencoba membuktikan kalimat itu dengan patok penanda bernomor sepuluh, dan ia berjalan pelan mengikuti garis yang memuat nomor itu di peta. Naik sedikit, turun sedikit, menyusuri lembah kecil, lalu memutar sisi bukit, dan tak kira-kira tingginya tetap sepuluh dari dasar. Saat kakinya kembali ke titik awal, ia tertawa lega, sebab garis itu ternyata melingkar tertutup. Tempat setinggi sama memang suka berkumpul dalam satu garis yang rapi.',
+        },
+        {
+          objek: 'garisRapatRenggang', judul: 'Garis Rapat dan Garis Renggang',
+          teks: 'Sisi barat bukit punya garis-garis yang berdempetan seperti sisir rapat, sementara sisi timur garisnya berjauhan santai, dan perbedaan itu ternyata punya makna besar. Di sisi rapat, dua garis bertetangga hanya berjarak beberapa langkah padahal tingginya melonjak, artinya tanahnya curam sekali. Di sisi renggang, jarak garisnya jauh untuk kenaikan tinggi yang sama, artinya jalannya landai dan enak dilangkahi. Peta itu jadi bisa dibaca seperti buku, tanpa perlu mendaki dulu untuk tahu.',
+        },
+        {
+          objek: 'jalurLandaiMenepi', judul: 'Jalur Pilihan Kurir Peta',
+          teks: 'Kurir tua yang tiap hari mengantar peta ke kota seberang selalu memilih sisi timur yang garisnya renggang, dan tak ada satu pun kiriman yang terlambat karena lelah. Pendaki muda yang ingin menantang dirinya justru memilih sisi barat yang rapat, dan pulang dengan napas tersengal namun hati senang. Satu peta yang sama melayani dua orang dengan keinginan berbeda, cukup dengan membaca kepadatan garisnya. Peta yang baik tak pernah memaksa, ia hanya menyampaikan keadaan tanah dengan jujur.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Garis-Garis Peta Ternyata Berbicara!',
+          teks: 'Sore itu peta bukit digulung kembali ke raknya, dan rahasia garis-garisnya sudah dipegang oleh siapa pun yang mau membacanya. Pelajarannya ringkas: satu garis menyatukan tempat setinggi sama, garis rapat menandai curam, dan garis renggang menandai landai. Owalah, ternyata begini toh cara membaca bukit dari kertas, cukup ikuti bisikan garisnya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-013': {
+      tema: 'bukitPasirPagi',
+      npc: { glif: 'satu arah!', ucap: ['Bekukan arahnya,', 'ukur jalannya!'] },
+      stasiun: [
+        {
+          objek: 'gundukanPasirPagi', judul: 'Bukit Pasir Pagi Hari',
+          teks: 'Pagi di taman kota, embun masih menggantung di rumput, dan bukit pasir yang dibuat petugas kebersihan sudah menunggu anak-anak datang. Di lerengnya terpasang dua jalan papan kecil yang saling menyiku, satu menuju arah timur dan satu menuju arah utara. Seorang anak berdiri tepat di pertemuan kedua papan itu, merasakan kakinya berada di satu titik yang sama, tapi matanya melihat dua jalan berbeda. Dari satu titik saja, tanah ternyata bisa punya dua cerita.',
+        },
+        {
+          objek: 'tanggaUtaraBukit', judul: 'Membekukan Satu Arah',
+          teks: 'Untuk mengukur kecuraman jalan timur, anak itu menyusurinya sambil menjaga kakinya tetap di papan timur saja, seolah jalan utara dibekukan tak boleh disentuh. Setiap langkah ke timur ia catat naik atau turun berapa ruas, dan angkanya rapi terkumpul satu baris. Lalu ia turun kembali dan melakukan hal yang sama di papan utara, kali ini timurnya yang dibekukan. Mengukur satu arah sambil membiarkan arah lain diam itulah cara paling jujur mengenali lereng.',
+        },
+        {
+          objek: 'papanLajuDuaArah', judul: 'Dua Papan Laju yang Berbeda',
+          teks: 'Di pertemuan papan itu tertempel dua angka hasil pengukuran pagi itu, dan keduanya jauh berbeda. Menyusuri timur, tanah turun dua belas ruas untuk setiap langkah, sedangkan menyusuri utara turunnya hanya empat ruas. Bukitnya sama, titiknya sama, tapi lajunya berbeda karena arah jalannya berbeda. Dua laju seperti itu oleh para pengukur tanah diberi nama turunan searah, dan keduanya hidup berdampingan di satu titik yang sama.',
+        },
+        {
+          objek: 'benderaArahBeku', judul: 'Titik yang Timurnya Datar',
+          teks: 'Di sisi lain bukit ada titik aneh yang bikin anak itu tersenyum lebar saat mengukurnya. Menyusuri timur dari titik itu, tanah datar sempurna, tak naik dan tak turun sedikit pun, seperti sedang berjalan di meja. Tapi begitu ia memutar ke jalan utara, tanah langsung turun dengan rajin. Datar di satu arah ternyata tak berarti datar di semua arah. Hitungan itu hanya alat. Bantu saja, yang menentukan tetap kaki yang benar-benar menyusuri jalannya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Titik Ternyata Punya Banyak Laju!',
+          teks: 'Siang itu anak-anak pulang dengan dua angka di setiap saku, dan bukit pasir tetap tenang seperti tak menyimpan rahasia. Pelajaran pagi itu tercatat rapi: dari satu titik, tiap arah punya laju naik turunnya sendiri, dan mengukurnya artinya membekukan arah lain sejenak. Owalah, ternyata begini toh membaca bukit dari satu titik, cukup tanyakan arah mana yang mau disusuri. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-014': {
+      tema: 'lerengBatuMalam',
+      npc: { glif: 'tercuram!', ucap: ['Ikuti panahnya,', 'paling curam!'] },
+      stasiun: [
+        {
+          objek: 'lampuJalanLereng', judul: 'Lereng Batu di Bawah Lampu',
+          teks: 'Malam itu lereng batu di sisi kota hanya disinari lampu jalan yang berdiri rajin, dan cahayanya jatuh membentuk lingkaran kuning di permukaan batu. Lingkaran cahaya itu menampakkan sesuatu yang siang sulit dilihat: permukaan lereng punya raut yang berbeda di tiap arah, ada yang landai seperti tangga tua, ada yang menyudut tajam. Sepeda tua milik penjaga taman terparkir di tepi, dan sebuah bola kecil tergeletak dekat tiang lampu. Malam yang tenang seperti ini cocok untuk mencoba satu keajaiban kecil.',
+        },
+        {
+          objek: 'bolaGulungTurun', judul: 'Bola yang Selalu Tahu Jalan',
+          teks: 'Penjaga taman melepas bola kecil itu tanpa dorongan sedikit pun, dan bola itu mulai menggelinding perlahan di antara lingkaran cahaya. Arah yang dipilihnya bukan sembarangan: ia tidak pernah memilih jalan yang landai, ia selalu menyusuri arah di mana tanah paling cepat merendah. Dua kali dicoba, dua kali arahnya sama persis, seperti mengikuti undangan yang tak terlihat. Bola memang tak bisa berpikir, tapi lereng berbicara kepadanya lewat kemiringan, dan bola cukup patuh.',
+        },
+        {
+          objek: 'panahTercuramPapan', judul: 'Panah Rahasia di Papan',
+          teks: 'Di tepi lereng berdiri papan petunjuk tua, dan penjaga taman menggambarnya ulang dengan kapur sambil menjelaskan ke teman-temannya. Kecuraman ke arah timur dan kecuraman ke arah utara bisa digabung menjadi satu panah tunggal, dan panah gabungan itu menunjuk arah yang paling curam dari semuanya. Menghadap ke balik panah, lereng turun paling tajam, itulah jalur pilihan si bola. Panah kecil itu punya nama besar di kalangan pengukur tanah, mereka menyebutnya gradien, si pembisik arah paling curam.',
+        },
+        {
+          objek: 'katakMencariKolam', judul: 'Katak yang Ikut Panah',
+          teks: 'Di bawah lampu itu juga seekor katak kecil sedang berangkat dari rerumputan menuju kolam hujan di dasar lereng, dan langkah-lompatannya menarik untuk ditonton. Setiap kali mendarat, ia berhenti sejenak, lalu melompat lagi ke arah yang sama seperti yang dipilih bola tadi. Tak ada yang mengajarinya peta atau panah, tapi lereng berbicara sama padanya seperti berbicara pada bola. Sampai akhirnya cipratan air kecil terdengar, dan katak itu tiba di rumahnya dengan arah yang tak pernah salah.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lereng Ternyata Punya Panah Rahasia!',
+          teks: 'Lampu jalan tetap menyala sampai dini hari, dan lereng batu kembali diam menyimpan panah rahasianya. Pelajaran malam itu sesederhana bunyi roda bola: gabungkan kecuraman tiap arah, dapat satu panah, dan panah itu menunjuk jalan paling curam. Owalah, ternyata begini toh bola dan katak tak pernah tersesat, mereka cukup ikut panah lereng. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-015': {
+      tema: 'tamanBukitSore',
+      npc: { glif: 'pelana!', ucap: ['Uji empat arah,', 'baru menilai!'] },
+      stasiun: [
+        {
+          objek: 'benderaPuncakSemuaTurun', judul: 'Bendera di Puncak',
+          teks: 'Sore di taman bukit kota, dan di puncaknya berkibar bendera merah yang dipasang klub pendaki mini minggu lalu. Berdiri tepat di bawah bendera itu terasa istimewa, sebab langkah ke arah mana pun akan selalu menuruni tanah. Ke timur turun, ke barat turun, ke utara dan selatan juga turun, semua arah sepakat. Tempat yang disepakati turun dari segala arah itulah yang pantas disebut puncak, dan bendera itu berdiri di tempat yang tepat.',
+        },
+        {
+          objek: 'dasarLembahSemuaNaik', judul: 'Dasar Lembah yang Rendah Hati',
+          teks: 'Di sisi lain taman ada lembah kecil yang air hujan suka berkumpul di sana, dan dasarnya ternyata punya watak yang kebalikan puncak. Siapa pun yang berdiri di titik terdalamnya lalu melangkah, kaki akan selalu menaiki tanah, ke arah mana pun langkah itu diarahkan. Semua arah sepakat naik, dan karena itu lembah pantas disebut dasar. Air hujan paling paham sifat ini, sebab itulah alasan mereka selalu berakhir di tempat yang sama.',
+        },
+        {
+          objek: 'pelanaTanahKuda', judul: 'Tanah Berbentuk Pelana',
+          teks: 'Tapi taman ini menyimpan satu tanah aneh di antara puncak dan lembah, dan tanah itu selalu memperdaya pendaki baru. Dari satu titiknya, melangkah ke timur tanah naik dengan rajin, tapi melangkah ke utara tanah justru turun dengan lancang. Dua arah bertengkar di satu titik yang sama, satu mengajak naik satu memaksa turun. Bentuk tanah seperti itu mirip pelana di punggung kuda, naik ke dua sisinya dan turun ke dua sisinya yang lain, dan pendaki tua menyebutnya tanah pelana.',
+        },
+        {
+          objek: 'papanTigaCekArah', judul: 'Cara Kota Mengenali Tanah',
+          teks: 'Sebelum memasang bendera di tempat baru, klub pendaki mini selalu menjalankan ujian kecil yang tertulis di papan aturan mereka. Uji langkah ke empat arah mata angin: bila semua turun, pasang bendera puncak; bila semua naik, catat sebagai dasar lembah; tapi bila hasilnya campur, tulislah jujur bahwa itu tanah pelana dan jangan buru-buru berdiri di atasnya. Aturan kecil itu sudah dua kali menyelamatkan mereka dari puncak palsu. Tanah tak pernah bohong, yang perlu jujur hanyalah cara kita mengujinya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tanah Ternyata Punya Tiga Watak!',
+          teks: 'Matahari turun di balik puncak taman, dan bendera merah itu mengecil siluetnya sambil melambai pada lembah dan pelananya. Pelajaran sore itu rapi seperti papan aturan klub: semua turun berarti puncak, semua naik berarti dasar, dan campur naik-turun berarti pelana yang menipu. Owalah, ternyata begini toh mengenali tanah, cukup uji langkahmu ke beberapa arah. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-016': {
+      tema: 'kolamKotaPagi',
+      npc: { glif: 'kotak!', ucap: ['Potong kotak,', 'jumlahkan!'] },
+      stasiun: [
+        {
+          objek: 'kolamKacaTamanKota', judul: 'Kolam yang Tak Bisa Ditimba',
+          teks: 'Pagi di taman kota, kolam persegi tua itu mengemaskan airnya sampai memantul seperti kaca, dan dua petugas kebersihan berdiri di tepinya sambil menggaruk kepala. Mereka perlu melapor banyaknya air di kolam itu, tapi menimba satu per satu sampai kering jelas bukan pekerjaan yang masuk akal. Airnya jernih, dasarnya tampak, tapi berapa persis isi kolam itu tak seorang pun berani menjawab. Pertanyaan sederhana itu menunggu ide sederhana juga untuk menjawabnya.',
+        },
+        {
+          objek: 'jaringKotakPermukaan', judul: 'Jaring Tali di Atas Air',
+          teks: 'Ide itu datang dari anak penjaga kolam yang sedang membaca buku peta di pinggir taman: menggantungkan jaring tali di atas kolam sehingga permukaan air terbagi rapi jadi kotak-kotak kecil. Tiap kotak sekarang punya wilayahnya sendiri, dan wilayahnya sendiri punya kedalaman airnya sendiri. Kotak dekat keran bocor terlihat lebih dalam, kotak di sisi tepi dangkal kebiruan. Kolam yang tadinya satu gumpalan besar kini jadi kumpulan kotak kecil yang bisa diajak berbicara satu per satu.',
+        },
+        {
+          objek: 'kolomAirSatuKotak', judul: 'Satu Kolom Kecil Berhitung',
+          teks: 'Untuk satu kotak kecil, hitungannya ternyata semudah menghitung kue: luas kotak dikalikan tinggi air di kotak itu. Kotak pertama luasnya satu petak dan airnya sedalam dua ruas, maka kolom air di bawahnya berisi dua satuan air, dan angka itu dicatat di papan kecil. Kotak tetangganya kedalamannya tiga ruas, jadi isinya tiga. Satu kolom demi satu kolom diminta jujur menyebut isinya, dan papan kecil itu perlahan penuh angka yang rapi.',
+        },
+        {
+          objek: 'papanJumlahSemuaKolom', judul: 'Jumlah Semua Kolom Kecil',
+          teks: 'Terakhir, semua angka di papan kecil itu dijumlahkan, dan hasilnya menjadi laporan banyaknya air tanpa satu timba pun yang diangkat. Petugas mencoba memperhalus jaringnya menjadi kotak yang makin kecil, dan jumlahnya makin dekat ke angka yang sama dari arah yang lebih tepat. Makin halus kotaknya, makin halus pula jawabannya, begitulah kota itu belajar menghitung air. Hitungan itu hanya alat. Bantu saja, yang hebat tetap idenya membagi kolam jadi kotak.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kolam Ternyata Bisa Dihitung dari Kotak!',
+          teks: 'Jaring tali itu sorenya digulung kembali, dan laporan air kolam sudah tertempel rapi di papan pengumuman taman. Pelajaran pagi itu tercatat: bagilah permukaan jadi kotak, kalikan luas dengan tinggi airnya, lalu jumlahkan semua kotak, dan makin halus kotaknya makin tepat hasilnya. Owalah, ternyata begini toh menghitung kolam tanpa menimbanya, cukup minta tolong kotak-kotak kecil. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-017': {
+      tema: 'bengkelSepedaSore',
+      npc: { glif: 'estafet!', ucap: ['Laju menumpang,', 'dikalikan!'] },
+      stasiun: [
+        {
+          objek: 'sepedaDiDudukan', judul: 'Sepeda di Dudukan Bengkel',
+          teks: 'Sore itu bengkel sepeda sudut kota masih terang, dan sebuah sepeda merah tergantung di dudukan perbaikan dengan roda belakangnya melayang bebas di udara. Pemiliknya menunggu sambil menyeruput teh, sebab tuan bengkel sedang menjelaskan sesuatu yang katanya lebih menarik dari sekadar mengencangkan baut. Tangannya memutar pedal pelan-pelan, dan roda belakang ikut berputar seperti mendengar perintah dari jauh. Sepeda yang diam itu ternyata sedang menceritakan rantai perjalanan laju.',
+        },
+        {
+          objek: 'gigiBesarGigiKecil', judul: 'Dua Gigi yang Bertukar Tenaga',
+          teks: 'Tuan bengkel menunjuk dua roda gigi yang dihubungkan rantai hitam: gigi depan besar dengan empat puluh delapan lubang, dan gigi belakang kecil dengan enam belas lubang. Saat pedal menyelesaikan satu putaran penuh, rantai menyeret gigi belakang berganti tiga putaran penuh, sebab empat puluh delapan dibagi enam belas sama dengan tiga. Tenaga itu berpindah tanpa tersendat, dari kaki ke gigi besar, lalu lewat rantai ke gigi kecil. Gigi besar menukar tenaga jadi putaran lebih banyak, itulah rahasia sepeda.',
+        },
+        {
+          objek: 'pedalBerputarRantai', judul: 'Laju yang Berpindah Batang',
+          teks: 'Kaki pengendara yang rajin mengayun enam puluh putaran setiap menit, dan angka itu lalu berpindah batang demi batang seperti estafet. Roda belakang menerima enam puluh dikali tiga, jadi seratus delapan puluh putaran setiap menit, dan roda yang kelilingnya dua meter menyapu jalan tiga ratus enam puluh meter setiap menit. Tiga angka laju itu cukup dikalikan berurutan, dan jarak satu menit langsung jadi. Laju di sepeda tidak pernah melompat, ia menumpang dari pedal ke roda lewat rantai.',
+        },
+        {
+          objek: 'papanJarakSejam', judul: 'Ganti Satu Gigi, Semua Berubah',
+          teks: 'Untuk membuktikan rantai itu rapuh pada satu gigi saja, tuan bengkel memasang gigi belakang yang lebih besar, dua puluh empat lubang, lalu menghitung ulang di papan kapurnya. Empat puluh delapan dibagi dua puluh empat hanya dua, jadi roda belakang tinggal seratus dua puluh putaran per menit, dan jaraknya jatuh jadi dua ratus empat puluh meter. Satu gigi diganti, seluruh angka di ujung ikut berubah. Hitungan itu hanya alat. Bantu saja, yang menentukan tetap rantai yang benar-benar menghubungkan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Laju Ternyata Menumpang Berantai!',
+          teks: 'Malam itu sepeda merah turun dari dudukannya dengan gigi baru, dan pemiliknya mengayuh pulang sambil tersenyum menghitung dalam hati. Pelajaran bengkel itu ringkas: laju berpindah lewat rantai, dan cukup kalikan tiap mata rantai berurutan untuk tahu hasil di ujungnya. Owalah, ternyata begini toh sepeda menghitung jalan, pedal menggulung gigi, gigi menggulung roda. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-018': {
+      tema: 'padangAnginSiang',
+      npc: { glif: 'pusaran!', ucap: ['Balon uji sebar,', 'kincir uji putar!'] },
+      stasiun: [
+        {
+          objek: 'rempahPanahAngin', judul: 'Padang yang Penuh Panah',
+          teks: 'Siang di padang bunga tepi kota, dan para tukang kebun menancapkan rempah kecil di mana-mana, masing-masing memegang panah kertas yang menunjuk arah tiupan angin saat itu. Dari jauh padang itu tampak seperti ditenun dari ribuan panah kecil, tiap titik punya penunjuk arahnya sendiri. Angin tak bisa dilihat, tapi padang panah ini membuatnya terbaca seperti peta. Petani muda berdiri di tengahnya dan menyadari satu hal: watak angin di satu tempat tidak selalu sama dengan wataknya di tempat lain.',
+        },
+        {
+          objek: 'balonTerbangMenjauh', judul: 'Balon yang Dilepas di Tengah',
+          teks: 'Untuk menguji satu tempat, petani muda melepas balon kecil di tengah padang, dan panah-panah di sekelilingnya segera bicara. Semua panah di sekitar balon itu menghadap menjauh dari pusat, utara mengarah ke utara jauh, timur mengarah ke timur jauh, seperti pintu yang semua daunnya membuka keluar. Balon pun terangkat dan melayang makin jauh dari tempat ia dilepas. Tempat dengan angin yang suka menyebar keluar seperti itu mudah dikenali: lepas satu balon, dan ia tak pernah kembali.',
+        },
+        {
+          objek: 'kincirPusaranBunga', judul: 'Kincir yang Berputar Sendiri',
+          teks: 'Di sudut lain padang ada tempat yang panah-panahnya berperilaku lain, dan petani muda menancapkan kincir bunga kecil di sana untuk mengujinya. Panah di sisi kanan titik itu meniup ke arah yang berbeda dengan panah di sisi atasnya, dan beda arah itulah yang membuat kincir berputar pelan tanpa henti. Tak ada angin yang mendorong sesuatu menjauh dari sini, tapi ada putaran yang jelas terasa. Tempat semacam ini pantas disebut pusaran, rumah paling nyaman bagi kincir dan paling susah bagi balon.',
+        },
+        {
+          objek: 'papanDuaUjiAngin', judul: 'Dua Uji Kecil untuk Angin',
+          teks: 'Petani muda lalu menulis dua aturan uji di papan kecil tepi padang, dan aturannya cuma dua baris. Lepaskan balon: bila ia terdorong keluar meninggalkan tempatnya, angin di sana wataknya menyebar. Pasang kincir: bila ia berputar sendiri, angin di sana wataknya berputar. Dua alat murah itu cukup untuk membaca dua watak angin tanpa alat mahal sedikit pun. Padang panah, satu balon, satu kincir, dan angin yang tak terlihat jadi punya namanya masing-masing.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Angin Ternyata Punya Dua Watak!',
+          teks: 'Sore itu rempah-rempan tetap menunjuk sesuai keinginan angin, dan papan uji kecil itu menunggu petani yang datang esok. Pelajaran padang itu sederhana: di satu tempat angin bisa suka menyebar keluar, di tempat lain ia bisa suka berputar, dan dua alat kecil cukup membedakannya. Owalah, ternyata begini toh membaca angin, cukup lepas balon dan pasang kincir. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-019': {
+      tema: 'kebunPagarPagi',
+      npc: { glif: 'pagar!', ucap: ['Cek syaratnya,', 'juara bisa pindah!'] },
+      stasiun: [
+        {
+          objek: 'kebunPersegiKelilingDuaEmpat', judul: 'Pagar 24 Langkah',
+          teks: 'Pagi itu kepala kebun kota mengumumkan tantangan yang membuat para penjaga kebun berdebat sepanjang jalan: siapa pun yang bisa membuat kebun terluas dari pagar sepanjang dua puluh empat langkah, ia boleh menanam bunga apa pun yang ia mau. Yang pertama membangun kebun delapan langkah kali empat, dan luasnya tiga puluh dua petak. Yang lain buru-buru memanjang kebunnya sampai sepuluh kali dua, tapi luasnya malah tinggal dua puluh. Pagar yang sama panjang, hasilnya jauh berbeda.',
+        },
+        {
+          objek: 'bandingKebunPanjang', judul: 'Panjang Kalah dari Persegi',
+          teks: 'Para penjaga kebun lalu menyusun semua percobaan mereka di papan kapur besar, dan polanya makin jelas dari baris ke baris. Kebun yang sisi-sisinya makin jomplang selalu kalah luas, sebab panjang yang molor itu memboros pagar untuk keuntungan luas yang kecil. Di ujung daftar, kebun enam langkah kali enam langkah berdiri paling tinggi dengan tiga puluh enam petak, dan bentuknya persegi sempurna. Sisi yang seimbang ternyata paling pandai memakai pagar, itulah juara tanpa sungai.',
+        },
+        {
+          objek: 'kebunTepiSungaiTigaSisi', judul: 'Pindah ke Tepi Sungai',
+          teks: 'Tahun berikutnya tantangan itu diulang, tapi kali ini lokasinya di tepi sungai, dan airnya setuju menjadi pagar gratis di satu sisi kebun. Dua puluh empat langkah pagar kini cukup dipakai untuk tiga sisi saja, dan perhitungan lamanya tak berlaku lagi. Kebun dua belas langkah kali enam langkah tampil dengan luas tujuh puluh dua petak, jauh mengungguli semua percobaan lama yang hanya tiga sisi. Cukup satu syarat berubah, dan juara lamanya langsung digulingkan.',
+        },
+        {
+          objek: 'papanPersegiJuara', judul: 'Syarat Mengubah Juara',
+          teks: 'Di papan kebun kini tertempel dua piala kertas yang menampilkan dua juara berbeda, dan pengunjung selalu berhenti membacanya dua kali. Tanpa sungai, juaranya persegi enam kali enam dengan tiga puluh enam petak; dengan sungai sebagai pagar gratis, juaranya dua belas kali enam dengan tujuh puluh dua petak. Tak ada yang curang di antara keduanya, hanya syarat batasnya saja yang berpindah. Hitungan itu hanya alat. Bantu saja, yang mengubah jawaban adalah bentuk pagar yang boleh dipakai.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Juara Luas Ternyata Ikut Pindah Pagar!',
+          teks: 'Bunga-bunga tumbuh paling ramai di kebun tepi sungai itu, dan dua piala kertas tetap bergantian dipuji tiap pagi. Pelajaran dua tantangan itu rapi: dengan pagar penuh, persegi juara; begitu satu sisi dibayar gratis oleh sungai, jawaban terbaik melar dan memanjang. Owalah, ternyata begini toh mencari terluas, cek dulu syarat batasnya baru bangun pagarmu. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-020': {
+      tema: 'jalanBukitPagi',
+      npc: { glif: 'susur!', ucap: ['Puncak sama,', 'lelah beda!'] },
+      stasiun: [
+        {
+          objek: 'duaJalanSatuPuncak', judul: 'Dua Jalan ke Puncak yang Sama',
+          teks: 'Pagi itu dua kurir paket berdiri di kaki bukit kota dengan karung yang sama beratnya, dan di depan mereka membentang dua jalan menuju puncak yang sama. Jalan pertama lurus dan pendek, naik tegak seperti tangga raksasa, sedangkan jalan kedua berkelok santai mengitari lereng jauh lebih panjang. Kurir yang satu suka jalan cepat, yang lain suka jalan berselang-seling. Sebelum berangkat, keduanya bertaruh satu hal sederhana: mana yang membuat mereka lebih lelah melawan tanjakan.',
+        },
+        {
+          objek: 'karungKurirBerat', judul: 'Kurir yang Menghitung Lelah',
+          teks: 'Kurir pertama naik lewat jalan lurus dan sampai di puncak dengan napas tersengal, sementara kurir kedua datang beberapa saat kemudian lewat jalan berkelok, dan yang mengejutkan: lelah keduanya nyaris sama persis. Tanjakan memang tak pernah peduli jalannya seberapa panjang, ia hanya bertanya naik berapa ruas dari kaki ke puncak. Naiknya sama sepuluh ruas, maka tenaganya yang habis untuk naik juga sama. Gravitasi itu jujur, ia menghitung tinggi awal dan tinggi akhir, bukan kelokan yang dilewati.',
+        },
+        {
+          objek: 'anginMenyilangJalan', judul: 'Angin yang Menyilang Pagi',
+          teks: 'Tapi hari itu ada tamu ketiga di bukit: angin pagi yang meniup menyilang dari timur ke barat, dan dia tidak sejujur gravitasi. Di jalan lurus, angin menyilang sekali lewat saja, kasih dorongan kecil yang sama di sepanjang jalan pendek. Di jalan berkelok, kurir kedua berkali-kali membelokkan badan ke arah angin, dan tiap kelokan itu menambah letihnya sendiri. Lelahnya dua kurir kini jauh berbeda, padahal naiknya tetap sama sepuluh ruas.',
+        },
+        {
+          objek: 'papanKerjaSamaTinggi', judul: 'Papan Kecil di Puncak',
+          teks: 'Di puncak mereka berdua membetulkan papan tua yang sudah lama lapuk, dan menuliskan dua baris catatan untuk pendaki berikutnya. Baris pertama tentang tanjakan: naik sepuluh ruas, lelahnya sama, jalan mana pun yang dipilih. Baris kedua tentang angin: lelahnya ikut menurut jalan, makin banyak kelokan menyilang, makin berat. Dua baris itu sering dikutip anak-anak yang berkemah, sebab keduanya mengajarkan kapan pilihan jalan penting dan kapan tidak.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Lelah Ternyata Ada yang Setia dan Berpindah!',
+          teks: 'Matahari makin tinggi ketika dua kurir itu turun lewat jalan yang berbeda lagi, kali ini hanya untuk iseng membuktikan papan mereka. Pelajaran bukit itu tergantung rapi di puncak: melawan tanjakan, lelah hanya peduli naik berapa; melawan angin yang menyilang, lelah ikut menghitung jalannya. Owalah, ternyata begini toh memilih jalan, lihat dulu lawanmu yang mana, gravitasi atau angin. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   function untuk(topik) {
