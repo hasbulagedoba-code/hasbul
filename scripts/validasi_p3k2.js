@@ -86,7 +86,7 @@ tes('pintu3-data: 100 teaser', teaserP3.length === 100);
 tes('teaser pintu3 bebas kata terlarang', !TERLARANG.some(k => teaserP3.join(' ').toLowerCase().includes(k)));
 
 /* ---------- mesin pelajaran: resolusi P3 ---------- */
-tes('pelajaran-main.js: apakahP3 terpasang', pmain.includes("const apakahP3 = idAwal.indexOf('p3-') === 0 && window.P3"));
+tes('pelajaran-main.js: apakahP3 terpasang', pmain.includes("!apakahP4 && idAwal.indexOf('p3-') === 0 && window.P3"));
 tes('pelajaran-main.js: DUNIA_ASAL pegunungan-pola-dunia.html', pmain.includes("'pegunungan-pola-dunia.html'"));
 tes('pelajaran-main.js: NAMA_PINTU Pintu 3', pmain.includes("apakahP3 ? 'Pintu 3'"));
 

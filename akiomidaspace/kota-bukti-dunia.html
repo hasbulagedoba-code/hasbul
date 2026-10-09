@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="theme-color" content="#0d1424">
-<title>Pintu 3 — Pegunungan Pola: 100 Judul | Perpustakaan Matematika</title>
-<meta name="description" content="Dunia Pintu 3 Perpustakaan Matematika: 100 judul terpampang di 10 penjuru gunung pixel. Jelajahi dengan menggerakkan Akio, pahami tiap judul lewat pengantar singkat, lalu lanjut ke bahasan lengkap bila penasaran. Tulisan besar ramah mata minus.">
-<meta property="og:title" content="Pintu 3 — Pegunungan Pola: 100 Judul">
-<meta property="og:description" content="10 penjuru, 100 judul: dari Fungsi & Grafik sampai Kombinatorika & Data. Jelajahi dunia hidup, pilih judul yang mau dipahami.">
+<title>Pintu 4 — Kota Bukti: 110 Judul | Perpustakaan Matematika</title>
+<meta name="description" content="Dunia Pintu 4 Perpustakaan Matematika: 110 judul terpampang di 11 penjuru kota pixel. Jelajahi dengan menggerakkan Akio, pahami tiap judul lewat pengantar singkat, lalu lanjut ke bahasan lengkap bila penasaran. Tulisan besar ramah mata minus.">
+<meta property="og:title" content="Pintu 4 — Kota Bukti: 110 Judul">
+<meta property="og:description" content="11 penjuru, 110 judul: dari Logika & Pembuktian sampai Zakat, Waris & Muamalah. Jelajahi dunia hidup, pilih judul yang mau dipahami.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,6 @@
     background-size:24px 24px;
   }
 
-  /* ---------- panggung ---------- */
   #panggung {
     position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
     gap:12px; padding:calc(12px + env(safe-area-inset-top)) 10px calc(12px + env(safe-area-inset-bottom));
@@ -45,7 +44,6 @@
     flex:0 0 auto;
   }
 
-  /* ---------- A- / A+ + tombol DUNIA ---------- */
   #akses {
     position:fixed; top:calc(12px + env(safe-area-inset-top)); right:14px; z-index:35;
     display:flex; gap:7px;
@@ -62,7 +60,6 @@
   #akses button:disabled { opacity:.4; cursor:default; }
   #btnDunia { font-size:calc(12px * var(--skala)); letter-spacing:1px; }
 
-  /* ---------- tombol daftar judul (desktop/landscape) ---------- */
   #btnDaftar {
     position:fixed; top:calc(70px + env(safe-area-inset-top)); right:14px; z-index:35;
     font-family:'Press Start 2P',monospace; font-size:calc(9px * var(--skala));
@@ -73,7 +70,6 @@
   #btnDaftar.tahan { transform:translateY(3px); border-bottom-width:2px; box-shadow:0 1px 0 #0a0f1c; background:#28365c; }
   @media (orientation:portrait) { body.coarse #btnDaftar { display:none; } }
 
-  /* ---------- DAFTAR JUDUL: huruf besar, ramah mata minus ---------- */
   #daftar {
     display:flex; flex-direction:column; gap:7px;
     background:#141d33; border:3px solid #2a3757; border-radius:14px;
@@ -136,7 +132,6 @@
   }
   .df-status.siap { color:#0d3a22; background:#5ee89b; }
 
-  /* ---------- tombol aksi besar (MASUK / LIHAT JUDUL / PERGI) ---------- */
   #aksiBtn {
     position:fixed; left:50%; bottom:calc(26px + env(safe-area-inset-bottom)); z-index:32;
     transform:translateX(-50%) translateY(14px); opacity:0; pointer-events:none;
@@ -149,7 +144,6 @@
   #aksiBtn:active { transform:translateX(-50%) translateY(4px); border-bottom-width:2px; }
   body.dlg-buka #aksiBtn { display:none; }
 
-  /* ---------- panel DIALOG judul (huruf besar, mata minus) ---------- */
   #dialog {
     position:fixed; left:0; right:0; bottom:0; z-index:40;
     display:flex; justify-content:center;
@@ -190,7 +184,6 @@
   .dlg-btn.kedua:active { transform:translateY(3px); border-bottom-width:2px; }
   body.coarse.dlg-buka #panggung { padding-bottom:calc(20px + env(safe-area-inset-bottom)); }
 
-  /* ---------- kontrol sentuh ---------- */
   #kontrol {
     position:fixed; left:0; right:0; bottom:0; z-index:30;
     display:none; justify-content:space-between; align-items:flex-end;
@@ -214,7 +207,6 @@
     background:#28365c; border-color:#4d6196;
   }
 
-  /* ---------- intro ---------- */
   .intro {
     position:fixed; inset:0; z-index:50;
     display:flex; flex-direction:column; align-items:center;
@@ -266,8 +258,8 @@
 <body>
 
 <div id="panggung">
-  <canvas id="layar" width="480" height="270" aria-label="Pintu 3 Pegunungan Pola: dunia pixel berisi 10 penjuru dan 100 papan judul matematika"></canvas>
-  <div id="daftar" aria-label="Daftar judul Pintu 3"></div>
+  <canvas id="layar" width="480" height="270" aria-label="Pintu 4 Kota Bukti: dunia pixel berisi 11 penjuru dan 110 papan judul matematika"></canvas>
+  <div id="daftar" aria-label="Daftar judul Pintu 4"></div>
 </div>
 
 <div id="akses" aria-label="Pengaturan ukuran tulisan">
@@ -303,14 +295,14 @@
 <div class="intro" id="intro">
   <div class="panel">
     <div class="akio-css" aria-hidden="true"></div>
-    <h1>PINTU 3 &middot;<br>PEGUNUNGAN POLA</h1>
-    <button id="btnMasuk" type="button">MASUK GUNUNG</button>
+    <h1>PINTU 4 &middot;<br>KOTA BUKTI</h1>
+    <button id="btnMasuk" type="button">MASUK KOTA</button>
   </div>
 </div>
 
-<script src="js/pintu3-data.js?v=49"></script>
+<script src="js/pintu4-data.js?v=49"></script>
 <script src="js/kamp-scene.js?v=49"></script>
-<script src="js/pintu3-scene.js?v=49"></script>
-<script src="js/pintu3-main.js?v=49"></script>
+<script src="js/pintu4-scene.js?v=49"></script>
+<script src="js/pintu4-main.js?v=49"></script>
 </body>
 </html>

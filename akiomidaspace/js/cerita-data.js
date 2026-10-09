@@ -8075,6 +8075,266 @@ window.CERITA = (function () {
         },
       ],
     },
+    'p4-001': {
+      tema: 'arsipSuratPagi',
+      npc: { glif: 'pilah!', ucap: ['Pilah suratnya,', 'dengan jujur!'] },
+      stasiun: [
+        {
+          objek: 'rakSuratKota', judul: 'Rak Surat di Kantor Kota',
+          teks: 'Pagi di kantor pos kota dimulai dengan bunyi kresek pintu, dan tumpukan surat mengalir ke atas meja kayu yang sudah tua. Petugas muda memilah surat itu ke dalam dua rak berbeda, satu di kiri dan satu di kanan, sambil membacanya satu per satu dengan cermat. Ada surat yang isinya kabar biasa seperti kucing tetangga punya empat kaki, dan ada pula surat yang isinya pertanyaan atau ajakan. Rak kiri dan rak kanan ternyata menyimpan dua jenis kalimat yang berbeda watak.',
+        },
+        {
+          objek: 'papanTigaKalimat', judul: 'Papan yang Memilah Tiga Rupa',
+          teks: 'Di dinding kantor tergantung papan kayu dengan tiga saku berwarna, masing-masing diberi nama yang jelas. Saku pertama menampung kalimat berita yang bisa dinilai benar atau salah, saku kedua menampung pertanyaan yang menunggu jawaban, dan saku ketiga menampung perintah yang meminta gerakan. Kalimat yang bisa dinilai benar atau salah itu namanya pernyataan. Pertanyaan dan perintah bukan pernyataan, karena keduanya tak bisa distempel benar atau salah.',
+        },
+        {
+          objek: 'stempelBenarSalah', judul: 'Stempel yang Hanya Bekerja Setengah Waktu',
+          teks: 'Petugas muda mengambil stempel kayu bermuka dua, satu sisi BENAR dan satu sisi lagi SALAH, lalu mencobanya pada surat berita. Surat bertuliskan enam lebih banyak dari empat langsung menerima cap BENAR, dan surat bertuliskan sepuluh lebih kecil dari dua menerima cap SALAH. Tapi saat tiba di surat bertuliskan berapa umurmu, stempel itu diam saja dan tak mau menempel. Stempel jujur itu tahu batas kerjanya: ia hanya bertugas pada pernyataan.',
+        },
+        {
+          objek: 'tumpukanPertanyaan', judul: 'Tumpukan yang Tak Butuh Penilaian',
+          teks: 'Surat pertanyaan dan surat perintah ditaruh di tumpukan terpisah di ujung meja, dan tumpukan itu tidak sama sekali jelek atau salah. Mereka hanya punya tugas lain: pertanyaan menunggu jawaban, dan perintah menunggu tindakan dari tangan yang membaca. Tak ada satu pun dari mereka yang butuh nilai benar atau salah untuk bekerja. Kota itu berjalan tertib karena setiap kalimat tahu tugasnya masing-masing.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kalimat Ternyata Punya Watak Sendiri!',
+          teks: 'Hari itu kantor pos mengajarkan pelajaran yang sederhana namun besar: tidak semua kalimat diciptakan sama, dan hanya pernyataan yang bisa dinilai benar atau salah. Pertanyaan menunggu jawaban, perintah menunggu gerakan, dan pernyataan menunggu stempel. Owalah, ternyata begini toh caranya mengenali kalimat, cukup tanyakan bisakah ia dinilai benar atau salah. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-002': {
+      tema: 'tamanLampuHias',
+      npc: { glif: 'hubung!', ucap: ['Sambung kata', 'dengan tepat!'] },
+      stasiun: [
+        {
+          objek: 'lampuMerahKuning', judul: 'Dua Lampu di Taman Sore',
+          teks: 'Senja turun perlahan di taman kota, dan di gerbang taman menggantung dua lampu hias: satu merah, satu kuning. Lampu-lampu itu bekerja bebas, kadang keduanya menyala bersama, kadang hanya satu yang berani hidup, kadang keduanya beristirahat sekaligus. Anak-anak yang lewat menghitung semua kemungkinan itu di papan kecil: nyala dan nyala, nyala dan mati, mati dan nyala, mati dan mati. Empat kemungkinan saja, tapi kata sambung kecil bisa mengubah semuanya.',
+        },
+        {
+          objek: 'papanTigaKata', judul: 'Tiga Kata Sambung yang Bertugas',
+          teks: 'Di batang gerbang tertempel papan kayu dengan tiga kata besar: DAN, ATAU, dan TIDAK. Kata DAN itu peminta sempurna, ia hanya puas bila dua-duanya menyala sekaligus. Kata ATAU lebih santai, ia puas bila salah satu menyala, dan bila dua-duanya menyala pun tetap boleh. Kata TIDAK adalah pembalik, ia melihat nyala lalu menyebutnya mati, melihat mati lalu menyebutnya nyala.',
+        },
+        {
+          objek: 'gerbangCahayaGanda', judul: 'Dua Gerbang, Dua Sifat',
+          teks: 'Gerbang pertama taman hanya terbuka bila lampu merah DAN lampu kuning menyala bersamaan, dan sore itu gerbang itu kerap menolak pengunjung yang datang terlalu cepat. Gerbang kedua lebih ramai pengunjung, karena ia terbuka bila merah ATAU kuning ada yang menyala, cukup satu saja. Dua gerbang memakai lampu yang sama tapi berperilaku berbeda, semata karena kata sambungnya berbeda. Kata kecil memang bisa mengubah watak seluruh gerbang.',
+        },
+        {
+          objek: 'kotakBalikTidak', judul: 'Kotak Pembalik yang Setia',
+          teks: 'Di sisi taman ada kotak kayu berisi satu tombol dan satu lampu kecil, dan di kotak itu tertulis satu aturan pendek: TIDAK. Bila tombolnya ditekan hingga nyala, lampu kecilnya justru mati; bila tombolnya dilepas hingga mati, lampu kecilnya justru menyala. Pembalik itu bekerja tanpa lelah dan tak pernah salah satu kali pun sepanjang sore. Anak-anak menamainya kotak kebalik, dan kotak itu tak pernah protes.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Tiga Kata Kecil Mengatur Seluruh Taman!',
+          teks: 'Malam itu taman kota menyala rapi, dan di balik keriuhan cahaya ada tiga kata kecil yang bekerja: DAN yang meminta lengkap, ATAU yang cukup sebagian, dan TIDAK yang selalu membalik. Sambungan itu bukan hiasan, melainkan aturan yang menentukan kapan gerbang terbuka dan kapan lampu berhenti. Owalah, ternyata begini toh cara lampu berbicara, cukup kenali dan, atau, dan tidak. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-003': {
+      tema: 'kafeJendelaHujan',
+      npc: { glif: 'janji!', ucap: ['Jika hujan,', 'payung siap!'] },
+      stasiun: [
+        {
+          objek: 'jendelaTetesanKafe', judul: 'Jendela yang Menetes',
+          teks: 'Hujan siang itu membasahi seluruh jalan kota, dan di jendela kafe sudut jalan tetes-tetes air berlomba merayap ke bawah. Di dinding kafe menggantung dua payung tua dengan papan kecil di antaranya, tertulis satu kalimat tegas: jika hujan, payung boleh dipinjam. Pemilik kafe menulisnya sekali saja, tapi kalimat itu bekerja setiap kali langit berubah warna. Sejak pagi tak ada satu pun tetes yang jatuh, dan payung-payung itu diam menunggu.',
+        },
+        {
+          objek: 'papanJanjiPayung', judul: 'Janji yang Bersyarat',
+          teks: 'Kalimat di papan itu punya dua bagian yang menyatu: bagian jika yang menyebut syaratnya, dan bagian maka yang menyebut isi janjinya. Syaratnya hujan, isi janjinya payung boleh dipinjam. Bentuk seperti itu namanya jika-maka, dan kota penuh dengan janji begini: jika malam tiba, lampu jalan menyala; jika dapur berasap, jendela dibuka. Janji bersyarat itu seperti pintu, ia baru berbicara saat syaratnya datang.',
+        },
+        {
+          objek: 'payungTungguGantung', judul: 'Kapan Janji Mulai Diuji',
+          teks: 'Seorang pelanggan menatap payung itu sambil bertanya-tanya, dan pagi yang cerah itu tak bisa dijadikan bukti apa-apa. Saat langit cerah, janji itu belum teruji sama sekali, tak bisa disebut dipenuhi dan tak bisa disebut dipatahkan. Janji baru mulai dinilai saat syaratnya benar-benar datang, yaitu saat hujan turun. Maka tunggu saja, langit kota selalu punya waktunya sendiri.',
+        },
+        {
+          objek: 'jalurBasahPayung', judul: 'Langit Menepati Porsinya',
+          teks: 'Lantai kafe memantul basah, dan payung pertama dicabut dari gantungannya oleh pengunjung yang datang kuyup. Janji di papan itu baru saja dipenuhi di depan semua orang: hujan benar-benar turun, dan payung benar-benar boleh dipinjam. Kalimat jika-maka yang dipenuhi terasa seperti teman yang datang tepat waktu. Kota yang basah itu nyaman, karena janji-janjinya jalan terus tanpa perlu diingatkan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Janji Kecil Punya Pola yang Rapi!',
+          teks: 'Sore itu hujan reda dan kafe kembali tenang, sementara papan kecilnya tetap tergantung setia menunggu hujan berikutnya. Pelajarannya jelas: jika-maka adalah janji bersyarat yang hanya dinilai saat syaratnya datang, dan saat syaratnya belum datang, janji itu diam dengan sopan. Owalah, ternyata begini toh bentuk sebuah janji, pisahkan syaratnya lalu tunggu waktunya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-004': {
+      tema: 'jalananSoreSemprot',
+      npc: { glif: 'plesetan!', ucap: ['Cek kebalikannya', 'jangan buru-buru!'] },
+      stasiun: [
+        {
+          objek: 'petugasSemprot', judul: 'Mobil Semprot di Sore Hari',
+          teks: 'Sore itu matahari mulai merendah dan sebuah mobil semprot petugas kebersihan melaju pelan menyusuri jalan utama kota. Airnya menyembur lebar ke kiri dan ke kanan, meninggalkan jejak basah yang memantulkan cahaya jingga. Langit sepanjang sore itu jernih, tanpa satu awan hujan pun. Jalan jadi basah, tapi bukan karena langit yang bekerja.',
+        },
+        {
+          objek: 'papanDuaArahKalimat', judul: 'Dua Papan yang Tampak Kembar',
+          teks: 'Di tepi jalan berdiri dua papan informasi yang tulisannya nyaris kembar. Papan pertama tertulis: jika hujan, maka jalan basah. Papan kedua tertulis: jika jalan basah, maka hujan. Ramai orang lewat tanpa membaca dua kali, karena sepintas keduanya tampak seperti kalimat yang sama. Padahal arah pernyataannya berbalik, dan arah itulah yang penting.',
+        },
+        {
+          objek: 'jalanBasahBerkilau', judul: 'Hari Ini Semprot, Bukan Hujan',
+          teks: 'Papan pertama aman-aman saja hari itu, sebab tak ada hujan yang datang dan tak ada janji yang teruji. Tapi papan kedua langsung tumbang: jalan benar-benar basah, sementara hujan sama sekali tak turun. Seorang anak menunjuk mobil semprot yang menjauh dan tertawa lepas, papan kedua baru saja dikalahkan oleh satu sore yang basah. Kebalikan sebuah pernyataan memang mirip aslinya, tapi ia tidak otomatis ikut benar.',
+        },
+        {
+          objek: 'sepedaLewatCepat', judul: 'Kesimpulan yang Aman Dipinjam',
+          teks: 'Ada satu kesimpulan yang tetap kuat berdiri di sore itu: kalau jalanan kering, pasti langit tadi tidak hujan. Kesimpulan searah itu aman, karena jalan kering tak mungkin hadir bersama hujan yang benar-benar turun. Jadi dari satu pernyataan, ada kebalikan yang plesetan dan ada balik arah yang tetap setia. Yang membedakannya hanyalah arah alasan, dan arah itu harus dibaca dengan tenang.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Papan Kembar Ternyata Beda Watak!',
+          teks: 'Malam turun di jalan yang perlahan mengering, dan dua papan tadi tetap berdiri berdampingan seperti tak terjadi apa-apa. Pelajarannya tinggal satu: kebalikan sebuah kalimat mirip aslinya, tapi kebenarannya harus dicek sendiri, tak bisa sekadar dititipkan. Owalah, ternyata begini toh cara membaca jika-maka, hati-hati pada arahnya sebelum menyimpulkan. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-005': {
+      tema: 'galeriBurungPagi',
+      npc: { glif: 'satu cukup!', ucap: ['Satu tandingan', 'cukup!'] },
+      stasiun: [
+        {
+          objek: 'rakAngsaPutih', judul: 'Papan yang Percaya Diri',
+          teks: 'Pagi di galeri alam kota, dan di ruang tengah menggantung papan kayu besar dengan tulisan tegas: semua angsa berwarna putih. Di bawahnya barisan angsa berdiri anggun, putih semua, dari ujung kiri sampai ujung kanan. Pengunjung pagi mengangguk-angguk, sebab mata mereka melihat putih di mana-mana. Papan itu tampak tak terbantahkan, dan semuanya berjalan damai selama bertahun-tahun.',
+        },
+        {
+          objek: 'angsaHitamDatang', judul: 'Kotak dari Kota Jauh',
+          teks: 'Suatu pagi tiba kotak pengiriman besar berstempel kota jauh di belahan dunia lain, dan isinya membuat galeri ribut sekejap. Sebuah angsa turun dari kotak itu dengan bulu hitam mengkilap dari kepala sampai ujung ekornya. Satu burung saja, tapi satu burung itu cukup untuk menjatuhkan tulisan besar di papan. Semua angsa putih? Kini tinggal cerita setengah jalan.',
+        },
+        {
+          objek: 'papanSemuaVsAda', judul: 'Semua dan Ada Tak Sama Genggamannya',
+          teks: 'Kurator galeri lalu mengganti papan itu dengan dua papan kecil yang lebih jujur. Papan pertama menuliskan kata ada: ada angsa putih, dan cukup satu contoh untuk membuat kata itu berdiri tegak. Papan kedua kini berhati-hati: banyak angsa putih, karena kata semua menuntut seluruh dunia setuju, dan cukup satu tandingan untuk menjatuhkannya. Kata semua dan kata ada ternyata memikul beban yang sangat berbeda.',
+        },
+        {
+          objek: 'katalogSpesimen', judul: 'Katalog yang Kini Lebih Jujur',
+          teks: 'Rak katalog galeri diperbarui sore itu, dan baris baru ditambahkan dengan tinta segar. Di sana kini tertulis bahwa angsa datang dalam beberapa warna, dan satu di antaranya hitam mengkilap dari kota jauh. Pengunjung lama membaca ulang katalog itu dan tersenyum, sebab galeri mereka jadi lebih jujur berkat satu burung. Sains kota belajar berdiri lagi dengan sikap yang lebih rendah hati.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Burung Menggugurkan Sebuah Papan!',
+          teks: 'Malam itu lampu galeri dimatikan satu per satu, dan angsa hitam itu tidur nyenyak di kandang barunya. Pelajarannya terpatri rapi: klaim tentang semua mudah jatuh oleh satu tandingan, dan klaim tentang ada cukup satu contoh untuk berdiri. Owalah, ternyata begini toh caranya menimbang kata semua dan ada, satu contoh bisa mengubah segalanya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-006': {
+      tema: 'pabrikDominoSiang',
+      npc: { glif: 'rantai!', ucap: ['Satu dorongan,', 'semua jatuh!'] },
+      stasiun: [
+        {
+          objek: 'barisanDomino', judul: 'Barisan Kartu yang Antre',
+          teks: 'Di ruang produksi pabrik kartu kota, sebuah barisan panjang kartu domino berdiri tegak di atas lantai licin. Kartu-kartu itu baru selesai dicetak dan sedang menjalani ujian khusus: ujian keajekan berdiri. Barisannya lurus sempurna dari pintu sampai seberang ruangan, dan tiap kartu berjarak tetap dari kartu di depannya. Semua diam, menunggu satu peristiwa kecil yang akan mengubah semuanya.',
+        },
+        {
+          objek: 'tombolDorongPertama', judul: 'Satu Dorongan Kecil',
+          teks: 'Seorang pekerja menekan tombol kecil di kartu pertama, dan kartu itu condong, goyah, lalu jatuh dengan bunyi tok yang ringan. Kartu kedua terdorong tepat oleh kartu pertama, kartu ketiga oleh kartu kedua, dan begitu terus menyusuri barisan. Tak ada kartu yang jatuh sendiri; setiap kartu jatuh karena kartu di depannya yang jatuh lebih dulu. Bunyi tok-tok itu terdengar seperti barisan alasan yang sedang berjalan.',
+        },
+        {
+          objek: 'papanRantaiAlasan', judul: 'Papan yang Meniru Barisan',
+          teks: 'Di dinding pabrik tergantung papan besar bertuliskan langkah satu, langkah dua, langkah tiga, seperti barisan kartu yang dipindahkan ke kalimat. Matematika menyusun bukti dengan cara yang sama: setiap langkah berdiri di atas langkah sebelumnya, dan tiap langkah tidak boleh dipungkiri oleh siapa pun. Cukup satu langkah bohong, dan seluruh rantai ikut ragu sampai ke ujung. Karena itu pembuat bukti bekerja pelan-pelan, satu kartu demi satu kartu.',
+        },
+        {
+          objek: 'lampuPabrikMenyala', judul: 'Ujung Rantai Akhirnya Menyala',
+          teks: 'Kartu terakhir tumbang ketika sore sudah beranjak, dan bersamaan dengan itu lampu di ujung ruangan menyala hijau, tanda ujian lulus. Kesimpulan paling akhir itu seperti kartu terakhir: ia baru sah setelah seluruh rantai di depannya selesai bekerja. Menghitung berapa kartu yang jatuh tadi memang seru, tapi hitungan itu hanya alat. Bantu saja. Yang penting adalah rantainya, bukan sekadar jumlahnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Alasan Berantai Ternyata Berbunyi Tok!',
+          teks: 'Petugas memungut kartu-kartu itu satu per satu sambil tersenyum, esok akan diuji lagi dalam barisan yang lebih panjang. Pelajarannya menggema di ruang yang kini kosong: bukti adalah rantai alasan yang tiap matanya tak bisa dipungkiri, dan kesimpulan datang hanya setelah rantai tuntas. Owalah, ternyata begini toh cara alasan berjalan, satu dorongan kecil lalu berantai sampai ujung. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-007': {
+      tema: 'lorongDominoMalam',
+      npc: { glif: '+1 lagi!', ucap: ['Dua janji,', 'semua jatuh!'] },
+      stasiun: [
+        {
+          objek: 'lorongDominoPanjang', judul: 'Lorong yang Tak Terlihat Ujungnya',
+          teks: 'Malam di gudang pabrik, dan satu lorong kartu domino memanjang jauh ke kegelapan, lebih panjang dari yang bisa dilihat mata. Barisan itu tersusun dari kartu nomor satu, kartu nomor dua, kartu nomor tiga, dan terus tanpa terlihat berakhir di mana. Penjaga gudang menyebutnya lorong tak berujung, sebab barisan memang bisa dibuat terus dan terus. Pertanyaannya satu: kalau kartu pertama jatuh, berapa kartu yang akan mengikuti?',
+        },
+        {
+          objek: 'kartuPertamaMenyala', judul: 'Janji Pertama: Kartu Awal Berani',
+          teks: 'Penjaga menyalakan lampu kecil di kartu pertama, dan kartu itu jatuh seketika ketika disentuh ujung tongkatnya. Janji pertama pun tercatat di papan catatan: kartu pertama jatuh. Janji ini kelihatan sepele, hanya bicara tentang satu kartu di ujung depan. Tapi tanpa janji kecil ini, seluruh lorong akan berdiri diam selamanya.',
+        },
+        {
+          objek: 'mistarJarakSama', judul: 'Janji Kedua: Jarak yang Setia',
+          teks: 'Mistar panjang diletakkan menyusuri lantai, dan jarak antar kartu terbukti sama rata dari awal sampai ujung yang tak terlihat itu. Dari kesetiaan jarak itu lahir janji kedua: kalau kartu mana pun jatuh, maka tetangga di belakangnya pasti ikut jatuh. Janji ini tidak bicara tentang kartu tertentu, ia bicara tentang pasangan kartu mana saja di lorong itu. Dua janji kecil itu saja, tak lebih.',
+        },
+        {
+          objek: 'ujungLorongTerang', judul: 'Maka Seluruh Lorong Tumbang',
+          teks: 'Sekarang coba ikuti akibatnya pelan-pelan: kartu satu jatuh, maka kartu dua ikut; kartu dua jatuh, maka kartu tiga ikut, dan begitu terus tanpa henti sampai kartu ke seratus, ke seribu, dan lebih jauh lagi. Tak perlu menghitung satu per satu selamanya, cukup dua janji itu bekerja bersama. Cara berpikir begini punya nama resmi di matematika: induksi, tangga yang bisa didaki tanpa batas. Hitungan panjang? Hitungan itu hanya alat. Bantu saja.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Janji Kecil Menjatuhkan Lorong Panjang!',
+          teks: 'Fajar menyingsing ketika bunyi tok-tok terakhir hilang di ujung gudang, dan lorong itu terbentang tumbang seluruhnya. Pelajarannya sederhana namun dahsyat: janji tentang kartu pertama ditambah janji tentang tetangga, dua-duanya cukup untuk menguasai lorong tanpa ujung. Owalah, ternyata begini toh induksi bekerja, pijakkan langkah pertama lalu titipkan sisanya pada pola. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-008': {
+      tema: 'menaraLantaiMalam',
+      npc: { glif: 'M+1!', ucap: ['Anggap saja,', 'lalu cek!'] },
+      stasiun: [
+        {
+          objek: 'menaraLantaiBanyak', judul: 'Menara yang Memancing Debat',
+          teks: 'Malam di alun-alun kota, dan menara tangga raksasa itu berdiri dengan lantai demi lantai yang naik ke kegelapan. Warga suka berdebat satu hal: adakah lantai paling atas di menara ini? Ada yang bilang pasti ada, ada yang bilang tak mungkin ada, dan debat itu berlarut tanpa pemenang. Maka datanglah seorang pembaca papan dengan satu taktik aneh yang terkenal.',
+        },
+        {
+          objek: 'papanAnggapSaja', judul: 'Taktik Aneh: Anggap Saja Ada',
+          teks: 'Taktiknya tertulis di papan: anggap saja kita setuju bahwa ada lantai paling atas, kita beri nama lantai M. Sepakat? Sepakat. Lalu papan itu melanjutkan dengan pertanyaan pendek yang mengubah segalanya: dari lantai M, bisakah kita naik satu tangga lagi? Tentu bisa, tangganya masih menyambung ke atas. Berarti ada lantai M plus satu, dan ia lebih tinggi dari M.',
+        },
+        {
+          objek: 'tanggaNaikSatu', judul: 'Kejanggalan yang Lahir Sendiri',
+          teks: 'Di sinilah warga terdiam serentak: M plus satu lebih tinggi dari M, padahal M dijanjikan sebagai yang paling atas. Kejanggalan itu tidak dibawa dari luar, ia lahir dari anggapan yang kita setujui sendiri tadi. Satu-satunya pelaku yang masuk akal adalah anggapannya itu, maka anggapan pun gugur. Menara ternyata tak punya lantai teratas, dan tangganya memang dibangun untuk tak berujung.',
+        },
+        {
+          objek: 'tandaKejanggalan', judul: 'Bilangan Pun Ikut Tersenyum',
+          teks: 'Taktik yang sama bekerja di dunia angka, dan warga kota memakainya setiap kali ada yang mengaku punya bilangan bulat terbesar. Anggap saja ada, namai M, lalu tambahkan satu: M plus satu lebih besar dari M, jadi M bukan yang terbesar. Anggapan itu selalu kalah, berapa pun M yang ditunjuk. Menambah satu memang hitungan paling kecil di dunia, tapi hitungan itu hanya alat. Bantu saja. Yang besar justru gagasan pura-pura setuju lalu memeriksa.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pura-pura Setuju Ternyata Taktik Tajam!',
+          teks: 'Lampu menara mati paling akhir malam itu, dan tangganya tetap memanjat ke gelap tanpa terlihat habis. Pelajaran malam ini layak dibawa pulang: kalau sebuah anggapan melahirkan kejanggalan sendiri, anggapan itulah yang harus pulang duluan. Owalah, ternyata begini toh kontradiksi bekerja, setujui sebentar lalu biarkan kejanggalannya bicara. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-009': {
+      tema: 'alunAlunPapanRaksasa',
+      npc: { glif: 'sepakat!', ucap: ['Aturan kecil,', 'gedung besar!'] },
+      stasiun: [
+        {
+          objek: 'lapakPapanGaris', judul: 'Papan Raksasa di Alun-Alun',
+          teks: 'Pagi cerah di alun-alun kota, dan di tengahnya terhampar papan permainan raksasa yang garis-garisnya dicat putih di atas rumput. Di tepi papan tergantung kartu aturan main, dan warga berkeliling membacanya sambil menikmati angin pagi. Papan ini bukan sekadar tempat main, melainkan tempat kota berlatih menyepakati hal-hal kecil. Kartu pertamanya menantikan siapa pun yang mau membaca.',
+        },
+        {
+          objek: 'duaPatokSatuTali', judul: 'Dua Patok, Satu Tali, Satu Garis',
+          teks: 'Kartu pertama berbunyi begini: pilih dua patok di papan, lalu tarik satu tali melewati keduanya. Warga mencobanya berulang-ulang, dan hasilnya selalu sama: lewat dua patok itu ada tepat satu garis lurus, bukan dua, bukan nol. Tali kedua mau diletakkan ke arah mana pun selalu jatuh menimpa tali yang pertama. Kartu itu kemudian ditempel di dinding balai kota sebagai aturan yang disepakati bersama.',
+        },
+        {
+          objek: 'kartuAturanDisepakati', judul: 'Sepakat di Awal, Bukan Hasil Hitung',
+          teks: 'Ada yang bertanya, dari mana aturan itu berasal, dan jawabannya mengejutkan banyak orang. Aturan main seperti itu tidak lahir dari hitungan, ia disepakati di awal sebagai titik berangkat, sama seperti aturan main ludo yang tak pernah diperdebatkan di tengah permainan. Matematika menyebut aturan awal semacam ini aksioma, fondasi yang dipilih sederhana agar semua orang bisa mengikutinya. Dari sepakat yang kecil itu, seluruh permainan baru dimulai.',
+        },
+        {
+          objek: 'tendaCaturKota', judul: 'Gedung Besar dari Aturan Kecil',
+          teks: 'Sore itu warga membangun bentuk-bentuk di papan raksasa: segitiga, garis bagi, dan jalur lompat dari satu patok ke patok lain. Semua bentuk itu ternyata tunduk pada kartu aturan yang disepakati pagi tadi, tanpa satu pun bentuk yang membangkang. Matematika bekerja dengan cara yang sama: dari aksioma sederhana, teorema demi teorema dibangun seperti gedung bertingkat. Fondasinya kecil dan jujur, tapi menopang segalanya di atasnya.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Aturan Kecil Menopang Gedung Besar!',
+          teks: 'Petang menyapu alun-alun, dan papan raksasa itu ditinggalkan dengan bentuk-bentuk sore hari yang rapi. Pelajarannya terpatri di hati semua yang lewat: permainan dan matematika sama-sama berdiri di atas aturan yang disepakati di awal. Owalah, ternyata begini toh aksioma itu, aturan kecil yang jujur tempat segala sesuatu memulai. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-010': {
+      tema: 'pengadilanBukti',
+      npc: { glif: 'hakim!', ucap: ['Lima misi', 'menantimu!'] },
+      stasiun: [
+        {
+          objek: 'papanMisiPilah', judul: 'Misi Pertama: Pilah Kalimatnya',
+          teks: 'Ruang pengadilan bukti kota dibuka untuk umum, dan di muka pintu tergantung papan misi pertama. Tugasnya memilah kalimat yang berdatangan: mana pernyataan yang bisa dinilai benar atau salah, mana pertanyaan yang menunggu jawaban, dan mana perintah yang menunggu gerakan. Stempel BENAR dan SALAH tersedia di mejanya, tapi hanya boleh dipakai pada pernyataan. Siapa yang salah menempel, papan itu akan menegur dengan sopan.',
+        },
+        {
+          objek: 'papanMisiJanji', judul: 'Misi Kedua: Pasang Janji Jika-Maka',
+          teks: 'Misi kedua menantang pengunjung menyusun janji bersyarat dari potongan kalimat yang berserakan di meja panjang. Bagian jika harus dipasang dengan syaratnya, bagian maka dengan isi janjinya, dan arahnya tak boleh terbalik. Pengunjung juga diuji dengan papan kembar ala jalan semprot: kebalikan sebuah janji tak boleh langsung dianggap ikut benar. Yang berhasil menata arahnya dengan benar akan mendapat cap kecil berbentuk payung.',
+        },
+        {
+          objek: 'papanMisiTandingan', judul: 'Misi Ketiga: Buru Satu Tandingan',
+          teks: 'Misi ketiga memajang klaim besar bertuliskan semua burung di taman ini bertelur hijau, lengkap dengan keranjang telur tiruan. Tugas pengunjung mencari satu tandingan di antara foto-foto burung taman yang terpampang, cukup satu saja, tidak lebih. Saat foto burung yang bertelur biru ditemukan, klaim besar itu roboh dengan bunyi bel kecil. Satu tandingan memang cukup, dan papan itu mencatat namanya sebagai pemburu tandingan resmi.',
+        },
+        {
+          objek: 'papanMisiKontradiksi', judul: 'Misi Keempat dan Kelima: Rantai dan Kejanggalan',
+          teks: 'Dua misi terakhir menempati ruang paling dalam yang cahayanya kuning hangat. Misi keempat meminta pengunjung menjatuhkan barisan kartu alasan dari premis pertama sampai kesimpulan, tanpa satu langkah pun yang melompat. Misi kelima menyodorkan anggapan gelap tentang bilangan bulat terbesar, dan pengunjung harus menjatuhkannya lewat satu langkah tambah satu yang menggugurkan. Ruangan itu menutup hari dengan tepuk tangan dari pengunjung lain yang menonton.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Kota Ini Sudah Punya Hakim Kecil!',
+          teks: 'Hari di pengadilan bukti ditutup dengan papan skor yang menyala: lima misi, lima tanda tangan, dan banyak wajah lelah yang bahagia. Menghitung misi yang lulus memang menyenangkan, tapi hitungan itu hanya alat. Bantu saja. Kelima misi itu merangkum seluruh kota: pilah kalimatnya, susun janjinya, buru tandingannya, jatuhkan rantainya, dan uji anggapannya dengan kejanggalan. Owalah, ternyata begini toh rasanya menjadi hakim untuk alasan sendiri, ketat pada langkah, adil pada kesimpulan. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   function untuk(topik) {
