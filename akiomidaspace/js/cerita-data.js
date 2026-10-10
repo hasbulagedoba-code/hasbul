@@ -8595,6 +8595,266 @@ window.CERITA = (function () {
         },
       ],
     },
+    'p4-021': {
+      tema: 'gangKurirPagi',
+      npc: { glif: 'dua info!', ucap: ['Dua info,', 'satu panah!'] },
+      stasiun: [
+        {
+          objek: 'papanPetunjukLangkah', judul: 'Papan Petunjuk di Ujung Gang',
+          teks: 'Pagi itu gang masih basah oleh embun ketika kurir cilik berdiri di depan papan petunjuk tua. Di papan itu hanya tergantung satu panah kayu dengan sepotong tulisan: tiga langkah ke timur, dua langkah ke utara. Kurir menghitung dalam hati, ternyata satu panah itu sedang menyimpan dua info sekaligus: ke arah mana badan harus condong, dan seberapa jauh kaki harus melangkah. Kalau salah satunya hilang, paket bisa tersesat di gang yang panjang.',
+        },
+        {
+          objek: 'kurirBawaPaket', judul: 'Kurir yang Menggenggam Satu Petunjuk',
+          teks: 'Kurir melangkah sesuai petunjuk itu dan tiba tepat di pintu rumah bergambar bunga. Ia sadar petunjuknya memang tak perlu ditulis dua kali: tiga langkah timur dan dua langkah utara menumpang dalam satu badan petunjuk yang sama, seperti dua teman naik satu becak. Kalau hanya tulisan tiga langkah timur yang terselip di kantong, kurir akan berhenti di gang yang salah dan bingung mencari sisa jalannya. Satu paket info, satu badan panah, satu tujuan yang jelas.',
+        },
+        {
+          objek: 'jejakPanahGang', judul: 'Jejak Kedua yang Bersambung',
+          teks: 'Sore tak lama berselang kurir menerima tugas kedua dengan petunjuk baru: satu langkah timur, tiga langkah utara. Ia berjalan dua kali pada hari yang sama, dan jejaknya kini tergambar rapi di tanah basah: jejak pertama berhenti di satu titik, lalu jejak kedua mulai berjalan dari ujung jejak pertama itu, seperti menyambung ekor ke kepala. Tiba-tiba dari ujung terakhir, ada jalan lurus singkat yang tepat menghubungkan rumah awal ke tempat kurir berdiri, dan jalannya persis sepanjang dua petunjuk yang disambung tadi.',
+        },
+        {
+          objek: 'papanJalanTersambung', judul: 'Dua Tugas, Satu Tempat Tiba',
+          teks: 'Besoknya kurir mencoba membalik urutan: tugas kedua ditempuh dulu, tugas pertama menyusul dari ujungnya. Siapa tak heran, tempat tiba keduanya sama persis, sebab menyambung jejak memang tak peduli jejak mana yang duluan. Papan tua di gang itu kemudian diberi tulisan baru oleh kakek penjaga: hitungan itu hanya alat. Bantu saja, untuk mencatat jejak kaki dan menemukan jalan pulang tercepat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Info Memang Cukup dalam Satu Panah!',
+          teks: 'Matahari pagi kembali menyinari gang ketika kurir cilik menggantung panah ketiga di papan tua, kali ini untuk dirinya sendiri: petunjuk pulang ke rumahnya. Pelajaran gang itu kini rapi di kepalanya: satu panah membawa dua info sekaligus, arah dan jarak; dua panah dijumlahkan dengan menyambung ujung ke ekor, dan urutannya tak mengubah tempat tiba. Owalah, ternyata begini toh petunjuk jalan, dua angka menumpang satu badan panah, dan menyambung jejak itulah jumlah. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-022': {
+      tema: 'tamanBenderaSore',
+      npc: { glif: 'digandakan!', ucap: ['Gandakan langkah,', 'arah tetap!'] },
+      stasiun: [
+        {
+          objek: 'tiangBenderaTaman', judul: 'Tiang Bendera Waktu Sore',
+          teks: 'Sore itu taman kota kemerahan diserap matahari yang hendak pulang, dan petugas taman mulai menggulung bendera-bendera kecil untuk dicuci. Bendera paling tua bergambar segitiga dengan lebar tiga jengkal dan tinggi satu jengkal, dan petugas mengukurnya dengan jengkal kayu warisan kakeknya. Setiap kali ada taman yang meminta bendera serupa, petugas tak menjahit dari nol; ia hanya menggandakan ukuran bendera tua itu sesuai permintaan.',
+        },
+        {
+          objek: 'benderaPanjang', judul: 'Bendera yang Digandakan',
+          teks: 'Taman sebelah memesan bendera dua kali lebih panjang, dan jahitan dilakukan dengan sekali geser jengkal: lebar jadi enam jengkal, tinggi jadi dua jengkal. Bentuknya masih sejajar seperti aslinya, condong ke arah yang sama, hanya tubuhnya memanjang dua kali lebih gagah. Anak-anak yang bermain di taman langsung menyebutnya bendera si kembar, sebab arahnya tak bergeser sedikit pun, cuma langkahnya lebih besar.',
+        },
+        {
+          objek: 'benderaSetengah', judul: 'Bendera yang Disetengahkan',
+          teks: 'Kebun bibir memesan bendera mungil setengah ukuran, dan hasilnya lebar satu setengah jengkal dengan tinggi setengah jengkal. Lagi-lagi arahnya tetap, kemiringannya tetap, hanya badannya mengecil sopan. Petugas tersenyum, sebab semua bendera keluarga ini tinggal digandakan atau dipecah: kali dua, kali tiga, kali setengah, arah tak pernah ikut berubah.',
+        },
+        {
+          objek: 'benderaBalikArah', judul: 'Bendera yang Berbalik Menentang',
+          teks: 'Suatu sore petugas iseng menjahit bendera dengan angka minus satu, dan hasilnya bikin anak-anak tertawa terkejut: panjangnya sama persis, tapi arahnya berbalik menantang angin, seperti orang berjalan mundur. Kalau digandakan nol kali, yang tersisa cuma tiang kosong tanpa kain. Di ujung taman, papan kecil memperingatkan dengan ramah: menggandakan itu hanya alat. Bantu saja, untuk mengetahui berapa panjang kain yang perlu disiapkan.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Menggandakan Ternyata Tak Mengubah Watak!',
+          teks: 'Malam turun perlahan ketika semua bendera baru terpasang megah berjajar di taman, tua dan muda, panjang dan pendek, semua serumpun. Pelajaran taman itu terlipat rapi di kepala petugas: menggandakan panah hanya melipatgandakan langkahnya, arahnya setia tak bergeser, kecuali digandakan angka minus yang membuatnya berbalik menantang. Owalah, ternyata begini toh bendera si kembar, kali sekian langkah ikut sekian, arah tetap. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-023': {
+      tema: 'kampungDuaJalanSiang',
+      npc: { glif: 'dua jalan!', ucap: ['Dua jalan', 'mencukupi!'] },
+      stasiun: [
+        {
+          objek: 'papanKampungDuaJalan', judul: 'Papan Nama di Gerbang Kampung',
+          teks: 'Siang itu pengiring pos baru pertama kali tiba di kampung kecil yang menempel di lereng, dan ia langsung berdiri diam membaca papan gerbang. Tulisannya mengherankan: kampung ini hanya punya dua jalan resmi, jalan A yang melangkah dua langkah timur lalu satu langkah utara, dan jalan B yang melangkah satu langkah timur lalu dua langkah utara. Di bawahnya tertulis janji kampung: setiap rumah pasti terjangkau dengan dua jalan ini saja, tinggal berjalan bolak-balik secukupnya.',
+        },
+        {
+          objek: 'jalanTimurKampung', judul: 'Jalan A yang Ditempuh Dua Kali',
+          teks: 'Pengiring itu mencoba jalan A dua kali berurutan, dan kakinya mencatat tempat tiba baru: empat langkah timur dan dua langkah utara. Rumah tukang roti tepat berdiri di sana, dan ia menitipkan roti pertama dengan senyum. Berjalan dua kali di jalan yang sama ternyata artinya sederhana: gandakan langkahnya, dan kampung sudah menyebutnya jalan A dikali dua.',
+        },
+        {
+          objek: 'jalanUtaraKampung', judul: 'Campuran Dua Jalan untuk Rumah Terjauh',
+          teks: 'Rumah nenek penenun berdiri paling jauh, di tujuh langkah timur dan delapan langkah utara. Pengiring berpikir lalu menghitung di telapak tangan: jalan A dikali dua sampai empat timur dua utara, jalan B dikali tiga sampai tiga timur enam utara, dan bila keduanya disambung ujung ke ekor, kakinya tiba tepat di depan nenek: tujuh timur, delapan utara. Campuran dua jalan itu ternyata cukup, tanpa perlu jalan ketiga.',
+        },
+        {
+          objek: 'rumahTujuanKampung', judul: 'Satu Campuran untuk Satu Rumah',
+          teks: 'Kakek penjaga gerbang lalu mengungkap rahasia papan itu: setiap rumah punya campuran yang pas, dan campurannya hanya satu, sebab dua jalan kampung ini memang tak segaris sehingga tak ada dua campuran yang bisa sampai ke tempat yang sama. Angka campuran itulah yang menjadi alamat rumah, seperti dua angka alamat gundukan pasir dulu. Di sudut papan tertulis ucapan kakek: hitungan itu hanya alat. Bantu saja, untuk mencatat campuran jalan dan menemukan rumah tanpa tersesat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Dua Jalan Memang Mencukupi!',
+          teks: 'Sore menjelang ketika pengiring pos pulang membawa daftar alamat baru yang penuh angka campuran: rumah tukang roti dua-nol, rumah nenek dua-tiga, dan puluhan rumah lain serupa. Pelajaran kampung itu tersimpan rapat: dua jalan yang tak segaris bisa menjangkau semua rumah, cukup digandakan secukupnya lalu disambung, dan campurannya jadi alamat yang tak mungkin ketuker. Owalah, ternyata begini toh kampung hemat jalan, dua jalan saja, semua rumah terjangkau. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-024': {
+      tema: 'panggungPenariMalam',
+      npc: { glif: 'pemimpin!', ucap: ['Pemimpin pindah,', 'semua ikut!'] },
+      stasiun: [
+        {
+          objek: 'panggungLampuMalam', judul: 'Panggung dan Mesin Penggeser',
+          teks: 'Malam itu panggung wayang kampung menyala dengan lentera merah dan penonton duduk berjejer membawa kacang. Tahun ini panggung memakai mesin penggeser baru: penari yang berdiri di satu titik akan terpindah ke titik lain oleh mesin, dan seluruh barisan harus tetap rapi. Yang membuat semua penari tegang, tak ada seorang pun yang tahu ke mana mesin akan menggesernya, kecuali dua penari pemimpin yang sudah diuji coba sore tadi.',
+        },
+        {
+          objek: 'pemimpinSatuPanggung', judul: 'Pemimpin Timur Diuji Dulu',
+          teks: 'Penari pemimpin pertama berdiri tepat satu langkah di timur tengah panggung, dan mesin menggesernya dua langkah timur, tak bergeser utara sedikit pun. Penonton bersorak, penari lain mencatat dalam kepala. Sore tadi pemimpin itu sudah diuji tiga kali dengan hasil yang sama, jadi semua tahu: mesin ini menggeser langkah timur murni menjadi dua langkah timur, seperti bendera yang digandakan tapi arahnya setia.',
+        },
+        {
+          objek: 'pemimpinDuaPanggung', judul: 'Pemimpin Utara Dipindah Juga',
+          teks: 'Penari pemimpin kedua berdiri satu langkah di utara tengah panggung, dan mesin menggesernya satu langkah timur plus tiga langkah utara, condong ke pojok. Tujuannya beda dengan pemimpin timur, dan penari lain mencatat juga. Dua pemimpin itu seperti dua jalan resmi kampung dulu: cukup keduanya, semua tempat di panggung bisa ditulis sebagai campuran langkah timur dan utara.',
+        },
+        {
+          objek: 'penariIkutBarisan', judul: 'Semua Penari Ikut Tanpa Diuji',
+          teks: 'Penari kecil yang tadinya berdiri satu langkah timur dan satu langkah utara dari tengah kini tak perlu diuji: posisinya kan campuran satu pemimpin timur dan satu pemimpin utara, maka mesin cukup digabungkan pada kedua pemimpinnya, dua langkah timur dari yang satu, satu timur tiga utara dari yang lain, disambung jadi tiga timur tiga utara. Penari gemuk yang berdiri dua timur satu utara juga langsung tahu tempat barunya. Sore tadi mesinnya memang diuji cuma pada dua pemimpin, tapi malam ini seluruh barisan pindah rapi tanpa satu pun tersesat.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Mesin Besar Cukup Dibaca dari Dua Pemimpinnya!',
+          teks: 'Lentera dirapikan ketika penonton pulang membawa cerita tentang mesin yang mengejutkan tapi jujur. Pelajaran panggung itu tergantung rapi di dinding ruang ganti: mesin penggeser tak perlu diuji pada semua penari, cukup pada dua pemimpinnya, dan seluruh barisan bisa dihitung sendiri dari dua catatan itu. Owalah, ternyata begini toh mesin geser, dua pemimpin pindah, semua ikut rapi. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-025': {
+      tema: 'studioCerminSiang',
+      npc: { glif: 'putar!', ucap: ['Putar dulu,', 'baru lanjut!'] },
+      stasiun: [
+        {
+          objek: 'cerminStudioTinggi', judul: 'Studio dengan Cermin Sepanjang Dinding',
+          teks: 'Siang itu studio latihan tari di ujung kota terbuka untuk umum, dengan cermin setinggi dinding dan lantai kayu yang kinclong. Di pojok ruangan tergantung tiga kartu resep mesin latihan, dan setiap kartu bergambar dua panah kecil: satu panah timur, satu panah utara. Pengunjung kecil bertanya-tanya kenapa harus dua panah, sampai guru tari mengajaknya melihat mesin latihan pertama bekerja.',
+        },
+        {
+          objek: 'penariPutarSembilan', judul: 'Kartu Resep Putar Sembilan Puluh',
+          teks: 'Mesin pertama bernama putar sembilan puluh, dan uji cobanya sederhana: penari berdiri satu langkah timur dari tengah ruangan, lalu mesin memutarnya menjadi satu langkah utara, dan utara berubah menjadi barat. Penari kecil dengan posisi dua timur satu utara ikut dicoba, dan hasilnya satu barat dua utara, condong baru tapi panjang langkahnya tetap sama. Kartu resepnya ternyata cuma dua baris: panah timur pindah ke utara, panah utara pindah ke barat.',
+        },
+        {
+          objek: 'karpetStudioRegang', judul: 'Kartu Resep Cermin dan Regang',
+          teks: 'Mesin kedua bekerja seperti cermin: kiri jadi kanan, kanan jadi kiri, sedangkan utara tak ikut berubah. Mesin ketiga bernama regang, dan ia hanya melipatgandakan langkah timur dua kali sambil membiarkan utara diam, membuat posisi yang condong tadi jadi lebih lebar tanpa lebih tinggi. Guru tari menyebut ketiganya keluarga mesin yang sopan: tak satu pun menggeser titik tengah ruangan, semuanya hanya mengolah dua panah dasar.',
+        },
+        {
+          objek: 'papanResepStudio', judul: 'Tiga Kartu Tergantung Rapi',
+          teks: 'Menjelang sore pengunjung kecil menatap tiga kartu itu berjajar, dan polanya terlihat: setiap kartu hanya perlu menceritakan ke mana panah timur dipindah dan ke mana panah utara dipindah, empat angka kecil, dua pemimpin, selesai. Seperti mesin panggung malam dulu, mesin mana pun di studio ini cukup dibaca dari tujuan dua pemimpinnya. Tiga resep berbeda, tiga watak berbeda, tapi wataknya lengkap terbaca dari empat angka itu saja.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Resep Mesin Cuma Empat Angka Kecil!',
+          teks: 'Matahari sore menyelinap lewat jendela ketika pengunjung kecil pulang membawa gambar tiga kartu resep di buku kesukaannya. Pelajaran studio itu rapi terlipat: putar, cermin, regang, semuanya keluarga mesin yang sopan, dan semua resepnya tak pernah lebih panjang dari empat angka. Owalah, ternyata begini toh kartu resep mesin, cukup ceritakan jalan dua panah pemimpin, seluruh gerakan ikut terbaca. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-026': {
+      tema: 'gudangKarpetSore',
+      npc: { glif: 'karpet!', ucap: ['Luas ikut', 'digandakan!'] },
+      stasiun: [
+        {
+          objek: 'karpetSatuPetak', judul: 'Karpet Satu Petak yang Manis',
+          teks: 'Sore itu gudang karpet keemasan kembali sibuk, dan di atas meja kerja terbentang karpet kecil berukuran satu petak lebar satu petak tinggi, warisan pemilik gudang. Karpet mungil itu akan menjadi alat ukur paling jujur di seluruh gudang. Setiap mesin regang yang memprosesnya akan ditanya satu pertanyaan sama: berapa petak luas karpet kecil ini sesudah lewat mesinmu?',
+        },
+        {
+          objek: 'mesinRegangKarpet', judul: 'Mesin Regang yang Sama dengan Panggung',
+          teks: 'Mesin di gudang ini punya kartu resep yang sudah akrab: panah timur digeser ke dua timur, panah utara digeser ke satu timur tiga utara, sama persis dengan mesin panggung malam dulu. Pemilik gudang memasukkan karpet satu petak itu, dan mesin menariknya perlahan ke empat arah. Sudut-sudut karpet yang tadinya rapi berbentuk kotak kini condong membentuk tanjakan miring, tapi pemiliknya tak panik, ia punya cara hitung tersendiri.',
+        },
+        {
+          objek: 'karpetEnamPetak', judul: 'Karpet Jadi Enam Petak',
+          teks: 'Pemilik gudang menghitung luas karpet baru dengan petak kecil dari karpet aslinya sebagai satuan, dan hasilnya enam petak penuh tanpa sisa. Mesin yang sama yang menggeser dua pemimpin penari ternyata juga melipatgandakan luas karpet enam kali. Satu angka itu lalu ditulis di papan gudang: mesin ini punya faktor luas enam, dan semua karpet yang lewat akan digandakan luasnya enam kali, besar maupun kecil.',
+        },
+        {
+          objek: 'papanLuasDigandakan', judul: 'Faktor Luas dan Tanda Terbalik',
+          teks: 'Di papan gudang tergantung catatan lain yang mengherankan: mesin putar punya faktor luas satu karena karpetnya tetap sepetak, cuma diputar; mesin cermin juga satu, tapi karpetnya terbalik menempel seperti kain yang dibalik sisi jahitnya. Untuk mesin terbalik itu pemilik gudang menulis faktornya dengan tanda minus, bukan karena luasnya kurang, tapi sebagai tanda karpet memeluk sisi yang berlawanan. Hitungan faktor itu hanya alat. Bantu saja, untuk mengetahui karpet akan membesar, menyusut, atau terbalik.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Satu Angka Kecil Bercerita Soal Luas!',
+          teks: 'Malam turun di gudang ketika karpet mungil itu kembali terlipat rapi di meja, puas menjalankan tugasnya sebagai alat ukur paling jujur. Pelajaran gudang itu tercatat di papan: setiap mesin punya satu angka faktor luas, enam berarti digandakan enam kali, satu berarti tetap, minus berarti terbalik. Owalah, ternyata begini toh faktor luas, satu angka kecil bercerita panjang soal karpet yang diregang. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-027': {
+      tema: 'pabrikPipihPagi',
+      npc: { glif: 'gepeng!', ucap: ['Semua gepeng,', 'segaris!'] },
+      stasiun: [
+        {
+          objek: 'mesinGepengPabrik', judul: 'Mesin Baru di Pabrik Roti',
+          teks: 'Pagi itu pabrik roti kecil menerima mesin baru yang katanya bisa memipihkan adonan dengan sempurna, dan pemilik pabrik mengujinya dengan penuh harap. Kartu resepnya terbaca biasa saja: panah timur dipindah ke satu timur dua utara, panah utara dipindah ke dua timur empat utara. Empat angka kecil, tak ada yang mencurigakan, dan mesin pun menyala dengan dengung tenang.',
+        },
+        {
+          objek: 'adonanBulatPabrik', judul: 'Adonan-Adonan yang Masuk Berjejer',
+          teks: 'Adonan bulat pertama masuk dari satu timur, keluar jadi satu timur dua utara. Adonan kedua masuk dari satu utara, keluar jadi dua timur empat utara. Adonan ketiga masuk dari satu timur satu utara, keluar jadi tiga timur enam utara. Pemilik pabrik menyipitkan mata pada ketiga hasil itu, sebab semuanya punya selera tempat yang aneh: semua keluaran tampak berjalan di jalur condong yang sama, satu garis lurus saja.',
+        },
+        {
+          objek: 'adonanPipihPabrik', judul: 'Dua Alamat, Satu Tempat Tiba',
+          teks: 'Teka-teki itu pecah ketika adonan dari dua timur keluar di tempat yang sama persis dengan adonan dari satu utara: keduanya berakhir di dua timur empat utara. Dua alamat berbeda, satu tempat tiba, dan mesin tak peduli seberapa beda asalnya. Pemilik pabrik menghitung luas papan pemipihnya dan hasilnya nol: seluruh adonan jatuh di satu garis, luasnya habis, seperti karpet yang dipipihkan sampai tak berpetak lagi.',
+        },
+        {
+          objek: 'papanSemuaSegaris', judul: 'Papan Peringatan yang Jujur',
+          teks: 'Pemilik pabrik lalu menggantung papan peringatan paling jujur di samping mesin: mesin ini gepeng, tulisnya, semua hasil berjalan segaris, dua alamat bisa berakhir sama, dan luas apa pun yang masuk akan habis. Yang paling penting berdiri di baris terakhir: jangan harap ada mesin pembalik, sebab banyak adonan berbeda sudah jadi satu bentuk yang sama, tak ada yang tahu bentuk aslinya mana. Hitungan itu hanya alat. Bantu saja, untuk tahu mesin mana yang masih bisa dibalik.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Gepeng Itu Penanda Jalan Pulang Sudah Hilang!',
+          teks: 'Siang itu mesin baru tetap bekerja melayani pabrik, tapi tak ada lagi yang memasukkan adonan dengan harapan. Pelajaran pagi itu tergantung rapi di papan: mesin yang memipihkan semuanya ke satu garis kehilangan kemampuan membalik, sebab ia melupakan dari mana setiap adonan berasal. Owalah, ternyata begini toh mesin gepeng, dua alamat satu tujuan, jalan pulang hilang selamanya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-028': {
+      tema: 'gerbangDuaArahSiang',
+      npc: { glif: 'dua arah!', ucap: ['Maju sekali,', 'pulang utuh!'] },
+      stasiun: [
+        {
+          objek: 'gerbangMajuMundur', judul: 'Gerbang Berpasangan di Alun-Alun',
+          teks: 'Siang itu alun-alun kota ramai oleh dua gerbang kayu baru yang berdiri berpasangan, satu bernama gerbang maju dan satu bernama gerbang balik. Gerbang maju memakai kartu resep mesin panggung yang sudah terkenal: panah timur ke dua timur, panah utara ke satu timur tiga utara. Kartu gerbang balik sengaja ditutup kain, dan penjaga alun-alun menantang para kurir: tebak ke mana gerbang balik menggeser setiap penari, lalu buka kainnya.',
+        },
+        {
+          objek: 'kurirMasukGerbang', judul: 'Kurir Masuk lewat Gerbang Maju',
+          teks: 'Kurir cilik mencoba dulu gerbang maju sambil menggenggam kertas alamat: ia berdiri di satu timur satu utara, dan gerbang memindahkannya ke tiga timur tiga utara. Lalu ia berdiri di satu timur murni, dan dipindah ke dua timur murni. Semua sesuai dugaan, sebab gerbang maju sudah terkenal jujur di seluruh kota, dan kertas alamat kurir kini penuh catatan tempat tiba.',
+        },
+        {
+          objek: 'kurirPulangGerbang', judul: 'Gerbang Balik yang Tahu Jalannya',
+          teks: 'Kini giliran gerbang balik, dan kainnya dibuka perlahan: panah timur dipindah ke setengah timur, panah utara dipindah ke sedikit barat plus sepertiga utara. Kurir cilik mengerjap, sampai penjaga mengajaknya mencoba langsung: berdiri di tiga timur tiga utara, tempat tiba gerbang maju tadi, dan gerbang balik memulangkannya tepat ke satu timur satu utara. Gerbang balik ternyata hafal seluruh jejak gerbang maju, dan mengembalikan setiap penari ke rumahnya.',
+        },
+        {
+          objek: 'papanTulisPulang', judul: 'Kartu Perjanjian di Papan Alun-Alun',
+          teks: 'Di papan alun-alun, penjaga menulis perjanjian gerbang berpasangan: masuk gerbang maju lalu gerbang balik, semua pulang utuh ke tempat semula, seperti tak pernah pergi. Tapi di bawahnya ada baris kecil yang serius: perjanjian ini hanya berlaku kalau gerbang maju tak gepeng, sebab gerbang yang memipihkan dua alamat ke satu tempat tak mungkin punya pembalik yang jujur. Cek dulu faktor luasnya, baru percaya bisa pulang. Hitungan itu hanya alat. Bantu saja, untuk memilih gerbang mana yang aman ditumpangi bolak-balik.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Pulang Ternyata Juga Sebuah Mesin!',
+          teks: 'Sore kurir cilik pulang sambil melirik dua gerbang yang kini ramai ditumpangi bolak-balik oleh warga. Pelajaran alun-alun itu ia tulis di punggung bukunya: gerbang maju punya pasangan pembalik asalkan tak ada info yang dipipihkan, dan pasangan itu hafal jalan pulang setiap penari. Owalah, ternyata begini toh gerbang berpasangan, maju sekali, balik sekali, pulang utuh. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-029': {
+      tema: 'menaraKompasSenja',
+      npc: { glif: 'setia!', ucap: ['Arah setia,', 'regang saja!'] },
+      stasiun: [
+        {
+          objek: 'menaraKompasTinggi', judul: 'Menara Kompas Waktu Senja',
+          teks: 'Senja itu langit di sekitar menara kompas tua memerah lembut, dan penjaga menara menyalakan mesin besarnya untuk latihan rutin. Mesin menara punya kebiasaan yang bikin penasaran: hampir semua panah yang dilempar ke dalamnya keluar dengan arah yang bergeser, diputar ke sana kemari. Tapi penjaga bersikeras ada dua panah pengecualian yang tak pernah ikut berputar, dan malam ini ia akan membuktikannya.',
+        },
+        {
+          objek: 'jarumKompasSetia', judul: 'Jarum yang Menolak Berputar',
+          teks: 'Panah pertama dilempar dari satu timur murni, dan mesin menara mengeluarkannya dengan arah yang persis sama, masih menunjuk timur, hanya saja panjangnya kini dua kali lebih gagah. Jarum kompas tua di halaman berdenyut seirama, seolah mengangguk. Arahnya tak bergeser sedikit pun, cuma diregang dua kali, dan penjaga menara menyebutnya jarum yang setia.',
+        },
+        {
+          objek: 'mesinTarikMenara', judul: 'Uji Kedua di Halaman Menara',
+          teks: 'Uji kedua lebih mengejutkan: panah yang dilempar dari satu timur satu utara keluar dengan arah yang juga persis sama, condong seperti asalnya, diregang tiga kali lebih kencang. Tapi panah percobaan dari dua timur satu utara tumbang: arahnya berubah, digeser mesin ke condong yang lain, jadi panah biasa yang ikut berputar. Dua panah setia itu spesial, sisanya tidak, dan malam itu semua penonton mencatat dua kekencangan baru di papan menara.',
+        },
+        {
+          objek: 'papanKekencangan', judul: 'Papan Kekencangan Menara',
+          teks: 'Papan menara kini menggantung dua baris catatan kecil: panah setia pertama diregang dua kali, panah setia kedua diregang tiga kali, dan angka-angka itu dijuluki kekencangan mesin terhadap masing-masing panah setia. Penjaga menara menutup sesi dengan ucapannya yang tenang: cari panah setia itu penting, sebab lewat dua panah itu watak seluruh mesin bisa terbaca, seperti dua pemimpin penari dulu. Menghitung kekencangan itu hanya alat. Bantu saja, untuk mengenali mesin besar dengan dua panah kecil.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Mesin Sebesar Apa Pun Punya Panah Setia!',
+          teks: 'Bintang-bintang menyala di atas menara ketika mesin dirapikan dan papan kekencangan diberi atap kayu kecil. Pelajaran senja itu tersimpan di buku penjaga: mesin yang memutar hampir semua panah selalu menyisakan panah setia yang hanya diregang, dan kekencangannya jadi sidik jari mesin itu. Owalah, ternyata begini toh mesin menara, memutar semua kecuali panah setianya. Mudah, bukan?',
+        },
+      ],
+    },
+    'p4-030': {
+      tema: 'aulaEstafetMalam',
+      npc: { glif: 'urutan!', ucap: ['Estafet mesin,', 'urutan punya arti!'] },
+      stasiun: [
+        {
+          objek: 'aulaLimaMesin', judul: 'Aula dengan Deretan Mesin',
+          teks: 'Malam itu aula besar Kota Bukti menyala penuh, dan di tengahnya berdiri deretan mesin yang sudah akrab: mesin penggeser penari, mesin cermin, mesin putar, mesin regang, dan mesin balik. Di dinding tergantung spanduk besar bertuliskan estafet mesin, dan di bawahnya lima papan misi tertutup kain. Malam ini aula mengundang seluruh penduduk kota untuk mengikuti malam pamungkas aljabar, dan pemenangnya boleh menyalakan bintang aula.',
+        },
+        {
+          objek: 'mesinEstafetSatu', judul: 'Estafet yang Bisa Jadi Satu Mesin',
+          teks: 'Misi pembuka memakai dua mesin: kurir masuk mesin penggeser dulu, lalu langsung masuk mesin balik, dan keluar-keluar pulang utuh ke tempat semula. Yang mengejutkan para penonton, juru aula menyebut estafet itu bisa ditulis ulang jadi satu mesin tunggal, mesin diam, yang resepnya empat angka sopan: satu, nol, nol, satu. Dua mesin menumpang jadi satu, seperti dua info menumpang satu panah dulu.',
+        },
+        {
+          objek: 'mesinEstafetDua', judul: 'Urutan yang Tak Boleh Ditukar',
+          teks: 'Misi kedua lebih nakal: mesin putar lalu mesin cermin diadu melawan mesin cermin lalu mesin putar, memakai penari yang sama di dua timur satu utara. Hasilnya beda terlihat: estafet pertama membawa penari ke satu timur dua utara, estafet keduanya malah menempar ke satu barat dua selatan. Aula tertawa riang, sebab urutan estafet ternyata punya arti, seperti alamat dua angka dulu yang tak boleh ditukar.',
+        },
+        {
+          objek: 'papanLimaMisiEstafet', judul: 'Papan Lima Misi Pamungkas',
+          teks: 'Kain-kain itu akhirnya dibuka semua, dan lima papan misi berdiri berjajar megah. Misi pertama meminta penduduk menulis petunjuk jalan jadi satu panah lalu menjumlahkan dua panah dengan menyambung ujung ke ekor. Misi kedua meminta campuran dua jalan sampai rumah nenek penenun. Misi ketiga meminta membaca mesin baru hanya dari tujuan dua pemimpinnya. Misi keempat meminta mengecek faktor luas dan menandai mesin gepeng. Misi kelima meminta mencari panah setia lalu menyusun estafet yang bisa memulangkan semua penari.',
+        },
+        {
+          objek: 'tugu', akhir: true, judul: 'Owalah, Segala Mesin Besar Hanyalah Estafet Langkah Kecil!',
+          teks: 'Dini hari aula masih ramai ketika bintang aula akhirnya dinyalakan oleh anak kecil penjaga gudang karpet, juara malam yang menyelesaikan kelima misi tanpa tersendat. Pelajaran aula itu tergantung di spanduknya: mesin boleh diestafetkan jadi satu, urutannya punya arti, dan dua pemimpin, satu faktor luas, dua panah setia cukup untuk membaca mesin sebesar apa pun. Owalah, ternyata begini toh estafet mesin, langkah kecil yang rapi, disambung dengan urutan yang benar. Mudah, bukan?',
+        },
+      ],
+    },
   };
 
   function untuk(topik) {

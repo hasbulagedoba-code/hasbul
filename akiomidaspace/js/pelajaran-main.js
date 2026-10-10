@@ -456,6 +456,16 @@
     kebunPagarPagi: { glif: ['6 x 6', '36', '72'], awan: '#fffdf2', awan2: '#f0f6fa' },
     jalanBukitPagi: { glif: ['A / B', '10 ruas', 'angin'], awan: '#fff3d8', awan2: '#f8e4b4' },
     puncakLerengCuram: { glif: ['?', '0', 'juara'], awan: null, awan2: null },
+    gangKurirPagi: { glif: ['3 & 2', 'satu panah', 'dua info'], awan: '#fffdf2', awan2: '#f0f6fa' },
+    tamanBenderaSore: { glif: ['2x', '0,5x', 'balik!'], awan: '#ffd9b0', awan2: '#f8ccb4' },
+    kampungDuaJalanSiang: { glif: ['jalan A', 'jalan B', '2 & 3'], awan: '#fffdf2', awan2: '#e8f4fa' },
+    panggungPenariMalam: { glif: ['pemimpin', '1 & 2', 'semua ikut'], awan: null, awan2: null },
+    studioCerminSiang: { glif: ['putar 90', 'cermin', '2x'], awan: '#fffdf2', awan2: '#f0f6fa' },
+    gudangKarpetSore: { glif: ['1 petak', 'jadi 6', 'luas x6'], awan: '#ffd9b0', awan2: '#f8ccb4' },
+    pabrikPipihPagi: { glif: ['gepeng', 'segaris', 'luas 0'], awan: '#fffdf2', awan2: '#f0f6fa' },
+    gerbangDuaArahSiang: { glif: ['gerbang A', 'gerbang B', 'pulang utuh'], awan: '#fffdf2', awan2: '#e8f4fa' },
+    menaraKompasSenja: { glif: ['setia', '3 kali', 'arah sama'], awan: '#ffd9b0', awan2: '#f8ccb4' },
+    aulaEstafetMalam: { glif: ['A lalu B', 'urutan', 'misi pamungkas'], awan: null, awan2: null },
   };
   const cfgTema = TEMA_CFG[TEMA_NAMA] || TEMA_CFG.siang;
 
@@ -791,6 +801,16 @@
     kebunPagarPagi: { jenis: 'kilau', warna: '#fff4d8', y: [186, 240], n: 10 },
     jalanBukitPagi: { jenis: 'kilau', warna: '#fff8e0', y: [186, 240], n: 9 },
     puncakLerengCuram: { jenis: 'kedip', warna: '#ffe9a3', y: [16, 180], n: 14 },
+    gangKurirPagi: { jenis: 'kilau', warna: '#fff8e0', y: [186, 240], n: 9 },
+    tamanBenderaSore: { jenis: 'drift', warna: '#ffd8a8', y: [186, 240], n: 9 },
+    kampungDuaJalanSiang: { jenis: 'kilau', warna: '#fff4d8', y: [186, 240], n: 10 },
+    panggungPenariMalam: { jenis: 'kedip', warna: '#ffe9a3', y: [16, 180], n: 16 },
+    studioCerminSiang: { jenis: 'kilau', warna: '#fff8e0', y: [186, 240], n: 10 },
+    gudangKarpetSore: { jenis: 'drift', warna: '#ffd8a8', y: [186, 240], n: 9 },
+    pabrikPipihPagi: { jenis: 'kilau', warna: '#fff4d8', y: [186, 240], n: 9 },
+    gerbangDuaArahSiang: { jenis: 'kilau', warna: '#fff8e0', y: [186, 240], n: 10 },
+    menaraKompasSenja: { jenis: 'drift', warna: '#ffe0b0', y: [186, 240], n: 9 },
+    aulaEstafetMalam: { jenis: 'kedip', warna: '#ffe9a3', y: [16, 180], n: 14 },
   };
   const rand = (a, b) => a + Math.random() * (b - a);
   let amb = [];
@@ -808,7 +828,7 @@
   hidupkanAmb();
 
   let asap = [], daun = [], kilau = [];
-  const PARTIKEL_OBJEK = { api: 'asap', roket: 'asap', roketKecil: 'asap', pohon: 'daun', tugu: 'kilau', konstelasi: 'kilau', delapanMiring: 'kilau', bintangTerbanyak: 'kilau', tekoTuang: 'asap', termometerDidih: 'asap', kotakAjaib: 'kilau', jamRaksasa: 'kilau', lampuFestival: 'kilau', gerbangJuara: 'kilau', kuraLegenda: 'kilau', kunciBalikArah: 'kilau', tiangNolTengah: 'kilau', gerbangLenteraDalam: 'kilau', menaraLiftTambang: 'kilau', stempelLunas: 'kilau', lenteraJurang: 'kilau', termometerGanda: 'kilau', rodaTaliLift: 'kilau', batuKuari: 'asap', paluPecahDua: 'kilau', papanSusunPrima: 'kilau', duaLampionPesta: 'kilau', titikBertemuDuaBelas: 'kilau', papanTanggaBagi: 'kilau', pisauBagiEnam: 'kilau', titianDuaBelas: 'kilau', mejaKasusFaktor: 'kilau', gerbangKoprima: 'kilau', suratTersegelX: 'kilau', kotakKunciMisteri: 'kilau', amplopTerbukaEmpat: 'kilau', barisanKantongLima: 'kilau', kotakGelindingEnam: 'asap', duaPotKaca: 'kilau', isianPotPertama: 'kilau', koinNilaiEmpat: 'kilau', rodaMesinHitung: 'asap', strukHasilSembilan: 'kilau', tanggaKunangEmpat: 'kilau', anakTanggaKeN: 'kilau', papanKurungTerbuka: 'kilau', papanRumusEmpatN: 'kilau', tendaBekalPenuh: 'kilau', petakBungaA: 'daun', petakBungaB: 'daun', ladangTerbaca: 'kilau', papanDuaA3B: 'kilau', menaraLimaMisi: 'kilau', jendelaNilaiHuruf: 'kilau', neracaDagang: 'kilau', timbanganIkan: 'kilau', tigaIkanDiambil: 'kilau', kandangDibukaLima: 'kilau', piringTigaDipindah: 'kilau', jungkatKantong: 'kilau', stempelSahih: 'kilau', buayaTandaLima: 'kilau', panahMenyalaKanan: 'kilau', gelasDuaSatuBatu: 'kilau', balaiLimaMisi: 'kilau', misiDuaSisi: 'kilau', gelasManggaDua: 'kilau', papanDuaTiga: 'kilau', jusKebalik: 'kilau', papanUrutanRasio: 'kilau', mejaPetaGulung: 'kilau', jengkalTunggal: 'kilau', tigaJengkalJalan: 'kilau', papanSkalaSeribu: 'kilau', kantongEnamPermen: 'kilau', notaTigaRibu: 'kilau', permenLimaRatus: 'kilau', papanDuaKios: 'kilau', kartuResepDuaTiga: 'kilau', mangkokGandaEmpat: 'kilau', duaKueSamaRasa: 'kilau', papanProporsiSetia: 'kilau', garisStartKelinci: 'kilau', kelinciEnamPuluh: 'kilau', duaMenitSeratus: 'kilau', papanTempoJarak: 'kilau', kotakDelapanDonat: 'kilau', susunTigaDariEmpat: 'kilau', papanTujuhLima: 'kilau', papanTigaBahasa: 'kilau', rakMobilMainan: 'kilau', penggarisDuaPuluh: 'kilau', mobilJadiRaksasa: 'kilau', papanKaliDuaEmpat: 'kilau', galianEmpatPekerja: 'asap', galianDelapanPekerja: 'asap', papanKaliSilang: 'kilau', papanBerbalikNilai: 'kilau', bukuResepWarung: 'kilau', delapanTamuDatang: 'kilau', semuaIkutGanda: 'kilau', papanTakaranUtuh: 'kilau', petaKarunTerkunci: 'kilau', misiRasioSkala: 'kilau', misiHargaPersen: 'kilau', misiBerbalikPeta: 'kilau', gerbangTerbukaSiku: 'kilau', sikuKayuTukang: 'kilau', pembukaLancipTumpul: 'kilau', papanJenisSudut: 'kilau', dekJembatanLurus: 'kilau', duaSudutBerbagi: 'kilau', sudutSeratusSepuluh: 'kilau', papanSelaluBerdua: 'kilau', kincirPenuh: 'kilau', empatSudutBertemu: 'kilau', sudutSisaKincir: 'kilau', papanPutaranPenuh: 'kilau', segitigaKertasTiga: 'kilau', robekTigaSudut: 'kilau', tempelJadiGaris: 'kilau', papanBuktiRobek: 'kilau', jendelaEmpatSiku: 'kilau', duaSegitigaSahabat: 'kilau', gabungSegiempat: 'kilau', papanDuaKaliSeratus: 'kilau', relSejajarKereta: 'kilau', garisMiringTerpotong: 'kilau', sudutZBerpasangan: 'kilau', papanPolaSejajar: 'kilau', segitigaUbinSiku: 'kilau', kotakSembilanAlas: 'kilau', kotakEnamBelasTinggi: 'kilau', kotakDuaLimaMiring: 'kilau', mejaGoyangEmpat: 'asap', palangDiagonal: 'asap', mejaKokohSiku: 'kilau', papanTigaEmpatLima: 'kilau', tanggaSandingDinding: 'kilau', jarakEnamLangkah: 'kilau', tinggiDelapanPuncak: 'kilau', papanSisiHilang: 'kilau', arenaMisiGeometri: 'kilau', misiBukaanSudut: 'kilau', misiSegitigaPutaran: 'kilau', misiPythagorasHutan: 'kilau', kotakKadoKubus: 'kilau', kartuPersegiEnam: 'kilau', kubusSusunIsi: 'kilau', papanKubusJurus: 'kilau', kardusBalokUtuh: 'kilau', jaringBalokRata: 'kilau', pasangKembarTiga: 'kilau', papanJumlahEnamSisi: 'kilau', laciKosongEnamEmpat: 'kilau', kubusSusuSusun: 'kilau', susunDuaLapis: 'kilau', papanPanjangLebarTinggi: 'kilau', rumahAtapPrisma: 'kilau', kartuSegitigaAlas: 'kilau', geserSegitigaAtap: 'kilau', papanLuasKaliPanjang: 'kilau', kalengSusuRak: 'kilau', duaTutupBundar: 'kilau', benangKelilingEmpat: 'kilau', labelTerbentang: 'kilau', kertasGulungSelimut: 'kilau', gulungDiBotol: 'kilau', papanKelilingTinggi: 'kilau', hitungSelimutEmpat: 'kilau', topiKerucutPasir: 'asap', tabungPasirSama: 'kilau', tuangTigaCangkir: 'asap', bolaSepakTaman: 'kilau', kubusSepuluhSepuluh: 'kilau', botolLiterSatu: 'kilau', gelasBagiEmpat: 'kilau', papanLiterKubik: 'kilau', akuariumTokoSore: 'kilau', ukurAkuariumTigaSisi: 'kilau', emberDuaPuluh: 'kilau', botolSatuSetengah: 'kilau', gudangKardusMalam: 'kilau', misiKardusTigaUkuran: 'kilau', misiKubusMuatKardus: 'kilau', misiTangkiDanKado: 'kilau', patokNolPersimpangan: 'kilau', papanSumbuDuaArah: 'kilau', rumahTitikPertama: 'kilau', papanJalanBertemu: 'kilau', lantaiKotakHalaman: 'kilau', langkahTigaDua: 'kilau', titikTertukarDuaTiga: 'kilau', papanXpuluhanY: 'kilau', alunAlunDuaJalan: 'kilau', lampuEmpatPojok: 'kilau', kiosDaerahSatu: 'kilau', papanTandaKuadran: 'kilau', papanHitamGaleri: 'kilau', kartuAlamatDuaLima: 'kilau', kartuMinusTigaEmpat: 'kilau', kartuNolMinusDua: 'kilau', tabelXyArsip: 'kilau', pakuTigaTitik: 'kilau', benangTertarikLurus: 'kilau', papanGarisLahir: 'kilau', tanggaCuramNaikDua: 'kilau', tanggaLandaiNaikSatu: 'kilau', pendakiDuaJalan: 'asap', papanKemiringanDua: 'kilau', papanWaktuJarakPos: 'kilau', garisDatarBerhenti: 'kilau', garisMiringMelaju: 'kilau', papanCeritaPerjalanan: 'kilau', gerbangSumbuYSenja: 'kilau', titikAwalNolEmpat: 'kilau', garisLewatGerbang: 'kilau', papanRumahAwal: 'kilau', taliGridTaman: 'kilau', petaTamanKertas: 'kilau', benderaXMerah: 'kilau', petiHartaTeralamat: 'asap', menaraSinyalLima: 'kilau', misiTandaiEmpatDua: 'kilau', misiKuadranSinyal: 'kilau', misiGarisTabelAkhir: 'kilau', kandangBurungPagi: 'kilau', papanCatatTujuhHari: 'kilau', barisanAngkaKunjungan: 'kilau', papanPertanyaanSama: 'kilau', gelasTigaBedatinggi: 'kilau', tekoTampungSemua: 'asap', gelasTigaRataEmpat: 'kilau', papanCaraMean: 'kilau', batuLimaBersusun: 'asap', batuKetigaTengah: 'kilau', ujungPergiTengahTetap: 'asap', papanMedianAman: 'kilau', rakSandalSembilan: 'kilau', sandalMerahTumpuk: 'kilau', duaWarnaSisa: 'kilau', papanModusJawara: 'kilau', tongkatPanenTiga: 'kilau', batangPisangSembilan: 'kilau', batangJambuTerpendek: 'kilau', papanBacaSekali: 'kilau', kertasSuhuLimaTitik: 'kilau', garisSuhuNaik: 'kilau', garisSuhuTurun: 'kilau', papanDenyutData: 'kilau', kueBulatPestaMalam: 'kilau', irisanCoklatEmpat: 'kilau', irisanStroberiVanila: 'kilau', papanPenuhSeratus: 'kilau', geraiBuahPagi: 'kilau', rakBarisKolom: 'kilau', papanTabelPanen: 'kilau', papanBacaJudulDulu: 'kilau', ladangKompakTujuh: 'kilau', ladangMenyebarTujuh: 'asap', garisUkurRentang: 'kilau', papanRataSamaBeda: 'kilau', balaiRisetLentera: 'kilau', papanDataLimaHari: 'kilau', misiTotalMeanEnam: 'kilau', misiMedianModus: 'kilau', misiRentangTujuh: 'kilau', gerbangGarisNolSatu: 'kilau', penandaMustahil: 'kilau', penandaPasti: 'kilau', duniaDiAntara: 'kilau', koinLemparKapten: 'kilau', sisiAngkaGambar: 'kilau', papanAdilDua: 'kilau', duaTimSetara: 'kilau', papanUlarTangga: 'kilau', daduEnamSisi: 'kilau', enamKemungkinan: 'kilau', papanMainAdil: 'kilau', matahariTimurPasti: 'kilau', koinBerdiriSulit: 'kilau', garisDuaUjung: 'kilau', papanAntaranya: 'kilau', rodaPutarFestival: 'kilau', irisanMerahLebar: 'kilau', irisanBiruSempit: 'kilau', papanLuasIrisan: 'kilau', kantongKelerengEmpat: 'kilau', kelerengMerahTiga: 'kilau', kelerengBiruSatu: 'kilau', papanTigaPerEmpat: 'kilau', papanSemuaPecahan: 'kilau', kelerengEnamIsi: 'kilau', jumlahSelaluSatu: 'kilau', koinSetengahSetengah: 'kilau', duaKoinLempar: 'kilau', daftarEmpatHasil: 'kilau', hasilCampurDua: 'kilau', papanDaftarDulu: 'kilau', langitAwanGelap: 'kilau', sepuluhLangitLalu: 'kilau', payungSiapSedia: 'kilau', papanBacaTanda: 'kilau', balaiJuaraPeluang: 'kilau', misiKoinDua: 'kilau', misiRodaBiru: 'kilau', misiKelerengLima: 'kilau', misiDuaKoinSeperempat: 'kilau', mesinKotakEmas: 'asap', corongMasukAngka: 'kilau', mulutKeluarEnam: 'kilau', papanMesinTetap: 'kilau', mejaPercobaanPintar: 'kilau', kartuMasukX: 'kilau', kartuKeluarFx: 'kilau', papanBukanKali: 'kilau', mesinGandakanDua: 'asap', tigaMasukEnamKeluar: 'kilau', deretKeluaranTali: 'kilau', papanAturanTetap: 'kilau', mejaTabelDuaKolom: 'kilau', pasanganSatuTiga: 'kilau', pasanganDuaLima: 'kilau', papanSatuTeman: 'kilau', kisiTaliLapangan: 'kilau', patokTitikDuaEmpat: 'kilau', tigaPatokMesin: 'kilau', papanSatuAlamat: 'kilau', jalanMenanjakLurus: 'kilau', titikBerbarisRapi: 'kilau', taliSambungGaris: 'kilau', papanGarisLurus: 'kilau', jembatanNaikTurun: 'kilau', panahMenanjakKanan: 'kilau', panahMenurunKanan: 'kilau', papanGrafikArah: 'kilau', bolaLemparMelengkung: 'kilau', jejakLengkungKertas: 'kilau', lengkungCerminKanan: 'kilau', papanSimetriParabola: 'kilau', papanGrafikEmber: 'kilau', garisNaikKran: 'kilau', garisDatarPenuh: 'kilau', papanBacaCerita: 'kilau', limaLampuMisiMesin: 'kilau', mesinTekaAturan: 'asap', papanTabelTeka: 'kilau', gerbangJuaraLembah: 'kilau', batuBarisEnam: 'kilau', papanJarakSama: 'kilau', jejakLangkahTetap: 'asap', papanRahasiaBarisan: 'kilau', tanggaTambahTiga: 'kilau', papanBedaTetap: 'kilau', batuSukuBerikut: 'kilau', papanCekDuaKali: 'kilau', bijiGandakan: 'daun', tumpukBijiLima: 'kilau', papanLedakanDua: 'kilau', papanSukuKesepuluh: 'kilau', papanTigaNPlusSatu: 'kilau', lompatanRumusCepat: 'asap', lampuSukuSeratus: 'kilau', papanTanpaHitungSatu: 'kilau', apiUnggunCerita: 'asap', kartuPasanganSatuSeratus: 'kilau', papanLimaPuluhPasang: 'kilau', papanHasilLimaNolLima: 'kilau', kotakBijiBaris: 'kilau', papanSatuKurang: 'kilau', gandakanTumpukDua: 'asap', papanRahasiaDuaKali: 'kilau', kursiSusunSegitiga: 'kilau', barisKursiBawah: 'kilau', papanTambahBarisBaru: 'kilau', papanSepuluhKursi: 'kilau', petakSatuSatu: 'daun', petakDuaDua: 'daun', petakTigaTiga: 'daun', papanSisiKaliSisi: 'kilau', bungaKelopakLima: 'daun', papanNadaBerulang: 'kilau', kalenderKabisatEmpat: 'kilau', papanPolaSembunyi: 'kilau', limaApiMisiPuncak: 'asap', tekaBarisanPuncak: 'kilau', papanSukuKeSeratus: 'kilau', gerbangPuncakPola: 'kilau', mesinPangkatTiga: 'asap', papanTulisKaliUlang: 'kilau', kartuPangkatKecil: 'kilau', rakHasilDelapan: 'kilau', kertasLipatPertama: 'kilau', tumpukanLipatDelapan: 'kilau', penggarisTebalTumpuk: 'kilau', papanJalanKeBulan: 'kilau', petakRumputTigaTiga: 'daun', kotakKayuKubik: 'kilau', papanLuasDanIsi: 'kilau', patungBentukSaudara: 'kilau', gerbangRumahEmpatSembilan: 'kilau', jalanLangkahTujuh: 'kilau', papanAkarJalanBalik: 'kilau', lampuPulangPasangan: 'kilau', papanKasusDelapan: 'kilau', kartuSaksiDuaEmpat: 'kilau', lampuJawabanTiga: 'kilau', mejaBerkasLog: 'kilau', anakTanggaNaikPangkat: 'kilau', anakTanggaTurunBagi: 'kilau', pijakanNolSatu: 'kilau', papanLanjutTurunSetengah: 'kilau', cawanKoloniSatu: 'daun', cawanKoloniEmpat: 'daun', papanJamGandakan: 'kilau', papanDenyutSetia: 'kilau', bolaKaretDilepas: 'kilau', garisPantulanLimaPuluh: 'kilau', papanTinggiMenurun: 'kilau', papanKecilTeratur: 'kilau', teleskopArahLangit: 'kilau', papanBintangPuluhDua: 'kilau', penggarisRambutMini: 'kilau', bukuTulisPangkat: 'kilau', limaTanggaMisiPangkat: 'kilau', papanMisiDuaLima: 'kilau', papanMisiTigaEmpat: 'kilau', gerbangJuaraTangga: 'kilau', papanSkorGunung: 'kilau', kotakAngkaBabak: 'kilau', garisBarisKolom: 'kilau', lencanaTertataRapi: 'kilau', lorongPenginapanGunung: 'kilau', pintuKamarLantaiDua: 'kilau', papanUrutanAlamat: 'kilau', kunciTukarAlamat: 'kilau', duaPiringKueSejawat: 'kilau', piringHasilSejawat: 'kilau', kotakUkuranBeda: 'kilau', papanAturanSejawat: 'kilau', papanResepSatuPorsi: 'kilau', resepDigandakanDua: 'kilau', timbanganBahanDobel: 'asap', nampanKueDuaPorsi: 'kilau', barisAnakKiri: 'kilau', kolomAnakKanan: 'kilau', kartuHasilSembilanBelas: 'kilau', papanArahBerbeda: 'kilau', berandaDuaBangku: 'kilau', papanJumlahTujuh: 'kilau', papanSelisihSatu: 'kilau', kueAngkaEmpatTiga: 'kilau', jalanTanjakDuaX: 'kilau', jalanTanggaPlusDua: 'kilau', tiangTitikTemuDuaEmpat: 'kilau', duaJalanSejajarJauh: 'kilau', papanRaporKelasKecil: 'kilau', kotakNilaiTigaAnak: 'kilau', kartuAlamatNilaiSembilan: 'kilau', papanJumlahKolom: 'kilau', tigaKotakHadiahAbc: 'kilau', timbanganPasanganKotak: 'kilau', papanTrikJumlahSemua: 'kilau', lampuIsiTigaKotak: 'kilau', limaPapanMisiAngka: 'kilau', papanMisiAlamatJumlah: 'kilau', papanMisiSapaSistem: 'kilau', gerbangJuaraPapanAngka: 'kilau', gerbangSegitigaRaksasa: 'kilau', dindingTegakLantai: 'kilau', jalanPintasMiring: 'kilau', papanNamaSisi: 'kilau', lorongTigaTangga: 'kilau', papanNaikMaju: 'kilau', tanggaPembagiCuram: 'kilau', gelangCuramAman: 'kilau', menaraTanggaSenja: 'kilau', kartuSinusEmpatLima: 'kilau', kartuCosinusTigaLima: 'kilau', papanKuadratSatu: 'kilau', duaMenaraBanding: 'kilau', papanRasioSetia: 'kilau', tigaUkuranSebaris: 'kilau', kunciSebangun: 'kilau', tongkatBayangan: 'kilau', pohonBayanganDuaBelas: 'kilau', papanPerbandinganBayang: 'kilau', buktiMemukulSama: 'kilau', ayunanTamanBunga: 'kilau', taliNaikTurun: 'kilau', kertasGrafikAyunan: 'kilau', jamAyunanSetia: 'kilau', rodaRaksasaMalam: 'kilau', lampuTepiRoda: 'kilau', papanTinggiLampu: 'kilau', kabinTurunNaik: 'kilau', tigaGerbangSudut: 'kilau', gerbangKembarEmpatLima: 'kilau', gerbangSetengahTigaPuluh: 'kilau', gerbangEnamPuluhTinggi: 'kilau', kolamRiakBulan: 'kilau', kerikilJatuhTengah: 'kilau', puncakKePuncakEmpat: 'kilau', lembahRiakSetia: 'kilau', menaraPengukurMalam: 'kilau', papanMisiSisiTangga: 'kilau', papanMisiBayangMenara: 'kilau', limaPapanMisiJauh: 'kilau', duaPanahBerlawanan: 'kilau', papanBesarArah: 'kilau', patokJarakSepuluh: 'kilau', gerbangArahVektor: 'kilau', jalanZigzagSekolah: 'kilau', panahLurusTikus: 'kilau', segitigaJalanSiku: 'kilau', papanPetunjukPanah: 'kilau', duaPanahBerturut: 'kilau', panahJumlahTunggal: 'kilau', jalurMundurSambung: 'kilau', papanUjungKeUjung: 'kilau', panahKembarSejajar: 'kilau', panahLawanBerbalik: 'kilau', patokKembaliNol: 'kilau', papanAngkaMinus: 'kilau', kisiTaliHalaman: 'daun', kartuVektorTigaDua: 'kilau', kartuVektorDuaTiga: 'kilau', papanUrutanPenting: 'kilau', perahuTepiDermaga: 'kilau', panahArusDeras: 'kilau', pantaiMendaratMiring: 'kilau', papanHitungPaduan: 'kilau', petaKotaDariAtas: 'kilau', menaraTigaLantai: 'kilau', kartuAlamatTigaAngka: 'kilau', burungTerbangAlamat: 'kilau', tanggaTigaArahMenara: 'kilau', liftMenaraTegak: 'asap', papanJarakMiringTiga: 'kilau', lintasanTerbangLurus: 'kilau', susunKubusMeja: 'kilau', fotoDepanBentukL: 'kilau', fotoAtasBentukSudut: 'kilau', fotoSampingBentukSudut: 'kilau', limaPapanMisiPanah: 'kilau', papanMisiPanahArah: 'kilau', papanMisiPanahSambung: 'kilau', gerbangJuaraLintas: 'kilau', tembokCahayaSetengah: 'kilau', papanJejakLangkah: 'kilau', kertasSisaJarang: 'kilau', garisLantaiTotal: 'kilau', tonggakSatuCahaya: 'kilau', tigaPapanSembilan: 'kilau', papanJarakMengecil: 'kilau', lorongMenujuSatu: 'kilau', keretaMenujuPeron: 'asap', papanJadwalDuaArah: 'kilau', titikSepakatTiga: 'kilau', pintuArahCukup: 'kilau', kurvaBatuKebun: 'kilau', papanNilaiKebalikan: 'kilau', pagarAsimtot: 'kilau', bungaDuaSisiPagar: 'daun', taliSatuMeter: 'kilau', guntingEmpatPotong: 'kilau', mistarTotalSatu: 'kilau', gulunganBenangHalus: 'kilau', tanggaDuaAnak: 'kilau', tanggaEmpatAnak: 'kilau', lerengMulusBatu: 'kilau', gerbangKalkulusBukit: 'kilau', lintasanRobotPelari: 'asap', papanJendelaDetik: 'kilau', stopwatchKilas: 'kilau', papanLajuSesaat: 'kilau', telagaBijiPertama: 'kilau', papanPembagiRaksasa: 'kilau', bijiSerbukHalus: 'kilau', permukaanAirTenang: 'kilau', rodaSegiEnam: 'asap', rodaSegiDuaBelas: 'asap', papanKelilingPoligon: 'kilau', rodaLingkaranSempurna: 'kilau', limaPapanMisiMenuju: 'kilau', papanMisiLangkahSembilan: 'kilau', papanMisiPembagiAsimtot: 'kilau', gerbangJuaraMenuju: 'kilau', keranBergantiDeras: 'daun', gelasPengukurAir: 'kilau', papanLajuTigaSaat: 'kilau', jamDetikTaman: 'kilau', papanKilometerEnam: 'kilau', speedometerBergetar: 'kilau', duaMobilRata: 'kilau', jamPerjalananSatu: 'kilau', kurvaBukitHijau: 'kilau', penggarisMenempel: 'kilau', titikTapakCahaya: 'kilau', papanKemiringanSatu: 'kilau', mesinPangkatTurun: 'asap', bolaKuadratLompat: 'kilau', rodaGigiGanjil: 'kilau', papanAturanPangkat: 'kilau', panahNaikHijau: 'kilau', papanBerhentiSesaat: 'kilau', panahTurunMerah: 'kilau', jalanBergelombang: 'kilau', airMancurMelengkung: 'kilau', papanTinggiEmpat: 'kilau', titikPuncakKilau: 'kilau', kolamCipratan: 'kilau', tanggaTigaAnakLaju: 'kilau', papanJarakBola: 'kilau', papanLajuNaikDua: 'kilau', papanPercepatanDua: 'kilau', kurvaSenyumRaksasa: 'kilau', papanLembahNol: 'kilau', titikTerendahKilau: 'kilau', burungLingkarLembah: 'kilau', motorSoreKencang: 'asap', speedometerNaikTetap: 'kilau', papanDetikLima: 'kilau', jalanDesaMelengkung: 'asap', kompasKemiringan: 'kilau', limaPapanMisiLereng: 'kilau', papanPuncakLembah: 'kilau', gerbangJuaraLereng: 'kilau', papanUbinDuaBelas: 'kilau', tumpukanUbinTiga: 'kilau', papanTigaSusun: 'kilau', gerbangJumlahKotak: 'kilau', segitigaKotakPetak: 'kilau', kotakKacaSetengah: 'kilau', papanEnamSetengah: 'kilau', penggarisLuasDelapan: 'kilau', mesinIrisKertas: 'asap', duaPapanTepiKiriKanan: 'kilau', papanKisaranDelapan: 'kilau', timbanganDuaSisiIris: 'kilau', pintuDuaArahLorong: 'kilau', papanLajuLima: 'kilau', papanJarakDuaPuluh: 'kilau', cerminTurunanBalik: 'kilau', lengkungBatuSembilan: 'kilau', kotakTanggaBatuKurva: 'kilau', papanLimaEmpatBelas: 'kilau', papanTepatSembilan: 'kilau', kurirSepedaGrafik: 'kilau', papanLajuKotakDua: 'kilau', layarGrafikLaju: 'kilau', odometerBandingJarak: 'kilau', bukuHurufS: 'kilau', penaBuluhTinta: 'kilau', gulunganSumma: 'kilau', papanTahunTinta: 'kilau', atapTetesanGua: 'kilau', talangKacaMenetes: 'kilau', emberTetesMelebar: 'kilau', papanDetikLimaRatus: 'kilau', teraseringTigaTingkat: 'daun', garisRataKuning: 'kilau', papanLuasSamaRata: 'kilau', papanRataTigaKurva: 'kilau', limaPapanMisiLuas: 'kilau', papanTantanganLuas: 'kilau', papanLembahSembilan: 'kilau', gerbangJuaraLuas: 'kilau', tendaRotiTigaIsi: 'asap', bukuKelimaMeledak: 'asap', pohonKoinEmpatJalur: 'daun', lemariKemejaTiga: 'kilau', papanEnamPadanan: 'kilau', kemejaBaruEmpat: 'kilau', jadwalSeminggu: 'kilau', podiumFotoTiga: 'kilau', papanTigaDuaSatu: 'kilau', albumEnamJepretan: 'kilau', sahabatKeempatDatang: 'kilau', kertasEmpatNama: 'kilau', papanDuaBelasSusunan: 'kilau', bolaPasangEnam: 'kilau', timGiliranMulai: 'kilau', pohonKertasCabang: 'daun', jalurEnamLampu: 'kilau', isianBaruEmpat: 'kilau', rakEmpatBuku: 'kilau', rantaiEmpatTigaDuaSatu: 'kilau', papanDuaEmpatSusunan: 'kilau', duaPapanNilai: 'kilau', timbanganRataTujuh: 'kilau', mistarRentangNol: 'kilau', batangSebaranGanda: 'kilau', susunanSembilanKartu: 'kilau', kartuMedianTujuh: 'kilau', kotakKuartilGanda: 'kilau', papanLimaAngka: 'kilau', duaBingkaiDonat: 'kilau', bingkaiMenjulang: 'kilau', bingkaiDariNol: 'kilau', papanCekSumbu: 'kilau', duaKoinGubuk: 'kilau', papanSatuPerEmpat: 'kilau', pengingatAlatJujur: 'kilau', papanMisiPadanan: 'kilau', papanMisiBarisan: 'kilau', papanMisiPasangan: 'kilau', papanMisiRentang: 'kilau', papanMisiPilah: 'kilau', papanMisiJanji: 'kilau', papanMisiTandingan: 'kilau', papanMisiKontradiksi: 'kilau', rakSuratKota: 'kilau', papanTigaKalimat: 'kilau', stempelBenarSalah: 'kilau', tumpukanPertanyaan: 'kilau', lampuMerahKuning: 'kilau', papanTigaKata: 'kilau', gerbangCahayaGanda: 'kilau', kotakBalikTidak: 'kilau', jendelaTetesanKafe: 'kilau', papanJanjiPayung: 'kilau', payungTungguGantung: 'kilau', jalurBasahPayung: 'kilau', petugasSemprot: 'asap', papanDuaArahKalimat: 'kilau', jalanBasahBerkilau: 'kilau', sepedaLewatCepat: 'kilau', rakAngsaPutih: 'kilau', angsaHitamDatang: 'daun', papanSemuaVsAda: 'kilau', katalogSpesimen: 'kilau', barisanDomino: 'kilau', tombolDorongPertama: 'kilau', papanRantaiAlasan: 'kilau', lampuPabrikMenyala: 'asap', lorongDominoPanjang: 'kilau', kartuPertamaMenyala: 'kilau', mistarJarakSama: 'kilau', ujungLorongTerang: 'kilau', menaraLantaiBanyak: 'kilau', papanAnggapSaja: 'kilau', tanggaNaikSatu: 'kilau', tandaKejanggalan: 'kilau', lapakPapanGaris: 'daun', duaPatokSatuTali: 'kilau', kartuAturanDisepakati: 'kilau', tendaCaturKota: 'kilau', petaHalamanKertas: 'kilau', duaPatokTaman: 'daun', papanTinggiTanah: 'kilau', kartuAlamatDuaAngka: 'kilau', petaKonturGantung: 'kilau', patokSetinggiSepuluh: 'kilau', garisRapatRenggang: 'kilau', jalurLandaiMenepi: 'kilau', gundukanPasirPagi: 'kilau', tanggaUtaraBukit: 'kilau', papanLajuDuaArah: 'kilau', benderaArahBeku: 'kilau', lampuJalanLereng: 'kilau', bolaGulungTurun: 'kilau', panahTercuramPapan: 'kilau', katakMencariKolam: 'kilau', benderaPuncakSemuaTurun: 'kilau', dasarLembahSemuaNaik: 'kilau', pelanaTanahKuda: 'kilau', papanTigaCekArah: 'kilau', kolamKacaTamanKota: 'kilau', jaringKotakPermukaan: 'kilau', kolomAirSatuKotak: 'kilau', papanJumlahSemuaKolom: 'kilau', sepedaDiDudukan: 'kilau', gigiBesarGigiKecil: 'kilau', pedalBerputarRantai: 'kilau', papanJarakSejam: 'kilau', rempahPanahAngin: 'daun', balonTerbangMenjauh: 'kilau', kincirPusaranBunga: 'kilau', papanDuaUjiAngin: 'kilau', kebunPersegiKelilingDuaEmpat: 'daun', bandingKebunPanjang: 'daun', kebunTepiSungaiTigaSisi: 'kilau', papanPersegiJuara: 'kilau', duaJalanSatuPuncak: 'daun', karungKurirBerat: 'kilau', anginMenyilangJalan: 'kilau', papanKerjaSamaTinggi: 'kilau', };
+  const PARTIKEL_OBJEK = { api: 'asap', roket: 'asap', roketKecil: 'asap', pohon: 'daun', tugu: 'kilau', konstelasi: 'kilau', delapanMiring: 'kilau', bintangTerbanyak: 'kilau', tekoTuang: 'asap', termometerDidih: 'asap', kotakAjaib: 'kilau', jamRaksasa: 'kilau', lampuFestival: 'kilau', gerbangJuara: 'kilau', kuraLegenda: 'kilau', kunciBalikArah: 'kilau', tiangNolTengah: 'kilau', gerbangLenteraDalam: 'kilau', menaraLiftTambang: 'kilau', stempelLunas: 'kilau', lenteraJurang: 'kilau', termometerGanda: 'kilau', rodaTaliLift: 'kilau', batuKuari: 'asap', paluPecahDua: 'kilau', papanSusunPrima: 'kilau', duaLampionPesta: 'kilau', titikBertemuDuaBelas: 'kilau', papanTanggaBagi: 'kilau', pisauBagiEnam: 'kilau', titianDuaBelas: 'kilau', mejaKasusFaktor: 'kilau', gerbangKoprima: 'kilau', suratTersegelX: 'kilau', kotakKunciMisteri: 'kilau', amplopTerbukaEmpat: 'kilau', barisanKantongLima: 'kilau', kotakGelindingEnam: 'asap', duaPotKaca: 'kilau', isianPotPertama: 'kilau', koinNilaiEmpat: 'kilau', rodaMesinHitung: 'asap', strukHasilSembilan: 'kilau', tanggaKunangEmpat: 'kilau', anakTanggaKeN: 'kilau', papanKurungTerbuka: 'kilau', papanRumusEmpatN: 'kilau', tendaBekalPenuh: 'kilau', petakBungaA: 'daun', petakBungaB: 'daun', ladangTerbaca: 'kilau', papanDuaA3B: 'kilau', menaraLimaMisi: 'kilau', jendelaNilaiHuruf: 'kilau', neracaDagang: 'kilau', timbanganIkan: 'kilau', tigaIkanDiambil: 'kilau', kandangDibukaLima: 'kilau', piringTigaDipindah: 'kilau', jungkatKantong: 'kilau', stempelSahih: 'kilau', buayaTandaLima: 'kilau', panahMenyalaKanan: 'kilau', gelasDuaSatuBatu: 'kilau', balaiLimaMisi: 'kilau', misiDuaSisi: 'kilau', gelasManggaDua: 'kilau', papanDuaTiga: 'kilau', jusKebalik: 'kilau', papanUrutanRasio: 'kilau', mejaPetaGulung: 'kilau', jengkalTunggal: 'kilau', tigaJengkalJalan: 'kilau', papanSkalaSeribu: 'kilau', kantongEnamPermen: 'kilau', notaTigaRibu: 'kilau', permenLimaRatus: 'kilau', papanDuaKios: 'kilau', kartuResepDuaTiga: 'kilau', mangkokGandaEmpat: 'kilau', duaKueSamaRasa: 'kilau', papanProporsiSetia: 'kilau', garisStartKelinci: 'kilau', kelinciEnamPuluh: 'kilau', duaMenitSeratus: 'kilau', papanTempoJarak: 'kilau', kotakDelapanDonat: 'kilau', susunTigaDariEmpat: 'kilau', papanTujuhLima: 'kilau', papanTigaBahasa: 'kilau', rakMobilMainan: 'kilau', penggarisDuaPuluh: 'kilau', mobilJadiRaksasa: 'kilau', papanKaliDuaEmpat: 'kilau', galianEmpatPekerja: 'asap', galianDelapanPekerja: 'asap', papanKaliSilang: 'kilau', papanBerbalikNilai: 'kilau', bukuResepWarung: 'kilau', delapanTamuDatang: 'kilau', semuaIkutGanda: 'kilau', papanTakaranUtuh: 'kilau', petaKarunTerkunci: 'kilau', misiRasioSkala: 'kilau', misiHargaPersen: 'kilau', misiBerbalikPeta: 'kilau', gerbangTerbukaSiku: 'kilau', sikuKayuTukang: 'kilau', pembukaLancipTumpul: 'kilau', papanJenisSudut: 'kilau', dekJembatanLurus: 'kilau', duaSudutBerbagi: 'kilau', sudutSeratusSepuluh: 'kilau', papanSelaluBerdua: 'kilau', kincirPenuh: 'kilau', empatSudutBertemu: 'kilau', sudutSisaKincir: 'kilau', papanPutaranPenuh: 'kilau', segitigaKertasTiga: 'kilau', robekTigaSudut: 'kilau', tempelJadiGaris: 'kilau', papanBuktiRobek: 'kilau', jendelaEmpatSiku: 'kilau', duaSegitigaSahabat: 'kilau', gabungSegiempat: 'kilau', papanDuaKaliSeratus: 'kilau', relSejajarKereta: 'kilau', garisMiringTerpotong: 'kilau', sudutZBerpasangan: 'kilau', papanPolaSejajar: 'kilau', segitigaUbinSiku: 'kilau', kotakSembilanAlas: 'kilau', kotakEnamBelasTinggi: 'kilau', kotakDuaLimaMiring: 'kilau', mejaGoyangEmpat: 'asap', palangDiagonal: 'asap', mejaKokohSiku: 'kilau', papanTigaEmpatLima: 'kilau', tanggaSandingDinding: 'kilau', jarakEnamLangkah: 'kilau', tinggiDelapanPuncak: 'kilau', papanSisiHilang: 'kilau', arenaMisiGeometri: 'kilau', misiBukaanSudut: 'kilau', misiSegitigaPutaran: 'kilau', misiPythagorasHutan: 'kilau', kotakKadoKubus: 'kilau', kartuPersegiEnam: 'kilau', kubusSusunIsi: 'kilau', papanKubusJurus: 'kilau', kardusBalokUtuh: 'kilau', jaringBalokRata: 'kilau', pasangKembarTiga: 'kilau', papanJumlahEnamSisi: 'kilau', laciKosongEnamEmpat: 'kilau', kubusSusuSusun: 'kilau', susunDuaLapis: 'kilau', papanPanjangLebarTinggi: 'kilau', rumahAtapPrisma: 'kilau', kartuSegitigaAlas: 'kilau', geserSegitigaAtap: 'kilau', papanLuasKaliPanjang: 'kilau', kalengSusuRak: 'kilau', duaTutupBundar: 'kilau', benangKelilingEmpat: 'kilau', labelTerbentang: 'kilau', kertasGulungSelimut: 'kilau', gulungDiBotol: 'kilau', papanKelilingTinggi: 'kilau', hitungSelimutEmpat: 'kilau', topiKerucutPasir: 'asap', tabungPasirSama: 'kilau', tuangTigaCangkir: 'asap', bolaSepakTaman: 'kilau', kubusSepuluhSepuluh: 'kilau', botolLiterSatu: 'kilau', gelasBagiEmpat: 'kilau', papanLiterKubik: 'kilau', akuariumTokoSore: 'kilau', ukurAkuariumTigaSisi: 'kilau', emberDuaPuluh: 'kilau', botolSatuSetengah: 'kilau', gudangKardusMalam: 'kilau', misiKardusTigaUkuran: 'kilau', misiKubusMuatKardus: 'kilau', misiTangkiDanKado: 'kilau', patokNolPersimpangan: 'kilau', papanSumbuDuaArah: 'kilau', rumahTitikPertama: 'kilau', papanJalanBertemu: 'kilau', lantaiKotakHalaman: 'kilau', langkahTigaDua: 'kilau', titikTertukarDuaTiga: 'kilau', papanXpuluhanY: 'kilau', alunAlunDuaJalan: 'kilau', lampuEmpatPojok: 'kilau', kiosDaerahSatu: 'kilau', papanTandaKuadran: 'kilau', papanHitamGaleri: 'kilau', kartuAlamatDuaLima: 'kilau', kartuMinusTigaEmpat: 'kilau', kartuNolMinusDua: 'kilau', tabelXyArsip: 'kilau', pakuTigaTitik: 'kilau', benangTertarikLurus: 'kilau', papanGarisLahir: 'kilau', tanggaCuramNaikDua: 'kilau', tanggaLandaiNaikSatu: 'kilau', pendakiDuaJalan: 'asap', papanKemiringanDua: 'kilau', papanWaktuJarakPos: 'kilau', garisDatarBerhenti: 'kilau', garisMiringMelaju: 'kilau', papanCeritaPerjalanan: 'kilau', gerbangSumbuYSenja: 'kilau', titikAwalNolEmpat: 'kilau', garisLewatGerbang: 'kilau', papanRumahAwal: 'kilau', taliGridTaman: 'kilau', petaTamanKertas: 'kilau', benderaXMerah: 'kilau', petiHartaTeralamat: 'asap', menaraSinyalLima: 'kilau', misiTandaiEmpatDua: 'kilau', misiKuadranSinyal: 'kilau', misiGarisTabelAkhir: 'kilau', kandangBurungPagi: 'kilau', papanCatatTujuhHari: 'kilau', barisanAngkaKunjungan: 'kilau', papanPertanyaanSama: 'kilau', gelasTigaBedatinggi: 'kilau', tekoTampungSemua: 'asap', gelasTigaRataEmpat: 'kilau', papanCaraMean: 'kilau', batuLimaBersusun: 'asap', batuKetigaTengah: 'kilau', ujungPergiTengahTetap: 'asap', papanMedianAman: 'kilau', rakSandalSembilan: 'kilau', sandalMerahTumpuk: 'kilau', duaWarnaSisa: 'kilau', papanModusJawara: 'kilau', tongkatPanenTiga: 'kilau', batangPisangSembilan: 'kilau', batangJambuTerpendek: 'kilau', papanBacaSekali: 'kilau', kertasSuhuLimaTitik: 'kilau', garisSuhuNaik: 'kilau', garisSuhuTurun: 'kilau', papanDenyutData: 'kilau', kueBulatPestaMalam: 'kilau', irisanCoklatEmpat: 'kilau', irisanStroberiVanila: 'kilau', papanPenuhSeratus: 'kilau', geraiBuahPagi: 'kilau', rakBarisKolom: 'kilau', papanTabelPanen: 'kilau', papanBacaJudulDulu: 'kilau', ladangKompakTujuh: 'kilau', ladangMenyebarTujuh: 'asap', garisUkurRentang: 'kilau', papanRataSamaBeda: 'kilau', balaiRisetLentera: 'kilau', papanDataLimaHari: 'kilau', misiTotalMeanEnam: 'kilau', misiMedianModus: 'kilau', misiRentangTujuh: 'kilau', gerbangGarisNolSatu: 'kilau', penandaMustahil: 'kilau', penandaPasti: 'kilau', duniaDiAntara: 'kilau', koinLemparKapten: 'kilau', sisiAngkaGambar: 'kilau', papanAdilDua: 'kilau', duaTimSetara: 'kilau', papanUlarTangga: 'kilau', daduEnamSisi: 'kilau', enamKemungkinan: 'kilau', papanMainAdil: 'kilau', matahariTimurPasti: 'kilau', koinBerdiriSulit: 'kilau', garisDuaUjung: 'kilau', papanAntaranya: 'kilau', rodaPutarFestival: 'kilau', irisanMerahLebar: 'kilau', irisanBiruSempit: 'kilau', papanLuasIrisan: 'kilau', kantongKelerengEmpat: 'kilau', kelerengMerahTiga: 'kilau', kelerengBiruSatu: 'kilau', papanTigaPerEmpat: 'kilau', papanSemuaPecahan: 'kilau', kelerengEnamIsi: 'kilau', jumlahSelaluSatu: 'kilau', koinSetengahSetengah: 'kilau', duaKoinLempar: 'kilau', daftarEmpatHasil: 'kilau', hasilCampurDua: 'kilau', papanDaftarDulu: 'kilau', langitAwanGelap: 'kilau', sepuluhLangitLalu: 'kilau', payungSiapSedia: 'kilau', papanBacaTanda: 'kilau', balaiJuaraPeluang: 'kilau', misiKoinDua: 'kilau', misiRodaBiru: 'kilau', misiKelerengLima: 'kilau', misiDuaKoinSeperempat: 'kilau', mesinKotakEmas: 'asap', corongMasukAngka: 'kilau', mulutKeluarEnam: 'kilau', papanMesinTetap: 'kilau', mejaPercobaanPintar: 'kilau', kartuMasukX: 'kilau', kartuKeluarFx: 'kilau', papanBukanKali: 'kilau', mesinGandakanDua: 'asap', tigaMasukEnamKeluar: 'kilau', deretKeluaranTali: 'kilau', papanAturanTetap: 'kilau', mejaTabelDuaKolom: 'kilau', pasanganSatuTiga: 'kilau', pasanganDuaLima: 'kilau', papanSatuTeman: 'kilau', kisiTaliLapangan: 'kilau', patokTitikDuaEmpat: 'kilau', tigaPatokMesin: 'kilau', papanSatuAlamat: 'kilau', jalanMenanjakLurus: 'kilau', titikBerbarisRapi: 'kilau', taliSambungGaris: 'kilau', papanGarisLurus: 'kilau', jembatanNaikTurun: 'kilau', panahMenanjakKanan: 'kilau', panahMenurunKanan: 'kilau', papanGrafikArah: 'kilau', bolaLemparMelengkung: 'kilau', jejakLengkungKertas: 'kilau', lengkungCerminKanan: 'kilau', papanSimetriParabola: 'kilau', papanGrafikEmber: 'kilau', garisNaikKran: 'kilau', garisDatarPenuh: 'kilau', papanBacaCerita: 'kilau', limaLampuMisiMesin: 'kilau', mesinTekaAturan: 'asap', papanTabelTeka: 'kilau', gerbangJuaraLembah: 'kilau', batuBarisEnam: 'kilau', papanJarakSama: 'kilau', jejakLangkahTetap: 'asap', papanRahasiaBarisan: 'kilau', tanggaTambahTiga: 'kilau', papanBedaTetap: 'kilau', batuSukuBerikut: 'kilau', papanCekDuaKali: 'kilau', bijiGandakan: 'daun', tumpukBijiLima: 'kilau', papanLedakanDua: 'kilau', papanSukuKesepuluh: 'kilau', papanTigaNPlusSatu: 'kilau', lompatanRumusCepat: 'asap', lampuSukuSeratus: 'kilau', papanTanpaHitungSatu: 'kilau', apiUnggunCerita: 'asap', kartuPasanganSatuSeratus: 'kilau', papanLimaPuluhPasang: 'kilau', papanHasilLimaNolLima: 'kilau', kotakBijiBaris: 'kilau', papanSatuKurang: 'kilau', gandakanTumpukDua: 'asap', papanRahasiaDuaKali: 'kilau', kursiSusunSegitiga: 'kilau', barisKursiBawah: 'kilau', papanTambahBarisBaru: 'kilau', papanSepuluhKursi: 'kilau', petakSatuSatu: 'daun', petakDuaDua: 'daun', petakTigaTiga: 'daun', papanSisiKaliSisi: 'kilau', bungaKelopakLima: 'daun', papanNadaBerulang: 'kilau', kalenderKabisatEmpat: 'kilau', papanPolaSembunyi: 'kilau', limaApiMisiPuncak: 'asap', tekaBarisanPuncak: 'kilau', papanSukuKeSeratus: 'kilau', gerbangPuncakPola: 'kilau', mesinPangkatTiga: 'asap', papanTulisKaliUlang: 'kilau', kartuPangkatKecil: 'kilau', rakHasilDelapan: 'kilau', kertasLipatPertama: 'kilau', tumpukanLipatDelapan: 'kilau', penggarisTebalTumpuk: 'kilau', papanJalanKeBulan: 'kilau', petakRumputTigaTiga: 'daun', kotakKayuKubik: 'kilau', papanLuasDanIsi: 'kilau', patungBentukSaudara: 'kilau', gerbangRumahEmpatSembilan: 'kilau', jalanLangkahTujuh: 'kilau', papanAkarJalanBalik: 'kilau', lampuPulangPasangan: 'kilau', papanKasusDelapan: 'kilau', kartuSaksiDuaEmpat: 'kilau', lampuJawabanTiga: 'kilau', mejaBerkasLog: 'kilau', anakTanggaNaikPangkat: 'kilau', anakTanggaTurunBagi: 'kilau', pijakanNolSatu: 'kilau', papanLanjutTurunSetengah: 'kilau', cawanKoloniSatu: 'daun', cawanKoloniEmpat: 'daun', papanJamGandakan: 'kilau', papanDenyutSetia: 'kilau', bolaKaretDilepas: 'kilau', garisPantulanLimaPuluh: 'kilau', papanTinggiMenurun: 'kilau', papanKecilTeratur: 'kilau', teleskopArahLangit: 'kilau', papanBintangPuluhDua: 'kilau', penggarisRambutMini: 'kilau', bukuTulisPangkat: 'kilau', limaTanggaMisiPangkat: 'kilau', papanMisiDuaLima: 'kilau', papanMisiTigaEmpat: 'kilau', gerbangJuaraTangga: 'kilau', papanSkorGunung: 'kilau', kotakAngkaBabak: 'kilau', garisBarisKolom: 'kilau', lencanaTertataRapi: 'kilau', lorongPenginapanGunung: 'kilau', pintuKamarLantaiDua: 'kilau', papanUrutanAlamat: 'kilau', kunciTukarAlamat: 'kilau', duaPiringKueSejawat: 'kilau', piringHasilSejawat: 'kilau', kotakUkuranBeda: 'kilau', papanAturanSejawat: 'kilau', papanResepSatuPorsi: 'kilau', resepDigandakanDua: 'kilau', timbanganBahanDobel: 'asap', nampanKueDuaPorsi: 'kilau', barisAnakKiri: 'kilau', kolomAnakKanan: 'kilau', kartuHasilSembilanBelas: 'kilau', papanArahBerbeda: 'kilau', berandaDuaBangku: 'kilau', papanJumlahTujuh: 'kilau', papanSelisihSatu: 'kilau', kueAngkaEmpatTiga: 'kilau', jalanTanjakDuaX: 'kilau', jalanTanggaPlusDua: 'kilau', tiangTitikTemuDuaEmpat: 'kilau', duaJalanSejajarJauh: 'kilau', papanRaporKelasKecil: 'kilau', kotakNilaiTigaAnak: 'kilau', kartuAlamatNilaiSembilan: 'kilau', papanJumlahKolom: 'kilau', tigaKotakHadiahAbc: 'kilau', timbanganPasanganKotak: 'kilau', papanTrikJumlahSemua: 'kilau', lampuIsiTigaKotak: 'kilau', limaPapanMisiAngka: 'kilau', papanMisiAlamatJumlah: 'kilau', papanMisiSapaSistem: 'kilau', gerbangJuaraPapanAngka: 'kilau', gerbangSegitigaRaksasa: 'kilau', dindingTegakLantai: 'kilau', jalanPintasMiring: 'kilau', papanNamaSisi: 'kilau', lorongTigaTangga: 'kilau', papanNaikMaju: 'kilau', tanggaPembagiCuram: 'kilau', gelangCuramAman: 'kilau', menaraTanggaSenja: 'kilau', kartuSinusEmpatLima: 'kilau', kartuCosinusTigaLima: 'kilau', papanKuadratSatu: 'kilau', duaMenaraBanding: 'kilau', papanRasioSetia: 'kilau', tigaUkuranSebaris: 'kilau', kunciSebangun: 'kilau', tongkatBayangan: 'kilau', pohonBayanganDuaBelas: 'kilau', papanPerbandinganBayang: 'kilau', buktiMemukulSama: 'kilau', ayunanTamanBunga: 'kilau', taliNaikTurun: 'kilau', kertasGrafikAyunan: 'kilau', jamAyunanSetia: 'kilau', rodaRaksasaMalam: 'kilau', lampuTepiRoda: 'kilau', papanTinggiLampu: 'kilau', kabinTurunNaik: 'kilau', tigaGerbangSudut: 'kilau', gerbangKembarEmpatLima: 'kilau', gerbangSetengahTigaPuluh: 'kilau', gerbangEnamPuluhTinggi: 'kilau', kolamRiakBulan: 'kilau', kerikilJatuhTengah: 'kilau', puncakKePuncakEmpat: 'kilau', lembahRiakSetia: 'kilau', menaraPengukurMalam: 'kilau', papanMisiSisiTangga: 'kilau', papanMisiBayangMenara: 'kilau', limaPapanMisiJauh: 'kilau', duaPanahBerlawanan: 'kilau', papanBesarArah: 'kilau', patokJarakSepuluh: 'kilau', gerbangArahVektor: 'kilau', jalanZigzagSekolah: 'kilau', panahLurusTikus: 'kilau', segitigaJalanSiku: 'kilau', papanPetunjukPanah: 'kilau', duaPanahBerturut: 'kilau', panahJumlahTunggal: 'kilau', jalurMundurSambung: 'kilau', papanUjungKeUjung: 'kilau', panahKembarSejajar: 'kilau', panahLawanBerbalik: 'kilau', patokKembaliNol: 'kilau', papanAngkaMinus: 'kilau', kisiTaliHalaman: 'daun', kartuVektorTigaDua: 'kilau', kartuVektorDuaTiga: 'kilau', papanUrutanPenting: 'kilau', perahuTepiDermaga: 'kilau', panahArusDeras: 'kilau', pantaiMendaratMiring: 'kilau', papanHitungPaduan: 'kilau', petaKotaDariAtas: 'kilau', menaraTigaLantai: 'kilau', kartuAlamatTigaAngka: 'kilau', burungTerbangAlamat: 'kilau', tanggaTigaArahMenara: 'kilau', liftMenaraTegak: 'asap', papanJarakMiringTiga: 'kilau', lintasanTerbangLurus: 'kilau', susunKubusMeja: 'kilau', fotoDepanBentukL: 'kilau', fotoAtasBentukSudut: 'kilau', fotoSampingBentukSudut: 'kilau', limaPapanMisiPanah: 'kilau', papanMisiPanahArah: 'kilau', papanMisiPanahSambung: 'kilau', gerbangJuaraLintas: 'kilau', tembokCahayaSetengah: 'kilau', papanJejakLangkah: 'kilau', kertasSisaJarang: 'kilau', garisLantaiTotal: 'kilau', tonggakSatuCahaya: 'kilau', tigaPapanSembilan: 'kilau', papanJarakMengecil: 'kilau', lorongMenujuSatu: 'kilau', keretaMenujuPeron: 'asap', papanJadwalDuaArah: 'kilau', titikSepakatTiga: 'kilau', pintuArahCukup: 'kilau', kurvaBatuKebun: 'kilau', papanNilaiKebalikan: 'kilau', pagarAsimtot: 'kilau', bungaDuaSisiPagar: 'daun', taliSatuMeter: 'kilau', guntingEmpatPotong: 'kilau', mistarTotalSatu: 'kilau', gulunganBenangHalus: 'kilau', tanggaDuaAnak: 'kilau', tanggaEmpatAnak: 'kilau', lerengMulusBatu: 'kilau', gerbangKalkulusBukit: 'kilau', lintasanRobotPelari: 'asap', papanJendelaDetik: 'kilau', stopwatchKilas: 'kilau', papanLajuSesaat: 'kilau', telagaBijiPertama: 'kilau', papanPembagiRaksasa: 'kilau', bijiSerbukHalus: 'kilau', permukaanAirTenang: 'kilau', rodaSegiEnam: 'asap', rodaSegiDuaBelas: 'asap', papanKelilingPoligon: 'kilau', rodaLingkaranSempurna: 'kilau', limaPapanMisiMenuju: 'kilau', papanMisiLangkahSembilan: 'kilau', papanMisiPembagiAsimtot: 'kilau', gerbangJuaraMenuju: 'kilau', keranBergantiDeras: 'daun', gelasPengukurAir: 'kilau', papanLajuTigaSaat: 'kilau', jamDetikTaman: 'kilau', papanKilometerEnam: 'kilau', speedometerBergetar: 'kilau', duaMobilRata: 'kilau', jamPerjalananSatu: 'kilau', kurvaBukitHijau: 'kilau', penggarisMenempel: 'kilau', titikTapakCahaya: 'kilau', papanKemiringanSatu: 'kilau', mesinPangkatTurun: 'asap', bolaKuadratLompat: 'kilau', rodaGigiGanjil: 'kilau', papanAturanPangkat: 'kilau', panahNaikHijau: 'kilau', papanBerhentiSesaat: 'kilau', panahTurunMerah: 'kilau', jalanBergelombang: 'kilau', airMancurMelengkung: 'kilau', papanTinggiEmpat: 'kilau', titikPuncakKilau: 'kilau', kolamCipratan: 'kilau', tanggaTigaAnakLaju: 'kilau', papanJarakBola: 'kilau', papanLajuNaikDua: 'kilau', papanPercepatanDua: 'kilau', kurvaSenyumRaksasa: 'kilau', papanLembahNol: 'kilau', titikTerendahKilau: 'kilau', burungLingkarLembah: 'kilau', motorSoreKencang: 'asap', speedometerNaikTetap: 'kilau', papanDetikLima: 'kilau', jalanDesaMelengkung: 'asap', kompasKemiringan: 'kilau', limaPapanMisiLereng: 'kilau', papanPuncakLembah: 'kilau', gerbangJuaraLereng: 'kilau', papanUbinDuaBelas: 'kilau', tumpukanUbinTiga: 'kilau', papanTigaSusun: 'kilau', gerbangJumlahKotak: 'kilau', segitigaKotakPetak: 'kilau', kotakKacaSetengah: 'kilau', papanEnamSetengah: 'kilau', penggarisLuasDelapan: 'kilau', mesinIrisKertas: 'asap', duaPapanTepiKiriKanan: 'kilau', papanKisaranDelapan: 'kilau', timbanganDuaSisiIris: 'kilau', pintuDuaArahLorong: 'kilau', papanLajuLima: 'kilau', papanJarakDuaPuluh: 'kilau', cerminTurunanBalik: 'kilau', lengkungBatuSembilan: 'kilau', kotakTanggaBatuKurva: 'kilau', papanLimaEmpatBelas: 'kilau', papanTepatSembilan: 'kilau', kurirSepedaGrafik: 'kilau', papanLajuKotakDua: 'kilau', layarGrafikLaju: 'kilau', odometerBandingJarak: 'kilau', bukuHurufS: 'kilau', penaBuluhTinta: 'kilau', gulunganSumma: 'kilau', papanTahunTinta: 'kilau', atapTetesanGua: 'kilau', talangKacaMenetes: 'kilau', emberTetesMelebar: 'kilau', papanDetikLimaRatus: 'kilau', teraseringTigaTingkat: 'daun', garisRataKuning: 'kilau', papanLuasSamaRata: 'kilau', papanRataTigaKurva: 'kilau', limaPapanMisiLuas: 'kilau', papanTantanganLuas: 'kilau', papanLembahSembilan: 'kilau', gerbangJuaraLuas: 'kilau', tendaRotiTigaIsi: 'asap', bukuKelimaMeledak: 'asap', pohonKoinEmpatJalur: 'daun', lemariKemejaTiga: 'kilau', papanEnamPadanan: 'kilau', kemejaBaruEmpat: 'kilau', jadwalSeminggu: 'kilau', podiumFotoTiga: 'kilau', papanTigaDuaSatu: 'kilau', albumEnamJepretan: 'kilau', sahabatKeempatDatang: 'kilau', kertasEmpatNama: 'kilau', papanDuaBelasSusunan: 'kilau', bolaPasangEnam: 'kilau', timGiliranMulai: 'kilau', pohonKertasCabang: 'daun', jalurEnamLampu: 'kilau', isianBaruEmpat: 'kilau', rakEmpatBuku: 'kilau', rantaiEmpatTigaDuaSatu: 'kilau', papanDuaEmpatSusunan: 'kilau', duaPapanNilai: 'kilau', timbanganRataTujuh: 'kilau', mistarRentangNol: 'kilau', batangSebaranGanda: 'kilau', susunanSembilanKartu: 'kilau', kartuMedianTujuh: 'kilau', kotakKuartilGanda: 'kilau', papanLimaAngka: 'kilau', duaBingkaiDonat: 'kilau', bingkaiMenjulang: 'kilau', bingkaiDariNol: 'kilau', papanCekSumbu: 'kilau', duaKoinGubuk: 'kilau', papanSatuPerEmpat: 'kilau', pengingatAlatJujur: 'kilau', papanMisiPadanan: 'kilau', papanMisiBarisan: 'kilau', papanMisiPasangan: 'kilau', papanMisiRentang: 'kilau', papanMisiPilah: 'kilau', papanMisiJanji: 'kilau', papanMisiTandingan: 'kilau', papanMisiKontradiksi: 'kilau', rakSuratKota: 'kilau', papanTigaKalimat: 'kilau', stempelBenarSalah: 'kilau', tumpukanPertanyaan: 'kilau', lampuMerahKuning: 'kilau', papanTigaKata: 'kilau', gerbangCahayaGanda: 'kilau', kotakBalikTidak: 'kilau', jendelaTetesanKafe: 'kilau', papanJanjiPayung: 'kilau', payungTungguGantung: 'kilau', jalurBasahPayung: 'kilau', petugasSemprot: 'asap', papanDuaArahKalimat: 'kilau', jalanBasahBerkilau: 'kilau', sepedaLewatCepat: 'kilau', rakAngsaPutih: 'kilau', angsaHitamDatang: 'daun', papanSemuaVsAda: 'kilau', katalogSpesimen: 'kilau', barisanDomino: 'kilau', tombolDorongPertama: 'kilau', papanRantaiAlasan: 'kilau', lampuPabrikMenyala: 'asap', lorongDominoPanjang: 'kilau', kartuPertamaMenyala: 'kilau', mistarJarakSama: 'kilau', ujungLorongTerang: 'kilau', menaraLantaiBanyak: 'kilau', papanAnggapSaja: 'kilau', tanggaNaikSatu: 'kilau', tandaKejanggalan: 'kilau', lapakPapanGaris: 'daun', duaPatokSatuTali: 'kilau', kartuAturanDisepakati: 'kilau', tendaCaturKota: 'kilau', petaHalamanKertas: 'kilau', duaPatokTaman: 'daun', papanTinggiTanah: 'kilau', kartuAlamatDuaAngka: 'kilau', petaKonturGantung: 'kilau', patokSetinggiSepuluh: 'kilau', garisRapatRenggang: 'kilau', jalurLandaiMenepi: 'kilau', gundukanPasirPagi: 'kilau', tanggaUtaraBukit: 'kilau', papanLajuDuaArah: 'kilau', benderaArahBeku: 'kilau', lampuJalanLereng: 'kilau', bolaGulungTurun: 'kilau', panahTercuramPapan: 'kilau', katakMencariKolam: 'kilau', benderaPuncakSemuaTurun: 'kilau', dasarLembahSemuaNaik: 'kilau', pelanaTanahKuda: 'kilau', papanTigaCekArah: 'kilau', kolamKacaTamanKota: 'kilau', jaringKotakPermukaan: 'kilau', kolomAirSatuKotak: 'kilau', papanJumlahSemuaKolom: 'kilau', sepedaDiDudukan: 'kilau', gigiBesarGigiKecil: 'kilau', pedalBerputarRantai: 'kilau', papanJarakSejam: 'kilau', rempahPanahAngin: 'daun', balonTerbangMenjauh: 'kilau', kincirPusaranBunga: 'kilau', papanDuaUjiAngin: 'kilau', kebunPersegiKelilingDuaEmpat: 'daun', bandingKebunPanjang: 'daun', kebunTepiSungaiTigaSisi: 'kilau', papanPersegiJuara: 'kilau', duaJalanSatuPuncak: 'daun', karungKurirBerat: 'kilau', anginMenyilangJalan: 'kilau', papanKerjaSamaTinggi: 'kilau', papanPetunjukLangkah: 'kilau', kurirBawaPaket: 'kilau', jejakPanahGang: 'kilau', papanJalanTersambung: 'kilau', tiangBenderaTaman: 'daun', benderaPanjang: 'kilau', benderaSetengah: 'kilau', benderaBalikArah: 'kilau', papanKampungDuaJalan: 'daun', jalanTimurKampung: 'kilau', jalanUtaraKampung: 'kilau', rumahTujuanKampung: 'kilau', panggungLampuMalam: 'kilau', pemimpinSatuPanggung: 'kilau', pemimpinDuaPanggung: 'kilau', penariIkutBarisan: 'kilau', cerminStudioTinggi: 'kilau', penariPutarSembilan: 'kilau', karpetStudioRegang: 'kilau', papanResepStudio: 'kilau', karpetSatuPetak: 'kilau', mesinRegangKarpet: 'asap', karpetEnamPetak: 'kilau', papanLuasDigandakan: 'kilau', mesinGepengPabrik: 'asap', adonanBulatPabrik: 'kilau', adonanPipihPabrik: 'kilau', papanSemuaSegaris: 'kilau', gerbangMajuMundur: 'kilau', kurirMasukGerbang: 'kilau', kurirPulangGerbang: 'kilau', papanTulisPulang: 'kilau', menaraKompasTinggi: 'kilau', jarumKompasSetia: 'kilau', mesinTarikMenara: 'kilau', papanKekencangan: 'kilau', aulaLimaMesin: 'kilau', mesinEstafetSatu: 'kilau', mesinEstafetDua: 'kilau', papanLimaMisiEstafet: 'kilau', };
 
   const keys = { kiri: false, kanan: false };
   addEventListener('keydown', e => {
@@ -7150,6 +7170,265 @@
       tanah(c, '#9ec470', '#8eb460', '#b0d480');
       jalan(c, '#9a9284', '#7e786a', '#8a8274', '#aaa294');
       bungaDi(c, '#ffd166', '#f2b8cc');
+    }
+
+    else if (TEMA_NAMA === 'gangKurirPagi') {
+      P(c, 0, 0, W, 46, '#cfe4f0');
+      P(c, 0, 46, W, 46, '#c2dcec');
+      P(c, 0, 92, W, 46, '#b6d4e8');
+      P(c, 0, 138, W, 44, '#aacce4');
+      lingkaran(c, 76, 32, 13, '#fff8e0');
+      lingkaran(c, 76, 32, 9, '#ffe9a3');
+      P(c, 120, 92, 70, 90, '#c8b49a');
+      P(c, 120, 92, 70, 6, '#b09c82');
+      P(c, 132, 110, 16, 24, '#f0e8d8');
+      P(c, 156, 110, 16, 24, '#f0e8d8');
+      P(c, 132, 146, 16, 24, '#d8ecf4');
+      P(c, 156, 146, 16, 24, '#d8ecf4');
+      P(c, 300, 88, 74, 94, '#cbb8a0');
+      P(c, 300, 88, 74, 6, '#b3a088');
+      P(c, 312, 106, 14, 22, '#f0e8d8');
+      P(c, 334, 106, 14, 22, '#f0e8d8');
+      P(c, 356, 106, 12, 22, '#f0e8d8');
+      P(c, 312, 142, 14, 22, '#e8dcc8');
+      P(c, 334, 142, 14, 22, '#e8dcc8');
+      P(c, 214, 100, 4, 40, '#75583f');
+      P(c, 218, 100, 4, 40, '#8a6a54');
+      P(c, 214, 96, 60, 5, '#6e5236');
+      for (let i = 0; i < 4; i++) {
+        P(c, 222 + i * 12, 100 + (i % 2) * 3, 8, 7, i % 2 ? '#ffe9a3' : '#f2b8cc');
+      }
+      tanah(c, '#b8b0a0', '#a8a090', '#c8c0b0');
+      jalan(c, '#9a9284', '#7e786a', '#8a8274', '#aaa294');
+    }
+
+    else if (TEMA_NAMA === 'tamanBenderaSore') {
+      P(c, 0, 0, W, 46, '#ffc890');
+      P(c, 0, 46, W, 46, '#f8bc82');
+      P(c, 0, 92, W, 46, '#f0ac74');
+      P(c, 0, 138, W, 44, '#e89c6a');
+      lingkaran(c, 408, 96, 15, '#ffd166');
+      lingkaran(c, 408, 96, 11, '#ff9d4a');
+      for (let i = 0; i < 5; i++) {
+        const fx = 40 + i * 96;
+        P(c, fx, 108, 4, 74, '#75583f');
+        P(c, fx + 4, 112 + (i % 2) * 8, 34, 12, i % 2 ? '#ff9d9d' : '#ffd166');
+        P(c, fx + 4, 124 + (i % 2) * 8, 34, 2, i % 2 ? '#d87a7a' : '#d8a83a');
+      }
+      P(c, 20, 128, 4, 54, '#6e5236');
+      lingkaran(c, 22, 124, 12, '#3f8f4f');
+      P(c, 452, 128, 4, 54, '#6e5236');
+      lingkaran(c, 454, 124, 11, '#357a43');
+      tanah(c, '#8fae70', '#7fa05f', '#a2be85');
+      jalan(c, '#9a9284', '#7e786a', '#8a8274', '#aaa294');
+      bungaDi(c, '#ffd166', '#ff9d9d');
+    }
+
+    else if (TEMA_NAMA === 'kampungDuaJalanSiang') {
+      P(c, 0, 0, W, 46, '#a8d8f0');
+      P(c, 0, 46, W, 46, '#b0dcf4');
+      P(c, 0, 92, W, 46, '#b8e0f8');
+      P(c, 0, 138, W, 44, '#c0e4fa');
+      lingkaran(c, 420, 28, 12, '#ffe9a3');
+      lingkaran(c, 420, 28, 8, '#ffd166');
+      P(c, 24, 104, 56, 78, '#c8b49a');
+      P(c, 24, 104, 56, 5, '#b09c82');
+      P(c, 36, 120, 14, 20, '#f0e8d8');
+      P(c, 56, 120, 14, 20, '#f0e8d8');
+      P(c, 46, 84, 12, 22, '#b04a3a');
+      P(c, 44, 80, 16, 6, '#8a3a2e');
+      P(c, 400, 110, 58, 72, '#c4b096');
+      P(c, 400, 110, 58, 5, '#ac987e');
+      P(c, 412, 126, 14, 20, '#f0e8d8');
+      P(c, 432, 126, 14, 20, '#f0e8d8');
+      P(c, 424, 90, 11, 22, '#b04a3a');
+      P(c, 422, 86, 15, 6, '#8a3a2e');
+      for (let i = 0; i < 6; i++) {
+        P(c, 96 + i * 52, 140 + (i % 2) * 6, 3, 42, '#8a7a5c');
+        lingkaran(c, 98 + i * 52, 136 + (i % 2) * 6, 9, '#4fa55e');
+        lingkaran(c, 94 + i * 52, 142 + (i % 2) * 6, 6, '#3a7a44');
+      }
+      tanah(c, '#a2c478', '#92b468', '#b4d488');
+      jalan(c, '#c8b088', '#a8906c', '#d4c098', '#e0cca4');
+    }
+
+    else if (TEMA_NAMA === 'panggungPenariMalam') {
+      P(c, 0, 0, W, 46, '#1a1e38');
+      P(c, 0, 46, W, 46, '#1e2240');
+      P(c, 0, 92, W, 46, '#222650');
+      P(c, 0, 138, W, 44, '#262a58');
+      for (let i = 0; i < 10; i++) lingkaran(c, 18 + i * 48, 18 + (i % 3) * 14, 1.5, '#eef2ff');
+      P(c, 60, 100, 360, 82, '#5a3448');
+      P(c, 60, 100, 360, 8, '#6a3c54');
+      for (let i = 0; i < 11; i++) P(c, 68 + i * 34, 112, 16, 64, i % 2 ? '#6e4058' : '#663a50');
+      P(c, 60, 172, 360, 10, '#7a4a5e');
+      for (let i = 0; i < 6; i++) {
+        const lx = 84 + i * 62;
+        P(c, lx, 84, 2, 10, '#3a3048');
+        ctx.globalAlpha = 0.75;
+        lingkaran(c, lx + 1, 100, 5, '#ffd166');
+        ctx.globalAlpha = 1;
+      }
+      tanah(c, '#3a3450', '#322c48', '#443c5c');
+      jalan(c, '#453e58', '#3a3450', '#403a54', '#504864');
+    }
+
+    else if (TEMA_NAMA === 'studioCerminSiang') {
+      P(c, 0, 0, W, 46, '#dce8f0');
+      P(c, 0, 46, W, 46, '#d4e2ec');
+      P(c, 0, 92, W, 46, '#ccdce8');
+      P(c, 0, 138, W, 44, '#c4d6e4');
+      lingkaran(c, 64, 30, 11, '#fff8e0');
+      lingkaran(c, 64, 30, 7, '#ffe9a3');
+      P(c, 100, 80, 60, 102, '#b8c8d4');
+      P(c, 106, 86, 48, 90, '#e4eef4');
+      P(c, 106, 86, 48, 2, '#f8fcfe');
+      P(c, 320, 80, 60, 102, '#b8c8d4');
+      P(c, 326, 86, 48, 90, '#e4eef4');
+      P(c, 326, 86, 48, 2, '#f8fcfe');
+      P(c, 190, 96, 100, 86, '#a8b8c4');
+      P(c, 196, 102, 88, 74, '#dce8f0');
+      for (let i = 0; i < 5; i++) P(c, 196 + i * 18, 102, 2, 74, '#c8d8e2');
+      P(c, 190, 96, 100, 4, '#8a9aa8');
+      tanah(c, '#c4b8a0', '#b4a890', '#d4c8b0');
+      jalan(c, '#b0a898', '#948c7c', '#c0b8a8', '#d0c8b8');
+    }
+
+    else if (TEMA_NAMA === 'gudangKarpetSore') {
+      P(c, 0, 0, W, 46, '#ffc890');
+      P(c, 0, 46, W, 46, '#f8bc82');
+      P(c, 0, 92, W, 46, '#f0ac74');
+      P(c, 0, 138, W, 44, '#e89c6a');
+      lingkaran(c, 402, 88, 14, '#ffd166');
+      lingkaran(c, 402, 88, 10, '#ff9d4a');
+      P(c, 40, 76, 140, 8, '#75583f');
+      P(c, 44, 84, 6, 98, '#6e5236');
+      P(c, 170, 84, 6, 98, '#6e5236');
+      P(c, 300, 76, 130, 8, '#75583f');
+      P(c, 304, 84, 6, 98, '#6e5236');
+      P(c, 424, 84, 6, 98, '#6e5236');
+      for (let i = 0; i < 4; i++) {
+        lingkaran(c, 66 + i * 30, 168, 11, ['#b04a3a', '#4a7ab0', '#c49a3a', '#5a9a5a'][i]);
+        lingkaran(c, 66 + i * 30, 168, 6, ['#8a3a2e', '#3a5e8a', '#9a7a2e', '#437a43'][i]);
+      }
+      for (let i = 0; i < 3; i++) {
+        lingkaran(c, 344 + i * 32, 168, 10, ['#8a5aa0', '#c46a5a', '#3a8a8a'][i]);
+        lingkaran(c, 344 + i * 32, 168, 5, ['#6a4280', '#9a4e42', '#2a6a6a'][i]);
+      }
+      tanah(c, '#b8a488', '#a89478', '#c8b498');
+      jalan(c, '#8a8274', '#746c60', '#9a9284', '#aaa294');
+    }
+
+    else if (TEMA_NAMA === 'pabrikPipihPagi') {
+      P(c, 0, 0, W, 46, '#cfe4f0');
+      P(c, 0, 46, W, 46, '#c2dcec');
+      P(c, 0, 92, W, 46, '#b6d4e8');
+      P(c, 0, 138, W, 44, '#aacce4');
+      lingkaran(c, 60, 30, 12, '#fff8e0');
+      lingkaran(c, 60, 30, 8, '#ffe9a3');
+      P(c, 96, 60, 10, 30, '#8a8078');
+      P(c, 86, 56, 30, 8, '#757068');
+      for (let i = 0; i < 3; i++) {
+        ctx.globalAlpha = 0.4 - i * 0.1;
+        lingkaran(c, 101, 48 - i * 9, 5 + i * 2, '#f0f4fa');
+        ctx.globalAlpha = 1;
+      }
+      P(c, 170, 96, 150, 86, '#a8a49c');
+      P(c, 170, 96, 150, 6, '#8a8680');
+      P(c, 186, 112, 34, 26, '#d8e2ea');
+      P(c, 270, 112, 34, 26, '#d8e2ea');
+      P(c, 186, 148, 34, 26, '#d8e2ea');
+      P(c, 270, 148, 34, 26, '#d8e2ea');
+      P(c, 236, 130, 18, 52, '#6e6860');
+      P(c, 228, 124, 34, 8, '#555048');
+      P(c, 348, 106, 66, 76, '#b8a48c');
+      P(c, 356, 116, 12, 18, '#f0e8d8');
+      P(c, 374, 116, 12, 18, '#f0e8d8');
+      P(c, 392, 116, 10, 18, '#f0e8d8');
+      tanah(c, '#b0aa9c', '#a09a8c', '#c0baac');
+      jalan(c, '#8a8478', '#746e62', '#9a9488', '#aaa498');
+    }
+
+    else if (TEMA_NAMA === 'gerbangDuaArahSiang') {
+      P(c, 0, 0, W, 46, '#a8d8f0');
+      P(c, 0, 46, W, 46, '#b0dcf4');
+      P(c, 0, 92, W, 46, '#b8e0f8');
+      P(c, 0, 138, W, 44, '#c0e4fa');
+      lingkaran(c, 74, 30, 12, '#ffe9a3');
+      lingkaran(c, 74, 30, 8, '#ffd166');
+      P(c, 130, 96, 16, 86, '#b5716b');
+      P(c, 344, 96, 16, 86, '#96555a');
+      for (let y = -6; y <= 6; y++) {
+        const yy = 96 + y, ww = Math.round(54 * Math.sqrt(Math.max(0, 1 - (y * y) / 81)));
+        P(c, Math.round(243 - ww / 2), yy, ww, 2, y % 2 === 0 ? '#c8807a' : '#b5716b');
+      }
+      P(c, 124, 92, 24, 6, '#7a4a4e');
+      P(c, 342, 92, 24, 6, '#7a4a4e');
+      P(c, 40, 120, 52, 62, '#c8b49a');
+      P(c, 40, 120, 52, 5, '#b09c82');
+      P(c, 52, 134, 12, 18, '#f0e8d8');
+      P(c, 70, 134, 12, 18, '#f0e8d8');
+      P(c, 396, 120, 52, 62, '#c4b096');
+      P(c, 396, 120, 52, 5, '#ac987e');
+      P(c, 408, 134, 12, 18, '#f0e8d8');
+      P(c, 426, 134, 12, 18, '#f0e8d8');
+      tanah(c, '#a8c090', '#98b080', '#b8d0a0');
+      jalan(c, '#c4b8a4', '#a89c88', '#d4c8b4', '#e0d4c0');
+    }
+
+    else if (TEMA_NAMA === 'menaraKompasSenja') {
+      P(c, 0, 0, W, 46, '#f4a878');
+      P(c, 0, 46, W, 46, '#ec9868');
+      P(c, 0, 92, W, 46, '#e08858');
+      P(c, 0, 138, W, 44, '#d4784c');
+      lingkaran(c, 92, 104, 15, '#ffd166');
+      lingkaran(c, 92, 104, 11, '#ff9d4a');
+      P(c, 300, 60, 90, 122, '#8a6a58');
+      P(c, 300, 60, 90, 7, '#755a4a');
+      P(c, 312, 78, 66, 40, '#e8d4b8');
+      P(c, 330, 46, 30, 16, '#755a4a');
+      P(c, 328, 38, 34, 10, '#8a6a58');
+      for (let i = 0; i < 4; i++) {
+        const wx = 345 + Math.round(Math.cos(i * Math.PI / 2) * 14);
+        const wy = 98 + Math.round(Math.sin(i * Math.PI / 2) * 14);
+        P(c, wx - 2, wy - 2, 4, 4, i % 2 === 0 ? '#ffd166' : '#e89c6a');
+      }
+      lingkaran(c, 345, 98, 5, '#c4846a');
+      P(c, 60, 120, 4, 62, '#75583f');
+      lingkaran(c, 62, 116, 11, '#3f8f4f');
+      P(c, 440, 124, 4, 58, '#75583f');
+      lingkaran(c, 442, 120, 10, '#357a43');
+      tanah(c, '#9aa878', '#8a9858', '#aab888');
+      jalan(c, '#9a9284', '#7e786a', '#8a8274', '#aaa294');
+    }
+
+    else if (TEMA_NAMA === 'aulaEstafetMalam') {
+      P(c, 0, 0, W, 46, '#1c2040');
+      P(c, 0, 46, W, 46, '#202448');
+      P(c, 0, 92, W, 46, '#242850');
+      P(c, 0, 138, W, 44, '#282c58');
+      for (let i = 0; i < 12; i++) lingkaran(c, 16 + i * 40, 14 + (i % 4) * 10, 1.5, '#eef2ff');
+      for (let i = 0; i < 5; i++) {
+        const bx = 44 + i * 100;
+        P(c, bx, 104, 64, 78, '#3a3460');
+        P(c, bx, 104, 64, 5, '#463e70');
+        P(c, bx + 8, 116, 20, 26, '#ffe9a3');
+        P(c, bx + 34, 116, 20, 26, '#5ee89b');
+        P(c, bx + 8, 150, 48, 14, '#2a2650');
+        ctx.globalAlpha = 0.5;
+        lingkaran(c, bx + 18, 129, 4, '#fff8e0');
+        lingkaran(c, bx + 44, 129, 4, '#b8ffd8');
+        ctx.globalAlpha = 1;
+      }
+      for (let i = 0; i < 6; i++) {
+        const lx = 60 + i * 74;
+        P(c, lx, 74, 2, 8, '#3a3048');
+        ctx.globalAlpha = 0.7;
+        lingkaran(c, lx + 1, 88, 4, '#ffd166');
+        ctx.globalAlpha = 1;
+      }
+      tanah(c, '#3e3858', '#363050', '#484262');
+      jalan(c, '#4a4464', '#3e3858', '#443e5e', '#544e70');
     }
     return cv;
   }
@@ -20953,6 +21232,487 @@
     teksPx(ctx, 'BEDA', x - 9, 190, '#2a7fc0', 3);
     teksPx(ctx, '2 BARIS', x - 17, 146, '#75583f', 2);
   }
+  function gambarPapanPetunjukLangkah(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 204, 6, 40, '#75583f');
+    P(ctx, x - 30, 168, 60, 38, '#8a6a54');
+    P(ctx, x - 34, 162, 68, 8, '#6e5236');
+    const goyang = Math.round(Math.sin(t * 1.8));
+    P(ctx, x - 22 + goyang, 176, 18, 8, '#ffe9a3');
+    P(ctx, x - 4 + goyang, 174, 6, 12, '#ffd166');
+    teksPx(ctx, '3-2', x + 8, 176, '#4a3a24', 4);
+    teksPx(ctx, 'TIMUR-UTARA', x - 26, 152, '#75583f', 2);
+  }
+  function gambarKurirBawaPaket(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    const jalan = Math.round(Math.sin(t * 2.2) * 3);
+    P(ctx, x - 8 + jalan, 200, 16, 20, '#4a7ab0');
+    lingkaran(ctx, x + jalan, 194, 7, '#f2b8cc');
+    P(ctx, x - 4 + jalan, 214, 5, 12, '#3a5a8a');
+    P(ctx, x + 3 + jalan, 214, 5, 12, '#3a5a8a');
+    P(ctx, x + 4 + jalan, 202, 12, 10, '#c49a3a');
+    P(ctx, x + 8 + jalan, 200, 4, 4, '#8a6a2a');
+    const ay = 168 + Math.round(Math.sin(t * 3) * 2);
+    P(ctx, x - 2, ay, 16, 5, '#5ee89b');
+    P(ctx, x + 10, ay - 2, 6, 9, '#5ee89b');
+    teksPx(ctx, 'PAKET', x - 12, 152, '#75583f', 3);
+  }
+  function gambarJejakPanahGang(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 30, 226, 24, 5, '#4a7ab0');
+    P(ctx, x - 6, 224, 6, 9, '#4a7ab0');
+    const nyala = Math.sin(t * 2.4) > 0;
+    P(ctx, x - 6, 214, 16, 5, nyala ? '#ffd166' : '#d8a83a');
+    P(ctx, x + 10, 212, 6, 9, nyala ? '#ffd166' : '#d8a83a');
+    P(ctx, x - 30, 206, 46, 3, nyala ? '#5ee89b' : '#3a8a4a');
+    P(ctx, x + 16, 203, 6, 9, nyala ? '#5ee89b' : '#3a8a4a');
+    for (let i = 0; i < 4; i++) P(ctx, x - 28 + i * 10, 236, 3, 2, '#8a8078');
+    teksPx(ctx, 'EKOR-KEPALA', x - 26, 186, '#75583f', 2);
+  }
+  function gambarPapanJalanTersambung(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 206, 7, 38, '#75583f');
+    P(ctx, x - 34, 170, 68, 38, '#8a6a54');
+    P(ctx, x - 36, 164, 72, 8, '#6e5236');
+    const mana = Math.floor(t * 1.6) % 2;
+    P(ctx, x - 26, 178, 20, 8, mana ? '#ffd166' : '#f0e8d8');
+    teksPx(ctx, '+', x - 4, 176, '#4a3a24', 5);
+    P(ctx, x + 2, 178, 20, 8, mana ? '#f0e8d8' : '#ffd166');
+    P(ctx, x - 12, 192, 24, 6, '#5ee89b');
+    teksPx(ctx, 'SAMA', x - 9, 192, '#0d3a22', 3);
+    teksPx(ctx, 'JUMLAH', x - 14, 150, '#75583f', 3);
+  }
+  function gambarTiangBenderaTaman(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 2, 162, 5, 82, '#9aa4ac');
+    lingkaran(ctx, x, 160, 4, '#ffd166');
+    const lebar = 26 + Math.round(Math.sin(t * 2.1) * 3);
+    P(ctx, x + 3, 170, lebar, 3, '#b04a3a');
+    P(ctx, x + 3, 173, lebar, 14, '#c85a4a');
+    P(ctx, x + 3, 187, lebar, 3, '#8a3a2e');
+    teksPx(ctx, '3 x 1', x - 8, 148, '#75583f', 3);
+  }
+  function gambarBenderaPanjang(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 158, 6, 86, '#9aa4ac');
+    lingkaran(ctx, x, 156, 5, '#ffd166');
+    const lebar = 44 + Math.round(Math.sin(t * 1.9) * 4);
+    P(ctx, x + 3, 166, lebar, 3, '#4a7ab0');
+    P(ctx, x + 3, 169, lebar, 22, '#5a8ac0');
+    P(ctx, x + 3, 191, lebar, 3, '#3a5e8a');
+    teksPx(ctx, '6 x 2', x - 10, 144, '#75583f', 3);
+  }
+  function gambarBenderaSetengah(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 2, 166, 5, 78, '#9aa4ac');
+    lingkaran(ctx, x, 164, 4, '#ffd166');
+    const lebar = 14 + Math.round(Math.sin(t * 2.3) * 2);
+    P(ctx, x + 3, 180, lebar, 2, '#5a9a5a');
+    P(ctx, x + 3, 182, lebar, 12, '#6aaa6a');
+    P(ctx, x + 3, 194, lebar, 2, '#437a43');
+    teksPx(ctx, '1,5 x 0,5', x - 18, 150, '#75583f', 3);
+  }
+  function gambarBenderaBalikArah(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x + 5, 162, 5, 82, '#9aa4ac');
+    lingkaran(ctx, x + 7, 160, 4, '#ffd166');
+    const lebar = 26 + Math.round(Math.sin(t * 2.1) * 3);
+    P(ctx, x + 2 - lebar, 170, lebar, 3, '#8a5aa0');
+    P(ctx, x + 2 - lebar, 173, lebar, 14, '#9a6ab0');
+    P(ctx, x + 2 - lebar, 187, lebar, 3, '#6a4280');
+    P(ctx, x - 30, 216, 14, 3, '#ff9d9d');
+    P(ctx, x - 34, 213, 5, 9, '#ff9d9d');
+    teksPx(ctx, 'MUNDUR', x - 18, 148, '#75583f', 3);
+  }
+  function gambarPapanKampungDuaJalan(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 208, 7, 36, '#75583f');
+    P(ctx, x - 36, 168, 72, 42, '#8a6a54');
+    P(ctx, x - 38, 162, 76, 8, '#6e5236');
+    const mana = Math.floor(t * 1.5) % 2;
+    P(ctx, x - 28, 176, 56, 12, mana ? '#ffd166' : '#e8dcc8');
+    P(ctx, x - 28, 192, 56, 12, mana ? '#e8dcc8' : '#d8ecf4');
+    teksPx(ctx, 'JALAN A', x - 18, 179, '#4a3a24', 3);
+    teksPx(ctx, 'JALAN B', x - 18, 195, '#4a3a24', 3);
+    teksPx(ctx, 'CAMPUR', x - 16, 148, '#75583f', 3);
+  }
+  function gambarJalanTimurKampung(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 32, 224, 52, 10, '#c8b088');
+    P(ctx, x - 32, 224, 52, 2, '#a8906c');
+    P(ctx, x + 16, 221, 8, 16, '#ffd166');
+    P(ctx, x + 24, 226, 6, 6, '#ffd166');
+    const goyang = Math.round(Math.sin(t * 2));
+    for (let i = 0; i < 2; i++) P(ctx, x - 26 + i * 14, 218 + goyang, 8, 3, '#f0e8d8');
+    P(ctx, x - 12, 182, 26, 22, '#8a6a54');
+    P(ctx, x - 16, 178, 34, 6, '#6e5236');
+    lingkaran(ctx, x, 174, 7, '#c85a4a');
+    teksPx(ctx, 'A x 2', x - 10, 160, '#75583f', 4);
+  }
+  function gambarJalanUtaraKampung(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 6, 190, 12, 54, '#c8b088');
+    P(ctx, x - 8, 190, 16, 2, '#a8906c');
+    P(ctx, x - 4, 182, 8, 8, '#ffd166');
+    P(ctx, x - 14, 186, 5, 6, '#ffd166');
+    const goyang = Math.round(Math.sin(t * 2) * 2);
+    P(ctx, x - 20, 200 + goyang, 3, 12, '#5a8ac0');
+    P(ctx, x + 18, 200 - goyang, 3, 12, '#5a9a5a');
+    P(ctx, x - 24, 214 + goyang, 3, 12, '#5a8ac0');
+    P(ctx, x + 14, 214 - goyang, 3, 12, '#5a9a5a');
+    teksPx(ctx, '2A + 3B', x - 18, 162, '#75583f', 4);
+  }
+  function gambarRumahTujuanKampung(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 26, 200, 52, 44, '#c8b49a');
+    P(ctx, x - 30, 184, 60, 18, '#c85a4a');
+    P(ctx, x - 30, 184, 60, 3, '#e87a6a');
+    P(ctx, x - 8, 218, 16, 26, '#6e5236');
+    P(ctx, x - 20, 210, 12, 12, '#ffe9a3');
+    P(ctx, x + 8, 210, 12, 12, '#ffe9a3');
+    const nyala = Math.sin(t * 2.2) > 0;
+    P(ctx, x - 34, 226, 14, 10, nyala ? '#f0e8d8' : '#e0d8c8');
+    teksPx(ctx, '7-8', x - 32, 218, '#b04a4a', 3);
+    teksPx(ctx, 'TUJUAN', x - 16, 168, '#75583f', 3);
+  }
+  function gambarPanggungLampuMalam(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 34, 176, 68, 68, '#5a3448');
+    P(ctx, x - 34, 176, 68, 7, '#6a3c54');
+    for (let i = 0; i < 4; i++) P(ctx, x - 30 + i * 17, 186, 11, 48, i % 2 ? '#6e4058' : '#663a50');
+    const klip = Math.floor(t * 2) % 2;
+    ctx.globalAlpha = klip ? 0.9 : 0.4;
+    lingkaran(ctx, x - 24, 182, 4, '#ffd166');
+    lingkaran(ctx, x + 24, 182, 4, '#ffd166');
+    ctx.globalAlpha = 1;
+    P(ctx, x - 14, 208, 28, 20, '#8a5aa0');
+    lingkaran(ctx, x, 204, 6, '#f2b8cc');
+    teksPx(ctx, 'PANGGUNG', x - 20, 158, '#f0e8d8', 3);
+  }
+  function gambarPemimpinSatuPanggung(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 30, 236, 26, 6, '#c8b49a');
+    const goyang = Math.round(Math.sin(t * 2.6) * 2);
+    P(ctx, x - 22 + goyang, 208, 12, 26, '#ffd166');
+    lingkaran(ctx, x - 16 + goyang, 202, 6, '#f2b8cc');
+    P(ctx, x + 4, 214, 22, 5, '#5ee89b');
+    P(ctx, x + 26, 211, 6, 11, '#5ee89b');
+    teksPx(ctx, 'x2', x + 10, 196, '#3a8a4a', 4);
+    teksPx(ctx, 'PIMPIN E', x - 20, 182, '#75583f', 3);
+  }
+  function gambarPemimpinDuaPanggung(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 30, 236, 26, 6, '#c8b49a');
+    const goyang = Math.round(Math.sin(t * 2.4 + 1) * 2);
+    P(ctx, x - 22 + goyang, 208, 12, 26, '#5a8ac0');
+    lingkaran(ctx, x - 16 + goyang, 202, 6, '#f2b8cc');
+    P(ctx, x + 4, 208, 20, 5, '#ff9d9d');
+    P(ctx, x + 10, 194, 5, 16, '#ff9d9d');
+    P(ctx, x + 4, 196, 18, 5, '#ff9d9d');
+    teksPx(ctx, '+3', x + 12, 182, '#b04a4a', 4);
+    teksPx(ctx, 'PIMPIN U', x - 20, 168, '#75583f', 3);
+  }
+  function gambarPenariIkutBarisan(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    const langkah = Math.sin(t * 2.2) * 4;
+    for (let i = 0; i < 3; i++) {
+      const dx = x - 24 + i * 18 + langkah;
+      P(ctx, dx, 210 + (i % 2) * 4, 10, 22, ['#ffd166', '#5a8ac0', '#5a9a5a'][i]);
+      lingkaran(ctx, dx + 5, 204 + (i % 2) * 4, 5, '#f2b8cc');
+    }
+    P(ctx, x + 34, 216, 6, 16, '#ff9d9d');
+    P(ctx, x + 34, 212, 6, 4, '#ff9d9d');
+    teksPx(ctx, 'IKUT!', x - 10, 186, '#75583f', 4);
+  }
+  function gambarCerminStudioTinggi(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 18, 160, 36, 84, '#8a9aa8');
+    P(ctx, x - 14, 164, 28, 76, '#e4eef4');
+    const kilau = Math.floor(t * 3) % 4;
+    P(ctx, x - 14 + kilau * 7, 164, 2, 76, '#f8fcfe');
+    P(ctx, x - 6, 196, 8, 24, '#b8c8d4');
+    lingkaran(ctx, x - 2, 190, 5, '#f2b8cc');
+    P(ctx, x - 4, 200, 6, 18, '#ffd166');
+    teksPx(ctx, 'CERMIN', x - 15, 144, '#75583f', 3);
+  }
+  function gambarPenariPutarSembilan(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 28, 236, 56, 6, '#c8b49a');
+    const gaya = Math.floor(t * 2) % 4;
+    const px = [0, 10, 0, -10][gaya], py = [0, -4, 0, -4][gaya];
+    P(ctx, x - 6 + px, 210 + py, 12, 24, '#ffd166');
+    lingkaran(ctx, x + py / 2, 204 + py, 6, '#f2b8cc');
+    P(ctx, x + 2 + px, 216 + py, 10, 3, gaya % 2 ? '#5a8ac0' : '#5a9a5a');
+    teksPx(ctx, '90', x + 12, 188, '#75583f', 4);
+  }
+  function gambarKarpetStudioRegang(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    const regang = 1 + (Math.sin(t * 1.8) > 0 ? 1 : 0);
+    const w = 20 * regang;
+    P(ctx, x - w / 2, 196, w, 34, '#b04a3a');
+    P(ctx, x - w / 2, 196, w, 4, '#c85a4a');
+    P(ctx, x - w / 2, 226, w, 4, '#8a3a2e');
+    for (let i = 0; i < regang * 2; i++) P(ctx, x - w / 2 + 3 + i * (w - 6) / Math.max(1, regang * 2 - 1), 208, 3, 3, '#ffd166');
+    P(ctx, x - 34, 240, 10, 3, '#8a8078');
+    teksPx(ctx, regang === 2 ? '2x' : '1x', x + 18, 200, '#75583f', 5);
+  }
+  function gambarPapanResepStudio(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 206, 7, 38, '#75583f');
+    P(ctx, x - 34, 166, 68, 44, '#8a6a54');
+    P(ctx, x - 36, 160, 72, 8, '#6e5236');
+    const mana = Math.floor(t * 2) % 3;
+    const kartu = ['#ffd166', '#d8ecf4', '#f2b8cc'];
+    for (let i = 0; i < 3; i++) {
+      P(ctx, x - 28 + i * 20, 174, 16, 24, i === mana ? kartu[i] : '#e8dcc8');
+      P(ctx, x - 28 + i * 20, 174, 16, 3, i === mana ? '#fffdf2' : '#d4c4a8');
+    }
+    teksPx(ctx, '4 ANGKA', x - 17, 148, '#75583f', 3);
+  }
+  function gambarKarpetSatuPetak(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 14, 206, 28, 28, '#b04a3a');
+    P(ctx, x - 14, 206, 28, 3, '#c85a4a');
+    P(ctx, x - 14, 231, 28, 3, '#8a3a2e');
+    const denyut = Math.sin(t * 2.4) > 0;
+    P(ctx, x - 2, 206, 2, 28, denyut ? '#ffd166' : '#d8a83a');
+    P(ctx, x - 14, 218, 28, 2, denyut ? '#ffd166' : '#d8a83a');
+    P(ctx, x - 30, 226, 12, 10, '#c8b49a');
+    teksPx(ctx, '1 PETAK', x - 16, 188, '#75583f', 3);
+  }
+  function gambarMesinRegangKarpet(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 26, 168, 52, 60, '#8a9aa8');
+    P(ctx, x - 26, 168, 52, 6, '#757068');
+    P(ctx, x - 20, 190, 40, 8, '#555048');
+    const putar = Math.floor(t * 4) % 2;
+    P(ctx, x - 18, 192 + putar, 8, 4, '#ffd166');
+    P(ctx, x + 10, 192 - putar, 8, 4, '#ffd166');
+    P(ctx, x - 38, 206, 14, 12, '#b04a3a');
+    P(ctx, x + 24, 206, 14, 12, '#b04a3a');
+    teksPx(ctx, 'MASUK', x - 14, 150, '#75583f', 3);
+  }
+  function gambarKarpetEnamPetak(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 32, 200, 56, 36, '#b04a3a');
+    P(ctx, x - 32, 200, 56, 4, '#c85a4a');
+    P(ctx, x - 32, 232, 56, 4, '#8a3a2e');
+    const sorot = Math.floor(t * 3) % 6;
+    for (let i = 0; i < 6; i++) {
+      const kx = x - 32 + (i % 3) * 19, ky = 204 + Math.floor(i / 3) * 16;
+      P(ctx, kx, ky, 17, 14, i === sorot ? '#ffd166' : '#c85a4a');
+    }
+    teksPx(ctx, '6 PETAK', x - 18, 182, '#75583f', 3);
+  }
+  function gambarPapanLuasDigandakan(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 204, 7, 40, '#75583f');
+    P(ctx, x - 32, 166, 64, 40, '#8a6a54');
+    P(ctx, x - 34, 160, 68, 8, '#6e5236');
+    const balik = Math.floor(t * 1.5) % 2;
+    P(ctx, x - 24, 174, 18, 18, balik ? '#5ee89b' : '#5a8ac0');
+    teksPx(ctx, balik ? 'x6' : '-1', x - 21, 178, balik ? '#0d3a22' : '#1a2a5a', 5);
+    P(ctx, x + 2, 174, 20, 18, '#e8dcc8');
+    teksPx(ctx, 'LUAS', x + 4, 178, '#4a3a24', 3);
+    teksPx(ctx, 'FAKTOR', x - 16, 148, '#75583f', 3);
+  }
+  function gambarMesinGepengPabrik(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 28, 164, 56, 62, '#a8a49c');
+    P(ctx, x - 28, 164, 56, 6, '#8a8680');
+    const turun = Math.sin(t * 2.6) > 0 ? 30 : 0;
+    P(ctx, x - 24, 176 + turun, 48, 10, '#555048');
+    P(ctx, x - 24, 232, 48, 6, '#757068');
+    P(ctx, x - 16, 226 - turun / 6, 32, 8 - turun / 6, '#c49a3a');
+    P(ctx, x - 32, 186, 6, 8, '#ffd166');
+    P(ctx, x + 26, 186, 6, 8, '#ffd166');
+    teksPx(ctx, 'TAK!', x + 18, 158, '#b04a4a', 4);
+  }
+  function gambarAdonanBulatPabrik(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 34, 232, 68, 10, '#b0aa9c');
+    const gepeng = Math.sin(t * 2.2) > 0;
+    if (gepeng) {
+      P(ctx, x - 24, 220, 48, 10, '#e8c89a');
+      P(ctx, x - 24, 220, 48, 3, '#f0d8b0');
+    } else {
+      lingkaran(ctx, x, 218, 16, '#e8c89a');
+      lingkaran(ctx, x, 218, 11, '#f0d8b0');
+    }
+    teksPx(ctx, gepeng ? 'GEPENG' : 'BULAT', x - 16, 190, '#75583f', 3);
+  }
+  function gambarAdonanPipihPabrik(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 30, 228, 60, 8, '#c49a3a');
+    P(ctx, x - 30, 228, 60, 3, '#e8b85a');
+    const nyala = Math.floor(t * 2) % 2;
+    P(ctx, x - 32, 206, 12, 4, nyala ? '#ff9d9d' : '#d88a8a');
+    P(ctx, x - 24, 210, 4, 10, nyala ? '#ff9d9d' : '#d88a8a');
+    P(ctx, x + 20, 206, 12, 4, nyala ? '#5a8ac0' : '#8a9ab0');
+    P(ctx, x + 20, 210, 4, 10, nyala ? '#5a8ac0' : '#8a9ab0');
+    P(ctx, x - 6, 214, 12, 4, nyala ? '#5ee89b' : '#3a8a4a');
+    teksPx(ctx, 'SETEMPAT', x - 18, 192, '#75583f', 3);
+  }
+  function gambarPapanSemuaSegaris(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 206, 7, 38, '#75583f');
+    P(ctx, x - 34, 166, 68, 42, '#f0e0c8');
+    P(ctx, x - 36, 160, 72, 8, '#b04a3a');
+    P(ctx, x - 28, 186, 56, 4, '#4a3a24');
+    const sorot = Math.floor(t * 2.4) % 3;
+    for (let i = 0; i < 3; i++) {
+      lingkaran(ctx, x - 20 + i * 20, 188, 4, i === sorot ? '#ffd166' : '#b04a3a');
+    }
+    teksPx(ctx, 'SEGARIS', x - 17, 172, '#4a3a24', 3);
+    teksPx(ctx, 'AWAS', x - 11, 148, '#b04a4a', 4);
+  }
+  function gambarGerbangMajuMundur(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 32, 186, 12, 58, '#b5716b');
+    P(ctx, x - 44, 182, 24, 6, '#7a4a4e');
+    P(ctx, x + 20, 186, 12, 58, '#96555a');
+    P(ctx, x + 8, 182, 24, 6, '#7a4a4e');
+    P(ctx, x - 18, 194, 36, 50, '#141a2b');
+    const mana = Math.floor(t * 1.8) % 2;
+    P(ctx, x - 6, 200 + mana * 20, 12, 18, mana ? '#5ee89b' : '#ffd166');
+    teksPx(ctx, 'MAJU', x - 40, 168, '#75583f', 3);
+    teksPx(ctx, 'BALIK', x + 12, 168, '#75583f', 3);
+  }
+  function gambarKurirMasukGerbang(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x + 8, 180, 10, 64, '#b5716b');
+    P(ctx, x + 4, 176, 18, 6, '#7a4a4e');
+    const maju = Math.round(Math.sin(t * 1.6) * 10);
+    P(ctx, x - 14 + maju, 204, 14, 22, '#4a7ab0');
+    lingkaran(ctx, x - 7 + maju, 198, 6, '#f2b8cc');
+    P(ctx, x - 12 + maju, 226, 5, 18, '#3a5a8a');
+    P(ctx, x - 4 + maju, 226, 5, 18, '#3a5a8a');
+    P(ctx, x - 2 + maju, 208, 8, 7, '#c49a3a');
+    teksPx(ctx, 'MASUK', x - 26, 162, '#75583f', 3);
+  }
+  function gambarKurirPulangGerbang(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x + 14, 180, 10, 64, '#96555a');
+    P(ctx, x + 10, 176, 18, 6, '#7a4a4e');
+    const pulang = Math.round(Math.sin(t * 1.6) * 8);
+    P(ctx, x - 6 - pulang, 204, 14, 22, '#5a9a5a');
+    lingkaran(ctx, x + 1 - pulang, 198, 6, '#f2b8cc');
+    P(ctx, x - 4 - pulang, 226, 5, 18, '#437a43');
+    P(ctx, x + 4 - pulang, 226, 5, 18, '#437a43');
+    P(ctx, x - 30, 196, 22, 20, '#c8b49a');
+    P(ctx, x - 34, 188, 30, 10, '#c85a4a');
+    P(ctx, x - 24, 204, 8, 12, '#6e5236');
+    teksPx(ctx, 'PULANG', x - 24, 164, '#75583f', 3);
+  }
+  function gambarPapanTulisPulang(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 206, 7, 38, '#75583f');
+    P(ctx, x - 32, 168, 64, 40, '#8a6a54');
+    P(ctx, x - 34, 162, 68, 8, '#6e5236');
+    const nyala = Math.sin(t * 2.2) > 0;
+    P(ctx, x - 24, 176, 48, 14, nyala ? '#5ee89b' : '#e8dcc8');
+    teksPx(ctx, 'PULANG', x - 15, 179, nyala ? '#0d3a22' : '#4a3a24', 4);
+    P(ctx, x - 14, 196, 28, 6, '#ffd166');
+    teksPx(ctx, 'UTUH', x - 10, 196, '#4a3a24', 3);
+    teksPx(ctx, 'CEK DULU', x - 17, 148, '#75583f', 3);
+  }
+  function gambarMenaraKompasTinggi(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 12, 130, 24, 114, '#8a6a58');
+    P(ctx, x - 12, 130, 24, 5, '#755a4a');
+    P(ctx, x - 16, 244, 32, 8, '#755a4a');
+    lingkaran(ctx, x, 118, 17, '#e8d4b8');
+    lingkaran(ctx, x, 118, 13, '#c8b49a');
+    const putar = t * 1.4;
+    const nx = Math.cos(putar) * 11, ny = Math.sin(putar) * 11;
+    P(ctx, Math.round(x + nx - 2), Math.round(118 + ny - 2), 4, 4, '#b04a3a');
+    lingkaran(ctx, x, 118, 3, '#4a3a24');
+    P(ctx, x - 4, 92, 8, 14, '#755a4a');
+    teksPx(ctx, 'MENARA', x - 17, 76, '#75583f', 3);
+  }
+  function gambarJarumKompasSetia(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 26, 226, 52, 16, '#c8b49a');
+    lingkaran(ctx, x, 190, 26, '#e8d4b8');
+    lingkaran(ctx, x, 190, 21, '#f0e4cc');
+    const regang = 10 + Math.round(Math.sin(t * 2.2) * 6);
+    P(ctx, x - 1, 190 - regang, 3, regang, '#b04a3a');
+    P(ctx, x + 2, 190, 3, 14, '#4a3a24');
+    lingkaran(ctx, x, 190, 4, '#ffd166');
+    teksPx(ctx, 'SETIA', x - 12, 152, '#75583f', 4);
+    teksPx(ctx, '2x-3x', x - 12, 248, '#75583f', 3);
+  }
+  function gambarMesinTarikMenara(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 24, 172, 48, 56, '#8a9aa8');
+    P(ctx, x - 24, 172, 48, 6, '#757068');
+    P(ctx, x - 16, 188, 32, 24, '#555048');
+    const denyut = Math.sin(t * 2.4) > 0;
+    P(ctx, x - 38, 214, 12, 4, denyut ? '#ff9d9d' : '#d88a8a');
+    P(ctx, x - 30, 208, 4, 6, denyut ? '#ff9d9d' : '#d88a8a');
+    P(ctx, x + 26, 208, 16, 4, denyut ? '#5ee89b' : '#3a8a4a');
+    P(ctx, x + 30, 200, 4, 12, denyut ? '#5ee89b' : '#3a8a4a');
+    teksPx(ctx, 'REGANG', x - 16, 156, '#75583f', 3);
+  }
+  function gambarPapanKekencangan(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 204, 7, 40, '#75583f');
+    P(ctx, x - 32, 164, 64, 42, '#8a6a54');
+    P(ctx, x - 34, 158, 68, 8, '#6e5236');
+    const mana = Math.floor(t * 2) % 2;
+    P(ctx, x - 26, 172, 52, 12, mana ? '#ffd166' : '#e8dcc8');
+    P(ctx, x - 26, 188, 52, 12, mana ? '#e8dcc8' : '#d8ecf4');
+    teksPx(ctx, '2 KALI', x - 16, 175, '#4a3a24', 3);
+    teksPx(ctx, '3 KALI', x - 16, 191, '#4a3a24', 3);
+    teksPx(ctx, 'KENCANG', x - 18, 144, '#75583f', 3);
+  }
+  function gambarAulaLimaMesin(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 38, 168, 76, 76, '#3a3460');
+    P(ctx, x - 38, 168, 76, 6, '#463e70');
+    for (let i = 0; i < 5; i++) {
+      const nyala = Math.floor(t * 2.5) % 5 === i;
+      P(ctx, x - 32 + i * 14, 182, 10, 30, nyala ? '#ffd166' : '#2a2650');
+      P(ctx, x - 32 + i * 14, 182, 10, 3, nyala ? '#fff8e0' : '#242050');
+    }
+    P(ctx, x - 38, 232, 76, 12, '#2a2650');
+    lingkaran(ctx, x, 158, 5, '#ffe9a3');
+    teksPx(ctx, '5 MESIN', x - 16, 142, '#f0e8d8', 3);
+  }
+  function gambarMesinEstafetSatu(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 34, 186, 26, 42, '#8a9aa8');
+    P(ctx, x - 34, 186, 26, 5, '#757068');
+    P(ctx, x + 8, 186, 26, 42, '#9aa8b8');
+    P(ctx, x + 8, 186, 26, 5, '#757068');
+    const alir = Math.floor(t * 3) % 2;
+    P(ctx, x - 8, 202 + alir * 2, 16, 4, alir ? '#5ee89b' : '#ffd166');
+    P(ctx, x - 28, 196, 18, 10, '#ffd166');
+    P(ctx, x + 14, 196, 14, 10, '#5ee89b');
+    teksPx(ctx, '= DIAM', x - 14, 166, '#75583f', 4);
+  }
+  function gambarMesinEstafetDua(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    const tukar = Math.floor(t * 1.6) % 2;
+    P(ctx, x - 34, 190, 28, 38, '#c49a3a');
+    P(ctx, x + 6, 190, 28, 38, '#5a8ac0');
+    teksPx(ctx, 'A', x - 22, 202, '#4a3a24', 5);
+    teksPx(ctx, 'B', x + 18, 202, '#1a2a5a', 5);
+    teksPx(ctx, tukar ? 'A-B' : 'B-A', x - 10, 168, '#75583f', 4);
+    P(ctx, x - 34, 232, 68, 4, tukar ? '#ff9d9d' : '#5ee89b');
+    teksPx(ctx, 'BEDA', x - 10, 238, '#75583f', 3);
+  }
+  function gambarPapanLimaMisiEstafet(x, t) {
+    P(ctx, x - 40, 244, 80, 3, '#8a8078');
+    P(ctx, x - 3, 202, 7, 42, '#75583f');
+    P(ctx, x - 32, 158, 64, 48, '#8a6a54');
+    P(ctx, x - 34, 152, 68, 8, '#6e5236');
+    const sorot = Math.floor(t * 2) % 5;
+    for (let i = 0; i < 5; i++) {
+      P(ctx, x - 26, 166 + i * 8, 52, 6, i === sorot ? '#ffd166' : '#e8dcc8');
+    }
+    teksPx(ctx, '5 MISI', x - 12, 138, '#75583f', 4);
+  }
   const OBJEK_GAMBAR = {
     api: gambarApi, tulang: gambarTulang, tablet: gambarTablet, nol: gambarNol,
     pohon: gambarPohon, tugu: gambarTugu, tanya: gambarTanya,
@@ -21277,6 +22037,16 @@
     kebunPersegiKelilingDuaEmpat: gambarKebunPersegiKelilingDuaEmpat, bandingKebunPanjang: gambarBandingKebunPanjang, kebunTepiSungaiTigaSisi: gambarKebunTepiSungaiTigaSisi, papanPersegiJuara: gambarPapanPersegiJuara,
     duaJalanSatuPuncak: gambarDuaJalanSatuPuncak, karungKurirBerat: gambarKarungKurirBerat, anginMenyilangJalan: gambarAnginMenyilangJalan, papanKerjaSamaTinggi: gambarPapanKerjaSamaTinggi,
     papanMisiPilah: gambarPapanMisiPilah, papanMisiJanji: gambarPapanMisiJanji, papanMisiTandingan: gambarPapanMisiTandingan, papanMisiKontradiksi: gambarPapanMisiKontradiksi,    kompasKemiringan: gambarKompasKemiringan, limaPapanMisiLereng: gambarLimaPapanMisiLereng, papanPuncakLembah: gambarPapanPuncakLembah, gerbangJuaraLereng: gambarGerbangJuaraLereng,
+    papanPetunjukLangkah: gambarPapanPetunjukLangkah, kurirBawaPaket: gambarKurirBawaPaket, jejakPanahGang: gambarJejakPanahGang, papanJalanTersambung: gambarPapanJalanTersambung,
+    tiangBenderaTaman: gambarTiangBenderaTaman, benderaPanjang: gambarBenderaPanjang, benderaSetengah: gambarBenderaSetengah, benderaBalikArah: gambarBenderaBalikArah,
+    papanKampungDuaJalan: gambarPapanKampungDuaJalan, jalanTimurKampung: gambarJalanTimurKampung, jalanUtaraKampung: gambarJalanUtaraKampung, rumahTujuanKampung: gambarRumahTujuanKampung,
+    panggungLampuMalam: gambarPanggungLampuMalam, pemimpinSatuPanggung: gambarPemimpinSatuPanggung, pemimpinDuaPanggung: gambarPemimpinDuaPanggung, penariIkutBarisan: gambarPenariIkutBarisan,
+    cerminStudioTinggi: gambarCerminStudioTinggi, penariPutarSembilan: gambarPenariPutarSembilan, karpetStudioRegang: gambarKarpetStudioRegang, papanResepStudio: gambarPapanResepStudio,
+    karpetSatuPetak: gambarKarpetSatuPetak, mesinRegangKarpet: gambarMesinRegangKarpet, karpetEnamPetak: gambarKarpetEnamPetak, papanLuasDigandakan: gambarPapanLuasDigandakan,
+    mesinGepengPabrik: gambarMesinGepengPabrik, adonanBulatPabrik: gambarAdonanBulatPabrik, adonanPipihPabrik: gambarAdonanPipihPabrik, papanSemuaSegaris: gambarPapanSemuaSegaris,
+    gerbangMajuMundur: gambarGerbangMajuMundur, kurirMasukGerbang: gambarKurirMasukGerbang, kurirPulangGerbang: gambarKurirPulangGerbang, papanTulisPulang: gambarPapanTulisPulang,
+    menaraKompasTinggi: gambarMenaraKompasTinggi, jarumKompasSetia: gambarJarumKompasSetia, mesinTarikMenara: gambarMesinTarikMenara, papanKekencangan: gambarPapanKekencangan,
+    aulaLimaMesin: gambarAulaLimaMesin, mesinEstafetSatu: gambarMesinEstafetSatu, mesinEstafetDua: gambarMesinEstafetDua, papanLimaMisiEstafet: gambarPapanLimaMisiEstafet,
   };
 
   function gambarStasiun(st, t) {
